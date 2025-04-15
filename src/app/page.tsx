@@ -1,5 +1,5 @@
-import styles from "./page.module.css";
+import LandingPage from "./landing-page/page";
 
 export default function Home() {
-  return <div className={styles.page}>PT website</div>;
+  return <LandingPage />;
 }
