@@ -1,10 +1,27 @@
-import styles from "./OverlayText.module.css";
+"use client";
 
-export default function OverlayText() {
+import Button from "app/components/Button";
+import { BannerContent } from "app/lib/types";
+
+interface OverlayTextProps {
+  bannerContent: BannerContent[];
+}
+
+export default function OverlayText({ bannerContent }: OverlayTextProps) {
+  const { title, subTitle, actionButtonText1, actionButtonText2 } =
+    bannerContent[0];
+
   return (
-    <div className={styles.overlayText}>
-      <h1>A gateway to transformation</h1>
-      <h3>Redefine your fitness journey with certified personal trainer</h3>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center py-8 px-16 bg-black/60 text-white w-[70vw]">
+      <p className="text-3xl mb-3">{title}</p>
+      <p className="text-xl mb-3">{subTitle}</p>
+      <Button
+        label={actionButtonText1}
+        type="secondary"
+        onClick={() => {}}
+        className="mr-4"
+      />
+      <Button label={actionButtonText2} type="primary" onClick={() => {}} />
     </div>
   );
 }

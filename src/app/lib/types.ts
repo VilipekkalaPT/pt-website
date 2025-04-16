@@ -16,3 +16,20 @@ export interface Navigation {
   url: string;
   order: number;
 }
+
+export interface BannerContentSkeleton {
+  contentTypeId: "bannerContent";
+  fields: {
+    title: Contentful.EntryFieldTypes.Text;
+    subTitle: Contentful.EntryFieldTypes.Text;
+    actionButtonText1: Contentful.EntryFieldTypes.Text;
+    actionButtonText2: Contentful.EntryFieldTypes.Text;
+  };
+}
+
+export interface BannerContent {
+  title: string;
+  subTitle: string;
+  actionButtonText1: string;
+  actionButtonText2: string;
+}

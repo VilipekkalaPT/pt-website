@@ -1,16 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { Navigation } from "app/lib/types";
+import Button from "app/components/Button";
 
-import styles from "./Header.module.css";
-import { getEntries } from "app/lib/contentful";
-import { Navigation, NavigationSkeleton } from "app/lib/types";
-
-export default async function Header() {
-  const navigations = await getEntries<NavigationSkeleton>("navigation");
-
+export default function Header({ navigations }: { navigations: Navigation[] }) {
   return (
-    <div className={styles.header}>
-      <h1 className={styles.logo}>Vili.</h1>
-      <div className={styles.navigation}>
+    <div className="flex w-full p-6">
+      <p className="flex-[1.5] text-3xl font-bold">SlayFitVili</p>
+      <div className="flex flex-[1] justify-between items-center">
         {navigations
           .toSorted((a, b) => a.order - b.order)
           .map((nav: Navigation) => (
@@ -18,7 +16,7 @@ export default async function Header() {
               {nav.label}
             </Link>
           ))}
-        <button className={styles.button}>Book a meeting</button>
+        <Button label="Book a meeting" type="primary" onClick={() => {}} />
       </div>
     </div>
   );
