@@ -3,7 +3,6 @@
 import cn from "classnames";
 
 export type ButtonType = "primary" | "secondary";
-
 interface ButtonProps {
   label: string;
   type: ButtonType;

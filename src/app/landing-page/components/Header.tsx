@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Navigation } from "app/lib/types";
+import { NavigationSkeleton } from "app/lib/types";
 import Button from "app/components/Button";
+
+type Navigation = NavigationSkeleton["fields"];
 
 export default function Header({ navigations }: { navigations: Navigation[] }) {
   return (

@@ -1,35 +1,68 @@
-import * as Contentful from "contentful";
+import { EntrySkeletonType } from "contentful";
 
-export interface NavigationSkeleton {
-  contentTypeId: "navigation";
+export interface NavigationSkeleton extends EntrySkeletonType {
   fields: {
-    id: Contentful.EntryFieldTypes.Text;
-    label: Contentful.EntryFieldTypes.Text;
-    url: Contentful.EntryFieldTypes.Text;
-    order: Contentful.EntryFieldTypes.Number;
+    id: number;
+    label: string;
+    url: string;
+    order: number;
   };
 }
 
-export interface Navigation {
-  id: string;
-  label: string;
-  url: string;
-  order: number;
-}
-
-export interface BannerContentSkeleton {
-  contentTypeId: "bannerContent";
+export interface BannerContentSkeleton extends EntrySkeletonType {
   fields: {
-    title: Contentful.EntryFieldTypes.Text;
-    subTitle: Contentful.EntryFieldTypes.Text;
-    actionButtonText1: Contentful.EntryFieldTypes.Text;
-    actionButtonText2: Contentful.EntryFieldTypes.Text;
+    title: string;
+    subTitle: string;
+    actionButtonText1: string;
+    actionButtonText2: string;
   };
 }
 
-export interface BannerContent {
-  title: string;
-  subTitle: string;
-  actionButtonText1: string;
-  actionButtonText2: string;
+export interface FooterColumnSkeleton extends EntrySkeletonType {
+  fields: {
+    id: number;
+    columnTitle: string;
+    items: FooterColumnLinkSkeleton[];
+    order: number;
+  };
+}
+
+export interface FooterColumnLinkSkeleton extends EntrySkeletonType {
+  fields: {
+    id: number;
+    label: string;
+    url?: string;
+    description?: string;
+  };
+}
+
+export interface KickOffProcessSkeleton extends EntrySkeletonType {
+  fields: {
+    id: number;
+    title: string;
+    description: string;
+    order: number;
+  };
+}
+
+export interface ReviewSkeleton extends EntrySkeletonType {
+  fields: {
+    id: number;
+    title: string;
+    reviewer: string;
+    body: string;
+    reviewDate: string;
+    package: string;
+    duration: string;
+    indexChange: IndexChangeSkeleton[];
+    showOnLandingPage: boolean;
+  };
+}
+
+export interface IndexChangeSkeleton extends EntrySkeletonType {
+  fields: {
+    id: number;
+    name: string;
+    change: string;
+  };
 }
