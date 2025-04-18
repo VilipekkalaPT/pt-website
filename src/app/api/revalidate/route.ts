@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 
-export default async function POST(request: Request) {
+export async function POST(request: Request) {
   const requestHeaders = new Headers(request.headers);
   const secret = process.env.CONTENTFUL_REVALIDATE_SECRET;
 
