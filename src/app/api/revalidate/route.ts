@@ -1,19 +1,26 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function POST(request: Request) {
+  const requestHeaders = new Headers(request.headers);
   const secret = process.env.CONTENTFUL_REVALIDATE_SECRET;
 
-  if (req.headers["x-contentful-webhook-secret"] !== secret) {
-    return res.status(403).json({ message: "Forbidden" });
+  if (requestHeaders.get("x-contentful-webhook-secret") !== secret) {
+    return NextResponse.json({ message: "Forbidden" }, { status: 403 });
   }
 
   try {
-    await res.revalidate("/");
-    return res.json({ message: "Revalidation triggered successfully" });
+    revalidatePath("/");
+    return NextResponse.json({
+      message: "Revalidation triggered successfully",
+    });
   } catch (error) {
-    return res.status(500).json({ message: "Error revalidating", error });
+    return NextResponse.json(
+      {
+        message: "Error revalidating",
+        error,
+      },
+      { status: 500 }
+    );
   }
 }
