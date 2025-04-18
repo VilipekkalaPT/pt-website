@@ -1,10 +1,10 @@
 "use client";
 
 import Button from "app/components/Button";
-import { BannerContent } from "app/lib/types";
+import { BannerContentSkeleton } from "app/lib/types";
 
 interface OverlayTextProps {
-  bannerContent: BannerContent[];
+  bannerContent: BannerContentSkeleton["fields"][];
 }
 
 export default function OverlayText({ bannerContent }: OverlayTextProps) {
