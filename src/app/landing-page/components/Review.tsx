@@ -1,8 +1,7 @@
-import Card from "app/components/Card";
 import { ReviewSkeleton } from "app/lib/types";
-import { formatDate } from "app/utils/formateDate";
+import ReviewCard from "./ReviewCard";
 
-type Review = ReviewSkeleton["fields"];
+export type Review = ReviewSkeleton["fields"];
 
 interface ReviewProps {
   reviews: Review[];
@@ -16,14 +15,7 @@ export default function Review({ reviews }: ReviewProps) {
       <p className="text-2xl font-bold">Latest reviews</p>
       <div className="grid grid-cols-2 gap-6 mt-4">
         {displayedReviews.map((review: Review) => (
-          <Card
-            key={review.id}
-            headerTitle={review.reviewer}
-            headerSubtitle={formatDate(review.reviewDate)}
-            bodyTitle={review.title}
-            bodyDescription={review.body}
-            showDivider
-          />
+          <ReviewCard key={review.id} review={review} />
         ))}
       </div>
     </div>

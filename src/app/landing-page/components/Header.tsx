@@ -8,7 +8,7 @@ type Navigation = NavigationSkeleton["fields"];
 
 export default function Header({ navigations }: { navigations: Navigation[] }) {
   return (
-    <div className="flex w-full p-6">
+    <div className="fixed top-0 left-0 flex w-full p-6 shadow z-50 bg-white">
       <p className="flex-[1.5] text-3xl font-bold">SlayFitVili</p>
       <div className="flex flex-[1] justify-between items-center">
         {navigations

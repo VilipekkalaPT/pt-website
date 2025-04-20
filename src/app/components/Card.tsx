@@ -1,65 +1,65 @@
 import Image from "next/image";
-import { JSX } from "react";
-import Divider from "./Divider";
+import cn from "classnames";
+interface CardHeaderProps {
+  avatar: React.ReactNode;
+  title: string;
+  subTitle: string;
+  className?: string;
+}
+interface CardMediaProps {
+  imageUrl: string;
+  alt: string;
+}
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
 interface CardProps {
-  headerTitle: string;
-  headerSubtitle: string;
-  bodyTitle: string;
-  bodyDescription: string | JSX.Element;
-  imageUrl?: string;
-  showDivider?: boolean;
+  children?: React.ReactNode;
+  className?: string;
 }
 
-export default function Card({
-  headerTitle,
-  headerSubtitle,
-  bodyTitle,
-  bodyDescription,
-  imageUrl,
-  showDivider = false,
-}: CardProps) {
+export default function Card({ children, className }: CardProps) {
   return (
-    <div className="rounded-lg overflow-hidden shadow-lg p-6">
-      <CardHeader title={headerTitle} subTitle={headerSubtitle} />
-      {showDivider && <Divider />}
-      {imageUrl && (
-        <Image
-          src={imageUrl}
-          alt={"Card image"}
-          width={100}
-          height={100}
-          className="block w-full h-auto"
-        />
-      )}
-      <CardBody title={bodyTitle} description={bodyDescription} />
+    <div className={cn("rounded-lg overflow-hidden shadow-lg p-6", className)}>
+      {children}
     </div>
   );
 }
 
-function CardHeader({ title, subTitle }: { title: string; subTitle: string }) {
-  return (
-    <div className="mb-4">
-      <p className="font-semibold text-gray-600">{title}</p>
-      <p className="text-sm font-medium text-gray-400">{subTitle}</p>
-    </div>
-  );
-}
-
-function CardBody({
+export const CardHeader = ({
+  avatar,
   title,
-  description,
-}: {
-  title: string;
-  description: string | JSX.Element;
-}) {
-  if (typeof description === "string") {
-    return (
-      <div>
-        <p className="font-bold">{title}</p>
-        <p className="text-sm">{description}</p>
+  subTitle,
+  className,
+}: CardHeaderProps) => {
+  return (
+    <div className={className}>
+      <div className="flex items-center">
+        {avatar}
+        <div className="ml-4">
+          <p className="font-semibold text-gray-600">{title}</p>
+          <p className="text-sm font-medium text-gray-400">{subTitle}</p>
+        </div>
       </div>
-    );
-  }
-  return description;
-}
+    </div>
+  );
+};
+
+export const CardMedia = ({ imageUrl, alt }: CardMediaProps) => {
+  return (
+    <Image
+      src={imageUrl}
+      alt={alt}
+      width={100}
+      height={100}
+      className="block w-full h-auto"
+    />
+  );
+};
+
+export const CardContent = ({ children, className }: CardContentProps) => {
+  return <div className={className}>{children}</div>;
+};

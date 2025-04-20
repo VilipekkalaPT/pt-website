@@ -66,3 +66,36 @@ export interface IndexChangeSkeleton extends EntrySkeletonType {
     change: string;
   };
 }
+
+export interface PricingPageDataSkeleton extends EntrySkeletonType {
+  fields: {
+    bannerText: string;
+    packages: PackageSkeleton[];
+  };
+}
+
+export interface PackageSkeleton extends EntrySkeletonType {
+  fields: {
+    id: number;
+    type: string;
+    name: string;
+    mode: string;
+    price: string;
+    priceUnit: string;
+    content: {
+      content: NestedContent[];
+    };
+    explanation: string;
+    forWhom: string[];
+    notForWhom: string[];
+    expectedResults: string[];
+  };
+}
+
+export interface NestedContent {
+  content: PackageContentValue[];
+}
+
+export interface PackageContentValue {
+  value: string;
+}
