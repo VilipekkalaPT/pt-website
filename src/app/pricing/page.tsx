@@ -14,6 +14,7 @@ export default async function Pricing() {
 
   return (
     <div className="mt-30 px-6">
+      <p className="mb-12">{bannerText}</p>
       <PricingContainer packageList={packageList} />
       <Divider />
     </div>
