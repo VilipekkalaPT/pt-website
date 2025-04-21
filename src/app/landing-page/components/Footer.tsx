@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { FooterColumnSkeleton, FooterColumnLinkSkeleton } from "app/lib/types";
+import {
+  TypeFooterColumnFields,
+  TypeFooterColumnLinkFields,
+} from "app/lib/types/contentful";
 
-type FooterColumn = FooterColumnSkeleton["fields"];
-type FooterColumnLink = FooterColumnLinkSkeleton["fields"];
 interface FooterProps {
-  footerColumns: FooterColumn[];
+  footerColumns: TypeFooterColumnFields[];
 }
 
 export default function Footer({ footerColumns }: FooterProps) {
@@ -20,20 +21,22 @@ export default function Footer({ footerColumns }: FooterProps) {
   );
 }
 
-function FooterColumn({ column }: { column: FooterColumn }) {
-  const items = column.items.map((item) => item.fields);
+function FooterColumn({ column }: { column: TypeFooterColumnFields }) {
+  const items = column.items.map(
+    (item) => item.fields
+  ) as unknown as TypeFooterColumnLinkFields[];
 
   return (
     <div className="flex flex-col">
       <p className="text-lg font-semibold mb-2">{column.columnTitle}</p>
-      {items.map((item: FooterColumnLink) => (
+      {items.map((item: TypeFooterColumnLinkFields) => (
         <FooterLink key={item.id} item={item} />
       ))}
     </div>
   );
 }
 
-function FooterLink({ item }: { item: FooterColumnLink }) {
+function FooterLink({ item }: { item: TypeFooterColumnLinkFields }) {
   const { url, label, description } = item;
 
   return (

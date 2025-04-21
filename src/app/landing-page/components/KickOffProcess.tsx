@@ -1,9 +1,7 @@
-import { KickOffProcessSkeleton } from "app/lib/types";
-
-type KickOffProcess = KickOffProcessSkeleton["fields"];
+import { TypeKickOffProcessFields } from "app/lib/types/contentful";
 
 type KickOffProcessProps = {
-  process: KickOffProcess[];
+  process: TypeKickOffProcessFields[];
 };
 
 export default function KickOffProcess({ process }: KickOffProcessProps) {
@@ -20,7 +18,7 @@ export default function KickOffProcess({ process }: KickOffProcessProps) {
   );
 }
 
-function ProcessStep({ step }: { step: KickOffProcess }) {
+function ProcessStep({ step }: { step: TypeKickOffProcessFields }) {
   return (
     <div>
       <div className="flex items-center">
