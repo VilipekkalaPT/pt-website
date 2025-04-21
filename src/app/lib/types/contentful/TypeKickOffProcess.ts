@@ -12,4 +12,4 @@ export interface TypeKickOffProcessSkeleton extends EntrySkeletonType {
   contentTypeId: "bannerContent";
 }
 
-export type TypeBannerContent = Entry<TypeKickOffProcessSkeleton>;
+export type TypeKickOffProcess = Entry<TypeKickOffProcessSkeleton>;
