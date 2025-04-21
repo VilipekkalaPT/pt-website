@@ -29,7 +29,7 @@ export default function Sort({
           type={selectedSort === option.value ? "primary" : "secondary"}
           iconLeft={
             selectedSort === option.value ? (
-              <CheckIcon className="size-6 mr-2" />
+              <CheckIcon className="size-6" />
             ) : null
           }
           onClick={() => handleSortChange(option.value)}

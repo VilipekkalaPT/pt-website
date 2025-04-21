@@ -1,5 +1,5 @@
 import Card, { CardContent, CardHeader } from "app/components/Card";
-import { formatDate } from "app/utils/formateDate";
+import { formatDate } from "app/utils/utils";
 import { TypeReviewFields } from "app/lib/types/contentful";
 
 interface ReviewCardProps {

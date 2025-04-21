@@ -3,6 +3,7 @@ import { TypePackageFields } from "app/lib/types/contentful";
 import { CURRENCY } from "app/utils/variables";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Document } from "@contentful/rich-text-types";
+import { ROUTES } from "app/utils/routes";
 
 interface PackageCardProps {
   singlePackage: TypePackageFields;
@@ -22,7 +23,7 @@ export default function PackageCard({
   return (
     <Card
       className="border border-gray-200"
-      href={`/pricing/packageDetails/${entryId}`}
+      href={`${ROUTES.PACKAGE_DETAILS}/${entryId}`}
     >
       <CardContent>
         <p className="text-gray-700 mb-1">{name}</p>

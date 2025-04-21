@@ -1,19 +1,23 @@
-import { getEntry } from "app/lib/contentfulDataService";
-import { TypePackageSkeleton } from "app/lib/types/contentful/TypePackage";
+import { getAssets, getEntry } from "app/lib/contentfulDataService";
+import {
+  TypePackageFields,
+  TypePackageSkeleton,
+} from "app/lib/types/contentful/TypePackage";
+import SinglePackageContainer from "app/pricing/components/SinglePackageContainter";
+import { BANNER } from "app/utils/variables";
 
 export default async function PackageDetails({
   params,
 }: {
-  params: { entryId: string };
+  params: Promise<{ entryId: string }>;
 }) {
-  const packageDetails = await getEntry<TypePackageSkeleton>(params.entryId);
-
-  console.log("Package Details:", packageDetails);
+  const { entryId } = await params;
+  const packageDetails =
+    (await getEntry<TypePackageSkeleton>(entryId)) ?? ({} as TypePackageFields);
+  const images = await getAssets();
+  const image = images.find((image) => image.title === BANNER);
 
   return (
-    <div className="mt-30 px-6">
-      <h1>Package Details</h1>
-      <p>{packageDetails?.name}</p>
-    </div>
+    <SinglePackageContainer packageDetails={packageDetails} image={image} />
   );
 }
