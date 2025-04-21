@@ -1,5 +1,6 @@
 import Image from "next/image";
 import cn from "classnames";
+import Link from "next/link";
 interface CardHeaderProps {
   avatar: React.ReactNode;
   title: string;
@@ -19,13 +20,21 @@ interface CardContentProps {
 interface CardProps {
   children?: React.ReactNode;
   className?: string;
+  href?: string;
 }
 
-export default function Card({ children, className }: CardProps) {
-  return (
-    <div className={cn("rounded-lg overflow-hidden shadow-lg p-6", className)}>
+export default function Card({ children, className, href }: CardProps) {
+  const defaultClassName = cn(
+    "rounded-lg overflow-hidden shadow-lg p-6",
+    className
+  );
+
+  return href ? (
+    <Link href={href} className={defaultClassName}>
       {children}
-    </div>
+    </Link>
+  ) : (
+    <div className={defaultClassName}>{children}</div>
   );
 }
 

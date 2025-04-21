@@ -1,6 +1,6 @@
 "use client";
 
-import PackageCard, { Package } from "./PackageCard";
+import PackageCard from "./PackageCard";
 import Search from "./Search";
 import Sort from "./Sort";
 import Filter from "./Filter";
@@ -9,14 +9,16 @@ import {
   tabs,
   useSearchSortFilter,
 } from "../hooks/useSearchSortFilter";
+import { TypePackage, TypePackageFields } from "app/lib/types/contentful";
 
 interface PricingContainerProps {
-  packageList: Package[];
+  packageData: TypePackage[];
 }
 
 export default function PricingContainer({
-  packageList,
+  packageData,
 }: PricingContainerProps) {
+  const packageList = packageData.map((p) => p.fields) as TypePackageFields[];
   const {
     result,
     searchTerm,
@@ -32,9 +34,11 @@ export default function PricingContainer({
       return <p>No packages found.</p>;
     }
 
-    return result.map((p: Package) => (
-      <PackageCard key={p.id} singlePackage={p} />
-    ));
+    return result.map((p: TypePackageFields) => {
+      const entryId =
+        packageData.find((e) => Number(e.fields.id) === p.id)?.sys.id ?? "";
+      return <PackageCard key={p.id} singlePackage={p} entryId={entryId} />;
+    });
   };
 
   return (

@@ -2,7 +2,7 @@
 
 import { PACKAGE_TYPE, SORT_TYPE } from "app/utils/variables";
 import { useMemo, useState } from "react";
-import { Package } from "../components/PackageCard";
+import { TypePackageFields } from "app/lib/types/contentful";
 
 export const sortOptions = [
   { label: "Price ascending", value: SORT_TYPE.PRICE_ASC },
@@ -16,7 +16,7 @@ export const tabs: PACKAGE_TYPE[] = [
   PACKAGE_TYPE.COMBO,
 ];
 
-export const useSearchSortFilter = (packageList: Package[]) => {
+export const useSearchSortFilter = (packageList: TypePackageFields[]) => {
   const [selectedSort, setSelectedSort] = useState<SORT_TYPE>(
     sortOptions[0].value
   );
@@ -40,7 +40,7 @@ export const useSearchSortFilter = (packageList: Package[]) => {
 
     if (searchTerm) {
       const lowerCaseSearchTerm = searchTerm.toLowerCase();
-      filteredPackages = filteredPackages.filter((pkg) =>
+      filteredPackages = filteredPackages.filter((pkg: TypePackageFields) =>
         pkg.name.toLowerCase().includes(lowerCaseSearchTerm)
       );
     }

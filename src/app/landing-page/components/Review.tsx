@@ -1,10 +1,8 @@
-import { ReviewSkeleton } from "app/lib/types";
 import ReviewCard from "./ReviewCard";
-
-export type Review = ReviewSkeleton["fields"];
+import { TypeReviewFields } from "app/lib/types/contentful";
 
 interface ReviewProps {
-  reviews: Review[];
+  reviews: TypeReviewFields[];
 }
 
 export default function Review({ reviews }: ReviewProps) {
@@ -14,7 +12,7 @@ export default function Review({ reviews }: ReviewProps) {
     <div className="p-6">
       <p className="text-2xl font-bold">Latest reviews</p>
       <div className="grid grid-cols-2 gap-6 mt-4">
-        {displayedReviews.map((review: Review) => (
+        {displayedReviews.map((review: TypeReviewFields) => (
           <ReviewCard key={review.id} review={review} />
         ))}
       </div>

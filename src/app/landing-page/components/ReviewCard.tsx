@@ -1,9 +1,9 @@
 import Card, { CardContent, CardHeader } from "app/components/Card";
 import { formatDate } from "app/utils/formateDate";
-import { Review } from "./Review";
+import { TypeReviewFields } from "app/lib/types/contentful";
 
 interface ReviewCardProps {
-  review: Review;
+  review: TypeReviewFields;
 }
 
 const getFirstLetter = (name: string) => {

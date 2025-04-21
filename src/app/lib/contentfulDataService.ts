@@ -11,7 +11,9 @@ export async function getEntries<T extends EntrySkeletonType>(
   contentType: string
 ) {
   try {
-    const res = await client.getEntries<T>({ content_type: contentType });
+    const res = await client.getEntries<T>({
+      content_type: contentType,
+    });
     return res.items.map((item) => item.fields);
   } catch (error) {
     console.error(`Error fetching content type "${contentType}":`, error);
@@ -26,5 +28,14 @@ export async function getAssets() {
   } catch (error) {
     console.error("Error fetching assets:", error);
     return [];
+  }
+}
+
+export async function getEntry<T extends EntrySkeletonType>(entryId: string) {
+  try {
+    const res = await client.getEntry<T>(entryId);
+    return res.fields;
+  } catch (error) {
+    console.error(`Error fetching entry ${entryId}`, error);
   }
 }

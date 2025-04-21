@@ -1,23 +1,21 @@
-import { getAssets } from "app/lib/contentful";
+import { getAssets } from "app/lib/contentfulDataService";
 import Image from "next/image";
 import OverlayText from "./components/OverlayText";
-import { getEntries } from "app/lib/contentful";
-import {
-  BannerContentSkeleton,
-  KickOffProcessSkeleton,
-  ReviewSkeleton,
-} from "app/lib/types";
+import { getEntries } from "app/lib/contentfulDataService";
 import Divider from "app/components/Divider";
 import KickOffProcess from "./components/KickOffProcess";
 import Review from "./components/Review";
 import { BANNER } from "app/utils/variables";
+import { TypeBannerContentSkeleton } from "app/lib/types/contentful/TypeBannerContent";
+import { TypeKickOffProcessSkeleton } from "app/lib/types/contentful/TypeKickOffProcess";
+import { TypeReviewSkeleton } from "app/lib/types/contentful/TypeReview";
 
 export default async function LandingPage() {
   const [images, bannerContent, kickOffProcess, reviews] = await Promise.all([
     getAssets(),
-    getEntries<BannerContentSkeleton>("bannerContent"),
-    getEntries<KickOffProcessSkeleton>("kickOffProcess"),
-    getEntries<ReviewSkeleton>("review"),
+    getEntries<TypeBannerContentSkeleton>("bannerContent"),
+    getEntries<TypeKickOffProcessSkeleton>("kickOffProcess"),
+    getEntries<TypeReviewSkeleton>("review"),
   ]);
 
   const banner = images.find((image) => image.title === BANNER);

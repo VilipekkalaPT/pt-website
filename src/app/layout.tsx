@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { getEntries } from "./lib/contentful";
-import { FooterColumnSkeleton, NavigationSkeleton } from "./lib/types";
+import { getEntries } from "./lib/contentfulDataService";
 import Header from "./landing-page/components/Header";
 import Footer from "./landing-page/components/Footer";
+import { TypeNavigationSkeleton } from "./lib/types/contentful/TypeNavigation";
+import { TypeFooterColumnSkeleton } from "./lib/types/contentful/TypeFooterColumn";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const [navigations, footerColumns] = await Promise.all([
-    await getEntries<NavigationSkeleton>("navigation"),
-    await getEntries<FooterColumnSkeleton>("footerColumn"),
+    await getEntries<TypeNavigationSkeleton>("navigation"),
+    await getEntries<TypeFooterColumnSkeleton>("footerColumn"),
   ]);
 
   return (
