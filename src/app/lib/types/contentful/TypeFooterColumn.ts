@@ -1,9 +1,10 @@
 import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import { TypeFooterColumnLinkSkeleton } from "./TypeFooterColumnLink";
 
 export interface TypeFooterColumnFields {
   id: EntryFields.Integer;
   columnTitle: EntryFields.Symbol;
-  items: Entry<{ fields: { [key: string]: unknown }; contentTypeId: string }>[];
+  items: Entry<TypeFooterColumnLinkSkeleton>[];
   order: EntryFields.Integer;
 }
 

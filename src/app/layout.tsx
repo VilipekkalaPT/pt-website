@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { getEntries } from "./lib/contentfulDataService";
-import Header from "./landing-page/components/Header";
-import Footer from "./landing-page/components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { TypeNavigationSkeleton } from "./lib/types/contentful/TypeNavigation";
 import { TypeFooterColumnSkeleton } from "./lib/types/contentful/TypeFooterColumn";
 

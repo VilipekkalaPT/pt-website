@@ -7,9 +7,9 @@ export interface TypeFooterColumnLinkFields {
   description?: EntryFields.Symbol;
 }
 
-export interface TypeFooterColumnLinkFields extends EntrySkeletonType {
+export interface TypeFooterColumnLinkSkeleton extends EntrySkeletonType {
   fields: TypeFooterColumnLinkFields;
   contentTypeId: "navigation";
 }
 
-export type TypeFooterColumnLink = Entry<TypeFooterColumnLinkFields>;
+export type TypeFooterColumnLink = Entry<TypeFooterColumnLinkSkeleton>;

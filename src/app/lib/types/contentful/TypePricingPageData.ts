@@ -1,9 +1,9 @@
 import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
-import { TypePackage } from "./TypePackage";
+import { TypePackageSkeleton } from "./TypePackage";
 
 export interface TypePricingPageDataFields {
   bannerText: EntryFields.Symbol;
-  packages: TypePackage[];
+  packages: Entry<TypePackageSkeleton>[];
 }
 
 export interface TypePricingPageDataSkeleton extends EntrySkeletonType {

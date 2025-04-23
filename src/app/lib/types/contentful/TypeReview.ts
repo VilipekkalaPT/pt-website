@@ -1,4 +1,5 @@
 import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import { TypeIndexChangeSkeleton } from "./TypeIndexChange";
 
 export interface TypeReviewFields {
   id: EntryFields.Integer;
@@ -8,10 +9,7 @@ export interface TypeReviewFields {
   reviewDate: EntryFields.Date;
   package: EntryFields.Symbol;
   duration: EntryFields.Symbol;
-  indexChanges: Entry<{
-    fields: Record<string, unknown>;
-    contentTypeId: string;
-  }>[];
+  indexChanges: Entry<TypeIndexChangeSkeleton>[];
   showOnLandingPage: EntryFields.Boolean;
 }
 

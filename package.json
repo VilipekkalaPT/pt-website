@@ -8,12 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "cf-export": "contentful space export --config src/app/contentful/export-config.json --management-token $CONTENTFUL_ACCESS_TOKEN --space-id $CONTENTFUL_SPACE_ID",
-    "cf-generate-types": "cf-content-types-generator src/app/contentful/export.json --out lib/types/contentful"
+    "cf-generate-types": "cf-content-types-generator src/app/contentful/export.json --out lib/types1/"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.0.1",
     "@headlessui/react": "^2.2.2",
     "@heroicons/react": "^2.2.0",
+    "cf-content-types-generator": "^2.16.0",
     "classnames": "^2.5.1",
     "contentful": "^11.5.14",
     "date-fns": "^4.1.0",

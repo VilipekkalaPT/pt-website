@@ -11,7 +11,9 @@ export default function Header({
 }) {
   return (
     <div className="fixed top-0 left-0 flex w-full p-6 shadow z-50 bg-white">
-      <p className="flex-[1.5] text-3xl font-bold">SlayFitVili</p>
+      <Link href={"/"} className="flex-[1.5] text-3xl font-bold">
+        SlayFitVili
+      </Link>
       <div className="flex flex-[1] justify-between items-center">
         {navigations
           .toSorted((a, b) => a.order - b.order)
