@@ -21,8 +21,6 @@ export default async function About() {
   const { title, subtitle, body } = aboutPageContent.transformationProcessText
     .fields as TypeTransformationProcessTextFields;
 
-  console.log(aboutPageContent);
-
   return (
     <div className="mt-30 px-6">
       <div className="bg-gray-100 -mx-6 py-30 px-6">

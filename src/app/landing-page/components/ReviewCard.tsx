@@ -1,9 +1,14 @@
 import Card, { CardContent, CardHeader } from "app/components/Card";
 import { formatDate } from "app/utils/utils";
-import { TypeReviewFields } from "app/lib/types/contentful";
+import {
+  TypeIndexChangeFields,
+  TypeReviewFields,
+} from "app/lib/types/contentful";
+import Divider from "app/components/Divider";
 
 interface ReviewCardProps {
   review: TypeReviewFields;
+  showIndexPart?: boolean;
 }
 
 const getFirstLetter = (name: string) => {
@@ -11,7 +16,14 @@ const getFirstLetter = (name: string) => {
   return names.map((name) => name[0].toUpperCase()).join("");
 };
 
-export default function ReviewCard({ review }: ReviewCardProps) {
+export default function ReviewCard({
+  review,
+  showIndexPart = false,
+}: ReviewCardProps) {
+  const indexChanges = review.indexChanges.map(
+    (i) => i.fields
+  ) as TypeIndexChangeFields[];
+
   return (
     <Card key={review.id}>
       <CardHeader
@@ -25,6 +37,22 @@ export default function ReviewCard({ review }: ReviewCardProps) {
       />
       <CardContent className="mt-4">
         <p>{review.body}</p>
+        {showIndexPart && (
+          <>
+            <Divider />
+            {indexChanges.map((index: TypeIndexChangeFields) => {
+              return (
+                <div
+                  key={index.id}
+                  className="grid grid-cols-2 mt-4 text-gray-500"
+                >
+                  <p>{index.name}</p>
+                  <p className="justify-self-end">{index.change}</p>
+                </div>
+              );
+            })}
+          </>
+        )}
       </CardContent>
     </Card>
   );
