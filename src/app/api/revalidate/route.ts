@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({
       message: "Revalidation triggered successfully",
     });
