@@ -9,16 +9,17 @@ import {
   tabs,
   useSearchSortFilter,
 } from "../hooks/useSearchSortFilter";
-import { TypePackage, TypePackageFields } from "app/lib/types/contentful";
+import { TypePackageFields } from "app/lib/types/contentful";
+import { TypePackageSkeleton } from "app/lib/types/contentful/TypePackage";
 
 interface PricingContainerProps {
-  packageData: TypePackage[];
+  packageData: TypePackageSkeleton[];
 }
 
 export default function PricingContainer({
   packageData,
 }: PricingContainerProps) {
-  const packageList = packageData.map((p) => p.fields) as TypePackageFields[];
+  const packageList = packageData.map((p) => p.fields);
   const {
     result,
     searchTerm,
@@ -35,9 +36,7 @@ export default function PricingContainer({
     }
 
     return result.map((p: TypePackageFields) => {
-      const entryId =
-        packageData.find((e) => Number(e.fields.id) === p.id)?.sys.id ?? "";
-      return <PackageCard key={p.id} singlePackage={p} entryId={entryId} />;
+      return <PackageCard key={p.id} singlePackage={p} slug={p.slug} />;
     });
   };
 

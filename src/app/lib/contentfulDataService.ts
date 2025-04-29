@@ -39,3 +39,16 @@ export async function getEntry<T extends EntrySkeletonType>(entryId: string) {
     console.error(`Error fetching entry ${entryId}`, error);
   }
 }
+
+export async function getEntryWithSlug(slug: string) {
+  try {
+    const res = await client.getEntries({
+      content_type: "package",
+      "fields.slug": slug,
+    });
+    const fields = res.items.map((item) => item.fields);
+    return fields[0] ?? [];
+  } catch (error) {
+    console.error(`Error fetching entry with slug ${slug}`, error);
+  }
+}

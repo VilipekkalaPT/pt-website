@@ -22,6 +22,10 @@ export type {
 export type { TypeNavigation, TypeNavigationFields } from "./TypeNavigation";
 export type { TypePackage, TypePackageFields } from "./TypePackage";
 export type {
+  TypePackageAccordion,
+  TypePackageAccordionFields,
+} from "./TypePackageAccordion";
+export type {
   TypePricingPageData,
   TypePricingPageDataFields,
 } from "./TypePricingPageData";
