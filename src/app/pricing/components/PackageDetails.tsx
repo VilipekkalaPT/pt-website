@@ -1,13 +1,18 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { BANNER } from "app/utils/variables";
 import {
   TypePackageAccordionFields,
   TypePackageFields,
+  TypeSessionOptionFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
 import Price from "./Price";
 import RichTextRenderer from "app/components/RichTextRenderer";
 import Accordion from "app/components/Accordion";
+import SessionSelector from "./SessionSelector";
 
 interface PackageDetailsProps {
   packageDetails: TypePackageFields;
@@ -18,9 +23,13 @@ export default function PackageDetails({
   packageDetails,
   image,
 }: PackageDetailsProps) {
+  const [selectOption, setSelectOption] = useState<
+    TypeSessionOptionFields | undefined
+  >();
   const imageUrl = `https:${image?.file?.url ?? ""}`;
-
-  console.log(packageDetails);
+  const sessionOptions = packageDetails.sessionOptions?.map(
+    (option) => option.fields
+  ) as TypeSessionOptionFields[];
 
   return (
     <div className="grid grid-cols-2 gap-10">
@@ -34,13 +43,19 @@ export default function PackageDetails({
       <div>
         <p className="text-2xl font-bold">{packageDetails.name}</p>
         <Price
-          price={packageDetails.price}
+          price={selectOption?.price ?? packageDetails.price}
           priceUnit={packageDetails.priceUnit}
         />
         <RichTextRenderer
           text={packageDetails.content}
-          listClassName="text-sm text-gray-500 mb-4"
+          listClassName="text-sm text-gray-500"
         />
+        {sessionOptions && (
+          <SessionSelector
+            sessionOptions={sessionOptions}
+            onSelect={setSelectOption}
+          />
+        )}
         {packageDetails.packageAccordions.map((accordion) => {
           const accordionField = accordion.fields as TypePackageAccordionFields;
           return (

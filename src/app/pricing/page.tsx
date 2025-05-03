@@ -1,18 +1,18 @@
 import { getEntries } from "app/lib/contentfulDataService";
 import PricingContainer from "./components/PricingContainer";
 import Divider from "app/components/Divider";
-import { TypePricingPageDataSkeleton } from "app/lib/types/contentful/TypePricingPageData";
+import {
+  TypePackageFields,
+  TypePackageSkeleton,
+} from "app/lib/types/contentful/TypePackage";
 
 export default async function Pricing() {
-  const pricingPageData = await getEntries<TypePricingPageDataSkeleton>(
-    "pricingPageData"
-  );
-  const { bannerText, packages } = pricingPageData[0];
+  const allPackages: TypePackageFields[] =
+    await getEntries<TypePackageSkeleton>("package");
 
   return (
     <div className="mt-30 px-6">
-      <p className="mb-12">{bannerText}</p>
-      <PricingContainer packageData={packages} />
+      <PricingContainer allPackages={allPackages} />
       <Divider />
     </div>
   );

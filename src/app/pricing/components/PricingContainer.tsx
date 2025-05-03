@@ -10,16 +10,14 @@ import {
   useSearchSortFilter,
 } from "../hooks/useSearchSortFilter";
 import { TypePackageFields } from "app/lib/types/contentful";
-import { TypePackageSkeleton } from "app/lib/types/contentful/TypePackage";
 
 interface PricingContainerProps {
-  packageData: TypePackageSkeleton[];
+  allPackages: TypePackageFields[];
 }
 
 export default function PricingContainer({
-  packageData,
+  allPackages,
 }: PricingContainerProps) {
-  const packageList = packageData.map((p) => p.fields);
   const {
     result,
     searchTerm,
@@ -28,7 +26,7 @@ export default function PricingContainer({
     handleSearch,
     handleSortChange,
     handleTabChange,
-  } = useSearchSortFilter(packageList);
+  } = useSearchSortFilter(allPackages);
 
   const renderResults = () => {
     if (result.length === 0) {

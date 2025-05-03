@@ -40,5 +40,5 @@ export default function RichTextRenderer({
     },
   };
 
-  return documentToReactComponents(text, options);
+  return <div className="mb-4">{documentToReactComponents(text, options)}</div>;
 }

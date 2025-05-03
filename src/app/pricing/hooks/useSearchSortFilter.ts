@@ -16,7 +16,7 @@ export const tabs: PACKAGE_TYPE[] = [
   PACKAGE_TYPE.COMBO,
 ];
 
-export const useSearchSortFilter = (packageList: TypePackageFields[]) => {
+export const useSearchSortFilter = (allPackages: TypePackageFields[]) => {
   const [selectedSort, setSelectedSort] = useState<SORT_TYPE>(
     sortOptions[0].value
   );
@@ -36,7 +36,7 @@ export const useSearchSortFilter = (packageList: TypePackageFields[]) => {
   };
 
   const result = useMemo(() => {
-    let filteredPackages = [...packageList];
+    let filteredPackages = [...allPackages];
 
     if (searchTerm) {
       const lowerCaseSearchTerm = searchTerm.toLowerCase();
@@ -58,7 +58,7 @@ export const useSearchSortFilter = (packageList: TypePackageFields[]) => {
     }
 
     return filteredPackages;
-  }, [activeTab, packageList, searchTerm, selectedSort]);
+  }, [activeTab, allPackages, searchTerm, selectedSort]);
 
   return {
     result,
