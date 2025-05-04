@@ -6,6 +6,11 @@ export type {
   TypeBannerContent,
   TypeBannerContentFields,
 } from "./TypeBannerContent";
+export type { TypeCurriculum, TypeCurriculumFields } from "./TypeCurriculum";
+export type {
+  TypeCurriculumPeriod,
+  TypeCurriculumPeriodFields,
+} from "./TypeCurriculumPeriod";
 export type {
   TypeFooterColumn,
   TypeFooterColumnFields,
@@ -25,10 +30,6 @@ export type {
   TypePackageAccordion,
   TypePackageAccordionFields,
 } from "./TypePackageAccordion";
-export type {
-  TypePricingPageData,
-  TypePricingPageDataFields,
-} from "./TypePricingPageData";
 export type { TypeReview, TypeReviewFields } from "./TypeReview";
 export type {
   TypeSessionOption,

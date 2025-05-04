@@ -53,7 +53,7 @@ export default function PricingContainer({
         activeTab={activeTab}
         handleTabChange={handleTabChange}
       />
-      <div className="grid grid-cols-4 gap-4 mb-10">{renderResults()}</div>
+      <div className="grid grid-cols-3 gap-4 mb-10">{renderResults()}</div>
     </>
   );
 }

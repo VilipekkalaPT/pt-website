@@ -32,7 +32,7 @@ export default function PackageDetails({
   ) as TypeSessionOptionFields[];
 
   return (
-    <div className="grid grid-cols-2 gap-10">
+    <div className="grid grid-cols-2 gap-10 px-6">
       <Image
         src={imageUrl}
         alt={BANNER}

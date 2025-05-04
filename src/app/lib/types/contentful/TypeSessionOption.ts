@@ -8,7 +8,7 @@ export interface TypeSessionOptionFields {
 
 export interface TypeSessionOptionSkeleton extends EntrySkeletonType {
   fields: TypeSessionOptionFields;
-  contentTypeId: "review";
+  contentTypeId: "sessionOption";
 }
 
 export type TypeSessionOption = Entry<TypeSessionOptionSkeleton>;

@@ -40,10 +40,10 @@ export async function getEntry<T extends EntrySkeletonType>(entryId: string) {
   }
 }
 
-export async function getEntryWithSlug(slug: string) {
+export async function getEntryWithSlug(contentType: string, slug: string) {
   try {
     const res = await client.getEntries({
-      content_type: "package",
+      content_type: contentType,
       "fields.slug": slug,
     });
     const fields = res.items.map((item) => item.fields);

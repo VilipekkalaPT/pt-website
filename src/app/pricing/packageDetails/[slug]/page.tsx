@@ -1,5 +1,6 @@
 import { getAssets, getEntryWithSlug } from "app/lib/contentfulDataService";
 import { TypePackageFields } from "app/lib/types/contentful/TypePackage";
+import { TypeCurriculumFields } from "app/lib/types/contentful/TypeCurriculum";
 
 import SinglePackageContainer from "app/pricing/components/SinglePackageContainter";
 import { BANNER } from "app/utils/variables";
@@ -32,13 +33,19 @@ export default async function PackageDetails({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const packageDetails = (await getEntryWithSlug(
-    slug
-  )) as unknown as TypePackageFields;
+  const [packageDetails, curriculum] = await Promise.all([
+    getEntryWithSlug("package", slug),
+    getEntryWithSlug("curriculum", slug),
+  ]);
+
   const images = await getAssets();
   const image = images.find((image) => image.title === BANNER);
 
   return (
-    <SinglePackageContainer packageDetails={packageDetails} image={image} />
+    <SinglePackageContainer
+      packageDetails={packageDetails as unknown as TypePackageFields}
+      curriculum={curriculum as unknown as TypeCurriculumFields}
+      image={image}
+    />
   );
 }
