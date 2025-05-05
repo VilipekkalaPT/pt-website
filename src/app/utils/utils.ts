@@ -10,3 +10,8 @@ export const isStringArray = (input: Array<unknown>): input is string[] => {
     Array.isArray(input) && input.every((item) => typeof item === "string")
   );
 };
+
+export const getTitle = (title: string) => {
+  const words = title.split("-");
+  return words[0];
+};

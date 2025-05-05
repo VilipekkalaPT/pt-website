@@ -13,6 +13,7 @@ import Price from "./Price";
 import RichTextRenderer from "app/components/RichTextRenderer";
 import Accordion from "app/components/Accordion";
 import SessionSelector from "./SessionSelector";
+import { getTitle } from "app/utils/utils";
 
 interface PackageDetailsProps {
   packageDetails: TypePackageFields;
@@ -61,7 +62,7 @@ export default function PackageDetails({
           return (
             <Accordion
               key={accordionField.title}
-              buttonText={accordionField.title}
+              buttonText={getTitle(accordionField.title)}
               accordionContent={
                 <RichTextRenderer text={accordionField.description} />
               }

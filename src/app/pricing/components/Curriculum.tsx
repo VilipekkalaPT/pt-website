@@ -4,6 +4,8 @@ import {
   TypeCurriculumFields,
   TypeCurriculumPeriodFields,
 } from "app/lib/types/contentful";
+import { getTitle } from "app/utils/utils";
+import { get } from "http";
 
 interface CurriculumProps {
   curriculum: TypeCurriculumFields;
@@ -16,12 +18,12 @@ export default function Curriculum({ curriculum }: CurriculumProps) {
 
   return (
     <div className="my-10 px-6 grid grid-cols-2 gap-5">
-      <p className="text-2xl font-bold mb-6">{curriculum.title}</p>
+      <p className="text-2xl font-bold mb-6">{getTitle(curriculum.title)}</p>
       <p className="text-sm text-gray-500 mb-4">{curriculum.subtitle}</p>
       {curriculumPeriods.map((period) => (
         <Accordion
           key={period.title}
-          buttonText={period.title}
+          buttonText={getTitle(period.title)}
           accordionContent={<RichTextRenderer text={period.description} />}
           className="mb-4 h-fit"
         />
