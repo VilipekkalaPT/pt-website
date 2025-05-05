@@ -5,7 +5,6 @@ import {
   TypeCurriculumPeriodFields,
 } from "app/lib/types/contentful";
 import { getTitle } from "app/utils/utils";
-import { get } from "http";
 
 interface CurriculumProps {
   curriculum: TypeCurriculumFields;

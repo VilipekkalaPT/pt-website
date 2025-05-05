@@ -40,7 +40,7 @@ export default function SessionSelector({
           ))}
         </Select>
         <ChevronDownIcon
-          className="group pointer-events-none absolute top-2.5 right-2.5 size-4"
+          className="group pointer-events-none absolute top-0 right-2.5 size-4 h-full"
           aria-hidden="true"
         />
       </div>
