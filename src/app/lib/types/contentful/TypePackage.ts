@@ -6,8 +6,9 @@ import { TypeCurriculumSkeleton } from "./TypeCurriculum";
 export interface TypePackageFields {
   id: EntryFields.Integer;
   type: "combo" | "duo" | "solo";
-  name: EntryFields.Symbol;
   slug: EntryFields.Symbol;
+  name: EntryFields.Symbol;
+  subheading: EntryFields.Symbol;
   mode: "hybrid" | "offline" | "online";
   price: EntryFields.Integer;
   priceUnit: "package" | "plan" | "session";

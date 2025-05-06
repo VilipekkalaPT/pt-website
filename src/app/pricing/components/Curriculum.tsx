@@ -22,7 +22,7 @@ export default function Curriculum({ curriculum }: CurriculumProps) {
       {curriculumPeriods.map((period) => (
         <Accordion
           key={period.title}
-          buttonText={getTitle(period.title)}
+          buttonText={period.title}
           accordionContent={<RichTextRenderer text={period.description} />}
           className="mb-4 h-fit"
         />

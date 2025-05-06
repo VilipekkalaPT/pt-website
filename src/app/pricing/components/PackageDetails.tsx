@@ -43,6 +43,9 @@ export default function PackageDetails({
       />
       <div>
         <p className="text-2xl font-bold">{packageDetails.name}</p>
+        <p className="text-sm font-bold text-gray-500 mt-1">
+          {packageDetails.subheading}
+        </p>
         <Price
           price={selectOption?.price ?? packageDetails.price}
           priceUnit={packageDetails.priceUnit}
