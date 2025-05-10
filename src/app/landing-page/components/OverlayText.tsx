@@ -18,11 +18,15 @@ export default function OverlayText({ bannerContent }: OverlayTextProps) {
       <div className="flex justify-center">
         <Button
           label={actionButtonText1}
-          type="secondary"
+          variant="secondary"
           onClick={() => {}}
           className="mr-4"
         />
-        <Button label={actionButtonText2} type="primary" onClick={() => {}} />
+        <Button
+          label={actionButtonText2}
+          variant="primary"
+          onClick={() => {}}
+        />
       </div>
     </div>
   );

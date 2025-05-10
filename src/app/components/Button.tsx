@@ -2,10 +2,10 @@
 
 import cn from "classnames";
 
-export type ButtonType = "primary" | "secondary" | "ghost";
-interface ButtonProps {
+export type ButtonVariant = "primary" | "secondary" | "ghost";
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
-  type: ButtonType;
+  variant: ButtonVariant;
   onClick: () => void;
   className?: string;
   iconLeft?: React.ReactNode;
@@ -14,25 +14,27 @@ interface ButtonProps {
 
 export default function Button({
   label,
-  type,
+  variant,
   className,
   iconLeft,
   iconRight,
   onClick,
+  ...props
 }: ButtonProps) {
   return (
     <button
       className={cn(
         "flex items-center gap-2 py-2 px-4 text-base rounded-lg border-0 cursor-pointer",
         {
-          "text-white bg-black": type === "primary",
+          "text-white bg-black": variant === "primary",
           "text-gray-600 bg-gray-200 hover:bg-gray-600 hover:text-white":
-            type === "secondary",
-          "bg-white": type === "ghost",
+            variant === "secondary",
+          "bg-white": variant === "ghost",
         },
         className
       )}
       onClick={onClick}
+      {...props}
     >
       {iconLeft && iconLeft}
       {label}

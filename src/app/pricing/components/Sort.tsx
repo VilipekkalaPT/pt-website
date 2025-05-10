@@ -26,7 +26,7 @@ export default function Sort({
         <Button
           key={option.value}
           label={option.label}
-          type={selectedSort === option.value ? "primary" : "secondary"}
+          variant={selectedSort === option.value ? "primary" : "secondary"}
           iconLeft={
             selectedSort === option.value ? (
               <CheckIcon className="size-6" />

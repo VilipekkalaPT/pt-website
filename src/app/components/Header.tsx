@@ -3,12 +3,15 @@
 import Link from "next/link";
 import Button from "app/components/Button";
 import { TypeNavigationFields } from "app/lib/types/contentful";
+import { useRouter } from "next/navigation";
 
 export default function Header({
   navigations,
 }: {
   navigations: TypeNavigationFields[];
 }) {
+  const router = useRouter();
+
   return (
     <div className="fixed top-0 left-0 flex w-full p-6 shadow z-50 bg-white">
       <Link href={"/"} className="flex-[1.5] text-3xl font-bold">
@@ -22,7 +25,11 @@ export default function Header({
               {nav.label}
             </Link>
           ))}
-        <Button label="Book a meeting" type="primary" onClick={() => {}} />
+        <Button
+          label="Book a meeting"
+          variant="primary"
+          onClick={() => router.push("/contact")}
+        />
       </div>
     </div>
   );
