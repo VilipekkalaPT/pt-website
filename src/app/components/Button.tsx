@@ -6,7 +6,7 @@ export type ButtonVariant = "primary" | "secondary" | "ghost";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
   variant: ButtonVariant;
-  onClick: () => void;
+  onClick?: () => void;
   className?: string;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;

@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(request: Request) {
-  const { name, email, message, subject } = await request.json();
+  const { name, email, message } = await request.json();
 
   if (!name || !email || !message)
     return NextResponse.json(
@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       replyTo: email,
       to: process.env.GOOGLE_USER,
-      subject: `Message from ${name}: ` + subject,
+      subject: `Message from ${name}`,
       html: message,
     });
 
