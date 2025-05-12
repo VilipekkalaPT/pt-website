@@ -1,3 +1,4 @@
+import { UseFormReset } from "react-hook-form";
 import { toast } from "react-toastify";
 
 export interface FormInput {
@@ -6,7 +7,10 @@ export interface FormInput {
   message: string;
 }
 
-export default async function sendEmailService(form: FormInput) {
+export default async function sendEmailService(
+  form: FormInput,
+  resetForm: UseFormReset<FormInput>
+) {
   try {
     const res = await fetch("/api/send", {
       method: "POST",
@@ -20,9 +24,16 @@ export default async function sendEmailService(form: FormInput) {
 
     if (data.success) {
       toast.success("Message sent successfully!");
-    } else {
-      toast.error(data.error || "Failed to send message");
+      resetForm();
+      return;
     }
+
+    if (res.status === 400) {
+      toast.error(data.error);
+      return;
+    }
+
+    toast.error("Failed to send message");
   } catch (error) {
     console.error("Error sending email:", error);
     toast.error("Failed to send message");

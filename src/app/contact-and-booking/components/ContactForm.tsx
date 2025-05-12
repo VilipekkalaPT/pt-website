@@ -17,13 +17,14 @@ export default function ContactForm({ contactFormData }: ContactFormProps) {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormInput>();
   const [isSending, setIsSending] = useState(false);
 
   const onSubmit: SubmitHandler<FormInput> = async (data: FormInput) => {
     setIsSending(true);
-    await sendEmailService(data);
+    await sendEmailService(data, reset);
     setIsSending(false);
   };
 
