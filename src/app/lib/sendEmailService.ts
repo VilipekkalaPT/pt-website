@@ -16,10 +16,12 @@ export default async function sendEmailService(form: FormInput) {
       body: JSON.stringify(form),
     });
 
-    if (res.ok) {
+    const data = await res.json();
+
+    if (data.success) {
       toast.success("Message sent successfully!");
     } else {
-      toast.error("Failed to send message");
+      toast.error(data.error || "Failed to send message");
     }
   } catch (error) {
     console.error("Error sending email:", error);
