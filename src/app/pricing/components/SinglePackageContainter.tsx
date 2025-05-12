@@ -31,7 +31,7 @@ export default function SinglePackageContainer({
     <div className="mt-30">
       <Button
         label={"All packages"}
-        type="ghost"
+        variant="ghost"
         iconLeft={<ArrowLeftIcon className="size-4" />}
         onClick={() => router.push(ROUTES.PRICING)}
         className="mx-3 mb-3"

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Button from "app/components/Button";
 import { TypeNavigationFields } from "app/lib/types/contentful";
 import { useRouter } from "next/navigation";
+import { ROUTES } from "app/utils/routes";
 
 export default function Header({
   navigations,
@@ -28,7 +29,7 @@ export default function Header({
         <Button
           label="Book a meeting"
           variant="primary"
-          onClick={() => router.push("/contact")}
+          onClick={() => router.push(ROUTES.CONTACT)}
         />
       </div>
     </div>

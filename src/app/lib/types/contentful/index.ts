@@ -6,6 +6,7 @@ export type {
   TypeBannerContent,
   TypeBannerContentFields,
 } from "./TypeBannerContent";
+export type { TypeContactForm, TypeContactFormFields } from "./TypeContactForm";
 export type { TypeCurriculum, TypeCurriculumFields } from "./TypeCurriculum";
 export type {
   TypeCurriculumPeriod,
