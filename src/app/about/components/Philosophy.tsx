@@ -24,22 +24,22 @@ export default function Philosophy({
   console.log(content);
 
   return (
-    <div className="flex my-15 mx-12">
+    <div className="flex my-15 mx-12 gap-15">
       <Image
         src={bannerUrl}
         alt={BANNER}
         width={banner?.file?.details.image?.width}
         height={banner?.file?.details.image?.height}
-        className="block w-full h-auto flex-1"
+        className="block w-full h-auto flex-2"
       />
-      <div className="flex-1 ml-10">
-        <p className="text-xl font-bold">{title}</p>
+      <div className="flex-1 mr-20">
+        <p className="text-2xl font-bold">{title}</p>
         <p className="text-xl text-gray-400 pb-2">{subtitle}</p>
         <RichTextRenderer
           text={content}
-          listClassName="text-gray-700 text-sm"
+          listClassName="text-gray-700"
           listIcon={<StarIcon className="size-4" />}
-          paragraphClassName="mt-4 text-gray-700 text-sm"
+          paragraphClassName="mt-4 text-gray-700"
         />
       </div>
     </div>
