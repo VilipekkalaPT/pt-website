@@ -6,16 +6,20 @@ import { BLOCKS, Document, Block, Inline } from "@contentful/rich-text-types";
 interface RichTextRendererProps {
   text: Document;
   listClassName?: string;
+  paragraphClassName?: string;
   listLimit?: number;
+  listIcon?: ReactNode;
 }
 
 export default function RichTextRenderer({
   text,
   listClassName,
+  paragraphClassName,
   listLimit,
+  listIcon,
 }: RichTextRendererProps) {
   const renderList = (children: ReactNode) => (
-    <ul className={`list-disc ml-5 ${listClassName}`}>
+    <ul className={`${listClassName}`}>
       {React.Children.toArray(children).slice(0, listLimit)}
     </ul>
   );
@@ -31,14 +35,22 @@ export default function RichTextRenderer({
           node as Document,
           {
             renderNode: {
-              [BLOCKS.PARAGRAPH]: (_node, children) => children,
+              [BLOCKS.PARAGRAPH]: (_node, children) => (
+                <span className="flex items-center gap-2 ml-2">
+                  {listIcon && listIcon}
+                  {children}
+                </span>
+              ),
             },
           }
         );
         return transformedChildren;
       },
+      [BLOCKS.PARAGRAPH]: (node: Block | Inline, children: ReactNode) => (
+        <p className={paragraphClassName}>{children}</p>
+      ),
     },
   };
 
-  return <div className="mb-4">{documentToReactComponents(text, options)}</div>;
+  return <div>{documentToReactComponents(text, options)}</div>;
 }

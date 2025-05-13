@@ -23,7 +23,7 @@ export default function PackageCard({ singlePackage, slug }: PackageCardProps) {
         <p className="font-bold mb-1">{displayedPrice}</p>
         <RichTextRenderer
           text={content}
-          listClassName="text-sm text-gray-500"
+          listClassName="list-disc ml-5 text-sm text-gray-500"
           listLimit={3}
         />
       </CardContent>

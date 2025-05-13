@@ -23,7 +23,12 @@ export default function Curriculum({ curriculum }: CurriculumProps) {
         <Accordion
           key={period.title}
           buttonText={period.title}
-          accordionContent={<RichTextRenderer text={period.description} />}
+          accordionContent={
+            <RichTextRenderer
+              text={period.description}
+              listClassName="list-disc ml-5 "
+            />
+          }
           className="mb-4 h-fit"
         />
       ))}

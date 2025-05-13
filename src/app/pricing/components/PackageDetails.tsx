@@ -52,7 +52,7 @@ export default function PackageDetails({
         />
         <RichTextRenderer
           text={packageDetails.content}
-          listClassName="text-sm text-gray-500"
+          listClassName="list-disc ml-5 text-sm text-gray-500"
         />
         {sessionOptions && (
           <SessionSelector
@@ -67,7 +67,10 @@ export default function PackageDetails({
               key={accordionField.title}
               buttonText={getTitle(accordionField.title)}
               accordionContent={
-                <RichTextRenderer text={accordionField.description} />
+                <RichTextRenderer
+                  text={accordionField.description}
+                  listClassName="list-disc ml-5 "
+                />
               }
               className="mb-4"
             />

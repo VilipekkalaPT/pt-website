@@ -36,7 +36,3 @@ export type {
   TypeSessionOption,
   TypeSessionOptionFields,
 } from "./TypeSessionOption";
-export type {
-  TypeTransformationProcessText,
-  TypeTransformationProcessTextFields,
-} from "./TypeTransformationProcessText";
