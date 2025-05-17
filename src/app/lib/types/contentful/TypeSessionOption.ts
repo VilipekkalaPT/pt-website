@@ -4,6 +4,7 @@ export interface TypeSessionOptionFields {
   title: EntryFields.Symbol;
   numberOfSessions: 1 | 10 | 15;
   price: EntryFields.Integer;
+  priceUnit: "package" | "plan" | "session";
 }
 
 export interface TypeSessionOptionSkeleton extends EntrySkeletonType {

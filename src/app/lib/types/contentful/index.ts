@@ -12,6 +12,11 @@ export type {
   TypeCurriculumPeriod,
   TypeCurriculumPeriodFields,
 } from "./TypeCurriculumPeriod";
+export type { TypeFaq, TypeFaqFields } from "./TypeFaq";
+export type {
+  TypeFaQsPageData,
+  TypeFaQsPageDataFields,
+} from "./TypeFaQsPageData";
 export type {
   TypeFooterColumn,
   TypeFooterColumnFields,

@@ -1,19 +1,22 @@
-import { Field, Label, Select } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { TypeSessionOptionFields } from "app/lib/types/contentful";
+import { SESSION_SELECTOR_TITLE } from "app/utils/variables";
+import { Select } from "radix-ui";
 
 interface SessionSelectorProps {
   sessionOptions: TypeSessionOptionFields[];
+  selectedOption: TypeSessionOptionFields;
   onSelect: (selectedOption: TypeSessionOptionFields) => void;
 }
 
 export default function SessionSelector({
   sessionOptions,
+  selectedOption,
   onSelect,
 }: SessionSelectorProps) {
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleSelectChange = (value: string) => {
     const selectedOption = sessionOptions.find(
-      (option) => String(option.numberOfSessions) === event.target.value
+      (option) => option.numberOfSessions.toString() === value
     );
 
     if (selectedOption) {
@@ -22,28 +25,42 @@ export default function SessionSelector({
   };
 
   return (
-    <Field className="flex flex-col mb-4">
-      <Label className="mb-2">Select a number of sessions</Label>
-      <div className="relative">
-        <Select
-          name="sessionOptions"
-          className="w-full appearance-none border border-gray-300 rounded-md p-2"
-          onChange={handleSelectChange}
+    <Select.Root
+      defaultValue={selectedOption.numberOfSessions.toString()}
+      onValueChange={(value) => handleSelectChange(value)}
+    >
+      <Select.Trigger
+        aria-label={SESSION_SELECTOR_TITLE}
+        className="flex items-center justify-between w-full p-2 border border-gray-300 rounded-md cursor-pointer"
+      >
+        <Select.Value>
+          {selectedOption.numberOfSessions} {selectedOption.priceUnit}
+        </Select.Value>
+        <Select.Icon>
+          <ChevronDownIcon className="size-4" />
+        </Select.Icon>
+      </Select.Trigger>
+
+      <Select.Portal>
+        <Select.Content
+          position="popper"
+          className="w-[var(--radix-select-trigger-width)] bg-white border border-gray-300 rounded-md"
         >
-          {sessionOptions.map((option) => (
-            <option
-              key={option.numberOfSessions}
-              value={option.numberOfSessions}
-            >
-              {option.numberOfSessions}
-            </option>
-          ))}
-        </Select>
-        <ChevronDownIcon
-          className="group pointer-events-none absolute top-0 right-2.5 size-4 h-full"
-          aria-hidden="true"
-        />
-      </div>
-    </Field>
+          <Select.Viewport className="p-1">
+            {sessionOptions.map((option) => (
+              <Select.Item
+                key={option.numberOfSessions}
+                value={option.numberOfSessions.toString()}
+                className="relative flex items-center justify-between px-3 py-2 rounded cursor-pointer hover:bg-gray-100 data-[state=checked]:bg-blue-100"
+              >
+                <Select.ItemText>
+                  {option.numberOfSessions} {option.priceUnit}
+                </Select.ItemText>
+              </Select.Item>
+            ))}
+          </Select.Viewport>
+        </Select.Content>
+      </Select.Portal>
+    </Select.Root>
   );
 }

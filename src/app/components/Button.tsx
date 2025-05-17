@@ -2,7 +2,7 @@
 
 import cn from "classnames";
 
-export type ButtonVariant = "primary" | "secondary" | "ghost";
+export type ButtonVariant = "primary" | "secondary" | "outlined" | "ghost";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
   variant: ButtonVariant;
@@ -24,12 +24,14 @@ export default function Button({
   return (
     <button
       className={cn(
-        "flex items-center gap-2 py-2 px-4 text-base rounded-lg border-0 cursor-pointer",
+        "flex items-center gap-2 py-2 px-4 text-base rounded-lg cursor-pointer",
         {
-          "text-white bg-black": variant === "primary",
-          "text-gray-600 bg-gray-200 hover:bg-gray-600 hover:text-white":
+          "border-0 text-white bg-black": variant === "primary",
+          "border-0 text-gray-600 bg-gray-200 hover:bg-gray-600 hover:text-white":
             variant === "secondary",
-          "bg-white": variant === "ghost",
+          "py-4 border border-gray-300 rounded hover:bg-gray-100":
+            variant === "outlined",
+          "border-0 bg-white": variant === "ghost",
         },
         className
       )}

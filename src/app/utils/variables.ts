@@ -19,3 +19,17 @@ export const PACKAGE_TYPE_NAMES: Record<PACKAGE_TYPE, string> = {
   [PACKAGE_TYPE.DUO]: "Duo package",
   [PACKAGE_TYPE.COMBO]: "Combo package",
 };
+
+// Pricing Page Variables
+export const SESSION_SELECTOR_TITLE = "Select a number of sessions";
+
+// Faqs Page Variables
+export const MORE_QUESTIONS = "Still have questions?";
+
+export enum TOPIC_TYPE {
+  WEIGHT_LOSS,
+  GAINING_MUSCLES,
+  DIET_MYTHS,
+  FEMALE_GYM,
+  SUPPLEMENTS,
+}
