@@ -11,6 +11,7 @@ import { TOPIC_TYPE } from "app/utils/variables";
 
 interface TopicListProps {
   topicQuestions: TopicQuestions[];
+  handleSelectTopic: (topic: string) => void;
 }
 
 const getIconComponent = (topicType: TOPIC_TYPE) => {
@@ -26,7 +27,10 @@ const getIconComponent = (topicType: TOPIC_TYPE) => {
   return icons[topicType] || <SquaresPlusIcon className={className} />;
 };
 
-export default function TopicList({ topicQuestions }: TopicListProps) {
+export default function TopicList({
+  topicQuestions,
+  handleSelectTopic,
+}: TopicListProps) {
   return (
     <div className="flex-1">
       {topicQuestions.map((topic) => (
@@ -38,6 +42,7 @@ export default function TopicList({ topicQuestions }: TopicListProps) {
             TOPIC_TYPE[topic.topicType as keyof typeof TOPIC_TYPE]
           )}
           className="w-3/4 mb-4 font-bold"
+          onClick={() => handleSelectTopic(topic.topicType)}
         />
       ))}
     </div>

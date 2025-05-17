@@ -21,10 +21,8 @@ export default function Philosophy({
   const banner = images.find((image) => image.title === BANNER);
   const bannerUrl = `https:${banner?.file?.url ?? ""}`;
 
-  console.log(content);
-
   return (
-    <div className="flex my-15 mx-12 gap-15">
+    <div className="flex my-15 mx-12 gap-12">
       <Image
         src={bannerUrl}
         alt={BANNER}
@@ -32,7 +30,7 @@ export default function Philosophy({
         height={banner?.file?.details.image?.height}
         className="block w-full h-auto flex-2"
       />
-      <div className="flex-1 mr-20">
+      <div className="flex-1 mr-15">
         <p className="text-2xl font-bold">{title}</p>
         <p className="text-xl text-gray-400 pb-2">{subtitle}</p>
         <RichTextRenderer

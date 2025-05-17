@@ -36,6 +36,10 @@ export default function Button({
         className
       )}
       onClick={onClick}
+      aria-label={`${label} button`}
+      type="button"
+      role="button"
+      disabled={props.disabled}
       {...props}
     >
       {iconLeft && iconLeft}

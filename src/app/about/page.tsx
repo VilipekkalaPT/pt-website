@@ -32,7 +32,7 @@ export default async function About() {
       />
       <div className="bg-gray-100 py-40 flex flex-col items-center justify-center">
         {aboutPageContent.slogans.map((slogan) => (
-          <p key={slogan} className="text-5xl font-bold">
+          <p key={slogan} className="text-5xl font-bold mb-1">
             {slogan}
           </p>
         ))}

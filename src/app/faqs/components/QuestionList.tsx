@@ -12,16 +12,27 @@ import AccordionComponent from "app/components/AccordionComponent";
 
 interface QuestionsListProps {
   topicQuestions: TopicQuestions[];
+  selectedTopicType: string;
+  ref: React.RefObject<HTMLDivElement | null>;
 }
 
-export default function QuestionsList({ topicQuestions }: QuestionsListProps) {
+export default function QuestionsList({
+  topicQuestions,
+  selectedTopicType,
+  ref,
+}: QuestionsListProps) {
   const router = useRouter();
   const [selectedAccordion, setSelectedAccordion] = useState<string>("");
 
   return (
     <div className="flex-2">
       {topicQuestions.map((topic) => (
-        <div key={topic.topicType} className="mb-8">
+        <div
+          id={topic.topicType}
+          key={topic.topicType}
+          className="mb-8"
+          ref={topic.topicType === selectedTopicType ? ref : null}
+        >
           <p className="text-xl mb-2">{topic.topicLabel}</p>
           {topic.questions.map((q, index) => {
             const questionIndex = `${q.topicType}-${index}`;
@@ -46,7 +57,7 @@ export default function QuestionsList({ topicQuestions }: QuestionsListProps) {
             onClick={() => router.push(ROUTES.CONTACT)}
             variant="ghost"
             iconRight={<ArrowRightIcon className="size-3" />}
-            className="text-xs"
+            className="text-xs mt-2"
           />
         </div>
       ))}

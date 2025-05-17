@@ -5,7 +5,7 @@ import { Select } from "radix-ui";
 
 interface SessionSelectorProps {
   sessionOptions: TypeSessionOptionFields[];
-  selectedOption: TypeSessionOptionFields;
+  selectedOption?: TypeSessionOptionFields;
   onSelect: (selectedOption: TypeSessionOptionFields) => void;
 }
 
@@ -26,7 +26,7 @@ export default function SessionSelector({
 
   return (
     <Select.Root
-      defaultValue={selectedOption.numberOfSessions.toString()}
+      defaultValue={selectedOption?.numberOfSessions.toString()}
       onValueChange={(value) => handleSelectChange(value)}
     >
       <Select.Trigger
@@ -34,7 +34,7 @@ export default function SessionSelector({
         className="flex items-center justify-between w-full p-2 border border-gray-300 rounded-md cursor-pointer"
       >
         <Select.Value>
-          {selectedOption.numberOfSessions} {selectedOption.priceUnit}
+          {selectedOption?.numberOfSessions} {selectedOption?.priceUnit}
         </Select.Value>
         <Select.Icon>
           <ChevronDownIcon className="size-4" />

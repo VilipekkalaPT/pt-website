@@ -28,9 +28,9 @@ export default function PackageDetails({
   const sessionOptions = packageDetails.sessionOptions?.map(
     (option) => option.fields
   ) as TypeSessionOptionFields[];
-  const [selectedOption, setSelectedOption] = useState<TypeSessionOptionFields>(
-    sessionOptions[0]
-  );
+  const [selectedOption, setSelectedOption] = useState<
+    TypeSessionOptionFields | undefined
+  >(sessionOptions ? sessionOptions[0] : undefined);
   const [selectedAccordion, setSelectedAccordion] = useState<string>("");
 
   return (
