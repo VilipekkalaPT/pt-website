@@ -9,8 +9,6 @@ export default async function TermsConditions() {
 
   const { title, content } = termsConditionsPageData[0];
 
-  console.log(content);
-
   return (
     <>
       <div className="mt-26 px-12 mb-10">
