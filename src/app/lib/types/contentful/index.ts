@@ -41,3 +41,7 @@ export type {
   TypeSessionOption,
   TypeSessionOptionFields,
 } from "./TypeSessionOption";
+export type {
+  TypeTermsAndConditions,
+  TypeTermsAndConditionsFields,
+} from "./TypeTermsAndConditions";

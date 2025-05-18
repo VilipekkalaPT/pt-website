@@ -1,7 +1,13 @@
 import React from "react";
 import { ReactNode } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, Document, Block, Inline } from "@contentful/rich-text-types";
+import {
+  BLOCKS,
+  Document,
+  Block,
+  Inline,
+  MARKS,
+} from "@contentful/rich-text-types";
 
 interface RichTextRendererProps {
   text: Document;
@@ -35,12 +41,18 @@ export default function RichTextRenderer({
           node as Document,
           {
             renderNode: {
-              [BLOCKS.PARAGRAPH]: (_node, children) => (
-                <span className="flex items-center gap-2 ml-2">
-                  {listIcon && listIcon}
-                  {children}
-                </span>
-              ),
+              [BLOCKS.PARAGRAPH]: (
+                _node: Block | Inline,
+                children: ReactNode
+              ) =>
+                listIcon ? (
+                  <span className="flex items-center gap-2 ml-2">
+                    {listIcon && listIcon}
+                    {children}
+                  </span>
+                ) : (
+                  <span>{children}</span>
+                ),
             },
           }
         );
@@ -48,6 +60,9 @@ export default function RichTextRenderer({
       },
       [BLOCKS.PARAGRAPH]: (node: Block | Inline, children: ReactNode) => (
         <p className={paragraphClassName}>{children}</p>
+      ),
+      [BLOCKS.HEADING_3]: (node: Block | Inline, children: ReactNode) => (
+        <p className="mt-6">{children}</p>
       ),
     },
   };
