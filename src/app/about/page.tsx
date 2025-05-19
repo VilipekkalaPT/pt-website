@@ -4,7 +4,6 @@ import {
   TypeAboutPageDataSkeleton,
 } from "app/lib/types/contentful/TypeAboutPageData";
 import Divider from "app/components/Divider";
-import AwardsAndAchievements from "./components/AwardsAndAchievements";
 import Philosophy from "./components/Philosophy";
 import Journey from "./components/Journey";
 import Introduction from "./components/Introduction";
@@ -40,10 +39,7 @@ export default async function About() {
       <Journey
         title={aboutPageContent.journeyTitle}
         subtitle={aboutPageContent.journeySubtitle ?? ""}
-      />
-      <AwardsAndAchievements
-        title={aboutPageContent.awardsAndAchievementsTitle}
-        subtitle={aboutPageContent.awardsAndAchievementsSubtitle ?? ""}
+        images={aboutPageContent.journeyImages}
       />
       <Divider />
     </div>

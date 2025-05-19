@@ -7,6 +7,7 @@ import cn from "classnames";
 import TopicList from "./TopicList";
 import QuestionsList from "./QuestionList";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
+import IconButton from "app/components/IconButton";
 
 interface QASectionProps {
   questions: TypeFaqSkeleton[];
@@ -52,19 +53,16 @@ export default function QASection({ questions }: QASectionProps) {
         selectedTopicType={selectedTopicType}
         ref={ref}
       />
-      <button
-        className={cn(
-          "fixed bottom-6 right-6 p-3 rounded-full b bg-gray-900 text-white hadow-lg cursor-pointer",
-          {
-            "opacity-100": scrollToTopVisible,
-            "opacity-0 pointer-events-none": !scrollToTopVisible,
-          }
-        )}
+      <IconButton
+        variant="primary"
+        icon={<ChevronUpIcon className="size-4" />}
+        className={cn("fixed bottom-6 right-6", {
+          "opacity-100": scrollToTopVisible,
+          "opacity-0 pointer-events-none": !scrollToTopVisible,
+        })}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Scroll to top"
-      >
-        <ChevronUpIcon className="size-4" />
-      </button>
+      />
     </div>
   );
 }

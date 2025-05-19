@@ -1,4 +1,4 @@
-import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 
 export interface TypeAboutPageDataFields {
   name: EntryFields.Symbol;
@@ -10,8 +10,7 @@ export interface TypeAboutPageDataFields {
   slogans: EntryFields.Symbol[];
   journeyTitle: EntryFields.Symbol;
   journeySubtitle?: EntryFields.Symbol;
-  awardsAndAchievementsTitle: EntryFields.Symbol;
-  awardsAndAchievementsSubtitle?: EntryFields.Symbol;
+  journeyImages: Asset[];
 }
 
 export interface TypeAboutPageDataSkeleton extends EntrySkeletonType {

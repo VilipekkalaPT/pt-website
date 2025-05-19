@@ -1057,7 +1057,7 @@
         "id": "aboutPageData",
         "type": "ContentType",
         "createdAt": "2025-04-23T18:56:35.106Z",
-        "updatedAt": "2025-05-13T11:14:51.487Z",
+        "updatedAt": "2025-05-19T19:47:12.044Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1065,8 +1065,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 37,
-        "publishedAt": "2025-05-13T11:14:51.487Z",
+        "publishedVersion": 41,
+        "publishedAt": "2025-05-19T19:47:12.044Z",
         "firstPublishedAt": "2025-04-23T18:56:35.529Z",
         "createdBy": {
           "sys": {
@@ -1082,8 +1082,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 19,
-        "version": 38,
+        "publishedCounter": 21,
+        "version": 42,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1243,26 +1243,21 @@
           "omitted": false
         },
         {
-          "id": "awardsAndAchievementsTitle",
-          "name": "Awards And Achievements Title",
-          "type": "Symbol",
+          "id": "journeyImages",
+          "name": "Journey Images",
+          "type": "Array",
           "localized": false,
           "required": true,
           "validations": [
           ],
           "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "awardsAndAchievementsSubtitle",
-          "name": "Awards And Achievements Subtitle",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
         }
       ]
     },
@@ -2830,7 +2825,7 @@
             "linkType": "Space"
           }
         },
-        "version": 38,
+        "version": 42,
         "createdAt": "2025-04-23T18:56:35.691Z",
         "createdBy": {
           "sys": {
@@ -2839,7 +2834,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-05-13T11:14:52.093Z",
+        "updatedAt": "2025-05-19T19:47:12.646Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -2909,13 +2904,8 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "awardsAndAchievementsTitle",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "awardsAndAchievementsSubtitle",
-          "widgetId": "singleLine",
+          "fieldId": "journeyImages",
+          "widgetId": "assetGalleryEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -4791,7 +4781,7 @@
         "id": "21faUZqQbx6IiOM1szvlQJ",
         "type": "Entry",
         "createdAt": "2025-04-18T13:01:15.963Z",
-        "updatedAt": "2025-05-18T20:39:53.351Z",
+        "updatedAt": "2025-05-18T20:54:12.213Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4799,8 +4789,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-04-18T13:59:04.477Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-05-18T20:54:12.213Z",
         "firstPublishedAt": "2025-04-18T13:01:32.972Z",
         "createdBy": {
           "sys": {
@@ -4816,8 +4806,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4827,7 +4817,7 @@
         },
         "fieldStatus": {
           "*": {
-            "en-US": "changed"
+            "en-US": "published"
           }
         },
         "automationTags": [
@@ -4849,7 +4839,7 @@
           "en-US": "Terms & Conditions"
         },
         "url": {
-          "en-US": "terms-and-condition"
+          "en-US": "terms-and-conditions"
         }
       }
     },
@@ -6941,7 +6931,7 @@
         "id": "5YU8BsOnoGWWroWyWSkUkr",
         "type": "Entry",
         "createdAt": "2025-04-23T18:57:49.277Z",
-        "updatedAt": "2025-05-13T12:37:20.734Z",
+        "updatedAt": "2025-05-19T19:50:18.563Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6949,8 +6939,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 56,
-        "publishedAt": "2025-05-13T12:37:20.734Z",
+        "publishedVersion": 61,
+        "publishedAt": "2025-05-19T19:50:18.563Z",
         "firstPublishedAt": "2025-04-23T18:59:02.190Z",
         "createdBy": {
           "sys": {
@@ -6966,8 +6956,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 11,
-        "version": 57,
+        "publishedCounter": 12,
+        "version": 62,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7009,144 +6999,144 @@
         },
         "philosophyContent": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "You’re not here for a basic workout. You’re here for something deeper.\nYou want to feel strong—not just in your body, but in your mind. You want to move with intention, live with confidence, and fully show up as the most powerful version of you.",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "Building strength from the inside out. Creating space for growth, clarity, and real transformation",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "This is personal training, but elevated.  ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "It’s fierce, fabulous, and grounded in self-awareness.  ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
-                            "value": "It’s fitness that feels good in your soul.",
+                            "data": {
+                            },
                             "marks": [
                             ],
-                            "data": {
-                            }
+                            "value": "It’s fitness that feels good in your soul.",
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   }
-                ]
+                ],
+                "nodeType": "unordered-list"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "We’ll work hard, yes—but we’ll also laugh, vibe, reflect, and celebrate the hell out of your progress. No pressure to be perfect. No toxic hustle. Just you, showing up for yourself in the most powerful way because when your mindset shifts, your whole life starts to shift with it.",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "You ready to step into your power? Let’s slay.",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "You ready to step into your power? Let’s slay.",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         },
         "slogans": {
@@ -7162,11 +7152,58 @@
         "journeySubtitle": {
           "en-US": "Subtitle"
         },
-        "awardsAndAchievementsTitle": {
-          "en-US": "Awards & Achievements"
-        },
-        "awardsAndAchievementsSubtitle": {
-          "en-US": "Subtitle"
+        "journeyImages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6VkXdujRXg2lEIkEriRN0j"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1w966thgkcwbMjEjUZVUZJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3rvsEmXr6nhUgqNjjzKAeC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "RTUUtxBoPWojRFBjkw1f4"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1uy8hpf0Zotsxk0ElIlxZN"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "othEE19qlwletDBEgnNED"
+              }
+            }
+          ]
         }
       }
     },
@@ -8101,7 +8138,7 @@
         "id": "3msgezHRURF7JfDsa04js",
         "type": "Entry",
         "createdAt": "2025-05-03T19:12:27.222Z",
-        "updatedAt": "2025-05-06T14:05:48.203Z",
+        "updatedAt": "2025-05-19T08:46:39.832Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8109,8 +8146,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 44,
-        "publishedAt": "2025-05-06T14:05:48.203Z",
+        "publishedVersion": 46,
+        "publishedAt": "2025-05-19T08:46:39.832Z",
         "firstPublishedAt": "2025-05-03T19:15:10.858Z",
         "createdBy": {
           "sys": {
@@ -8126,8 +8163,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 12,
-        "version": 45,
+        "publishedCounter": 13,
+        "version": 47,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8162,7 +8199,7 @@
           "en-US": "train-together-slay-together"
         },
         "name": {
-          "en-US": "TRAIN TOGETHER, SLAY TOGETHER"
+          "en-US": "TRAIN TOGETHER, FUN TOGETHER"
         },
         "subheading": {
           "en-US": "👫 Duo In-Gym Coaching (12 Weeks)"
@@ -8203,174 +8240,174 @@
         },
         "content": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "1, 10, or 15 one-on-one gym sessions ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "Each session lasts 70-80 minutes",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "Focus ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           },
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "on technique, strength, and confidence",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "Learn training principles for future independent workouts",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
-                            "value": "T",
+                            "data": {
+                            },
                             "marks": [
                             ],
-                            "data": {
-                            }
+                            "value": "T",
+                            "nodeType": "text"
                           },
                           {
-                            "nodeType": "text",
-                            "value": "eam-based setting to support shared and individual goals",
+                            "data": {
+                            },
                             "marks": [
                             ],
-                            "data": {
-                            }
+                            "value": "eam-based setting to support shared and individual goals",
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   }
-                ]
+                ],
+                "nodeType": "unordered-list"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "\n",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "\n",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "\n",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "\n",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         },
         "packageAccordions": {
@@ -36175,7 +36212,7 @@
         "id": "3IINHggtiHEy4D6Gs6W3j2",
         "type": "Entry",
         "createdAt": "2025-05-18T16:18:41.356Z",
-        "updatedAt": "2025-05-18T16:21:19.633Z",
+        "updatedAt": "2025-05-19T08:38:28.462Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -36183,8 +36220,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2025-05-18T16:21:19.633Z",
+        "publishedVersion": 19,
+        "publishedAt": "2025-05-19T08:38:28.462Z",
         "firstPublishedAt": "2025-05-18T16:21:19.633Z",
         "createdBy": {
           "sys": {
@@ -36200,8 +36237,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 11,
+        "publishedCounter": 4,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -36236,7 +36273,7 @@
           "en-US": "combo-duo"
         },
         "name": {
-          "en-US": "COMBO DUO"
+          "en-US": "TOGETHER TOTAL SLAY TTS"
         },
         "subheading": {
           "en-US": "Abc"
@@ -36264,7 +36301,161 @@
                     },
                     "marks": [
                     ],
-                    "value": "a",
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "10 in-gym personal training sessions",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " with a coach",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Custom training plan",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " designed for two people",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Progress tracking",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " and adjustments as needed",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Support and guidance",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " throughout your journey",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
                     "nodeType": "text"
                   }
                 ],
@@ -36326,7 +36517,7 @@
         "id": "60wYK3XIrZBaybawLbaEz0",
         "type": "Entry",
         "createdAt": "2025-05-18T16:19:23.769Z",
-        "updatedAt": "2025-05-18T16:21:41.067Z",
+        "updatedAt": "2025-05-19T08:36:51.248Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -36334,8 +36525,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2025-05-18T16:21:41.067Z",
+        "publishedVersion": 14,
+        "publishedAt": "2025-05-19T08:36:51.248Z",
         "firstPublishedAt": "2025-05-18T16:19:45.193Z",
         "createdBy": {
           "sys": {
@@ -36351,8 +36542,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 11,
+        "publishedCounter": 6,
+        "version": 15,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -36378,30 +36569,249 @@
       },
       "fields": {
         "title": {
-          "en-US": "Why - COMBO DUO"
+          "en-US": "Why - TTS"
         },
         "description": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "Why",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "A ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "shared journey",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " is a powerful one – training with someone you trust ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Get ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "individualized training plans",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " for both",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "10 in-person sessions ensure you ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "learn proper form, build accountability, and train smart",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": ".",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Working",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": " as a team: ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "double the fun",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Save money while still getting ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "full access to a trainer’s expertise",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         }
       }
@@ -36424,7 +36834,7 @@
         "id": "3joYarmd4wjqJDBhPRY5Q1",
         "type": "Entry",
         "createdAt": "2025-05-18T16:19:53.574Z",
-        "updatedAt": "2025-05-18T16:21:36.474Z",
+        "updatedAt": "2025-05-19T08:37:21.089Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -36432,8 +36842,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-05-18T16:21:36.474Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-05-19T08:37:21.089Z",
         "firstPublishedAt": "2025-05-18T16:20:07.300Z",
         "createdBy": {
           "sys": {
@@ -36449,8 +36859,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -36476,7 +36886,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "For Whom - COMBO DUO"
+          "en-US": "For Whom - COMBO DUO TTS"
         },
         "description": {
           "en-US": {
@@ -36491,7 +36901,207 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "For whom",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Friends or couples",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " with shared goals and support.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Two people with ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "slightly",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " different skill levels who want ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "individual plans but joint sessions",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ".",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Busy pairs ",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "who need a streamlined, ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "expert-driven path to success",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ".",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Anyone ready to commit to ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "change—with someone beside them.",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
                     "data": {
@@ -36522,7 +37132,7 @@
         "id": "2XkotNoIWH2N4FqkTlekzX",
         "type": "Entry",
         "createdAt": "2025-05-18T16:20:17.620Z",
-        "updatedAt": "2025-05-18T16:20:35.690Z",
+        "updatedAt": "2025-05-19T08:38:15.926Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -36530,8 +37140,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-05-18T16:20:35.690Z",
+        "publishedVersion": 12,
+        "publishedAt": "2025-05-19T08:38:15.926Z",
         "firstPublishedAt": "2025-05-18T16:20:35.690Z",
         "createdBy": {
           "sys": {
@@ -36547,8 +37157,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 4,
+        "version": 13,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -36574,30 +37184,178 @@
       },
       "fields": {
         "title": {
-          "en-US": "Not For Whom - COMBO DUO"
+          "en-US": "Not For Whom - COMBO DUO TTS"
         },
         "description": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "Not for whom?",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Individuals who ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "prefer solo",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " coaching and fully personalized attention during every moment.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Pairs with extremely ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "different goals",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " (e.g., one trains for a marathon, the other for bodybuilding).",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Those unwilling to coordinate schedules for joint sessions.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Anyone not open to learning, sweating, or growing together.\n",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         }
       }
@@ -36620,7 +37378,7 @@
         "id": "1rFIOHmxF5hHOeuMESOJfX",
         "type": "Entry",
         "createdAt": "2025-05-18T16:20:40.654Z",
-        "updatedAt": "2025-05-18T16:21:16.065Z",
+        "updatedAt": "2025-05-19T08:39:04.695Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -36628,8 +37386,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-05-18T16:21:16.065Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-05-19T08:39:04.695Z",
         "firstPublishedAt": "2025-05-18T16:21:16.065Z",
         "createdBy": {
           "sys": {
@@ -36645,8 +37403,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -36676,26 +37434,193 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "Expected Result",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "A visible, shared transformation that builds confidence, health, and connection.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Solid understanding of training principles tailored to ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "each person’s needs",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ".",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Improved strength, endurance, and movement quality—",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "with real technique, not guesswork",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ".",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "A fun, empowering rhythm to fitness that ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "lasts beyond the program",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ".\n",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -36718,7 +37643,7 @@
         "id": "hLsBIIWp8RJYjhiBzXR4F",
         "type": "Entry",
         "createdAt": "2025-05-18T20:44:08.632Z",
-        "updatedAt": "2025-05-18T20:46:37.080Z",
+        "updatedAt": "2025-05-19T08:24:51.088Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -36726,8 +37651,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 16,
-        "publishedAt": "2025-05-18T20:46:37.080Z",
+        "publishedVersion": 32,
+        "publishedAt": "2025-05-19T08:24:51.088Z",
         "firstPublishedAt": "2025-05-18T20:46:37.080Z",
         "createdBy": {
           "sys": {
@@ -36743,8 +37668,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 17,
+        "publishedCounter": 3,
+        "version": 33,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -36779,13 +37704,85 @@
             },
             "content": [
               {
-                "nodeType": "heading-3",
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "1. Agreement to Services",
+                    "value": "Here’s an updated ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Terms and Conditions",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " draft that includes ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Privacy",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " and ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Refund",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " policies, written in a clear and professional tone for your personal training website. You can copy and paste this directly into your site, with minor adjustments for tone or formatting if needed.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-2",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Terms and Conditions",
                     "marks": [
                       {
                         "type": "bold"
@@ -36803,7 +37800,43 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "By purchasing a package, you agree to the full scope, duration, and fee of the selected program. All clients are required to complete a health screening and intake form before beginning any coaching.",
+                    "value": "Effective as of [Insert Date]",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-3",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "1. Agreement to service",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "By purchasing any personal training service (online or offline) from Vy Minh Nguyen, you agree to the following terms and conditions. These terms are designed to protect both the trainer and the client, and to ensure clarity and transparency throughout our work together.",
                     "marks": [
                     ],
                     "data": {
@@ -36818,7 +37851,7 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "2. Payment Terms",
+                    "value": "2. Payment Policy",
                     "marks": [
                       {
                         "type": "bold"
@@ -36846,7 +37879,29 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Full payment is due in advance, either in one payment or in up to ",
+                            "value": "Full package price is binding once agreed upon by both parties.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Payments may be made in ",
                             "marks": [
                             ],
                             "data": {
@@ -36854,7 +37909,48 @@
                           },
                           {
                             "nodeType": "text",
-                            "value": "three installments",
+                            "value": "up to 3 installments",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ", as agreed in advance.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "All payment plans must be completed ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "within the active coaching period",
                             "marks": [
                               {
                                 "type": "bold"
@@ -36887,7 +37983,54 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Once you agree to a package, the ",
+                            "value": "Missed payments may result in paused or canceled sessions without refund.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-3",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "3. Cancellation & Rescheduling",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Please provide ",
                             "marks": [
                             ],
                             "data": {
@@ -36895,7 +38038,7 @@
                           },
                           {
                             "nodeType": "text",
-                            "value": "entire fee becomes binding",
+                            "value": "at least 24 hours’ notice",
                             "marks": [
                               {
                                 "type": "bold"
@@ -36906,7 +38049,7 @@
                           },
                           {
                             "nodeType": "text",
-                            "value": ", regardless of payment plan or number of sessions used.",
+                            "value": " if you need to cancel or reschedule a session.",
                             "marks": [
                             ],
                             "data": {
@@ -36928,98 +38071,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Installments are due on pre-agreed dates. Missed payments may result in paused services.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "No refunds will be given for unused sessions unless in the case of documented medical emergency.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "nodeType": "heading-3",
-                "data": {
-                },
-                "content": [
-                  {
-                    "nodeType": "text",
-                    "value": "3. Scheduling & Rescheduling",
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "data": {
-                    }
-                  }
-                ]
-              },
-              {
-                "nodeType": "unordered-list",
-                "data": {
-                },
-                "content": [
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "All sessions must be scheduled in advance.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "A minimum of ",
+                            "value": "Late cancellations (less than 24 hours) may be ",
                             "marks": [
                             ],
                             "data": {
@@ -37027,7 +38079,7 @@
                           },
                           {
                             "nodeType": "text",
-                            "value": "24 hours’ notice",
+                            "value": "counted as a completed session",
                             "marks": [
                               {
                                 "type": "bold"
@@ -37038,7 +38090,7 @@
                           },
                           {
                             "nodeType": "text",
-                            "value": " is required to cancel or reschedule.",
+                            "value": ".",
                             "marks": [
                             ],
                             "data": {
@@ -37060,29 +38112,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Late cancellations (under 24 hours) will be considered a completed session.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "Online check-ins follow the same notice period.",
+                            "value": "Repeated no-shows or cancellations may affect your eligibility for future bookings.",
                             "marks": [
                             ],
                             "data": {
@@ -37101,7 +38131,7 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "4. No-Show Policy",
+                    "value": "4. Refund Policy",
                     "marks": [
                       {
                         "type": "bold"
@@ -37129,7 +38159,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "A missed session without prior notice counts as a completed session.",
+                            "value": "All sales are final once the program begins.",
                             "marks": [
                             ],
                             "data": {
@@ -37151,7 +38181,62 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Repeated no-shows may lead to service suspension without refund.",
+                            "value": "No refunds",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " will be given for completed or ongoing sessions.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Refunds are only issued if the trainer is unable to deliver the service due to personal reasons or emergencies.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "In rare, exceptional circumstances (e.g., injury, medical issue), requests for partial refunds may be reviewed on a case-by-case basis.",
                             "marks": [
                             ],
                             "data": {
@@ -37170,7 +38255,7 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "5. Client Responsibility",
+                    "value": "5. Privacy Policy",
                     "marks": [
                       {
                         "type": "bold"
@@ -37198,7 +38283,26 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "You are responsible for following your program and communicating challenges or changes.",
+                            "value": "All personal information you provide (including contact details, health data, progress photos, or check-ins) will be kept ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "strictly confidential",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ".",
                             "marks": [
                             ],
                             "data": {
@@ -37220,7 +38324,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Results depend on your consistency, effort, and adherence.",
+                            "value": "Data will be stored securely and never shared or sold to third parties.",
                             "marks": [
                             ],
                             "data": {
@@ -37242,7 +38346,67 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "The coach is not responsible for lack of progress if the program is not followed.",
+                            "value": "Photos or testimonials will ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "only be used for marketing",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " with your ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "explicit written consent",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ".",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "You have the right to request deletion of your personal data at any time.",
                             "marks": [
                             ],
                             "data": {
@@ -37261,7 +38425,7 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "6. Health & Safety",
+                    "value": "6. Client Responsibility",
                     "marks": [
                       {
                         "type": "bold"
@@ -37289,7 +38453,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "By starting this program, you confirm you are physically able to participate in training and have been cleared by a medical professional if necessary.",
+                            "value": "You must inform the trainer of any medical condition or injury that may affect your ability to participate.",
                             "marks": [
                             ],
                             "data": {
@@ -37311,7 +38475,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Inform your trainer immediately of any injury, illness, or health change.",
+                            "value": "You agree to follow the training and nutrition guidance at your own discretion and understand the risks associated with physical activity.",
                             "marks": [
                             ],
                             "data": {
@@ -37333,7 +38497,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "The trainer is not liable for injuries occurring from unsupervised exercise or misuse of guidance.",
+                            "value": "Always consult with your healthcare provider before beginning any new fitness or nutrition program.",
                             "marks": [
                             ],
                             "data": {
@@ -37352,7 +38516,7 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "7. Online Coaching",
+                    "value": "7. Trainer Commitment",
                     "marks": [
                       {
                         "type": "bold"
@@ -37380,7 +38544,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Online packages include tailored programs, nutrition guidance, and regular check-ins via the agreed platform.",
+                            "value": "Vy Minh Nguyen commits to providing professional, respectful, and individualized coaching tailored to your goals.",
                             "marks": [
                             ],
                             "data": {
@@ -37402,7 +38566,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Communication replies are typically within 24–48 hours during business days.",
+                            "value": "All sessions and communication will be delivered in a timely and supportive manner.",
                             "marks": [
                             ],
                             "data": {
@@ -37424,7 +38588,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Packages are non-transferable and for the named client only.",
+                            "value": "Your progress, comfort, and safety are the highest priority.",
                             "marks": [
                             ],
                             "data": {
@@ -37443,7 +38607,7 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "8. In-Person Coaching",
+                    "value": "8. Contact",
                     "marks": [
                       {
                         "type": "bold"
@@ -37451,195 +38615,6 @@
                     ],
                     "data": {
                     }
-                  }
-                ]
-              },
-              {
-                "nodeType": "unordered-list",
-                "data": {
-                },
-                "content": [
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "Sessions take place at a pre-agreed location and begin promptly at the scheduled time.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "If you are late, the session will still end at the originally scheduled time.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "Bring appropriate gear, hydration, and readiness to train.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "nodeType": "heading-3",
-                "data": {
-                },
-                "content": [
-                  {
-                    "nodeType": "text",
-                    "value": "9. Termination",
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "data": {
-                    }
-                  }
-                ]
-              },
-              {
-                "nodeType": "unordered-list",
-                "data": {
-                },
-                "content": [
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "The trainer reserves the right to terminate the coaching relationship due to inappropriate behavior, harassment, or repeated policy violations. Refunds for remaining sessions are at the trainer’s discretion.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "nodeType": "heading-3",
-                "data": {
-                },
-                "content": [
-                  {
-                    "nodeType": "text",
-                    "value": "10. Legal & Updates",
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "data": {
-                    }
-                  }
-                ]
-              },
-              {
-                "nodeType": "unordered-list",
-                "data": {
-                },
-                "content": [
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "These terms apply to all purchases and participation in services.",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
-                            "value": "[Your Business Name] may update terms as needed; clients will be notified of changes in writing",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
                   }
                 ]
               },
@@ -37650,7 +38625,37 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "",
+                    "value": "If you have questions about these terms, contact:",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "📧 fitnesswithvili@gmail.com",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "📞 (+358) 44 976 4986",
                     "marks": [
                     ],
                     "data": {
@@ -37743,6 +38748,480 @@
           }
         }
       }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "RTUUtxBoPWojRFBjkw1f4",
+        "type": "Asset",
+        "createdAt": "2025-05-19T19:48:56.834Z",
+        "updatedAt": "2025-05-19T19:49:31.392Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-05-19T19:49:31.392Z",
+        "firstPublishedAt": "2025-05-19T19:49:31.392Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/RTUUtxBoPWojRFBjkw1f4"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test 3"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/RTUUtxBoPWojRFBjkw1f4/7ac338bfa49a3e14b10050ee58dcff66/Screenshot_2025-05-06_at_16.17.57.png",
+            "details": {
+              "size": 289473,
+              "image": {
+                "width": 1637,
+                "height": 802
+              }
+            },
+            "fileName": "Screenshot 2025-05-06 at 16.17.57.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "1w966thgkcwbMjEjUZVUZJ",
+        "type": "Asset",
+        "createdAt": "2025-05-19T19:48:56.847Z",
+        "updatedAt": "2025-05-19T19:49:47.809Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-05-19T19:49:47.809Z",
+        "firstPublishedAt": "2025-05-19T19:49:47.809Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/1w966thgkcwbMjEjUZVUZJ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test 5"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/1w966thgkcwbMjEjUZVUZJ/d012c60c3fe4ff728c3074184e2f4fc7/Screenshot_2025-05-06_at_16.35.00.png",
+            "details": {
+              "size": 200957,
+              "image": {
+                "width": 1637,
+                "height": 802
+              }
+            },
+            "fileName": "Screenshot 2025-05-06 at 16.35.00.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "3rvsEmXr6nhUgqNjjzKAeC",
+        "type": "Asset",
+        "createdAt": "2025-05-19T19:48:56.847Z",
+        "updatedAt": "2025-05-19T19:49:40.580Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-05-19T19:49:40.580Z",
+        "firstPublishedAt": "2025-05-19T19:49:40.580Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/3rvsEmXr6nhUgqNjjzKAeC"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test 4"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/3rvsEmXr6nhUgqNjjzKAeC/2777b079f822cef14e0465e0d7f66b5d/Screenshot_2025-05-06_at_14.14.35.png",
+            "details": {
+              "size": 396166,
+              "image": {
+                "width": 2630,
+                "height": 1098
+              }
+            },
+            "fileName": "Screenshot 2025-05-06 at 14.14.35.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "othEE19qlwletDBEgnNED",
+        "type": "Asset",
+        "createdAt": "2025-05-19T19:48:56.847Z",
+        "updatedAt": "2025-05-19T19:49:17.172Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-05-19T19:49:17.172Z",
+        "firstPublishedAt": "2025-05-19T19:49:17.172Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/othEE19qlwletDBEgnNED"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test 1"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/othEE19qlwletDBEgnNED/dd292f6d4bcea4b66821bee9fb7cf8f8/Screenshot_2025-05-06_at_16.35.13.png",
+            "details": {
+              "size": 334816,
+              "image": {
+                "width": 1637,
+                "height": 802
+              }
+            },
+            "fileName": "Screenshot 2025-05-06 at 16.35.13.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "1uy8hpf0Zotsxk0ElIlxZN",
+        "type": "Asset",
+        "createdAt": "2025-05-19T19:48:56.849Z",
+        "updatedAt": "2025-05-19T19:49:24.506Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-05-19T19:49:24.506Z",
+        "firstPublishedAt": "2025-05-19T19:49:24.506Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/1uy8hpf0Zotsxk0ElIlxZN"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test 2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/1uy8hpf0Zotsxk0ElIlxZN/6bf466f2386c5d8f245b6db7008fa100/Screenshot_2025-05-06_at_15.48.51.png",
+            "details": {
+              "size": 149154,
+              "image": {
+                "width": 1315,
+                "height": 549
+              }
+            },
+            "fileName": "Screenshot 2025-05-06 at 15.48.51.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "6VkXdujRXg2lEIkEriRN0j",
+        "type": "Asset",
+        "createdAt": "2025-05-19T19:48:56.858Z",
+        "updatedAt": "2025-05-19T19:49:53.816Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-05-19T19:49:53.816Z",
+        "firstPublishedAt": "2025-05-19T19:49:53.816Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/6VkXdujRXg2lEIkEriRN0j"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test 6"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/6VkXdujRXg2lEIkEriRN0j/7898ed7eb4e2cdffcb28ca3b99554199/Screenshot_2025-05-06_at_16.18.04.png",
+            "details": {
+              "size": 361518,
+              "image": {
+                "width": 1637,
+                "height": 802
+              }
+            },
+            "fileName": "Screenshot 2025-05-06 at 16.18.04.png",
+            "contentType": "image/png"
+          }
+        }
+      }
     }
   ],
   "locales": [
@@ -37795,7 +39274,7 @@
   "webhooks": [
     {
       "name": "App Revalidation",
-      "url": "https://slayfitvili.onrender.com/api/revalidate",
+      "url": "https://pt-website-ecru.vercel.app/api/revalidate",
       "httpBasicUsername": null,
       "topics": [
         "Entry.publish",
@@ -37811,7 +39290,7 @@
       "sys": {
         "type": "WebhookDefinition",
         "id": "4AUe4JAgivTOrITDz5ha7v",
-        "version": 0,
+        "version": 1,
         "space": {
           "sys": {
             "type": "Link",
@@ -37834,7 +39313,7 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "updatedAt": "2025-04-18T21:11:16Z"
+        "updatedAt": "2025-05-19T19:41:34Z"
       },
       "headers": [
         {
