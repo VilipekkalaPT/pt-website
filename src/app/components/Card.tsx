@@ -1,10 +1,9 @@
 import Image from "next/image";
 import cn from "classnames";
 import Link from "next/link";
+
 interface CardHeaderProps {
-  avatar: React.ReactNode;
-  title: string;
-  subTitle: string;
+  children: React.ReactNode;
   className?: string;
 }
 interface CardMediaProps {
@@ -13,6 +12,11 @@ interface CardMediaProps {
 }
 
 interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface Card {
   children: React.ReactNode;
   className?: string;
 }
@@ -38,23 +42,8 @@ export default function Card({ children, className, href }: CardProps) {
   );
 }
 
-export const CardHeader = ({
-  avatar,
-  title,
-  subTitle,
-  className,
-}: CardHeaderProps) => {
-  return (
-    <div className={className}>
-      <div className="flex items-center">
-        {avatar}
-        <div className="ml-4">
-          <p className="font-semibold text-gray-600">{title}</p>
-          <p className="text-sm font-medium text-gray-400">{subTitle}</p>
-        </div>
-      </div>
-    </div>
-  );
+export const CardHeader = ({ className, children }: CardHeaderProps) => {
+  return <div className={className}>{children}</div>;
 };
 
 export const CardMedia = ({ imageUrl, alt }: CardMediaProps) => {

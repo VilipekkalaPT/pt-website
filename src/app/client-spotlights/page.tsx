@@ -24,7 +24,7 @@ export default async function ClientSpotlights() {
       />
       <div className="mt-10 px-6 grid grid-cols-3 gap-6">
         {reviews.map((review) => (
-          <ReviewCard key={review.id} review={review} showIndexPart />
+          <ReviewCard key={review.id} review={review} showChanges />
         ))}
       </div>
     </div>

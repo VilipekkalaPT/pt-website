@@ -13,7 +13,12 @@ export default function Review({ reviews }: ReviewProps) {
       <p className="text-2xl font-bold">Latest reviews</p>
       <div className="grid grid-cols-2 gap-6 mt-4">
         {displayedReviews.map((review: TypeReviewFields) => (
-          <ReviewCard key={review.id} review={review} />
+          <ReviewCard
+            key={review.id}
+            review={review}
+            showRating
+            reviewerNamePostion="bottom"
+          />
         ))}
       </div>
     </div>

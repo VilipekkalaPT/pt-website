@@ -1,59 +1,78 @@
 import Card, { CardContent, CardHeader } from "app/components/Card";
-import { formatDate } from "app/utils/utils";
-import {
-  TypeIndexChangeFields,
-  TypeReviewFields,
-} from "app/lib/types/contentful";
+
+import { TypeReviewFields } from "app/lib/types/contentful";
 import Divider from "app/components/Divider";
+import RichTextRenderer from "app/components/RichTextRenderer";
+import Rating from "app/components/Rating";
 
 interface ReviewCardProps {
   review: TypeReviewFields;
-  showIndexPart?: boolean;
+  showRating?: boolean;
+  showChanges?: boolean;
+  reviewerNamePostion?: "top" | "bottom";
 }
-
-const getFirstLetter = (name: string) => {
-  const names = name.split(" ");
-  return names.map((name) => name[0].toUpperCase()).join("");
-};
 
 export default function ReviewCard({
   review,
-  showIndexPart = false,
+  showRating = false,
+  showChanges = false,
+  reviewerNamePostion = "top",
 }: ReviewCardProps) {
-  const indexChanges = review.indexChanges.map(
-    (i) => i.fields
-  ) as TypeIndexChangeFields[];
-
   return (
     <Card key={review.id}>
-      <CardHeader
-        avatar={
-          <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-lg font-semibold text-gray-500">
-            {getFirstLetter(review.reviewer)}
-          </div>
-        }
-        title={review.reviewer}
-        subTitle={formatDate(review.reviewDate)}
-      />
+      <CardHeader>
+        {showRating && <Rating rating={review.rating} />}
+        {reviewerNamePostion === "top" && (
+          <ReviewerInfo reviewer={review.reviewer} packages={review.package} />
+        )}
+      </CardHeader>
       <CardContent className="mt-4">
-        <p>{review.body}</p>
-        {showIndexPart && (
+        <p className="text-xl font-bold">{review.title}</p>
+        <RichTextRenderer text={review.content} />
+        {showChanges && (
           <>
             <Divider />
-            {indexChanges.map((index: TypeIndexChangeFields) => {
+            {review.changes?.map((change: string, index: number) => {
               return (
                 <div
-                  key={index.id}
+                  key={`${change}-${index}`}
                   className="grid grid-cols-2 mt-4 text-gray-500"
                 >
-                  <p>{index.name}</p>
-                  <p className="justify-self-end">{index.change}</p>
+                  <p>{change}</p>
                 </div>
               );
             })}
           </>
         )}
+        {reviewerNamePostion === "bottom" && (
+          <ReviewerInfo
+            reviewer={review.reviewer}
+            packages={review.package}
+            className="mt-4"
+          />
+        )}
       </CardContent>
     </Card>
+  );
+}
+
+function ReviewerInfo({
+  reviewer,
+  packages,
+  className,
+}: {
+  reviewer: string;
+  packages: string[];
+  className?: string;
+}) {
+  return (
+    <div className={`flex flex-col ${className}`}>
+      <p className="text-sm text-gray-600 font-bold">{reviewer}</p>
+      {packages.map((pkg, index) => (
+        <p key={`${pkg}-${index}`} className="text-sm text-gray-500">
+          {pkg}
+        </p>
+      ))}
+    </div>
   );
 }

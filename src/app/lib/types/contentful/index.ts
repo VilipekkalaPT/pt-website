@@ -25,7 +25,6 @@ export type {
   TypeFooterColumnLink,
   TypeFooterColumnLinkFields,
 } from "./TypeFooterColumnLink";
-export type { TypeIndexChange, TypeIndexChangeFields } from "./TypeIndexChange";
 export type {
   TypeKickOffProcess,
   TypeKickOffProcessFields,
