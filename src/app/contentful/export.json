@@ -12,7 +12,7 @@
         "id": "navigation",
         "type": "ContentType",
         "createdAt": "2025-04-15T19:23:12.269Z",
-        "updatedAt": "2025-04-18T14:06:39.287Z",
+        "updatedAt": "2025-05-25T14:08:54.006Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2025-04-18T14:06:39.287Z",
+        "publishedVersion": 31,
+        "publishedAt": "2025-05-25T14:08:54.006Z",
         "firstPublishedAt": "2025-04-15T19:23:12.786Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 16,
+        "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -48,7 +48,7 @@
         },
         "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/content_types/navigation"
       },
-      "displayField": "id",
+      "displayField": "label",
       "name": "Navigation",
       "description": "",
       "fields": [
@@ -90,12 +90,6 @@
           "localized": false,
           "required": true,
           "validations": [
-            {
-              "regexp": {
-                "pattern": "^\\/[a-z\\-]+$",
-                "flags": null
-              }
-            }
           ],
           "disabled": false,
           "omitted": false
@@ -117,6 +111,51 @@
               }
             }
           ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "children",
+          "name": "Children",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "isChild",
+          "name": "Is Child",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "isButton",
+          "name": "Is Button",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
           "disabled": false,
           "omitted": false
         }
@@ -2190,7 +2229,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 32,
         "createdAt": "2025-04-15T19:23:12.935Z",
         "createdBy": {
           "sys": {
@@ -2199,7 +2238,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-04-18T14:06:39.912Z",
+        "updatedAt": "2025-05-25T14:08:54.641Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -2241,6 +2280,21 @@
         {
           "fieldId": "order",
           "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "children",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "isChild",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "isButton",
+          "widgetId": "boolean",
           "widgetNamespace": "builtin"
         }
       ]
@@ -3310,7 +3364,7 @@
         "id": "4v4IyEf0IFBwlOK2EgzwCt",
         "type": "Entry",
         "createdAt": "2025-04-15T19:30:01.021Z",
-        "updatedAt": "2025-04-15T19:30:59.140Z",
+        "updatedAt": "2025-05-25T14:09:49.014Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3318,8 +3372,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-04-15T19:30:59.140Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-05-25T14:09:49.014Z",
         "firstPublishedAt": "2025-04-15T19:30:59.140Z",
         "createdBy": {
           "sys": {
@@ -3335,8 +3389,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 5,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3372,6 +3426,44 @@
         },
         "order": {
           "en-US": 1
+        },
+        "children": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6ZNWrJOKgJOC3r57N5JfgP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7EXVqbIFT6SGZ6zaIEEVqu"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6o2PuxnzfYvHCkDty34eeH"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2uSkYA1O2AuZRBZreGcZ6N"
+              }
+            }
+          ]
+        },
+        "isChild": {
+          "en-US": false
+        },
+        "isButton": {
+          "en-US": false
         }
       }
     },
@@ -3393,7 +3485,7 @@
         "id": "3XrLFUtrC40r72ik7LRXvx",
         "type": "Entry",
         "createdAt": "2025-04-15T19:31:05.103Z",
-        "updatedAt": "2025-04-15T19:32:09.377Z",
+        "updatedAt": "2025-05-25T14:09:06.939Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3401,8 +3493,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-04-15T19:32:09.377Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-05-25T14:09:06.939Z",
         "firstPublishedAt": "2025-04-15T19:32:09.377Z",
         "createdBy": {
           "sys": {
@@ -3418,8 +3510,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3455,6 +3547,12 @@
         },
         "order": {
           "en-US": 2
+        },
+        "isChild": {
+          "en-US": false
+        },
+        "isButton": {
+          "en-US": false
         }
       }
     },
@@ -3476,7 +3574,7 @@
         "id": "6QGAAAgDyrxA4NPDxtJjmS",
         "type": "Entry",
         "createdAt": "2025-04-15T19:32:12.491Z",
-        "updatedAt": "2025-04-15T19:32:32.046Z",
+        "updatedAt": "2025-05-25T14:09:58.148Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3484,8 +3582,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-04-15T19:32:32.046Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-05-25T14:09:58.148Z",
         "firstPublishedAt": "2025-04-15T19:32:32.046Z",
         "createdBy": {
           "sys": {
@@ -3501,8 +3599,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3538,6 +3636,12 @@
         },
         "order": {
           "en-US": 3
+        },
+        "isChild": {
+          "en-US": false
+        },
+        "isButton": {
+          "en-US": false
         }
       }
     },
@@ -3559,7 +3663,7 @@
         "id": "2keD9HxlQukq3RKpnZwW1C",
         "type": "Entry",
         "createdAt": "2025-04-15T19:32:35.639Z",
-        "updatedAt": "2025-04-15T19:32:46.775Z",
+        "updatedAt": "2025-05-25T14:09:11.603Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3567,8 +3671,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-04-15T19:32:46.775Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-05-25T14:09:11.603Z",
         "firstPublishedAt": "2025-04-15T19:32:46.775Z",
         "createdBy": {
           "sys": {
@@ -3584,8 +3688,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3621,6 +3725,12 @@
         },
         "order": {
           "en-US": 4
+        },
+        "isChild": {
+          "en-US": false
+        },
+        "isButton": {
+          "en-US": false
         }
       }
     },
@@ -5367,7 +5477,7 @@
         "id": "7B6UF9lmFsn0v162cWvtKC",
         "type": "Entry",
         "createdAt": "2025-04-18T15:39:04.387Z",
-        "updatedAt": "2025-05-25T11:39:18.937Z",
+        "updatedAt": "2025-05-25T11:43:17.783Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5375,8 +5485,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 30,
-        "publishedAt": "2025-05-25T11:39:18.937Z",
+        "publishedVersion": 32,
+        "publishedAt": "2025-05-25T11:43:17.783Z",
         "firstPublishedAt": "2025-04-18T15:39:32.411Z",
         "createdBy": {
           "sys": {
@@ -5392,8 +5502,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 11,
-        "version": 31,
+        "publishedCounter": 12,
+        "version": 33,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5454,7 +5564,10 @@
         "package": {
           "en-US": [
             "Bronze skin iron mind",
-            "Come train with me"
+            "Come train with me",
+            "Golden body golden mind",
+            "Silver evoluation silver impact",
+            "Move better live better"
           ]
         },
         "changes": {
@@ -38361,6 +38474,451 @@
         },
         "showOnLandingPage": {
           "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "44Zy7a2qw1Hp93KVUOsZVd",
+        "type": "Entry",
+        "createdAt": "2025-05-25T11:55:30.052Z",
+        "updatedAt": "2025-05-25T14:09:28.616Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-05-25T14:09:28.616Z",
+        "firstPublishedAt": "2025-05-25T11:56:15.122Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "navigation"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/44Zy7a2qw1Hp93KVUOsZVd"
+      },
+      "fields": {
+        "id": {
+          "en-US": "5"
+        },
+        "label": {
+          "en-US": "Book a meeting"
+        },
+        "url": {
+          "en-US": "/contact-and-booking"
+        },
+        "order": {
+          "en-US": 5
+        },
+        "isChild": {
+          "en-US": false
+        },
+        "isButton": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "6ZNWrJOKgJOC3r57N5JfgP",
+        "type": "Entry",
+        "createdAt": "2025-05-25T13:48:59.755Z",
+        "updatedAt": "2025-05-25T14:09:20.303Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-05-25T14:09:20.303Z",
+        "firstPublishedAt": "2025-05-25T13:50:34.944Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "navigation"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6ZNWrJOKgJOC3r57N5JfgP"
+      },
+      "fields": {
+        "id": {
+          "en-US": "6"
+        },
+        "label": {
+          "en-US": "Solo packages"
+        },
+        "url": {
+          "en-US": "/pricing/solo"
+        },
+        "order": {
+          "en-US": 6
+        },
+        "isChild": {
+          "en-US": true
+        },
+        "isButton": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "7EXVqbIFT6SGZ6zaIEEVqu",
+        "type": "Entry",
+        "createdAt": "2025-05-25T13:50:47.208Z",
+        "updatedAt": "2025-05-25T14:09:34.063Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-05-25T14:09:34.063Z",
+        "firstPublishedAt": "2025-05-25T13:51:03.690Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "navigation"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/7EXVqbIFT6SGZ6zaIEEVqu"
+      },
+      "fields": {
+        "id": {
+          "en-US": "7"
+        },
+        "label": {
+          "en-US": "Duo packages"
+        },
+        "url": {
+          "en-US": "/pricing/duo"
+        },
+        "order": {
+          "en-US": 7
+        },
+        "isChild": {
+          "en-US": true
+        },
+        "isButton": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "6o2PuxnzfYvHCkDty34eeH",
+        "type": "Entry",
+        "createdAt": "2025-05-25T13:51:12.237Z",
+        "updatedAt": "2025-05-25T14:09:43.679Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2025-05-25T14:09:43.679Z",
+        "firstPublishedAt": "2025-05-25T13:51:37.348Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "navigation"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6o2PuxnzfYvHCkDty34eeH"
+      },
+      "fields": {
+        "id": {
+          "en-US": "8"
+        },
+        "label": {
+          "en-US": "Combo"
+        },
+        "url": {
+          "en-US": "/pricing/combo"
+        },
+        "order": {
+          "en-US": 8
+        },
+        "isChild": {
+          "en-US": true
+        },
+        "isButton": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "2uSkYA1O2AuZRBZreGcZ6N",
+        "type": "Entry",
+        "createdAt": "2025-05-25T13:51:48.986Z",
+        "updatedAt": "2025-05-25T14:09:39.144Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-05-25T14:09:39.144Z",
+        "firstPublishedAt": "2025-05-25T13:52:10.699Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "navigation"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2uSkYA1O2AuZRBZreGcZ6N"
+      },
+      "fields": {
+        "id": {
+          "en-US": "9"
+        },
+        "label": {
+          "en-US": "Compare & decide"
+        },
+        "url": {
+          "en-US": "/pricing/compare-decide"
+        },
+        "order": {
+          "en-US": 9
+        },
+        "isChild": {
+          "en-US": true
+        },
+        "isButton": {
+          "en-US": false
         }
       }
     }

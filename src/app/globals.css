@@ -50,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+div[data-radix-popper-content-wrapper] {
+  z-index: 99;
+}
+
 /* animation */
 @keyframes slideDown {
   from {
