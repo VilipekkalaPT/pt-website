@@ -68,11 +68,7 @@ function ReviewerInfo({
   return (
     <div className={`flex flex-col ${className}`}>
       <p className="text-sm text-gray-600 font-bold">{reviewer}</p>
-      {packages.map((pkg, index) => (
-        <p key={`${pkg}-${index}`} className="text-sm text-gray-500">
-          {pkg}
-        </p>
-      ))}
+      <p className="text-sm text-gray-500">{packages.join(", ")}</p>
     </div>
   );
 }

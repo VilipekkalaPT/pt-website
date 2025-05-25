@@ -6,16 +6,16 @@ export interface TypeReviewFields {
   reviewer: EntryFields.Symbol;
   content: EntryFields.RichText;
   package: (
-    | "bronze-skin-iron-mind"
-    | "come-train-with-me"
-    | "duo-training-plan"
-    | "eat-better-live-better"
-    | "go-the-distance"
-    | "golden-body-golden-mind"
-    | "move-better-live-better"
-    | "silver-evoluation-silver-impact"
-    | "together-total-slay"
-    | "train-together-slay-together"
+    | "Bronze skin iron mind"
+    | "Come train with me"
+    | "Duo training plan"
+    | "Eat better live better"
+    | "Go the distance"
+    | "Golden body golden mind"
+    | "Move better live better"
+    | "Silver evoluation silver impact"
+    | "Together total slay"
+    | "Train together slay together"
   )[];
   changes?: EntryFields.Symbol[];
   rating: EntryFields.Number;

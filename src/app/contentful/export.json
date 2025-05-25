@@ -232,7 +232,7 @@
         "id": "review",
         "type": "ContentType",
         "createdAt": "2025-04-16T20:55:09.849Z",
-        "updatedAt": "2025-05-25T10:08:03.234Z",
+        "updatedAt": "2025-05-25T11:38:04.094Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -240,8 +240,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 95,
-        "publishedAt": "2025-05-25T10:08:03.234Z",
+        "publishedVersion": 99,
+        "publishedAt": "2025-05-25T11:38:04.094Z",
         "firstPublishedAt": "2025-04-16T20:55:10.233Z",
         "createdBy": {
           "sys": {
@@ -257,8 +257,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 48,
-        "version": 96,
+        "publishedCounter": 50,
+        "version": 100,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -372,16 +372,16 @@
             "validations": [
               {
                 "in": [
-                  "duo-training-plan",
-                  "move-better-live-better",
-                  "bronze-skin-iron-mind",
-                  "silver-evoluation-silver-impact",
-                  "golden-body-golden-mind",
-                  "come-train-with-me",
-                  "go-the-distance",
-                  "eat-better-live-better",
-                  "together-total-slay",
-                  "train-together-slay-together"
+                  "Train together slay together",
+                  "Duo training plan",
+                  "Move better live better",
+                  "Bronze skin iron mind",
+                  "Silver evoluation silver impact",
+                  "Golden body golden mind",
+                  "Come train with me",
+                  "Go the distance",
+                  "Eat better live better",
+                  "Together total slay"
                 ]
               }
             ]
@@ -2322,7 +2322,7 @@
             "linkType": "Space"
           }
         },
-        "version": 96,
+        "version": 100,
         "createdAt": "2025-04-16T20:55:10.378Z",
         "createdBy": {
           "sys": {
@@ -2331,7 +2331,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-05-25T10:08:03.983Z",
+        "updatedAt": "2025-05-25T11:38:04.722Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -2387,7 +2387,7 @@
         },
         {
           "fieldId": "rating",
-          "widgetId": "rating",
+          "widgetId": "numberEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -5244,7 +5244,7 @@
         "id": "2g6sVtL4Ep7MWdWetsbhan",
         "type": "Entry",
         "createdAt": "2025-04-18T15:36:56.249Z",
-        "updatedAt": "2025-05-25T10:08:23.470Z",
+        "updatedAt": "2025-05-25T11:38:49.176Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5252,8 +5252,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 54,
-        "publishedAt": "2025-05-25T10:08:23.470Z",
+        "publishedVersion": 56,
+        "publishedAt": "2025-05-25T11:38:49.176Z",
         "firstPublishedAt": "2025-04-18T15:38:46.785Z",
         "createdBy": {
           "sys": {
@@ -5269,8 +5269,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 22,
-        "version": 55,
+        "publishedCounter": 23,
+        "version": 57,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5330,8 +5330,8 @@
         },
         "package": {
           "en-US": [
-            "golden-body-golden-mind",
-            "come-train-with-me"
+            "Train together slay together",
+            "Duo training plan"
           ]
         },
         "changes": {
@@ -5367,7 +5367,7 @@
         "id": "7B6UF9lmFsn0v162cWvtKC",
         "type": "Entry",
         "createdAt": "2025-04-18T15:39:04.387Z",
-        "updatedAt": "2025-05-25T10:08:31.546Z",
+        "updatedAt": "2025-05-25T11:39:18.937Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5375,8 +5375,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 22,
-        "publishedAt": "2025-05-25T10:08:31.546Z",
+        "publishedVersion": 30,
+        "publishedAt": "2025-05-25T11:39:18.937Z",
         "firstPublishedAt": "2025-04-18T15:39:32.411Z",
         "createdBy": {
           "sys": {
@@ -5392,8 +5392,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 9,
-        "version": 23,
+        "publishedCounter": 11,
+        "version": 31,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5453,8 +5453,8 @@
         },
         "package": {
           "en-US": [
-            "duo-training-plan",
-            "move-better-live-better"
+            "Bronze skin iron mind",
+            "Come train with me"
           ]
         },
         "changes": {
@@ -5465,7 +5465,7 @@
           ]
         },
         "rating": {
-          "en-US": 5
+          "en-US": 3.5
         },
         "showOnLandingPage": {
           "en-US": true
@@ -35897,7 +35897,7 @@
         "id": "3IINHggtiHEy4D6Gs6W3j2",
         "type": "Entry",
         "createdAt": "2025-05-18T16:18:41.356Z",
-        "updatedAt": "2025-05-25T09:59:54.321Z",
+        "updatedAt": "2025-05-25T11:36:07.414Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -35905,8 +35905,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 22,
-        "publishedAt": "2025-05-25T09:59:54.321Z",
+        "publishedVersion": 25,
+        "publishedAt": "2025-05-25T11:36:07.414Z",
         "firstPublishedAt": "2025-05-18T16:21:19.633Z",
         "createdBy": {
           "sys": {
@@ -35922,8 +35922,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 23,
+        "publishedCounter": 6,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -35974,180 +35974,165 @@
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
+                            "nodeType": "text",
                             "value": "10 in-gym personal training sessions",
-                            "nodeType": "text"
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": " with a coach",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
+                            "nodeType": "text",
                             "value": "Custom training plan",
-                            "nodeType": "text"
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": " designed for two people",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
+                            "nodeType": "text",
                             "value": "Progress tracking",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " and adjustments as needed",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "value": "Support and guidance",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " and adjustments as needed",
                             "marks": [
                             ],
-                            "value": " throughout your journey",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Support and guidance",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " throughout your journey",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -38281,7 +38266,7 @@
         "id": "1QBw1JIpbNxMxFfbRuElRh",
         "type": "Entry",
         "createdAt": "2025-05-24T19:49:27.934Z",
-        "updatedAt": "2025-05-24T20:01:58.492Z",
+        "updatedAt": "2025-05-25T11:39:07.468Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38289,8 +38274,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2025-05-24T20:01:58.492Z",
+        "publishedVersion": 23,
+        "publishedAt": "2025-05-25T11:39:07.468Z",
         "firstPublishedAt": "2025-05-24T20:01:58.492Z",
         "createdBy": {
           "sys": {
@@ -38306,8 +38291,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 18,
+        "publishedCounter": 3,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38341,8 +38326,41 @@
         "reviewer": {
           "en-US": "T.N"
         },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Text",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "package": {
+          "en-US": [
+            "Eat better live better",
+            "Come train with me"
+          ]
+        },
+        "rating": {
+          "en-US": 3.5
+        },
         "showOnLandingPage": {
-          "en-US": false
+          "en-US": true
         }
       }
     }
