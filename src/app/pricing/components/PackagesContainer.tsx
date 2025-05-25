@@ -24,7 +24,7 @@ export default function PackagesContainer({
         handleSortChange={handleSortChange}
         className="justify-end"
       />
-      <div className="flex gap-8 mt-10">
+      <div className="grid grid-cols-3 gap-8 mt-10">
         {result.map((pkg) => (
           <PackageCard
             key={pkg.slug}
