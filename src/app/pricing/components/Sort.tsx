@@ -3,6 +3,7 @@
 import Button from "app/components/Button";
 import { CheckIcon } from "@heroicons/react/24/solid";
 import { SORT_TYPE } from "app/utils/variables";
+import cn from "classnames";
 
 interface Option {
   label: string;
@@ -13,15 +14,17 @@ interface SortProps {
   selectedSort: string;
   options: Option[];
   handleSortChange: (value: SORT_TYPE) => void;
+  className?: string;
 }
 
 export default function Sort({
   selectedSort,
   options,
   handleSortChange,
+  className,
 }: SortProps) {
   return (
-    <div className="flex gap-4">
+    <div className={cn("flex gap-4", className)}>
       {options.map((option) => (
         <Button
           key={option.value}

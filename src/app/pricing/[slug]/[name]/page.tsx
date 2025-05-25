@@ -30,12 +30,12 @@ import { BANNER } from "app/utils/variables";
 export default async function PackageDetails({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ name: string }>;
 }) {
-  const { slug } = await params;
+  const { name } = await params;
   const [packageDetails, curriculum] = await Promise.all([
-    getEntryWithSlug("package", slug),
-    getEntryWithSlug("curriculum", slug),
+    getEntryWithSlug("package", name),
+    getEntryWithSlug("curriculum", name),
   ]);
 
   const images = await getAssets();

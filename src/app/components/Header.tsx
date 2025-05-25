@@ -59,7 +59,6 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
   }
 
   if (item.children) {
-    console.log(item);
     const childItems = item.children.map(
       (child) => child.fields
     ) as TypeNavigationFields[];

@@ -35,6 +35,10 @@ export type {
   TypePackageAccordion,
   TypePackageAccordionFields,
 } from "./TypePackageAccordion";
+export type {
+  TypePackagesPageData,
+  TypePackagesPageDataFields,
+} from "./TypePackagesPageData";
 export type { TypeReview, TypeReviewFields } from "./TypeReview";
 export type {
   TypeSessionOption,

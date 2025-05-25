@@ -1,7 +1,10 @@
+"use client";
+
 import { DropdownMenu } from "radix-ui";
 import Link from "next/link";
 import cn from "classnames";
 import { DropdownItem } from "./Header";
+import { useState } from "react";
 
 interface DropdownMenuComponentProps {
   trigger: React.ReactNode;
@@ -16,8 +19,10 @@ export default function DropdownMenuComponent({
   triggerClassName,
   menuClassName,
 }: DropdownMenuComponentProps) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <DropdownMenu.Root>
+    <DropdownMenu.Root open={open} onOpenChange={setOpen}>
       <DropdownMenu.Trigger asChild className={triggerClassName}>
         {trigger}
       </DropdownMenu.Trigger>
@@ -38,6 +43,7 @@ export default function DropdownMenuComponent({
                   "bg-gray-100": item.isActive,
                 }
               )}
+              onClick={() => setOpen(false)}
             >
               <Link href={item.href}>{item.label}</Link>
             </DropdownMenu.Item>
