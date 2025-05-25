@@ -21,6 +21,8 @@ export const useSort = (allPackages: TypePackageFields[]) => {
   const result = useMemo(() => {
     const sortedPackages = [...allPackages];
 
+    console.log(sortedPackages);
+
     if (selectedSort === SORT_TYPE.PRICE_ASC) {
       sortedPackages.sort((a, b) => Number(a.price) - Number(b.price));
     } else {

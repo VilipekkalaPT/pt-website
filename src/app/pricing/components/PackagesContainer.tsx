@@ -14,7 +14,7 @@ export default function PackagesContainer({
   type,
   packages,
 }: PackagesContainerProps) {
-  const { selectedSort, handleSortChange } = useSort(packages);
+  const { result, selectedSort, handleSortChange } = useSort(packages);
 
   return (
     <div className="px-12">
@@ -25,7 +25,7 @@ export default function PackagesContainer({
         className="justify-end"
       />
       <div className="flex gap-8 mt-10">
-        {packages.map((pkg) => (
+        {result.map((pkg) => (
           <PackageCard
             key={pkg.slug}
             singlePackage={pkg}
