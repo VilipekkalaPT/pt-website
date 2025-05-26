@@ -7,6 +7,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import DropdownMenuComponent from "./DropdownMenu";
 import cn from "classnames";
+import { PRICING_COMPARE } from "app/utils/routes";
 
 export interface DropdownItem {
   label: string;
@@ -46,6 +47,12 @@ export default function Header({ navigations }: HeaderProps) {
 
 const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
   const router = useRouter();
+  const additionalItems: DropdownItem[] = [
+    {
+      ...PRICING_COMPARE,
+      isActive: pathName === PRICING_COMPARE.href,
+    },
+  ];
 
   if (item.isButton) {
     return (
@@ -77,8 +84,9 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
           />
         }
         items={createDropdownItems(childItems, pathName)}
+        additionalItems={additionalItems}
         triggerClassName="hover:bg-gray-100 rounded-md bg-gray-100"
-        menuClassName="w-[220px] h-[200px] ml-3 py-4 px-2"
+        menuClassName="w-[220px] h-[240px] py-4 px-4"
       />
     );
   }
