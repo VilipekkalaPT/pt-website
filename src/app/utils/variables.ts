@@ -3,6 +3,7 @@ export const BANNER = "landingPage_banner";
 
 // Pricing Page Variables
 export const CURRENCY = "€";
+export const FROM = "From";
 
 export enum SORT_TYPE {
   PRICE_ASC = "price-asc",

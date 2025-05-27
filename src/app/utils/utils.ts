@@ -1,4 +1,8 @@
-import { TypeFaqFields } from "app/lib/types/contentful";
+import {
+  TypeFaqFields,
+  TypeSessionOptionFields,
+} from "app/lib/types/contentful";
+import { AssetFields } from "contentful";
 
 export const isStringArray = (input: Array<unknown>): input is string[] => {
   return (
@@ -37,4 +41,23 @@ export const mapTopicQuestions = (questions: TypeFaqFields[]) => {
 
 export const capitalizeFirstLetter = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+};
+
+export const getAssetUrl = (asset: AssetFields) => {
+  const url = asset.file?.url;
+  if (!url) return "";
+  return url.startsWith("//") ? `https:${url}` : url;
+};
+
+export const getMinPrice = (options?: TypeSessionOptionFields[]) => {
+  if (!options || options.length === 0) {
+    return undefined;
+  }
+
+  const minPrices = options.map(
+    (option) => option.price / option.numberOfSessions
+  );
+  const minPrice = Math.min(...minPrices);
+
+  return Math.round(minPrice * 10) / 10;
 };

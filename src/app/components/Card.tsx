@@ -1,15 +1,5 @@
-import Image from "next/image";
 import cn from "classnames";
 import Link from "next/link";
-
-interface CardHeaderProps {
-  children: React.ReactNode;
-  className?: string;
-}
-interface CardMediaProps {
-  imageUrl: string;
-  alt: string;
-}
 
 interface CardContentProps {
   children: React.ReactNode;
@@ -29,7 +19,7 @@ interface CardProps {
 
 export default function Card({ children, className, href }: CardProps) {
   const defaultClassName = cn(
-    "rounded-lg overflow-hidden shadow-lg p-6",
+    "flex flex-col justify-between rounded-lg overflow-hidden shadow-lg p-4",
     className
   );
 
@@ -42,22 +32,14 @@ export default function Card({ children, className, href }: CardProps) {
   );
 }
 
-export const CardHeader = ({ className, children }: CardHeaderProps) => {
+export const CardHeader = ({ className, children }: CardContentProps) => {
   return <div className={className}>{children}</div>;
-};
-
-export const CardMedia = ({ imageUrl, alt }: CardMediaProps) => {
-  return (
-    <Image
-      src={imageUrl}
-      alt={alt}
-      width={100}
-      height={100}
-      className="block w-full h-auto"
-    />
-  );
 };
 
 export const CardContent = ({ children, className }: CardContentProps) => {
-  return <div className={className}>{children}</div>;
+  return <div className={cn("flex-1", className)}>{children}</div>;
+};
+
+export const CardFooter = ({ children, className }: CardContentProps) => {
+  return <div className={cn(className)}>{children}</div>;
 };

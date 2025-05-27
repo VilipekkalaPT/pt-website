@@ -1,4 +1,4 @@
-import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 import { TypePackageAccordionSkeleton } from "./TypePackageAccordion";
 import { TypeSessionOptionSkeleton } from "./TypeSessionOption";
 import { TypeCurriculumSkeleton } from "./TypeCurriculum";
@@ -16,6 +16,8 @@ export interface TypePackageFields {
   content: EntryFields.RichText;
   packageAccordions: Entry<TypePackageAccordionSkeleton>[];
   curriculum: Entry<TypeCurriculumSkeleton>;
+  landscape?: Asset;
+  tags: ("dietary" | "gym" | "plan")[];
 }
 
 export interface TypePackageSkeleton extends EntrySkeletonType {

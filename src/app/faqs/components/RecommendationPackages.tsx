@@ -50,6 +50,7 @@ const ChipComponent = ({
     return (
       <Chip
         key={pkg.id}
+        variant="primary"
         label={capitalizeFirstLetter(pkg.name)}
         iconRight={<ArrowUpRightIcon className={iconClassName} />}
         href={`${ROUTES.PRICING}/${pkg.type}-package/${pkg.slug}`}
@@ -60,6 +61,7 @@ const ChipComponent = ({
   return (
     <Chip
       key={pkg.title}
+      variant="primary"
       label={`${SEE_ALL} ${pkg.title.toLowerCase()}`}
       iconRight={<ArrowUpRightIcon className={iconClassName} />}
       href={`${ROUTES.PRICING}/${pkg.slug}`}

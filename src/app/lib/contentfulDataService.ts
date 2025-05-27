@@ -46,6 +46,7 @@ export async function getEntryWithSlug(contentType: string, slug: string) {
     const res = await client.getEntries({
       content_type: contentType,
       "fields.slug": slug,
+      include: 2,
     });
     const fields = res.items.map((item) => item.fields);
     return fields[0] ?? [];

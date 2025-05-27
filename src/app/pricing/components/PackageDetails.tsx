@@ -50,6 +50,8 @@ export default function PackageDetails({
         <Price
           price={selectedOption?.price ?? packageDetails.price}
           priceUnit={packageDetails.priceUnit}
+          variant="large"
+          className="my-4"
         />
         <RichTextRenderer
           text={packageDetails.content}
