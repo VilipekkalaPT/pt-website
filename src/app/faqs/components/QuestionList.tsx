@@ -9,6 +9,12 @@ import { TopicQuestions } from "app/utils/utils";
 import { MORE_QUESTIONS } from "app/utils/variables";
 import { useRouter } from "next/navigation";
 import AccordionComponent from "app/components/AccordionComponent";
+import {
+  TypeFaqFields,
+  TypePackageFields,
+  TypePackagesPageDataFields,
+} from "app/lib/types/contentful";
+import RecommendationPackages from "./RecommendationPackages";
 
 interface QuestionsListProps {
   topicQuestions: TopicQuestions[];
@@ -37,16 +43,10 @@ export default function QuestionsList({
           {topic.questions.map((q, index) => {
             const questionIndex = `${q.topicType}-${index}`;
             return (
-              <AccordionComponent
+              <AccordionContent
                 key={questionIndex}
-                triggerText={q.question}
-                accordionContent={
-                  <RichTextRenderer
-                    text={q.answer}
-                    listClassName="list-disc ml-5"
-                  />
-                }
-                value={questionIndex}
+                questionIndex={questionIndex}
+                question={q}
                 selectedAccordion={selectedAccordion}
                 onValueChange={(value) => setSelectedAccordion(value)}
               />
@@ -64,3 +64,39 @@ export default function QuestionsList({
     </div>
   );
 }
+
+const AccordionContent = ({
+  questionIndex,
+  question,
+  selectedAccordion,
+  onValueChange,
+}: {
+  questionIndex: string;
+  question: TypeFaqFields;
+  selectedAccordion: string;
+  onValueChange: (value: string) => void;
+}) => {
+  const recommendedPackages =
+    (question.recommendedPackages?.map((p) => p.fields) as (
+      | TypePackageFields
+      | TypePackagesPageDataFields
+    )[]) || [];
+
+  return (
+    <AccordionComponent
+      triggerText={question.question}
+      accordionContent={
+        <>
+          <RichTextRenderer
+            text={question.answer}
+            listClassName="list-disc ml-5"
+          />
+          <RecommendationPackages packages={recommendedPackages} />
+        </>
+      }
+      value={questionIndex}
+      selectedAccordion={selectedAccordion}
+      onValueChange={onValueChange}
+    />
+  );
+};

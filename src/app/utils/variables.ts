@@ -22,3 +22,6 @@ export enum TOPIC_TYPE {
   FEMALE_GYM,
   SUPPLEMENTS,
 }
+
+export const RECOMMENDATION_TITLE = "You may want to";
+export const SEE_ALL = "See all";

@@ -1,5 +1,6 @@
 export const ROUTES = {
   LANDING_PAGE: "/",
+  PRICING: "/pricing",
   PRICING_COMPARE: "/pricing/compare-and-decide",
   CONTACT: "/contact-and-booking",
 };

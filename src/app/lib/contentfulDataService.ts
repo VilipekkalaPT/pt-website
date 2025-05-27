@@ -13,6 +13,7 @@ export async function getEntries<T extends EntrySkeletonType>(
   try {
     const res = await client.getEntries<T>({
       content_type: contentType,
+      include: 2,
     });
     return res.items.map((item) => item.fields);
   } catch (error) {

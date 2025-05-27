@@ -1,4 +1,6 @@
 import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import { TypePackageSkeleton } from "./TypePackage";
+import { TypePackagesPageDataSkeleton } from "./TypePackagesPageData";
 
 export interface TypeFaqFields {
   topic:
@@ -15,6 +17,9 @@ export interface TypeFaqFields {
     | "WEIGHT_LOSS";
   question: EntryFields.Text;
   answer: EntryFields.RichText;
+  recommendedPackages:
+    | Entry<TypePackageSkeleton>[]
+    | Entry<TypePackagesPageDataSkeleton>[];
 }
 
 export interface TypeFaqSkeleton extends EntrySkeletonType {

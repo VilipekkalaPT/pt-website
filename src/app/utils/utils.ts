@@ -34,3 +34,7 @@ export const mapTopicQuestions = (questions: TypeFaqFields[]) => {
     return acc;
   }, [] as TopicQuestions[]);
 };
+
+export const capitalizeFirstLetter = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+};
