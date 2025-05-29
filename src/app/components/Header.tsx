@@ -8,6 +8,9 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import DropdownMenuComponent from "./DropdownMenu";
 import cn from "classnames";
 import { PRICING_COMPARE } from "app/utils/routes";
+import Image from "next/image";
+import { AssetFields } from "contentful";
+import { getAssetUrl } from "app/utils/utils";
 
 export interface DropdownItem {
   label: string;
@@ -22,20 +25,25 @@ interface NavigationItemProps {
 
 interface HeaderProps {
   navigations: TypeNavigationFields[];
+  logo?: AssetFields;
 }
 
-export default function Header({ navigations }: HeaderProps) {
+export default function Header({ navigations, logo }: HeaderProps) {
   const pathname = usePathname();
 
   const mainNavigationItems = navigations
     .filter((nav) => !nav.isChild)
     .sort((a, b) => a.order - b.order);
 
+  const logoUrl = logo ? getAssetUrl(logo) : "/public/logo.png";
+
   return (
     <div className="fixed top-0 left-0 flex justify-between w-full px-12 py-6 shadow z-50 bg-white">
-      <Link href="/" className="text-3xl font-bold">
-        SlayFitVili
-      </Link>
+      {logo && (
+        <Link href="/" className="flex">
+          <Image src={logoUrl} alt="Logo" width={200} height={200} />
+        </Link>
+      )}
       <div className="flex justify-between items-center">
         {mainNavigationItems.map((item) => (
           <NavigationItem key={item.id} item={item} pathName={pathname} />

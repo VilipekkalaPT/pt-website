@@ -54,3 +54,15 @@ export async function getEntryWithSlug(contentType: string, slug: string) {
     console.error(`Error fetching entry with slug ${slug}`, error);
   }
 }
+
+export async function getImageByTag(tag: string) {
+  try {
+    const response = await client.getAssets({
+      "metadata.tags.sys.id[in]": [tag],
+    });
+    const image = response.items.map((item) => item.fields);
+    return image[0];
+  } catch (error) {
+    console.error(`Error fetching images with tag ${tag}`, error);
+  }
+}

@@ -1,5 +1,6 @@
 // Landing Page Variables
 export const BANNER = "landingPage_banner";
+export const LOGO = "logo";
 
 // Pricing Page Variables
 export const CURRENCY = "€";

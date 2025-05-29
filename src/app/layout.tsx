@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { getEntries } from "./lib/contentfulDataService";
+import { getEntries, getImageByTag } from "./lib/contentfulDataService";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { TypeNavigationSkeleton } from "./lib/types/contentful/TypeNavigation";
 import { TypeFooterColumnSkeleton } from "./lib/types/contentful/TypeFooterColumn";
+import { LOGO } from "./utils/variables";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,18 +29,19 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [navigations, footerColumns] = await Promise.all([
+  const [navigations, footerColumns, image] = await Promise.all([
     await getEntries<TypeNavigationSkeleton>("navigation"),
     await getEntries<TypeFooterColumnSkeleton>("footerColumn"),
+    await getImageByTag(LOGO),
   ]);
 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header navigations={navigations} />
+        <Header navigations={navigations} logo={image} />
         {children}
         <SpeedInsights />
-        <Footer footerColumns={footerColumns} />
+        <Footer footerColumns={footerColumns} logo={image} />
       </body>
     </html>
   );

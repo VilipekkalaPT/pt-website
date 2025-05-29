@@ -3,17 +3,23 @@ import {
   TypeFooterColumnFields,
   TypeFooterColumnLinkFields,
 } from "app/lib/types/contentful";
+import { AssetFields } from "contentful";
+import Image from "next/image";
+import { getAssetUrl } from "app/utils/utils";
 
 interface FooterProps {
   footerColumns: TypeFooterColumnFields[];
+  logo?: AssetFields;
 }
 
-export default function Footer({ footerColumns }: FooterProps) {
+export default function Footer({ footerColumns, logo }: FooterProps) {
   const sortedColumns = footerColumns.sort((a, b) => a.order - b.order);
+
+  const logoUrl = logo ? getAssetUrl(logo) : "/public/logo.png";
 
   return (
     <div className="grid grid-cols-4 gap-4 w-full p-6">
-      <div className="text-3xl font-bold">SlayFitVili</div>
+      {logo && <Image src={logoUrl} alt="Logo" width={200} height={200} />}
       {sortedColumns.map((column) => (
         <FooterColumn key={column.id} column={column} />
       ))}
