@@ -1,8 +1,10 @@
 import {
   TypeFaqFields,
+  TypePackageFields,
   TypeSessionOptionFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
+import { ROUTES } from "./routes";
 
 export const isStringArray = (input: Array<unknown>): input is string[] => {
   return (
@@ -60,4 +62,66 @@ export const getMinPrice = (options?: TypeSessionOptionFields[]) => {
   const minPrice = Math.min(...minPrices);
 
   return Math.round(minPrice * 10) / 10;
+};
+
+export const getPricingPackagesRoute = (type: "combo" | "duo" | "solo") => {
+  return `${ROUTES.PRICING}/${type}-packages`;
+};
+
+export const calculateSavedAmount = (
+  packageDetails: TypePackageFields,
+  soloPackages: TypePackageFields[],
+  selectedOption?: TypeSessionOptionFields,
+  sessionOptions?: TypeSessionOptionFields[]
+) => {
+  const { type, tags, price, name } = packageDetails;
+
+  if (tags.length === 1 && tags[0] === "gym") {
+    const pricePerSession = sessionOptions?.find(
+      (session) => session.numberOfSessions === 1
+    )?.price;
+    const originalPrice =
+      (pricePerSession ?? 0) * (selectedOption?.numberOfSessions ?? 0);
+    return originalPrice - (selectedOption?.price ?? 0);
+  }
+
+  if (type === "combo") {
+    return calculateComboPackageSavings(tags, name, soloPackages, price);
+  }
+
+  return 0;
+};
+
+const calculateComboPackageSavings = (
+  tags: ("dietary" | "gym" | "plan")[],
+  name: string,
+  soloPackages: TypePackageFields[],
+  comboPrice: number
+): number => {
+  let originalComboPrice = 0;
+
+  for (const tag of tags) {
+    const pkg = soloPackages.find((p) => p.tags.includes(tag));
+    if (!pkg) continue;
+
+    const packageSessionOptions = pkg.sessionOptions?.map(
+      (option) => option.fields
+    ) as TypeSessionOptionFields[] | undefined;
+
+    if (packageSessionOptions) {
+      const pricePer10Sessions =
+        packageSessionOptions.find((option) => option.numberOfSessions === 10)
+          ?.price || pkg.price;
+      const pricePer5Sessions =
+        (packageSessionOptions.find((option) => option.numberOfSessions === 1)
+          ?.price ?? 0) * 5;
+      originalComboPrice += name.includes("silver")
+        ? pricePer5Sessions
+        : pricePer10Sessions;
+    } else {
+      originalComboPrice += pkg.price;
+    }
+  }
+
+  return originalComboPrice - comboPrice;
 };

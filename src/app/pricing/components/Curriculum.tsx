@@ -21,7 +21,7 @@ export default function Curriculum({ curriculum }: CurriculumProps) {
   const [selectedAccordion, setSelectedAccordion] = useState<string>("");
 
   return (
-    <div className="my-10 px-6 grid grid-cols-2 gap-5">
+    <div className="my-10 px-12 grid grid-cols-2 gap-5">
       <p className="text-2xl font-bold mb-6">{getTitle(curriculum.title)}</p>
       <p className="text-sm text-gray-500 mb-4">{curriculum.subtitle}</p>
       {curriculumPeriods.map((period) => (

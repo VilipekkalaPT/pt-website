@@ -22,16 +22,6 @@ export async function getEntries<T extends EntrySkeletonType>(
   }
 }
 
-export async function getAssets() {
-  try {
-    const res = await client.getAssets();
-    return res.items.map((item) => item.fields);
-  } catch (error) {
-    console.error("Error fetching assets:", error);
-    return [];
-  }
-}
-
 export async function getEntry<T extends EntrySkeletonType>(entryId: string) {
   try {
     const res = await client.getEntry<T>(entryId);
@@ -52,6 +42,33 @@ export async function getEntryWithSlug(contentType: string, slug: string) {
     return fields[0] ?? [];
   } catch (error) {
     console.error(`Error fetching entry with slug ${slug}`, error);
+  }
+}
+
+export async function getEntriesWithTag<T extends EntrySkeletonType>(
+  contentType: string,
+  tag: string
+) {
+  try {
+    const res = await client.getEntries<T>({
+      content_type: contentType,
+      "metadata.tags.sys.id[in]": [tag],
+      include: 2,
+    });
+    return res.items.map((item) => item.fields);
+  } catch (error) {
+    console.error(`Error fetching entries with tag ${tag}:`, error);
+    return [];
+  }
+}
+
+export async function getAssets() {
+  try {
+    const res = await client.getAssets();
+    return res.items.map((item) => item.fields);
+  } catch (error) {
+    console.error("Error fetching assets:", error);
+    return [];
   }
 }
 

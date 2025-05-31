@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { BANNER, SESSION_SELECTOR_TITLE } from "app/utils/variables";
+import { BANNER } from "app/utils/variables";
 import {
   TypePackageAccordionFields,
   TypePackageFields,
@@ -12,16 +12,23 @@ import { AssetFields } from "contentful";
 import Price from "./Price";
 import RichTextRenderer from "app/components/RichTextRenderer";
 import SessionSelector from "./SessionSelector";
-import { getTitle } from "app/utils/utils";
+import {
+  calculateSavedAmount,
+  capitalizeFirstLetter,
+  getTitle,
+} from "app/utils/utils";
 import AccordionComponent from "app/components/AccordionComponent";
+import Chip from "app/components/Chip";
 
 interface PackageDetailsProps {
   packageDetails: TypePackageFields;
+  soloPackages: TypePackageFields[];
   image?: AssetFields;
 }
 
 export default function PackageDetails({
   packageDetails,
+  soloPackages,
   image,
 }: PackageDetailsProps) {
   const imageUrl = `https:${image?.file?.url ?? ""}`;
@@ -33,8 +40,15 @@ export default function PackageDetails({
   >(sessionOptions ? sessionOptions[0] : undefined);
   const [selectedAccordion, setSelectedAccordion] = useState<string>("");
 
+  const savedAmount = calculateSavedAmount(
+    packageDetails,
+    soloPackages,
+    selectedOption,
+    sessionOptions
+  );
+
   return (
-    <div className="grid grid-cols-2 gap-10 px-6">
+    <div className="grid grid-cols-2 gap-10 px-12">
       <Image
         src={imageUrl}
         alt={BANNER}
@@ -44,9 +58,12 @@ export default function PackageDetails({
       />
       <div>
         <p className="text-2xl font-bold">{packageDetails.name}</p>
-        <p className="text-sm font-bold text-gray-500 mt-1">
-          {packageDetails.subheading}
-        </p>
+        <div className="flex gap-2 mt-2">
+          <Chip label={capitalizeFirstLetter(packageDetails.mode)} />
+          {!!savedAmount && (
+            <Chip label={`Saved: $${savedAmount}`} variant="success" />
+          )}
+        </div>
         <Price
           price={selectedOption?.price ?? packageDetails.price}
           priceUnit={packageDetails.priceUnit}
@@ -55,16 +72,13 @@ export default function PackageDetails({
         />
         <RichTextRenderer
           text={packageDetails.content}
-          listClassName="list-disc ml-5 text-sm text-gray-500"
+          listClassName="list-disc ml-5 mb-6 text-sm text-gray-500"
         />
-        <p className="mt-6 mb-2">{SESSION_SELECTOR_TITLE}</p>
-        {sessionOptions && (
-          <SessionSelector
-            selectedOption={selectedOption}
-            sessionOptions={sessionOptions}
-            onSelect={setSelectedOption}
-          />
-        )}
+        <SessionSelector
+          selectedOption={selectedOption}
+          sessionOptions={sessionOptions}
+          onSelect={setSelectedOption}
+        />
         {packageDetails.packageAccordions.map((accordion) => {
           const accordionField = accordion.fields as TypePackageAccordionFields;
           return (

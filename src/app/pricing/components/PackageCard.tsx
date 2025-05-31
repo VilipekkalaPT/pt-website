@@ -37,7 +37,6 @@ export default function PackageCard({ singlePackage, href }: PackageCardProps) {
     <Card className="border border-gray-200" href={href}>
       <CardHeader className="relative">
         <Chip
-          variant="primary"
           label={capitalizeFirstLetter(mode)}
           className="absolute right-2 top-2 text-xs"
         />
@@ -68,7 +67,7 @@ export default function PackageCard({ singlePackage, href }: PackageCardProps) {
           {tags.map((tag) => (
             <Chip
               key={tag}
-              variant="secondary"
+              variant="white"
               label={capitalizeFirstLetter(tag)}
             />
           ))}

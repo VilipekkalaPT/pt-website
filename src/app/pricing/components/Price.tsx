@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { CURRENCY, FROM } from "app/utils/variables";
+import { CURRENCY, FROM, VAT_INCLUDED } from "app/utils/variables";
 import { TypeSessionOptionFields } from "app/lib/types/contentful";
 import { getMinPrice } from "app/utils/utils";
 
@@ -31,6 +31,9 @@ export default function Price({
         <span>{displayedPrice}</span>
       </p>
       {variant === "small" && <PriceUnit unit={priceUnit} />}
+      {variant === "large" && (
+        <p className="ml-2 text-sm text-gray-400">{VAT_INCLUDED}</p>
+      )}
     </div>
   );
 }

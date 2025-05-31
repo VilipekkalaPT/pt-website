@@ -2,7 +2,7 @@ import Link from "next/link";
 import cn from "classnames";
 
 interface ChipProps {
-  variant: "primary" | "secondary";
+  variant?: "success" | "default" | "white";
   label: string;
   iconRight?: React.ReactNode;
   href?: string;
@@ -10,7 +10,7 @@ interface ChipProps {
 }
 
 export default function Chip({
-  variant,
+  variant = "default",
   label,
   iconRight,
   href,
@@ -19,8 +19,9 @@ export default function Chip({
   const chipClassName = cn(
     "px-2 py-1 rounded-md flex items-center gap-1 text-sm",
     {
-      "bg-gray-800": variant === "primary",
-      "bg-gray-100": variant === "secondary",
+      "bg-gray-800": variant === "default",
+      "bg-gray-100": variant === "white",
+      "bg-green-500/25": variant === "success",
     },
     className
   );
@@ -29,8 +30,9 @@ export default function Chip({
     <div className={chipClassName}>
       <p
         className={cn({
-          "text-gray-100": variant === "primary",
-          "text-gray-900": variant === "secondary",
+          "text-gray-100": variant === "default",
+          "text-gray-900": variant === "white",
+          "text-green-900": variant === "success",
         })}
       >
         {label}

@@ -5,7 +5,10 @@ import {
   TypePackagesPageDataFields,
 } from "app/lib/types/contentful";
 import { ROUTES } from "app/utils/routes";
-import { capitalizeFirstLetter } from "app/utils/utils";
+import {
+  capitalizeFirstLetter,
+  getPricingPackagesRoute,
+} from "app/utils/utils";
 import { RECOMMENDATION_TITLE, SEE_ALL } from "app/utils/variables";
 
 interface RecommendationPackagesProps {
@@ -47,13 +50,14 @@ const ChipComponent = ({
   const iconClassName = "size-3 text-gray-100";
 
   if (isTypePackageFields(pkg)) {
+    const pricingPackagesRoute = getPricingPackagesRoute(pkg.type);
+
     return (
       <Chip
         key={pkg.id}
-        variant="primary"
         label={capitalizeFirstLetter(pkg.name)}
         iconRight={<ArrowUpRightIcon className={iconClassName} />}
-        href={`${ROUTES.PRICING}/${pkg.type}-package/${pkg.slug}`}
+        href={`${pricingPackagesRoute}/${pkg.slug}`}
       />
     );
   }
@@ -61,7 +65,6 @@ const ChipComponent = ({
   return (
     <Chip
       key={pkg.title}
-      variant="primary"
       label={`${SEE_ALL} ${pkg.title.toLowerCase()}`}
       iconRight={<ArrowUpRightIcon className={iconClassName} />}
       href={`${ROUTES.PRICING}/${pkg.slug}`}

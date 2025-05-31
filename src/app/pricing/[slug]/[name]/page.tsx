@@ -1,9 +1,14 @@
-import { getAssets, getEntryWithSlug } from "app/lib/contentfulDataService";
+import {
+  getAssets,
+  getEntriesWithTag,
+  getEntryWithSlug,
+} from "app/lib/contentfulDataService";
 import { TypePackageFields } from "app/lib/types/contentful/TypePackage";
 import { TypeCurriculumFields } from "app/lib/types/contentful/TypeCurriculum";
 
 import SinglePackageContainer from "app/pricing/components/SinglePackageContainter";
 import { BANNER } from "app/utils/variables";
+import { TypeReviewFields } from "app/lib/types/contentful";
 
 // For SSG in the future
 // async function getPageData(slug: string) {
@@ -33,10 +38,14 @@ export default async function PackageDetails({
   params: Promise<{ name: string }>;
 }) {
   const { name } = await params;
-  const [packageDetails, curriculum] = await Promise.all([
-    getEntryWithSlug("package", name),
-    getEntryWithSlug("curriculum", name),
-  ]);
+  const [packageDetails, curriculum, soloPackages, reviews] = await Promise.all(
+    [
+      getEntryWithSlug("package", name),
+      getEntryWithSlug("curriculum", name),
+      getEntriesWithTag("package", "solo"),
+      getEntriesWithTag("review", name),
+    ]
+  );
 
   const images = await getAssets();
   const image = images.find((image) => image.title === BANNER);
@@ -45,6 +54,8 @@ export default async function PackageDetails({
     <SinglePackageContainer
       packageDetails={packageDetails as unknown as TypePackageFields}
       curriculum={curriculum as unknown as TypeCurriculumFields}
+      soloPackages={soloPackages as unknown as TypePackageFields[]}
+      reviews={reviews as unknown as TypeReviewFields[]}
       image={image}
     />
   );

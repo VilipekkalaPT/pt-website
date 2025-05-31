@@ -44,6 +44,7 @@ export default function ReviewCard({
             })}
           </>
         )}
+        <Divider />
         {reviewerNamePostion === "bottom" && (
           <ReviewerInfo
             reviewer={review.reviewer}
