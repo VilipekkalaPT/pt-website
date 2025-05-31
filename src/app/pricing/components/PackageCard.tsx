@@ -9,13 +9,19 @@ import { capitalizeFirstLetter, getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
 import Chip from "app/components/Chip";
 import Price from "./Price";
+import { SAVED_AMOUNT } from "app/utils/variables";
 
 interface PackageCardProps {
   singlePackage: TypePackageFields;
   href: string;
+  savedAmount?: number;
 }
 
-export default function PackageCard({ singlePackage, href }: PackageCardProps) {
+export default function PackageCard({
+  singlePackage,
+  href,
+  savedAmount,
+}: PackageCardProps) {
   const {
     name,
     price,
@@ -63,14 +69,19 @@ export default function PackageCard({ singlePackage, href }: PackageCardProps) {
         />
       </CardContent>
       <CardFooter>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <Chip
-              key={tag}
-              variant="white"
-              label={capitalizeFirstLetter(tag)}
-            />
-          ))}
+        <div className="mt-4 flex justify-between">
+          <div className="flex gap-2">
+            {tags.map((tag) => (
+              <Chip
+                key={tag}
+                variant="white"
+                label={capitalizeFirstLetter(tag)}
+              />
+            ))}
+          </div>
+          {!!savedAmount && (
+            <Chip label={`${SAVED_AMOUNT} €${savedAmount}`} variant="success" />
+          )}
         </div>
       </CardFooter>
     </Card>

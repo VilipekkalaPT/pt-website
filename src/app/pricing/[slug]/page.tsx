@@ -1,4 +1,8 @@
-import { getEntries, getEntryWithSlug } from "app/lib/contentfulDataService";
+import {
+  getEntries,
+  getEntriesWithTag,
+  getEntryWithSlug,
+} from "app/lib/contentfulDataService";
 
 import {
   TypePackagesPageDataFields,
@@ -10,12 +14,15 @@ import QuestionsAndInfo from "../components/QuestionsAndInfo";
 import Divider from "app/components/Divider";
 
 async function getPageData(slug: string) {
-  const packagesPageData = (await getEntryWithSlug(
-    "packagesPageData",
-    slug
-  )) as unknown as TypePackagesPageDataFields;
+  const [pageData, soloPackagesData] = await Promise.all([
+    getEntryWithSlug("packagesPageData", slug),
+    getEntriesWithTag("package", "solo"),
+  ]);
 
-  return { packagesPageData };
+  const packagesPageData = pageData as unknown as TypePackagesPageDataFields;
+  const soloPackages = soloPackagesData as unknown as TypePackageFields[];
+
+  return { packagesPageData, soloPackages };
 }
 
 export async function generateStaticParams() {
@@ -34,7 +41,7 @@ export default async function PackagesPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const { packagesPageData } = await getPageData(slug);
+  const { packagesPageData, soloPackages } = await getPageData(slug);
   const packages = packagesPageData.packages.map(
     (p) => p.fields
   ) as TypePackageFields[];
@@ -45,7 +52,11 @@ export default async function PackagesPage({
         <p className="text-5xl font-bold">{packagesPageData.title}</p>
         <p className="text-2xl mt-2">{packagesPageData.subtitle}</p>
       </div>
-      <PackagesContainer type={slug} packages={packages} />
+      <PackagesContainer
+        type={slug}
+        packages={packages}
+        soloPackages={soloPackages}
+      />
       <QuestionsAndInfo packagesPageData={packagesPageData} />
       <Divider />
     </div>

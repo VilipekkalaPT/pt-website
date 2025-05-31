@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { BANNER } from "app/utils/variables";
+import { BANNER, SAVED_AMOUNT } from "app/utils/variables";
 import {
   TypePackageAccordionFields,
   TypePackageFields,
@@ -61,7 +61,7 @@ export default function PackageDetails({
         <div className="flex gap-2 mt-2">
           <Chip label={capitalizeFirstLetter(packageDetails.mode)} />
           {!!savedAmount && (
-            <Chip label={`Saved: $${savedAmount}`} variant="success" />
+            <Chip label={`${SAVED_AMOUNT} €${savedAmount}`} variant="success" />
           )}
         </div>
         <Price
