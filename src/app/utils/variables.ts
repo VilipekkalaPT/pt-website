@@ -33,6 +33,7 @@ export enum TOPIC_TYPE {
   DIET_MYTHS,
   FEMALE_GYM,
   SUPPLEMENTS,
+  GENERAL,
 }
 export const RECOMMENDATION_TITLE = "You may want to";
 export const SEE_ALL = "See all";

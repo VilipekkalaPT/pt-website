@@ -6,6 +6,7 @@ export interface TypeFaqFields {
   topic:
     | "Diet myths"
     | "Gaining muscles"
+    | "General"
     | "Gym and trainings for female"
     | "Supplements"
     | "Weight loss";
@@ -13,6 +14,7 @@ export interface TypeFaqFields {
     | "DIET_MYTHS"
     | "FEMALE_GYM"
     | "GAINING_MUSCLES"
+    | "GENERAL"
     | "SUPPLEMENTS"
     | "WEIGHT_LOSS";
   question: EntryFields.Text;

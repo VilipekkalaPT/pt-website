@@ -1862,7 +1862,7 @@
         "id": "faq",
         "type": "ContentType",
         "createdAt": "2025-05-16T20:19:19.866Z",
-        "updatedAt": "2025-05-27T15:30:03.241Z",
+        "updatedAt": "2025-06-01T13:14:06.750Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1870,8 +1870,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 49,
-        "publishedAt": "2025-05-27T15:30:03.241Z",
+        "publishedVersion": 55,
+        "publishedAt": "2025-06-01T13:14:06.750Z",
         "firstPublishedAt": "2025-05-16T20:19:20.293Z",
         "createdBy": {
           "sys": {
@@ -1887,8 +1887,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 25,
-        "version": 50,
+        "publishedCounter": 28,
+        "version": 56,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1915,7 +1915,8 @@
                 "Gaining muscles",
                 "Diet myths",
                 "Supplements",
-                "Gym and trainings for female"
+                "Gym and trainings for female",
+                "General"
               ]
             }
           ],
@@ -1935,7 +1936,8 @@
                 "GAINING_MUSCLES",
                 "DIET_MYTHS",
                 "FEMALE_GYM",
-                "SUPPLEMENTS"
+                "SUPPLEMENTS",
+                "GENERAL"
               ]
             }
           ],
@@ -2441,9 +2443,808 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "howTrainingSessionLooksLike",
+        "type": "ContentType",
+        "createdAt": "2025-05-28T08:00:41.011Z",
+        "updatedAt": "2025-05-28T08:00:41.383Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-05-28T08:00:41.383Z",
+        "firstPublishedAt": "2025-05-28T08:00:41.383Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/content_types/howTrainingSessionLooksLike"
+      },
+      "displayField": "title",
+      "name": "How Training Session Looks Like",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript",
+                "strikethrough"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "entry-hyperlink",
+                "hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to asset, inline entry, link to entry, and link to Url nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "blog",
+        "type": "ContentType",
+        "createdAt": "2025-06-01T13:02:15.494Z",
+        "updatedAt": "2025-06-01T13:03:11.856Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-06-01T13:03:11.856Z",
+        "firstPublishedAt": "2025-06-01T13:02:15.770Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/content_types/blog"
+      },
+      "displayField": "title",
+      "name": "Blog",
+      "description": "",
+      "fields": [
+        {
+          "id": "id",
+          "name": "Id",
+          "type": "Integer",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript",
+                "strikethrough"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "entry-hyperlink",
+                "hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to asset, inline entry, link to entry, and link to Url nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "logo",
+        "type": "Tag",
+        "createdAt": "2025-05-29T19:44:30.315Z",
+        "updatedAt": "2025-05-29T19:44:30.315Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Logo"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "solo",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:00:34.752Z",
+        "updatedAt": "2025-05-31T20:00:34.752Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "solo"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "duo",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:01:29.972Z",
+        "updatedAt": "2025-05-31T20:01:29.972Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "duo"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "combo",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:01:43.555Z",
+        "updatedAt": "2025-05-31T20:01:43.555Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "combo"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "come-train-with-me",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:32:20.659Z",
+        "updatedAt": "2025-05-31T20:32:20.659Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "come-train-with-me"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "go-the-distance",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:32:44.034Z",
+        "updatedAt": "2025-05-31T20:32:44.034Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "go-the-distance"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "golden-body-golden-mind",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:33:10.075Z",
+        "updatedAt": "2025-05-31T20:33:10.075Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "golden-body-golden-mind"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "duo-training-plan",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:33:29.963Z",
+        "updatedAt": "2025-05-31T20:33:29.963Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "duo-training-plan"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "bronze-skin-iron-mind",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:33:53.497Z",
+        "updatedAt": "2025-05-31T20:33:53.497Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "bronze-skin-iron-mind"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "silver-evolution-silver-impact",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:34:14.866Z",
+        "updatedAt": "2025-05-31T20:34:14.866Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "silver-evolution-silver-impact"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "eat-better-live-better",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:34:29.011Z",
+        "updatedAt": "2025-05-31T20:34:29.011Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "eat-better-live-better"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "move-better-live-better",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:34:42.141Z",
+        "updatedAt": "2025-05-31T20:34:42.141Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "move-better-live-better"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "train-together-fun-together",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:34:56.312Z",
+        "updatedAt": "2025-05-31T20:34:56.312Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "train-together-fun-together"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "together-total-slay",
+        "type": "Tag",
+        "createdAt": "2025-05-31T20:35:11.777Z",
+        "updatedAt": "2025-05-31T20:35:11.777Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "together-total-slay"
+    }
   ],
   "editorInterfaces": [
     {
@@ -3408,7 +4209,7 @@
             "linkType": "Space"
           }
         },
-        "version": 50,
+        "version": 56,
         "createdAt": "2025-05-16T20:19:20.451Z",
         "createdBy": {
           "sys": {
@@ -3417,7 +4218,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-05-27T15:30:04.018Z",
+        "updatedAt": "2025-06-01T13:14:07.433Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -3677,6 +4478,128 @@
         {
           "fieldId": "infoButtonText",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5yib965szeod",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-05-28T08:00:41.554Z",
+        "createdBy": {
+          "sys": {
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-05-28T08:00:42.015Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "howTrainingSessionLooksLike",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5yib965szeod",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2025-06-01T13:02:15.929Z",
+        "createdBy": {
+          "sys": {
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-06-01T13:03:12.422Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blog",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "id",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "richTextEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -4082,7 +5005,7 @@
         "id": "1EpsQPFloEY9aFlMNkckEG",
         "type": "Entry",
         "createdAt": "2025-04-16T19:41:32.700Z",
-        "updatedAt": "2025-04-16T19:42:27.787Z",
+        "updatedAt": "2025-05-30T19:43:34.747Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4090,8 +5013,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-04-16T19:42:27.787Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-05-30T19:43:34.747Z",
         "firstPublishedAt": "2025-04-16T19:42:27.787Z",
         "createdBy": {
           "sys": {
@@ -4107,8 +5030,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 5,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4134,13 +5057,13 @@
       },
       "fields": {
         "title": {
-          "en-US": "A gateway to transformation"
+          "en-US": "Train with Soul - Move with Purpose - Live with Power"
         },
         "subTitle": {
-          "en-US": "Redefine your fitness journey with certified personal trainer"
+          "en-US": "No toxic hustle. No fake promises. Just scientific fitness that honors your body, your story, and your energy."
         },
         "actionButtonText1": {
-          "en-US": "Get to know Vili"
+          "en-US": "Meet coach Vili"
         },
         "actionButtonText2": {
           "en-US": "Join the experience"
@@ -5669,6 +6592,34 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "bronze-skin-iron-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "come-train-with-me"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "solo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -5684,7 +6635,7 @@
         "id": "2g6sVtL4Ep7MWdWetsbhan",
         "type": "Entry",
         "createdAt": "2025-04-18T15:36:56.249Z",
-        "updatedAt": "2025-05-26T16:59:33.920Z",
+        "updatedAt": "2025-05-31T20:38:50.058Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5692,8 +6643,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 85,
-        "publishedAt": "2025-05-26T16:59:33.920Z",
+        "publishedVersion": 95,
+        "publishedAt": "2025-05-31T20:38:50.058Z",
         "firstPublishedAt": "2025-04-18T15:38:46.785Z",
         "createdBy": {
           "sys": {
@@ -5709,8 +6660,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 26,
-        "version": 86,
+        "publishedCounter": 29,
+        "version": 96,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5739,7 +6690,7 @@
           "en-US": 1
         },
         "title": {
-          "en-US": "I sleep better, get stronger unbelievably."
+          "en-US": "I sleep better, become stronger. Very effective."
         },
         "reviewer": {
           "en-US": "T.H"
@@ -5815,6 +6766,20 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "golden-body-golden-mind"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -5830,7 +6795,7 @@
         "id": "7B6UF9lmFsn0v162cWvtKC",
         "type": "Entry",
         "createdAt": "2025-04-18T15:39:04.387Z",
-        "updatedAt": "2025-05-26T16:54:49.885Z",
+        "updatedAt": "2025-05-31T20:38:58.880Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5838,8 +6803,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 50,
-        "publishedAt": "2025-05-26T16:54:49.885Z",
+        "publishedVersion": 60,
+        "publishedAt": "2025-05-31T20:38:58.880Z",
         "firstPublishedAt": "2025-04-18T15:39:32.411Z",
         "createdBy": {
           "sys": {
@@ -5855,8 +6820,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 14,
-        "version": 51,
+        "publishedCounter": 18,
+        "version": 61,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5885,7 +6850,7 @@
           "en-US": 2
         },
         "title": {
-          "en-US": "Posture Improve Remarkably!"
+          "en-US": "Posture improve after 4 months"
         },
         "reviewer": {
           "en-US": "M.A"
@@ -5952,6 +6917,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "solo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -5967,7 +6939,7 @@
         "id": "7gY5HEfKdxEd54ge40eZNZ",
         "type": "Entry",
         "createdAt": "2025-04-20T04:20:05.898Z",
-        "updatedAt": "2025-05-27T20:19:44.277Z",
+        "updatedAt": "2025-06-01T11:19:14.008Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5975,8 +6947,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 108,
-        "publishedAt": "2025-05-27T20:19:44.277Z",
+        "publishedVersion": 113,
+        "publishedAt": "2025-06-01T11:19:14.008Z",
         "firstPublishedAt": "2025-04-20T04:24:14.892Z",
         "createdBy": {
           "sys": {
@@ -5992,8 +6964,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 27,
-        "version": 109,
+        "publishedCounter": 29,
+        "version": 114,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6037,7 +7009,7 @@
           "en-US": "offline"
         },
         "price": {
-          "en-US": 40
+          "en-US": 60
         },
         "priceUnit": {
           "en-US": "session"
@@ -6069,99 +7041,110 @@
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "1, 10, or 15 ",
                             "marks": [
                             ],
-                            "value": "1, 10, or 15 one-on-one gym sessions",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "one-on-one gym sessions",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Tailored guidance on technique, form, and safe training",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Focus on training principles for future independent workouts",
                             "marks": [
                             ],
-                            "value": "Focus on training principles for future independent workouts",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -6215,6 +7198,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "solo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -6230,7 +7220,7 @@
         "id": "3bXgPI2miQyGVESxJYZ1xR",
         "type": "Entry",
         "createdAt": "2025-04-20T04:26:45.300Z",
-        "updatedAt": "2025-05-27T20:17:13.890Z",
+        "updatedAt": "2025-06-01T11:24:53.202Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6238,8 +7228,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 59,
-        "publishedAt": "2025-05-27T20:17:13.890Z",
+        "publishedVersion": 86,
+        "publishedAt": "2025-06-01T11:24:53.202Z",
         "firstPublishedAt": "2025-04-20T04:28:51.804Z",
         "createdBy": {
           "sys": {
@@ -6255,8 +7245,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 16,
-        "version": 60,
+        "publishedCounter": 23,
+        "version": 87,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6294,178 +7284,173 @@
           "en-US": "MOVE BETTER, LIVE BETTER"
         },
         "subheading": {
-          "en-US": "🏋️‍♂️ Solo Training Plan  1:1 training (Online)"
+          "en-US": "Solo Training Plan  1:1 training (Online)"
         },
         "mode": {
           "en-US": "online"
         },
         "price": {
-          "en-US": 150
+          "en-US": 250
         },
         "priceUnit": {
           "en-US": "plan"
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "12-week online ",
                             "marks": [
                             ],
-                            "value": "12-week online training plan",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "training plan",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Tailored to your goals with weekly updates and adjustments",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Special: a FREE overall dietary guide",
                             "marks": [
+                              {
+                                "type": "bold"
+                              },
+                              {
+                                "type": "italic"
+                              }
                             ],
-                            "value": "Gradually increasing intensity for steady progress",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Detailed guidance on technique, reps, and recovery, with flexibility for your busy life.",
                             "marks": [
                             ],
-                            "value": "Detailed guidance on technique, reps, and recovery",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Flexible schedule to train at your pace",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Ongoing support via email or app",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -6519,6 +7504,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "duo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -6534,7 +7526,7 @@
         "id": "3G1a1GNfjk4jAEqJph7aIr",
         "type": "Entry",
         "createdAt": "2025-04-20T04:32:54.178Z",
-        "updatedAt": "2025-05-27T20:21:55.278Z",
+        "updatedAt": "2025-06-01T11:33:08.648Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6542,8 +7534,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 56,
-        "publishedAt": "2025-05-27T20:21:55.278Z",
+        "publishedVersion": 90,
+        "publishedAt": "2025-06-01T11:33:08.648Z",
         "firstPublishedAt": "2025-04-20T04:34:02.191Z",
         "createdBy": {
           "sys": {
@@ -6559,8 +7551,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 17,
-        "version": 57,
+        "publishedCounter": 25,
+        "version": 91,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6604,7 +7596,7 @@
           "en-US": "online"
         },
         "price": {
-          "en-US": 420
+          "en-US": 440
         },
         "priceUnit": {
           "en-US": "plan"
@@ -6631,7 +7623,26 @@
                             },
                             "marks": [
                             ],
-                            "value": "12-week customized program for two people",
+                            "value": "12-week ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "customized training plan",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " for two people",
                             "nodeType": "text"
                           }
                         ],
@@ -6653,7 +7664,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "Online coaching tailored to both partners' goals",
+                            "value": "Online coaching tailored to both partners' goals, ensuring progress for each person",
                             "nodeType": "text"
                           }
                         ],
@@ -6697,7 +7708,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "Adaptive progression for consistent results for each person",
+                            "value": "Flexible schedule with a shared structure for success with ongoing support and adjustments.",
                             "nodeType": "text"
                           }
                         ],
@@ -6718,30 +7729,14 @@
                             "data": {
                             },
                             "marks": [
+                              {
+                                "type": "bold"
+                              },
+                              {
+                                "type": "italic"
+                              }
                             ],
-                            "value": "Flexible schedule with a shared structure for success",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Ongoing support and adjustments",
+                            "value": "a FREE overall dietary guide and Training Tips",
                             "nodeType": "text"
                           }
                         ],
@@ -6815,9 +7810,7 @@
         },
         "tags": {
           "en-US": [
-            "gym",
-            "plan",
-            "dietary"
+            "plan"
           ]
         }
       }
@@ -6825,6 +7818,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -6840,7 +7840,7 @@
         "id": "77L4FMXnwpO4AMr3rTal7u",
         "type": "Entry",
         "createdAt": "2025-04-20T04:34:33.593Z",
-        "updatedAt": "2025-05-27T20:19:29.570Z",
+        "updatedAt": "2025-06-01T11:27:12.797Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6848,8 +7848,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 67,
-        "publishedAt": "2025-05-27T20:19:29.570Z",
+        "publishedVersion": 91,
+        "publishedAt": "2025-06-01T11:27:12.797Z",
         "firstPublishedAt": "2025-04-20T04:35:28.332Z",
         "createdBy": {
           "sys": {
@@ -6865,8 +7865,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 20,
-        "version": 68,
+        "publishedCounter": 23,
+        "version": 92,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6910,172 +7910,207 @@
           "en-US": "hybrid"
         },
         "price": {
-          "en-US": 730
+          "en-US": 1190
         },
         "priceUnit": {
           "en-US": "package"
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "12 weeks of accountability for a personalized ",
                             "marks": [
                             ],
-                            "value": "12-week program: transform fitness + mindset",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "Training plan",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " with progressive adjustments",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "12 weeks of accountability of ",
                             "marks": [
                             ],
-                            "value": "Online training plan with progressive adjustments",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "Diet coaching",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": daily support, check-ins, and food photo tracking",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "10 one-on-one ",
                             "marks": [
                             ],
-                            "value": "Diet coaching: daily support, check-ins, and food photo tracking",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "gym sessions",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " ",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " Weekly support for accountability, motivation, and progress tracking",
                             "marks": [
                             ],
-                            "value": "10 one-on-one gym sessions ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Weekly support for accountability, motivation, and progress tracking",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Focus on long-term habits, lifestyle change, and lasting fitness knowledge",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -8317,6 +9352,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "duo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -8332,7 +9374,7 @@
         "id": "3msgezHRURF7JfDsa04js",
         "type": "Entry",
         "createdAt": "2025-05-03T19:12:27.222Z",
-        "updatedAt": "2025-05-27T20:21:22.580Z",
+        "updatedAt": "2025-06-01T11:28:12.436Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8340,8 +9382,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 50,
-        "publishedAt": "2025-05-27T20:21:22.580Z",
+        "publishedVersion": 56,
+        "publishedAt": "2025-06-01T11:28:12.436Z",
         "firstPublishedAt": "2025-05-03T19:15:10.858Z",
         "createdBy": {
           "sys": {
@@ -8357,8 +9399,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 15,
-        "version": 51,
+        "publishedCounter": 18,
+        "version": 57,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8402,7 +9444,7 @@
           "en-US": "offline"
         },
         "price": {
-          "en-US": 55
+          "en-US": 100
         },
         "priceUnit": {
           "en-US": "session"
@@ -8434,174 +9476,169 @@
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "1, 10, or 15 one-on-one ",
                             "marks": [
                             ],
-                            "value": "1, 10, or 15 one-on-one gym sessions ",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "gym sessions ",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Each session lasts 70-80 minutes",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Focus on technique, strength, and confidence",
                             "marks": [
                             ],
-                            "value": "Focus ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "on technique, strength, and confidence",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Learn training principles for future independent workouts",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Team-based setting to support shared and individual goals",
                             "marks": [
                             ],
-                            "value": "T",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "eam-based setting to support shared and individual goals",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "\n",
                     "marks": [
                     ],
-                    "value": "\n",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "\n",
                     "marks": [
                     ],
-                    "value": "\n",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -8670,7 +9707,256 @@
         "id": "6gAUE0GDhQj5pa6082tMwC",
         "type": "Entry",
         "createdAt": "2025-05-03T19:24:35.036Z",
-        "updatedAt": "2025-05-17T18:16:54.437Z",
+        "updatedAt": "2025-05-28T08:16:50.958Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2025-05-28T08:16:50.958Z",
+        "firstPublishedAt": "2025-05-03T19:25:32.174Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sessionOption"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6gAUE0GDhQj5pa6082tMwC"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Session Option 1 - CTWM"
+        },
+        "numberOfSessions": {
+          "en-US": 1
+        },
+        "price": {
+          "en-US": 60
+        },
+        "priceUnit": {
+          "en-US": "session"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "1hSlRajZ7TBZ7QCz7UvU7D",
+        "type": "Entry",
+        "createdAt": "2025-05-03T19:25:45.320Z",
+        "updatedAt": "2025-05-28T08:16:58.316Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2025-05-28T08:16:58.316Z",
+        "firstPublishedAt": "2025-05-03T19:26:36.873Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sessionOption"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/1hSlRajZ7TBZ7QCz7UvU7D"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Session Option 10 - CTWM"
+        },
+        "numberOfSessions": {
+          "en-US": 10
+        },
+        "price": {
+          "en-US": 500
+        },
+        "priceUnit": {
+          "en-US": "session"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "7CnW7uwUO3tAHMQysgouCw",
+        "type": "Entry",
+        "createdAt": "2025-05-03T19:26:44.469Z",
+        "updatedAt": "2025-05-28T08:17:07.490Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-05-28T08:17:07.490Z",
+        "firstPublishedAt": "2025-05-03T19:27:15.243Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sessionOption"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/7CnW7uwUO3tAHMQysgouCw"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Session Option 15 - CTWM"
+        },
+        "numberOfSessions": {
+          "en-US": 15
+        },
+        "price": {
+          "en-US": 715
+        },
+        "priceUnit": {
+          "en-US": "session"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "SLGpJ68WGR6HzS1x8EdCt",
+        "type": "Entry",
+        "createdAt": "2025-05-03T19:28:20.266Z",
+        "updatedAt": "2025-05-28T07:56:14.485Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8679,8 +9965,8 @@
           }
         },
         "publishedVersion": 9,
-        "publishedAt": "2025-05-17T18:16:54.437Z",
-        "firstPublishedAt": "2025-05-03T19:25:32.174Z",
+        "publishedAt": "2025-05-28T07:56:14.485Z",
+        "firstPublishedAt": "2025-05-03T19:28:49.843Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -8718,255 +10004,6 @@
             "id": "sessionOption"
           }
         },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6gAUE0GDhQj5pa6082tMwC"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Session Option 1 - CTWM"
-        },
-        "numberOfSessions": {
-          "en-US": 1
-        },
-        "price": {
-          "en-US": 40
-        },
-        "priceUnit": {
-          "en-US": "session"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "1hSlRajZ7TBZ7QCz7UvU7D",
-        "type": "Entry",
-        "createdAt": "2025-05-03T19:25:45.320Z",
-        "updatedAt": "2025-05-17T18:17:04.613Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 8,
-        "publishedAt": "2025-05-17T18:17:04.613Z",
-        "firstPublishedAt": "2025-05-03T19:26:36.873Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 9,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "sessionOption"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/1hSlRajZ7TBZ7QCz7UvU7D"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Session Option 10 - CTWM"
-        },
-        "numberOfSessions": {
-          "en-US": 10
-        },
-        "price": {
-          "en-US": 350
-        },
-        "priceUnit": {
-          "en-US": "session"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "7CnW7uwUO3tAHMQysgouCw",
-        "type": "Entry",
-        "createdAt": "2025-05-03T19:26:44.469Z",
-        "updatedAt": "2025-05-17T18:16:59.858Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2025-05-17T18:16:59.858Z",
-        "firstPublishedAt": "2025-05-03T19:27:15.243Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "sessionOption"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/7CnW7uwUO3tAHMQysgouCw"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Session Option 15 - CTWM"
-        },
-        "numberOfSessions": {
-          "en-US": 15
-        },
-        "price": {
-          "en-US": 500
-        },
-        "priceUnit": {
-          "en-US": "session"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "SLGpJ68WGR6HzS1x8EdCt",
-        "type": "Entry",
-        "createdAt": "2025-05-03T19:28:20.266Z",
-        "updatedAt": "2025-05-17T18:16:37.567Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 7,
-        "publishedAt": "2025-05-17T18:16:37.567Z",
-        "firstPublishedAt": "2025-05-03T19:28:49.843Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 8,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "sessionOption"
-          }
-        },
         "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/SLGpJ68WGR6HzS1x8EdCt"
       },
       "fields": {
@@ -8977,7 +10014,7 @@
           "en-US": 1
         },
         "price": {
-          "en-US": 55
+          "en-US": 100
         },
         "priceUnit": {
           "en-US": "session"
@@ -9002,7 +10039,7 @@
         "id": "4Aa0d1GYJSeSTAzMcRqtq8",
         "type": "Entry",
         "createdAt": "2025-05-03T19:28:54.203Z",
-        "updatedAt": "2025-05-17T18:16:48.638Z",
+        "updatedAt": "2025-05-28T07:56:25.013Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9010,8 +10047,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-05-17T18:16:48.638Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-05-28T07:56:25.013Z",
         "firstPublishedAt": "2025-05-03T19:29:10.985Z",
         "createdBy": {
           "sys": {
@@ -9027,8 +10064,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9060,7 +10097,7 @@
           "en-US": 10
         },
         "price": {
-          "en-US": 500
+          "en-US": 940
         },
         "priceUnit": {
           "en-US": "session"
@@ -9085,7 +10122,7 @@
         "id": "15sLEIGPHEWv8GtXgNbaNt",
         "type": "Entry",
         "createdAt": "2025-05-03T19:29:22.762Z",
-        "updatedAt": "2025-05-17T18:16:43.938Z",
+        "updatedAt": "2025-05-28T08:12:32.404Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9093,8 +10130,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-05-17T18:16:43.938Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-05-28T08:12:32.404Z",
         "firstPublishedAt": "2025-05-03T19:29:52.789Z",
         "createdBy": {
           "sys": {
@@ -9110,8 +10147,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9143,7 +10180,7 @@
           "en-US": 15
         },
         "price": {
-          "en-US": 720
+          "en-US": 1370
         },
         "priceUnit": {
           "en-US": "session"
@@ -9153,6 +10190,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "solo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -9168,7 +10212,7 @@
         "id": "QSvTNn77SwCmA0uojEQSL",
         "type": "Entry",
         "createdAt": "2025-05-03T19:30:15.736Z",
-        "updatedAt": "2025-05-27T20:20:04.114Z",
+        "updatedAt": "2025-06-01T11:23:27.148Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9176,8 +10220,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 49,
-        "publishedAt": "2025-05-27T20:20:04.114Z",
+        "publishedVersion": 57,
+        "publishedAt": "2025-06-01T11:23:27.148Z",
         "firstPublishedAt": "2025-05-03T19:32:25.216Z",
         "createdBy": {
           "sys": {
@@ -9193,8 +10237,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 13,
-        "version": 50,
+        "publishedCounter": 17,
+        "version": 58,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9238,172 +10282,153 @@
           "en-US": "online"
         },
         "price": {
-          "en-US": 300
+          "en-US": 500
         },
         "priceUnit": {
           "en-US": "plan"
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "12-week nutrition coaching",
-                            "nodeType": "text"
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Customized plan based on your goals, lifestyle, and preferences",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Diet coaching: daily support,  check-ins, and food photo tracking",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Flexible and habit-based strategies ",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Educational tools to understand portions, food quality, and smart choices",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
                             "marks": [
                             ],
-                            "value": "Ongoing adjustments and support",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -9457,6 +10482,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -9472,7 +10504,7 @@
         "id": "5bRqCJ27ZxHecwROd2iZ59",
         "type": "Entry",
         "createdAt": "2025-05-03T19:32:37.425Z",
-        "updatedAt": "2025-05-27T20:19:36.248Z",
+        "updatedAt": "2025-06-01T11:26:51.635Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9480,8 +10512,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 56,
-        "publishedAt": "2025-05-27T20:19:36.248Z",
+        "publishedVersion": 76,
+        "publishedAt": "2025-06-01T11:26:51.635Z",
         "firstPublishedAt": "2025-05-03T19:34:11.577Z",
         "createdBy": {
           "sys": {
@@ -9497,8 +10529,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 17,
-        "version": 57,
+        "publishedCounter": 22,
+        "version": 77,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9542,172 +10574,199 @@
           "en-US": "hybrid"
         },
         "price": {
-          "en-US": 600
+          "en-US": 1005
         },
         "priceUnit": {
           "en-US": "package"
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "12 weeks of accountability for a personalized ",
                             "marks": [
                             ],
-                            "value": "12-week program",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "Training plan",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " with progressive adjustments",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "12 weeks of accountability of ",
                             "marks": [
                             ],
-                            "value": "Online training plan with adaptable progression",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "Diet coaching",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": daily support, check-ins, and food photo tracking",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "5 one-on-one ",
                             "marks": [
                             ],
-                            "value": "Diet coaching: daily support, check-ins and food photo tracking",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "gym sessions",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Weekly check-ins for progress tracking and adapting changes.",
                             "marks": [
                             ],
-                            "value": "5 one-on-one gym sessions",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Weekly check-ins for progress tracking",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Support in building long-term fitness habits",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -9763,6 +10822,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -9778,7 +10844,7 @@
         "id": "47eUqAtKWxng6AfmQnADar",
         "type": "Entry",
         "createdAt": "2025-05-03T19:34:25.161Z",
-        "updatedAt": "2025-05-27T20:19:21.147Z",
+        "updatedAt": "2025-06-01T11:26:36.668Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9786,8 +10852,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 37,
-        "publishedAt": "2025-05-27T20:19:21.147Z",
+        "publishedVersion": 71,
+        "publishedAt": "2025-06-01T11:26:36.668Z",
         "firstPublishedAt": "2025-05-03T19:36:42.833Z",
         "createdBy": {
           "sys": {
@@ -9803,8 +10869,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 11,
-        "version": 38,
+        "publishedCounter": 19,
+        "version": 72,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9848,172 +10914,178 @@
           "en-US": "hybrid"
         },
         "price": {
-          "en-US": 500
+          "en-US": 690
         },
         "priceUnit": {
           "en-US": "package"
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "12 weeks of accountability for a personalized ",
                             "marks": [
                             ],
-                            "value": "12-week program: online training + in-person coaching",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "Training plan",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "10 one-on-one ",
                             "marks": [
                             ],
-                            "value": "Personalized training plan with progressive structure",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "gym sessions",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Special: a FREE overall dietary guide",
                             "marks": [
+                              {
+                                "type": "bold"
+                              },
+                              {
+                                "type": "italic"
+                              }
                             ],
-                            "value": "10 one-on-one gym sessions",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Progressive structure, tailored to your abilities and goals, ensuring sustainable improvement",
                             "marks": [
                             ],
-                            "value": "Steady improvement in strength, endurance, and overall fitness",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Ongoing feedback and motivation, focus on building long-term habits and independent training skills",
                             "marks": [
                             ],
-                            "value": "Ongoing feedback and motivation",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
                             "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Focus on building long-term habits and independent training skills",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -10060,8 +11132,7 @@
         "tags": {
           "en-US": [
             "gym",
-            "plan",
-            "dietary"
+            "plan"
           ]
         }
       }
@@ -10069,6 +11140,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -10084,7 +11162,7 @@
         "id": "38btLzFrJ1Bpq3nvyU10b0",
         "type": "Entry",
         "createdAt": "2025-05-03T19:36:58.005Z",
-        "updatedAt": "2025-05-27T20:22:50.975Z",
+        "updatedAt": "2025-06-01T08:33:59.761Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -10092,8 +11170,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 57,
-        "publishedAt": "2025-05-27T20:22:50.975Z",
+        "publishedVersion": 69,
+        "publishedAt": "2025-06-01T08:33:59.761Z",
         "firstPublishedAt": "2025-05-03T19:37:51.973Z",
         "createdBy": {
           "sys": {
@@ -10109,8 +11187,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 16,
-        "version": 58,
+        "publishedCounter": 20,
+        "version": 70,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -10154,172 +11232,208 @@
           "en-US": "online"
         },
         "price": {
-          "en-US": 450
+          "en-US": 690
         },
         "priceUnit": {
           "en-US": "package"
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "12-week online program: personalized training + diet coaching",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
+                            "nodeType": "text",
+                            "value": "Training plan ",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
                             "data": {
-                            },
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "with adaptable progression",
                             "marks": [
                             ],
-                            "value": "Training plan with adaptable progression",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
+                            "nodeType": "text",
+                            "value": "Diet coaching",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
                             "data": {
-                            },
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": daily support, check-ins, and food photo tracking",
                             "marks": [
                             ],
-                            "value": "Diet coaching: daily support, check-ins, and food photo tracking",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Ongoing support via app or email",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Flexible structure that fits your lifestyle",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Educational resources to build long-term understanding and independence:",
                             "marks": [
                             ],
-                            "value": "Educational resources to build long-term understanding and independence",
-                            "nodeType": "text"
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " a FREE overall dietary guide and Training Tips",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              },
+                              {
+                                "type": "italic"
+                              }
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -10366,8 +11480,7 @@
         "tags": {
           "en-US": [
             "plan",
-            "dietary",
-            "gym"
+            "dietary"
           ]
         }
       }
@@ -29743,7 +30856,7 @@
         "id": "4YjTpTKclFDOwdthlbqDOS",
         "type": "Entry",
         "createdAt": "2025-05-12T11:05:02.000Z",
-        "updatedAt": "2025-05-12T11:06:28.110Z",
+        "updatedAt": "2025-05-30T19:32:02.960Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -29751,8 +30864,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-05-12T11:06:28.110Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-05-30T19:32:02.960Z",
         "firstPublishedAt": "2025-05-12T11:05:10.468Z",
         "createdBy": {
           "sys": {
@@ -29768,8 +30881,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 5,
+        "publishedCounter": 5,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -29798,7 +30911,7 @@
           "en-US": "Contact & Booking"
         },
         "subtitle": {
-          "en-US": "Start the conversation - no cost, no pressure"
+          "en-US": "Includes a FREE 20-minute consultation — just you, me, and your goals. NO cost, NO pressure!"
         }
       }
     },
@@ -37121,6 +38234,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "duo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -37136,7 +38256,7 @@
         "id": "3IINHggtiHEy4D6Gs6W3j2",
         "type": "Entry",
         "createdAt": "2025-05-18T16:18:41.356Z",
-        "updatedAt": "2025-05-27T20:21:33.681Z",
+        "updatedAt": "2025-06-01T11:27:54.955Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -37144,8 +38264,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 29,
-        "publishedAt": "2025-05-27T20:21:33.681Z",
+        "publishedVersion": 35,
+        "publishedAt": "2025-06-01T11:27:54.955Z",
         "firstPublishedAt": "2025-05-18T16:21:19.633Z",
         "createdBy": {
           "sys": {
@@ -37161,8 +38281,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 8,
-        "version": 30,
+        "publishedCounter": 11,
+        "version": 36,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -37206,172 +38326,150 @@
           "en-US": "hybrid"
         },
         "price": {
-          "en-US": 0
+          "en-US": 1280
         },
         "priceUnit": {
           "en-US": "package"
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
+                            "nodeType": "text",
                             "value": "10 in-gym personal training sessions",
-                            "nodeType": "text"
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": " with a coach",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
+                            "nodeType": "text",
                             "value": "Custom training plan",
-                            "nodeType": "text"
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": " designed for two people",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Progress tracking",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Progress tracking and adjustments as needed",
                             "marks": [
                             ],
-                            "value": " and adjustments as needed",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Support and guidance",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Support and guidance throughout your journey",
                             "marks": [
                             ],
-                            "value": " throughout your journey",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "packageAccordions": {
@@ -38567,7 +39665,7 @@
         "id": "hLsBIIWp8RJYjhiBzXR4F",
         "type": "Entry",
         "createdAt": "2025-05-18T20:44:08.632Z",
-        "updatedAt": "2025-05-24T17:53:27.708Z",
+        "updatedAt": "2025-06-01T12:00:47.809Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38575,8 +39673,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 35,
-        "publishedAt": "2025-05-24T17:53:27.708Z",
+        "publishedVersion": 43,
+        "publishedAt": "2025-06-01T12:00:47.809Z",
         "firstPublishedAt": "2025-05-18T20:46:37.080Z",
         "createdBy": {
           "sys": {
@@ -38592,8 +39690,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 36,
+        "publishedCounter": 5,
+        "version": 44,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38830,6 +39928,126 @@
                 ]
               },
               {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": " Session Validity & Expiry Policy",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "All training sessions included in ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "combo packages ",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "must be used within ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "12 weeks",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " from the start date. This time frame is set to ensure consistency, optimal progress, and achievement of the goals we set together at the beginning of your program.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "In specific cases—such as illness, travel, or other discussed circumstances—the validity may be extended up to a ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "maximum of 16 weeks",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ", upon mutual agreement and prior notice.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Unused sessions beyond the agreed period will expire and are non-refundable.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
                 "nodeType": "heading-3",
                 "data": {
                 },
@@ -38872,7 +40090,7 @@
                           },
                           {
                             "nodeType": "text",
-                            "value": "at least 24 hours’ notice",
+                            "value": "at least 12 hours’ notice",
                             "marks": [
                               {
                                 "type": "bold"
@@ -38905,7 +40123,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Late cancellations (less than 24 hours) may be ",
+                            "value": "Late cancellations (less than 6 hours) may be ",
                             "marks": [
                             ],
                             "data": {
@@ -39378,7 +40596,7 @@
                         "content": [
                           {
                             "nodeType": "text",
-                            "value": "Vy Minh Nguyen commits to providing professional, respectful, and individualized coaching tailored to your goals.",
+                            "value": "Vili Pekkala commits to providing professional, respectful, and individualized coaching tailored to your goals.",
                             "marks": [
                             ],
                             "data": {
@@ -39505,6 +40723,20 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "bronze-skin-iron-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -39520,7 +40752,7 @@
         "id": "1QBw1JIpbNxMxFfbRuElRh",
         "type": "Entry",
         "createdAt": "2025-05-24T19:49:27.934Z",
-        "updatedAt": "2025-05-26T17:01:08.172Z",
+        "updatedAt": "2025-05-31T20:38:32.490Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -39528,8 +40760,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 41,
-        "publishedAt": "2025-05-26T17:01:08.172Z",
+        "publishedVersion": 45,
+        "publishedAt": "2025-05-31T20:38:32.490Z",
         "firstPublishedAt": "2025-05-24T20:01:58.492Z",
         "createdBy": {
           "sys": {
@@ -39545,8 +40777,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 6,
-        "version": 42,
+        "publishedCounter": 8,
+        "version": 46,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -39997,6 +41229,20 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "bronze-skin-iron-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -40012,7 +41258,7 @@
         "id": "7hqQQn8Xw2goqPeIv0zneD",
         "type": "Entry",
         "createdAt": "2025-05-25T17:17:30.218Z",
-        "updatedAt": "2025-05-26T17:09:20.760Z",
+        "updatedAt": "2025-05-31T20:38:40.542Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40020,8 +41266,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2025-05-26T17:09:20.760Z",
+        "publishedVersion": 23,
+        "publishedAt": "2025-05-31T20:38:40.542Z",
         "firstPublishedAt": "2025-05-25T17:19:09.795Z",
         "createdBy": {
           "sys": {
@@ -40037,8 +41283,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 20,
+        "publishedCounter": 6,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40134,6 +41380,20 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "bronze-skin-iron-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -40149,7 +41409,7 @@
         "id": "6zXYZlZhSHceg6kXpHl7Dd",
         "type": "Entry",
         "createdAt": "2025-05-25T17:38:03.518Z",
-        "updatedAt": "2025-05-26T16:57:42.528Z",
+        "updatedAt": "2025-05-31T20:38:15.843Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40157,8 +41417,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 30,
-        "publishedAt": "2025-05-26T16:57:42.528Z",
+        "publishedVersion": 34,
+        "publishedAt": "2025-05-31T20:38:15.843Z",
         "firstPublishedAt": "2025-05-25T17:41:07.114Z",
         "createdBy": {
           "sys": {
@@ -40174,8 +41434,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 31,
+        "publishedCounter": 5,
+        "version": 35,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40270,6 +41530,20 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "bronze-skin-iron-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -40285,7 +41559,7 @@
         "id": "ujZXOQYLZDLtW48Cqi2tj",
         "type": "Entry",
         "createdAt": "2025-05-25T17:42:15.570Z",
-        "updatedAt": "2025-05-26T16:58:41.418Z",
+        "updatedAt": "2025-05-31T20:38:22.944Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40293,8 +41567,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2025-05-26T16:58:41.418Z",
+        "publishedVersion": 21,
+        "publishedAt": "2025-05-31T20:38:22.944Z",
         "firstPublishedAt": "2025-05-25T17:45:15.860Z",
         "createdBy": {
           "sys": {
@@ -40310,8 +41584,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 18,
+        "publishedCounter": 4,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40421,7 +41695,7 @@
         "id": "51hQCsTcvhP1Sxt3fsqutq",
         "type": "Entry",
         "createdAt": "2025-05-25T18:51:39.425Z",
-        "updatedAt": "2025-05-25T20:16:38.857Z",
+        "updatedAt": "2025-06-01T08:23:47.920Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40429,8 +41703,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 22,
-        "publishedAt": "2025-05-25T20:16:38.857Z",
+        "publishedVersion": 26,
+        "publishedAt": "2025-06-01T08:23:47.920Z",
         "firstPublishedAt": "2025-05-25T18:55:31.071Z",
         "createdBy": {
           "sys": {
@@ -40446,8 +41720,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 6,
-        "version": 23,
+        "publishedCounter": 8,
+        "version": 27,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40473,7 +41747,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Solo Packages"
+          "en-US": "Solo Slay Packages"
         },
         "slug": {
           "en-US": "solo-packages"
@@ -40541,6 +41815,13 @@
                 "linkType": "Entry",
                 "id": "6IUK2AWgfqpnNuQHKzFU0i"
               }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4jwH3uXygjlLddvQGpdJ7n"
+              }
             }
           ]
         },
@@ -40573,7 +41854,7 @@
         "id": "2IxLWlO95vsGHcGtN0ShWC",
         "type": "Entry",
         "createdAt": "2025-05-25T18:55:52.172Z",
-        "updatedAt": "2025-05-25T19:54:13.204Z",
+        "updatedAt": "2025-05-31T17:53:09.473Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40581,8 +41862,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 18,
-        "publishedAt": "2025-05-25T19:54:13.204Z",
+        "publishedVersion": 21,
+        "publishedAt": "2025-05-31T17:53:09.473Z",
         "firstPublishedAt": "2025-05-25T18:57:52.469Z",
         "createdBy": {
           "sys": {
@@ -40598,8 +41879,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 19,
+        "publishedCounter": 5,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40625,7 +41906,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Duo packages"
+          "en-US": "Duo Slay packages"
         },
         "slug": {
           "en-US": "duo-packages"
@@ -40725,7 +42006,7 @@
         "id": "2nYEct7V9QKdOeiZV7dhL",
         "type": "Entry",
         "createdAt": "2025-05-25T18:57:56.334Z",
-        "updatedAt": "2025-05-25T19:54:03.651Z",
+        "updatedAt": "2025-05-31T17:53:18.846Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40733,8 +42014,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2025-05-25T19:54:03.651Z",
+        "publishedVersion": 19,
+        "publishedAt": "2025-05-31T17:53:18.846Z",
         "firstPublishedAt": "2025-05-25T18:59:48.959Z",
         "createdBy": {
           "sys": {
@@ -40750,8 +42031,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 18,
+        "publishedCounter": 5,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40777,7 +42058,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Combo packages"
+          "en-US": "Combo Slay packages"
         },
         "slug": {
           "en-US": "combo-packages"
@@ -40865,6 +42146,1317 @@
           "en-US": "Contact coach Vili"
         }
       }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "4WrzaCE79ft6ajkIbIW09O",
+        "type": "Entry",
+        "createdAt": "2025-05-28T08:00:51.247Z",
+        "updatedAt": "2025-05-28T08:02:02.860Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2025-05-28T08:02:02.860Z",
+        "firstPublishedAt": "2025-05-28T08:02:02.860Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "howTrainingSessionLooksLike"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/4WrzaCE79ft6ajkIbIW09O"
+      },
+      "fields": {
+        "title": {
+          "en-US": "How training session looks like - CTWM"
+        },
+        "slug": {
+          "en-US": "come-train-with-me"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Test",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "7uhil8XLgOP8HodxMEckNm",
+        "type": "Entry",
+        "createdAt": "2025-05-28T08:03:33.791Z",
+        "updatedAt": "2025-05-28T08:04:06.578Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-05-28T08:04:06.578Z",
+        "firstPublishedAt": "2025-05-28T08:04:06.578Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "howTrainingSessionLooksLike"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/7uhil8XLgOP8HodxMEckNm"
+      },
+      "fields": {
+        "title": {
+          "en-US": "How training session looks like - TTFT"
+        },
+        "slug": {
+          "en-US": "train-together-fun-together"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Test",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "combo"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "golden-body-golden-mind"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "6TtjzxwJ1A027U7f9N7zVo",
+        "type": "Entry",
+        "createdAt": "2025-05-29T20:20:20.170Z",
+        "updatedAt": "2025-05-31T20:39:08.245Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 37,
+        "publishedAt": "2025-05-31T20:39:08.245Z",
+        "firstPublishedAt": "2025-05-29T20:24:57.588Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 38,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "review"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6TtjzxwJ1A027U7f9N7zVo"
+      },
+      "fields": {
+        "id": {
+          "en-US": 7
+        },
+        "title": {
+          "en-US": "My first PT. He introduced me to a healthier lifestyle!"
+        },
+        "reviewer": {
+          "en-US": "Jenna. D"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Vili is very flexible in making time to train me in the gym, even though I have a busy life.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "He is friendly and also straightforward, also encourages me and follows me closely with my progress. Therefore I improve clearly.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "His way of explaining helps me remember for a long time.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "package": {
+          "en-US": [
+            "Golden body golden mind"
+          ]
+        },
+        "changes": {
+          "en-US": [
+            "lost 3kg",
+            "new lifestyle",
+            "feel stronger"
+          ]
+        },
+        "rating": {
+          "en-US": 4.8
+        },
+        "showOnLandingPage": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "bDzdSgPCsQnxtRroug60l",
+        "type": "Entry",
+        "createdAt": "2025-06-01T13:04:14.317Z",
+        "updatedAt": "2025-06-01T13:14:25.364Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-06-01T13:14:25.364Z",
+        "firstPublishedAt": "2025-06-01T13:09:26.734Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/bDzdSgPCsQnxtRroug60l"
+      },
+      "fields": {
+        "topic": {
+          "en-US": "General"
+        },
+        "topicType": {
+          "en-US": "GENERAL"
+        },
+        "question": {
+          "en-US": "What is a Training Plan?"
+        },
+        "answer": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "A training plan is a combination of diagnosis of a client's health status, ie level of fitness in different aspects (flexibility, strength, power, durability, balance …), training history and training goals, and most importantly a workout plan with specific exercises to target the clients’ needs and improve weaknesses.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "recommendedPackages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "51hQCsTcvhP1Sxt3fsqutq"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "jxQ07HHUZXHJr6sqI1Br2",
+        "type": "Entry",
+        "createdAt": "2025-06-01T13:09:31.959Z",
+        "updatedAt": "2025-06-01T13:14:54.158Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2025-06-01T13:14:54.158Z",
+        "firstPublishedAt": "2025-06-01T13:10:13.647Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/jxQ07HHUZXHJr6sqI1Br2"
+      },
+      "fields": {
+        "topic": {
+          "en-US": "General"
+        },
+        "topicType": {
+          "en-US": "GENERAL"
+        },
+        "question": {
+          "en-US": "What is included in the Training Plan?"
+        },
+        "answer": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Personalized workout schedule",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Exercise selection based on your goals & fitness level",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Sets, reps, and intensity guidelines",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Progress tracking & adjustments as needed",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "12 weeks of accountability support",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "recommendedPackages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "51hQCsTcvhP1Sxt3fsqutq"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "3bzVVistp1o0sqqdPY1dyb",
+        "type": "Entry",
+        "createdAt": "2025-06-01T13:10:17.394Z",
+        "updatedAt": "2025-06-01T13:14:47.215Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-06-01T13:14:47.215Z",
+        "firstPublishedAt": "2025-06-01T13:11:03.454Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/3bzVVistp1o0sqqdPY1dyb"
+      },
+      "fields": {
+        "topic": {
+          "en-US": "General"
+        },
+        "topicType": {
+          "en-US": "GENERAL"
+        },
+        "question": {
+          "en-US": "Why is a training plan important?"
+        },
+        "answer": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Provides Direction & Purpose – Ensures every workout has a clear goal rather than random exercises.\nEnhances Efficiency – Maximizes results by following a structured approach instead of wasting time on ineffective workouts.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Tracks Progress – Helps measure improvements in strength, endurance, and fitness over time.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Prevents Plateaus – Adapts training to keep you challenged and progressing.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Reduces Risk of Injury – Ensures balanced workouts, proper recovery and prevents overtraining\n",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "recommendedPackages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "51hQCsTcvhP1Sxt3fsqutq"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "2HwYOdQwmGzhTTGJRDiGoX",
+        "type": "Entry",
+        "createdAt": "2025-06-01T13:11:53.234Z",
+        "updatedAt": "2025-06-01T13:14:40.161Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-06-01T13:14:40.161Z",
+        "firstPublishedAt": "2025-06-01T13:12:20.166Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2HwYOdQwmGzhTTGJRDiGoX"
+      },
+      "fields": {
+        "topic": {
+          "en-US": "General"
+        },
+        "topicType": {
+          "en-US": "GENERAL"
+        },
+        "question": {
+          "en-US": "What is the EAT BETTER, LIVE BETTER package (Dietary guidance)?"
+        },
+        "answer": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The package consists of the dietary guidance, which determines the amount of calories, protein, fat, and carbs a person needs to achieve a goal (lose or gain weight with the best muscle results), and will be customized to fit a person’s wants and lifestyle. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Dietary Guidance program includes daily check-ins with your coach via WhatsApp, where you can:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "✔️ Share meal photos and discuss food choices",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "✔️ Receive real-time feedback and suggestions from the coach",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "✔️ Find the best balance between your dietary goals and food enjoyment.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " This guidance will ensure that the client will accumulate sufficient knowledge after 12 weeks of guidance to be able to make dieting decisions on their own.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "recommendedPackages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "51hQCsTcvhP1Sxt3fsqutq"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "41hldhUnROCXVaiEHnJ0D3",
+        "type": "Entry",
+        "createdAt": "2025-06-01T13:12:30.902Z",
+        "updatedAt": "2025-06-01T13:14:33.193Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-06-01T13:14:33.193Z",
+        "firstPublishedAt": "2025-06-01T13:13:04.505Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/41hldhUnROCXVaiEHnJ0D3"
+      },
+      "fields": {
+        "topic": {
+          "en-US": "General"
+        },
+        "topicType": {
+          "en-US": "GENERAL"
+        },
+        "question": {
+          "en-US": "What is the Train Together, Fun Together package, and who is eligible to use it?"
+        },
+        "answer": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "A duo package is a price-advantage package for a pair of friends to train together with the coach. The conditions for this package include:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Pre-assessment fitness conditions of the pair are close enough for an effective duo workout",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "The pair will always train together in the same session. ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "recommendedPackages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2IxLWlO95vsGHcGtN0ShWC"
+              }
+            }
+          ]
+        }
+      }
     }
   ],
   "assets": [
@@ -40886,7 +43478,7 @@
         "id": "5L6ugrWazb9G2HwzU6Ce1K",
         "type": "Asset",
         "createdAt": "2025-04-15T21:01:28.961Z",
-        "updatedAt": "2025-04-18T11:36:34.804Z",
+        "updatedAt": "2025-05-30T11:37:30.272Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40894,8 +43486,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2025-04-18T11:36:34.804Z",
+        "publishedVersion": 12,
+        "publishedAt": "2025-05-30T11:37:30.272Z",
         "firstPublishedAt": "2025-04-15T21:02:01.555Z",
         "createdBy": {
           "sys": {
@@ -40911,8 +43503,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 9,
+        "publishedCounter": 4,
+        "version": 13,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40933,15 +43525,15 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/5yib965szeod/5L6ugrWazb9G2HwzU6Ce1K/0924131e9964652b062f5889238c748f/image.jpg",
+            "url": "//images.ctfassets.net/5yib965szeod/5L6ugrWazb9G2HwzU6Ce1K/dee282289a8add857086a2cb3eede759/IMG_6226_VSCO.JPG",
             "details": {
-              "size": 29077,
+              "size": 126680,
               "image": {
-                "width": 533,
-                "height": 360
+                "width": 1080,
+                "height": 720
               }
             },
-            "fileName": "image.jpg",
+            "fileName": "IMG_6226_VSCO.JPG",
             "contentType": "image/jpeg"
           }
         }
@@ -41264,6 +43856,171 @@
               }
             },
             "fileName": "4DCDEC63-EB17-4E82-8670-EAE44FA2E437.JPG",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "logo"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "1S5JOorO0TiTDQ1cc6amr5",
+        "type": "Asset",
+        "createdAt": "2025-05-29T19:11:58.528Z",
+        "updatedAt": "2025-05-29T19:44:40.218Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2025-05-29T19:44:40.218Z",
+        "firstPublishedAt": "2025-05-29T19:12:44.398Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/1S5JOorO0TiTDQ1cc6amr5"
+      },
+      "fields": {
+        "title": {
+          "en-US": "logo_full"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/1S5JOorO0TiTDQ1cc6amr5/95d0fce1298060820b33e8cb7450348f/Black.png",
+            "details": {
+              "size": 22362,
+              "image": {
+                "width": 1560,
+                "height": 602
+              }
+            },
+            "fileName": "Black.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "2pMihXJFArU3DRC7ie6gTZ",
+        "type": "Asset",
+        "createdAt": "2025-05-30T11:29:34.987Z",
+        "updatedAt": "2025-05-30T11:32:55.965Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-05-30T11:32:55.965Z",
+        "firstPublishedAt": "2025-05-30T11:32:55.965Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/2pMihXJFArU3DRC7ie6gTZ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Banner"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/2pMihXJFArU3DRC7ie6gTZ/49364a0404a5b4ec09c0e75894d58d87/IMG_6226_VSCO.JPG",
+            "details": {
+              "size": 126680,
+              "image": {
+                "width": 1080,
+                "height": 720
+              }
+            },
+            "fileName": "IMG_6226_VSCO.JPG",
             "contentType": "image/jpeg"
           }
         }
