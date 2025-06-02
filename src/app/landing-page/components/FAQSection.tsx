@@ -6,6 +6,8 @@ import { getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
 import Button from "app/components/Button";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { useRouter } from "next/navigation";
+import { ROUTES } from "app/utils/routes";
 
 interface FAQSectionProps {
   title: string;
@@ -22,6 +24,7 @@ export default function FAQSection({
   buttonText,
   image,
 }: FAQSectionProps) {
+  const router = useRouter();
   const imageUrl = getAssetUrl(image);
 
   return (
@@ -41,6 +44,7 @@ export default function FAQSection({
           variant="primary"
           iconRight={<ArrowRightIcon className="size-4" />}
           className="mt-6"
+          onClick={() => router.push(ROUTES.FAQ)}
         />
       </div>
     </div>

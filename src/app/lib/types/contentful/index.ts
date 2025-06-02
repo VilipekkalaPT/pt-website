@@ -2,10 +2,6 @@ export type {
   TypeAboutPageData,
   TypeAboutPageDataFields,
 } from "./TypeAboutPageData";
-export type {
-  TypeBannerContent,
-  TypeBannerContentFields,
-} from "./TypeBannerContent";
 export type { TypeBlog, TypeBlogFields } from "./TypeBlog";
 export type { TypeContactForm, TypeContactFormFields } from "./TypeContactForm";
 export type { TypeCurriculum, TypeCurriculumFields } from "./TypeCurriculum";

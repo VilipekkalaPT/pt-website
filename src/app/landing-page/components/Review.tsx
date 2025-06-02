@@ -11,7 +11,7 @@ export default function Review({ reviews }: ReviewProps) {
   return (
     <div className="mt-40 px-12">
       <p className="text-2xl font-bold text-center">Latest reviews</p>
-      <div className="grid grid-cols-2 gap-10 mt-4">
+      <div className="grid grid-cols-3 gap-10 mt-4">
         {displayedReviews.map((review: TypeReviewFields) => (
           <ReviewCard
             key={review.id}

@@ -2,7 +2,6 @@ import { getEntries } from "app/lib/contentfulDataService";
 import Divider from "app/components/Divider";
 import KickOffProcess from "./components/KickOffProcess";
 import Review from "./components/Review";
-import { TypeBannerContentSkeleton } from "app/lib/types/contentful/TypeBannerContent";
 import { TypeKickOffProcessSkeleton } from "app/lib/types/contentful/TypeKickOffProcess";
 import { TypeReviewSkeleton } from "app/lib/types/contentful/TypeReview";
 import HeadingSection from "./components/HeadingSection";
@@ -17,10 +16,11 @@ import ServiceSection from "./components/ServiceSection";
 import GoalSection from "./components/GoalSection";
 import ImageCards from "./components/ImageCards";
 import FAQSection from "./components/FAQSection";
+import { TypeLandingPageDataSkeleton } from "app/lib/types/contentful/TypeLandingPageData";
 
 export default async function LandingPage() {
   const [landingPageData, kickOffProcess, reviews] = await Promise.all([
-    getEntries<TypeBannerContentSkeleton>("landingPageData"),
+    getEntries<TypeLandingPageDataSkeleton>("landingPageData"),
     getEntries<TypeKickOffProcessSkeleton>("kickOffProcess"),
     getEntries<TypeReviewSkeleton>("review"),
   ]);
@@ -37,8 +37,6 @@ export default async function LandingPage() {
   const imageCards = landingPageContent.imageCards.map(
     (card) => card.fields
   ) as TypeLandingPageCardFields[];
-
-  console.log("Landing Page Data:", landingPageContent);
 
   return (
     <>
