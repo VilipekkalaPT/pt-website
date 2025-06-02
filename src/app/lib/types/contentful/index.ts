@@ -6,6 +6,7 @@ export type {
   TypeBannerContent,
   TypeBannerContentFields,
 } from "./TypeBannerContent";
+export type { TypeBlog, TypeBlogFields } from "./TypeBlog";
 export type { TypeContactForm, TypeContactFormFields } from "./TypeContactForm";
 export type { TypeCurriculum, TypeCurriculumFields } from "./TypeCurriculum";
 export type {
@@ -26,9 +27,29 @@ export type {
   TypeFooterColumnLinkFields,
 } from "./TypeFooterColumnLink";
 export type {
+  TypeHowTrainingSessionLooksLike,
+  TypeHowTrainingSessionLooksLikeFields,
+} from "./TypeHowTrainingSessionLooksLike";
+export type {
   TypeKickOffProcess,
   TypeKickOffProcessFields,
 } from "./TypeKickOffProcess";
+export type {
+  TypeLandingPageCard,
+  TypeLandingPageCardFields,
+} from "./TypeLandingPageCard";
+export type {
+  TypeLandingPageData,
+  TypeLandingPageDataFields,
+} from "./TypeLandingPageData";
+export type {
+  TypeLandingPageHeadingSection,
+  TypeLandingPageHeadingSectionFields,
+} from "./TypeLandingPageHeadingSection";
+export type {
+  TypeLandingPageServices,
+  TypeLandingPageServicesFields,
+} from "./TypeLandingPageServices";
 export type { TypeNavigation, TypeNavigationFields } from "./TypeNavigation";
 export type { TypePackage, TypePackageFields } from "./TypePackage";
 export type {

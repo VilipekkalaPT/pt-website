@@ -9,7 +9,7 @@ export interface TypeKickOffProcessFields {
 
 export interface TypeKickOffProcessSkeleton extends EntrySkeletonType {
   fields: TypeKickOffProcessFields;
-  contentTypeId: "bannerContent";
+  contentTypeId: "kickOffProcess";
 }
 
 export type TypeKickOffProcess = Entry<TypeKickOffProcessSkeleton>;

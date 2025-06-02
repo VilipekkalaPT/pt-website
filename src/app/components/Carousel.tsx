@@ -30,32 +30,36 @@ export default function Carousel({ images }: CarouselProps) {
   return (
     <div className="relative w-full mx-auto">
       <div ref={sliderRef} className="keen-slider overflow-hidden">
-        {images.map((image, index) => (
-          <div key={index} className="keen-slider__slide">
-            <Image
-              src={`https:${image.file?.url ?? ""}`}
-              alt={""}
-              width={image.file?.details.image?.width}
-              height={image.file?.details.image?.height}
-            />
-          </div>
-        ))}
+        {images &&
+          images.map((image, index) => (
+            <div key={index} className="keen-slider__slide">
+              <Image
+                src={`https:${image.file?.url ?? ""}`}
+                alt={""}
+                width={image.file?.details.image?.width}
+                height={image.file?.details.image?.height}
+              />
+            </div>
+          ))}
       </div>
-      <IconButton
-        variant="primary"
-        icon={<ChevronLeftIcon className="size-6" />}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2"
-        onClick={() => instanceRef.current?.prev()}
-        aria-label="Previous slide"
-      />
-      <IconButton
-        variant="primary"
-        icon={<ChevronRightIcon className="size-6" />}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2"
-        onClick={() => instanceRef.current?.next()}
-        aria-label="Next slide"
-      />
-
+      {images && (
+        <>
+          <IconButton
+            variant="primary"
+            icon={<ChevronLeftIcon className="size-6" />}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2"
+            onClick={() => instanceRef.current?.prev()}
+            aria-label="Previous slide"
+          />
+          <IconButton
+            variant="primary"
+            icon={<ChevronRightIcon className="size-6" />}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2"
+            onClick={() => instanceRef.current?.next()}
+            aria-label="Next slide"
+          />
+        </>
+      )}
       {/* <div className="flex justify-center mt-4 gap-2">
         {images.map((_, idx) => (
           <button

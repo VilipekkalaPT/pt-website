@@ -2,6 +2,7 @@ export const ROUTES = {
   LANDING_PAGE: "/",
   PRICING: "/pricing",
   PRICING_COMPARE: "/pricing/compare-and-decide",
+  ABOUT: "/about",
   CONTACT: "/contact-and-booking",
 };
 

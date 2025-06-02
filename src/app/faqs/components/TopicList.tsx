@@ -22,6 +22,7 @@ const getIconComponent = (topicType: TOPIC_TYPE) => {
     [TOPIC_TYPE.DIET_MYTHS]: <SparklesIcon className={className} />,
     [TOPIC_TYPE.FEMALE_GYM]: <UsersIcon className={className} />,
     [TOPIC_TYPE.SUPPLEMENTS]: <SquaresPlusIcon className={className} />,
+    [TOPIC_TYPE.GENERAL]: <SquaresPlusIcon className={className} />,
   };
 
   return icons[topicType] || <SquaresPlusIcon className={className} />;

@@ -17,6 +17,7 @@
     "cf-content-types-generator": "^2.16.0",
     "classnames": "^2.5.1",
     "contentful": "^11.5.14",
+    "framer-motion": "^12.15.0",
     "keen-slider": "^6.8.6",
     "next": "15.3.0",
     "nodemailer": "^7.0.3",

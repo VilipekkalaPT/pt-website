@@ -4,6 +4,7 @@ import { BANNER } from "app/utils/variables";
 import { AssetFields } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 import { StarIcon } from "@heroicons/react/24/solid";
+import { getAssetUrl } from "app/utils/utils";
 
 interface PhilosophyProps {
   title: string;
@@ -19,7 +20,8 @@ export default function Philosophy({
   images,
 }: PhilosophyProps) {
   const banner = images.find((image) => image.title === BANNER);
-  const bannerUrl = `https:${banner?.file?.url ?? ""}`;
+
+  const bannerUrl = banner ? getAssetUrl(banner) : "";
 
   return (
     <div className="flex my-15 mx-12 gap-12">
