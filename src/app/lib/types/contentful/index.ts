@@ -43,6 +43,10 @@ export type {
   TypeLandingPageHeadingSectionFields,
 } from "./TypeLandingPageHeadingSection";
 export type {
+  TypeLandingPagePainPoints,
+  TypeLandingPagePainPointsFields,
+} from "./TypeLandingPagePainPoints";
+export type {
   TypeLandingPageServices,
   TypeLandingPageServicesFields,
 } from "./TypeLandingPageServices";

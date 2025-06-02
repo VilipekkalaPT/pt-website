@@ -9,6 +9,7 @@ import {
   TypeLandingPageCardFields,
   TypeLandingPageDataFields,
   TypeLandingPageHeadingSectionFields,
+  TypeLandingPagePainPointsFields,
   TypeLandingPageServicesFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
@@ -17,6 +18,7 @@ import GoalSection from "./components/GoalSection";
 import ImageCards from "./components/ImageCards";
 import FAQSection from "./components/FAQSection";
 import { TypeLandingPageDataSkeleton } from "app/lib/types/contentful/TypeLandingPageData";
+import PainPointsSection from "./components/PainPointsSection";
 
 export default async function LandingPage() {
   const [landingPageData, kickOffProcess, reviews] = await Promise.all([
@@ -37,6 +39,9 @@ export default async function LandingPage() {
   const imageCards = landingPageContent.imageCards.map(
     (card) => card.fields
   ) as TypeLandingPageCardFields[];
+  const painPoints = landingPageContent.painPoints.map(
+    (point) => point.fields
+  ) as TypeLandingPagePainPointsFields[];
 
   return (
     <>
@@ -45,6 +50,11 @@ export default async function LandingPage() {
         headingSections={headingSections}
         actionButtonText1={landingPageContent.actionButtonText1}
         actionButtonText2={landingPageContent.actionButtonText2}
+      />
+      <PainPointsSection
+        title={landingPageContent.painPointsSectionTitle}
+        subtitle={landingPageContent.painPointsSectionSubtitle}
+        painPoints={painPoints}
       />
       <ServiceSection
         title={landingPageContent.serviceTitle}
