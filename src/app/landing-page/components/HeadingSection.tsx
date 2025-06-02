@@ -40,9 +40,9 @@ export default function HeadingSection({
       <Image
         src={bannerUrl}
         alt={BANNER}
-        layout="fill"
-        objectFit="cover"
-        className="block w-full h-auto"
+        fill
+        style={{ objectFit: "cover" }}
+        className="block w-full h-auto "
       />
       <div className="absolute inset-0 bg-black/70 z-10 flex  items-center justify-center">
         {headingSections.map((section, i) => (
