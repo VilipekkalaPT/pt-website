@@ -32,7 +32,7 @@ export default function PainPointsSection({
     <div className="mt-20 px-12 flex flex-col items-center">
       <p className="text-2xl font-bold mb-1">{title}</p>
       <p className="text-xl text-gray-400 mb-10">{subtitle}</p>
-      <div className="w-full h-[400px] flex gap-8">
+      <div className="w-full h-[400px] flex justify-between">
         {painPoints.map((point, index) => {
           const image = point.image.fields as AssetFields;
           const imageUrl = getAssetUrl(image);
