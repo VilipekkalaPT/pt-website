@@ -9,7 +9,7 @@ export const ALL_COMBO_PACKAGES = "All combo packages";
 export const GET_STARTED = "Get started";
 export const BACK = "Back";
 export const LATEST_REVIEWS = "Latest reviews";
-export const SAVED_AMOUNT = "Saved:";
+export const SAVED_AMOUNT = "Saved";
 
 // Pricing Page Variables
 export const CURRENCY = "€";
