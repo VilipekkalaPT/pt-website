@@ -1,13 +1,14 @@
-import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 
 export interface TypeReviewFields {
   id: EntryFields.Integer;
   title: EntryFields.Symbol;
+  images?: Asset[];
   reviewer: EntryFields.Symbol;
   content: EntryFields.RichText;
   package: (
     | "Bronze skin iron mind"
-    | "Come train with me"
+    | "Come train with Vili"
     | "Duo training plan"
     | "Eat better live better"
     | "Go the distance"

@@ -11,7 +11,7 @@ export interface TypePackageFields {
   subheading: EntryFields.Symbol;
   mode: "hybrid" | "offline" | "online";
   price: EntryFields.Integer;
-  priceUnit: "package" | "plan" | "session";
+  priceUnit: "package" | "session";
   sessionOptions?: Entry<TypeSessionOptionSkeleton>[];
   content: EntryFields.RichText;
   packageAccordions: Entry<TypePackageAccordionSkeleton>[];
