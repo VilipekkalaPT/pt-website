@@ -19,13 +19,16 @@ import ImageCards from "./components/ImageCards";
 import FAQSection from "./components/FAQSection";
 import { TypeLandingPageDataSkeleton } from "app/lib/types/contentful/TypeLandingPageData";
 import PainPointsSection from "./components/PainPointsSection";
+import { TypePackageSkeleton } from "app/lib/types/contentful/TypePackage";
 
 export default async function LandingPage() {
-  const [landingPageData, kickOffProcess, reviews] = await Promise.all([
-    getEntries<TypeLandingPageDataSkeleton>("landingPageData"),
-    getEntries<TypeKickOffProcessSkeleton>("kickOffProcess"),
-    getEntries<TypeReviewSkeleton>("review"),
-  ]);
+  const [landingPageData, kickOffProcess, reviews, packages] =
+    await Promise.all([
+      getEntries<TypeLandingPageDataSkeleton>("landingPageData"),
+      getEntries<TypeKickOffProcessSkeleton>("kickOffProcess"),
+      getEntries<TypeReviewSkeleton>("review"),
+      getEntries<TypePackageSkeleton>("package"),
+    ]);
 
   const landingPageContent =
     landingPageData[0] as unknown as TypeLandingPageDataFields;
@@ -65,7 +68,7 @@ export default async function LandingPage() {
         title={landingPageContent.goalTitle}
         goals={landingPageContent.goals}
       />
-      <ImageCards imageCards={imageCards} />
+      <ImageCards imageCards={imageCards} packages={packages} />
       <FAQSection
         title={landingPageContent.faqTitle}
         subtitle={landingPageContent.faqSubtitle}

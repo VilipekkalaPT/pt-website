@@ -6,20 +6,21 @@ interface CardContentProps {
   className?: string;
 }
 
-interface Card {
-  children: React.ReactNode;
-  className?: string;
-}
-
 interface CardProps {
   children?: React.ReactNode;
   className?: string;
   href?: string;
+  onClick?: () => void;
 }
 
-export default function Card({ children, className, href }: CardProps) {
+export default function Card({
+  children,
+  className,
+  href,
+  onClick,
+}: CardProps) {
   const defaultClassName = cn(
-    "flex flex-col justify-between rounded-lg overflow-hidden shadow-lg p-4",
+    "flex flex-col justify-between border border-gray-200 rounded-lg overflow-hidden shadow-lg p-4",
     className
   );
 
@@ -28,7 +29,9 @@ export default function Card({ children, className, href }: CardProps) {
       {children}
     </Link>
   ) : (
-    <div className={defaultClassName}>{children}</div>
+    <div className={defaultClassName} onClick={onClick}>
+      {children}
+    </div>
   );
 }
 
@@ -37,9 +40,9 @@ export const CardHeader = ({ className, children }: CardContentProps) => {
 };
 
 export const CardContent = ({ children, className }: CardContentProps) => {
-  return <div className={cn("flex-1", className)}>{children}</div>;
+  return <div className={className}>{children}</div>;
 };
 
 export const CardFooter = ({ children, className }: CardContentProps) => {
-  return <div className={cn(className)}>{children}</div>;
+  return <div className={className}>{children}</div>;
 };

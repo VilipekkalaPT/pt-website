@@ -34,6 +34,7 @@ export default function Button({
             "py-4 border border-gray-300 rounded hover:bg-gray-100":
               variant === "outlined",
             "border-0 bg-white": variant === "ghost",
+            "cursor-not-allowed opacity-50": props.disabled,
           },
           className
         )

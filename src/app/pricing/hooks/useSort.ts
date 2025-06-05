@@ -1,5 +1,3 @@
-"use client";
-
 import { SORT_TYPE } from "app/utils/variables";
 import { useMemo, useState } from "react";
 import { TypePackageFields } from "app/lib/types/contentful";

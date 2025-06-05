@@ -40,7 +40,7 @@ export default function PackageCard({
   ) as TypeSessionOptionFields[];
 
   return (
-    <Card className="border border-gray-200" href={href}>
+    <Card href={href}>
       <CardHeader className="relative">
         <Chip
           label={capitalizeFirstLetter(mode)}
@@ -55,7 +55,7 @@ export default function PackageCard({
         />
       </CardHeader>
       <CardContent>
-        <p className="text-gray-700 my-2">{name}</p>
+        <p className="text-gray-700 font-semibold my-2">{name}</p>
         <Price
           price={price}
           priceUnit={priceUnit}

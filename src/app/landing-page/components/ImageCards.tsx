@@ -7,12 +7,15 @@ import { getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import FitQuiz from "./FitQuiz";
+import { TypePackageFields } from "app/lib/types/contentful/TypePackage";
 
 interface ImageCardProps {
   imageCards: TypeLandingPageCardFields[];
+  packages: TypePackageFields[];
 }
 
-export default function ImageCards({ imageCards }: ImageCardProps) {
+export default function ImageCards({ imageCards, packages }: ImageCardProps) {
   const [showFitQuiz, setShowFitQuiz] = useState(false);
   const fitQuizRef = useRef<HTMLDivElement | null>(null);
 
@@ -68,7 +71,7 @@ export default function ImageCards({ imageCards }: ImageCardProps) {
           );
         })}
       </div>
-      {/* {showFitQuiz && <FitQuiz ref={fitQuizRef} />} */}
+      {showFitQuiz && <FitQuiz ref={fitQuizRef} packages={packages} />}
     </div>
   );
 }

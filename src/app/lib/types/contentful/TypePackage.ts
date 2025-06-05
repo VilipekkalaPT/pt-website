@@ -17,7 +17,7 @@ export interface TypePackageFields {
   packageAccordions: Entry<TypePackageAccordionSkeleton>[];
   curriculum: Entry<TypeCurriculumSkeleton>;
   landscape?: Asset;
-  tags: ("dietary" | "gym" | "plan")[];
+  tags: ("diet" | "gym" | "plan")[];
 }
 
 export interface TypePackageSkeleton extends EntrySkeletonType {

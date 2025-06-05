@@ -30,10 +30,8 @@ export default function Price({
         <span>{CURRENCY}</span>
         <span>{displayedPrice}</span>
       </p>
-      {variant === "small" && <PriceUnit unit={priceUnit} />}
-      {variant === "large" && (
-        <p className="ml-2 text-sm text-gray-400">{VAT_INCLUDED}</p>
-      )}
+      {variant === "small" && <PriceUnit unit={priceUnit} hasVat={false} />}
+      {variant === "large" && <PriceUnit unit={priceUnit} hasVat={true} />}
     </div>
   );
 }
@@ -41,9 +39,12 @@ export default function Price({
 const PriceLabel = ({ hasMinPrice }: { hasMinPrice: boolean }) =>
   hasMinPrice ? <p className="mr-1 font-bold">{FROM}</p> : null;
 
-const PriceUnit = ({ unit }: { unit: string }) => (
+const PriceUnit = ({ unit, hasVat }: { unit: string; hasVat: boolean }) => (
   <p className="font-bold ml-1">
     <span className="mr-1">/</span>
     <span>{unit}</span>
+    {hasVat && (
+      <span className="text-sm text-gray-400 ml-1">({VAT_INCLUDED})</span>
+    )}
   </p>
 );

@@ -93,7 +93,7 @@ export const calculateSavedAmount = (
 };
 
 const calculateComboPackageSavings = (
-  tags: ("dietary" | "gym" | "plan")[],
+  tags: ("diet" | "gym" | "plan")[],
   slug: string,
   soloPackages: TypePackageFields[],
   comboPrice: number

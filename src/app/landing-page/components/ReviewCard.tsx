@@ -26,7 +26,7 @@ export default function ReviewCard({
           <ReviewerInfo reviewer={review.reviewer} packages={review.package} />
         )}
       </CardHeader>
-      <CardContent className="mt-4">
+      <CardContent className="mt-4 flex-1">
         <p className="text-xl font-bold">{review.title}</p>
         <RichTextRenderer text={review.content} />
         {showChanges && (

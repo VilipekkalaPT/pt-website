@@ -26,19 +26,16 @@ export default function RichTextRenderer({
 
   const options = {
     renderNode: {
-      [BLOCKS.UL_LIST]: (_node: Block | Inline, children: ReactNode) =>
+      [BLOCKS.UL_LIST]: (node: Block | Inline, children: ReactNode) =>
         renderList(children),
-      [BLOCKS.OL_LIST]: (_node: Block | Inline, children: ReactNode) =>
+      [BLOCKS.OL_LIST]: (node: Block | Inline, children: ReactNode) =>
         renderList(children),
       [BLOCKS.LIST_ITEM]: (node: Block | Inline) => {
         const transformedChildren = documentToReactComponents(
           node as Document,
           {
             renderNode: {
-              [BLOCKS.PARAGRAPH]: (
-                _node: Block | Inline,
-                children: ReactNode
-              ) =>
+              [BLOCKS.PARAGRAPH]: (node: Block | Inline, children: ReactNode) =>
                 listIcon ? (
                   <span className="flex items-center gap-2 ml-2">
                     {listIcon && listIcon}
