@@ -14,13 +14,13 @@ import { SEE_FULL_PLAN } from "app/utils/variables";
 import { useRouter } from "next/navigation";
 import { FilteredPackage } from "../hooks/useFilter";
 
-interface RecommendedPackageCardProps {
+interface RecommendationPackageCardProps {
   p: FilteredPackage;
 }
 
-export default function RecommendedPackageCard({
+export default function RecommendationPackageCard({
   p,
-}: RecommendedPackageCardProps) {
+}: RecommendationPackageCardProps) {
   const router = useRouter();
   const { package: pkg, tag } = p;
 
@@ -29,10 +29,10 @@ export default function RecommendedPackageCard({
   ) as TypeSessionOptionFields[];
 
   return (
-    <Card key={pkg.id}>
+    <Card key={pkg.id} className="flex-1">
       <CardHeader className="flex flex-col items-center">
         <Chip label={tag} />
-        <p className="text-lg font-semibold mt-4">{pkg.name}</p>
+        <p className="text-lg font-semibold mt-4 text-center">{pkg.name}</p>
       </CardHeader>
       <CardContent className="flex flex-col items-center mt-4">
         <Price

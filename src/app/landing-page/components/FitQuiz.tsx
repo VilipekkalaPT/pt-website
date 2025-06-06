@@ -8,6 +8,7 @@ import { TypePackageFields } from "app/lib/types/contentful/TypePackage";
 import FitQuizButtons from "./FitQuizButtons";
 import FitQuizContent from "./FitQuizContent";
 import { useFilter } from "../hooks/useFilter";
+import FitQuizResult from "./FitQuizResult";
 
 interface FitQuizProps {
   ref: React.RefObject<HTMLDivElement | null>;
@@ -20,13 +21,17 @@ export default function FitQuiz({ ref, packages }: FitQuizProps) {
 
   const totalSteps = fitQuizData.steps.length;
   const stepData = fitQuizData.steps.find((step) => step.id === activeStep);
-  const { filteredPackages, filters, selectFilter, clearFilters } =
-    useFilter(packages);
+  const {
+    selectedOptions,
+    handleOptionSelect,
+    filteredPackages,
+    clearSelectedOptions,
+  } = useFilter(packages);
 
   const resetQuiz = () => {
     setActiveStep(fitQuizData.steps[0].id);
     setShowResult(false);
-    clearFilters();
+    clearSelectedOptions();
   };
 
   return (
@@ -35,20 +40,21 @@ export default function FitQuiz({ ref, packages }: FitQuizProps) {
       ref={ref}
     >
       <FitQuizProgressBar activeStep={activeStep} totalSteps={totalSteps} />
-      {stepData && (
+      {stepData && !showResult && (
         <FitQuizContent
           stepData={stepData}
-          filters={filters}
-          selectFilter={selectFilter}
+          selectedOptions={selectedOptions}
+          handleOptionSelect={handleOptionSelect}
           filteredPackages={filteredPackages}
           showResult={showResult}
         />
       )}
+      {showResult && <FitQuizResult result={filteredPackages} />}
       <FitQuizButtons
         activeStep={activeStep}
         setActiveStep={setActiveStep}
         totalSteps={totalSteps}
-        filters={filters}
+        selectedOptions={selectedOptions}
         showResult={showResult}
         handleShowResult={() => setShowResult(true)}
         resetQuiz={resetQuiz}

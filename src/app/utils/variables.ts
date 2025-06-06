@@ -9,6 +9,12 @@ export const MOST_VALUABLE = "Most valuable";
 export const MOST_POPULAR = "Most popular";
 export const BEST_MATCH = "Best match";
 export const SEE_FULL_PLAN = "See full plan";
+export const FIT_QUIZ_RESULT_TITLE = "Your slayfit pathway";
+export const FIT_QUIZ_RESULT_DESCRIPTION =
+  "Based on your picks, here are your top 3 SlayFitVili programs to get started:";
+export const FIT_QUIZ_RESULT_TITLE_NO_MATCH = "Didn’t find the perfect match?";
+export const FIT_QUIZ_RESULT_DESCRIPTION_NO_MATCH =
+  "Don’t worry! Here are a few alternative packages you might like:";
 export const RETAKE_QUIZ = "Slay the quiz again";
 export const HELP_BUTTON = "Need help choosing?";
 

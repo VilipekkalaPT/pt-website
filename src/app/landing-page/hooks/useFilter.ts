@@ -1,95 +1,112 @@
 import { TypePackageFields } from "app/lib/types/contentful/TypePackage";
 import { BEST_MATCH, MOST_POPULAR, MOST_VALUABLE } from "app/utils/variables";
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 export type TagFilter = "gym" | "plan" | "diet";
 export type TypeFilter = "solo" | "duo";
-export type PackageFilter = TagFilter | TypeFilter;
+export type PackageFilter = TypeFilter | TagFilter;
 export type FilteredPackage = {
   tag: string;
   package: TypePackageFields;
 };
 
 export const useFilter = (packages: TypePackageFields[]) => {
-  const [filters, setFilters] = useState<PackageFilter[]>([]);
+  const [selectedOptions, setSelectedOptions] = useState<Map<number, string[]>>(
+    new Map()
+  );
 
-  const selectFilter = (filter: PackageFilter) => {
-    setFilters((prevFilters) => {
-      if (prevFilters.includes(filter)) {
-        return prevFilters.filter((f) => f !== filter);
-      } else {
-        return [...prevFilters, filter];
-      }
+  const handleOptionSelect = (stepId: number, option: string) => {
+    setSelectedOptions((prev) => {
+      const currentOptions = prev.get(stepId) || [];
+      const newOptions = currentOptions.includes(option)
+        ? currentOptions.filter((opt) => opt !== option)
+        : [...currentOptions, option];
+      return new Map(prev).set(stepId, newOptions);
     });
   };
 
-  const clearFilters = useCallback(() => {
-    setFilters([]);
-  }, []);
+  const clearSelectedOptions = () => {
+    setSelectedOptions(new Map());
+  };
 
   const filteredPackages = useMemo(() => {
-    const typeFilters = filters.filter(isTypeFilter);
-    const tagFilters = filters.filter(isTagFilter);
+    const typeFilters = selectedOptions.get(1) || [];
+    const tagFilters = selectedOptions.get(2) || [];
 
-    const filteredResults = packages.filter((pkg) => {
+    const filtered = packages.filter((pkg) => {
       const matchesType =
         typeFilters.length === 0 ||
-        typeFilters.includes(pkg.type.toLowerCase() as TypeFilter);
+        typeFilters.includes(pkg.type as TypeFilter);
 
-      const matchesTag =
+      const matchesTags =
         tagFilters.length === 0 ||
-        tagFilters.every((tag) =>
-          pkg.tags.every((t) => t.toLowerCase() === tag.toLowerCase())
-        );
+        (tagFilters.length === pkg.tags.length &&
+          tagFilters.every((tag) => pkg.tags.includes(tag as TagFilter)));
 
-      return matchesType && matchesTag;
+      return matchesType && matchesTags;
     });
 
-    const packagesWithTags = filteredResults.map((pkg) => ({
+    const taggedPackages = filtered.map((pkg) => ({
       package: pkg,
       tag: BEST_MATCH,
     }));
 
-    // Handle special prioritization for certain packages
-    return prioritizeSpecialPackages(packagesWithTags, packages);
-  }, [filters, packages]);
+    return taggedPackages;
+  }, [packages, selectedOptions]);
+
+  const specialPackages = addSpecialPackages(selectedOptions, packages);
 
   return {
-    filteredPackages,
-    filters,
-    selectFilter,
-    clearFilters,
+    selectedOptions,
+    handleOptionSelect,
+    filteredPackages: {
+      filteredPackages: filteredPackages,
+      specialPackages: specialPackages,
+    },
+    clearSelectedOptions,
   };
 };
 
-const isTypeFilter = (filter: PackageFilter): filter is TypeFilter => {
-  return filter === "solo" || filter === "duo";
-};
-
-const isTagFilter = (filter: PackageFilter): filter is TagFilter => {
-  return filter === "gym" || filter === "plan" || filter === "diet";
-};
-
-function prioritizeSpecialPackages(
-  filteredResults: FilteredPackage[],
+const addSpecialPackages = (
+  selectedOptions: Map<number, string[]>,
   allPackages: TypePackageFields[]
-): FilteredPackage[] {
-  if (filteredResults.length === 1) {
-    const result = [...filteredResults];
-    const packages = result.map((p) => p.package);
-    const goldenPackage = allPackages.find((p) => p.slug.includes("golden"));
-    const bronzePackage = allPackages.find((p) => p.slug.includes("bronze"));
+): FilteredPackage[] => {
+  const result: FilteredPackage[] = [];
 
-    if (goldenPackage && !packages.includes(goldenPackage)) {
-      result.unshift({ package: goldenPackage, tag: MOST_VALUABLE });
-    }
+  const specialPackages = {
+    golden: findPackage("golden", allPackages),
+    bronze: findPackage("bronze", allPackages),
+    duoGymPlan: allPackages.find(
+      (p) =>
+        p.type === "duo" && p.tags.includes("gym") && p.tags.includes("plan")
+    ),
+  };
+  const typeFilter = selectedOptions.get(1) || [];
 
-    if (bronzePackage && !packages.includes(bronzePackage)) {
-      result.push({ package: bronzePackage, tag: MOST_POPULAR });
-    }
-
+  if (typeFilter.includes("duo") && specialPackages.duoGymPlan) {
+    result.push({
+      package: specialPackages.duoGymPlan,
+      tag: MOST_VALUABLE,
+    });
     return result;
   }
 
-  return filteredResults;
-}
+  if (specialPackages.golden) {
+    result.push({
+      package: specialPackages.golden,
+      tag: MOST_VALUABLE,
+    });
+  }
+
+  if (specialPackages.bronze) {
+    result.push({
+      package: specialPackages.bronze,
+      tag: MOST_POPULAR,
+    });
+  }
+
+  return result;
+};
+
+const findPackage = (slug: string, allPackages: TypePackageFields[]) =>
+  allPackages.find((p) => p.slug.includes(slug));

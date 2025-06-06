@@ -18,6 +18,12 @@ export interface FitQuizOption {
 export const fitQuizData: FitQuiz = {
   steps: [
     {
+      id: 0,
+      question: "Welcome to the Fit Quiz!",
+      subtitle: "Let's find your perfect fitness match.",
+      options: [],
+    },
+    {
       id: 1,
       question: "What is your fitness goal?",
       subtitle: "Pick what fits your vibe first",
