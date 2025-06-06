@@ -35,15 +35,15 @@ import { TypeReviewFields } from "app/lib/types/contentful";
 export default async function PackageDetails({
   params,
 }: {
-  params: Promise<{ name: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { name } = await params;
+  const { slug } = await params;
   const [packageDetails, curriculum, soloPackages, reviews] = await Promise.all(
     [
-      getEntryWithSlug("package", name),
-      getEntryWithSlug("curriculum", name),
+      getEntryWithSlug("package", slug),
+      getEntryWithSlug("curriculum", slug),
       getEntriesWithTag("package", "solo"),
-      getEntriesWithTag("review", name),
+      getEntriesWithTag("review", slug),
     ]
   );
 

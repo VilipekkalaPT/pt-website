@@ -5,8 +5,6 @@ export interface TypeNavigationFields {
   label: EntryFields.Symbol;
   url: EntryFields.Symbol;
   order: EntryFields.Integer;
-  children?: Entry<TypeNavigationSkeleton>[];
-  isChild: EntryFields.Boolean;
   isButton?: EntryFields.Boolean;
 }
 

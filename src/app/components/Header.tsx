@@ -4,10 +4,7 @@ import Link from "next/link";
 import Button from "app/components/Button";
 import { TypeNavigationFields } from "app/lib/types/contentful";
 import { useRouter, usePathname } from "next/navigation";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import DropdownMenuComponent from "./DropdownMenu";
 import cn from "classnames";
-import { PRICING_COMPARE } from "app/utils/routes";
 import Image from "next/image";
 import { AssetFields } from "contentful";
 import { getAssetUrl } from "app/utils/utils";
@@ -31,9 +28,7 @@ interface HeaderProps {
 export default function Header({ navigations, logo }: HeaderProps) {
   const pathname = usePathname();
 
-  const mainNavigationItems = navigations
-    .filter((nav) => !nav.isChild)
-    .sort((a, b) => a.order - b.order);
+  const navigationItems = navigations.sort((a, b) => a.order - b.order);
 
   const logoUrl = logo ? getAssetUrl(logo) : "/public/logo.png";
 
@@ -45,7 +40,7 @@ export default function Header({ navigations, logo }: HeaderProps) {
         </Link>
       )}
       <div className="flex justify-between items-center">
-        {mainNavigationItems.map((item) => (
+        {navigationItems.map((item) => (
           <NavigationItem key={item.id} item={item} pathName={pathname} />
         ))}
       </div>
@@ -55,12 +50,6 @@ export default function Header({ navigations, logo }: HeaderProps) {
 
 const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
   const router = useRouter();
-  const additionalItems: DropdownItem[] = [
-    {
-      ...PRICING_COMPARE,
-      isActive: pathName === PRICING_COMPARE.href,
-    },
-  ];
 
   if (item.isButton) {
     return (
@@ -69,32 +58,6 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
         label={item.label}
         variant="primary"
         onClick={() => router.push(item.url)}
-      />
-    );
-  }
-
-  if (item.children) {
-    const childItems = item.children.map(
-      (child) => child.fields
-    ) as TypeNavigationFields[];
-
-    return (
-      <DropdownMenuComponent
-        key={item.id}
-        trigger={
-          <Button
-            variant="ghost"
-            label={item.label}
-            iconRight={<ChevronDownIcon className="size-4 -ml-1" />}
-            className={
-              pathName.startsWith(item.url) ? "bg-gray-100" : "bg-white"
-            }
-          />
-        }
-        items={createDropdownItems(childItems, pathName)}
-        additionalItems={additionalItems}
-        triggerClassName="hover:bg-gray-100 rounded-md bg-gray-100"
-        menuClassName="w-[220px] h-[240px] py-4 px-4"
       />
     );
   }
@@ -110,15 +73,4 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
       {item.label}
     </Link>
   );
-};
-
-const createDropdownItems = (
-  children: TypeNavigationFields[],
-  pathName: string
-): DropdownItem[] => {
-  return children.map((child) => ({
-    label: child.label,
-    href: child.url,
-    isActive: pathName === child.url,
-  }));
 };

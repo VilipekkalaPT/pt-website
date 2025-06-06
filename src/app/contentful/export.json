@@ -12,7 +12,7 @@
         "id": "navigation",
         "type": "ContentType",
         "createdAt": "2025-04-15T19:23:12.269Z",
-        "updatedAt": "2025-05-25T14:43:57.494Z",
+        "updatedAt": "2025-06-06T19:00:25.917Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 33,
-        "publishedAt": "2025-05-25T14:43:57.494Z",
+        "publishedVersion": 39,
+        "publishedAt": "2025-06-06T19:00:25.917Z",
         "firstPublishedAt": "2025-04-15T19:23:12.786Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 17,
-        "version": 34,
+        "publishedCounter": 20,
+        "version": 40,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -88,7 +88,7 @@
           "name": "Url",
           "type": "Symbol",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -111,37 +111,6 @@
               }
             }
           ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "children",
-          "name": "Children",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "isChild",
-          "name": "Is Child",
-          "type": "Boolean",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
           "disabled": false,
           "omitted": false
         },
@@ -406,7 +375,7 @@
         "id": "package",
         "type": "ContentType",
         "createdAt": "2025-04-16T20:55:40.950Z",
-        "updatedAt": "2025-06-05T12:45:27.609Z",
+        "updatedAt": "2025-06-05T19:42:01.131Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -414,8 +383,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 115,
-        "publishedAt": "2025-06-05T12:45:27.609Z",
+        "publishedVersion": 117,
+        "publishedAt": "2025-06-05T19:42:01.131Z",
         "firstPublishedAt": "2025-04-16T20:55:41.312Z",
         "createdBy": {
           "sys": {
@@ -431,8 +400,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 58,
-        "version": 116,
+        "publishedCounter": 59,
+        "version": 118,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -470,7 +439,6 @@
             {
               "in": [
                 "solo",
-                "combo",
                 "duo"
               ]
             }
@@ -1461,7 +1429,7 @@
         "id": "curriculum",
         "type": "ContentType",
         "createdAt": "2025-05-04T20:19:09.334Z",
-        "updatedAt": "2025-05-06T10:56:52.203Z",
+        "updatedAt": "2025-06-05T13:04:31.975Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1469,8 +1437,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2025-05-06T10:56:52.203Z",
+        "publishedVersion": 13,
+        "publishedAt": "2025-06-05T13:04:31.975Z",
         "firstPublishedAt": "2025-05-04T20:19:09.758Z",
         "createdBy": {
           "sys": {
@@ -1486,8 +1454,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 6,
-        "version": 12,
+        "publishedCounter": 7,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1533,7 +1501,6 @@
             },
             {
               "in": [
-                "come-train-with-me",
                 "train-together-slay-together",
                 "go-the-distance",
                 "bronze-skin-iron-mind",
@@ -1541,7 +1508,8 @@
                 "duo-training-plan",
                 "golden-body-golden-mind",
                 "move-better-live-better",
-                "silver-evoluation-silver-impact"
+                "silver-evoluation-silver-impact",
+                "come-train-with-vili"
               ]
             }
           ],
@@ -3035,7 +3003,7 @@
         "id": "landingPageCard",
         "type": "ContentType",
         "createdAt": "2025-06-01T19:27:12.435Z",
-        "updatedAt": "2025-06-01T19:28:05.132Z",
+        "updatedAt": "2025-06-06T20:20:48.429Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3043,8 +3011,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-06-01T19:28:05.132Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-06-06T20:20:48.429Z",
         "firstPublishedAt": "2025-06-01T19:27:12.821Z",
         "createdBy": {
           "sys": {
@@ -3060,8 +3028,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 5,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3119,6 +3087,17 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     },
@@ -3453,45 +3432,6 @@
         "visibility": "public"
       },
       "name": "duo"
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "combo",
-        "type": "Tag",
-        "createdAt": "2025-05-31T20:01:43.555Z",
-        "updatedAt": "2025-05-31T20:01:43.555Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "version": 1,
-        "visibility": "public"
-      },
-      "name": "combo"
     },
     {
       "sys": {
@@ -3935,7 +3875,7 @@
             "linkType": "Space"
           }
         },
-        "version": 34,
+        "version": 40,
         "createdAt": "2025-04-15T19:23:12.935Z",
         "createdBy": {
           "sys": {
@@ -3944,7 +3884,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-05-25T14:43:58.189Z",
+        "updatedAt": "2025-06-06T19:00:26.724Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -3986,16 +3926,6 @@
         {
           "fieldId": "order",
           "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "children",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "isChild",
-          "widgetId": "boolean",
           "widgetNamespace": "builtin"
         },
         {
@@ -4111,7 +4041,7 @@
             "linkType": "Space"
           }
         },
-        "version": 116,
+        "version": 118,
         "createdAt": "2025-04-16T20:55:41.413Z",
         "createdBy": {
           "sys": {
@@ -4120,7 +4050,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-05T12:45:28.220Z",
+        "updatedAt": "2025-06-05T19:42:01.966Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -4641,7 +4571,7 @@
             "linkType": "Space"
           }
         },
-        "version": 12,
+        "version": 14,
         "createdAt": "2025-05-04T20:19:09.885Z",
         "createdBy": {
           "sys": {
@@ -4650,7 +4580,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-05-06T10:56:52.860Z",
+        "updatedAt": "2025-06-05T13:04:32.581Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5428,7 +5358,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 10,
         "createdAt": "2025-06-01T19:27:12.941Z",
         "createdBy": {
           "sys": {
@@ -5437,7 +5367,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-01T19:28:05.747Z",
+        "updatedAt": "2025-06-06T20:20:49.045Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5479,6 +5409,11 @@
         {
           "fieldId": "image",
           "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -5625,7 +5560,7 @@
         "id": "4v4IyEf0IFBwlOK2EgzwCt",
         "type": "Entry",
         "createdAt": "2025-04-15T19:30:01.021Z",
-        "updatedAt": "2025-05-26T13:26:26.827Z",
+        "updatedAt": "2025-06-06T18:56:49.239Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5651,7 +5586,7 @@
           }
         },
         "publishedCounter": 8,
-        "version": 25,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5661,7 +5596,7 @@
         },
         "fieldStatus": {
           "*": {
-            "en-US": "published"
+            "en-US": "changed"
           }
         },
         "automationTags": [
@@ -5687,34 +5622,6 @@
         },
         "order": {
           "en-US": 1
-        },
-        "children": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "6ZNWrJOKgJOC3r57N5JfgP"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "7EXVqbIFT6SGZ6zaIEEVqu"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "6o2PuxnzfYvHCkDty34eeH"
-              }
-            }
-          ]
-        },
-        "isChild": {
-          "en-US": false
         },
         "isButton": {
           "en-US": false
@@ -5802,9 +5709,6 @@
         "order": {
           "en-US": 2
         },
-        "isChild": {
-          "en-US": false
-        },
         "isButton": {
           "en-US": false
         }
@@ -5891,9 +5795,6 @@
         "order": {
           "en-US": 3
         },
-        "isChild": {
-          "en-US": false
-        },
         "isButton": {
           "en-US": false
         }
@@ -5979,9 +5880,6 @@
         },
         "order": {
           "en-US": 4
-        },
-        "isChild": {
-          "en-US": false
         },
         "isButton": {
           "en-US": false
@@ -7521,13 +7419,6 @@
             "sys": {
               "type": "Link",
               "linkType": "Tag",
-              "id": "combo"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Tag",
               "id": "come-train-with-vili"
             }
           },
@@ -7553,7 +7444,7 @@
         "id": "2g6sVtL4Ep7MWdWetsbhan",
         "type": "Entry",
         "createdAt": "2025-04-18T15:36:56.249Z",
-        "updatedAt": "2025-06-05T12:53:44.752Z",
+        "updatedAt": "2025-06-05T19:44:39.475Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7561,8 +7452,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 100,
-        "publishedAt": "2025-06-05T12:53:44.752Z",
+        "publishedVersion": 102,
+        "publishedAt": "2025-06-05T19:44:39.475Z",
         "firstPublishedAt": "2025-04-18T15:38:46.785Z",
         "createdBy": {
           "sys": {
@@ -7578,8 +7469,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 30,
-        "version": 101,
+        "publishedCounter": 31,
+        "version": 103,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7688,13 +7579,6 @@
             "sys": {
               "type": "Link",
               "linkType": "Tag",
-              "id": "combo"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Tag",
               "id": "golden-body-golden-mind"
             }
           }
@@ -7713,7 +7597,7 @@
         "id": "7B6UF9lmFsn0v162cWvtKC",
         "type": "Entry",
         "createdAt": "2025-04-18T15:39:04.387Z",
-        "updatedAt": "2025-05-31T20:38:58.880Z",
+        "updatedAt": "2025-06-05T20:12:09.948Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7721,8 +7605,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 60,
-        "publishedAt": "2025-05-31T20:38:58.880Z",
+        "publishedVersion": 64,
+        "publishedAt": "2025-06-05T20:12:09.948Z",
         "firstPublishedAt": "2025-04-18T15:39:32.411Z",
         "createdBy": {
           "sys": {
@@ -7738,8 +7622,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 18,
-        "version": 61,
+        "publishedCounter": 20,
+        "version": 65,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7769,6 +7653,17 @@
         },
         "title": {
           "en-US": "Posture improve after 4 months"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3pEgpfc784FlcaMxx2exPO"
+              }
+            }
+          ]
         },
         "reviewer": {
           "en-US": "M.A"
@@ -8740,7 +8635,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Tag",
-              "id": "combo"
+              "id": "solo"
             }
           }
         ],
@@ -8758,7 +8653,7 @@
         "id": "77L4FMXnwpO4AMr3rTal7u",
         "type": "Entry",
         "createdAt": "2025-04-20T04:34:33.593Z",
-        "updatedAt": "2025-06-05T12:42:55.721Z",
+        "updatedAt": "2025-06-05T19:41:45.671Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8766,8 +8661,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 93,
-        "publishedAt": "2025-06-05T12:42:55.721Z",
+        "publishedVersion": 95,
+        "publishedAt": "2025-06-05T19:41:45.671Z",
         "firstPublishedAt": "2025-04-20T04:35:28.332Z",
         "createdBy": {
           "sys": {
@@ -8783,8 +8678,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 24,
-        "version": 94,
+        "publishedCounter": 25,
+        "version": 96,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8813,7 +8708,7 @@
           "en-US": 4
         },
         "type": {
-          "en-US": "combo"
+          "en-US": "solo"
         },
         "slug": {
           "en-US": "golden-body-golden-mind"
@@ -9975,7 +9870,7 @@
         "id": "6E0ObgK2Cb9dNan1SOpMcx",
         "type": "Entry",
         "createdAt": "2025-04-28T20:31:12.972Z",
-        "updatedAt": "2025-06-05T12:47:43.380Z",
+        "updatedAt": "2025-06-05T13:01:44.649Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9983,8 +9878,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 21,
-        "publishedAt": "2025-05-15T19:43:50.252Z",
+        "publishedVersion": 23,
+        "publishedAt": "2025-06-05T13:01:44.649Z",
         "firstPublishedAt": "2025-04-28T20:31:41.054Z",
         "createdBy": {
           "sys": {
@@ -10000,8 +9895,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 23,
+        "publishedCounter": 6,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -10011,7 +9906,7 @@
         },
         "fieldStatus": {
           "*": {
-            "en-US": "changed"
+            "en-US": "published"
           }
         },
         "automationTags": [
@@ -11404,7 +11299,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Tag",
-              "id": "combo"
+              "id": "solo"
             }
           }
         ],
@@ -11422,7 +11317,7 @@
         "id": "5bRqCJ27ZxHecwROd2iZ59",
         "type": "Entry",
         "createdAt": "2025-05-03T19:32:37.425Z",
-        "updatedAt": "2025-06-05T12:42:43.898Z",
+        "updatedAt": "2025-06-05T19:41:33.832Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11430,8 +11325,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 78,
-        "publishedAt": "2025-06-05T12:42:43.898Z",
+        "publishedVersion": 81,
+        "publishedAt": "2025-06-05T19:41:33.832Z",
         "firstPublishedAt": "2025-05-03T19:34:11.577Z",
         "createdBy": {
           "sys": {
@@ -11447,8 +11342,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 23,
-        "version": 79,
+        "publishedCounter": 24,
+        "version": 82,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11477,7 +11372,7 @@
           "en-US": 7
         },
         "type": {
-          "en-US": "combo"
+          "en-US": "solo"
         },
         "slug": {
           "en-US": "silver-evoluation-silver-impact"
@@ -11744,7 +11639,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Tag",
-              "id": "combo"
+              "id": "solo"
             }
           }
         ],
@@ -11762,7 +11657,7 @@
         "id": "47eUqAtKWxng6AfmQnADar",
         "type": "Entry",
         "createdAt": "2025-05-03T19:34:25.161Z",
-        "updatedAt": "2025-06-01T11:26:36.668Z",
+        "updatedAt": "2025-06-05T19:41:20.844Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11770,8 +11665,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 71,
-        "publishedAt": "2025-06-01T11:26:36.668Z",
+        "publishedVersion": 74,
+        "publishedAt": "2025-06-05T19:41:20.844Z",
         "firstPublishedAt": "2025-05-03T19:36:42.833Z",
         "createdBy": {
           "sys": {
@@ -11787,8 +11682,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 19,
-        "version": 72,
+        "publishedCounter": 20,
+        "version": 75,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11817,7 +11712,7 @@
           "en-US": 8
         },
         "type": {
-          "en-US": "combo"
+          "en-US": "solo"
         },
         "slug": {
           "en-US": "bronze-skin-iron-mind"
@@ -11839,94 +11734,90 @@
         },
         "content": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "12 weeks of accountability for a personalized ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           },
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
                             "value": "Training plan",
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
-                            "value": "10 one-on-one ",
+                            "data": {
+                            },
                             "marks": [
                             ],
-                            "data": {
-                            }
+                            "value": "10 one-on-one ",
+                            "nodeType": "text"
                           },
                           {
-                            "nodeType": "text",
-                            "value": "gym sessions",
+                            "data": {
+                            },
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "data": {
-                            }
+                            "value": "gym sessions",
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
-                            "value": "Special: a FREE overall dietary guide",
+                            "data": {
+                            },
                             "marks": [
                               {
                                 "type": "bold"
@@ -11935,75 +11826,79 @@
                                 "type": "italic"
                               }
                             ],
-                            "data": {
-                            }
+                            "value": "Special: a FREE overall dietary guide",
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "Progressive structure, tailored to your abilities and goals, ensuring sustainable improvement",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
-                            "value": "Ongoing feedback and motivation, focus on building long-term habits and independent training skills",
+                            "data": {
+                            },
                             "marks": [
                             ],
-                            "data": {
-                            }
+                            "value": "Ongoing feedback and motivation, focus on building long-term habits and independent training skills",
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   }
-                ]
+                ],
+                "nodeType": "unordered-list"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         },
         "packageAccordions": {
@@ -12062,7 +11957,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Tag",
-              "id": "combo"
+              "id": "solo"
             }
           }
         ],
@@ -12080,7 +11975,7 @@
         "id": "38btLzFrJ1Bpq3nvyU10b0",
         "type": "Entry",
         "createdAt": "2025-05-03T19:36:58.005Z",
-        "updatedAt": "2025-06-05T12:43:40.439Z",
+        "updatedAt": "2025-06-05T19:41:02.473Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -12088,8 +11983,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 71,
-        "publishedAt": "2025-06-05T12:43:40.439Z",
+        "publishedVersion": 76,
+        "publishedAt": "2025-06-05T19:41:02.473Z",
         "firstPublishedAt": "2025-05-03T19:37:51.973Z",
         "createdBy": {
           "sys": {
@@ -12105,8 +12000,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 21,
-        "version": 72,
+        "publishedCounter": 23,
+        "version": 77,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -12135,7 +12030,7 @@
           "en-US": 9
         },
         "type": {
-          "en-US": "combo"
+          "en-US": "solo"
         },
         "slug": {
           "en-US": "go-the-distance"
@@ -13421,7 +13316,7 @@
         "id": "4dYescxxE6HqcMH3ic2YsC",
         "type": "Entry",
         "createdAt": "2025-05-04T20:29:23.029Z",
-        "updatedAt": "2025-05-04T21:08:42.468Z",
+        "updatedAt": "2025-06-05T13:04:42.104Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -13429,8 +13324,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-05-04T21:08:42.468Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-06-05T13:04:42.104Z",
         "firstPublishedAt": "2025-05-04T20:30:21.066Z",
         "createdBy": {
           "sys": {
@@ -13446,8 +13341,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -13473,10 +13368,10 @@
       },
       "fields": {
         "title": {
-          "en-US": "Curriculum - CTWM"
+          "en-US": "Curriculum - CTWV"
         },
         "slug": {
-          "en-US": "come-train-with-me"
+          "en-US": "come-train-with-vili"
         },
         "curriculumPeriods": {
           "en-US": [
@@ -41647,13 +41542,6 @@
               "linkType": "Tag",
               "id": "bronze-skin-iron-mind"
             }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Tag",
-              "id": "combo"
-            }
           }
         ],
         "concepts": [
@@ -41670,7 +41558,7 @@
         "id": "1QBw1JIpbNxMxFfbRuElRh",
         "type": "Entry",
         "createdAt": "2025-05-24T19:49:27.934Z",
-        "updatedAt": "2025-06-02T14:06:52.518Z",
+        "updatedAt": "2025-06-05T19:45:03.098Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -41678,8 +41566,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 47,
-        "publishedAt": "2025-06-02T14:06:52.518Z",
+        "publishedVersion": 49,
+        "publishedAt": "2025-06-05T19:45:03.098Z",
         "firstPublishedAt": "2025-05-24T20:01:58.492Z",
         "createdBy": {
           "sys": {
@@ -41695,8 +41583,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 9,
-        "version": 48,
+        "publishedCounter": 10,
+        "version": 50,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41869,278 +41757,8 @@
         "order": {
           "en-US": 5
         },
-        "isChild": {
-          "en-US": false
-        },
         "isButton": {
           "en-US": true
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "6ZNWrJOKgJOC3r57N5JfgP",
-        "type": "Entry",
-        "createdAt": "2025-05-25T13:48:59.755Z",
-        "updatedAt": "2025-05-25T19:15:55.845Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 11,
-        "publishedAt": "2025-05-25T19:15:55.845Z",
-        "firstPublishedAt": "2025-05-25T13:50:34.944Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 12,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "navigation"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6ZNWrJOKgJOC3r57N5JfgP"
-      },
-      "fields": {
-        "id": {
-          "en-US": "6"
-        },
-        "label": {
-          "en-US": "Solo packages"
-        },
-        "url": {
-          "en-US": "/pricing/solo-packages"
-        },
-        "order": {
-          "en-US": 6
-        },
-        "isChild": {
-          "en-US": true
-        },
-        "isButton": {
-          "en-US": false
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "7EXVqbIFT6SGZ6zaIEEVqu",
-        "type": "Entry",
-        "createdAt": "2025-05-25T13:50:47.208Z",
-        "updatedAt": "2025-05-25T19:17:01.205Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 8,
-        "publishedAt": "2025-05-25T19:17:01.205Z",
-        "firstPublishedAt": "2025-05-25T13:51:03.690Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 3,
-        "version": 9,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "navigation"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/7EXVqbIFT6SGZ6zaIEEVqu"
-      },
-      "fields": {
-        "id": {
-          "en-US": "7"
-        },
-        "label": {
-          "en-US": "Duo packages"
-        },
-        "url": {
-          "en-US": "/pricing/duo-packages"
-        },
-        "order": {
-          "en-US": 7
-        },
-        "isChild": {
-          "en-US": true
-        },
-        "isButton": {
-          "en-US": false
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "6o2PuxnzfYvHCkDty34eeH",
-        "type": "Entry",
-        "createdAt": "2025-05-25T13:51:12.237Z",
-        "updatedAt": "2025-05-25T19:23:10.735Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 14,
-        "publishedAt": "2025-05-25T19:23:10.735Z",
-        "firstPublishedAt": "2025-05-25T13:51:37.348Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 5,
-        "version": 15,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "navigation"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6o2PuxnzfYvHCkDty34eeH"
-      },
-      "fields": {
-        "id": {
-          "en-US": "8"
-        },
-        "label": {
-          "en-US": "Combo packages"
-        },
-        "url": {
-          "en-US": "/pricing/combo-packages"
-        },
-        "order": {
-          "en-US": 8
-        },
-        "isChild": {
-          "en-US": true
-        },
-        "isButton": {
-          "en-US": false
         }
       }
     },
@@ -42152,13 +41770,6 @@
               "type": "Link",
               "linkType": "Tag",
               "id": "bronze-skin-iron-mind"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Tag",
-              "id": "combo"
             }
           }
         ],
@@ -42176,7 +41787,7 @@
         "id": "7hqQQn8Xw2goqPeIv0zneD",
         "type": "Entry",
         "createdAt": "2025-05-25T17:17:30.218Z",
-        "updatedAt": "2025-05-31T20:38:40.542Z",
+        "updatedAt": "2025-06-05T19:45:33.718Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42184,8 +41795,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 23,
-        "publishedAt": "2025-05-31T20:38:40.542Z",
+        "publishedVersion": 25,
+        "publishedAt": "2025-06-05T19:45:33.718Z",
         "firstPublishedAt": "2025-05-25T17:19:09.795Z",
         "createdBy": {
           "sys": {
@@ -42201,8 +41812,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 6,
-        "version": 24,
+        "publishedCounter": 7,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42304,13 +41915,6 @@
               "linkType": "Tag",
               "id": "bronze-skin-iron-mind"
             }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Tag",
-              "id": "combo"
-            }
           }
         ],
         "concepts": [
@@ -42327,7 +41931,7 @@
         "id": "6zXYZlZhSHceg6kXpHl7Dd",
         "type": "Entry",
         "createdAt": "2025-05-25T17:38:03.518Z",
-        "updatedAt": "2025-05-31T20:38:15.843Z",
+        "updatedAt": "2025-06-05T20:11:01.668Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42335,8 +41939,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 34,
-        "publishedAt": "2025-05-31T20:38:15.843Z",
+        "publishedVersion": 36,
+        "publishedAt": "2025-06-05T19:45:39.029Z",
         "firstPublishedAt": "2025-05-25T17:41:07.114Z",
         "createdBy": {
           "sys": {
@@ -42352,8 +41956,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 35,
+        "publishedCounter": 6,
+        "version": 39,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42363,7 +41967,7 @@
         },
         "fieldStatus": {
           "*": {
-            "en-US": "published"
+            "en-US": "changed"
           }
         },
         "automationTags": [
@@ -42384,8 +41988,19 @@
         "title": {
           "en-US": "Increase Strength and Confidence."
         },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "39FMXtVBb6XUIJuygl624t"
+              }
+            }
+          ]
+        },
         "reviewer": {
-          "en-US": "T.D"
+          "en-US": "anonymous"
         },
         "content": {
           "en-US": {
@@ -42454,13 +42069,6 @@
               "linkType": "Tag",
               "id": "bronze-skin-iron-mind"
             }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Tag",
-              "id": "combo"
-            }
           }
         ],
         "concepts": [
@@ -42477,7 +42085,7 @@
         "id": "ujZXOQYLZDLtW48Cqi2tj",
         "type": "Entry",
         "createdAt": "2025-05-25T17:42:15.570Z",
-        "updatedAt": "2025-05-31T20:38:22.944Z",
+        "updatedAt": "2025-06-05T19:45:27.808Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42485,8 +42093,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 21,
-        "publishedAt": "2025-05-31T20:38:22.944Z",
+        "publishedVersion": 23,
+        "publishedAt": "2025-06-05T19:45:27.808Z",
         "firstPublishedAt": "2025-05-25T17:45:15.860Z",
         "createdBy": {
           "sys": {
@@ -42502,8 +42110,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 22,
+        "publishedCounter": 5,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42613,7 +42221,7 @@
         "id": "51hQCsTcvhP1Sxt3fsqutq",
         "type": "Entry",
         "createdAt": "2025-05-25T18:51:39.425Z",
-        "updatedAt": "2025-06-01T13:28:09.429Z",
+        "updatedAt": "2025-06-06T19:19:15.705Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42621,8 +42229,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 29,
-        "publishedAt": "2025-06-01T13:28:09.429Z",
+        "publishedVersion": 31,
+        "publishedAt": "2025-06-06T19:19:15.705Z",
         "firstPublishedAt": "2025-05-25T18:55:31.071Z",
         "createdBy": {
           "sys": {
@@ -42638,8 +42246,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 9,
-        "version": 30,
+        "publishedCounter": 10,
+        "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42694,6 +42302,34 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "QSvTNn77SwCmA0uojEQSL"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "38btLzFrJ1Bpq3nvyU10b0"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "47eUqAtKWxng6AfmQnADar"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5bRqCJ27ZxHecwROd2iZ59"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "77L4FMXnwpO4AMr3rTal7u"
               }
             }
           ]
@@ -42884,158 +42520,6 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "41hldhUnROCXVaiEHnJ0D3"
-              }
-            }
-          ]
-        },
-        "infoTitle": {
-          "en-US": "Need more info?"
-        },
-        "infoSubtitle": {
-          "en-US": "We’re just a message away"
-        },
-        "infoButtonText": {
-          "en-US": "Contact coach Vili"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "2nYEct7V9QKdOeiZV7dhL",
-        "type": "Entry",
-        "createdAt": "2025-05-25T18:57:56.334Z",
-        "updatedAt": "2025-06-01T13:29:16.279Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 23,
-        "publishedAt": "2025-06-01T13:29:16.279Z",
-        "firstPublishedAt": "2025-05-25T18:59:48.959Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 6,
-        "version": 24,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "packagesPageData"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2nYEct7V9QKdOeiZV7dhL"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Combo Slay packages"
-        },
-        "slug": {
-          "en-US": "combo-packages"
-        },
-        "subtitle": {
-          "en-US": "All-in-one options to level up your workouts and wellness your way"
-        },
-        "packages": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "38btLzFrJ1Bpq3nvyU10b0"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "47eUqAtKWxng6AfmQnADar"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "5bRqCJ27ZxHecwROd2iZ59"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "77L4FMXnwpO4AMr3rTal7u"
-              }
-            }
-          ]
-        },
-        "faqsTitle": {
-          "en-US": "FAQs"
-        },
-        "faqsSubtitle": {
-          "en-US": "All packages are designed with clear purposes and target groups, so  please take some time to learn about them before registering."
-        },
-        "faqs": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "bDzdSgPCsQnxtRroug60l"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "jxQ07HHUZXHJr6sqI1Br2"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "3bzVVistp1o0sqqdPY1dyb"
               }
             }
           ]
@@ -43260,13 +42744,6 @@
             "sys": {
               "type": "Link",
               "linkType": "Tag",
-              "id": "combo"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Tag",
               "id": "golden-body-golden-mind"
             }
           }
@@ -43285,7 +42762,7 @@
         "id": "6TtjzxwJ1A027U7f9N7zVo",
         "type": "Entry",
         "createdAt": "2025-05-29T20:20:20.170Z",
-        "updatedAt": "2025-05-31T20:39:08.245Z",
+        "updatedAt": "2025-06-05T20:11:55.148Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -43293,8 +42770,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 37,
-        "publishedAt": "2025-05-31T20:39:08.245Z",
+        "publishedVersion": 41,
+        "publishedAt": "2025-06-05T20:11:55.148Z",
         "firstPublishedAt": "2025-05-29T20:24:57.588Z",
         "createdBy": {
           "sys": {
@@ -43310,8 +42787,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 38,
+        "publishedCounter": 5,
+        "version": 42,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -43341,6 +42818,17 @@
         },
         "title": {
           "en-US": "My first PT. He introduced me to a healthier lifestyle!"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "39FMXtVBb6XUIJuygl624t"
+              }
+            }
+          ]
         },
         "reviewer": {
           "en-US": "Jenna. D"
@@ -45844,7 +45332,7 @@
         "id": "3njpCIUgZnYYEllEEg4dr",
         "type": "Entry",
         "createdAt": "2025-06-04T13:25:42.574Z",
-        "updatedAt": "2025-06-04T13:37:56.885Z",
+        "updatedAt": "2025-06-05T20:25:06.732Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45852,8 +45340,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 98,
-        "publishedAt": "2025-06-04T13:37:56.885Z",
+        "publishedVersion": 103,
+        "publishedAt": "2025-06-05T20:25:06.732Z",
         "firstPublishedAt": "2025-06-04T13:37:56.885Z",
         "createdBy": {
           "sys": {
@@ -45869,8 +45357,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 99,
+        "publishedCounter": 3,
+        "version": 104,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45900,6 +45388,24 @@
         },
         "title": {
           "en-US": "I never knew I could succeed in dieting - Long lasting dieting skill"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4jTfARhUYl02TQjCljbhvp"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5otqHZFAzoqgDFPIGpBchE"
+              }
+            }
+          ]
         },
         "reviewer": {
           "en-US": "Laura M."
@@ -45991,7 +45497,7 @@
         "package": {
           "en-US": [
             "Eat better live better",
-            "Come train with me"
+            "Come train with Vili"
           ]
         },
         "changes": {

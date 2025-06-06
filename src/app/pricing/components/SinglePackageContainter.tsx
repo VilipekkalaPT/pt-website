@@ -42,7 +42,7 @@ export default function SinglePackageContainer({
   const pricingPackagesRoute = getPricingPackagesRoute(packageDetails.type);
 
   return (
-    <div className="mt-30">
+    <div className="mt-10">
       <Button
         variant="ghost"
         label={buttonTitle}

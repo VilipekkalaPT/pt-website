@@ -17,7 +17,7 @@ export default async function About() {
   const aboutPageContent: TypeAboutPageDataFields = aboutPageData[0];
 
   return (
-    <div className="mt-22">
+    <>
       <Introduction
         name={aboutPageContent.name}
         shortDescription={aboutPageContent.shortDescription}
@@ -42,6 +42,6 @@ export default async function About() {
         images={aboutPageContent.journeyImages}
       />
       <Divider />
-    </div>
+    </>
   );
 }

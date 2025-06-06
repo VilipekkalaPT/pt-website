@@ -14,7 +14,7 @@ export default async function ClientSpotlights() {
   const bannerUrl = `https:${banner?.file?.url ?? ""}`;
 
   return (
-    <div className="mt-30">
+    <>
       <Image
         src={bannerUrl}
         alt={BANNER}
@@ -27,6 +27,6 @@ export default async function ClientSpotlights() {
           <ReviewCard key={review.id} review={review} showChanges />
         ))}
       </div>
-    </div>
+    </>
   );
 }

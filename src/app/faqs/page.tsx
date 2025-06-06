@@ -13,7 +13,7 @@ export default async function FAQs() {
   const { title, description, questions } = faqsPageData[0];
 
   return (
-    <div className="mt-22">
+    <div className="10">
       <HeadingSection title={title} description={description} images={images} />
       <QASection questions={questions} />
       <Divider />

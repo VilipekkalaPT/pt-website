@@ -74,7 +74,7 @@ export const calculateSavedAmount = (
   selectedOption?: TypeSessionOptionFields,
   sessionOptions?: TypeSessionOptionFields[]
 ) => {
-  const { type, tags, price, slug } = packageDetails;
+  const { tags, price, slug } = packageDetails;
 
   if (tags.length === 1 && tags[0] === "gym") {
     const pricePerSession = sessionOptions?.find(
@@ -85,7 +85,11 @@ export const calculateSavedAmount = (
     return originalPrice - (selectedOption?.price ?? 0);
   }
 
-  if (type === "combo") {
+  if (
+    slug.includes("bronze") ||
+    slug.includes("silver") ||
+    slug.includes("gold")
+  ) {
     return calculateComboPackageSavings(tags, slug, soloPackages, price);
   }
 
@@ -99,9 +103,10 @@ const calculateComboPackageSavings = (
   comboPrice: number
 ): number => {
   let originalComboPrice = 0;
+  const test = [...soloPackages];
 
   for (const tag of tags) {
-    const pkg = soloPackages.find((p) => p.tags.includes(tag));
+    const pkg = test.find((p) => p.tags.length === 1 && p.tags.includes(tag));
     if (!pkg) continue;
 
     const packageSessionOptions = pkg.sessionOptions?.map(

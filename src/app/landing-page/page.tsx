@@ -15,11 +15,11 @@ import {
 import { AssetFields } from "contentful";
 import ServiceSection from "./components/ServiceSection";
 import GoalSection from "./components/GoalSection";
-import ImageCards from "./components/ImageCards";
 import FAQSection from "./components/FAQSection";
 import { TypeLandingPageDataSkeleton } from "app/lib/types/contentful/TypeLandingPageData";
 import PainPointsSection from "./components/PainPointsSection";
 import { TypePackageSkeleton } from "app/lib/types/contentful/TypePackage";
+import ImageCardsFitQuizSection from "./components/ImageCardsFitQuizSection";
 
 export default async function LandingPage() {
   const [landingPageData, kickOffProcess, reviews, packages] =
@@ -68,7 +68,7 @@ export default async function LandingPage() {
         title={landingPageContent.goalTitle}
         goals={landingPageContent.goals}
       />
-      <ImageCards imageCards={imageCards} packages={packages} />
+      <ImageCardsFitQuizSection imageCards={imageCards} packages={packages} />
       <FAQSection
         title={landingPageContent.faqTitle}
         subtitle={landingPageContent.faqSubtitle}

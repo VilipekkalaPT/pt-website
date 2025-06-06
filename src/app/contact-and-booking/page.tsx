@@ -9,7 +9,7 @@ export default async function Contact() {
   );
 
   return (
-    <div className="mt-30">
+    <div className="mt-10">
       <ContactForm contactFormData={contactFormData[0]} />
       <Divider />
     </div>
