@@ -29,7 +29,7 @@ export default function FitQuizContent({
   return (
     <div className="w-full mx-auto flex flex-col items-center">
       <div className="text-center">
-        <p className="mt-8 text-2xl font-semibold">{stepData.question}</p>
+        <p className="mt-12 text-2xl font-semibold">{stepData.question}</p>
         <p className="mt-1 mb-6 text-xl text-gray-400">{stepData.subtitle}</p>
       </div>
       <motion.div
@@ -38,13 +38,13 @@ export default function FitQuizContent({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.4 }}
-        className="flex justify-between gap-8"
+        className="w-full flex gap-8"
       >
         {stepData.options.map((option, index) => (
           <Card
             key={option.id}
             className={cn(
-              "flex-1 items-center text-center py-6 px-8 cursor-pointer hover:bg-gray-100",
+              "flex-1 items-center text-center py-6 px-12 cursor-pointer hover:bg-gray-100",
               {
                 "bg-gray-100": selectedOptions
                   .get(stepData.id)

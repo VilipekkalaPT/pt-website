@@ -1,5 +1,6 @@
 export const BACK = "Back";
 export const NEXT = "Next";
+export const START = "Start";
 
 // Landing Page Variables
 export const BANNER = "landingPage_banner";

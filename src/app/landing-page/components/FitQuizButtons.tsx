@@ -4,7 +4,7 @@ import {
   ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 import Button from "app/components/Button";
-import { BACK, NEXT, RETAKE_QUIZ } from "app/utils/variables";
+import { BACK, NEXT, RETAKE_QUIZ, START } from "app/utils/variables";
 
 interface FitQuizButtonsProps {
   activeStep: number;
@@ -25,24 +25,43 @@ export default function FitQuizButtons({
   handleShowResult,
   resetQuiz,
 }: FitQuizButtonsProps) {
+  const showStartButton = activeStep === 0 && !showResult;
   const showBackButton = activeStep > 0 && !showResult;
-  const showNextButton = activeStep < totalSteps - 1 && !showResult;
+  const showNextButton =
+    activeStep > 0 && activeStep < totalSteps - 1 && !showResult;
   const showFinishButton = activeStep === totalSteps - 1 && !showResult;
   const showRetakeQuizButton = activeStep === totalSteps - 1 && showResult;
   const disabledNextButton =
-    activeStep > 0 &&
-    (!selectedOptions.get(activeStep)?.length ||
-      selectedOptions.get(activeStep)?.length === 0);
+    !selectedOptions.get(activeStep)?.length ||
+    selectedOptions.get(activeStep)?.length === 0;
+
+  const visibleButtons = [
+    showStartButton,
+    showBackButton,
+    showNextButton || showFinishButton,
+    showRetakeQuizButton,
+  ].filter(Boolean).length;
 
   return (
-    <div className="mt-8 w-1/5 flex justify-between">
+    <div
+      className={`mt-8 w-full flex ${
+        visibleButtons === 1 ? "justify-center" : "justify-between"
+      } gap-4`}
+    >
+      {showStartButton && (
+        <Button
+          label={START}
+          variant="primary"
+          onClick={() => setActiveStep(activeStep + 1)}
+          className="w-1/3 flex justify-center"
+        />
+      )}
       {showBackButton && (
         <Button
           label={BACK}
           variant="ghost"
           iconLeft={<ArrowLeftIcon className="size-4" />}
           onClick={() => setActiveStep(activeStep - 1)}
-          className="flex-1 flex justify-center"
         />
       )}
       {showNextButton && (
@@ -51,7 +70,6 @@ export default function FitQuizButtons({
           variant="primary"
           iconRight={<ArrowRightIcon className="size-4" />}
           onClick={() => setActiveStep(activeStep + 1)}
-          className="flex-1 flex justify-center"
           disabled={disabledNextButton}
         />
       )}
@@ -59,7 +77,6 @@ export default function FitQuizButtons({
         <Button
           label="Finish"
           variant="primary"
-          className="flex-1 flex justify-center"
           iconRight={<ArrowRightIcon className="size-4" />}
           disabled={disabledNextButton}
           onClick={handleShowResult}

@@ -36,7 +36,7 @@ export default function FitQuiz({ ref, packages }: FitQuizProps) {
 
   return (
     <div
-      className="w-3/4 mx-auto h-screen flex flex-col justify-center items-center"
+      className="w-3/4 mx-auto min-h-screen flex flex-col justify-center items-center"
       ref={ref}
     >
       <FitQuizProgressBar activeStep={activeStep} totalSteps={totalSteps} />

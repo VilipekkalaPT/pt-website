@@ -50,7 +50,7 @@ export const fitQuizData: FitQuiz = {
         {
           id: "gym",
           label: "Gym Training",
-          description: "In-person form correction, strength-building sessions",
+          description: "In-person form & strength coaching",
         },
         {
           id: "plan",
