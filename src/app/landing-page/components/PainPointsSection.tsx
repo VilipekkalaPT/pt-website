@@ -32,7 +32,7 @@ export default function PainPointsSection({
     <div className="mt-20 px-12 flex flex-col items-center">
       <p className="text-2xl font-bold mb-1">{title}</p>
       <p className="text-xl text-gray-400 mb-10">{subtitle}</p>
-      <div className="w-3/4 h-[400px] flex justify-between">
+      <div className="w-3/4 h-[400px] flex gap-4">
         {painPoints.map((point, index) => {
           const image = point.image.fields as AssetFields;
           const imageUrl = getAssetUrl(image);
@@ -40,7 +40,7 @@ export default function PainPointsSection({
           return (
             <div
               key={index}
-              className="group w-[256px] h-[384px] [perspective:1000px]"
+              className="group w-full h-[384px] [perspective:1000px]"
               role="button"
               tabIndex={0}
               aria-label={`Pain point: ${point.overlayText}`}
@@ -50,9 +50,8 @@ export default function PainPointsSection({
                   <Image
                     src={imageUrl}
                     alt="Pain Point Image"
-                    width={256}
-                    height={384}
-                    className="rounded-lg"
+                    fill
+                    className="object-cover rounded-lg"
                   />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center text-center text-white p-4 bg-black/60 bg-opacity-40 rounded-lg">

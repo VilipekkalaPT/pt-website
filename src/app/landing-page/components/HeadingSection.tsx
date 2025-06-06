@@ -41,8 +41,7 @@ export default function HeadingSection({
         src={bannerUrl}
         alt={BANNER}
         fill
-        style={{ objectFit: "cover" }}
-        className="block w-full h-auto "
+        className="block w-full h-auto object-cover"
       />
       <div className="absolute inset-0 bg-black/70 z-10 flex  items-center justify-center">
         {headingSections.map((section, i) => (
