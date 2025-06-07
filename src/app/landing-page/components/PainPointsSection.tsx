@@ -46,7 +46,7 @@ export default function PainPointsSection({
               aria-label={`Pain point: ${point.overlayText}`}
             >
               <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className=" inset-0 [backface-visibility:hidden]">
+                <div className="absolute inset-0 w-full h-full [backface-visibility:hidden]">
                   <Image
                     src={imageUrl}
                     alt="Pain Point Image"
@@ -54,14 +54,14 @@ export default function PainPointsSection({
                     className="object-cover rounded-lg"
                   />
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center text-center text-white p-4 bg-black/60 bg-opacity-40 rounded-lg">
+                <div className="absolute w-full h-full inset-0 flex items-center justify-center text-center text-white p-4 bg-black/60 bg-opacity-40 rounded-lg [backface-visibility:hidden]">
                   <RichTextRenderer
                     text={point.overlayText}
                     paragraphClassName="mb-4 text-lg font-semibold"
                   />
                 </div>
 
-                <div className="absolute inset-0 border border-gray-200 rounded-lg [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col items-center justify-between bg-white p-4">
+                <div className="absolute w-full h-full inset-0 border-1 border-gray-200 rounded-lg [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col items-center justify-between bg-white p-4">
                   {getIcon(index)}
                   <p className="mb-4 text-xl font-semibold flex-2 flex items-center text-center">
                     {point.backText}

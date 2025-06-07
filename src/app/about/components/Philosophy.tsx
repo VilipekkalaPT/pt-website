@@ -19,19 +19,21 @@ export default function Philosophy({
   content,
   images,
 }: PhilosophyProps) {
-  const banner = images.find((image) => image.title === BANNER);
-  const bannerUrl = banner ? getAssetUrl(banner) : "";
+  const image = images.find((image) => image.title === BANNER);
+  const imageUrl = image ? getAssetUrl(image) : "";
 
   return (
     <div className="flex my-15 mx-12 gap-12">
-      <Image
-        src={bannerUrl}
-        alt="Philosophy Banner"
-        width={200}
-        height={200}
-        className="block w-full h-auto2 flex-1"
-      />
-      <div className="mr-15 flex-1">
+      <div className="relative w-full aspect-[3/2]">
+        <Image
+          src={imageUrl}
+          alt="Philosophy Banner"
+          width={image?.file?.details.image?.width}
+          height={image?.file?.details.image?.height}
+        />
+      </div>
+
+      <div className="mr-15">
         <p className="text-2xl font-bold">{title}</p>
         <p className="text-xl text-gray-400 pb-2">{subtitle}</p>
         <RichTextRenderer

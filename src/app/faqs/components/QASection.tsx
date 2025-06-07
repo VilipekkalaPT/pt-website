@@ -28,7 +28,7 @@ export default function QASection({ questions }: QASectionProps) {
   useEffect(() => {
     if (ref.current) {
       const top = ref.current.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ behavior: "smooth", top: top - 100 }); // Minus 100px for header
+      window.scrollTo({ behavior: "smooth", top: top - 20 });
       setSelectedTopicType("");
     }
   }, [selectedTopicType]);
