@@ -9,7 +9,7 @@ export default function KickOffProcess({ process }: KickOffProcessProps) {
   return (
     <div className="mt-40 px-12">
       <p className="text-2xl font-bold">The kick-off process</p>
-      <div className="mt-6 grid grid-cols-3 gap-12 mb-15">
+      <div className="mt-10 grid grid-cols-3 gap-12 mb-15">
         {sortedProcess.map((step) => (
           <ProcessStep key={step.id} step={step} />
         ))}

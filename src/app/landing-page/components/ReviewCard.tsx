@@ -1,4 +1,4 @@
-import Card, { CardContent, CardHeader } from "app/components/Card";
+import Card, { CardContent, CardFooter, CardHeader } from "app/components/Card";
 
 import { TypeReviewFields } from "app/lib/types/contentful";
 import Divider from "app/components/Divider";
@@ -26,9 +26,12 @@ export default function ReviewCard({
           <ReviewerInfo reviewer={review.reviewer} packages={review.package} />
         )}
       </CardHeader>
-      <CardContent className="mt-4 flex-1">
+      <CardContent className="mt-4 flex-1 flex flex-col">
         <p className="text-xl font-bold">{review.title}</p>
-        <RichTextRenderer text={review.content} />
+        <RichTextRenderer
+          text={review.content}
+          paragraphClassName="mt-2 text-gray-700 text-sm"
+        />
         {showChanges && (
           <>
             <Divider />
@@ -44,15 +47,17 @@ export default function ReviewCard({
             })}
           </>
         )}
-        <Divider />
-        {reviewerNamePostion === "bottom" && (
+      </CardContent>
+      {reviewerNamePostion === "bottom" && (
+        <CardFooter>
+          <Divider />
           <ReviewerInfo
             reviewer={review.reviewer}
             packages={review.package}
             className="mt-4"
           />
-        )}
-      </CardContent>
+        </CardFooter>
+      )}
     </Card>
   );
 }

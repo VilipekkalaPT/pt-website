@@ -23,16 +23,13 @@ export default function Philosophy({
   const imageUrl = image ? getAssetUrl(image) : "";
 
   return (
-    <div className="flex my-15 mx-12 gap-12">
-      <div className="relative w-full aspect-[3/2]">
-        <Image
-          src={imageUrl}
-          alt="Philosophy Banner"
-          width={image?.file?.details.image?.width}
-          height={image?.file?.details.image?.height}
-        />
-      </div>
-
+    <div className="my-15 mx-12 grid grid-cols-2 gap-10">
+      <Image
+        src={imageUrl}
+        alt="Philosophy Banner"
+        width={image?.file?.details.image?.width}
+        height={image?.file?.details.image?.height}
+      />
       <div className="mr-15">
         <p className="text-2xl font-bold">{title}</p>
         <p className="text-xl text-gray-400 pb-2">{subtitle}</p>

@@ -1,6 +1,8 @@
+// Common Variables
 export const BACK = "Back";
 export const NEXT = "Next";
 export const START = "Start";
+export const LATEST_REVIEWS = "Latest reviews";
 
 // Landing Page Variables
 export const BANNER = "landingPage_banner";
@@ -24,7 +26,6 @@ export const ALL_SOLO_PACKAGES = "All solo packages";
 export const ALL_DUO_PACKAGES = "All duo packages";
 export const ALL_COMBO_PACKAGES = "All combo packages";
 export const GET_STARTED = "Get started";
-export const LATEST_REVIEWS = "Latest reviews";
 export const SAVED_AMOUNT = "Saved";
 
 // Pricing Page Variables
