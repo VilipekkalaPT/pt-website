@@ -15,25 +15,14 @@ export type {
   TypeFaQsPageDataFields,
 } from "./TypeFaQsPageData";
 export type {
-  TypeFooterColumn,
-  TypeFooterColumnFields,
-} from "./TypeFooterColumn";
-export type {
-  TypeFooterColumnLink,
-  TypeFooterColumnLinkFields,
-} from "./TypeFooterColumnLink";
-export type {
   TypeHowTrainingSessionLooksLike,
   TypeHowTrainingSessionLooksLikeFields,
 } from "./TypeHowTrainingSessionLooksLike";
+export type { TypeImageCard, TypeImageCardFields } from "./TypeImageCard";
 export type {
   TypeKickOffProcess,
   TypeKickOffProcessFields,
 } from "./TypeKickOffProcess";
-export type {
-  TypeLandingPageCard,
-  TypeLandingPageCardFields,
-} from "./TypeLandingPageCard";
 export type {
   TypeLandingPageData,
   TypeLandingPageDataFields,
@@ -60,6 +49,18 @@ export type {
   TypePackagesPageData,
   TypePackagesPageDataFields,
 } from "./TypePackagesPageData";
+export type {
+  TypePricingDifferentServicesComparison,
+  TypePricingDifferentServicesComparisonFields,
+} from "./TypePricingDifferentServicesComparison";
+export type {
+  TypePricingPackageTypeComparision,
+  TypePricingPackageTypeComparisionFields,
+} from "./TypePricingPackageTypeComparision";
+export type {
+  TypePricingPageData,
+  TypePricingPageDataFields,
+} from "./TypePricingPageData";
 export type { TypeReview, TypeReviewFields } from "./TypeReview";
 export type {
   TypeSessionOption,

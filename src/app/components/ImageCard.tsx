@@ -2,12 +2,12 @@
 
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Button from "app/components/Button";
-import { TypeLandingPageCardFieldsWithImage } from "app/lib/types/contentful/TypeLandingPageCard";
+import { TypeImageCardFieldsWithImage } from "app/lib/types/contentful/TypeImageCard";
 import { getAssetUrl } from "app/utils/utils";
 import Image from "next/image";
 
 interface ImageCardProps {
-  imageCard: TypeLandingPageCardFieldsWithImage;
+  imageCard: TypeImageCardFieldsWithImage;
   handleClick?: () => void;
 }
 

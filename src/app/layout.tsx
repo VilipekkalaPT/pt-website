@@ -6,7 +6,6 @@ import { getEntries, getImageByTag } from "./lib/contentfulDataService";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { TypeNavigationSkeleton } from "./lib/types/contentful/TypeNavigation";
-import { TypeFooterColumnSkeleton } from "./lib/types/contentful/TypeFooterColumn";
 import { LOGO } from "./utils/variables";
 
 const geistSans = Geist({
@@ -29,9 +28,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [navigations, footerColumns, image] = await Promise.all([
+  const [navigations, image] = await Promise.all([
     await getEntries<TypeNavigationSkeleton>("navigation"),
-    await getEntries<TypeFooterColumnSkeleton>("footerColumn"),
     await getImageByTag(LOGO),
   ]);
 
@@ -41,7 +39,7 @@ export default async function RootLayout({
         <Header navigations={navigations} logo={image} />
         {children}
         <SpeedInsights />
-        <Footer footerColumns={footerColumns} logo={image} />
+        <Footer logo={image} />
       </body>
     </html>
   );

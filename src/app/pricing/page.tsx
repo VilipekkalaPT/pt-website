@@ -2,12 +2,13 @@
 
 import Divider from "app/components/Divider";
 import ImageCard from "app/components/ImageCard";
-import { TypeLandingPageCardFieldsWithImage } from "app/lib/types/contentful/TypeLandingPageCard";
+import { TypeImageCardFieldsWithImage } from "app/lib/types/contentful/TypeImageCard";
+
 import { ROUTES } from "app/utils/routes";
 import { AssetFields } from "contentful";
 import { useRouter } from "next/navigation";
 
-const imageCards: TypeLandingPageCardFieldsWithImage[] = [
+const imageCards: TypeImageCardFieldsWithImage[] = [
   {
     title: "Solo Slay Packages",
     subtitle: "One-on-one coaching tailored just for you.",
@@ -18,7 +19,7 @@ const imageCards: TypeLandingPageCardFieldsWithImage[] = [
         details: { image: { width: 600, height: 400 } },
       },
     } as AssetFields,
-    slug: "solo-packages",
+    url: "solo-packages",
   },
   {
     title: "Duo Slay Packages",
@@ -30,7 +31,7 @@ const imageCards: TypeLandingPageCardFieldsWithImage[] = [
         details: { image: { width: 600, height: 400 } },
       },
     } as AssetFields,
-    slug: "duo-packages",
+    url: "duo-packages",
   },
 ];
 
@@ -80,7 +81,7 @@ export default function PricingPage() {
             <ImageCard
               key={index}
               imageCard={card}
-              handleClick={() => router.push(`${ROUTES.PRICING}/${card.slug}`)}
+              handleClick={() => router.push(`${ROUTES.PRICING}/${card.url}`)}
             />
           ))}
         </div>

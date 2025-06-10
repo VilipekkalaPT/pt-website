@@ -4,15 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import FitQuiz from "./FitQuiz";
 import ImageCard from "app/components/ImageCard";
 import {
-  TypeLandingPageCardFields,
+  TypeImageCardFields,
   TypePackageFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
-import { TypeLandingPageCardFieldsWithImage } from "app/lib/types/contentful/TypeLandingPageCard";
 import { useRouter } from "next/navigation";
+import { TypeImageCardFieldsWithImage } from "app/lib/types/contentful/TypeImageCard";
 
 interface ImageCardsFitQuizSectionProps {
-  imageCards: TypeLandingPageCardFields[];
+  imageCards: TypeImageCardFields[];
   packages: TypePackageFields[];
 }
 
@@ -30,7 +30,7 @@ export default function ImageCardsFitQuizSection({
       ...card,
       image: image,
     };
-  }) as TypeLandingPageCardFieldsWithImage[];
+  }) as TypeImageCardFieldsWithImage[];
 
   const handleClick = () => {
     if (!showFitQuiz) {
@@ -52,14 +52,13 @@ export default function ImageCardsFitQuizSection({
     <>
       <div className="mt-35 px-12 grid grid-cols-2 gap-10">
         {newImageCards.map((card, index) => (
-          <div key={index}>
-            <ImageCard
-              imageCard={card}
-              handleClick={
-                card.slug ? () => router.push(`/${card.slug}`) : handleClick
-              }
-            />
-          </div>
+          <ImageCard
+            key={index}
+            imageCard={card}
+            handleClick={
+              card.url ? () => router.push(`/${card.url}`) : handleClick
+            }
+          />
         ))}
       </div>
       {showFitQuiz && <FitQuiz ref={fitQuizRef} packages={packages} />}

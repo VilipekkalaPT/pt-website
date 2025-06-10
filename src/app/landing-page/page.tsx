@@ -6,7 +6,7 @@ import { TypeKickOffProcessSkeleton } from "app/lib/types/contentful/TypeKickOff
 import { TypeReviewSkeleton } from "app/lib/types/contentful/TypeReview";
 import HeadingSection from "./components/HeadingSection";
 import {
-  TypeLandingPageCardFields,
+  TypeImageCardFields,
   TypeLandingPageDataFields,
   TypeLandingPageHeadingSectionFields,
   TypeLandingPagePainPointsFields,
@@ -41,7 +41,7 @@ export default async function LandingPage() {
   ) as TypeLandingPageServicesFields[];
   const imageCards = landingPageContent.imageCards.map(
     (card) => card.fields
-  ) as TypeLandingPageCardFields[];
+  ) as TypeImageCardFields[];
   const painPoints = landingPageContent.painPoints.map(
     (point) => point.fields
   ) as TypeLandingPagePainPointsFields[];
