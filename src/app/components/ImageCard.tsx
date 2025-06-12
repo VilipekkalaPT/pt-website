@@ -22,8 +22,9 @@ export default function ImageCard({ imageCard, handleClick }: ImageCardProps) {
         alt={title}
         width={image.file?.details.image?.width}
         height={image.file?.details.image?.height}
+        className="rounded-lg"
       />
-      <div className="absolute top-0 left-0 bg-black/70 w-full h-full flex flex-col items-center justify-center text-white">
+      <div className="absolute top-0 left-0 bg-black/70 w-full h-full rounded-lg flex flex-col items-center justify-center text-white">
         <p className="text-2xl font-semibold mb-1">{title}</p>
         <p className="text-xl mb-6">{subtitle}</p>
         <Button

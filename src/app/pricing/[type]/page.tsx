@@ -10,12 +10,8 @@ import QuestionsAndInfo from "../components/QuestionsAndInfo";
 import Divider from "app/components/Divider";
 
 async function getPageData(type: string) {
-  const [pageData] = await Promise.all([
-    getEntryWithSlug("packagesPageData", type),
-  ]);
-
+  const pageData = await getEntryWithSlug("packagesPageData", type);
   const packagesPageData = pageData as unknown as TypePackagesPageDataFields;
-
   return { packagesPageData };
 }
 
@@ -35,7 +31,6 @@ export default async function PackagesPage({
   params: Promise<{ type: string }>;
 }) {
   const { type } = await params;
-  console.log("slug", type);
   const { packagesPageData } = await getPageData(type);
   const packages = packagesPageData.packages.map(
     (p) => p.fields

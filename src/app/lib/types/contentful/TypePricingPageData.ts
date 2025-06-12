@@ -1,4 +1,4 @@
-import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 import { TypeImageCardSkeleton } from "./TypeImageCard";
 import { TypePricingPackageTypeComparisionSkeleton } from "./TypePricingPackageTypeComparision";
 import { TypePricingDifferentServicesComparisonSkeleton } from "./TypePricingDifferentServicesComparison";
@@ -6,6 +6,7 @@ import { TypePricingDifferentServicesComparisonSkeleton } from "./TypePricingDif
 export interface TypePricingPageDataFields {
   title: EntryFields.Symbol;
   subtitle: EntryFields.Symbol;
+  headingImage: Asset;
   heading1: EntryFields.Symbol;
   heading2: EntryFields.Symbol;
   subheading: EntryFields.Symbol;

@@ -20,7 +20,7 @@ export default function Philosophy({
   images,
 }: PhilosophyProps) {
   const image = images.find((image) => image.title === BANNER);
-  const imageUrl = image ? getAssetUrl(image) : "";
+  const imageUrl = getAssetUrl(image);
 
   return (
     <div className="my-15 mx-12 grid grid-cols-2 gap-10">

@@ -3,6 +3,7 @@ export const BACK = "Back";
 export const NEXT = "Next";
 export const START = "Start";
 export const LATEST_REVIEWS = "Latest reviews";
+export const HERO_SECTION_IMAGE = "Hero image";
 
 // Landing Page Variables
 export const BANNER = "landingPage_banner";
@@ -32,6 +33,18 @@ export const SAVED_AMOUNT = "Saved";
 export const CURRENCY = "€";
 export const FROM = "From";
 export const VAT_INCLUDED = "VAT incl.";
+export const FEATURES = "Features/Benefits";
+export const PLAN = "Training plan";
+export const DIET = "Dietary coaching";
+export const GYM = "Gym training";
+export const COMBO = "Combo";
+export enum PackageTypeComparisonEnum {
+  FEATURES = "features",
+  PLAN = "plan",
+  DIET = "diet",
+  GYM = "gym",
+  COMBO = "combo",
+}
 
 export enum SORT_TYPE {
   PRICE_ASC = "price-asc",

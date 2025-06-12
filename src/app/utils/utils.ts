@@ -45,8 +45,8 @@ export const capitalizeFirstLetter = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 };
 
-export const getAssetUrl = (asset: AssetFields) => {
-  const url = asset.file?.url;
+export const getAssetUrl = (asset?: AssetFields) => {
+  const url = asset?.file?.url;
   if (!url) return "";
   return url.startsWith("//") ? `https:${url}` : url;
 };
