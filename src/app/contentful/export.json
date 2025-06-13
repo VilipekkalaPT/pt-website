@@ -819,7 +819,7 @@
         "id": "aboutPageData",
         "type": "ContentType",
         "createdAt": "2025-04-23T18:56:35.106Z",
-        "updatedAt": "2025-05-19T19:47:12.044Z",
+        "updatedAt": "2025-06-13T18:42:20.237Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -827,8 +827,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 41,
-        "publishedAt": "2025-05-19T19:47:12.044Z",
+        "publishedVersion": 43,
+        "publishedAt": "2025-06-13T18:42:20.237Z",
         "firstPublishedAt": "2025-04-23T18:56:35.529Z",
         "createdBy": {
           "sys": {
@@ -844,8 +844,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 21,
-        "version": 42,
+        "publishedCounter": 22,
+        "version": 44,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -883,6 +883,18 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
         },
         {
           "id": "vision",
@@ -1764,7 +1776,7 @@
         "id": "faQsPageData",
         "type": "ContentType",
         "createdAt": "2025-05-16T20:47:18.528Z",
-        "updatedAt": "2025-05-16T20:47:18.932Z",
+        "updatedAt": "2025-06-13T18:35:34.864Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1772,8 +1784,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2025-05-16T20:47:18.932Z",
+        "publishedVersion": 3,
+        "publishedAt": "2025-06-13T18:35:34.864Z",
         "firstPublishedAt": "2025-05-16T20:47:18.932Z",
         "createdBy": {
           "sys": {
@@ -1789,8 +1801,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1814,6 +1826,18 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
         },
         {
           "id": "description",
@@ -2009,7 +2033,7 @@
         "id": "packagesPageData",
         "type": "ContentType",
         "createdAt": "2025-05-25T18:51:32.715Z",
-        "updatedAt": "2025-05-25T19:53:47.301Z",
+        "updatedAt": "2025-06-13T18:19:55.756Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2017,8 +2041,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 25,
-        "publishedAt": "2025-05-25T19:53:47.301Z",
+        "publishedVersion": 27,
+        "publishedAt": "2025-06-13T18:19:55.756Z",
         "firstPublishedAt": "2025-05-25T18:51:33.027Z",
         "createdBy": {
           "sys": {
@@ -2034,8 +2058,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 13,
-        "version": 26,
+        "publishedCounter": 14,
+        "version": 28,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2081,6 +2105,18 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
         },
         {
           "id": "packages",
@@ -4656,7 +4692,7 @@
             "linkType": "Space"
           }
         },
-        "version": 42,
+        "version": 44,
         "createdAt": "2025-04-23T18:56:35.691Z",
         "createdBy": {
           "sys": {
@@ -4665,7 +4701,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-05-19T19:47:12.646Z",
+        "updatedAt": "2025-06-13T18:42:21.045Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -4697,6 +4733,11 @@
         {
           "fieldId": "shortDescription",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -5129,7 +5170,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 4,
         "createdAt": "2025-05-16T20:47:19.094Z",
         "createdBy": {
           "sys": {
@@ -5138,7 +5179,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-05-16T20:47:19.638Z",
+        "updatedAt": "2025-06-13T18:35:35.594Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5165,6 +5206,11 @@
         {
           "fieldId": "title",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -5246,7 +5292,7 @@
             "linkType": "Space"
           }
         },
-        "version": 26,
+        "version": 28,
         "createdAt": "2025-05-25T18:51:33.259Z",
         "createdBy": {
           "sys": {
@@ -5255,7 +5301,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-05-25T19:53:47.987Z",
+        "updatedAt": "2025-06-13T18:19:56.405Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5292,6 +5338,11 @@
         {
           "fieldId": "subtitle",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -7237,7 +7288,7 @@
         "id": "7gY5HEfKdxEd54ge40eZNZ",
         "type": "Entry",
         "createdAt": "2025-04-20T04:20:05.898Z",
-        "updatedAt": "2025-06-07T18:38:49.534Z",
+        "updatedAt": "2025-06-13T14:02:19.428Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7245,8 +7296,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 120,
-        "publishedAt": "2025-06-07T18:38:49.534Z",
+        "publishedVersion": 127,
+        "publishedAt": "2025-06-13T14:02:19.428Z",
         "firstPublishedAt": "2025-04-20T04:24:14.892Z",
         "createdBy": {
           "sys": {
@@ -7262,8 +7313,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 32,
-        "version": 121,
+        "publishedCounter": 35,
+        "version": 128,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7485,7 +7536,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -7521,7 +7572,7 @@
         "id": "3bXgPI2miQyGVESxJYZ1xR",
         "type": "Entry",
         "createdAt": "2025-04-20T04:26:45.300Z",
-        "updatedAt": "2025-06-07T18:45:05.581Z",
+        "updatedAt": "2025-06-13T14:02:46.310Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7529,8 +7580,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 93,
-        "publishedAt": "2025-06-07T18:45:05.581Z",
+        "publishedVersion": 99,
+        "publishedAt": "2025-06-13T14:02:46.310Z",
         "firstPublishedAt": "2025-04-20T04:28:51.804Z",
         "createdBy": {
           "sys": {
@@ -7546,8 +7597,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 26,
-        "version": 94,
+        "publishedCounter": 29,
+        "version": 100,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7791,7 +7842,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -7827,7 +7878,7 @@
         "id": "3G1a1GNfjk4jAEqJph7aIr",
         "type": "Entry",
         "createdAt": "2025-04-20T04:32:54.178Z",
-        "updatedAt": "2025-06-07T18:41:03.473Z",
+        "updatedAt": "2025-06-13T13:59:47.430Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7835,8 +7886,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 96,
-        "publishedAt": "2025-06-07T18:41:03.473Z",
+        "publishedVersion": 101,
+        "publishedAt": "2025-06-13T13:59:47.430Z",
         "firstPublishedAt": "2025-04-20T04:34:02.191Z",
         "createdBy": {
           "sys": {
@@ -7852,8 +7903,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 28,
-        "version": 97,
+        "publishedCounter": 30,
+        "version": 102,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8108,7 +8159,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "4Luu0TXL4pG7ngkQ064y8K"
             }
           }
         },
@@ -8144,7 +8195,7 @@
         "id": "77L4FMXnwpO4AMr3rTal7u",
         "type": "Entry",
         "createdAt": "2025-04-20T04:34:33.593Z",
-        "updatedAt": "2025-06-07T18:46:22.198Z",
+        "updatedAt": "2025-06-13T14:01:21.741Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8152,8 +8203,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 112,
-        "publishedAt": "2025-06-07T18:46:22.198Z",
+        "publishedVersion": 116,
+        "publishedAt": "2025-06-13T14:01:21.741Z",
         "firstPublishedAt": "2025-04-20T04:35:28.332Z",
         "createdBy": {
           "sys": {
@@ -8169,8 +8220,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 29,
-        "version": 113,
+        "publishedCounter": 31,
+        "version": 117,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8457,7 +8508,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -8488,7 +8539,7 @@
         "id": "5YU8BsOnoGWWroWyWSkUkr",
         "type": "Entry",
         "createdAt": "2025-04-23T18:57:49.277Z",
-        "updatedAt": "2025-06-07T19:26:43.251Z",
+        "updatedAt": "2025-06-13T18:42:34.663Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8496,8 +8547,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 77,
-        "publishedAt": "2025-06-07T19:26:43.251Z",
+        "publishedVersion": 79,
+        "publishedAt": "2025-06-13T18:42:34.663Z",
         "firstPublishedAt": "2025-04-23T18:59:02.190Z",
         "createdBy": {
           "sys": {
@@ -8513,8 +8564,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 17,
-        "version": 78,
+        "publishedCounter": 18,
+        "version": 80,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8545,6 +8596,15 @@
         "shortDescription": {
           "en-US": "Vili Pekkala is an EREPS-certified Personal Trainer EQF level 4 based in Helsinki Finland with 2 years of coaching experience."
         },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5ICS9pWZE6a6TkXiH5ZZEu"
+            }
+          }
+        },
         "vision": {
           "en-US": "At SlayFit Vili, we mix movement, mindset, and a whole lot of magic. This isn’t about punishing your body - it’s about honoring it."
         },
@@ -8556,144 +8616,144 @@
         },
         "philosophyContent": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "You’re not here for a basic workout. You’re here for something deeper.\nYou want to feel strong, not just in your body, but in your mind. You want to move with intention, live with confidence, and fully show up as the most powerful version of you.",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "Building strength from the inside out. Creating space for growth, clarity, and real transformation",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "This is personal training, but elevated.  ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "It’s fierce, fabulous, and grounded in self-awareness.  ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
-                            "value": "It’s fitness that feels good in your soul.",
+                            "data": {
+                            },
                             "marks": [
                             ],
-                            "data": {
-                            }
+                            "value": "It’s fitness that feels good in your soul.",
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   }
-                ]
+                ],
+                "nodeType": "unordered-list"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "We’ll work hard, yes! But we’ll also laugh, vibe, reflect, and celebrate the hell out of your progress. No pressure to be perfect. No toxic hustle. Just you, showing up for yourself in the most powerful way, because when your mindset shifts, your whole life starts to shift with it.",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "Are you ready to step into your power? Let’s slay.",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "Are you ready to step into your power? Let’s slay.",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         },
         "slogans": {
@@ -9681,7 +9741,7 @@
         "id": "3msgezHRURF7JfDsa04js",
         "type": "Entry",
         "createdAt": "2025-05-03T19:12:27.222Z",
-        "updatedAt": "2025-06-07T18:47:48.940Z",
+        "updatedAt": "2025-06-13T14:00:39.173Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9689,8 +9749,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 60,
-        "publishedAt": "2025-06-07T18:47:48.940Z",
+        "publishedVersion": 65,
+        "publishedAt": "2025-06-13T14:00:39.173Z",
         "firstPublishedAt": "2025-05-03T19:15:10.858Z",
         "createdBy": {
           "sys": {
@@ -9706,8 +9766,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 19,
-        "version": 61,
+        "publishedCounter": 21,
+        "version": 66,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9988,7 +10048,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "4Luu0TXL4pG7ngkQ064y8K"
             }
           }
         },
@@ -10522,7 +10582,7 @@
         "id": "QSvTNn77SwCmA0uojEQSL",
         "type": "Entry",
         "createdAt": "2025-05-03T19:30:15.736Z",
-        "updatedAt": "2025-06-07T18:41:33.623Z",
+        "updatedAt": "2025-06-13T14:02:36.306Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -10530,8 +10590,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 66,
-        "publishedAt": "2025-06-07T18:41:33.623Z",
+        "publishedVersion": 72,
+        "publishedAt": "2025-06-13T14:02:36.306Z",
         "firstPublishedAt": "2025-05-03T19:32:25.216Z",
         "createdBy": {
           "sys": {
@@ -10547,8 +10607,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 21,
-        "version": 67,
+        "publishedCounter": 24,
+        "version": 73,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -10781,7 +10841,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -10817,7 +10877,7 @@
         "id": "5bRqCJ27ZxHecwROd2iZ59",
         "type": "Entry",
         "createdAt": "2025-05-03T19:32:37.425Z",
-        "updatedAt": "2025-06-07T18:45:53.704Z",
+        "updatedAt": "2025-06-13T14:01:10.344Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -10825,8 +10885,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 92,
-        "publishedAt": "2025-06-07T18:45:53.704Z",
+        "publishedVersion": 97,
+        "publishedAt": "2025-06-13T14:01:10.344Z",
         "firstPublishedAt": "2025-05-03T19:34:11.577Z",
         "createdBy": {
           "sys": {
@@ -10842,8 +10902,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 28,
-        "version": 93,
+        "publishedCounter": 30,
+        "version": 98,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11122,7 +11182,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -11160,7 +11220,7 @@
         "id": "47eUqAtKWxng6AfmQnADar",
         "type": "Entry",
         "createdAt": "2025-05-03T19:34:25.161Z",
-        "updatedAt": "2025-06-07T19:43:35.626Z",
+        "updatedAt": "2025-06-13T13:56:10.734Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11168,8 +11228,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 95,
-        "publishedAt": "2025-06-07T19:43:35.626Z",
+        "publishedVersion": 98,
+        "publishedAt": "2025-06-13T13:56:10.734Z",
         "firstPublishedAt": "2025-05-03T19:36:42.833Z",
         "createdBy": {
           "sys": {
@@ -11185,8 +11245,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 24,
-        "version": 96,
+        "publishedCounter": 25,
+        "version": 99,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11240,168 +11300,168 @@
         },
         "content": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "12 weeks of accountability for a personalized ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           },
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
                             "value": "Training plan",
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
-                            "value": "10 one-on-one ",
+                            "data": {
+                            },
                             "marks": [
                             ],
-                            "data": {
-                            }
+                            "value": "10 one-on-one ",
+                            "nodeType": "text"
                           },
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
                             "value": "gym sessions",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "data": {
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "nodeType": "list-item",
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "nodeType": "paragraph",
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "nodeType": "text",
                             "value": "Special: a FREE overall dietary guide",
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
+                            "data": {
+                            },
+                            "marks": [
+                            ],
                             "value": "Progressive structure, tailored to your abilities and goals, ensuring sustainable improvement",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   },
                   {
-                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
-                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "nodeType": "text",
-                            "value": "Ongoing feedback and motivation, focus on building long-term habits and independent training skills",
+                            "data": {
+                            },
                             "marks": [
                             ],
-                            "data": {
-                            }
+                            "value": "Ongoing feedback and motivation, focus on building long-term habits and independent training skills",
+                            "nodeType": "text"
                           }
-                        ]
+                        ],
+                        "nodeType": "paragraph"
                       }
-                    ]
+                    ],
+                    "nodeType": "list-item"
                   }
-                ]
+                ],
+                "nodeType": "unordered-list"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         },
         "packageAccordions": {
@@ -11441,7 +11501,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -11478,7 +11538,7 @@
         "id": "38btLzFrJ1Bpq3nvyU10b0",
         "type": "Entry",
         "createdAt": "2025-05-03T19:36:58.005Z",
-        "updatedAt": "2025-06-07T18:46:35.534Z",
+        "updatedAt": "2025-06-13T14:02:01.039Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11486,8 +11546,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 87,
-        "publishedAt": "2025-06-07T18:46:35.534Z",
+        "publishedVersion": 94,
+        "publishedAt": "2025-06-13T14:02:01.039Z",
         "firstPublishedAt": "2025-05-03T19:37:51.973Z",
         "createdBy": {
           "sys": {
@@ -11503,8 +11563,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 25,
-        "version": 88,
+        "publishedCounter": 28,
+        "version": 95,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11792,7 +11852,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -38262,7 +38322,7 @@
         "id": "4oysQmBjnGmMWzpzrlDfzv",
         "type": "Entry",
         "createdAt": "2025-05-16T20:47:30.266Z",
-        "updatedAt": "2025-06-07T19:25:15.474Z",
+        "updatedAt": "2025-06-13T18:35:47.227Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38270,8 +38330,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2025-06-07T19:25:15.474Z",
+        "publishedVersion": 13,
+        "publishedAt": "2025-06-13T18:35:47.227Z",
         "firstPublishedAt": "2025-05-16T20:48:21.401Z",
         "createdBy": {
           "sys": {
@@ -38287,8 +38347,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 12,
+        "publishedCounter": 5,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38316,43 +38376,52 @@
         "title": {
           "en-US": "Frequently asked questions"
         },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4Luu0TXL4pG7ngkQ064y8K"
+            }
+          }
+        },
         "description": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "Vili is here to cut through your confusion from a lot of noise out there - ”quick fixes”, “contradicting tips”, and “flashy promises” by giving you real, science-based answers that support your progress.",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "Vili is here to cut through your confusion from a lot of noise out there - ”quick fixes”, “contradicting tips”, and “flashy promises” by giving you real, science-based answers that support your progress.",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "\nAll of this is designed to help you take charge of your health with clarity, not guesswork. ",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "\nAll of this is designed to help you take charge of your health with clarity, not guesswork. ",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         },
         "questions": {
@@ -38575,7 +38644,7 @@
         "id": "3IINHggtiHEy4D6Gs6W3j2",
         "type": "Entry",
         "createdAt": "2025-05-18T16:18:41.356Z",
-        "updatedAt": "2025-06-08T07:45:04.663Z",
+        "updatedAt": "2025-06-13T14:09:55.759Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38583,8 +38652,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 39,
-        "publishedAt": "2025-06-07T18:48:34.212Z",
+        "publishedVersion": 46,
+        "publishedAt": "2025-06-13T14:09:55.759Z",
         "firstPublishedAt": "2025-05-18T16:21:19.633Z",
         "createdBy": {
           "sys": {
@@ -38600,8 +38669,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 12,
-        "version": 41,
+        "publishedCounter": 13,
+        "version": 47,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38611,7 +38680,7 @@
         },
         "fieldStatus": {
           "*": {
-            "en-US": "changed"
+            "en-US": "published"
           }
         },
         "automationTags": [
@@ -38652,17 +38721,6 @@
         },
         "priceUnit": {
           "en-US": "package"
-        },
-        "sessionOptions": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "1njbVCQqZGdEN8Zl8qJCKA"
-              }
-            }
-          ]
         },
         "content": {
           "en-US": {
@@ -38842,7 +38900,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "4Luu0TXL4pG7ngkQ064y8K"
             }
           }
         },
@@ -41743,7 +41801,7 @@
         "id": "51hQCsTcvhP1Sxt3fsqutq",
         "type": "Entry",
         "createdAt": "2025-05-25T18:51:39.425Z",
-        "updatedAt": "2025-06-06T19:19:15.705Z",
+        "updatedAt": "2025-06-13T18:32:15.727Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -41751,8 +41809,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 31,
-        "publishedAt": "2025-06-06T19:19:15.705Z",
+        "publishedVersion": 35,
+        "publishedAt": "2025-06-13T18:32:15.727Z",
         "firstPublishedAt": "2025-05-25T18:55:31.071Z",
         "createdBy": {
           "sys": {
@@ -41768,8 +41826,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 10,
-        "version": 32,
+        "publishedCounter": 12,
+        "version": 36,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41802,6 +41860,15 @@
         },
         "subtitle": {
           "en-US": "For fierce individuals ready to take charge of their fitness journey"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "74cDhoKxbxzmV1z9T7gw1m"
+            }
+          }
         },
         "packages": {
           "en-US": [
@@ -41923,7 +41990,7 @@
         "id": "2IxLWlO95vsGHcGtN0ShWC",
         "type": "Entry",
         "createdAt": "2025-05-25T18:55:52.172Z",
-        "updatedAt": "2025-06-01T13:28:41.248Z",
+        "updatedAt": "2025-06-13T18:28:25.794Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -41931,8 +41998,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 24,
-        "publishedAt": "2025-06-01T13:28:41.248Z",
+        "publishedVersion": 26,
+        "publishedAt": "2025-06-13T18:28:25.794Z",
         "firstPublishedAt": "2025-05-25T18:57:52.469Z",
         "createdBy": {
           "sys": {
@@ -41948,8 +42015,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 6,
-        "version": 25,
+        "publishedCounter": 7,
+        "version": 27,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41982,6 +42049,15 @@
         },
         "subtitle": {
           "en-US": "Train with your bestie or partner Be stronger together, slay harder"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "74cDhoKxbxzmV1z9T7gw1m"
+            }
+          }
         },
         "packages": {
           "en-US": [
@@ -43934,7 +44010,7 @@
         "id": "3qq56D92N9NAAkIhYJNQVU",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:58.149Z",
-        "updatedAt": "2025-06-12T19:17:48.965Z",
+        "updatedAt": "2025-06-13T18:27:08.159Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -43942,8 +44018,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 33,
-        "publishedAt": "2025-06-12T19:17:48.965Z",
+        "publishedVersion": 36,
+        "publishedAt": "2025-06-13T18:27:08.159Z",
         "firstPublishedAt": "2025-06-01T19:41:33.034Z",
         "createdBy": {
           "sys": {
@@ -43959,8 +44035,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 7,
-        "version": 34,
+        "publishedCounter": 8,
+        "version": 37,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -43990,7 +44066,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "13v1cezWlxglu7yR8rcakW"
+              "id": "71g8OWYI9skPRPXNNnZJKe"
             }
           }
         },
@@ -45997,7 +46073,7 @@
         "id": "3go8qDSqDHdL30klhkPJqh",
         "type": "Entry",
         "createdAt": "2025-06-10T18:26:03.991Z",
-        "updatedAt": "2025-06-10T20:25:12.020Z",
+        "updatedAt": "2025-06-13T18:26:23.899Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46005,8 +46081,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2025-06-10T20:25:12.020Z",
+        "publishedVersion": 13,
+        "publishedAt": "2025-06-13T18:26:23.899Z",
         "firstPublishedAt": "2025-06-10T18:26:53.763Z",
         "createdBy": {
           "sys": {
@@ -46022,8 +46098,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 11,
+        "publishedCounter": 4,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46059,7 +46135,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "13v1cezWlxglu7yR8rcakW"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -46273,7 +46349,7 @@
         "id": "2VMSYaZEA1hWiPh823ji4S",
         "type": "Entry",
         "createdAt": "2025-06-10T18:28:50.760Z",
-        "updatedAt": "2025-06-10T18:30:02.221Z",
+        "updatedAt": "2025-06-13T13:53:46.235Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46281,8 +46357,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-10T18:30:02.221Z",
+        "publishedVersion": 10,
+        "publishedAt": "2025-06-13T13:53:46.235Z",
         "firstPublishedAt": "2025-06-10T18:29:18.979Z",
         "createdBy": {
           "sys": {
@@ -46298,8 +46374,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46335,7 +46411,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "1V0dMsrKMqXOwNUrHmcj8s"
+              "id": "2nSybbk0Cw0KUaeeIjkcca"
             }
           }
         },
@@ -46365,7 +46441,7 @@
         "id": "4Iwlrxo583OUmv0prV3od6",
         "type": "Entry",
         "createdAt": "2025-06-10T18:29:22.982Z",
-        "updatedAt": "2025-06-10T18:29:51.452Z",
+        "updatedAt": "2025-06-13T13:52:59.401Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46373,8 +46449,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-06-10T18:29:51.452Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-06-13T13:52:59.401Z",
         "firstPublishedAt": "2025-06-10T18:29:51.452Z",
         "createdBy": {
           "sys": {
@@ -46390,8 +46466,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46427,7 +46503,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "13v1cezWlxglu7yR8rcakW"
+              "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
         },
@@ -48278,7 +48354,7 @@
         "id": "6wCYuTfgf5JHYGWCCcv7V4",
         "type": "Entry",
         "createdAt": "2025-06-10T20:02:39.810Z",
-        "updatedAt": "2025-06-13T13:04:34.701Z",
+        "updatedAt": "2025-06-13T18:33:46.720Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -48286,8 +48362,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 38,
-        "publishedAt": "2025-06-13T13:04:34.701Z",
+        "publishedVersion": 40,
+        "publishedAt": "2025-06-13T18:33:46.720Z",
         "firstPublishedAt": "2025-06-10T20:07:34.217Z",
         "createdBy": {
           "sys": {
@@ -48303,8 +48379,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 8,
-        "version": 39,
+        "publishedCounter": 9,
+        "version": 41,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -48340,7 +48416,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "4Luu0TXL4pG7ngkQ064y8K"
+              "id": "74cDhoKxbxzmV1z9T7gw1m"
             }
           }
         },
@@ -49027,71 +49103,6 @@
             "fileName": "Black.png",
             "contentType": "image/png"
           }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "2pMihXJFArU3DRC7ie6gTZ",
-        "type": "Asset",
-        "createdAt": "2025-05-30T11:29:34.987Z",
-        "updatedAt": "2025-06-01T19:06:17.816Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 4,
-        "publishedAt": "2025-05-30T11:32:55.965Z",
-        "firstPublishedAt": "2025-05-30T11:32:55.965Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "changed"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/2pMihXJFArU3DRC7ie6gTZ"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Banner"
         }
       }
     },
@@ -49900,85 +49911,6 @@
             "id": "5yib965szeod"
           }
         },
-        "id": "13v1cezWlxglu7yR8rcakW",
-        "type": "Asset",
-        "createdAt": "2025-06-01T18:55:18.963Z",
-        "updatedAt": "2025-06-02T18:35:43.803Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 2,
-        "publishedAt": "2025-06-02T18:35:43.803Z",
-        "firstPublishedAt": "2025-06-02T18:35:43.803Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 3,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/13v1cezWlxglu7yR8rcakW"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Viili Pekkala 10"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/5yib965szeod/13v1cezWlxglu7yR8rcakW/f6158b4d591b0dd697050cd7820fdf63/Viili_Pekkala_10.jpg",
-            "details": {
-              "size": 10253712,
-              "image": {
-                "width": 6280,
-                "height": 4187
-              }
-            },
-            "fileName": "Viili Pekkala 10.jpg",
-            "contentType": "image/jpeg"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
         "id": "7csFDhSy8BmPoLGEviEsMb",
         "type": "Asset",
         "createdAt": "2025-06-01T18:55:18.965Z",
@@ -50275,6 +50207,164 @@
               }
             },
             "fileName": "Viili_Pekkala_3_1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "5ICS9pWZE6a6TkXiH5ZZEu",
+        "type": "Asset",
+        "createdAt": "2025-06-13T18:14:31.598Z",
+        "updatedAt": "2025-06-13T18:16:59.315Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-13T18:16:59.315Z",
+        "firstPublishedAt": "2025-06-13T18:16:59.315Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/5ICS9pWZE6a6TkXiH5ZZEu"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Vili_Pekkala_6_1"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/5ICS9pWZE6a6TkXiH5ZZEu/c7ba788b16d0faed19603b27f0e2283d/Viili_Pekkala_6_1.jpg",
+            "details": {
+              "size": 2224619,
+              "image": {
+                "width": 4664,
+                "height": 2684
+              }
+            },
+            "fileName": "Viili_Pekkala_6_1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "74cDhoKxbxzmV1z9T7gw1m",
+        "type": "Asset",
+        "createdAt": "2025-06-13T18:25:17.986Z",
+        "updatedAt": "2025-06-13T18:25:48.497Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-13T18:25:48.497Z",
+        "firstPublishedAt": "2025-06-13T18:25:48.497Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/74cDhoKxbxzmV1z9T7gw1m"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Vili_Pekkala_2_1"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/74cDhoKxbxzmV1z9T7gw1m/47dbad344fc916619506e40889b4975a/Viili_Pekkala_2_1.jpg",
+            "details": {
+              "size": 2339219,
+              "image": {
+                "width": 7000,
+                "height": 2514
+              }
+            },
+            "fileName": "Viili_Pekkala_2_1.jpg",
             "contentType": "image/jpeg"
           }
         }

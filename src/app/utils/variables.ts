@@ -4,9 +4,9 @@ export const NEXT = "Next";
 export const START = "Start";
 export const LATEST_REVIEWS = "Latest reviews";
 export const HERO_SECTION_IMAGE = "Hero image";
+export const HEADING_IMAGE = "Heading image";
 
 // Landing Page Variables
-export const BANNER = "landingPage_banner";
 export const LOGO = "logo";
 export const STEP = "Step";
 export const MOST_VALUABLE = "Most valuable";
@@ -28,6 +28,7 @@ export const ALL_DUO_PACKAGES = "All duo packages";
 export const ALL_COMBO_PACKAGES = "All combo packages";
 export const GET_STARTED = "Get started";
 export const SAVED_AMOUNT = "Saved";
+export const PACKAGE_IMAGE = "Package image";
 
 // Pricing Page Variables
 export const CURRENCY = "€";

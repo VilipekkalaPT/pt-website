@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { TypeFaqSkeleton } from "app/lib/types/contentful/TypeFaq";
+import { TypeFaqFields } from "app/lib/types/contentful/TypeFaq";
 import { mapTopicQuestions } from "app/utils/utils";
 import cn from "classnames";
 import TopicList from "./TopicList";
@@ -10,12 +10,11 @@ import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import IconButton from "app/components/IconButton";
 
 interface QASectionProps {
-  questions: TypeFaqSkeleton[];
+  questions: TypeFaqFields[];
 }
 
 export default function QASection({ questions }: QASectionProps) {
-  const questionData = questions.map((q) => q.fields);
-  const topicQuestions = mapTopicQuestions(questionData);
+  const topicQuestions = mapTopicQuestions(questions);
   const ref = useRef<HTMLDivElement | null>(null);
 
   const [selectedTopicType, setSelectedTopicType] = useState<string>("");

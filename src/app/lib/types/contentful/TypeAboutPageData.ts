@@ -3,6 +3,7 @@ import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 export interface TypeAboutPageDataFields {
   name: EntryFields.Symbol;
   shortDescription: EntryFields.Symbol;
+  image: Asset;
   vision: EntryFields.Symbol;
   philosophyTitle: EntryFields.Symbol;
   philosophySubtitle: EntryFields.Symbol;

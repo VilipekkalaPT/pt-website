@@ -1,22 +1,22 @@
 import Image from "next/image";
 import { Document } from "@contentful/rich-text-types";
 import RichTextRenderer from "app/components/RichTextRenderer";
-import { BANNER } from "app/utils/variables";
 import { AssetFields } from "contentful";
+import { getAssetUrl } from "app/utils/utils";
+import { HEADING_IMAGE } from "app/utils/variables";
 
 interface HeadingSectionProps {
   title: string;
   description: Document;
-  images: AssetFields[];
+  image: AssetFields;
 }
 
 export default function HeadingSection({
   title,
   description,
-  images,
+  image,
 }: HeadingSectionProps) {
-  const banner = images.find((image) => image.title === BANNER);
-  const bannerUrl = `https:${banner?.file?.url ?? ""}`;
+  const imageUrl = getAssetUrl(image);
 
   return (
     <div className="px-12 pt-16 grid grid-cols-2 gap-16">
@@ -28,10 +28,10 @@ export default function HeadingSection({
         />
       </div>
       <Image
-        src={bannerUrl}
-        alt={BANNER}
-        width={banner?.file?.details.image?.width}
-        height={banner?.file?.details.image?.height}
+        src={imageUrl}
+        alt={image.title || HEADING_IMAGE}
+        width={image.file?.details.image?.width}
+        height={image.file?.details.image?.height}
         className="block w-full h-auto flex-2"
       />
     </div>

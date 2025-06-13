@@ -1,6 +1,5 @@
 import Image from "next/image";
 import RichTextRenderer from "app/components/RichTextRenderer";
-import { BANNER } from "app/utils/variables";
 import { AssetFields } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 import { StarIcon } from "@heroicons/react/24/solid";
@@ -10,16 +9,15 @@ interface PhilosophyProps {
   title: string;
   subtitle: string;
   content: Document;
-  images: AssetFields[];
+  image: AssetFields;
 }
 
 export default function Philosophy({
   title,
   subtitle,
   content,
-  images,
+  image,
 }: PhilosophyProps) {
-  const image = images.find((image) => image.title === BANNER);
   const imageUrl = getAssetUrl(image);
 
   return (
@@ -27,8 +25,8 @@ export default function Philosophy({
       <Image
         src={imageUrl}
         alt="Philosophy Banner"
-        width={image?.file?.details.image?.width}
-        height={image?.file?.details.image?.height}
+        width={image.file?.details.image?.width}
+        height={image.file?.details.image?.height}
       />
       <div className="mr-15">
         <p className="text-2xl font-bold">{title}</p>

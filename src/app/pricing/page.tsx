@@ -19,51 +19,52 @@ export default async function PricingPage() {
   const pricingPageData = await getEntries<TypePricingPageDataSkeleton>(
     "pricingPageData"
   );
-  const pricingPage: TypePricingPageDataFields = pricingPageData[0];
-  const packageImageCards = pricingPage.packageImageCards.map(
+  const pricingPageContent: TypePricingPageDataFields = pricingPageData[0];
+  const packageImageCards = pricingPageContent.packageImageCards.map(
     (el) => el.fields
   ) as TypeImageCardFields[];
-  const packageTypeComparisonRows = pricingPage.packageTypeComparisonRows.map(
-    (el) => el.fields
-  ) as TypePricingPackageTypeComparisionFields[];
+  const packageTypeComparisonRows =
+    pricingPageContent.packageTypeComparisonRows.map(
+      (el) => el.fields
+    ) as TypePricingPackageTypeComparisionFields[];
   const differentServicesComparisonRows =
-    pricingPage.differentServicesComparisonRows.map(
+    pricingPageContent.differentServicesComparisonRows.map(
       (el) => el.fields
     ) as TypePricingDifferentServicesComparisonFields[];
-  const infoSectionImageCards = pricingPage.infoImageCards.map(
+  const infoSectionImageCards = pricingPageContent.infoImageCards.map(
     (el) => el.fields
   ) as TypeImageCardFields[];
 
   return (
     <>
       <PricingPageHeading
-        title={pricingPage.title}
-        subtitle={pricingPage.subtitle}
-        image={pricingPage.headingImage}
-        heading1={pricingPage.heading1}
-        heading2={pricingPage.heading2}
-        subheading={pricingPage.subheading}
-        content={pricingPage.headingContent}
+        title={pricingPageContent.title}
+        subtitle={pricingPageContent.subtitle}
+        image={pricingPageContent.headingImage}
+        heading1={pricingPageContent.heading1}
+        heading2={pricingPageContent.heading2}
+        subheading={pricingPageContent.subheading}
+        content={pricingPageContent.headingContent}
       />
       <InfoSection
-        title={pricingPage.infoSectionTitle}
-        subtitle={pricingPage.infoSectionSubtitle}
+        title={pricingPageContent.infoSectionTitle}
+        subtitle={pricingPageContent.infoSectionSubtitle}
         imageCards={packageImageCards}
         className="mt-35 px-12"
       />
       <PackageTypeComparison
-        title={pricingPage.packageTypeComparisonTitle}
+        title={pricingPageContent.packageTypeComparisonTitle}
         rows={packageTypeComparisonRows}
       />
-      <OfferSection offers={pricingPage.offerText} />
+      <OfferSection offers={pricingPageContent.offerText} />
       <DifferentServicesComparison
-        title={pricingPage.differentServicesComparisonTitle}
-        subtitle={pricingPage.differentServicesComparisonSubtitle}
+        title={pricingPageContent.differentServicesComparisonTitle}
+        subtitle={pricingPageContent.differentServicesComparisonSubtitle}
         rows={differentServicesComparisonRows}
       />
       <InfoSection
-        title={pricingPage.infoSectionTitle}
-        subtitle={pricingPage.infoSectionSubtitle}
+        title={pricingPageContent.infoSectionTitle}
+        subtitle={pricingPageContent.infoSectionSubtitle}
         imageCards={infoSectionImageCards}
         className="mt-35 px-12 mb-15"
       />

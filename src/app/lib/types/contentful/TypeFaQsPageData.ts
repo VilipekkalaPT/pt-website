@@ -1,8 +1,9 @@
-import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 import { TypeFaqSkeleton } from "./TypeFaq";
 
 export interface TypeFaQsPageDataFields {
   title: EntryFields.Symbol;
+  image: Asset;
   description: EntryFields.RichText;
   questions: Entry<TypeFaqSkeleton>[];
 }

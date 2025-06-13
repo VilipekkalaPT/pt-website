@@ -1,4 +1,4 @@
-import { getAssets, getEntries } from "app/lib/contentfulDataService";
+import { getEntries } from "app/lib/contentfulDataService";
 import {
   TypeAboutPageDataFields,
   TypeAboutPageDataSkeleton,
@@ -7,14 +7,15 @@ import Divider from "app/components/Divider";
 import Philosophy from "./components/Philosophy";
 import Journey from "./components/Journey";
 import Introduction from "./components/Introduction";
+import { AssetFields } from "contentful";
 
 export default async function About() {
-  const [images, aboutPageData] = await Promise.all([
-    getAssets(),
-    getEntries<TypeAboutPageDataSkeleton>("aboutPageData"),
-  ]);
+  const aboutPageData = await getEntries<TypeAboutPageDataSkeleton>(
+    "aboutPageData"
+  );
 
   const aboutPageContent: TypeAboutPageDataFields = aboutPageData[0];
+  const image = aboutPageContent.image.fields as AssetFields;
 
   return (
     <>
@@ -27,7 +28,7 @@ export default async function About() {
         title={aboutPageContent.philosophyTitle}
         subtitle={aboutPageContent.philosophySubtitle}
         content={aboutPageContent.philosophyContent}
-        images={images}
+        image={image}
       />
       <div className="bg-gray-100 py-40 flex flex-col items-center justify-center">
         {aboutPageContent.slogans.map((slogan) => (

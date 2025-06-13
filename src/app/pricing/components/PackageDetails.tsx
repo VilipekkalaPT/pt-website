@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { BANNER, SAVED_AMOUNT } from "app/utils/variables";
+import { PACKAGE_IMAGE, SAVED_AMOUNT } from "app/utils/variables";
 import {
   TypePackageAccordionFields,
   TypePackageFields,
@@ -52,7 +52,7 @@ export default function PackageDetails({
     <div className="grid grid-cols-2 gap-10 px-12">
       <Image
         src={imageUrl}
-        alt={BANNER}
+        alt={image?.title || PACKAGE_IMAGE}
         width={image?.file?.details.image?.width}
         height={image?.file?.details.image?.height}
         className="block w-full h-auto"

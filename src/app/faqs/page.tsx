@@ -1,21 +1,33 @@
-import { getAssets, getEntries } from "app/lib/contentfulDataService";
-import { TypeFaQsPageDataSkeleton } from "app/lib/types/contentful/TypeFaQsPageData";
+import { getEntries } from "app/lib/contentfulDataService";
+import {
+  TypeFaQsPageDataFields,
+  TypeFaQsPageDataSkeleton,
+} from "app/lib/types/contentful/TypeFaQsPageData";
 import HeadingSection from "./components/HeadingSection";
 import Divider from "app/components/Divider";
 import QASection from "./components/QASection";
+import { TypeFaqFields } from "app/lib/types/contentful";
+import { AssetFields } from "contentful";
 
 export default async function FAQs() {
-  const [images, faqsPageData] = await Promise.all([
-    getAssets(),
-    getEntries<TypeFaQsPageDataSkeleton>("faQsPageData"),
-  ]);
+  const faqsPageData = await getEntries<TypeFaQsPageDataSkeleton>(
+    "faQsPageData"
+  );
 
-  const { title, description, questions } = faqsPageData[0];
+  const { title, image, description, questions } =
+    faqsPageData[0] as TypeFaQsPageDataFields;
+
+  const imageField = image.fields as AssetFields;
+  const allQuestions = questions.map((q) => q.fields) as TypeFaqFields[];
 
   return (
-    <div className="10">
-      <HeadingSection title={title} description={description} images={images} />
-      <QASection questions={questions} />
+    <div className="">
+      <HeadingSection
+        title={title}
+        description={description}
+        image={imageField}
+      />
+      <QASection questions={allQuestions} />
       <Divider />
     </div>
   );

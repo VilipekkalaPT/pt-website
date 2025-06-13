@@ -54,16 +54,17 @@ const ComparisonRow = ({
   row: TypePricingDifferentServicesComparisonFields;
   isEven: boolean;
 }) => {
-  const style = `p-4 ${isEven ? "bg-gray-50" : "bg-white"}`;
+  const commonStyle = "p-4 text-sm flex items-center";
+  const style = `${commonStyle} ${isEven ? "bg-gray-50" : "bg-white"}`;
 
   return (
     <>
-      <div className={cn("p-4 font-semibold flex items-center", style)}>
-        {row.criteria}
+      <div className={cn("font-semibold", style)}>{row.criteria}</div>
+      <div className={cn(" bg-gray-800 text-white", commonStyle)}>
+        {row.slayFitVili}
       </div>
-      <div className={cn("p-4 bg-gray-800 text-white")}>{row.slayFitVili}</div>
-      <div className={cn("p-4 text-gray-600", style)}>{row.typicalGymPt}</div>
-      <div className={cn("p-4 text-gray-600", style)}>{row.fitnessApp}</div>
+      <div className={cn("text-gray-600", style)}>{row.typicalGymPt}</div>
+      <div className={cn("text-gray-600", style)}>{row.fitnessApp}</div>
     </>
   );
 };

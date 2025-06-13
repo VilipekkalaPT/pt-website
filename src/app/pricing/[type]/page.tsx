@@ -8,6 +8,9 @@ import { TypePackageFields } from "app/lib/types/contentful";
 import PackagesContainer from "../components/PackagesContainer";
 import QuestionsAndInfo from "../components/QuestionsAndInfo";
 import Divider from "app/components/Divider";
+import HeroSection from "app/components/HeroSection";
+import { AssetFields } from "contentful";
+import { HeadingSection } from "app/lib/types/type";
 
 async function getPageData(type: string) {
   const pageData = await getEntryWithSlug("packagesPageData", type);
@@ -35,13 +38,21 @@ export default async function PackagesPage({
   const packages = packagesPageData.packages.map(
     (p) => p.fields
   ) as TypePackageFields[];
+  const imageField = packagesPageData.image.fields as AssetFields;
+  const headingSections: HeadingSection[] = [
+    {
+      heading: packagesPageData.title,
+      subheading: packagesPageData.subtitle,
+    },
+  ];
 
   return (
     <>
-      <div className="w-1/2 mx-auto py-32 text-center">
-        <p className="text-5xl font-bold">{packagesPageData.title}</p>
-        <p className="text-2xl mt-2">{packagesPageData.subtitle}</p>
-      </div>
+      <HeroSection
+        image={imageField}
+        headingSections={headingSections}
+        fillImage={false}
+      />
       <PackagesContainer type={type} packages={packages} />
       <QuestionsAndInfo packagesPageData={packagesPageData} />
       <Divider />
