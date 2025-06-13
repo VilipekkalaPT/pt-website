@@ -62,7 +62,7 @@ export default function PackageDetails({
         <div className="flex gap-2 mt-2">
           <Chip label={capitalizeFirstLetter(packageDetails.mode)} />
           {!!savedAmount && (
-            <Chip label={`${SAVED_AMOUNT} €${savedAmount}`} variant="success" />
+            <Chip label={`${SAVED_AMOUNT} €${savedAmount}`} color="green" />
           )}
         </div>
         <Price

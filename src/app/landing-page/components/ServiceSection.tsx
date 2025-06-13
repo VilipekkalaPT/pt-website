@@ -22,7 +22,7 @@ export default function ServiceSection({
             key={index}
             className="p-4 border border-gray-200 rounded-lg flex flex-col items-center"
           >
-            <Chip label={service.tag} variant="white" className="my-4" />
+            <Chip label={service.tag} color="gray" className="my-4" />
             <p className="text-2xl font-semibold mb-2">{service.title}</p>
             <p className="text-sm text-gray-500">{service.description}</p>
           </div>

@@ -10,13 +10,7 @@ import PackageDetails from "./PackageDetails";
 import Divider from "app/components/Divider";
 import Curriculum from "./Curriculum";
 import Button from "app/components/Button";
-import {
-  ALL_COMBO_PACKAGES,
-  ALL_DUO_PACKAGES,
-  ALL_SOLO_PACKAGES,
-  BACK,
-  LATEST_REVIEWS,
-} from "app/utils/variables";
+import { ALL_PACKAGES, LATEST_REVIEWS } from "app/utils/variables";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
 import { getPricingPackagesRoute } from "app/utils/utils";
@@ -36,7 +30,6 @@ export default function SinglePackageContainer({
   reviews,
 }: SinglePackageContainerProps) {
   const router = useRouter();
-  const buttonTitle = getButtonLabel(packageDetails.type);
   const pricingPackagesRoute = getPricingPackagesRoute(packageDetails.type);
   const image = packageDetails.landscape?.fields as AssetFields;
 
@@ -44,7 +37,7 @@ export default function SinglePackageContainer({
     <div className="mt-10">
       <Button
         variant="ghost"
-        label={buttonTitle}
+        label={ALL_PACKAGES}
         iconLeft={<ArrowLeftIcon className="size-4" />}
         className="mb-6 px-12"
         onClick={() => router.push(pricingPackagesRoute)}
@@ -73,16 +66,3 @@ export default function SinglePackageContainer({
     </div>
   );
 }
-
-const getButtonLabel = (type: "combo" | "duo" | "solo") => {
-  switch (type) {
-    case "solo":
-      return ALL_SOLO_PACKAGES;
-    case "duo":
-      return ALL_DUO_PACKAGES;
-    case "combo":
-      return ALL_COMBO_PACKAGES;
-    default:
-      return BACK;
-  }
-};

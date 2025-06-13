@@ -43,7 +43,7 @@ export default function RecommendationPackageCard({
         />
         <Chip
           label={capitalizeFirstLetter(pkg.mode)}
-          variant="white"
+          color="gray"
           className="my-4"
         />
         <RichTextRenderer

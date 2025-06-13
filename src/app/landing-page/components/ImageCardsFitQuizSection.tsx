@@ -56,7 +56,7 @@ export default function ImageCardsFitQuizSection({
             key={index}
             imageCard={card}
             handleClick={
-              card.url ? () => router.push(`/${card.url}`) : handleClick
+              card.url ? () => router.push(`${card.url}`) : handleClick
             }
           />
         ))}

@@ -20,7 +20,7 @@ export default function Card({
   onClick,
 }: CardProps) {
   const defaultClassName = cn(
-    "flex flex-col justify-between border border-gray-200 rounded-lg overflow-hidden shadow-lg p-4",
+    "flex flex-col justify-between border border-gray-200 rounded-lg overflow-hidden shadow-lg",
     className
   );
 
@@ -40,9 +40,9 @@ export const CardHeader = ({ className, children }: CardContentProps) => {
 };
 
 export const CardContent = ({ children, className }: CardContentProps) => {
-  return <div className={className}>{children}</div>;
+  return <div className={cn("p-4", className)}>{children}</div>;
 };
 
 export const CardFooter = ({ children, className }: CardContentProps) => {
-  return <div className={className}>{children}</div>;
+  return <div className={cn("px-4 pb-4", className)}>{children}</div>;
 };

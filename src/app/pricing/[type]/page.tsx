@@ -11,6 +11,7 @@ import Divider from "app/components/Divider";
 import HeroSection from "app/components/HeroSection";
 import { AssetFields } from "contentful";
 import { HeadingSection } from "app/lib/types/type";
+import ComboSection from "../components/ComboSection";
 
 async function getPageData(type: string) {
   const pageData = await getEntryWithSlug("packagesPageData", type);
@@ -35,7 +36,8 @@ export default async function PackagesPage({
 }) {
   const { type } = await params;
   const { packagesPageData } = await getPageData(type);
-  const packages = packagesPageData.packages.map(
+
+  const soloPackages = packagesPageData.packages.map(
     (p) => p.fields
   ) as TypePackageFields[];
   const imageField = packagesPageData.image.fields as AssetFields;
@@ -45,6 +47,9 @@ export default async function PackagesPage({
       subheading: packagesPageData.subtitle,
     },
   ];
+  const comboPackages = packagesPageData.comboPackages?.map(
+    (pkg) => pkg.fields
+  ) as TypePackageFields[];
 
   return (
     <>
@@ -53,7 +58,16 @@ export default async function PackagesPage({
         headingSections={headingSections}
         fillImage={false}
       />
-      <PackagesContainer type={type} packages={packages} />
+      <PackagesContainer type={type} packages={soloPackages} />
+      {comboPackages && (
+        <ComboSection
+          type={type}
+          title={packagesPageData.comboSectionTitle}
+          subtitle={packagesPageData.comboSectionSubtitle}
+          comboPackages={comboPackages}
+          soloPackages={soloPackages}
+        />
+      )}
       <QuestionsAndInfo packagesPageData={packagesPageData} />
       <Divider />
     </>

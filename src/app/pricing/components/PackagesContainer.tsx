@@ -16,6 +16,8 @@ export default function PackagesContainer({
 }: PackagesContainerProps) {
   // const { result } = useSort(packages);
 
+  const numberOfColumns = packages.length % 2 === 0 ? 2 : 3;
+
   return (
     <div className="px-12">
       {/* <Sort
@@ -24,7 +26,7 @@ export default function PackagesContainer({
         handleSortChange={handleSortChange}
         className="justify-end"
       /> */}
-      <div className="grid grid-cols-3 gap-8 mt-10">
+      <div className={`grid grid-cols-${numberOfColumns} gap-8 mt-10`}>
         {packages.map((pkg) => {
           const savedAmount = calculateSavedAmount(pkg, packages);
 

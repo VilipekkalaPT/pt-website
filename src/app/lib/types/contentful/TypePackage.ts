@@ -6,6 +6,7 @@ import { TypeCurriculumSkeleton } from "./TypeCurriculum";
 export interface TypePackageFields {
   id: EntryFields.Integer;
   type: "combo" | "duo" | "solo";
+  shortDescription: EntryFields.Symbol;
   slug: EntryFields.Symbol;
   name: EntryFields.Symbol;
   subheading: EntryFields.Symbol;

@@ -23,9 +23,7 @@ export const RETAKE_QUIZ = "Slay the quiz again";
 export const HELP_BUTTON = "Need help choosing?";
 
 // Package Page Variables
-export const ALL_SOLO_PACKAGES = "All solo packages";
-export const ALL_DUO_PACKAGES = "All duo packages";
-export const ALL_COMBO_PACKAGES = "All combo packages";
+export const ALL_PACKAGES = "All packages";
 export const GET_STARTED = "Get started";
 export const SAVED_AMOUNT = "Saved";
 export const PACKAGE_IMAGE = "Package image";

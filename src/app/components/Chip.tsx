@@ -2,7 +2,14 @@ import Link from "next/link";
 import cn from "classnames";
 
 interface ChipProps {
-  variant?: "success" | "default" | "white";
+  color?:
+    | "black"
+    | "gray"
+    | "green"
+    | "light-green"
+    | "yellow"
+    | "blue"
+    | "orange";
   label: string;
   iconRight?: React.ReactNode;
   href?: string;
@@ -10,7 +17,7 @@ interface ChipProps {
 }
 
 export default function Chip({
-  variant = "default",
+  color = "black",
   label,
   iconRight,
   href,
@@ -19,9 +26,13 @@ export default function Chip({
   const chipClassName = cn(
     "px-2 py-1 rounded-md flex items-center gap-1 text-sm",
     {
-      "bg-gray-800": variant === "default",
-      "bg-gray-100": variant === "white",
-      "bg-green-500/25": variant === "success",
+      "bg-gray-800": color === "black",
+      "bg-gray-100": color === "gray",
+      "bg-green-500/25": color === "green",
+      "bg-green-800": color === "light-green",
+      "bg-yellow-600": color === "yellow",
+      "bg-blue-800": color === "blue",
+      "bg-orange-800": color === "orange",
     },
     className
   );
@@ -30,9 +41,13 @@ export default function Chip({
     <div className={chipClassName}>
       <p
         className={cn({
-          "text-gray-100": variant === "default",
-          "text-gray-900": variant === "white",
-          "text-green-900": variant === "success",
+          "text-gray-100": color === "black",
+          "text-gray-900": color === "gray",
+          "text-green-900": color === "green",
+          "text-green-100": color === "light-green",
+          "text-yellow-100": color === "yellow",
+          "text-blue-200": color === "blue",
+          "text-orange-200": color === "orange",
         })}
       >
         {label}

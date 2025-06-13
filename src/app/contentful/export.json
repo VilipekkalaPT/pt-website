@@ -2033,7 +2033,7 @@
         "id": "packagesPageData",
         "type": "ContentType",
         "createdAt": "2025-05-25T18:51:32.715Z",
-        "updatedAt": "2025-06-13T18:19:55.756Z",
+        "updatedAt": "2025-06-13T19:32:29.430Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2041,8 +2041,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 27,
-        "publishedAt": "2025-06-13T18:19:55.756Z",
+        "publishedVersion": 35,
+        "publishedAt": "2025-06-13T19:32:29.430Z",
         "firstPublishedAt": "2025-05-25T18:51:33.027Z",
         "createdBy": {
           "sys": {
@@ -2058,8 +2058,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 14,
-        "version": 28,
+        "publishedCounter": 18,
+        "version": 36,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2136,6 +2136,45 @@
           }
         },
         {
+          "id": "comboSectionTitle",
+          "name": "Combo Section Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "comboSectionSubtitle",
+          "name": "Combo Section Subtitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "comboPackages",
+          "name": "Combo Packages",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
           "id": "faqsTitle",
           "name": "FAQs Title",
           "type": "Symbol",
@@ -2197,15 +2236,21 @@
           "omitted": false
         },
         {
-          "id": "infoButtonText",
-          "name": "Info Button Text",
-          "type": "Symbol",
+          "id": "infoImageCards",
+          "name": "Info Image Cards",
+          "type": "Array",
           "localized": false,
           "required": true,
           "validations": [
           ],
           "disabled": false,
-          "omitted": false
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
         }
       ]
     },
@@ -5292,7 +5337,7 @@
             "linkType": "Space"
           }
         },
-        "version": 28,
+        "version": 36,
         "createdAt": "2025-05-25T18:51:33.259Z",
         "createdBy": {
           "sys": {
@@ -5301,7 +5346,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-13T18:19:56.405Z",
+        "updatedAt": "2025-06-13T19:32:30.073Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5351,6 +5396,21 @@
           "widgetNamespace": "builtin"
         },
         {
+          "fieldId": "comboSectionTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "comboSectionSubtitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "comboPackages",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
           "fieldId": "faqsTitle",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
@@ -5376,8 +5436,8 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "infoButtonText",
-          "widgetId": "singleLine",
+          "fieldId": "infoImageCards",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -41801,7 +41861,7 @@
         "id": "51hQCsTcvhP1Sxt3fsqutq",
         "type": "Entry",
         "createdAt": "2025-05-25T18:51:39.425Z",
-        "updatedAt": "2025-06-13T18:32:15.727Z",
+        "updatedAt": "2025-06-13T19:34:06.242Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -41809,8 +41869,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 35,
-        "publishedAt": "2025-06-13T18:32:15.727Z",
+        "publishedVersion": 41,
+        "publishedAt": "2025-06-13T19:34:06.242Z",
         "firstPublishedAt": "2025-05-25T18:55:31.071Z",
         "createdBy": {
           "sys": {
@@ -41826,8 +41886,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 12,
-        "version": 36,
+        "publishedCounter": 14,
+        "version": 42,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41899,12 +41959,22 @@
                 "linkType": "Entry",
                 "id": "38btLzFrJ1Bpq3nvyU10b0"
               }
-            },
+            }
+          ]
+        },
+        "comboSectionTitle": {
+          "en-US": "Slay More For Less"
+        },
+        "comboSectionSubtitle": {
+          "en-US": "Combo service deals"
+        },
+        "comboPackages": {
+          "en-US": [
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "47eUqAtKWxng6AfmQnADar"
+                "id": "77L4FMXnwpO4AMr3rTal7u"
               }
             },
             {
@@ -41918,7 +41988,7 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "77L4FMXnwpO4AMr3rTal7u"
+                "id": "47eUqAtKWxng6AfmQnADar"
               }
             }
           ]
@@ -41967,8 +42037,23 @@
         "infoSubtitle": {
           "en-US": "We’re just a message away"
         },
-        "infoButtonText": {
-          "en-US": "Contact coach Vili"
+        "infoImageCards": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "16LqeiKHSyMq0TAiJKYwdK"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "abdqDD7sPwxw4tVxkNwrL"
+              }
+            }
+          ]
         }
       }
     },
@@ -42127,9 +42212,6 @@
         },
         "infoSubtitle": {
           "en-US": "We’re just a message away"
-        },
-        "infoButtonText": {
-          "en-US": "Contact coach Vili"
         }
       }
     },
@@ -48693,6 +48775,190 @@
               }
             }
           ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "16LqeiKHSyMq0TAiJKYwdK",
+        "type": "Entry",
+        "createdAt": "2025-06-13T19:32:37.544Z",
+        "updatedAt": "2025-06-13T19:33:14.246Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-13T19:33:14.246Z",
+        "firstPublishedAt": "2025-06-13T19:33:14.246Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageCard"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/16LqeiKHSyMq0TAiJKYwdK"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Curious how others SlayFit?"
+        },
+        "subtitle": {
+          "en-US": "See real stories, real results and the glow-ups"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "332GsMo7Hx7MgZL4BKuuY1"
+            }
+          }
+        },
+        "actionButtonText": {
+          "en-US": "Read more reviews"
+        },
+        "url": {
+          "en-US": "client-spotlights"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "abdqDD7sPwxw4tVxkNwrL",
+        "type": "Entry",
+        "createdAt": "2025-06-13T19:33:20.684Z",
+        "updatedAt": "2025-06-13T19:33:49.357Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-13T19:33:49.357Z",
+        "firstPublishedAt": "2025-06-13T19:33:49.357Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageCard"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/abdqDD7sPwxw4tVxkNwrL"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Does this fits your vibe?"
+        },
+        "subtitle": {
+          "en-US": "Find out more how Vili can help"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2nSybbk0Cw0KUaeeIjkcca"
+            }
+          }
+        },
+        "actionButtonText": {
+          "en-US": "Book a free consultation"
+        },
+        "url": {
+          "en-US": "contact-and-booking"
         }
       }
     }

@@ -2,7 +2,6 @@
 
 import { TypeImageCardFields } from "app/lib/types/contentful";
 import { TypeImageCardFieldsWithImage } from "app/lib/types/contentful/TypeImageCard";
-import { ROUTES } from "app/utils/routes";
 import { useRouter } from "next/navigation";
 import ImageCard from "./ImageCard";
 import cn from "classnames";
@@ -35,7 +34,7 @@ export default function InfoSection({
           <ImageCard
             key={index}
             imageCard={card}
-            handleClick={() => router.push(`${ROUTES.PRICING}/${card.url}`)}
+            handleClick={() => router.push(`${card.url}`)}
           />
         ))}
       </div>
