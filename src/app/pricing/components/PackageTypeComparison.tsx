@@ -44,7 +44,7 @@ export default function PackageTypeComparison({
 }: PackageTypeComparisonProps) {
   return (
     <div className="mt-35 px-48 grid grid-cols-5">
-      <p className="col-span-5 text-2xl font-semibold mb-6 text-center">
+      <p className="col-span-5 text-2xl font-semibold mb-12 text-center">
         {title}
       </p>
       {columnTitles.map((col) => (

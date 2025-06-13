@@ -27,7 +27,6 @@ interface SinglePackageContainerProps {
   curriculum: TypeCurriculumFields;
   soloPackages: TypePackageFields[];
   reviews: TypeReviewFields[];
-  image?: AssetFields;
 }
 
 export default function SinglePackageContainer({
@@ -35,11 +34,11 @@ export default function SinglePackageContainer({
   curriculum,
   soloPackages,
   reviews,
-  image,
 }: SinglePackageContainerProps) {
   const router = useRouter();
   const buttonTitle = getButtonLabel(packageDetails.type);
   const pricingPackagesRoute = getPricingPackagesRoute(packageDetails.type);
+  const image = packageDetails.landscape?.fields as AssetFields;
 
   return (
     <div className="mt-10">

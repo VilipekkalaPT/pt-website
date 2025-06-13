@@ -45,6 +45,10 @@ export enum PackageTypeComparisonEnum {
   GYM = "gym",
   COMBO = "combo",
 }
+export const DIFFERENT_SERVICES_CRITERIA = "What matters most";
+export const DIFFERENT_SERVICES_SLAYFITVILI = "SlayFitVili";
+export const DIFFERENT_SERVICES_TYPICAL_GYM_PT = "Typical gym PT";
+export const DIFFERENT_SERVICES_FITNESS_APP = "Fitness app";
 
 export enum SORT_TYPE {
   PRICE_ASC = "price-asc",

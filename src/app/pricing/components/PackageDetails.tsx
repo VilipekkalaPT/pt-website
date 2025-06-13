@@ -15,6 +15,7 @@ import SessionSelector from "./SessionSelector";
 import {
   calculateSavedAmount,
   capitalizeFirstLetter,
+  getAssetUrl,
   getTitle,
 } from "app/utils/utils";
 import AccordionComponent from "app/components/AccordionComponent";
@@ -31,7 +32,7 @@ export default function PackageDetails({
   soloPackages,
   image,
 }: PackageDetailsProps) {
-  const imageUrl = `https:${image?.file?.url ?? ""}`;
+  const imageUrl = getAssetUrl(image);
   const sessionOptions = packageDetails.sessionOptions?.map(
     (option) => option.fields
   ) as TypeSessionOptionFields[];

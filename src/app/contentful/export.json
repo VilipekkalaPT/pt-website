@@ -3059,7 +3059,7 @@
         "id": "pricingPageData",
         "type": "ContentType",
         "createdAt": "2025-06-10T18:09:19.927Z",
-        "updatedAt": "2025-06-12T18:34:27.761Z",
+        "updatedAt": "2025-06-13T13:50:44.988Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3067,8 +3067,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2025-06-12T18:34:27.761Z",
+        "publishedVersion": 28,
+        "publishedAt": "2025-06-13T13:50:44.988Z",
         "firstPublishedAt": "2025-06-10T18:09:20.257Z",
         "createdBy": {
           "sys": {
@@ -3084,8 +3084,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 10,
-        "version": 20,
+        "publishedCounter": 14,
+        "version": 29,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3310,8 +3310,8 @@
           "omitted": false
         },
         {
-          "id": "differenceServicesComparisonSubtitle",
-          "name": "Difference Services Comparison Subtitle",
+          "id": "differentServicesComparisonSubtitle",
+          "name": "Different Services Comparison Subtitle",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -3364,7 +3364,7 @@
           "name": "Info Image Cards",
           "type": "Array",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -5783,7 +5783,7 @@
             "linkType": "Space"
           }
         },
-        "version": 20,
+        "version": 28,
         "createdAt": "2025-06-10T18:09:20.457Z",
         "createdBy": {
           "sys": {
@@ -5792,7 +5792,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-12T18:34:28.545Z",
+        "updatedAt": "2025-06-13T13:50:45.735Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5887,7 +5887,7 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "differenceServicesComparisonSubtitle",
+          "fieldId": "differentServicesComparisonSubtitle",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -43934,7 +43934,7 @@
         "id": "3qq56D92N9NAAkIhYJNQVU",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:58.149Z",
-        "updatedAt": "2025-06-10T18:30:49.172Z",
+        "updatedAt": "2025-06-12T19:17:48.965Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -43942,8 +43942,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 31,
-        "publishedAt": "2025-06-10T18:30:49.172Z",
+        "publishedVersion": 33,
+        "publishedAt": "2025-06-12T19:17:48.965Z",
         "firstPublishedAt": "2025-06-01T19:41:33.034Z",
         "createdBy": {
           "sys": {
@@ -43959,8 +43959,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 6,
-        "version": 32,
+        "publishedCounter": 7,
+        "version": 34,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -43990,7 +43990,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5L6ugrWazb9G2HwzU6Ce1K"
+              "id": "13v1cezWlxglu7yR8rcakW"
             }
           }
         },
@@ -48278,7 +48278,7 @@
         "id": "6wCYuTfgf5JHYGWCCcv7V4",
         "type": "Entry",
         "createdAt": "2025-06-10T20:02:39.810Z",
-        "updatedAt": "2025-06-12T18:34:56.571Z",
+        "updatedAt": "2025-06-13T13:04:34.701Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -48286,8 +48286,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 22,
-        "publishedAt": "2025-06-12T18:34:56.571Z",
+        "publishedVersion": 38,
+        "publishedAt": "2025-06-13T13:04:34.701Z",
         "firstPublishedAt": "2025-06-10T20:07:34.217Z",
         "createdBy": {
           "sys": {
@@ -48303,8 +48303,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 23,
+        "publishedCounter": 8,
+        "version": 39,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -48340,7 +48340,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "71g8OWYI9skPRPXNNnZJKe"
+              "id": "4Luu0TXL4pG7ngkQ064y8K"
             }
           }
         },
@@ -48367,7 +48367,22 @@
                     },
                     "marks": [
                     ],
-                    "value": "Your journey is unique—and so is the way we train.\nWhether you’re just starting out or stuck in a rut, SlayFitVili helps cut through the fitness noise. With real support, smart plans, and a style that fits your life—not someone else’s.\n\nThis page is your roadmap. Find what you need, skip what you don’t, and start building strength that actually sticks.",
+                    "value": "Your journey is unique—and so is the way we train.\nWhether you’re just starting out or stuck in a rut, SlayFitVili helps cut through the fitness noise. With real support, smart plans, and a style that fits your life—not someone else’s.\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This page is your roadmap. Find what you need, skip what you don’t, and start building strength that actually sticks.",
                     "nodeType": "text"
                   }
                 ],
@@ -48467,7 +48482,7 @@
         "differentServicesComparisonTitle": {
           "en-US": "Why Choose SlayFitVili?"
         },
-        "differenceServicesComparisonSubtitle": {
+        "differentServicesComparisonSubtitle": {
           "en-US": "What clients want, how Vili delivers, and how it compares"
         },
         "differentServicesComparisonRows": {
@@ -48607,71 +48622,6 @@
     }
   ],
   "assets": [
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "5L6ugrWazb9G2HwzU6Ce1K",
-        "type": "Asset",
-        "createdAt": "2025-04-15T21:01:28.961Z",
-        "updatedAt": "2025-06-08T18:20:28.885Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 16,
-        "publishedAt": "2025-06-01T19:06:06.636Z",
-        "firstPublishedAt": "2025-04-15T21:02:01.555Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 5,
-        "version": 18,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "changed"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/5L6ugrWazb9G2HwzU6Ce1K"
-      },
-      "fields": {
-        "title": {
-          "en-US": "landingPage_banner"
-        }
-      }
-    },
     {
       "metadata": {
         "tags": [
@@ -50246,6 +50196,85 @@
               }
             },
             "fileName": "IMG_6351.JPG",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "4Luu0TXL4pG7ngkQ064y8K",
+        "type": "Asset",
+        "createdAt": "2025-06-12T19:15:37.167Z",
+        "updatedAt": "2025-06-12T19:16:14.030Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-12T19:16:14.030Z",
+        "firstPublishedAt": "2025-06-12T19:16:14.030Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/4Luu0TXL4pG7ngkQ064y8K"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Vili_Pekkala_3_1"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/4Luu0TXL4pG7ngkQ064y8K/155e2d1cab6dc46f18f61f1e3a009b1e/Viili_Pekkala_3_1.jpg",
+            "details": {
+              "size": 2293770,
+              "image": {
+                "width": 4540,
+                "height": 2191
+              }
+            },
+            "fileName": "Viili_Pekkala_3_1.jpg",
             "contentType": "image/jpeg"
           }
         }

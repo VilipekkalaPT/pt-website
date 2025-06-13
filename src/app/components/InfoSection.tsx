@@ -1,24 +1,25 @@
 "use client";
 
-import ImageCard from "app/components/ImageCard";
-import {
-  TypeImageCardFields,
-  TypeImageCardFieldsWithImage,
-} from "app/lib/types/contentful/TypeImageCard";
+import { TypeImageCardFields } from "app/lib/types/contentful";
+import { TypeImageCardFieldsWithImage } from "app/lib/types/contentful/TypeImageCard";
 import { ROUTES } from "app/utils/routes";
 import { useRouter } from "next/navigation";
+import ImageCard from "./ImageCard";
+import cn from "classnames";
 
-interface PackagesSelectionProps {
+interface InfoSectionProps {
   title: string;
   subtitle: string;
   imageCards: TypeImageCardFields[];
+  className?: string;
 }
 
-export default function PackagesSelection({
+export default function InfoSection({
   title,
   subtitle,
   imageCards,
-}: PackagesSelectionProps) {
+  className,
+}: InfoSectionProps) {
   const router = useRouter();
   const imageCardsWithImage = imageCards.map((card) => ({
     ...card,
@@ -26,7 +27,7 @@ export default function PackagesSelection({
   })) as TypeImageCardFieldsWithImage[];
 
   return (
-    <div className="mt-35 w-full px-12 flex flex-col items-center">
+    <div className={cn("w-full flex flex-col items-center", className)}>
       <p className="text-2xl font-semibold">{title}</p>
       <p className="mt-1 text-xl text-gray-500">{subtitle}</p>
       <div className="mt-10 w-full grid grid-cols-2 gap-10">

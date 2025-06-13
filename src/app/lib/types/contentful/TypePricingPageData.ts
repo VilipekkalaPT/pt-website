@@ -18,11 +18,11 @@ export interface TypePricingPageDataFields {
   packageTypeComparisonRows: Entry<TypePricingPackageTypeComparisionSkeleton>[];
   offerText: EntryFields.Symbol[];
   differentServicesComparisonTitle: EntryFields.Symbol;
-  differenceServicesComparisonSubtitle: EntryFields.Symbol;
+  differentServicesComparisonSubtitle: EntryFields.Symbol;
   differentServicesComparisonRows: Entry<TypePricingDifferentServicesComparisonSkeleton>[];
   infoSectionTitle: EntryFields.Symbol;
   infoSectionSubtitle: EntryFields.Symbol;
-  infoImageCards?: Entry<TypeImageCardSkeleton>[];
+  infoImageCards: Entry<TypeImageCardSkeleton>[];
 }
 
 export interface TypePricingPageDataSkeleton extends EntrySkeletonType {

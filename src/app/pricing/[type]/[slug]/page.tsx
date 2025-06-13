@@ -1,5 +1,4 @@
 import {
-  getAssets,
   getEntriesWithTag,
   getEntryWithSlug,
 } from "app/lib/contentfulDataService";
@@ -7,7 +6,6 @@ import { TypePackageFields } from "app/lib/types/contentful/TypePackage";
 import { TypeCurriculumFields } from "app/lib/types/contentful/TypeCurriculum";
 
 import SinglePackageContainer from "app/pricing/components/SinglePackageContainter";
-import { BANNER } from "app/utils/variables";
 import { TypeReviewFields } from "app/lib/types/contentful";
 
 // For SSG in the future
@@ -47,16 +45,12 @@ export default async function PackageDetails({
     ]
   );
 
-  const images = await getAssets();
-  const image = images.find((image) => image.title === BANNER);
-
   return (
     <SinglePackageContainer
       packageDetails={packageDetails as unknown as TypePackageFields}
       curriculum={curriculum as unknown as TypeCurriculumFields}
       soloPackages={soloPackages as unknown as TypePackageFields[]}
       reviews={reviews as unknown as TypeReviewFields[]}
-      image={image}
     />
   );
 }

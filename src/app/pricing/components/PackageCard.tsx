@@ -32,8 +32,8 @@ export default function PackageCard({
     tags,
     landscape,
   } = singlePackage;
-  const landscapeImage = landscape?.fields as AssetFields | undefined;
-  const landscapeUrl = landscapeImage ? getAssetUrl(landscapeImage) : "";
+  const image = landscape?.fields as AssetFields | undefined;
+  const imageUrl = getAssetUrl(image);
 
   const priceOptions = sessionOptions?.map(
     (option) => option.fields
@@ -47,10 +47,10 @@ export default function PackageCard({
           className="absolute right-2 top-2 text-xs"
         />
         <Image
-          src={landscapeUrl}
+          src={imageUrl}
           alt={`Landscape image for ${name}`}
-          width={100}
-          height={100}
+          width={image?.file?.details.image?.width}
+          height={image?.file?.details.image?.height}
           className="block w-full h-auto"
         />
       </CardHeader>
