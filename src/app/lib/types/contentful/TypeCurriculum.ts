@@ -3,7 +3,8 @@ import { TypeCurriculumPeriodSkeleton } from "./TypeCurriculumPeriod";
 
 export interface TypeCurriculumFields {
   title: EntryFields.Symbol;
-  subtitle?: EntryFields.Symbol;
+  slug: EntryFields.Symbol;
+  disclaimer: EntryFields.Symbol;
   curriculumPeriods: Entry<TypeCurriculumPeriodSkeleton>[];
 }
 

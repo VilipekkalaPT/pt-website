@@ -27,8 +27,10 @@ export default function InfoSection({
 
   return (
     <div className={cn("w-full flex flex-col items-center", className)}>
-      <p className="text-2xl font-semibold">{title}</p>
-      <p className="mt-1 text-xl text-gray-500">{subtitle}</p>
+      <div className="w-1/2 text-center">
+        <p className="text-2xl font-bold">{title}</p>
+        <p className="mt-1 text-xl text-gray-500">{subtitle}</p>
+      </div>
       <div className="mt-10 w-full grid grid-cols-2 gap-10">
         {imageCardsWithImage.map((card, index) => (
           <ImageCard

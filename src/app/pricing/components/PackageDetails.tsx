@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { PACKAGE_IMAGE, SAVED_AMOUNT } from "app/utils/variables";
 import {
-  TypePackageAccordionFields,
   TypePackageFields,
   TypeSessionOptionFields,
 } from "app/lib/types/contentful";
@@ -16,9 +15,7 @@ import {
   calculateSavedAmount,
   capitalizeFirstLetter,
   getAssetUrl,
-  getTitle,
 } from "app/utils/utils";
-import AccordionComponent from "app/components/AccordionComponent";
 import Chip from "app/components/Chip";
 
 interface PackageDetailsProps {
@@ -39,7 +36,6 @@ export default function PackageDetails({
   const [selectedOption, setSelectedOption] = useState<
     TypeSessionOptionFields | undefined
   >(sessionOptions ? sessionOptions[0] : undefined);
-  const [selectedAccordion, setSelectedAccordion] = useState<string>("");
 
   const savedAmount = calculateSavedAmount(
     packageDetails,
@@ -80,24 +76,6 @@ export default function PackageDetails({
           sessionOptions={sessionOptions}
           onSelect={setSelectedOption}
         />
-        {packageDetails.packageAccordions.map((accordion) => {
-          const accordionField = accordion.fields as TypePackageAccordionFields;
-          return (
-            <AccordionComponent
-              key={accordionField.title}
-              triggerText={getTitle(accordionField.title)}
-              accordionContent={
-                <RichTextRenderer
-                  text={accordionField.description}
-                  listClassName="list-disc ml-5 "
-                />
-              }
-              value={accordionField.title}
-              selectedAccordion={selectedAccordion}
-              onValueChange={(value) => setSelectedAccordion(value)}
-            />
-          );
-        })}
       </div>
     </div>
   );

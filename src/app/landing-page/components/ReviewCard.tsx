@@ -20,13 +20,13 @@ export default function ReviewCard({
 }: ReviewCardProps) {
   return (
     <Card key={review.id}>
-      <CardHeader>
+      <CardHeader className="p-4">
         {showRating && <Rating rating={review.rating} />}
         {reviewerNamePostion === "top" && (
           <ReviewerInfo reviewer={review.reviewer} packages={review.package} />
         )}
       </CardHeader>
-      <CardContent className="mt-4 flex-1 flex flex-col">
+      <CardContent className="flex-1 flex flex-col">
         <p className="text-xl font-bold">{review.title}</p>
         <RichTextRenderer
           text={review.content}

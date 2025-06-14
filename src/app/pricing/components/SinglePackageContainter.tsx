@@ -2,36 +2,99 @@
 
 import {
   TypeCurriculumFields,
+  TypeCurriculumPeriodFields,
+  TypeImageCardFields,
   TypePackageFields,
   TypeReviewFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
 import PackageDetails from "./PackageDetails";
 import Divider from "app/components/Divider";
-import Curriculum from "./Curriculum";
 import Button from "app/components/Button";
-import { ALL_PACKAGES, LATEST_REVIEWS } from "app/utils/variables";
+import {
+  ALL_PACKAGES,
+  EXPECTED_RESULTS,
+  FOR_WHOM,
+  INFO_SECTION_SUBTITLE,
+  INFO_SECTION_TITLE,
+  INFO_TABS,
+  NOT_FOR_WHOM,
+  WHY,
+} from "app/utils/variables";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
 import { getPricingPackagesRoute } from "app/utils/utils";
-import ReviewCard from "app/landing-page/components/ReviewCard";
+import InfoTabs from "app/landing-page/components/InfoTabs";
+import { Tab } from "app/lib/types/type";
+import ReviewSection from "./ReviewSection";
+import HowTrainingSessionLookLike from "./HowTrainingSessionLookLike";
+import InfoSection from "app/components/InfoSection";
 
 interface SinglePackageContainerProps {
   packageDetails: TypePackageFields;
   curriculum: TypeCurriculumFields;
   soloPackages: TypePackageFields[];
   reviews: TypeReviewFields[];
+  imageCards: TypeImageCardFields[];
 }
+
+const createTabs = (
+  packageDetails: TypePackageFields,
+  curriculum: TypeCurriculumFields
+): Tab[] => {
+  return [
+    {
+      label: INFO_TABS.WHY,
+      infoCards: [
+        {
+          title: WHY,
+          content: packageDetails.why,
+        },
+        {
+          title: EXPECTED_RESULTS,
+          content: packageDetails.expectedResults,
+        },
+      ],
+    },
+    {
+      label: INFO_TABS.FOR_WHOM,
+      infoCards: [
+        {
+          title: FOR_WHOM,
+          content: packageDetails.forWhom,
+        },
+        {
+          title: NOT_FOR_WHOM,
+          content: packageDetails.notForWhom,
+        },
+      ],
+    },
+    {
+      label: INFO_TABS.CURRICULUM,
+      subtitle: curriculum.disclaimer,
+      infoCards: curriculum.curriculumPeriods.map((period) => {
+        const periodFields = period.fields as TypeCurriculumPeriodFields;
+        return {
+          title: periodFields.title,
+          content: periodFields.description,
+        };
+      }),
+    },
+  ];
+};
 
 export default function SinglePackageContainer({
   packageDetails,
   curriculum,
   soloPackages,
   reviews,
+  imageCards,
 }: SinglePackageContainerProps) {
   const router = useRouter();
   const pricingPackagesRoute = getPricingPackagesRoute(packageDetails.type);
-  const image = packageDetails.landscape?.fields as AssetFields;
+  const image = packageDetails.image?.fields as AssetFields;
+
+  const tabs = createTabs(packageDetails, curriculum);
 
   return (
     <div className="mt-10">
@@ -47,21 +110,15 @@ export default function SinglePackageContainer({
         soloPackages={soloPackages}
         image={image}
       />
-      <Divider />
-      <Curriculum curriculum={curriculum} />
-      <Divider />
-      <p className="px-12 text-2xl font-bold mt-10 mb-4">{LATEST_REVIEWS}</p>
-      <div className="px-12 grid grid-cols-3 gap-8 mb-15">
-        {reviews.length > 0 &&
-          reviews.map((review) => (
-            <ReviewCard
-              key={review.id}
-              review={review}
-              showRating
-              reviewerNamePostion="bottom"
-            />
-          ))}
-      </div>
+      <InfoTabs tabs={tabs} showCurriculum={!packageDetails.sessionOptions} />
+      {packageDetails.sessionOptions && <HowTrainingSessionLookLike />}
+      {reviews.length > 0 && <ReviewSection reviews={reviews} />}
+      <InfoSection
+        title={INFO_SECTION_TITLE}
+        subtitle={INFO_SECTION_SUBTITLE}
+        imageCards={imageCards}
+        className="mt-35 mb-15 px-12"
+      />
       <Divider />
     </div>
   );

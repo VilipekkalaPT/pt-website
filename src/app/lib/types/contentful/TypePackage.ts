@@ -1,23 +1,22 @@
 import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
-import { TypePackageAccordionSkeleton } from "./TypePackageAccordion";
 import { TypeSessionOptionSkeleton } from "./TypeSessionOption";
-import { TypeCurriculumSkeleton } from "./TypeCurriculum";
 
 export interface TypePackageFields {
   id: EntryFields.Integer;
-  type: "combo" | "duo" | "solo";
-  shortDescription: EntryFields.Symbol;
   slug: EntryFields.Symbol;
+  type: "duo" | "solo";
   name: EntryFields.Symbol;
-  subheading: EntryFields.Symbol;
+  shortDescription: EntryFields.Symbol;
+  image: Asset;
   mode: "hybrid" | "offline" | "online";
   price: EntryFields.Integer;
   priceUnit: "package" | "session";
   sessionOptions?: Entry<TypeSessionOptionSkeleton>[];
   content: EntryFields.RichText;
-  packageAccordions: Entry<TypePackageAccordionSkeleton>[];
-  curriculum: Entry<TypeCurriculumSkeleton>;
-  landscape?: Asset;
+  why: EntryFields.RichText;
+  expectedResults: EntryFields.RichText;
+  forWhom: EntryFields.RichText;
+  notForWhom: EntryFields.RichText;
   tags: ("diet" | "gym" | "plan")[];
 }
 
