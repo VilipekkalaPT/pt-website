@@ -18,17 +18,24 @@ export default function Carousel({ images }: CarouselProps) {
     // slideChanged(slider) {
     //   setCurrentSlide(slider.track.details.rel);
     // },
-    slides: {
-      perView: 2,
-    },
   });
 
   // const goToSlide = (i: number) => {
   //   instanceRef.current?.moveToIdx(i);
   // };
 
+  const handlePrevClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    instanceRef.current?.prev();
+  };
+
+  const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    instanceRef.current?.next();
+  };
+
   return (
-    <div className="relative w-full mx-auto">
+    <div className="relative w-full mx-auto h-full">
       <div ref={sliderRef} className="keen-slider overflow-hidden">
         {images &&
           images.map((image, index) => (
@@ -47,15 +54,15 @@ export default function Carousel({ images }: CarouselProps) {
           <IconButton
             variant="primary"
             icon={<ChevronLeftIcon className="size-6" />}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2"
-            onClick={() => instanceRef.current?.prev()}
+            className="prev-btn absolute left-4 top-1/2 transform -translate-y-1/2"
+            onClick={handlePrevClick}
             aria-label="Previous slide"
           />
           <IconButton
             variant="primary"
             icon={<ChevronRightIcon className="size-6" />}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2"
-            onClick={() => instanceRef.current?.next()}
+            className="next-btn absolute right-4 top-1/2 transform -translate-y-1/2"
+            onClick={handleNextClick}
             aria-label="Next slide"
           />
         </>

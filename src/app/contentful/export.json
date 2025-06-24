@@ -987,7 +987,7 @@
         "id": "aboutPageData",
         "type": "ContentType",
         "createdAt": "2025-04-23T18:56:35.106Z",
-        "updatedAt": "2025-06-13T18:42:20.237Z",
+        "updatedAt": "2025-06-24T17:00:07.724Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -995,8 +995,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 43,
-        "publishedAt": "2025-06-13T18:42:20.237Z",
+        "publishedVersion": 49,
+        "publishedAt": "2025-06-24T17:00:07.724Z",
         "firstPublishedAt": "2025-04-23T18:56:35.529Z",
         "createdBy": {
           "sys": {
@@ -1012,8 +1012,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 22,
-        "version": 44,
+        "publishedCounter": 25,
+        "version": 50,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1185,8 +1185,8 @@
           "omitted": false
         },
         {
-          "id": "journeyImages",
-          "name": "Journey Images",
+          "id": "journeyTimelinePeriods",
+          "name": "Journey Timeline Periods",
           "type": "Array",
           "localized": false,
           "required": true,
@@ -1198,7 +1198,7 @@
             "type": "Link",
             "validations": [
             ],
-            "linkType": "Asset"
+            "linkType": "Entry"
           }
         }
       ]
@@ -1330,7 +1330,7 @@
         "id": "curriculum",
         "type": "ContentType",
         "createdAt": "2025-05-04T20:19:09.334Z",
-        "updatedAt": "2025-06-14T19:20:03.534Z",
+        "updatedAt": "2025-06-14T20:21:57.907Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1338,8 +1338,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 21,
-        "publishedAt": "2025-06-14T19:20:03.534Z",
+        "publishedVersion": 23,
+        "publishedAt": "2025-06-14T20:21:57.907Z",
         "firstPublishedAt": "2025-05-04T20:19:09.758Z",
         "createdBy": {
           "sys": {
@@ -1355,8 +1355,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 11,
-        "version": 22,
+        "publishedCounter": 12,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1402,7 +1402,6 @@
             },
             {
               "in": [
-                "train-together-slay-together",
                 "go-the-distance",
                 "bronze-skin-iron-mind",
                 "eat-better-live-better",
@@ -1412,7 +1411,8 @@
                 "silver-evoluation-silver-impact",
                 "come-train-with-vili",
                 "together-total-slay",
-                "slay"
+                "slay",
+                "train-together-fun-together"
               ]
             }
           ],
@@ -3858,6 +3858,121 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "timelinePeriod",
+        "type": "ContentType",
+        "createdAt": "2025-06-24T16:55:10.871Z",
+        "updatedAt": "2025-06-24T16:56:35.154Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-06-24T16:56:35.154Z",
+        "firstPublishedAt": "2025-06-24T16:55:11.250Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/content_types/timelinePeriod"
+      },
+      "displayField": "period",
+      "name": "Timeline Period",
+      "description": "",
+      "fields": [
+        {
+          "id": "period",
+          "name": "Period",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "buttonText",
+          "name": "Button Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -4795,7 +4910,7 @@
             "linkType": "Space"
           }
         },
-        "version": 44,
+        "version": 50,
         "createdAt": "2025-04-23T18:56:35.691Z",
         "createdBy": {
           "sys": {
@@ -4804,7 +4919,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-13T18:42:21.045Z",
+        "updatedAt": "2025-06-24T17:00:08.430Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -4879,8 +4994,8 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "journeyImages",
-          "widgetId": "assetGalleryEditor",
+          "fieldId": "journeyTimelinePeriods",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -4962,7 +5077,7 @@
             "linkType": "Space"
           }
         },
-        "version": 22,
+        "version": 24,
         "createdAt": "2025-05-04T20:19:09.885Z",
         "createdBy": {
           "sys": {
@@ -4971,7 +5086,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-14T19:20:04.171Z",
+        "updatedAt": "2025-06-14T20:21:58.592Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -6239,6 +6354,77 @@
         },
         {
           "fieldId": "fitnessApp",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5yib965szeod",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2025-06-24T16:55:11.430Z",
+        "createdBy": {
+          "sys": {
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-06-24T16:56:35.762Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "timelinePeriod",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "period",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "buttonText",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
@@ -11113,7 +11299,7 @@
         "id": "5YU8BsOnoGWWroWyWSkUkr",
         "type": "Entry",
         "createdAt": "2025-04-23T18:57:49.277Z",
-        "updatedAt": "2025-06-13T18:42:34.663Z",
+        "updatedAt": "2025-06-24T17:00:21.285Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11121,8 +11307,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 79,
-        "publishedAt": "2025-06-13T18:42:34.663Z",
+        "publishedVersion": 83,
+        "publishedAt": "2025-06-24T17:00:21.285Z",
         "firstPublishedAt": "2025-04-23T18:59:02.190Z",
         "createdBy": {
           "sys": {
@@ -11138,8 +11324,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 18,
-        "version": 80,
+        "publishedCounter": 20,
+        "version": 84,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11338,39 +11524,39 @@
           ]
         },
         "journeyTitle": {
-          "en-US": "The journey from self-transformation to coaching"
+          "en-US": "From Slump to Slay"
         },
         "journeySubtitle": {
           "en-US": "Subtitle"
         },
-        "journeyImages": {
+        "journeyTimelinePeriods": {
           "en-US": [
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Asset",
-                "id": "7G2dtwb8NUUY0fuH0C9YWW"
+                "linkType": "Entry",
+                "id": "3WiV0nyJtNb4JKqPzF9H4X"
               }
             },
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Asset",
-                "id": "52xmloy91HmfcSmWCtj16g"
+                "linkType": "Entry",
+                "id": "4INKHzJ3VtMXjrvVi0Nrhx"
               }
             },
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Asset",
-                "id": "29iloj1Xt7LFpDY8kGPQN0"
+                "linkType": "Entry",
+                "id": "2OQmf5ol38aWDSlFYVVM94"
               }
             },
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Asset",
-                "id": "1krIBn89OQQFZpyZiHLmQ2"
+                "linkType": "Entry",
+                "id": "MU1ftYuJP6uds6mub4byI"
               }
             }
           ]
@@ -11402,7 +11588,7 @@
         "id": "3msgezHRURF7JfDsa04js",
         "type": "Entry",
         "createdAt": "2025-05-03T19:12:27.222Z",
-        "updatedAt": "2025-06-14T18:58:43.315Z",
+        "updatedAt": "2025-06-14T20:21:08.844Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11410,8 +11596,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 71,
-        "publishedAt": "2025-06-14T18:58:43.315Z",
+        "publishedVersion": 73,
+        "publishedAt": "2025-06-14T20:21:08.844Z",
         "firstPublishedAt": "2025-05-03T19:15:10.858Z",
         "createdBy": {
           "sys": {
@@ -11427,8 +11613,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 22,
-        "version": 72,
+        "publishedCounter": 23,
+        "version": 74,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11457,7 +11643,7 @@
           "en-US": 5
         },
         "slug": {
-          "en-US": "train-together-slay-together"
+          "en-US": "train-together-fun-together"
         },
         "type": {
           "en-US": "duo"
@@ -17949,7 +18135,7 @@
         "id": "4dYescxxE6HqcMH3ic2YsC",
         "type": "Entry",
         "createdAt": "2025-05-04T20:29:23.029Z",
-        "updatedAt": "2025-06-05T13:04:42.104Z",
+        "updatedAt": "2025-06-14T19:21:39.256Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -17957,8 +18143,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2025-06-05T13:04:42.104Z",
+        "publishedVersion": 10,
+        "publishedAt": "2025-06-14T19:21:39.256Z",
         "firstPublishedAt": "2025-05-04T20:30:21.066Z",
         "createdBy": {
           "sys": {
@@ -17974,8 +18160,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 9,
+        "publishedCounter": 4,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -18005,6 +18191,9 @@
         },
         "slug": {
           "en-US": "come-train-with-vili"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -19076,7 +19265,7 @@
         "id": "3jVcd7Bsd1v5u3TXD6leiY",
         "type": "Entry",
         "createdAt": "2025-05-04T20:32:42.787Z",
-        "updatedAt": "2025-05-04T21:22:44.193Z",
+        "updatedAt": "2025-06-14T20:22:06.778Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -19084,8 +19273,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2025-05-04T21:22:44.193Z",
+        "publishedVersion": 13,
+        "publishedAt": "2025-06-14T20:22:06.778Z",
         "firstPublishedAt": "2025-05-04T20:32:59.619Z",
         "createdBy": {
           "sys": {
@@ -19101,8 +19290,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 10,
+        "publishedCounter": 5,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -19128,10 +19317,13 @@
       },
       "fields": {
         "title": {
-          "en-US": "Curriculum - TTST"
+          "en-US": "Curriculum - TTFT"
         },
         "slug": {
-          "en-US": "train-together-slay-together"
+          "en-US": "train-together-fun-together"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -20527,7 +20719,7 @@
         "id": "2OhCuxPE2aqXrVugQ09Vid",
         "type": "Entry",
         "createdAt": "2025-05-05T12:42:21.971Z",
-        "updatedAt": "2025-05-06T10:57:13.989Z",
+        "updatedAt": "2025-06-14T19:21:49.149Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20535,8 +20727,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2025-05-06T10:57:13.989Z",
+        "publishedVersion": 10,
+        "publishedAt": "2025-06-14T19:21:49.149Z",
         "firstPublishedAt": "2025-05-05T12:42:54.213Z",
         "createdBy": {
           "sys": {
@@ -20552,8 +20744,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 9,
+        "publishedCounter": 3,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -20583,6 +20775,9 @@
         },
         "slug": {
           "en-US": "silver-evoluation-silver-impact"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -22073,7 +22268,7 @@
         "id": "4z7xglqceHDhapzbhfMhyi",
         "type": "Entry",
         "createdAt": "2025-05-05T12:44:45.018Z",
-        "updatedAt": "2025-05-05T12:45:04.737Z",
+        "updatedAt": "2025-06-14T19:22:13.003Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -22081,8 +22276,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-05-05T12:45:04.737Z",
+        "publishedVersion": 6,
+        "publishedAt": "2025-06-14T19:22:13.003Z",
         "firstPublishedAt": "2025-05-05T12:45:04.737Z",
         "createdBy": {
           "sys": {
@@ -22098,8 +22293,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -22129,6 +22324,9 @@
         },
         "slug": {
           "en-US": "go-the-distance"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -23292,7 +23490,7 @@
         "id": "5SI3kGHHeaAaIuCLUCTrJc",
         "type": "Entry",
         "createdAt": "2025-05-05T12:46:47.401Z",
-        "updatedAt": "2025-05-05T12:47:12.782Z",
+        "updatedAt": "2025-06-14T19:22:08.105Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -23300,8 +23498,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-05-05T12:47:12.782Z",
+        "publishedVersion": 6,
+        "publishedAt": "2025-06-14T19:22:08.105Z",
         "firstPublishedAt": "2025-05-05T12:47:12.782Z",
         "createdBy": {
           "sys": {
@@ -23317,8 +23515,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -23348,6 +23546,9 @@
         },
         "slug": {
           "en-US": "bronze-skin-iron-mind"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -24577,7 +24778,7 @@
         "id": "2TrkRUvusteOHIAR8vRSVn",
         "type": "Entry",
         "createdAt": "2025-05-05T12:49:39.239Z",
-        "updatedAt": "2025-05-05T12:49:59.638Z",
+        "updatedAt": "2025-06-14T19:22:03.025Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -24585,8 +24786,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-05-05T12:49:59.638Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-06-14T19:22:03.025Z",
         "firstPublishedAt": "2025-05-05T12:49:59.638Z",
         "createdBy": {
           "sys": {
@@ -24602,8 +24803,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -24633,6 +24834,9 @@
         },
         "slug": {
           "en-US": "eat-better-live-better"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -25763,7 +25967,7 @@
         "id": "45KH5vUevkFhse7OtyqwAV",
         "type": "Entry",
         "createdAt": "2025-05-05T12:51:17.051Z",
-        "updatedAt": "2025-05-05T12:51:38.641Z",
+        "updatedAt": "2025-06-14T19:21:57.750Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -25771,8 +25975,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-05-05T12:51:38.641Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-06-14T19:21:57.750Z",
         "firstPublishedAt": "2025-05-05T12:51:38.641Z",
         "createdBy": {
           "sys": {
@@ -25788,8 +25992,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -25819,6 +26023,9 @@
         },
         "slug": {
           "en-US": "duo-training-plan"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -26982,7 +27189,7 @@
         "id": "4s1qWknZSqmxYEwtAudbWO",
         "type": "Entry",
         "createdAt": "2025-05-05T12:55:08.602Z",
-        "updatedAt": "2025-05-05T12:55:30.696Z",
+        "updatedAt": "2025-06-14T19:21:53.460Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -26990,8 +27197,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-05-05T12:55:30.696Z",
+        "publishedVersion": 6,
+        "publishedAt": "2025-06-14T19:21:53.460Z",
         "firstPublishedAt": "2025-05-05T12:55:30.696Z",
         "createdBy": {
           "sys": {
@@ -27007,8 +27214,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -27038,6 +27245,9 @@
         },
         "slug": {
           "en-US": "golden-body-golden-mind"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -28201,7 +28411,7 @@
         "id": "6K24kHkGarQXKLyHhAJhIb",
         "type": "Entry",
         "createdAt": "2025-05-05T12:57:37.546Z",
-        "updatedAt": "2025-05-06T11:11:32.893Z",
+        "updatedAt": "2025-06-14T19:21:44.244Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -28209,8 +28419,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-05-06T11:11:32.893Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-06-14T19:21:44.244Z",
         "firstPublishedAt": "2025-05-05T12:58:03.284Z",
         "createdBy": {
           "sys": {
@@ -28226,8 +28436,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -28257,6 +28467,9 @@
         },
         "slug": {
           "en-US": "move-better-live-better"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -38699,7 +38912,7 @@
         "id": "2IxLWlO95vsGHcGtN0ShWC",
         "type": "Entry",
         "createdAt": "2025-05-25T18:55:52.172Z",
-        "updatedAt": "2025-06-13T19:47:44.816Z",
+        "updatedAt": "2025-06-14T20:23:05.136Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38707,8 +38920,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 30,
-        "publishedAt": "2025-06-13T19:47:44.816Z",
+        "publishedVersion": 32,
+        "publishedAt": "2025-06-14T20:23:05.136Z",
         "firstPublishedAt": "2025-05-25T18:57:52.469Z",
         "createdBy": {
           "sys": {
@@ -38724,8 +38937,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 9,
-        "version": 31,
+        "publishedCounter": 10,
+        "version": 33,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38774,6 +38987,13 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
+                "id": "3msgezHRURF7JfDsa04js"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
                 "id": "3G1a1GNfjk4jAEqJph7aIr"
               }
             },
@@ -38782,13 +39002,6 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "3IINHggtiHEy4D6Gs6W3j2"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "3msgezHRURF7JfDsa04js"
               }
             }
           ]
@@ -40503,7 +40716,7 @@
         "id": "41piyLKrnULC3RgeuK8gAB",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:03.085Z",
-        "updatedAt": "2025-06-04T10:15:38.710Z",
+        "updatedAt": "2025-06-20T12:52:48.862Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40511,8 +40724,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2025-06-04T10:15:38.710Z",
+        "publishedVersion": 33,
+        "publishedAt": "2025-06-20T12:52:48.862Z",
         "firstPublishedAt": "2025-06-01T19:37:13.113Z",
         "createdBy": {
           "sys": {
@@ -40528,8 +40741,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 6,
-        "version": 16,
+        "publishedCounter": 10,
+        "version": 34,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40558,7 +40771,7 @@
           "en-US": "Move With Power – Live With Purpose"
         },
         "subheading": {
-          "en-US": "No false hype - only science-backed fitness that lift you up"
+          "en-US": "Fitness backed by science will lift you up."
         }
       }
     },
@@ -40580,7 +40793,7 @@
         "id": "2jmj1hJCusV1cWhtdoyp2J",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:22.400Z",
-        "updatedAt": "2025-06-03T09:00:29.810Z",
+        "updatedAt": "2025-06-20T12:53:30.142Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40588,8 +40801,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2025-06-03T09:00:29.810Z",
+        "publishedVersion": 16,
+        "publishedAt": "2025-06-20T12:53:30.142Z",
         "firstPublishedAt": "2025-06-01T19:37:35.271Z",
         "createdBy": {
           "sys": {
@@ -40605,8 +40818,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 14,
+        "publishedCounter": 3,
+        "version": 17,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40635,7 +40848,7 @@
           "en-US": "We Build More Than Just Muscles"
         },
         "subheading": {
-          "en-US": " Strength built to last and Mindset built to elevate your life"
+          "en-US": " Strength built to last and mindset built to elevate your life."
         }
       }
     },
@@ -40657,7 +40870,7 @@
         "id": "6Nu8wmzqgHlDVLtPUmJ1FT",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:40.897Z",
-        "updatedAt": "2025-06-03T09:13:03.342Z",
+        "updatedAt": "2025-06-20T12:48:57.547Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40665,8 +40878,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-03T09:13:03.342Z",
+        "publishedVersion": 10,
+        "publishedAt": "2025-06-20T12:48:57.547Z",
         "firstPublishedAt": "2025-06-01T19:37:51.578Z",
         "createdBy": {
           "sys": {
@@ -40682,8 +40895,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 7,
+        "publishedCounter": 4,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40712,7 +40925,7 @@
           "en-US": "Your body tells your story - Let’s make it stronger"
         },
         "subheading": {
-          "en-US": "Train with purpose, not punishment. Feel good in your body—long term."
+          "en-US": "Train with purpose and joy. Feel good in your body long-term."
         }
       }
     },
@@ -41827,7 +42040,7 @@
         "id": "6SQkqHauIHelHN0k5dVuO5",
         "type": "Entry",
         "createdAt": "2025-06-08T18:01:23.033Z",
-        "updatedAt": "2025-06-08T18:05:19.218Z",
+        "updatedAt": "2025-06-14T19:21:34.795Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -41835,8 +42048,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2025-06-08T18:05:19.218Z",
+        "publishedVersion": 11,
+        "publishedAt": "2025-06-14T19:21:34.795Z",
         "firstPublishedAt": "2025-06-08T18:05:19.218Z",
         "createdBy": {
           "sys": {
@@ -41852,8 +42065,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 9,
+        "publishedCounter": 2,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41883,6 +42096,9 @@
         },
         "slug": {
           "en-US": "together-total-slay"
+        },
+        "disclaimer": {
+          "en-US": "Disclaimer: The curriculum is personalized and may vary based on each client’s goals, fitness level, and progress pace."
         },
         "curriculumPeriods": {
           "en-US": [
@@ -45423,6 +45639,76 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "bronze-skin-iron-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "come-train-with-vili"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "duo-training-plan"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "eat-better-live-better"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "golden-body-golden-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "go-the-distance"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "move-better-live-better"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "silver-evolution-silver-impact"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "together-total-slay"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "train-together-fun-together"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -45438,7 +45724,7 @@
         "id": "16LqeiKHSyMq0TAiJKYwdK",
         "type": "Entry",
         "createdAt": "2025-06-13T19:32:37.544Z",
-        "updatedAt": "2025-06-13T19:41:32.661Z",
+        "updatedAt": "2025-06-14T20:08:22.518Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45446,8 +45732,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2025-06-13T19:41:32.661Z",
+        "publishedVersion": 11,
+        "publishedAt": "2025-06-14T20:08:22.518Z",
         "firstPublishedAt": "2025-06-13T19:33:14.246Z",
         "createdBy": {
           "sys": {
@@ -45463,8 +45749,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 8,
+        "publishedCounter": 3,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45515,6 +45801,76 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "bronze-skin-iron-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "come-train-with-vili"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "duo-training-plan"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "eat-better-live-better"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "golden-body-golden-mind"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "go-the-distance"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "move-better-live-better"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "silver-evolution-silver-impact"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "together-total-slay"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "train-together-fun-together"
+            }
+          }
         ],
         "concepts": [
         ]
@@ -45530,7 +45886,7 @@
         "id": "abdqDD7sPwxw4tVxkNwrL",
         "type": "Entry",
         "createdAt": "2025-06-13T19:33:20.684Z",
-        "updatedAt": "2025-06-13T19:41:25.455Z",
+        "updatedAt": "2025-06-14T20:08:40.533Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45538,8 +45894,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2025-06-13T19:41:25.455Z",
+        "publishedVersion": 10,
+        "publishedAt": "2025-06-14T20:08:40.533Z",
         "firstPublishedAt": "2025-06-13T19:33:49.357Z",
         "createdBy": {
           "sys": {
@@ -45555,8 +45911,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 8,
+        "publishedCounter": 3,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45601,6 +45957,429 @@
         },
         "url": {
           "en-US": "/contact-and-booking"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "3WiV0nyJtNb4JKqPzF9H4X",
+        "type": "Entry",
+        "createdAt": "2025-06-24T16:55:18.961Z",
+        "updatedAt": "2025-06-24T16:57:21.137Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-06-24T16:57:21.137Z",
+        "firstPublishedAt": "2025-06-24T16:57:21.137Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "timelinePeriod"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/3WiV0nyJtNb4JKqPzF9H4X"
+      },
+      "fields": {
+        "period": {
+          "en-US": "2025 and beyond"
+        },
+        "title": {
+          "en-US": "Coaching & Build SlayFitVili"
+        },
+        "description": {
+          "en-US": "Building SlayFitVili — coaching with heart + strategy. Coaching office men and women alike across the world to slay with strength and softness. If this strokes a string in you..."
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7G2dtwb8NUUY0fuH0C9YWW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "52xmloy91HmfcSmWCtj16g"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "29iloj1Xt7LFpDY8kGPQN0"
+              }
+            }
+          ]
+        },
+        "buttonText": {
+          "en-US": "Book a free consultation"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "4INKHzJ3VtMXjrvVi0Nrhx",
+        "type": "Entry",
+        "createdAt": "2025-06-24T16:57:25.961Z",
+        "updatedAt": "2025-06-24T16:58:04.469Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-06-24T16:58:04.469Z",
+        "firstPublishedAt": "2025-06-24T16:58:04.469Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "timelinePeriod"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/4INKHzJ3VtMXjrvVi0Nrhx"
+      },
+      "fields": {
+        "period": {
+          "en-US": "TBD"
+        },
+        "title": {
+          "en-US": "TBD"
+        },
+        "description": {
+          "en-US": "TBD"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7G2dtwb8NUUY0fuH0C9YWW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "52xmloy91HmfcSmWCtj16g"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "29iloj1Xt7LFpDY8kGPQN0"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "2OQmf5ol38aWDSlFYVVM94",
+        "type": "Entry",
+        "createdAt": "2025-06-24T16:58:09.840Z",
+        "updatedAt": "2025-06-24T16:58:40.181Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-24T16:58:40.181Z",
+        "firstPublishedAt": "2025-06-24T16:58:40.181Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "timelinePeriod"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2OQmf5ol38aWDSlFYVVM94"
+      },
+      "fields": {
+        "period": {
+          "en-US": "2023 - 2024"
+        },
+        "title": {
+          "en-US": "Transformation"
+        },
+        "description": {
+          "en-US": "Fell in love with real progress. Helped my first clients. Certified. Grounded. Coaching with purpose."
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "52xmloy91HmfcSmWCtj16g"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7G2dtwb8NUUY0fuH0C9YWW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "29iloj1Xt7LFpDY8kGPQN0"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "MU1ftYuJP6uds6mub4byI",
+        "type": "Entry",
+        "createdAt": "2025-06-24T16:58:52.825Z",
+        "updatedAt": "2025-06-24T16:59:19.168Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-06-24T16:59:19.168Z",
+        "firstPublishedAt": "2025-06-24T16:59:19.168Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "timelinePeriod"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/MU1ftYuJP6uds6mub4byI"
+      },
+      "fields": {
+        "period": {
+          "en-US": "2020-2022"
+        },
+        "title": {
+          "en-US": "Before transformation"
+        },
+        "description": {
+          "en-US": "Lost. Overweight. Restarting every Monday. Decided to flip life around - Got reborn in many ways"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "52xmloy91HmfcSmWCtj16g"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7G2dtwb8NUUY0fuH0C9YWW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "29iloj1Xt7LFpDY8kGPQN0"
+              }
+            }
+          ]
         }
       }
     }
@@ -47138,7 +47917,7 @@
         "id": "5ICS9pWZE6a6TkXiH5ZZEu",
         "type": "Asset",
         "createdAt": "2025-06-13T18:14:31.598Z",
-        "updatedAt": "2025-06-13T18:16:59.315Z",
+        "updatedAt": "2025-06-21T19:32:07.119Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -47146,8 +47925,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-06-13T18:16:59.315Z",
+        "publishedVersion": 24,
+        "publishedAt": "2025-06-21T19:32:07.119Z",
         "firstPublishedAt": "2025-06-13T18:16:59.315Z",
         "createdBy": {
           "sys": {
@@ -47163,8 +47942,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 5,
+        "version": 25,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -47185,15 +47964,15 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/5yib965szeod/5ICS9pWZE6a6TkXiH5ZZEu/c7ba788b16d0faed19603b27f0e2283d/Viili_Pekkala_6_1.jpg",
+            "url": "//images.ctfassets.net/5yib965szeod/5ICS9pWZE6a6TkXiH5ZZEu/095be58b3fbd689c0e869d255d674f46/IMG_6423.jpg",
             "details": {
-              "size": 2224619,
+              "size": 1775693,
               "image": {
-                "width": 4664,
-                "height": 2684
+                "width": 4032,
+                "height": 2268
               }
             },
-            "fileName": "Viili_Pekkala_6_1.jpg",
+            "fileName": "IMG_6423.jpg",
             "contentType": "image/jpeg"
           }
         }
@@ -47217,7 +47996,7 @@
         "id": "74cDhoKxbxzmV1z9T7gw1m",
         "type": "Asset",
         "createdAt": "2025-06-13T18:25:17.986Z",
-        "updatedAt": "2025-06-13T18:25:48.497Z",
+        "updatedAt": "2025-06-21T19:15:52.860Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -47225,8 +48004,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-06-13T18:25:48.497Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-06-21T19:15:52.860Z",
         "firstPublishedAt": "2025-06-13T18:25:48.497Z",
         "createdBy": {
           "sys": {
@@ -47242,8 +48021,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -47264,15 +48043,97 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/5yib965szeod/74cDhoKxbxzmV1z9T7gw1m/47dbad344fc916619506e40889b4975a/Viili_Pekkala_2_1.jpg",
+            "url": "//images.ctfassets.net/5yib965szeod/74cDhoKxbxzmV1z9T7gw1m/dbdea7eedd1afc7f7534569720add4c7/IMG_6467.jpg",
             "details": {
-              "size": 2339219,
+              "size": 1393829,
               "image": {
-                "width": 7000,
-                "height": 2514
+                "width": 4032,
+                "height": 2268
               }
             },
-            "fileName": "Viili_Pekkala_2_1.jpg",
+            "fileName": "IMG_6467.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "1jV2u6Xp20ljZ36PKycq63",
+        "type": "Asset",
+        "createdAt": "2025-06-21T08:41:43.653Z",
+        "updatedAt": "2025-06-21T09:35:27.819Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-06-21T09:35:27.819Z",
+        "firstPublishedAt": "2025-06-21T09:35:27.819Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/1jV2u6Xp20ljZ36PKycq63"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Before transformation"
+        },
+        "description": {
+          "en-US": "Before transformation 2020"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/1jV2u6Xp20ljZ36PKycq63/b615674a2676c09f09d4444cd2a8dbc8/IMG_9583.jpg",
+            "details": {
+              "size": 3274492,
+              "image": {
+                "width": 3024,
+                "height": 4032
+              }
+            },
+            "fileName": "IMG_9583.jpg",
             "contentType": "image/jpeg"
           }
         }

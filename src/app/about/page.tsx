@@ -8,6 +8,7 @@ import Philosophy from "./components/Philosophy";
 import Journey from "./components/Journey";
 import Introduction from "./components/Introduction";
 import { AssetFields } from "contentful";
+import { TypeTimelinePeriodFields } from "app/lib/types/contentful/TypeTimelinePeriod";
 
 export default async function About() {
   const aboutPageData = await getEntries<TypeAboutPageDataSkeleton>(
@@ -16,6 +17,9 @@ export default async function About() {
 
   const aboutPageContent: TypeAboutPageDataFields = aboutPageData[0];
   const image = aboutPageContent.image.fields as AssetFields;
+  const timelinePeriods = aboutPageContent.journeyTimelinePeriods.map(
+    (el) => el.fields
+  ) as TypeTimelinePeriodFields[];
 
   return (
     <>
@@ -40,7 +44,7 @@ export default async function About() {
       <Journey
         title={aboutPageContent.journeyTitle}
         subtitle={aboutPageContent.journeySubtitle ?? ""}
-        images={aboutPageContent.journeyImages}
+        timelinePeriods={timelinePeriods}
       />
       <Divider />
     </>

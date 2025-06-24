@@ -1,4 +1,5 @@
 import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
+import { TypeTimelinePeriodSkeleton } from "./TypeTimelinePeriod";
 
 export interface TypeAboutPageDataFields {
   name: EntryFields.Symbol;
@@ -11,7 +12,7 @@ export interface TypeAboutPageDataFields {
   slogans: EntryFields.Symbol[];
   journeyTitle: EntryFields.Symbol;
   journeySubtitle?: EntryFields.Symbol;
-  journeyImages: Asset[];
+  journeyTimelinePeriods: Entry<TypeTimelinePeriodSkeleton>[];
 }
 
 export interface TypeAboutPageDataSkeleton extends EntrySkeletonType {

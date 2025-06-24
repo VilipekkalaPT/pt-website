@@ -4,9 +4,11 @@
   }
 
   .card {
+    width: 100%;
     border: 1px solid var(--color-gray-300);
     border-radius: var(--radius-xl);
     padding: var(--spacing-l);
+    cursor: pointer;
   }
 
   .image-wrapper {

@@ -5,7 +5,7 @@ interface IconButtonProps
   variant: "primary" | "secondary" | "outlined" | "ghost";
   icon: React.ReactNode;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export default function IconButton({
