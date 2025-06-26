@@ -3,10 +3,7 @@ import InfoSection from "app/components/InfoSection";
 import ReviewCard from "app/landing-page/components/ReviewCard";
 import { getEntries } from "app/lib/contentfulDataService";
 import { TypeImageCardFields } from "app/lib/types/contentful";
-import {
-  TypeReviewFields,
-  TypeReviewSkeleton,
-} from "app/lib/types/contentful/TypeReview";
+import { TypeReviewFields } from "app/lib/types/contentful/TypeReview";
 import {
   TypeReviewsPageDataFields,
   TypeReviewsPageDataSkeleton,
