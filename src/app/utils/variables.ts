@@ -37,8 +37,6 @@ export enum INFO_TABS {
   CURRICULUM = "Curriculum",
 }
 export const TO_BE_DISCUSSED = "To be discussed with coach Vili.";
-export const HOW_TRAINING_SESSION_LOOKS_LIKE =
-  "How a training session looks like";
 export const INFO_SECTION_TITLE = "Take a moment to consider carefully";
 export const INFO_SECTION_SUBTITLE =
   "Enrolling in this plan takes time, energy, and commitment. Make sure you’ve got all the info you need before jumping in!";

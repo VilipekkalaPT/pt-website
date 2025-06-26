@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images: {
-    domains: ["images.ctfassets.net"],
+    domains: ["images.ctfassets.net", "downloads.ctfassets.net"],
   },
 };
 

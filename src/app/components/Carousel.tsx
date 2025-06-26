@@ -9,15 +9,27 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 interface CarouselProps {
   images: AssetFields[];
+  sliderPerView?: number;
+  fillImage?: boolean;
 }
 
-export default function Carousel({ images }: CarouselProps) {
+export default function Carousel({
+  images,
+  sliderPerView,
+  fillImage,
+}: CarouselProps) {
   // const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     // slideChanged(slider) {
     //   setCurrentSlide(slider.track.details.rel);
     // },
+    ...(sliderPerView && {
+      slides: {
+        perView: sliderPerView,
+        spacing: 20,
+      },
+    }),
   });
 
   // const goToSlide = (i: number) => {
@@ -36,16 +48,25 @@ export default function Carousel({ images }: CarouselProps) {
 
   return (
     <div className="relative w-full mx-auto h-full">
-      <div ref={sliderRef} className="keen-slider overflow-hidden">
+      <div ref={sliderRef} className="keen-slider h-full overflow-hidden">
         {images &&
           images.map((image, index) => (
             <div key={index} className="keen-slider__slide">
-              <Image
-                src={`https:${image.file?.url ?? ""}`}
-                alt={""}
-                width={image.file?.details.image?.width}
-                height={image.file?.details.image?.height}
-              />
+              {fillImage ? (
+                <Image
+                  src={`https:${image.file?.url ?? ""}`}
+                  alt={image.title ?? "Image"}
+                  width={image.file?.details.image?.width}
+                  height={image.file?.details.image?.height}
+                />
+              ) : (
+                <Image
+                  src={`https:${image.file?.url ?? ""}`}
+                  alt={image.title ?? "Image"}
+                  fill
+                  className="block w-full h-auto object-cover"
+                />
+              )}
             </div>
           ))}
       </div>

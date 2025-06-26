@@ -17,6 +17,9 @@ export interface TypePackageFields {
   expectedResults: EntryFields.RichText;
   forWhom: EntryFields.RichText;
   notForWhom: EntryFields.RichText;
+  howTrainingSessionLooksLikeTitle?: EntryFields.Symbol;
+  howTrainingSessionLooksLikeSubtitle?: EntryFields.Symbol;
+  howTrainingSessionLooksLikeImages?: Asset[];
   tags: ("diet" | "gym" | "plan")[];
 }
 

@@ -93,7 +93,6 @@ export default function SinglePackageContainer({
   const router = useRouter();
   const pricingPackagesRoute = getPricingPackagesRoute(packageDetails.type);
   const image = packageDetails.image?.fields as AssetFields;
-
   const tabs = createTabs(packageDetails, curriculum);
 
   return (
@@ -111,7 +110,13 @@ export default function SinglePackageContainer({
         image={image}
       />
       <InfoTabs tabs={tabs} showCurriculum={!packageDetails.sessionOptions} />
-      {packageDetails.sessionOptions && <HowTrainingSessionLookLike />}
+      {packageDetails.howTrainingSessionLooksLikeTitle && (
+        <HowTrainingSessionLookLike
+          title={packageDetails.howTrainingSessionLooksLikeTitle}
+          subtitle={packageDetails.howTrainingSessionLooksLikeSubtitle}
+          images={packageDetails.howTrainingSessionLooksLikeImages}
+        />
+      )}
       {reviews.length > 0 && <ReviewSection reviews={reviews} />}
       <InfoSection
         title={INFO_SECTION_TITLE}
