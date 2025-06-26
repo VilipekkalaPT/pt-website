@@ -16,7 +16,7 @@ interface CarouselProps {
 export default function Carousel({
   images,
   sliderPerView,
-  fillImage,
+  fillImage = true,
 }: CarouselProps) {
   // const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({

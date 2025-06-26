@@ -1,6 +1,5 @@
 import HeroSection from "app/components/HeroSection";
 import InfoSection from "app/components/InfoSection";
-import ReviewCard from "app/landing-page/components/ReviewCard";
 import { getEntries } from "app/lib/contentfulDataService";
 import { TypeImageCardFields } from "app/lib/types/contentful";
 import { TypeReviewFields } from "app/lib/types/contentful/TypeReview";
@@ -10,6 +9,7 @@ import {
 } from "app/lib/types/contentful/TypeReviewsPageData";
 import { HeadingSection } from "app/lib/types/type";
 import { AssetFields } from "contentful";
+import AllReviews from "./components/AllReviews";
 
 export default async function ClientSpotlights() {
   const reviewsPageData = await getEntries<TypeReviewsPageDataSkeleton>(
@@ -39,19 +39,11 @@ export default async function ClientSpotlights() {
         headingSections={headingSections}
         fillImage={false}
       />
-      <div className="mt-10 px-24">
-        <p className="text-2xl font-bold mb-1">
-          {reviewsPageContent.reviewSectionTitle}
-        </p>
-        <p className="text-gray-500">
-          {reviewsPageContent.reviewSectionSubtitle}
-        </p>
-        <div className="mt-10 grid grid-cols-3 gap-8">
-          {allReviews.map((review) => (
-            <ReviewCard key={review.id} review={review} showChanges />
-          ))}
-        </div>
-      </div>
+      <AllReviews
+        title={reviewsPageContent.reviewSectionTitle}
+        subtitle={reviewsPageContent.reviewSectionSubtitle}
+        allReviews={allReviews}
+      />
       <InfoSection
         title={reviewsPageContent.infoSectionTitle}
         subtitle={reviewsPageContent.infoSectionSubtitle}
