@@ -2,17 +2,12 @@
 
 import Button from "app/components/Button";
 import { CheckIcon } from "@heroicons/react/24/solid";
-import { SORT_TYPE } from "app/utils/variables";
 import cn from "classnames";
-
-interface Option {
-  label: string;
-  value: SORT_TYPE;
-}
+import { SORT_TYPE, SortOption } from "../hooks/useSort";
 
 interface SortProps {
-  selectedSort: string;
-  options: Option[];
+  selectedSort: SORT_TYPE;
+  options: SortOption[];
   handleSortChange: (value: SORT_TYPE) => void;
   className?: string;
 }

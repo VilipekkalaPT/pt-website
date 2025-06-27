@@ -18,7 +18,7 @@ export default function HowTrainingSessionLookLike({
     <div className="mt-25 px-12 w-full">
       <p className="text-2xl font-bold mb-2">{title}</p>
       <p className="text-xl text-gray-500 mb-4">{subtitle}</p>
-      <div className="w-full h-[700px]">
+      <div className="w-full h-[44rem]">
         {imageFields.length > 0 && (
           <Carousel images={imageFields} sliderPerView={3} fillImage={false} />
         )}

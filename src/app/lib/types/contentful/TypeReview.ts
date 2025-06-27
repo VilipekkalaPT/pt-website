@@ -18,7 +18,22 @@ export interface TypeReviewFields {
     | "Together total slay"
     | "Train together slay together"
   )[];
-  changes?: EntryFields.Symbol[];
+  duration?: EntryFields.Symbol;
+  date?: EntryFields.Date;
+  changes?: (
+    | "Adopt a new lifestyle"
+    | "Boost overall fitness"
+    | "Feel lighter"
+    | "Feel stronger"
+    | "Improve fitness capacity"
+    | "Improve posture"
+    | "Improve squat strength"
+    | "Increase strength"
+    | "Look more fit"
+    | "Lose weight"
+    | "Move better"
+    | "Sleep better"
+  )[];
   rating: EntryFields.Number;
   showOnLandingPage: EntryFields.Boolean;
 }

@@ -5,6 +5,8 @@ export const START = "Start";
 export const LATEST_REVIEWS = "Latest reviews";
 export const HERO_SECTION_IMAGE = "Hero image";
 export const HEADING_IMAGE = "Heading image";
+export const READ_MORE = "Read more";
+export const READ_LESS = "Read less";
 
 // Landing Page Variables
 export const LOGO = "logo";
@@ -62,10 +64,9 @@ export const DIFFERENT_SERVICES_SLAYFITVILI = "SlayFitVili";
 export const DIFFERENT_SERVICES_TYPICAL_GYM_PT = "Typical gym PT";
 export const DIFFERENT_SERVICES_FITNESS_APP = "Fitness app";
 
-export enum SORT_TYPE {
-  PRICE_ASC = "price-asc",
-  PRICE_DESC = "price-desc",
-}
+// Reviews Page Variables
+export const PACKAGE_TITLE = "Package";
+export const DURATION = "Duration";
 
 // Pricing Page Variables
 export const SESSION_SELECTOR_TITLE = "Select a number of sessions";

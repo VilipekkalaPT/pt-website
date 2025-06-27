@@ -17,8 +17,7 @@ export default function Review({ reviews }: ReviewProps) {
           <ReviewCard
             key={review.id}
             review={review}
-            showRating
-            reviewerNamePostion="bottom"
+            reviewCardType="compact"
           />
         ))}
       </div>

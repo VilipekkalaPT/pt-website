@@ -1,15 +1,24 @@
-import { SORT_TYPE } from "app/utils/variables";
+import { TypeReviewFields } from "app/lib/types/contentful";
 import { useMemo, useState } from "react";
-import { TypePackageFields } from "app/lib/types/contentful";
 
-export const sortOptions = [
-  { label: "Price ascending", value: SORT_TYPE.PRICE_ASC },
-  { label: "Price descending", value: SORT_TYPE.PRICE_DESC },
+export enum SORT_TYPE {
+  RATING_ASC = "rating-asc",
+  RATING_DESC = "rating-desc",
+}
+
+export interface SortOption {
+  label: string;
+  value: SORT_TYPE;
+}
+
+export const sortOptions: SortOption[] = [
+  { label: "Rating ascending", value: SORT_TYPE.RATING_ASC },
+  { label: "Rating descending", value: SORT_TYPE.RATING_DESC },
 ];
 
-export const useSort = (allPackages: TypePackageFields[]) => {
+export const useSort = (allReviews: TypeReviewFields[]) => {
   const [selectedSort, setSelectedSort] = useState<SORT_TYPE>(
-    sortOptions[0].value
+    SORT_TYPE.RATING_DESC
   );
 
   const handleSortChange = (value: SORT_TYPE) => {
@@ -17,16 +26,16 @@ export const useSort = (allPackages: TypePackageFields[]) => {
   };
 
   const result = useMemo(() => {
-    const sortedPackages = [...allPackages];
+    const sortedReviews = [...allReviews];
 
-    if (selectedSort === SORT_TYPE.PRICE_ASC) {
-      sortedPackages.sort((a, b) => Number(a.price) - Number(b.price));
+    if (selectedSort === SORT_TYPE.RATING_ASC) {
+      sortedReviews.sort((a, b) => Number(a.rating) - Number(b.rating));
     } else {
-      sortedPackages.sort((a, b) => Number(b.price) - Number(a.price));
+      sortedReviews.sort((a, b) => Number(b.rating) - Number(a.rating));
     }
 
-    return sortedPackages;
-  }, [allPackages, selectedSort]);
+    return sortedReviews;
+  }, [allReviews, selectedSort]);
 
   return {
     result,

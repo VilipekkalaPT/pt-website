@@ -1,5 +1,9 @@
+"use client";
+
 import ReviewCard from "app/landing-page/components/ReviewCard";
 import { TypeReviewFields } from "app/lib/types/contentful";
+import Sort from "app/pricing/components/Sort";
+import { sortOptions, useSort } from "app/pricing/hooks/useSort";
 
 interface AllReviewsProps {
   title: string;
@@ -12,13 +16,24 @@ export default function AllReviews({
   subtitle,
   allReviews,
 }: AllReviewsProps) {
+  const filteredReviews = allReviews.filter(
+    (review) => !review.showOnLandingPage
+  );
+  const { result, selectedSort, handleSortChange } = useSort(filteredReviews);
+
   return (
     <div className="mt-10 px-24">
       <p className="text-2xl font-bold mb-1">{title}</p>
-      <p className="text-gray-500">{subtitle}</p>
-      <div className="mt-10 grid grid-cols-3 gap-8">
-        {allReviews.map((review) => (
-          <ReviewCard key={review.id} review={review} showChanges />
+      <p className="text-gray-500 mb-4">{subtitle}</p>
+      <Sort
+        selectedSort={selectedSort}
+        options={sortOptions}
+        handleSortChange={handleSortChange}
+        className="w-full justify-end"
+      />
+      <div className="mt-10 grid grid-cols-3 gap-8 items-start">
+        {result.map((review) => (
+          <ReviewCard key={review.id} review={review} reviewCardType="full" />
         ))}
       </div>
     </div>
