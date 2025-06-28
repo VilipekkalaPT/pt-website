@@ -8,7 +8,6 @@ import HeadingSection from "./components/HeadingSection";
 import {
   TypeImageCardFields,
   TypeLandingPageDataFields,
-  TypeLandingPageHeadingSectionFields,
   TypeLandingPagePainPointsFields,
   TypeLandingPageServicesFields,
 } from "app/lib/types/contentful";
@@ -20,6 +19,7 @@ import { TypeLandingPageDataSkeleton } from "app/lib/types/contentful/TypeLandin
 import PainPointsSection from "./components/PainPointsSection";
 import { TypePackageSkeleton } from "app/lib/types/contentful/TypePackage";
 import ImageCardsFitQuizSection from "./components/ImageCardsFitQuizSection";
+import { HeadingSectionType } from "app/lib/types/type";
 
 export default async function LandingPage() {
   const [landingPageData, kickOffProcess, reviews, packages] =
@@ -33,9 +33,20 @@ export default async function LandingPage() {
   const landingPageContent =
     landingPageData[0] as unknown as TypeLandingPageDataFields;
   const banner = landingPageContent.banner.fields as AssetFields;
-  const headingSections = landingPageContent.headingSections.map(
-    (section) => section.fields
-  ) as TypeLandingPageHeadingSectionFields[];
+  const headingSections: HeadingSectionType[] = [
+    {
+      heading: landingPageContent.heading1,
+      subheading: landingPageContent.subheading1,
+    },
+    {
+      heading: landingPageContent.heading2,
+      subheading: landingPageContent.subheading2,
+    },
+    {
+      heading: landingPageContent.heading3,
+      subheading: landingPageContent.subheading3,
+    },
+  ];
   const services = landingPageContent.services.map(
     (s) => s.fields
   ) as TypeLandingPageServicesFields[];

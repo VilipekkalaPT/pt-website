@@ -8,7 +8,7 @@ import { capitalizeFirstLetter, getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
 import Chip from "app/components/Chip";
 import Price from "./Price";
-import { SAVED_AMOUNT } from "app/utils/variables";
+import { MOST_POPULAR, SAVED_AMOUNT } from "app/utils/variables";
 import cn from "classnames";
 
 interface PackageCardProps {
@@ -33,6 +33,7 @@ export default function PackageCard({
     mode,
     tags,
     image,
+    isMostPopular,
   } = singlePackage;
   const imageField = image?.fields as AssetFields | undefined;
   const imageUrl = getAssetUrl(imageField);
@@ -44,6 +45,13 @@ export default function PackageCard({
   return (
     <Card href={href}>
       <CardHeader className="relative">
+        {isMostPopular && (
+          <Chip
+            label={MOST_POPULAR}
+            className="absolute left-2 top-2"
+            color="orange"
+          />
+        )}
         <Chip
           label={capitalizeFirstLetter(mode)}
           className="absolute right-2 top-2"

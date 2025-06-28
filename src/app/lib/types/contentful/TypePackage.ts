@@ -21,6 +21,7 @@ export interface TypePackageFields {
   howTrainingSessionLooksLikeSubtitle?: EntryFields.Symbol;
   howTrainingSessionLooksLikeImages?: Asset[];
   tags: ("diet" | "gym" | "plan")[];
+  isMostPopular: boolean;
 }
 
 export interface TypePackageSkeleton extends EntrySkeletonType {

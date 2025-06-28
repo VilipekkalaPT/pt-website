@@ -1,19 +1,4 @@
-export interface FitQuiz {
-  steps: FitQuizStep[];
-}
-
-export interface FitQuizStep {
-  id: number;
-  question: string;
-  subtitle: string;
-  options: FitQuizOption[];
-}
-
-export interface FitQuizOption {
-  id: string;
-  label: string;
-  description: string;
-}
+import { FitQuiz } from "../types/type";
 
 export const fitQuizData: FitQuiz = {
   steps: [

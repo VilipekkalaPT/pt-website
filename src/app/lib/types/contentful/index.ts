@@ -28,10 +28,6 @@ export type {
   TypeLandingPageDataFields,
 } from "./TypeLandingPageData";
 export type {
-  TypeLandingPageHeadingSection,
-  TypeLandingPageHeadingSectionFields,
-} from "./TypeLandingPageHeadingSection";
-export type {
   TypeLandingPagePainPoints,
   TypeLandingPagePainPointsFields,
 } from "./TypeLandingPagePainPoints";

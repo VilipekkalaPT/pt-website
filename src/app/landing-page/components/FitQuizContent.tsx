@@ -4,11 +4,11 @@ import {
   UsersIcon,
 } from "@heroicons/react/24/outline";
 import Card from "app/components/Card";
-import { FitQuizStep } from "app/lib/data/fitQuiz";
 import React from "react";
 import cn from "classnames";
 import { FilteredPackage } from "../hooks/useFilter";
 import { motion } from "framer-motion";
+import { FitQuizStep } from "app/lib/types/type";
 
 interface FitQuizContentProps {
   stepData: FitQuizStep;

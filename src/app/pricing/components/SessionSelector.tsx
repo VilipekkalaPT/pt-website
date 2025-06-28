@@ -1,7 +1,11 @@
+"use client";
+
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Button from "app/components/Button";
 import { TypeSessionOptionFields } from "app/lib/types/contentful";
+import { ROUTES } from "app/utils/routes";
 import { GET_STARTED, SESSION_SELECTOR_TITLE } from "app/utils/variables";
+import { useRouter } from "next/navigation";
 import { Select } from "radix-ui";
 
 interface SessionSelectorProps {
@@ -15,6 +19,8 @@ export default function SessionSelector({
   selectedOption,
   onSelect,
 }: SessionSelectorProps) {
+  const router = useRouter();
+
   const handleSelectChange = (value: string) => {
     const selectedOption = sessionOptions.find(
       (option) => option.numberOfSessions.toString() === value
@@ -72,6 +78,7 @@ export default function SessionSelector({
           variant="primary"
           label={GET_STARTED}
           className="w-full justify-center"
+          onClick={() => router.push(ROUTES.CONTACT)}
         />
       </div>
     </>

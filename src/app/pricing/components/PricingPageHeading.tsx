@@ -1,5 +1,5 @@
 import HeroSection from "app/components/HeroSection";
-import { HeadingSection } from "app/lib/types/type";
+import { HeadingSectionType } from "app/lib/types/type";
 import { Asset, AssetFields } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 import RichTextRenderer from "app/components/RichTextRenderer";
@@ -24,7 +24,7 @@ export default function PricingPageHeading({
   content,
 }: PricingPageHeadingProps) {
   const imageField: AssetFields = image.fields as AssetFields;
-  const headingSections: HeadingSection[] = [
+  const headingSections: HeadingSectionType[] = [
     {
       heading: title,
       subheading: subtitle,

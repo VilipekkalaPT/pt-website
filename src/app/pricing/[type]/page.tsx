@@ -10,7 +10,7 @@ import QuestionsAndInfo from "../components/QuestionsAndInfo";
 import Divider from "app/components/Divider";
 import HeroSection from "app/components/HeroSection";
 import { AssetFields } from "contentful";
-import { HeadingSection } from "app/lib/types/type";
+import { HeadingSectionType } from "app/lib/types/type";
 import ComboSection from "../components/ComboSection";
 
 async function getPageData(type: string) {
@@ -41,7 +41,7 @@ export default async function PackagesPage({
     (p) => p.fields
   ) as TypePackageFields[];
   const imageField = packagesPageData.image.fields as AssetFields;
-  const headingSections: HeadingSection[] = [
+  const headingSections: HeadingSectionType[] = [
     {
       heading: packagesPageData.title,
       subheading: packagesPageData.subtitle,

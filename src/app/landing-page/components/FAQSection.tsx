@@ -44,7 +44,7 @@ export default function FAQSection({
           variant="primary"
           iconRight={<ArrowRightIcon className="size-4" />}
           className="mt-6"
-          onClick={() => router.push(ROUTES.FAQ)}
+          onClick={() => router.push(ROUTES.FAQs)}
         />
       </div>
     </div>

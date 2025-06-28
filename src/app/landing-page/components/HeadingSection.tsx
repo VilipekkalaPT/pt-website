@@ -1,15 +1,15 @@
 "use client";
 
-import { TypeLandingPageHeadingSectionFields } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
 import Button from "app/components/Button";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "app/utils/routes";
 import HeroSection from "app/components/HeroSection";
+import { HeadingSectionType } from "app/lib/types/type";
 
 interface HeadingSectionProps {
   banner: AssetFields;
-  headingSections: TypeLandingPageHeadingSectionFields[];
+  headingSections: HeadingSectionType[];
   actionButtonText1: string;
   actionButtonText2: string;
 }

@@ -7,7 +7,7 @@ import {
   TypeReviewsPageDataFields,
   TypeReviewsPageDataSkeleton,
 } from "app/lib/types/contentful/TypeReviewsPageData";
-import { HeadingSection } from "app/lib/types/type";
+import { HeadingSectionType } from "app/lib/types/type";
 import { AssetFields } from "contentful";
 import AllReviews from "./components/AllReviews";
 
@@ -25,7 +25,7 @@ export default async function ClientSpotlights() {
     (el) => el.fields
   ) as TypeImageCardFields[];
 
-  const headingSections: HeadingSection[] = [
+  const headingSections: HeadingSectionType[] = [
     {
       heading: reviewsPageContent.heading,
       subheading: reviewsPageContent.subheading,

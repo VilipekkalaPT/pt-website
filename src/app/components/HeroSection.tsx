@@ -4,13 +4,13 @@ import Image from "next/image";
 import { AssetFields } from "contentful";
 import { getAssetUrl } from "app/utils/utils";
 import { useEffect, useState } from "react";
-import { HeadingSection } from "app/lib/types/type";
+import { HeadingSectionType } from "app/lib/types/type";
 import { HERO_SECTION_IMAGE } from "app/utils/variables";
 import cn from "classnames";
 
 interface HeroSectionProps {
   image: AssetFields;
-  headingSections: HeadingSection[];
+  headingSections: HeadingSectionType[];
   fillImage?: boolean;
   heroSectionContent?: React.ReactNode;
 }

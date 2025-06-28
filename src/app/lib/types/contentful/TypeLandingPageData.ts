@@ -1,12 +1,16 @@
 import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
-import { TypeLandingPageHeadingSectionSkeleton } from "./TypeLandingPageHeadingSection";
 import { TypeLandingPageServicesSkeleton } from "./TypeLandingPageServices";
 import { TypeLandingPagePainPointsSkeleton } from "./TypeLandingPagePainPoints";
 import { TypeImageCardSkeleton } from "./TypeImageCard";
 
 export interface TypeLandingPageDataFields {
   banner: Asset;
-  headingSections: Entry<TypeLandingPageHeadingSectionSkeleton>[];
+  heading1: EntryFields.Symbol;
+  subheading1: EntryFields.Symbol;
+  heading2: EntryFields.Symbol;
+  subheading2: EntryFields.Symbol;
+  heading3: EntryFields.Symbol;
+  subheading3: EntryFields.Symbol;
   painPointsSectionTitle: EntryFields.Symbol;
   painPointsSectionSubtitle: EntryFields.Symbol;
   painPoints: Entry<TypeLandingPagePainPointsSkeleton>[];
