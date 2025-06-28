@@ -10,7 +10,7 @@ import Carousel from "app/components/Carousel";
 import { DURATION, PACKAGE_TITLE } from "app/utils/variables";
 import NoImageAvailable from "app/components/NoImageAvailable";
 import Chip from "app/components/Chip";
-import ReadMoreRichText from "app/client-spotlights/components/ReadMore";
+import ReadMore from "app/client-spotlights/components/ReadMore";
 
 interface ReviewCardComponentProps {
   reviewCardType: "full" | "compact";
@@ -45,10 +45,10 @@ const ReviewCardHeader: React.FC<ReviewCardComponentProps> = ({
     <CardHeader className="px-4 mt-4">
       {reviewCardType === "compact" && <Rating rating={rating} />}
       {reviewCardType === "full" && (
-        <>
+        <div className="min-h-[3rem]">
           <p className="font-bold">{reviewer}</p>
           <p className="text-sm text-gray-400">{date}</p>
-        </>
+        </div>
       )}
     </CardHeader>
   );
@@ -102,7 +102,7 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
         </>
       )}
       {reviewCardType === "full" && (
-        <div className="mt-4">
+        <>
           <Rating rating={rating} />
           <div className="mt-4 min-h-[33rem]">
             {imageFields.length > 1 && <Carousel images={imageFields} />}
@@ -120,17 +120,17 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
           <p className="mt-4 text-xl font-bold min-h-[4rem] line-clamp-2">
             {title}
           </p>
-          <ReadMoreRichText document={content} />
+          <ReadMore document={content} />
           <Divider />
-          <div className="text-sm text-gray-400 flex justify-between">
+          <div className="text-sm text-gray-400 flex justify-between gap-16">
             <span>{PACKAGE_TITLE}</span>
-            <span>{review.package[0]}</span>
+            <span>{review.package.join(", ")}</span>
           </div>
-          <div className="mt-4 text-sm text-gray-400 flex justify-between">
+          <div className="mt-4 text-sm text-gray-400 flex justify-between gap-16">
             <span>{DURATION}</span>
             <span>{review.duration}</span>
           </div>
-        </div>
+        </>
       )}
     </CardContent>
   );
