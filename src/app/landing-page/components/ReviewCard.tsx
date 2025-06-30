@@ -72,7 +72,7 @@ const ReviewCardFooter: React.FC<ReviewCardComponentProps> = ({
         </>
       )}
       {reviewCardType === "full" && (
-        <div className="flex items-center min-h-[8rem]">
+        <div className="mt-4 flex flex-wrap items-end gap-2 min-h-[4rem] max-h-[6rem]">
           {changes?.map((change: string, index: number) => {
             return <Chip key={index} color="gray" label={change} />;
           })}
@@ -111,7 +111,7 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
               <Image
                 src={getAssetUrl(imageFields[0])}
                 alt={title}
-                className="mt-4 rounded-lg"
+                className="rounded-lg"
                 width={imageFields[0].file?.details.image?.width}
                 height={imageFields[0].file?.details.image?.height}
               />

@@ -48,7 +48,10 @@ export default function Carousel({
 
   return (
     <div className="relative w-full mx-auto h-full">
-      <div ref={sliderRef} className="keen-slider h-full overflow-hidden">
+      <div
+        ref={sliderRef}
+        className="keen-slider h-full overflow-hidden rounded-lg"
+      >
         {images &&
           images.map((image, index) => (
             <div key={index} className="keen-slider__slide">
