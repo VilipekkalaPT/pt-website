@@ -16,10 +16,7 @@ export default function AllReviews({
   subtitle,
   allReviews,
 }: AllReviewsProps) {
-  const filteredReviews = allReviews.filter(
-    (review) => !review.showOnLandingPage
-  );
-  const { result, selectedSort, handleSortChange } = useSort(filteredReviews);
+  const { result, selectedSort, handleSortChange } = useSort(allReviews);
 
   return (
     <div className="mt-10 px-24">
