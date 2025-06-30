@@ -122,11 +122,11 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
           </p>
           <ReadMore document={content} />
           <Divider />
-          <div className="text-sm text-gray-400 flex justify-between gap-16">
+          <div className="flex justify-between text-sm text-gray-400">
             <span>{PACKAGE_TITLE}</span>
-            <span>{review.package.join(", ")}</span>
+            <span>{review.package.slice(0, 2).join(", ")}</span>
           </div>
-          <div className="mt-4 text-sm text-gray-400 flex justify-between gap-16">
+          <div className="mt-4 flex justify-between text-sm text-gray-400">
             <span>{DURATION}</span>
             <span>{review.duration}</span>
           </div>
