@@ -32,13 +32,13 @@ export default function HeadingSection({
           <Button
             label={actionButtonText1}
             variant="secondary"
-            onClick={() => router.push(ROUTES.ABOUT)}
+            onClick={() => router.push(`${ROUTES.PRICING}/solo-packages`)}
             className="mr-4"
           />
           <Button
             label={actionButtonText2}
             variant="primary"
-            onClick={() => router.push(ROUTES.CONTACT)}
+            onClick={() => router.push(`${ROUTES.PRICING}/duo-packages`)}
             className="bg-gray-800"
           />
         </div>

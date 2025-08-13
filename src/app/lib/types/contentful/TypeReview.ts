@@ -19,7 +19,7 @@ export interface TypeReviewFields {
     | "Train together slay together"
   )[];
   duration?: EntryFields.Symbol;
-  date?: EntryFields.Date;
+  date: EntryFields.Date;
   changes?: (
     | "Adopt a new lifestyle"
     | "Boost overall fitness"

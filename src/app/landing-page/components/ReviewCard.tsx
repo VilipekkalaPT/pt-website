@@ -8,7 +8,6 @@ import { getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
 import Carousel from "app/components/Carousel";
 import { DURATION, PACKAGE_TITLE } from "app/utils/variables";
-import NoImageAvailable from "app/components/NoImageAvailable";
 import Chip from "app/components/Chip";
 import ReadMore from "app/client-spotlights/components/ReadMore";
 
@@ -82,6 +81,32 @@ const ReviewCardFooter: React.FC<ReviewCardComponentProps> = ({
   );
 };
 
+const ReviewImages = ({
+  images,
+  title,
+}: {
+  images: AssetFields[];
+  title: string;
+}) => {
+  if (images.length === 0) return null;
+
+  return (
+    <div className="mt-4 min-h-[33rem]">
+      {images.length === 1 ? (
+        <Image
+          src={getAssetUrl(images[0])}
+          alt={title}
+          className="rounded-lg w-full h-auto object-cover"
+          width={images[0].file?.details.image?.width || 400}
+          height={images[0].file?.details.image?.height || 300}
+        />
+      ) : (
+        <Carousel images={images} />
+      )}
+    </div>
+  );
+};
+
 const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
   reviewCardType,
   review,
@@ -104,19 +129,7 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
       {reviewCardType === "full" && (
         <>
           <Rating rating={rating} />
-          <div className="mt-4 min-h-[33rem]">
-            {imageFields.length > 1 && <Carousel images={imageFields} />}
-            {imageFields.length === 0 && <NoImageAvailable />}
-            {imageFields.length === 1 && (
-              <Image
-                src={getAssetUrl(imageFields[0])}
-                alt={title}
-                className="rounded-lg"
-                width={imageFields[0].file?.details.image?.width}
-                height={imageFields[0].file?.details.image?.height}
-              />
-            )}
-          </div>
+          <ReviewImages images={imageFields} title={title} />
           <p className="mt-4 text-xl font-bold min-h-[4rem] line-clamp-2">
             {title}
           </p>

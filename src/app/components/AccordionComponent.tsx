@@ -38,7 +38,7 @@ export default function AccordionComponent({
       type="single"
       collapsible
       value={selectedAccordion}
-      className={cn("w-full")}
+      className="w-full"
       onValueChange={(value) => onValueChange?.(value)}
     >
       <Accordion.Item

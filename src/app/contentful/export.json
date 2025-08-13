@@ -142,7 +142,7 @@
         "id": "review",
         "type": "ContentType",
         "createdAt": "2025-04-16T20:55:09.849Z",
-        "updatedAt": "2025-06-09T19:55:14.498Z",
+        "updatedAt": "2025-08-13T20:26:43.512Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -150,8 +150,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 115,
-        "publishedAt": "2025-06-09T19:55:14.498Z",
+        "publishedVersion": 121,
+        "publishedAt": "2025-08-13T20:26:43.512Z",
         "firstPublishedAt": "2025-04-16T20:55:10.233Z",
         "createdBy": {
           "sys": {
@@ -167,8 +167,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 58,
-        "version": 116,
+        "publishedCounter": 61,
+        "version": 122,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -330,7 +330,7 @@
           "name": "Date",
           "type": "Date",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -353,15 +353,11 @@
                 "in": [
                   "Lose weight",
                   "Increase strength",
-                  "Improve fitness capacity",
                   "Sleep better",
                   "Boost overall fitness",
                   "Look more fit",
                   "Move better",
                   "Adopt a new lifestyle",
-                  "Feel stronger",
-                  "Improve squat strength",
-                  "Feel lighter",
                   "Improve posture"
                 ]
               }
@@ -2495,7 +2491,7 @@
         "id": "landingPageData",
         "type": "ContentType",
         "createdAt": "2025-06-01T19:20:05.486Z",
-        "updatedAt": "2025-06-02T19:13:59.536Z",
+        "updatedAt": "2025-06-28T20:24:11.368Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2503,8 +2499,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 25,
-        "publishedAt": "2025-06-02T19:13:59.536Z",
+        "publishedVersion": 31,
+        "publishedAt": "2025-06-28T20:24:11.368Z",
         "firstPublishedAt": "2025-06-01T19:20:05.887Z",
         "createdBy": {
           "sys": {
@@ -2520,8 +2516,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 13,
-        "version": 26,
+        "publishedCounter": 16,
+        "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2548,21 +2544,70 @@
           "linkType": "Asset"
         },
         {
-          "id": "headingSections",
-          "name": "Heading sections",
-          "type": "Array",
+          "id": "heading1",
+          "name": "Heading 1",
+          "type": "Symbol",
           "localized": false,
           "required": true,
           "validations": [
           ],
           "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-            ],
-            "linkType": "Entry"
-          }
+          "omitted": false
+        },
+        {
+          "id": "subheading1",
+          "name": "Subheading 1",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heading2",
+          "name": "Heading 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subheading2",
+          "name": "Subheading 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heading3",
+          "name": "Heading 3",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subheading3",
+          "name": "Subheading 3",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         },
         {
           "id": "painPointsSectionTitle",
@@ -2882,82 +2927,6 @@
           "id": "tag",
           "name": "Tag",
           "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "landingPageHeadingSection",
-        "type": "ContentType",
-        "createdAt": "2025-06-01T19:36:05.576Z",
-        "updatedAt": "2025-06-01T19:36:05.908Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2025-06-01T19:36:05.908Z",
-        "firstPublishedAt": "2025-06-01T19:36:05.908Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/content_types/landingPageHeadingSection"
-      },
-      "displayField": "heading",
-      "name": "Landing Page Heading Section",
-      "description": "",
-      "fields": [
-        {
-          "id": "heading",
-          "name": "Heading",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "subheading",
-          "name": "Subheading",
-          "type": "Text",
           "localized": false,
           "required": true,
           "validations": [
@@ -4700,7 +4669,7 @@
             "linkType": "Space"
           }
         },
-        "version": 116,
+        "version": 122,
         "createdAt": "2025-04-16T20:55:10.378Z",
         "createdBy": {
           "sys": {
@@ -4709,7 +4678,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-09T19:55:15.073Z",
+        "updatedAt": "2025-08-13T20:26:44.116Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5745,7 +5714,7 @@
             "linkType": "Space"
           }
         },
-        "version": 26,
+        "version": 32,
         "createdAt": "2025-06-01T19:20:06.037Z",
         "createdBy": {
           "sys": {
@@ -5754,7 +5723,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-02T19:14:00.286Z",
+        "updatedAt": "2025-06-28T20:24:12.046Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5784,8 +5753,33 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "headingSections",
-          "widgetId": "entryLinksEditor",
+          "fieldId": "heading1",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subheading1",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heading2",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subheading2",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heading3",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subheading3",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
@@ -5927,62 +5921,6 @@
         {
           "fieldId": "tag",
           "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "5yib965szeod",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2025-06-01T19:36:06.059Z",
-        "createdBy": {
-          "sys": {
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2025-06-01T19:36:06.515Z",
-        "updatedBy": {
-          "sys": {
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "landingPageHeadingSection",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "heading",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "subheading",
-          "widgetId": "markdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -7692,7 +7630,7 @@
         "id": "7gY5HEfKdxEd54ge40eZNZ",
         "type": "Entry",
         "createdAt": "2025-04-20T04:20:05.898Z",
-        "updatedAt": "2025-06-28T20:16:18.290Z",
+        "updatedAt": "2025-06-30T17:58:05.936Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7700,8 +7638,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 147,
-        "publishedAt": "2025-06-28T20:16:18.290Z",
+        "publishedVersion": 160,
+        "publishedAt": "2025-06-30T17:58:05.936Z",
         "firstPublishedAt": "2025-04-20T04:24:14.892Z",
         "createdBy": {
           "sys": {
@@ -7717,8 +7655,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 40,
-        "version": 148,
+        "publishedCounter": 42,
+        "version": 161,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8530,7 +8468,7 @@
           "en-US": "How a training session looks like"
         },
         "howTrainingSessionLooksLikeSubtitle": {
-          "en-US": "Subtitle"
+          "en-US": "A suggested visualization of the activities during one session"
         },
         "howTrainingSessionLooksLikeImages": {
           "en-US": [
@@ -8538,21 +8476,28 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "1FquBRr7t4hFs4frVILVRg"
+                "id": "2bA5t1sC24Z5YKxemf3J7"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "609qXzGIhYCZ5ICYkfPiwb"
+                "id": "5xx2G7mIyioiOIESHbQM7f"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "5No5pkxOFbzTKaEqTN2Wpw"
+                "id": "1bzjt2fj6r4HWwD6m8pxZu"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1jMkmVDFaD6tGEJsvzcJfw"
               }
             }
           ]
@@ -11498,7 +11443,7 @@
         "id": "5YU8BsOnoGWWroWyWSkUkr",
         "type": "Entry",
         "createdAt": "2025-04-23T18:57:49.277Z",
-        "updatedAt": "2025-06-26T17:53:07.254Z",
+        "updatedAt": "2025-08-13T12:38:35.076Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11506,8 +11451,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 102,
-        "publishedAt": "2025-06-26T17:53:07.254Z",
+        "publishedVersion": 184,
+        "publishedAt": "2025-08-13T12:38:35.076Z",
         "firstPublishedAt": "2025-04-23T18:59:02.190Z",
         "createdBy": {
           "sys": {
@@ -11523,8 +11468,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 24,
-        "version": 103,
+        "publishedCounter": 29,
+        "version": 185,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11553,19 +11498,19 @@
           "en-US": "Vili Pekkala"
         },
         "shortDescription": {
-          "en-US": "Vili Pekkala is an EREPS-certified Personal Trainer EQF level 4 based in Helsinki Finland with 2 years of coaching experience."
+          "en-US": "Vili Pekkala is an EREPS-certified Personal Trainer EQF level 4 based in Helsinki Finland with 2 years of coaching experience (EREPs: European Register of Exercise Professionals)."
         },
         "image": {
           "en-US": {
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "1jMkmVDFaD6tGEJsvzcJfw"
+              "id": "34sjowLC63N5hQDVmCowDX"
             }
           }
         },
         "vision": {
-          "en-US": "At SlayFit Vili, we mix movement, mindset, and a whole lot of magic. This isn’t about punishing your body - it’s about honoring it."
+          "en-US": "At SlayFit Vili shows a mixture of movements and mindset. We don't need to punish the body for this to work, a little everyday goes a long way."
         },
         "philosophyTitle": {
           "en-US": "Vili’s training philosophy"
@@ -11587,7 +11532,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "You’re not here for a basic workout. You’re here for something deeper.\nYou want to feel strong, not just in your body, but in your mind. You want to move with intention, live with confidence, and fully show up as the most powerful version of you.",
+                    "value": "Coming to SlayFitVili, we work out - that's correct. ",
                     "nodeType": "text"
                   }
                 ],
@@ -11602,7 +11547,15 @@
                     },
                     "marks": [
                     ],
-                    "value": "Building strength from the inside out. Creating space for growth, clarity, and real transformation",
+                    "value": "But guess what, you will shape not only your body, but your mind, and the quality of life.\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Moving with purpose, building confidence, and showing up as your best self. We believe showing up is already 50% of the process.",
                     "nodeType": "text"
                   }
                 ],
@@ -11615,71 +11568,13 @@
                   {
                     "data": {
                     },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "This is personal training, but elevated.  ",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
+                    "marks": [
                     ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "It’s fierce, fabulous, and grounded in self-awareness.  ",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "It’s fitness that feels good in your soul.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
+                    "value": "A good health and fierce body don't just come from the gym, it comes also from the kitchen and your sleep. Vili makes sure they all get the necessary attention.",
+                    "nodeType": "text"
                   }
                 ],
-                "nodeType": "unordered-list"
+                "nodeType": "paragraph"
               },
               {
                 "data": {
@@ -11690,7 +11585,15 @@
                     },
                     "marks": [
                     ],
-                    "value": "We’ll work hard, yes! But we’ll also laugh, vibe, reflect, and celebrate the hell out of your progress. No pressure to be perfect. No toxic hustle. Just you, showing up for yourself in the most powerful way, because when your mindset shifts, your whole life starts to shift with it.",
+                    "value": "Vili is not just your coach, he is your cheerleader, your mindset consultant, your gym buddy and a good company health-wise. He guides you with knowledge, logic, and purpose, so none of your time and effort will go to waste. ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "You’ll feel inspired to love yourself more by showing up, doing your best, and making steady progress day by day, week by week.",
                     "nodeType": "text"
                   }
                 ],
@@ -11734,14 +11637,7 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "3WiV0nyJtNb4JKqPzF9H4X"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "4INKHzJ3VtMXjrvVi0Nrhx"
+                "id": "MU1ftYuJP6uds6mub4byI"
               }
             },
             {
@@ -11755,7 +11651,14 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "MU1ftYuJP6uds6mub4byI"
+                "id": "4INKHzJ3VtMXjrvVi0Nrhx"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3WiV0nyJtNb4JKqPzF9H4X"
               }
             }
           ]
@@ -13231,7 +13134,7 @@
         "id": "QSvTNn77SwCmA0uojEQSL",
         "type": "Entry",
         "createdAt": "2025-05-03T19:30:15.736Z",
-        "updatedAt": "2025-06-28T20:17:17.511Z",
+        "updatedAt": "2025-07-02T07:16:10.618Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -13239,8 +13142,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 82,
-        "publishedAt": "2025-06-28T20:17:17.511Z",
+        "publishedVersion": 84,
+        "publishedAt": "2025-07-02T07:16:10.618Z",
         "firstPublishedAt": "2025-05-03T19:32:25.216Z",
         "createdBy": {
           "sys": {
@@ -13256,8 +13159,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 26,
-        "version": 83,
+        "publishedCounter": 27,
+        "version": 85,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -13302,7 +13205,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5ICS9pWZE6a6TkXiH5ZZEu"
+              "id": "5FfEB622i6NwuEyXg1I1IL"
             }
           }
         },
@@ -16307,7 +16210,7 @@
         "id": "38btLzFrJ1Bpq3nvyU10b0",
         "type": "Entry",
         "createdAt": "2025-05-03T19:36:58.005Z",
-        "updatedAt": "2025-06-28T20:16:53.430Z",
+        "updatedAt": "2025-07-02T07:16:33.790Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -16315,8 +16218,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 104,
-        "publishedAt": "2025-06-28T20:16:53.430Z",
+        "publishedVersion": 106,
+        "publishedAt": "2025-07-02T07:16:33.790Z",
         "firstPublishedAt": "2025-05-03T19:37:51.973Z",
         "createdBy": {
           "sys": {
@@ -16332,8 +16235,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 30,
-        "version": 105,
+        "publishedCounter": 31,
+        "version": 107,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -16378,7 +16281,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5ICS9pWZE6a6TkXiH5ZZEu"
+              "id": "j2Ko1JSgxHuArVRdeJ8kF"
             }
           }
         },
@@ -38502,7 +38405,7 @@
         "id": "7hqQQn8Xw2goqPeIv0zneD",
         "type": "Entry",
         "createdAt": "2025-05-25T17:17:30.218Z",
-        "updatedAt": "2025-06-07T19:14:07.134Z",
+        "updatedAt": "2025-07-02T17:15:54.812Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38510,8 +38413,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 32,
-        "publishedAt": "2025-06-07T19:14:07.134Z",
+        "publishedVersion": 35,
+        "publishedAt": "2025-07-02T17:15:54.812Z",
         "firstPublishedAt": "2025-05-25T17:19:09.795Z",
         "createdBy": {
           "sys": {
@@ -38527,8 +38430,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 8,
-        "version": 33,
+        "publishedCounter": 9,
+        "version": 36,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38591,6 +38494,12 @@
             "Bronze skin iron mind"
           ]
         },
+        "duration": {
+          "en-US": "3 months"
+        },
+        "date": {
+          "en-US": "2025-05-21"
+        },
         "rating": {
           "en-US": 4
         },
@@ -38624,7 +38533,7 @@
         "id": "6zXYZlZhSHceg6kXpHl7Dd",
         "type": "Entry",
         "createdAt": "2025-05-25T17:38:03.518Z",
-        "updatedAt": "2025-06-07T19:05:30.457Z",
+        "updatedAt": "2025-07-02T17:16:06.656Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38632,8 +38541,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 50,
-        "publishedAt": "2025-06-07T19:05:30.457Z",
+        "publishedVersion": 54,
+        "publishedAt": "2025-07-02T17:16:06.656Z",
         "firstPublishedAt": "2025-05-25T17:41:07.114Z",
         "createdBy": {
           "sys": {
@@ -38649,8 +38558,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 8,
-        "version": 51,
+        "publishedCounter": 10,
+        "version": 55,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38758,6 +38667,12 @@
             "Bronze skin iron mind"
           ]
         },
+        "duration": {
+          "en-US": "3 months"
+        },
+        "date": {
+          "en-US": "2025-05-07"
+        },
         "rating": {
           "en-US": 5
         },
@@ -38791,7 +38706,7 @@
         "id": "ujZXOQYLZDLtW48Cqi2tj",
         "type": "Entry",
         "createdAt": "2025-05-25T17:42:15.570Z",
-        "updatedAt": "2025-06-07T19:18:34.472Z",
+        "updatedAt": "2025-07-02T17:17:28.010Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38799,8 +38714,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 35,
-        "publishedAt": "2025-06-07T19:18:34.472Z",
+        "publishedVersion": 38,
+        "publishedAt": "2025-07-02T17:17:28.010Z",
         "firstPublishedAt": "2025-05-25T17:45:15.860Z",
         "createdBy": {
           "sys": {
@@ -38816,8 +38731,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 7,
-        "version": 36,
+        "publishedCounter": 8,
+        "version": 39,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38853,47 +38768,53 @@
         },
         "content": {
           "en-US": {
-            "nodeType": "document",
             "data": {
             },
             "content": [
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "I feel more muscle and less fat, the weight doesn't change much but I feel more endurance and stronger in general. I feel better with the weight, not much change but a slight improvement. I can now finish the session without being too tired",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "I feel more muscle and less fat, the weight doesn't change much but I feel more endurance and stronger in general. I feel better with the weight, not much change but a slight improvement. I can now finish the session without being too tired",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               },
               {
-                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "nodeType": "text",
-                    "value": "I feel supported and accompanied by Vili, highly recommended for his enthusiasm.",
+                    "data": {
+                    },
                     "marks": [
                     ],
-                    "data": {
-                    }
+                    "value": "I feel supported and accompanied by Vili, highly recommended for his enthusiasm.",
+                    "nodeType": "text"
                   }
-                ]
+                ],
+                "nodeType": "paragraph"
               }
-            ]
+            ],
+            "nodeType": "document"
           }
         },
         "package": {
           "en-US": [
             "Bronze skin iron mind"
           ]
+        },
+        "duration": {
+          "en-US": "5 months"
+        },
+        "date": {
+          "en-US": "2025-06-04"
         },
         "rating": {
           "en-US": 4
@@ -40745,241 +40666,10 @@
             "id": "5yib965szeod"
           }
         },
-        "id": "41piyLKrnULC3RgeuK8gAB",
-        "type": "Entry",
-        "createdAt": "2025-06-01T19:37:03.085Z",
-        "updatedAt": "2025-06-20T12:52:48.862Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 33,
-        "publishedAt": "2025-06-20T12:52:48.862Z",
-        "firstPublishedAt": "2025-06-01T19:37:13.113Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 10,
-        "version": 34,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "landingPageHeadingSection"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/41piyLKrnULC3RgeuK8gAB"
-      },
-      "fields": {
-        "heading": {
-          "en-US": "Move With Power – Live With Purpose"
-        },
-        "subheading": {
-          "en-US": "Fitness backed by science will lift you up."
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "2jmj1hJCusV1cWhtdoyp2J",
-        "type": "Entry",
-        "createdAt": "2025-06-01T19:37:22.400Z",
-        "updatedAt": "2025-06-20T12:53:30.142Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 16,
-        "publishedAt": "2025-06-20T12:53:30.142Z",
-        "firstPublishedAt": "2025-06-01T19:37:35.271Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 3,
-        "version": 17,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "landingPageHeadingSection"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2jmj1hJCusV1cWhtdoyp2J"
-      },
-      "fields": {
-        "heading": {
-          "en-US": "We Build More Than Just Muscles"
-        },
-        "subheading": {
-          "en-US": " Strength built to last and mindset built to elevate your life."
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "6Nu8wmzqgHlDVLtPUmJ1FT",
-        "type": "Entry",
-        "createdAt": "2025-06-01T19:37:40.897Z",
-        "updatedAt": "2025-06-20T12:48:57.547Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 10,
-        "publishedAt": "2025-06-20T12:48:57.547Z",
-        "firstPublishedAt": "2025-06-01T19:37:51.578Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 11,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "landingPageHeadingSection"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6Nu8wmzqgHlDVLtPUmJ1FT"
-      },
-      "fields": {
-        "heading": {
-          "en-US": "Your body tells your story - Let’s make it stronger"
-        },
-        "subheading": {
-          "en-US": "Train with purpose and joy. Feel good in your body long-term."
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
         "id": "3qq56D92N9NAAkIhYJNQVU",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:58.149Z",
-        "updatedAt": "2025-06-26T06:53:50.025Z",
+        "updatedAt": "2025-08-13T20:15:29.043Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40987,8 +40677,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 42,
-        "publishedAt": "2025-06-26T06:53:50.025Z",
+        "publishedVersion": 55,
+        "publishedAt": "2025-08-13T20:15:29.043Z",
         "firstPublishedAt": "2025-06-01T19:41:33.034Z",
         "createdBy": {
           "sys": {
@@ -41004,8 +40694,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 10,
-        "version": 43,
+        "publishedCounter": 13,
+        "version": 56,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41039,30 +40729,23 @@
             }
           }
         },
-        "headingSections": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "41piyLKrnULC3RgeuK8gAB"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "2jmj1hJCusV1cWhtdoyp2J"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "6Nu8wmzqgHlDVLtPUmJ1FT"
-              }
-            }
-          ]
+        "heading1": {
+          "en-US": "Move With Power – Live With Purpose"
+        },
+        "subheading1": {
+          "en-US": "Fitness backed by science will lift you up."
+        },
+        "heading2": {
+          "en-US": "We Build More Than Just Muscles"
+        },
+        "subheading2": {
+          "en-US": " Strength built to last and mindset built to elevate your life."
+        },
+        "heading3": {
+          "en-US": "Your body tells your story - Let’s make it stronger"
+        },
+        "subheading3": {
+          "en-US": "Train with purpose and joy. Feel good in your body long-term."
         },
         "painPointsSectionTitle": {
           "en-US": "Does this sound like you?"
@@ -41103,10 +40786,10 @@
           ]
         },
         "actionButtonText1": {
-          "en-US": "Get to know Vili"
+          "en-US": "Solo Slay packages"
         },
         "actionButtonText2": {
-          "en-US": "Join the experience"
+          "en-US": "Duo Slay packages"
         },
         "serviceTitle": {
           "en-US": "What are you looking for? We’ve got you covered"
@@ -41714,7 +41397,7 @@
         "id": "3njpCIUgZnYYEllEEg4dr",
         "type": "Entry",
         "createdAt": "2025-06-04T13:25:42.574Z",
-        "updatedAt": "2025-06-07T19:07:16.592Z",
+        "updatedAt": "2025-07-02T17:16:51.190Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -41722,8 +41405,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 105,
-        "publishedAt": "2025-06-07T19:07:16.592Z",
+        "publishedVersion": 109,
+        "publishedAt": "2025-07-02T17:16:51.190Z",
         "firstPublishedAt": "2025-06-04T13:37:56.885Z",
         "createdBy": {
           "sys": {
@@ -41739,8 +41422,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 106,
+        "publishedCounter": 6,
+        "version": 110,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41881,6 +41564,12 @@
             "Eat better live better",
             "Come train with Vili"
           ]
+        },
+        "duration": {
+          "en-US": "5 months"
+        },
+        "date": {
+          "en-US": "2025-06-19"
         },
         "rating": {
           "en-US": 5
@@ -44078,172 +43767,6 @@
             "id": "5yib965szeod"
           }
         },
-        "id": "1ogxsq9tsSsy5FBl6wLwUG",
-        "type": "Entry",
-        "createdAt": "2025-06-10T18:57:42.294Z",
-        "updatedAt": "2025-06-10T18:58:41.264Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2025-06-10T18:58:41.264Z",
-        "firstPublishedAt": "2025-06-10T18:58:04.964Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/1ogxsq9tsSsy5FBl6wLwUG"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "👩‍💼 Who it's for"
-        },
-        "slayFitVili": {
-          "en-US": "Office-working peoplê, beginners, culturally aligned"
-        },
-        "typicalGymPt": {
-          "en-US": "General gym-goers, often men"
-        },
-        "fitnessApp": {
-          "en-US": "Broad, impersonal"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "7poFXUTGy48DxSWW70mpBC",
-        "type": "Entry",
-        "createdAt": "2025-06-10T18:58:16.865Z",
-        "updatedAt": "2025-06-10T18:58:33.888Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 4,
-        "publishedAt": "2025-06-10T18:58:33.888Z",
-        "firstPublishedAt": "2025-06-10T18:58:33.888Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 5,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/7poFXUTGy48DxSWW70mpBC"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "🧑‍🏫 Trainer access"
-        },
-        "slayFitVili": {
-          "en-US": "1:1 with Vili, consistent support via WhatsApp & voice notes"
-        },
-        "typicalGymPt": {
-          "en-US": "Only in-session, limited time"
-        },
-        "fitnessApp": {
-          "en-US": "Chatbot or delayed replies"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
         "id": "1bbSkiT01uxF3I0GBpmRam",
         "type": "Entry",
         "createdAt": "2025-06-10T19:36:52.611Z",
@@ -44410,255 +43933,6 @@
             "id": "5yib965szeod"
           }
         },
-        "id": "7lJZgNJMnVDgqVWw3Y2Jhc",
-        "type": "Entry",
-        "createdAt": "2025-06-10T19:37:39.394Z",
-        "updatedAt": "2025-06-10T19:37:56.282Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:37:56.282Z",
-        "firstPublishedAt": "2025-06-10T19:37:56.282Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/7lJZgNJMnVDgqVWw3Y2Jhc"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "🎯 Goal alignment"
-        },
-        "slayFitVili": {
-          "en-US": "Focused on lasting lifestyle changes, not just “getting fit”"
-        },
-        "typicalGymPt": {
-          "en-US": "Focus on output and appearance"
-        },
-        "fitnessApp": {
-          "en-US": "Focus on streaks, steps, and scale"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "42cUxVvdrSSMDPtPUdejbU",
-        "type": "Entry",
-        "createdAt": "2025-06-10T19:38:04.005Z",
-        "updatedAt": "2025-06-10T19:38:19.539Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:38:19.539Z",
-        "firstPublishedAt": "2025-06-10T19:38:19.539Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/42cUxVvdrSSMDPtPUdejbU"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "🎓 Technique & learning"
-        },
-        "slayFitVili": {
-          "en-US": "Real-time form correction + clear explanation"
-        },
-        "typicalGymPt": {
-          "en-US": "Mostly counting reps or correcting at surface level"
-        },
-        "fitnessApp": {
-          "en-US": "No live correction"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "5CZxfNDR9BazMaYgRl8uwB",
-        "type": "Entry",
-        "createdAt": "2025-06-10T19:38:27.284Z",
-        "updatedAt": "2025-06-10T19:38:42.378Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:38:42.378Z",
-        "firstPublishedAt": "2025-06-10T19:38:42.378Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/5CZxfNDR9BazMaYgRl8uwB"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "🌱 Support between sessions"
-        },
-        "slayFitVili": {
-          "en-US": "Progress check-ins, gentle nudges, adaptable pacing"
-        },
-        "typicalGymPt": {
-          "en-US": "Rare follow-up, no flexible pacing"
-        },
-        "fitnessApp": {
-          "en-US": "Auto-messages or nothing"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
         "id": "47LrTl4weLhEMTlNL5lXbQ",
         "type": "Entry",
         "createdAt": "2025-06-10T19:57:07.575Z",
@@ -44724,338 +43998,6 @@
         },
         "fitnessApp": {
           "en-US": "Focused on stats"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "idtHmX4HoETfHDX1NhulF",
-        "type": "Entry",
-        "createdAt": "2025-06-10T19:57:35.392Z",
-        "updatedAt": "2025-06-10T19:58:04.735Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2025-06-10T19:58:04.735Z",
-        "firstPublishedAt": "2025-06-10T19:58:04.735Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/idtHmX4HoETfHDX1NhulF"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "🚪 Onboarding experience"
-        },
-        "slayFitVili": {
-          "en-US": "Step-by-step guidance, safe for total beginners"
-        },
-        "typicalGymPt": {
-          "en-US": "Can feel rushed or unclear"
-        },
-        "fitnessApp": {
-          "en-US": "Self-guided, overwhelming"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "eoZscmFlSWF2InfRaUUHe",
-        "type": "Entry",
-        "createdAt": "2025-06-10T19:58:10.027Z",
-        "updatedAt": "2025-06-10T19:58:26.444Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:58:26.444Z",
-        "firstPublishedAt": "2025-06-10T19:58:26.444Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/eoZscmFlSWF2InfRaUUHe"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "🔄 Flexibility of packages"
-        },
-        "slayFitVili": {
-          "en-US": "Packages fit your pace: 1, 10, 12, 15 sessions, hybrid available"
-        },
-        "typicalGymPt": {
-          "en-US": "Monthly memberships only"
-        },
-        "fitnessApp": {
-          "en-US": "Auto-renewing plans"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "2Mk7lRO0dGN7pWJFqHHCAo",
-        "type": "Entry",
-        "createdAt": "2025-06-10T19:58:35.635Z",
-        "updatedAt": "2025-06-10T19:58:48.694Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:58:48.694Z",
-        "firstPublishedAt": "2025-06-10T19:58:48.694Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2Mk7lRO0dGN7pWJFqHHCAo"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "📝 Session format"
-        },
-        "slayFitVili": {
-          "en-US": "In-person or hybrid with personalized coaching notes"
-        },
-        "typicalGymPt": {
-          "en-US": "In-person workouts only"
-        },
-        "fitnessApp": {
-          "en-US": "Pre-recorded workouts"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "GEoOJlkkIpEmtOupW8XAA",
-        "type": "Entry",
-        "createdAt": "2025-06-10T19:58:53.211Z",
-        "updatedAt": "2025-06-10T19:59:07.947Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:59:07.947Z",
-        "firstPublishedAt": "2025-06-10T19:59:07.947Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/GEoOJlkkIpEmtOupW8XAA"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "📊 Progress tracking"
-        },
-        "slayFitVili": {
-          "en-US": "Tracks energy, form, mood — not just weight"
-        },
-        "typicalGymPt": {
-          "en-US": "Reps, weights, calories only"
-        },
-        "fitnessApp": {
-          "en-US": "Graphs and metrics"
         }
       }
     },
@@ -45240,93 +44182,10 @@
             "id": "5yib965szeod"
           }
         },
-        "id": "5g3e153t8SQY95f1bq86Ps",
-        "type": "Entry",
-        "createdAt": "2025-06-10T19:59:48.986Z",
-        "updatedAt": "2025-06-10T20:00:04.147Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T20:00:04.147Z",
-        "firstPublishedAt": "2025-06-10T20:00:04.147Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "pricingDifferentServicesComparison"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/5g3e153t8SQY95f1bq86Ps"
-      },
-      "fields": {
-        "criteria": {
-          "en-US": "💸 Pricing transparency"
-        },
-        "slayFitVili": {
-          "en-US": "Clear, upfront, value-aligned"
-        },
-        "typicalGymPt": {
-          "en-US": "Often unclear or hidden fees"
-        },
-        "fitnessApp": {
-          "en-US": "Subscriptions with extras"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
         "id": "6wCYuTfgf5JHYGWCCcv7V4",
         "type": "Entry",
         "createdAt": "2025-06-10T20:02:39.810Z",
-        "updatedAt": "2025-06-26T05:57:54.800Z",
+        "updatedAt": "2025-08-13T12:46:38.389Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45334,8 +44193,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 45,
-        "publishedAt": "2025-06-26T05:57:54.800Z",
+        "publishedVersion": 68,
+        "publishedAt": "2025-08-13T12:46:38.389Z",
         "firstPublishedAt": "2025-06-10T20:07:34.217Z",
         "createdBy": {
           "sys": {
@@ -45351,8 +44210,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 11,
-        "version": 46,
+        "publishedCounter": 15,
+        "version": 69,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45381,7 +44240,7 @@
           "en-US": "Slay Pricing"
         },
         "subtitle": {
-          "en-US": "Explore your options & see how Vili’s personalized service stacks up"
+          "en-US": "Explore options & see how Vili’s services stack up"
         },
         "headingImage": {
           "en-US": {
@@ -45415,7 +44274,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Your journey is unique—and so is the way we train.\nWhether you’re just starting out or stuck in a rut, SlayFitVili helps cut through the fitness noise. With real support, smart plans, and a style that fits your life—not someone else’s.\n\n",
+                    "value": "Your journey’s your own and the way we train reflects that.",
                     "nodeType": "text"
                   }
                 ],
@@ -45430,7 +44289,41 @@
                     },
                     "marks": [
                     ],
-                    "value": "This page is your roadmap. Find what you need, skip what you don’t, and start building strength that actually sticks.",
+                    "value": "Whether you’re brand new or just feeling stuck, SlayFit Vili cuts through all the fitness noise. You’ll get real support, smart plans, and a style that works for ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "value": "your",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " life, not someone else’s.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Think of this page as your roadmap. Take what you need, leave what you don’t, and start building strength that actually lasts. (Right, muscular strength, and mindset strength)",
                     "nodeType": "text"
                   }
                 ],
@@ -45522,9 +44415,9 @@
         },
         "offerText": {
           "en-US": [
-            "Most apps offer templates. ",
-            "Most trainers stick to the gym.",
-            "Vili brings you both with real care, energy, and results."
+            "Apps offer framework.",
+            "Trainers train you in the gym.",
+            "Vili offers both and even more!"
           ]
         },
         "differentServicesComparisonTitle": {
@@ -45535,20 +44428,6 @@
         },
         "differentServicesComparisonRows": {
           "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "1ogxsq9tsSsy5FBl6wLwUG"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "7poFXUTGy48DxSWW70mpBC"
-              }
-            },
             {
               "sys": {
                 "type": "Link",
@@ -45567,56 +44446,7 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "7lJZgNJMnVDgqVWw3Y2Jhc"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "42cUxVvdrSSMDPtPUdejbU"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "5CZxfNDR9BazMaYgRl8uwB"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
                 "id": "47LrTl4weLhEMTlNL5lXbQ"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "idtHmX4HoETfHDX1NhulF"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "eoZscmFlSWF2InfRaUUHe"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "2Mk7lRO0dGN7pWJFqHHCAo"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "GEoOJlkkIpEmtOupW8XAA"
               }
             },
             {
@@ -45631,13 +44461,6 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "7GYs8TjAxGHQ8unuNBrukU"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "5g3e153t8SQY95f1bq86Ps"
               }
             }
           ]
@@ -46501,7 +45324,7 @@
         "id": "37Zm2d5gHSB8MHFYRt8AIj",
         "type": "Entry",
         "createdAt": "2025-06-25T20:34:12.296Z",
-        "updatedAt": "2025-06-25T21:07:07.904Z",
+        "updatedAt": "2025-07-02T17:28:50.070Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46509,8 +45332,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 14,
-        "publishedAt": "2025-06-25T21:07:07.904Z",
+        "publishedVersion": 28,
+        "publishedAt": "2025-07-02T17:28:50.070Z",
         "firstPublishedAt": "2025-06-25T20:37:18.795Z",
         "createdBy": {
           "sys": {
@@ -46526,8 +45349,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 15,
+        "publishedCounter": 5,
+        "version": 29,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46579,13 +45402,6 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "7B6UF9lmFsn0v162cWvtKC"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
                 "id": "6zXYZlZhSHceg6kXpHl7Dd"
               }
             },
@@ -46593,21 +45409,7 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "3uHzOSWiHisEdGkF3EsESN"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
                 "id": "3njpCIUgZnYYEllEEg4dr"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "6TtjzxwJ1A027U7f9N7zVo"
               }
             },
             {
@@ -46636,6 +45438,27 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "2g6sVtL4Ep7MWdWetsbhan"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2yz3Fgh8bta8qps7Cas364"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1n3xgYmMybKVZ9CUEK0zJk"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3ijjp3wFmD7rjzQ1k2qijV"
               }
             }
           ]
@@ -46691,7 +45514,7 @@
         "id": "1n3xgYmMybKVZ9CUEK0zJk",
         "type": "Entry",
         "createdAt": "2025-06-28T12:19:26.327Z",
-        "updatedAt": "2025-06-28T12:19:46.995Z",
+        "updatedAt": "2025-07-02T17:16:40.203Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46699,8 +45522,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-06-28T12:19:46.995Z",
+        "publishedVersion": 11,
+        "publishedAt": "2025-07-02T17:16:40.203Z",
         "firstPublishedAt": "2025-06-28T12:19:46.995Z",
         "createdBy": {
           "sys": {
@@ -46716,8 +45539,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46746,7 +45569,7 @@
           "en-US": 10
         },
         "title": {
-          "en-US": "My first PT. He introduced me to a healthier lifestyle! (1)"
+          "en-US": "My first PT. He introduced me to a healthier lifestyle!"
         },
         "images": {
           "en-US": [
@@ -46821,6 +45644,9 @@
             "Golden body golden mind"
           ]
         },
+        "duration": {
+          "en-US": "3 months"
+        },
         "date": {
           "en-US": "2025-06-03"
         },
@@ -46834,6 +45660,354 @@
         },
         "rating": {
           "en-US": 4.8
+        },
+        "showOnLandingPage": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "golden-body-golden-mind"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "2yz3Fgh8bta8qps7Cas364",
+        "type": "Entry",
+        "createdAt": "2025-06-30T17:59:28.511Z",
+        "updatedAt": "2025-07-02T17:14:07.262Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-07-02T17:14:07.262Z",
+        "firstPublishedAt": "2025-06-30T17:59:45.015Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "review"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2yz3Fgh8bta8qps7Cas364"
+      },
+      "fields": {
+        "id": {
+          "en-US": 11
+        },
+        "title": {
+          "en-US": "Posture improve after 4 months"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3pEgpfc784FlcaMxx2exPO"
+              }
+            }
+          ]
+        },
+        "reviewer": {
+          "en-US": "A.N"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I've lost 4kg over the past 8 weeks, fell asleep easier and felt more energized in daily activities. I do everything faster and with a longer endurance, such as walking.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I am more confident working out alone (I was afraid of the gym before)",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Vili's energy level is great. He's dedicated, flexible and easy to communicate.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "package": {
+          "en-US": [
+            "Bronze skin iron mind"
+          ]
+        },
+        "duration": {
+          "en-US": "8 months"
+        },
+        "date": {
+          "en-US": "2024-10-22"
+        },
+        "changes": {
+          "en-US": [
+            "Improve fitness capacity",
+            "Lose weight",
+            "Feel stronger",
+            "Adopt a new lifestyle"
+          ]
+        },
+        "rating": {
+          "en-US": 4.5
+        },
+        "showOnLandingPage": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "3ijjp3wFmD7rjzQ1k2qijV",
+        "type": "Entry",
+        "createdAt": "2025-07-02T17:24:07.553Z",
+        "updatedAt": "2025-07-02T17:28:12.868Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 24,
+        "publishedAt": "2025-07-02T17:28:12.868Z",
+        "firstPublishedAt": "2025-07-02T17:28:12.868Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 25,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "review"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/3ijjp3wFmD7rjzQ1k2qijV"
+      },
+      "fields": {
+        "id": {
+          "en-US": 12
+        },
+        "title": {
+          "en-US": "Life changing lifestyle upgraded"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6g5UvwZYqP8byJ22n7HTCG"
+              }
+            }
+          ]
+        },
+        "reviewer": {
+          "en-US": "H.G"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I lost 2kg over 3 months sustainably, feel and look fitter, stronger overall, and maintain steady breathing while walking.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "My posture has also improved, and I have more sustained energy during the day.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "What I enjoy most is how Vili carefully guides you through each exercise to ensure you perform it correctly. He’s highly adaptable, encouraging you to push past your limits while ensuring your safety. Additionally, he is very responsive and takes the time to answer all your questions thoroughly.\nHighly recommended",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "package": {
+          "en-US": [
+            "Golden body golden mind"
+          ]
+        },
+        "duration": {
+          "en-US": "10 months"
+        },
+        "date": {
+          "en-US": "2025-06-08"
+        },
+        "changes": {
+          "en-US": [
+            "Lose weight",
+            "Increase strength",
+            "Improve fitness capacity",
+            "Adopt a new lifestyle",
+            "Improve posture"
+          ]
+        },
+        "rating": {
+          "en-US": 5
         },
         "showOnLandingPage": {
           "en-US": false
@@ -48371,6 +47545,85 @@
             "id": "5yib965szeod"
           }
         },
+        "id": "6g5UvwZYqP8byJ22n7HTCG",
+        "type": "Asset",
+        "createdAt": "2025-06-04T13:23:17.539Z",
+        "updatedAt": "2025-07-02T17:28:09.702Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-07-02T17:28:09.702Z",
+        "firstPublishedAt": "2025-07-02T17:28:09.702Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/6g5UvwZYqP8byJ22n7HTCG"
+      },
+      "fields": {
+        "title": {
+          "en-US": "IMG 6333"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/6g5UvwZYqP8byJ22n7HTCG/33c3307bdaf0b8b0df416962ce4d753f/IMG_6333.JPG",
+            "details": {
+              "size": 2224062,
+              "image": {
+                "width": 4912,
+                "height": 4912
+              }
+            },
+            "fileName": "IMG_6333.JPG",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
         "id": "4jTfARhUYl02TQjCljbhvp",
         "type": "Asset",
         "createdAt": "2025-06-04T13:23:17.565Z",
@@ -49878,7 +49131,7 @@
         "id": "2bA5t1sC24Z5YKxemf3J7",
         "type": "Asset",
         "createdAt": "2025-06-21T19:29:18.829Z",
-        "updatedAt": "2025-06-26T05:20:08.114Z",
+        "updatedAt": "2025-07-15T20:02:14.599Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -49886,8 +49139,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2025-06-26T05:20:08.114Z",
+        "publishedVersion": 6,
+        "publishedAt": "2025-07-15T20:02:14.599Z",
         "firstPublishedAt": "2025-06-26T05:20:08.114Z",
         "createdBy": {
           "sys": {
@@ -49903,8 +49156,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -49925,15 +49178,15 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/5yib965szeod/2bA5t1sC24Z5YKxemf3J7/2f641831356c705a592e6d680adf0982/IMG_6419.jpg",
+            "url": "//images.ctfassets.net/5yib965szeod/2bA5t1sC24Z5YKxemf3J7/79f96a8b7cd77955c770f5662b9c20ac/IMG_7620.JPG",
             "details": {
-              "size": 1609886,
+              "size": 2211263,
               "image": {
-                "width": 4032,
-                "height": 2268
+                "width": 7360,
+                "height": 4140
               }
             },
-            "fileName": "IMG_6419.jpg",
+            "fileName": "IMG_7620.JPG",
             "contentType": "image/jpeg"
           }
         }
@@ -51672,6 +50925,243 @@
               }
             },
             "fileName": "IMG_7316.JPG",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "34sjowLC63N5hQDVmCowDX",
+        "type": "Asset",
+        "createdAt": "2025-06-30T18:25:14.654Z",
+        "updatedAt": "2025-06-30T18:25:46.434Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-06-30T18:25:46.434Z",
+        "firstPublishedAt": "2025-06-30T18:25:46.434Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/34sjowLC63N5hQDVmCowDX"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Phylosophy"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/34sjowLC63N5hQDVmCowDX/69b8336701ff8eb08e1bafb721597db8/IMG_7351.JPG",
+            "details": {
+              "size": 1316808,
+              "image": {
+                "width": 4032,
+                "height": 3024
+              }
+            },
+            "fileName": "IMG_7351.JPG",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "5FfEB622i6NwuEyXg1I1IL",
+        "type": "Asset",
+        "createdAt": "2025-07-02T07:12:39.870Z",
+        "updatedAt": "2025-07-02T07:13:01.075Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-07-02T07:13:01.075Z",
+        "firstPublishedAt": "2025-07-02T07:13:01.075Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/5FfEB622i6NwuEyXg1I1IL"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Diet"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/5FfEB622i6NwuEyXg1I1IL/50b0281f891cc95f02273cd681963492/IMG_7390.JPG",
+            "details": {
+              "size": 1051562,
+              "image": {
+                "width": 4032,
+                "height": 3024
+              }
+            },
+            "fileName": "IMG_7390.JPG",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "j2Ko1JSgxHuArVRdeJ8kF",
+        "type": "Asset",
+        "createdAt": "2025-07-02T07:13:07.966Z",
+        "updatedAt": "2025-07-02T07:13:25.294Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-07-02T07:13:25.294Z",
+        "firstPublishedAt": "2025-07-02T07:13:25.294Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/j2Ko1JSgxHuArVRdeJ8kF"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Gothedist"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/j2Ko1JSgxHuArVRdeJ8kF/e0fc914e98fe9c8b831153c54e0a93cd/IMG_7363.JPG",
+            "details": {
+              "size": 1161500,
+              "image": {
+                "width": 4032,
+                "height": 3024
+              }
+            },
+            "fileName": "IMG_7363.JPG",
             "contentType": "image/jpeg"
           }
         }

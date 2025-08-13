@@ -16,7 +16,7 @@ export default function AllReviews({
   subtitle,
   allReviews,
 }: AllReviewsProps) {
-  const { result, selectedSort, handleSortChange } = useSort(allReviews);
+  const { sortedReviews, selectedSort, handleSortChange } = useSort(allReviews);
 
   return (
     <div className="mt-10 px-24">
@@ -26,10 +26,9 @@ export default function AllReviews({
         selectedSort={selectedSort}
         options={sortOptions}
         handleSortChange={handleSortChange}
-        className="w-full justify-end"
       />
       <div className="mt-10 grid grid-cols-3 gap-8 items-start">
-        {result.map((review) => (
+        {sortedReviews.map((review) => (
           <ReviewCard key={review.id} review={review} reviewCardType="full" />
         ))}
       </div>
