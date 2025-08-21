@@ -38,7 +38,6 @@ export enum INFO_TABS {
   FOR_WHOM = "For whom & Not for whom",
   CURRICULUM = "Curriculum",
 }
-export const TO_BE_DISCUSSED = "To be discussed with coach Vili.";
 export const INFO_SECTION_TITLE = "Take a moment to consider carefully";
 export const INFO_SECTION_SUBTITLE =
   "Enrolling in this plan takes time, energy, and commitment. Make sure you’ve got all the info you need before jumping in!";

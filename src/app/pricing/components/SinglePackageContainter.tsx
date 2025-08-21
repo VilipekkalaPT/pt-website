@@ -42,34 +42,27 @@ const createTabs = (
   packageDetails: TypePackageFields,
   curriculum: TypeCurriculumFields
 ): Tab[] => {
-  return [
+  const showCurriculum = !packageDetails.sessionOptions;
+
+  const tabs: Tab[] = [
     {
       label: INFO_TABS.WHY,
       infoCards: [
-        {
-          title: WHY,
-          content: packageDetails.why,
-        },
-        {
-          title: EXPECTED_RESULTS,
-          content: packageDetails.expectedResults,
-        },
+        { title: WHY, content: packageDetails.why },
+        { title: EXPECTED_RESULTS, content: packageDetails.expectedResults },
       ],
     },
     {
       label: INFO_TABS.FOR_WHOM,
       infoCards: [
-        {
-          title: FOR_WHOM,
-          content: packageDetails.forWhom,
-        },
-        {
-          title: NOT_FOR_WHOM,
-          content: packageDetails.notForWhom,
-        },
+        { title: FOR_WHOM, content: packageDetails.forWhom },
+        { title: NOT_FOR_WHOM, content: packageDetails.notForWhom },
       ],
     },
-    {
+  ];
+
+  if (showCurriculum && curriculum.curriculumPeriods.length) {
+    tabs.push({
       label: INFO_TABS.CURRICULUM,
       subtitle: curriculum.disclaimer,
       infoCards: curriculum.curriculumPeriods.map((period) => {
@@ -79,8 +72,10 @@ const createTabs = (
           content: periodFields.description,
         };
       }),
-    },
-  ];
+    });
+  }
+
+  return tabs;
 };
 
 export default function SinglePackageContainer({
@@ -109,7 +104,7 @@ export default function SinglePackageContainer({
         soloPackages={soloPackages}
         image={image}
       />
-      <InfoTabs tabs={tabs} showCurriculum={!packageDetails.sessionOptions} />
+      <InfoTabs tabs={tabs} />
       {packageDetails.howTrainingSessionLooksLikeTitle && (
         <HowTrainingSessionLookLike
           title={packageDetails.howTrainingSessionLooksLikeTitle}

@@ -5,14 +5,13 @@ import InfoCard from "app/components/InfoCard";
 import { Tab } from "app/lib/types/type";
 import { useState } from "react";
 import cn from "classnames";
-import { INFO_TABS, TO_BE_DISCUSSED } from "app/utils/variables";
+import { INFO_TABS } from "app/utils/variables";
 
 type TabsProps = {
   tabs: Tab[];
-  showCurriculum?: boolean;
 };
 
-export default function InfoTabs({ tabs, showCurriculum }: TabsProps) {
+export default function InfoTabs({ tabs }: TabsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -36,19 +35,8 @@ export default function InfoTabs({ tabs, showCurriculum }: TabsProps) {
         <p className="text-sm text-gray-500 italic mb-10">
           {tabs[activeIndex].subtitle}
         </p>
-        {renderInfoCard(tabs[activeIndex], showCurriculum)}
+        <InfoCard infoCard={tabs[activeIndex].infoCards} />
       </div>
     </div>
   );
 }
-
-const renderInfoCard = (tab: Tab, showCurriculum?: boolean) => {
-  if (tab.label === INFO_TABS.CURRICULUM) {
-    return showCurriculum ? (
-      <InfoCard infoCard={tab.infoCards} />
-    ) : (
-      <p className="text-gray-500">{TO_BE_DISCUSSED}</p>
-    );
-  }
-  return <InfoCard infoCard={tab.infoCards} />;
-};
