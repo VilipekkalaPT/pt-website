@@ -21,7 +21,7 @@ export default async function FAQs() {
   const allQuestions = questions.map((q) => q.fields) as TypeFaqFields[];
 
   return (
-    <div className="">
+    <>
       <HeadingSection
         title={title}
         description={description}
@@ -29,6 +29,6 @@ export default async function FAQs() {
       />
       <QASection questions={allQuestions} />
       <Divider />
-    </div>
+    </>
   );
 }

@@ -41,8 +41,17 @@ export default function QASection({ questions }: QASectionProps) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const originalHtmlOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = "visible";
+
+    return () => {
+      document.documentElement.style.overflow = originalHtmlOverflow;
+    };
+  }, []);
+
   return (
-    <div className="mt-20 px-12 flex justify-between">
+    <div className="mt-20 px-12 flex gap-8 items-start">
       <TopicList
         topicQuestions={topicQuestions}
         handleSelectTopic={handleSelectTopic}

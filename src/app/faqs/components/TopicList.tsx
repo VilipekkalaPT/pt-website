@@ -33,7 +33,7 @@ export default function TopicList({
   handleSelectTopic,
 }: TopicListProps) {
   return (
-    <div className="flex-1">
+    <div style={{ position: "sticky", top: 20, flex: 1 }}>
       {topicQuestions.map((topic) => (
         <Button
           key={topic.topicType}
