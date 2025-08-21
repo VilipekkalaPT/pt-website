@@ -5,7 +5,6 @@ import InfoCard from "app/components/InfoCard";
 import { Tab } from "app/lib/types/type";
 import { useState } from "react";
 import cn from "classnames";
-import { INFO_TABS } from "app/utils/variables";
 
 type TabsProps = {
   tabs: Tab[];
