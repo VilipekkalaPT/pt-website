@@ -31,11 +31,10 @@ export default function Button({
           "flex items-center gap-2 p-3 text-base rounded-full cursor-pointer appearance-none no-underline border-0 select-none tap-transparent overflow-hidden focus:outline-none",
           {
             "bg-primary": variant === "primary",
-            "bg-secondary text-black-30 backdrop-blur-[4px] ":
-              variant === "secondary",
+            "bg-secondary text-text-black-30": variant === "secondary",
             "py-4 border border-gray-300 rounded hover:bg-gray-100":
               variant === "outlined",
-            "bg-white text-gray-900": variant === "ghost",
+            "bg-none": variant === "ghost",
             "cursor-not-allowed opacity-50": props.disabled,
           },
           {

@@ -10,6 +10,7 @@ export const READ_LESS = "Read less";
 
 // Landing Page Variables
 export const LOGO = "logo";
+export const FLIP_ME = "Flip me";
 export const STEP = "Step";
 export const MOST_VALUABLE = "Most valuable";
 export const MOST_POPULAR = "Most popular";

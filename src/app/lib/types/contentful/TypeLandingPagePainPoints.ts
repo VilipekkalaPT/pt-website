@@ -4,7 +4,6 @@ export interface TypeLandingPagePainPointsFields {
   image: Asset;
   overlayText: EntryFields.RichText;
   backText: EntryFields.Text;
-  backButtonText?: EntryFields.Symbol;
 }
 
 export interface TypeLandingPagePainPointsSkeleton extends EntrySkeletonType {

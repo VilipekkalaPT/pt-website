@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Righteous } from "next/font/google";
+import { Red_Rose, Righteous } from "next/font/google";
 import "./globals.css";
 import { getEntries, getImageByTag } from "./lib/contentfulDataService";
 import Header from "./components/Header";
@@ -13,6 +13,12 @@ const righteous = Righteous({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-righteous",
+});
+
+const redRose = Red_Rose({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+  variable: "--font-red-rose",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +38,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${righteous.className}`}>
+      <body className={`${redRose.className} ${righteous.variable}`}>
         <BackgroundWrapper>
           <Header navigations={navigations} logo={image} />
           {children}

@@ -60,12 +60,14 @@ export default function HeroSection({
         {headingSections.map((section, i) => (
           <div
             key={i}
-            className={`absolute w-1/2 p-4 text-center text-white transition-opacity duration-1000 ${
+            className={`absolute w-full p-4 text-center text-white transition-opacity duration-1000 ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p className="text-6xl mb-4">{section.heading}</p>
-            <p className="text-3xl">{section.subheading}</p>
+            <p className="w-2/3 mx-auto text-7xl mb-6 font-righteous">
+              {section.heading}
+            </p>
+            <p className="text-4xl font-light">{section.subheading}</p>
           </div>
         ))}
         {heroSectionContent}

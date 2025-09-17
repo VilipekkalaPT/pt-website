@@ -1,4 +1,3 @@
-import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 
 interface DividerProps {
