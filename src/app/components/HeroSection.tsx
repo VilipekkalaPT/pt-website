@@ -35,7 +35,7 @@ export default function HeroSection({
   }, [headingSections.length]);
 
   const containerStyle = cn({
-    "relative w-screen h-screen": fillImage,
+    "relative w-screen h-[calc(100vh-80px)]": fillImage,
     "relative w-full h-full": !fillImage,
   });
 
@@ -46,7 +46,7 @@ export default function HeroSection({
           src={imageUrl}
           alt={HERO_SECTION_IMAGE}
           fill
-          className="block w-full h-auto object-cover"
+          className="block w-full h-auto object-cover object-center"
         />
       ) : (
         <Image
@@ -60,7 +60,7 @@ export default function HeroSection({
         {headingSections.map((section, i) => (
           <div
             key={i}
-            className={`absolute p-4 text-center text-white transition-opacity duration-1000 ${
+            className={`absolute w-1/2 p-4 text-center text-white transition-opacity duration-1000 ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >

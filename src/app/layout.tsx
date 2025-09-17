@@ -1,21 +1,18 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Righteous } from "next/font/google";
 import "./globals.css";
 import { getEntries, getImageByTag } from "./lib/contentfulDataService";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BackgroundWrapper from "./components/BackgroundWrapper";
 import { TypeNavigationSkeleton } from "./lib/types/contentful/TypeNavigation";
 import { LOGO } from "./utils/variables";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const righteous = Righteous({
+  weight: "400",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-righteous",
 });
 
 export const metadata: Metadata = {
@@ -35,11 +32,13 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header navigations={navigations} logo={image} />
-        {children}
-        <SpeedInsights />
-        <Footer logo={image} />
+      <body className={`${righteous.className} `}>
+        <BackgroundWrapper>
+          <Header navigations={navigations} logo={image} />
+          {children}
+          <SpeedInsights />
+          <Footer logo={image} />
+        </BackgroundWrapper>
       </body>
     </html>
   );

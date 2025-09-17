@@ -2,7 +2,6 @@
 
 import cn from "classnames";
 import { twMerge } from "tailwind-merge";
-import "./button.css";
 
 export type ButtonVariant = "primary" | "secondary" | "outlined" | "ghost";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
