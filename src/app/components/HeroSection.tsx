@@ -56,7 +56,7 @@ export default function HeroSection({
           height={image.file?.details.image?.height}
         />
       )}
-      <div className="absolute inset-0 bg-black/70 z-10 flex items-center justify-center">
+      <div className="absolute inset-0 z-10 flex items-center justify-center">
         {headingSections.map((section, i) => (
           <div
             key={i}

@@ -6,9 +6,9 @@ import { Tab } from "app/lib/types/type";
 import { useState } from "react";
 import cn from "classnames";
 
-type TabsProps = {
+interface TabsProps {
   tabs: Tab[];
-};
+}
 
 export default function InfoTabs({ tabs }: TabsProps) {
   const [activeIndex, setActiveIndex] = useState(0);

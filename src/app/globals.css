@@ -1,33 +1,16 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  /* color */
-  --primary-color: ##ffffff;
-  --secondary: #171717;
-  --black: #000000;
-  --white: #ffffff;
-
-  /* spacing */
-  --spacing-xxs: 0.125rem; /* 2px */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-s: 0.5rem; /* 8px */
-  --spacing-m: 0.75rem; /* 12px */
-  --spacing-l: 1rem; /* 16px */
-  --spacing-xl: 1.5rem; /* 24px */
-  --spacing-xxl: 2rem; /* 32px */
-  --spacing-xxxl: 3rem; /* 48px */
-  --spacing-xxxxl: 4rem; /* 64px */
-
-  /* font */
-  --font-xxs: 0.75rem; /* 12px */
-  --font-xs: 0.875rem; /* 14px */
-  --font-s: 1rem; /* 16px */
-  --font-m: 1.125rem; /* 18px */
-  --font-l: 1.25rem; /* 20px */
-  --font-xl: 1.5rem; /* 24px */
+@theme {
+  --color-primary: rgba(138, 34, 11);
+  --color-primary-light: rgba(138, 34, 11, 0.5);
+  --color-secondary: rgba(44, 212, 255);
+  --color-pink: rgba(234, 63, 184);
+  --color-mint: rgba(78, 250, 213);
+  --color-green: rgba(0, 128, 67);
+  --color-green-light: rgba(133, 224, 163);
+  --color-black: rgba(0, 0, 0);
+  --color-white: rgba(255, 255, 255);
+  --color-black-30: rgba(30, 30, 30);
 }
 
 html,
@@ -37,12 +20,10 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--color-white);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: var(--font-s);
 }
 
 a {

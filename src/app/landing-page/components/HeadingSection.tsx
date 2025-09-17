@@ -28,18 +28,19 @@ export default function HeadingSection({
       headingSections={headingSections}
       fillImage
       heroSectionContent={
-        <div className="mt-60 flex">
+        <div className="mt-70 flex">
           <Button
             label={actionButtonText1}
             variant="secondary"
+            shadowType="both"
             onClick={() => router.push(`${ROUTES.PRICING}/solo-packages`)}
             className="mr-4"
           />
           <Button
             label={actionButtonText2}
-            variant="primary"
+            variant="secondary"
+            shadowType="both"
             onClick={() => router.push(`${ROUTES.PRICING}/duo-packages`)}
-            className="bg-gray-800"
           />
         </div>
       }

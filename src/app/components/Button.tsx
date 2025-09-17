@@ -2,6 +2,7 @@
 
 import cn from "classnames";
 import { twMerge } from "tailwind-merge";
+import "./button.css";
 
 export type ButtonVariant = "primary" | "secondary" | "outlined" | "ghost";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -11,6 +12,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
+  shadowType?: "none" | "inset" | "outset" | "both";
 }
 
 export default function Button({
@@ -19,6 +21,7 @@ export default function Button({
   className,
   iconLeft,
   iconRight,
+  shadowType = "none",
   onClick,
   ...props
 }: ButtonProps) {
@@ -26,18 +29,26 @@ export default function Button({
     <button
       className={twMerge(
         cn(
-          "flex items-center gap-2 py-2 px-4 text-base rounded-lg cursor-pointer appearance-none focus:outline-none",
+          "flex items-center gap-2 p-3 text-base rounded-full cursor-pointer appearance-none no-underline border-0 select-none tap-transparent overflow-hidden focus:outline-none",
           {
-            "border-0 text-white bg-black": variant === "primary",
-            "border-0 text-gray-600 bg-gray-200 hover:bg-gray-600 hover:text-white":
+            "bg-primary": variant === "primary",
+            "bg-secondary text-black-30 backdrop-blur-[4px] ":
               variant === "secondary",
             "py-4 border border-gray-300 rounded hover:bg-gray-100":
               variant === "outlined",
-            "border-0 bg-white": variant === "ghost",
+            "bg-white text-gray-900": variant === "ghost",
             "cursor-not-allowed opacity-50": props.disabled,
           },
-          className
-        )
+          {
+            "shadow-[inset_0.7px_0.7px_rgba(193,249,255,0.9),inset_-0.7px_-0.7px_rgba(193,249,255,0.9)]":
+              shadowType === "inset",
+            "0_0_15px_rgba(255,255,255,0.4),0_1px_8px_rgba(0,0,0,0.12)]":
+              shadowType === "outset",
+            "shadow-[inset_0.7px_0.7px_rgba(193,249,255,0.9),inset_-0.7px_-0.7px_rgba(193,249,255,0.9),0_0_15px_rgba(255,255,255,0.4),0_1px_8px_rgba(0,0,0,0.12)]":
+              shadowType === "both",
+          }
+        ),
+        className
       )}
       onClick={onClick}
       aria-label={`${label} button`}

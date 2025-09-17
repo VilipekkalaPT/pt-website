@@ -1,0 +1,25 @@
+.button {
+  padding: 12px;
+  border-radius: 50px;
+  background: rgba(44, 212, 255);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 1px 1px 1px rgba(234, 253, 255, 0.9),
+    inset -1px -1px 1px rgba(171, 241, 250, 0.9),
+    0 0 15px rgba(255, 255, 255, 0.6), 0 1px 8px rgba(0, 0, 0, 0.12);
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
