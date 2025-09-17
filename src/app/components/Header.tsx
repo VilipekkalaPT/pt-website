@@ -8,6 +8,7 @@ import cn from "classnames";
 import Image from "next/image";
 import { AssetFields } from "contentful";
 import { getAssetUrl } from "app/utils/utils";
+import { localLogoUrl } from "app/utils/routes";
 
 export interface DropdownItem {
   label: string;
@@ -30,15 +31,13 @@ export default function Header({ navigations, logo }: HeaderProps) {
 
   const navigationItems = navigations.sort((a, b) => a.order - b.order);
 
-  const logoUrl = logo ? getAssetUrl(logo) : "/public/logo.png";
+  const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
 
   return (
-    <div className="flex justify-between w-full px-12 py-2 shadow z-50">
-      {logo && (
-        <Link href="/" className="flex">
-          <Image src={logoUrl} alt="Logo" width={200} height={200} />
-        </Link>
-      )}
+    <div className="flex justify-between w-full px-12 py-6 shadow z-50">
+      <Link href="/" className="flex">
+        <Image src={logoUrl} alt="Logo" width={200} height={200} />
+      </Link>
       <div className="flex justify-between items-center">
         {navigationItems.map((item) => (
           <NavigationItem key={item.id} item={item} pathName={pathname} />

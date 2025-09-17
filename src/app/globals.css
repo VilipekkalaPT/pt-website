@@ -47,16 +47,3 @@ div[data-radix-popper-content-wrapper] {
     height: 0;
   }
 }
-
-@keyframes moveBackground {
-  0% {
-    background-position: 0 0, 0 0, 0 0;
-  }
-  100% {
-    background-position: 0 -100px, 0 -50px, 0 -20px;
-  }
-}
-
-.animate-background {
-  animation: moveBackground 30s linear infinite;
-}

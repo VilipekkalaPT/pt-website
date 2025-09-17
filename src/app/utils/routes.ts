@@ -6,3 +6,5 @@ export const ROUTES = {
   CONTACT: "/contact-and-booking",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
 };
+
+export const localLogoUrl = "/logo.svg";

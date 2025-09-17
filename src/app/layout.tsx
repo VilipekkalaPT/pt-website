@@ -32,7 +32,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${righteous.className} `}>
+      <body className={`${righteous.className}`}>
         <BackgroundWrapper>
           <Header navigations={navigations} logo={image} />
           {children}
