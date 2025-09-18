@@ -1,5 +1,4 @@
 import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
-import { TypeLandingPageServicesSkeleton } from "./TypeLandingPageServices";
 import { TypeLandingPagePainPointsSkeleton } from "./TypeLandingPagePainPoints";
 import { TypeImageCardSkeleton } from "./TypeImageCard";
 
@@ -18,9 +17,7 @@ export interface TypeLandingPageDataFields {
   actionButtonText2: EntryFields.Symbol;
   serviceTitle: EntryFields.Symbol;
   serviceSubtitle: EntryFields.Symbol;
-  services: Entry<TypeLandingPageServicesSkeleton>[];
-  goalTitle: EntryFields.Symbol;
-  goals: EntryFields.Symbol[];
+  services: EntryFields.Symbol[];
   imageCards: Entry<TypeImageCardSkeleton>[];
   faqTitle: EntryFields.Symbol;
   faqSubtitle: EntryFields.Symbol;

@@ -3,8 +3,7 @@
 @theme {
   --font-righteous: var(--font-righteous), sans-serif;
 
-  --color-primary: rgba(138, 34, 11);
-  --color-primary-light: rgba(138, 34, 11, 0.5);
+  --color-primary: rgba(138, 34, 111);
   --color-secondary: rgba(44, 212, 255);
   --color-pink: rgba(234, 63, 184);
   --color-mint: rgba(78, 250, 213);
@@ -14,7 +13,9 @@
   --color-white: rgba(255, 255, 255);
   --color-text-black-30: rgba(30, 30, 30);
   --color-text-secondary: rgba(255, 255, 255, 0.7);
-  --color-border: rgba(68, 68, 68);
+  --color-border-primary: rgba(245, 245, 245);
+  --color-border-secondary: rgba(68, 68, 68);
+  --color-icon-secondary: rgba(255, 255, 255, 0.4);
 }
 
 html,

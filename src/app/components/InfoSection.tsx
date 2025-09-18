@@ -20,10 +20,10 @@ export default function InfoSection({
   className,
 }: InfoSectionProps) {
   const router = useRouter();
-  const imageCardsWithImage = imageCards.map((card) => ({
-    ...card,
-    image: card.image.fields,
-  })) as TypeImageCardFieldsWithImage[];
+  // const imageCardsWithImage = imageCards.map((card) => ({
+  //   ...card,
+  //   image: card.image.fields,
+  // })) as TypeImageCardFieldsWithImage[];
 
   return (
     <div className={cn("w-full flex flex-col items-center", className)}>
@@ -31,7 +31,7 @@ export default function InfoSection({
         <p className="text-2xl font-bold">{title}</p>
         <p className="mt-1 text-xl text-gray-500">{subtitle}</p>
       </div>
-      <div className="mt-10 w-full grid grid-cols-2 gap-10">
+      {/* <div className="mt-10 w-full grid grid-cols-2 gap-10">
         {imageCardsWithImage.map((card, index) => (
           <ImageCard
             key={index}
@@ -39,7 +39,7 @@ export default function InfoSection({
             handleClick={() => router.push(`${card.url}`)}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

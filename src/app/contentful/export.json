@@ -2491,7 +2491,7 @@
         "id": "landingPageData",
         "type": "ContentType",
         "createdAt": "2025-06-01T19:20:05.486Z",
-        "updatedAt": "2025-06-28T20:24:11.368Z",
+        "updatedAt": "2025-09-18T11:53:05.370Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2499,8 +2499,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 31,
-        "publishedAt": "2025-06-28T20:24:11.368Z",
+        "publishedVersion": 43,
+        "publishedAt": "2025-09-18T11:53:05.370Z",
         "firstPublishedAt": "2025-06-01T19:20:05.887Z",
         "createdBy": {
           "sys": {
@@ -2516,8 +2516,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 16,
-        "version": 32,
+        "publishedCounter": 22,
+        "version": 44,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2703,34 +2703,6 @@
           "disabled": false,
           "omitted": false,
           "items": {
-            "type": "Link",
-            "validations": [
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "goalTitle",
-          "name": "Goal Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "goals",
-          "name": "Goals",
-          "type": "Array",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
             "type": "Symbol",
             "validations": [
             ]
@@ -2846,93 +2818,6 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "landingPageServices",
-        "type": "ContentType",
-        "createdAt": "2025-06-01T19:26:06.350Z",
-        "updatedAt": "2025-06-01T19:26:06.741Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2025-06-01T19:26:06.741Z",
-        "firstPublishedAt": "2025-06-01T19:26:06.741Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/content_types/landingPageServices"
-      },
-      "displayField": "title",
-      "name": "Landing Page Services",
-      "description": "",
-      "fields": [
-        {
-          "id": "title",
-          "name": "Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "description",
-          "name": "Description",
-          "type": "Text",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "tag",
-          "name": "Tag",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
         }
       ]
     },
@@ -3405,7 +3290,7 @@
         "id": "imageCard",
         "type": "ContentType",
         "createdAt": "2025-06-10T18:12:24.045Z",
-        "updatedAt": "2025-06-10T18:24:58.850Z",
+        "updatedAt": "2025-09-18T12:40:54.663Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3413,8 +3298,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T18:24:58.850Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-09-18T12:40:54.663Z",
         "firstPublishedAt": "2025-06-10T18:12:24.363Z",
         "createdBy": {
           "sys": {
@@ -3430,8 +3315,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3461,7 +3346,7 @@
           "name": "Subtitle",
           "type": "Text",
           "localized": false,
-          "required": true,
+          "required": false,
           "validations": [
           ],
           "disabled": false,
@@ -3472,7 +3357,7 @@
           "name": "Image",
           "type": "Link",
           "localized": false,
-          "required": true,
+          "required": false,
           "validations": [
           ],
           "disabled": false,
@@ -5703,7 +5588,7 @@
             "linkType": "Space"
           }
         },
-        "version": 32,
+        "version": 44,
         "createdAt": "2025-06-01T19:20:06.037Z",
         "createdBy": {
           "sys": {
@@ -5712,7 +5597,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-28T20:24:12.046Z",
+        "updatedAt": "2025-09-18T11:53:06.137Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5808,16 +5693,6 @@
         },
         {
           "fieldId": "services",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "goalTitle",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "goals",
           "widgetId": "tagEditor",
           "widgetNamespace": "builtin"
         },
@@ -5849,67 +5724,6 @@
         {
           "fieldId": "faqImage",
           "widgetId": "assetLinkEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "5yib965szeod",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2025-06-01T19:26:06.865Z",
-        "createdBy": {
-          "sys": {
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2025-06-01T19:26:07.322Z",
-        "updatedBy": {
-          "sys": {
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "landingPageServices",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "title",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "description",
-          "widgetId": "markdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "tag",
-          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -6127,7 +5941,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 8,
         "createdAt": "2025-06-10T18:12:24.532Z",
         "createdBy": {
           "sys": {
@@ -6136,7 +5950,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-10T18:24:59.485Z",
+        "updatedAt": "2025-09-18T12:40:55.295Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -40554,330 +40368,10 @@
             "id": "5yib965szeod"
           }
         },
-        "id": "6kzAVd94YiYsAD7FBwbqqx",
-        "type": "Entry",
-        "createdAt": "2025-06-01T19:28:16.409Z",
-        "updatedAt": "2025-06-01T19:28:35.150Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-01T19:28:35.150Z",
-        "firstPublishedAt": "2025-06-01T19:28:35.150Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "landingPageServices"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/6kzAVd94YiYsAD7FBwbqqx"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Slay start"
-        },
-        "description": {
-          "en-US": "A goal-driven workout plan tailored for busy lives"
-        },
-        "tag": {
-          "en-US": "Training plan"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "nM3yBOXCS46JtBriwxw88",
-        "type": "Entry",
-        "createdAt": "2025-06-01T19:28:47.256Z",
-        "updatedAt": "2025-06-01T19:29:00.979Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-01T19:29:00.979Z",
-        "firstPublishedAt": "2025-06-01T19:29:00.979Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "landingPageServices"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/nM3yBOXCS46JtBriwxw88"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Body reset"
-        },
-        "description": {
-          "en-US": "Reset your body and energy with personalized meal support and stress-aware strategies"
-        },
-        "tag": {
-          "en-US": "Dietary coaching"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "33ThTBfwIl69gmfHQHorMg",
-        "type": "Entry",
-        "createdAt": "2025-06-01T19:29:06.297Z",
-        "updatedAt": "2025-06-01T19:29:19.140Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-01T19:29:19.140Z",
-        "firstPublishedAt": "2025-06-01T19:29:19.140Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "landingPageServices"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/33ThTBfwIl69gmfHQHorMg"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Tone & thrive"
-        },
-        "description": {
-          "en-US": "In-person sessions focused on strength, posture, and progress"
-        },
-        "tag": {
-          "en-US": "Gym training"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
-        "id": "5c7lpJFkR04h5uskZs26DQ",
-        "type": "Entry",
-        "createdAt": "2025-06-01T19:29:27.899Z",
-        "updatedAt": "2025-06-01T19:29:36.835Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-01T19:29:36.835Z",
-        "firstPublishedAt": "2025-06-01T19:29:36.835Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "landingPageServices"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/5c7lpJFkR04h5uskZs26DQ"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Slay elite"
-        },
-        "description": {
-          "en-US": "The ultimate training experience. Full coaching for workouts, nutrition, and gym sessions"
-        },
-        "tag": {
-          "en-US": "All-in-one support"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "5yib965szeod"
-          }
-        },
         "id": "3qq56D92N9NAAkIhYJNQVU",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:58.149Z",
-        "updatedAt": "2025-09-17T18:51:17.491Z",
+        "updatedAt": "2025-09-18T11:53:40.021Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40885,8 +40379,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 59,
-        "publishedAt": "2025-09-17T18:51:17.491Z",
+        "publishedVersion": 67,
+        "publishedAt": "2025-09-18T11:53:40.021Z",
         "firstPublishedAt": "2025-06-01T19:41:33.034Z",
         "createdBy": {
           "sys": {
@@ -40902,8 +40396,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 15,
-        "version": 60,
+        "publishedCounter": 17,
+        "version": 68,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40993,53 +40487,17 @@
           "en-US": "Duo Slay packages"
         },
         "serviceTitle": {
-          "en-US": "What are you looking for? We’ve got you covered"
+          "en-US": "Let’s change that together!"
         },
         "serviceSubtitle": {
-          "en-US": "From solo workouts to full support. Pick what fits your goals best"
+          "en-US": "SlayFitVili offers"
         },
         "services": {
           "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "6kzAVd94YiYsAD7FBwbqqx"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "nM3yBOXCS46JtBriwxw88"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "33ThTBfwIl69gmfHQHorMg"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "5c7lpJFkR04h5uskZs26DQ"
-              }
-            }
-          ]
-        },
-        "goalTitle": {
-          "en-US": "More than just muscle building. Together, we will"
-        },
-        "goals": {
-          "en-US": [
-            "Build durability",
-            "Carve your dream body",
-            "Cultivate a stronger mind",
-            "Embrace functional training",
-            "Enhance flexibility"
+            "Goal-driven workout plan tailored for busy lives",
+            "Personalized meal support and stress-aware strategies",
+            "In-person sessions",
+            "Full coaching for workouts, nutrition, and gym sessions"
           ]
         },
         "imageCards": {
@@ -42691,7 +42149,7 @@
         "id": "4vDe2ofPL30QmWI3qzO97X",
         "type": "Entry",
         "createdAt": "2025-06-10T18:24:17.057Z",
-        "updatedAt": "2025-06-10T18:25:22.270Z",
+        "updatedAt": "2025-09-18T12:41:13.624Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42699,8 +42157,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-06-10T18:25:22.270Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-09-18T12:41:13.624Z",
         "firstPublishedAt": "2025-06-10T18:25:22.270Z",
         "createdBy": {
           "sys": {
@@ -42716,8 +42174,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42743,19 +42201,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "New to personal training?"
-        },
-        "subtitle": {
           "en-US": "Don't know which package suits you?"
-        },
-        "image": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "6LJFASShcQOH6rgfMfkGUR"
-            }
-          }
         },
         "actionButtonText": {
           "en-US": "Take a fitquiz"
@@ -42780,7 +42226,7 @@
         "id": "3go8qDSqDHdL30klhkPJqh",
         "type": "Entry",
         "createdAt": "2025-06-10T18:26:03.991Z",
-        "updatedAt": "2025-06-13T19:41:39.187Z",
+        "updatedAt": "2025-09-18T12:41:37.553Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42788,8 +42234,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2025-06-13T19:41:39.187Z",
+        "publishedVersion": 17,
+        "publishedAt": "2025-09-18T12:41:37.553Z",
         "firstPublishedAt": "2025-06-10T18:26:53.763Z",
         "createdBy": {
           "sys": {
@@ -42805,8 +42251,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 16,
+        "publishedCounter": 6,
+        "version": 18,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42833,18 +42279,6 @@
       "fields": {
         "title": {
           "en-US": "Ready to SlayFit?"
-        },
-        "subtitle": {
-          "en-US": "Find out how SlayFitVili's services can help!"
-        },
-        "image": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "10JfJL2rI2SMoYr9Z4BoDu"
-            }
-          }
         },
         "actionButtonText": {
           "en-US": "Browse all packages"

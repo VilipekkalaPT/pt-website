@@ -9,16 +9,14 @@ import {
   TypeImageCardFields,
   TypeLandingPageDataFields,
   TypeLandingPagePainPointsFields,
-  TypeLandingPageServicesFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
 import ServiceSection from "./components/ServiceSection";
-import GoalSection from "./components/GoalSection";
 import FAQSection from "./components/FAQSection";
 import { TypeLandingPageDataSkeleton } from "app/lib/types/contentful/TypeLandingPageData";
 import PainPointsSection from "./components/PainPointsSection";
 import { TypePackageSkeleton } from "app/lib/types/contentful/TypePackage";
-import ImageCardsFitQuizSection from "./components/ImageCardsFitQuizSection";
+import CardsFitQuizSection from "./components/CardsFitQuizSection";
 import { HeadingSectionType } from "app/lib/types/type";
 
 export default async function LandingPage() {
@@ -47,10 +45,8 @@ export default async function LandingPage() {
       subheading: landingPageContent.subheading3,
     },
   ];
-  const services = landingPageContent.services.map(
-    (s) => s.fields
-  ) as TypeLandingPageServicesFields[];
-  const imageCards = landingPageContent.imageCards.map(
+
+  const cards = landingPageContent.imageCards.map(
     (card) => card.fields
   ) as TypeImageCardFields[];
   const painPoints = landingPageContent.painPoints.map(
@@ -73,13 +69,9 @@ export default async function LandingPage() {
       <ServiceSection
         title={landingPageContent.serviceTitle}
         subtitle={landingPageContent.serviceSubtitle}
-        services={services}
+        services={landingPageContent.services}
       />
-      <GoalSection
-        title={landingPageContent.goalTitle}
-        goals={landingPageContent.goals}
-      />
-      <ImageCardsFitQuizSection imageCards={imageCards} packages={packages} />
+      <CardsFitQuizSection cards={cards} packages={packages} />
       <FAQSection
         title={landingPageContent.faqTitle}
         subtitle={landingPageContent.faqSubtitle}

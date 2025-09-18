@@ -40,7 +40,7 @@ export default function PainPointsSection({
             >
               <div
                 className={cn(
-                  "w-full h-full relative bg-black/50 border-1 border-border rounded-lg transition-transform duration-700 [transform-style:preserve-3d]",
+                  "w-full h-full relative bg-black/50 border-1 border-border-secondary rounded-lg transition-transform duration-700 [transform-style:preserve-3d]",
                   {
                     "rotate-y-180": flipCard === index,
                   }
