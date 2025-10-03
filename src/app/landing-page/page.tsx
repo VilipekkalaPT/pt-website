@@ -74,14 +74,12 @@ export default async function LandingPage() {
       <CardsFitQuizSection cards={cards} packages={packages} />
       <FAQSection
         title={landingPageContent.faqTitle}
-        subtitle={landingPageContent.faqSubtitle}
         content={landingPageContent.faqContent}
         buttonText={landingPageContent.faqButtonText}
         image={landingPageContent.faqImage.fields as AssetFields}
       />
       <Review reviews={reviews} />
       <KickOffProcess process={kickOffProcess} />
-      <Divider />
     </>
   );
 }

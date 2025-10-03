@@ -19,16 +19,26 @@ export default function PainPointsSection({
   subtitle,
   painPoints,
 }: PainPointsSectionProps) {
-  const [flipCard, setFlipCard] = useState<number | null>(null);
+  const [flippedCards, setFlippedCards] = useState<boolean[]>([
+    false,
+    false,
+    false,
+  ]);
 
   const baseStyle =
-    "absolute inset-0 flex flex-col items-center justify-center text-center p-4 [backface-visibility:hidden]";
+    "absolute inset-0 flex flex-col items-center justify-center text-center p-12 [backface-visibility:hidden]";
+
+  const toggleCard = (index: number) => {
+    setFlippedCards((prev) =>
+      prev.map((flipped, i) => (i === index ? !flipped : flipped))
+    );
+  };
 
   return (
-    <div className="mt-20 w-2/3 mx-auto flex flex-col items-center">
-      <p className="text-2xl mb-1">{title}</p>
+    <div className="mt-20 w-4/5 mx-auto flex flex-col items-center">
+      <p className="text-2xl font-medium mb-1">{title}</p>
       <p className="text-xl text-text-secondary mb-10">{subtitle}</p>
-      <div className="w-full h-[200px] flex gap-4">
+      <div className="w-full h-[220px] flex gap-8">
         {painPoints.map((point, index) => {
           return (
             <div
@@ -40,9 +50,9 @@ export default function PainPointsSection({
             >
               <div
                 className={cn(
-                  "w-full h-full relative bg-black/50 border-1 border-border-secondary rounded-lg transition-transform duration-700 [transform-style:preserve-3d]",
+                  "w-full h-full relative bg-black/50 border-1 border-border-default-secondary rounded-lg transition-transform duration-700 [transform-style:preserve-3d]",
                   {
-                    "rotate-y-180": flipCard === index,
+                    "rotate-y-180": flippedCards[index],
                   }
                 )}
               >
@@ -54,10 +64,8 @@ export default function PainPointsSection({
                   <Button
                     label={FLIP_ME}
                     variant="ghost"
-                    shadowType="inset"
-                    onClick={() =>
-                      setFlipCard(flipCard === index ? null : index)
-                    }
+                    glassmorphism
+                    onClick={() => toggleCard(index)}
                   />
                 </div>
 
@@ -67,14 +75,12 @@ export default function PainPointsSection({
                     "[transform:rotateY(180deg)]"
                   )}
                 >
-                  {point.backText}
+                  <span className="mb-4">{point.backText}</span>
                   <Button
                     label={FLIP_ME}
                     variant="ghost"
-                    shadowType="inset"
-                    onClick={() =>
-                      setFlipCard(flipCard === index ? null : index)
-                    }
+                    glassmorphism
+                    onClick={() => toggleCard(index)}
                   />
                 </div>
               </div>

@@ -40,16 +40,21 @@ export default function CardsFitQuizSection({
   }, [showFitQuiz]);
 
   return (
-    <div className="w-2/3 mx-auto">
+    <div className="w-4/5 mx-auto">
       <div className="mt-12 grid grid-cols-2 gap-4">
         {cards.map((card, index) => (
-          <Card key={index} className="px-8 py-16 bg-primary/50 border-none">
+          <Card
+            key={index}
+            glassmorphism
+            className="px-8 py-16 rounded-[20px] bg-primary/50"
+          >
             <CardContent className="flex flex-col items-center text-center gap-4">
-              <p className="text-2xl mb-1">{card.title}</p>
+              <p className="text-2xl font-medium mb-1">{card.title}</p>
               <Button
                 label={card.actionButtonText}
                 variant="secondary"
-                shadowType="both"
+                glassmorphism
+                hasShadow
                 onClick={
                   card.url ? () => router.push(`${card.url}`) : handleClick
                 }

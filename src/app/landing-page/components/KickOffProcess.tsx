@@ -1,39 +1,18 @@
 import { TypeKickOffProcessFields } from "app/lib/types/contentful";
+import { SLAY_PROCESS } from "app/utils/variables";
+import TimelineComponent from "./TimelineComponent";
 
 type KickOffProcessProps = {
   process: TypeKickOffProcessFields[];
 };
 
 export default function KickOffProcess({ process }: KickOffProcessProps) {
-  const sortedProcess = process.sort((a, b) => a.order - b.order);
-  return (
-    <div className="mt-40 px-12">
-      <p className="text-2xl font-bold">The kick-off process</p>
-      <div className="mt-10 grid grid-cols-3 gap-12 mb-15">
-        {sortedProcess.map((step) => (
-          <ProcessStep key={step.id} step={step} />
-        ))}
-      </div>
-    </div>
-  );
-}
+  const sortedProcess = [...process].sort((a, b) => a.id - b.id);
 
-function ProcessStep({ step }: { step: TypeKickOffProcessFields }) {
   return (
-    <div>
-      <div className="flex items-center">
-        <StepNumber order={step.order} />
-        <span className="text-xl font-bold ml-3">{step.title}</span>
-      </div>
-      <p className="ml-11 text-gray-500">{step.description}</p>
-    </div>
-  );
-}
-
-function StepNumber({ order }: { order: number }) {
-  return (
-    <div className="w-8 h-8 text-black rounded-full border-2 border-black flex items-center justify-center font-bold">
-      {order}
+    <div className="mt-40">
+      <p className="text-2xl font-medium text-center">{SLAY_PROCESS}</p>
+      <TimelineComponent process={sortedProcess} />
     </div>
   );
 }

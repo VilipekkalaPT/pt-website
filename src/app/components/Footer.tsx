@@ -15,13 +15,17 @@ export default function Footer({ logo }: FooterProps) {
   const footerColumns = FOOTER.columns;
 
   return (
-    <div className="grid grid-cols-4 gap-4 w-full p-6">
+    <div className="mt-20 grid grid-cols-4 gap-4 w-full p-6">
       <Image src={logoUrl} alt="Logo" width={200} height={200} />
       {footerColumns.map((col: FooterColumn) => (
         <div className="flex flex-col" key={col.title}>
-          <p className="text-lg font-semibold mb-2">{col.title}</p>
+          <p className="text-lg mb-6">{col.title}</p>
           {col.links.map((link: FooterLinkType) => (
-            <Link href={link.url ?? "#"} className="mb-1" key={link.label}>
+            <Link
+              href={link.url ?? "#"}
+              className="mb-1 font-light"
+              key={link.label}
+            >
               {link.label}
               {link.description && `: ${link.description}`}
             </Link>

@@ -15,6 +15,7 @@ export const FOOTER: Footer = {
       links: [
         { label: "Solo packages", url: `${ROUTES.PRICING}/solo-packages` },
         { label: "Duo packages", url: `${ROUTES.PRICING}/duo-packages` },
+        { label: "Client spotlights", url: ROUTES.CLIENT_SPOTLIGHTS },
         { label: "About", url: ROUTES.ABOUT },
         { label: "FAQs", url: ROUTES.FAQs },
       ],

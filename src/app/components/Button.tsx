@@ -11,7 +11,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
-  shadowType?: "none" | "inset" | "outset" | "both";
+  glassmorphism?: boolean;
+  hasShadow?: boolean;
 }
 
 export default function Button({
@@ -20,7 +21,8 @@ export default function Button({
   className,
   iconLeft,
   iconRight,
-  shadowType = "none",
+  hasShadow,
+
   onClick,
   ...props
 }: ButtonProps) {
@@ -36,15 +38,17 @@ export default function Button({
               variant === "outlined",
             "bg-none": variant === "ghost",
             "cursor-not-allowed opacity-50": props.disabled,
-          },
-          {
-            "shadow-[inset_0.7px_0.7px_rgba(193,249,255,0.9),inset_-0.7px_-0.7px_rgba(193,249,255,0.9)]":
-              shadowType === "inset",
-            "0_0_15px_rgba(255,255,255,0.4),0_1px_8px_rgba(0,0,0,0.12)]":
-              shadowType === "outset",
-            "shadow-[inset_0.7px_0.7px_rgba(193,249,255,0.9),inset_-0.7px_-0.7px_rgba(193,249,255,0.9),0_0_15px_rgba(255,255,255,0.4),0_1px_8px_rgba(0,0,0,0.12)]":
-              shadowType === "both",
+            "glass-effect": props.glassmorphism,
+            "outside-shadow": hasShadow,
           }
+          // {
+          //   "shadow-[inset_0.7px_0.7px_rgba(193,249,255,0.9),inset_-0.7px_-0.7px_rgba(193,249,255,0.9)]":
+          //     hasShadow === "inset",
+          //   "0_0_15px_rgba(255,255,255,0.4),0_1px_8px_rgba(0,0,0,0.12)]":
+          //     shadowType === "outset",
+          //   "shadow-[inset_0.7px_0.7px_rgba(193,249,255,0.9),inset_-0.7px_-0.7px_rgba(193,249,255,0.9),0_0_15px_rgba(255,255,255,0.4),0_1px_8px_rgba(0,0,0,0.12)]":
+          //     shadowType === "both",
+          // }
         ),
         className
       )}

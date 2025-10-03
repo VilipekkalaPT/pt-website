@@ -926,7 +926,7 @@
         "id": "kickOffProcess",
         "type": "ContentType",
         "createdAt": "2025-04-18T14:39:57.793Z",
-        "updatedAt": "2025-04-23T18:54:05.116Z",
+        "updatedAt": "2025-09-21T18:20:33.171Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -934,8 +934,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-04-23T18:54:05.116Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-09-21T18:20:33.171Z",
         "firstPublishedAt": "2025-04-18T14:39:58.191Z",
         "createdBy": {
           "sys": {
@@ -951,8 +951,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 5,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -998,26 +998,6 @@
           "localized": false,
           "required": true,
           "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "order",
-          "name": "Order",
-          "type": "Integer",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "unique": true
-            },
-            {
-              "range": {
-                "min": 1,
-                "max": 5
-              }
-            }
           ],
           "disabled": false,
           "omitted": false
@@ -2491,7 +2471,7 @@
         "id": "landingPageData",
         "type": "ContentType",
         "createdAt": "2025-06-01T19:20:05.486Z",
-        "updatedAt": "2025-09-18T11:53:05.370Z",
+        "updatedAt": "2025-09-21T17:09:21.691Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2499,8 +2479,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 43,
-        "publishedAt": "2025-09-18T11:53:05.370Z",
+        "publishedVersion": 47,
+        "publishedAt": "2025-09-21T17:09:21.691Z",
         "firstPublishedAt": "2025-06-01T19:20:05.887Z",
         "createdBy": {
           "sys": {
@@ -2516,8 +2496,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 22,
-        "version": 44,
+        "publishedCounter": 24,
+        "version": 48,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2728,17 +2708,6 @@
         {
           "id": "faqTitle",
           "name": "FAQ Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "faqSubtitle",
-          "name": "FAQ Subtitle",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -4801,7 +4770,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 10,
         "createdAt": "2025-04-18T14:39:58.334Z",
         "createdBy": {
           "sys": {
@@ -4810,7 +4779,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-04-23T18:54:05.932Z",
+        "updatedAt": "2025-09-21T18:20:33.714Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -4847,11 +4816,6 @@
         {
           "fieldId": "description",
           "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "order",
-          "widgetId": "numberEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -5588,7 +5552,7 @@
             "linkType": "Space"
           }
         },
-        "version": 44,
+        "version": 48,
         "createdAt": "2025-06-01T19:20:06.037Z",
         "createdBy": {
           "sys": {
@@ -5597,7 +5561,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-09-18T11:53:06.137Z",
+        "updatedAt": "2025-09-21T17:09:22.398Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5703,11 +5667,6 @@
         },
         {
           "fieldId": "faqTitle",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "faqSubtitle",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -6733,9 +6692,6 @@
         },
         "description": {
           "en-US": "Contact via form, WhatsApp, or email"
-        },
-        "order": {
-          "en-US": 1
         }
       }
     },
@@ -6816,9 +6772,6 @@
         },
         "description": {
           "en-US": "A discussion on fitness history, needs, and goals"
-        },
-        "order": {
-          "en-US": 2
         }
       }
     },
@@ -6899,9 +6852,6 @@
         },
         "description": {
           "en-US": "A tailored training/nutrition program is designed"
-        },
-        "order": {
-          "en-US": 3
         }
       }
     },
@@ -6982,9 +6932,6 @@
         },
         "description": {
           "en-US": "Personalized guidance begins"
-        },
-        "order": {
-          "en-US": 4
         }
       }
     },
@@ -7065,9 +7012,6 @@
         },
         "description": {
           "en-US": "Ongoing coaching, check-ins, and adjusments"
-        },
-        "order": {
-          "en-US": 5
         }
       }
     },
@@ -40371,7 +40315,7 @@
         "id": "3qq56D92N9NAAkIhYJNQVU",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:58.149Z",
-        "updatedAt": "2025-09-18T11:53:40.021Z",
+        "updatedAt": "2025-09-21T17:21:36.098Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40379,8 +40323,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 67,
-        "publishedAt": "2025-09-18T11:53:40.021Z",
+        "publishedVersion": 75,
+        "publishedAt": "2025-09-21T17:21:36.098Z",
         "firstPublishedAt": "2025-06-01T19:41:33.034Z",
         "createdBy": {
           "sys": {
@@ -40396,8 +40340,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 17,
-        "version": 68,
+        "publishedCounter": 20,
+        "version": 76,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40519,10 +40463,7 @@
           ]
         },
         "faqTitle": {
-          "en-US": "Got hesitations? You’re not alone!"
-        },
-        "faqSubtitle": {
-          "en-US": "Your Frequently Asked Questions - solved!"
+          "en-US": "Got hesitations? "
         },
         "faqContent": {
           "en-US": {
@@ -40538,7 +40479,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Every concern is valid — and already answered. Head to the FAQs for honest, science-backed guidance.",
+                    "value": "Every concern is valid and already answered. Head to the FAQs for honest, science-backed guidance.",
                     "nodeType": "text"
                   }
                 ],
@@ -40556,7 +40497,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "2nSybbk0Cw0KUaeeIjkcca"
+              "id": "1MPnm1lerpegtJGUABhz9X"
             }
           }
         }
@@ -50643,6 +50584,85 @@
             },
             "fileName": "Block.svg",
             "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "1MPnm1lerpegtJGUABhz9X",
+        "type": "Asset",
+        "createdAt": "2025-09-21T17:21:10.856Z",
+        "updatedAt": "2025-09-21T17:21:21.932Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-09-21T17:21:21.932Z",
+        "firstPublishedAt": "2025-09-21T17:21:21.932Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/1MPnm1lerpegtJGUABhz9X"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Vili_1_1"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/1MPnm1lerpegtJGUABhz9X/eb13831ab73ddb3d8bfa14de2ce40ca7/Viili_Pekkala_1.jpg",
+            "details": {
+              "size": 2301304,
+              "image": {
+                "width": 4265,
+                "height": 2849
+              }
+            },
+            "fileName": "Viili_Pekkala_1.jpg",
+            "contentType": "image/jpeg"
           }
         }
       }

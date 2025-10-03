@@ -16,7 +16,7 @@ const righteous = Righteous({
 });
 
 const redRose = Red_Rose({
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-red-rose",
 });

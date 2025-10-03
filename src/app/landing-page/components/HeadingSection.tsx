@@ -32,14 +32,16 @@ export default function HeadingSection({
           <Button
             label={actionButtonText1}
             variant="secondary"
-            shadowType="both"
+            glassmorphism
+            hasShadow
             onClick={() => router.push(`${ROUTES.PRICING}/solo-packages`)}
             className="mr-4"
           />
           <Button
             label={actionButtonText2}
             variant="secondary"
-            shadowType="both"
+            glassmorphism
+            hasShadow
             onClick={() => router.push(`${ROUTES.PRICING}/duo-packages`)}
           />
         </div>

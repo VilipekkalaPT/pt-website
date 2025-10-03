@@ -7,6 +7,7 @@ export const HERO_SECTION_IMAGE = "Hero image";
 export const HEADING_IMAGE = "Heading image";
 export const READ_MORE = "Read more";
 export const READ_LESS = "Read less";
+export const SLAY_PROCESS = "A glimpse of slay fit process";
 
 // Landing Page Variables
 export const LOGO = "logo";

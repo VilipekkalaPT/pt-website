@@ -10,8 +10,8 @@ export default function Review({ reviews }: ReviewProps) {
   const displayedReviews = reviews.filter((review) => review.showOnLandingPage);
 
   return (
-    <div className="mt-40 px-12">
-      <p className="text-2xl font-bold text-center">{LATEST_REVIEWS}</p>
+    <div className="mt-20 w-4/5 mx-auto">
+      <p className="text-2xl text-center">{LATEST_REVIEWS}</p>
       <div className="grid grid-cols-3 gap-10 mt-10">
         {displayedReviews.map((review: TypeReviewFields) => (
           <ReviewCard

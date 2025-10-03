@@ -20,7 +20,6 @@ export interface TypeLandingPageDataFields {
   services: EntryFields.Symbol[];
   imageCards: Entry<TypeImageCardSkeleton>[];
   faqTitle: EntryFields.Symbol;
-  faqSubtitle: EntryFields.Symbol;
   faqContent: EntryFields.RichText;
   faqButtonText: EntryFields.Symbol;
   faqImage: Asset;

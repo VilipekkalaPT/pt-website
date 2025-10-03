@@ -1,5 +1,6 @@
 import cn from "classnames";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 interface CardContentProps {
   children: React.ReactNode;
@@ -10,6 +11,7 @@ interface CardProps {
   children?: React.ReactNode;
   className?: string;
   href?: string;
+  glassmorphism?: boolean;
   onClick?: () => void;
 }
 
@@ -17,19 +19,32 @@ export default function Card({
   children,
   className,
   href,
+  glassmorphism,
   onClick,
 }: CardProps) {
-  const defaultClassName = cn(
-    "flex flex-col justify-between border border-gray-200 rounded-lg overflow-hidden shadow-lg",
-    className
-  );
+  const defaultClassName =
+    "flex flex-col justify-between border border-border-default-secondary rounded-lg overflow-hidden shadow-lg";
 
   return href ? (
-    <Link href={href} className={defaultClassName}>
+    <Link
+      href={href}
+      className={twMerge(
+        cn(defaultClassName, className, {
+          "glass-effect": glassmorphism,
+        })
+      )}
+    >
       {children}
     </Link>
   ) : (
-    <div className={defaultClassName} onClick={onClick}>
+    <div
+      className={twMerge(
+        cn(defaultClassName, className, {
+          "glass-effect": glassmorphism,
+        })
+      )}
+      onClick={onClick}
+    >
       {children}
     </div>
   );

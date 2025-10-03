@@ -11,7 +11,6 @@ import { ROUTES } from "app/utils/routes";
 
 interface FAQSectionProps {
   title: string;
-  subtitle: string;
   content: Document;
   buttonText: string;
   image: AssetFields;
@@ -19,7 +18,6 @@ interface FAQSectionProps {
 
 export default function FAQSection({
   title,
-  subtitle,
   content,
   buttonText,
   image,
@@ -28,22 +26,24 @@ export default function FAQSection({
   const imageUrl = getAssetUrl(image);
 
   return (
-    <div className="mt-40 px-12 grid grid-cols-2 gap-10">
-      <Image
-        src={imageUrl}
-        alt="FAQ Section Image"
-        width={image.file?.details.image?.width}
-        height={image.file?.details.image?.height}
-      />
-      <div>
-        <p className="text-2xl font-semibold mb-1">{title}</p>
-        <p className="text-xl text-gray-400 mb-4">{subtitle}</p>
-        <RichTextRenderer text={content} />
+    <div className="mt-40 w-4/5 mx-auto grid grid-cols-2 gap-10">
+      <div className="w-full h-[400px] overflow-hidden">
+        <Image
+          src={imageUrl}
+          alt="FAQ Section Image"
+          width={image.file?.details.image?.width}
+          height={image.file?.details.image?.height}
+          className="rounded-lg"
+        />
+      </div>
+      <div className="flex flex-col justify-center">
+        <p className="text-2xl font-medium mb-4">{title}</p>
+        <RichTextRenderer text={content} paragraphClassName="font-light" />
         <Button
           label={buttonText}
-          variant="primary"
+          variant="ghost"
+          className="mt-4"
           iconRight={<ArrowRightIcon className="size-4" />}
-          className="mt-6"
           onClick={() => router.push(ROUTES.FAQs)}
         />
       </div>

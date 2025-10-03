@@ -26,7 +26,7 @@ export default function ReviewCard({
   reviewCardType,
 }: ReviewCardProps) {
   return (
-    <Card key={review.id}>
+    <Card key={review.id} className="bg-black/50">
       <ReviewCardHeader reviewCardType={reviewCardType} review={review} />
       <ReviewCardContent reviewCardType={reviewCardType} review={review} />
       <ReviewCardFooter reviewCardType={reviewCardType} review={review} />
@@ -65,8 +65,8 @@ const ReviewCardFooter: React.FC<ReviewCardComponentProps> = ({
         <>
           <Divider />
           <div className="flex flex-col mt-2">
-            <p className="text-sm text-gray-600 font-bold">{reviewer}</p>
-            <p className="text-sm text-gray-500">{reviewPackage.join(", ")}</p>
+            <p className="text-sm font-medium text-white/70">{reviewer}</p>
+            <p className="text-sm text-white/40">{reviewPackage.join(", ")}</p>
           </div>
         </>
       )}
@@ -119,11 +119,8 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
     <CardContent className="flex-1 flex flex-col">
       {reviewCardType === "compact" && (
         <>
-          <p className="text-xl font-bold min-h-[4rem]">{title}</p>
-          <RichTextRenderer
-            text={content}
-            paragraphClassName="mt-2 text-gray-700 text-sm"
-          />
+          <p className="text-xl font-medium min-h-[4rem]">{title}</p>
+          <RichTextRenderer text={content} paragraphClassName="mt-2 text-sm" />
         </>
       )}
       {reviewCardType === "full" && (

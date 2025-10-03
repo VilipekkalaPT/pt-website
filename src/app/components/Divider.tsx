@@ -5,5 +5,12 @@ interface DividerProps {
 }
 
 export default function Divider({ className }: DividerProps) {
-  return <hr className={twMerge("border-t border-gray-300 my-4", className)} />;
+  return (
+    <hr
+      className={twMerge(
+        "border-t border-border-default-secondary my-4",
+        className
+      )}
+    />
+  );
 }
