@@ -23,11 +23,11 @@ export default function TimelineComponent({ process }: TimelineCard) {
   const horizontalLineStyle = "w-60 border-t-2";
 
   return (
-    <div className="mt-15 relative space-y-36">
+    <div className="mt-15 relative space-y-24">
       {rows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className="relative flex items-center justify-around"
+          className="relative px-20 flex items-center justify-around"
         >
           {rowIndex === 0 ? (
             <div className="absolute top-1/2 left-0 right-[calc(15%)] border-t-2 border-dashed border-border-default-secondary z-0" />

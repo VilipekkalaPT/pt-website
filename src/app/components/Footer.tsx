@@ -15,7 +15,7 @@ export default function Footer({ logo }: FooterProps) {
   const footerColumns = FOOTER.columns;
 
   return (
-    <div className="mt-20 grid grid-cols-4 gap-4 w-full p-6">
+    <div className="mt-20 grid grid-cols-4 gap-4 w-4/5 mx-auto">
       <Image src={logoUrl} alt="Logo" width={200} height={200} />
       {footerColumns.map((col: FooterColumn) => (
         <div className="flex flex-col" key={col.title}>
