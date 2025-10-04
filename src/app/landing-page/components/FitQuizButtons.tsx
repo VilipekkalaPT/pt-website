@@ -1,10 +1,5 @@
-import {
-  ArrowLeftIcon,
-  ArrowPathIcon,
-  ArrowRightIcon,
-} from "@heroicons/react/24/outline";
 import Button from "app/components/Button";
-import { BACK, NEXT, RETAKE_QUIZ, START } from "app/utils/variables";
+import { BACK, NEXT, EXIT } from "app/utils/variables";
 
 interface FitQuizButtonsProps {
   activeStep: number;
@@ -12,7 +7,7 @@ interface FitQuizButtonsProps {
   totalSteps: number;
   selectedOptions: Map<number, string[]>;
   showResult: boolean;
-  handleShowResult: () => void;
+  handleShowResult: (showResult: boolean) => void;
   resetQuiz?: () => void;
 }
 
@@ -25,69 +20,53 @@ export default function FitQuizButtons({
   handleShowResult,
   resetQuiz,
 }: FitQuizButtonsProps) {
-  const showStartButton = activeStep === 0 && !showResult;
-  const showBackButton = activeStep > 0 && !showResult;
-  const showNextButton =
-    activeStep > 0 && activeStep < totalSteps - 1 && !showResult;
-  const showFinishButton = activeStep === totalSteps - 1 && !showResult;
-  const showRetakeQuizButton = activeStep === totalSteps - 1 && showResult;
-  const disabledNextButton =
+  const showBackButton = activeStep > 0;
+  const showExitButton = activeStep === totalSteps - 1 && showResult;
+  const disableNextButton =
     !selectedOptions.get(activeStep)?.length ||
     selectedOptions.get(activeStep)?.length === 0;
 
-  const visibleButtons = [
-    showStartButton,
-    showBackButton,
-    showNextButton || showFinishButton,
-    showRetakeQuizButton,
-  ].filter(Boolean).length;
+  const handleNext = () => {
+    setActiveStep(activeStep + 1);
+    if (activeStep === totalSteps - 2) {
+      handleShowResult(true);
+    }
+  };
+
+  const handleBack = () => {
+    setActiveStep(activeStep - 1);
+    if (activeStep === totalSteps - 1) {
+      handleShowResult(false);
+    }
+  };
 
   return (
-    <div
-      className={`mt-8 w-full flex ${
-        visibleButtons === 1 ? "justify-center" : "justify-between"
-      } gap-4`}
-    >
-      {showStartButton && (
-        <Button
-          label={START}
-          variant="primary"
-          onClick={() => setActiveStep(activeStep + 1)}
-          className="w-1/3 flex justify-center"
-        />
-      )}
+    <div className={`mt-8 w-full flex justify-center gap-4`}>
       {showBackButton && (
         <Button
           label={BACK}
           variant="ghost"
-          iconLeft={<ArrowLeftIcon className="size-4" />}
-          onClick={() => setActiveStep(activeStep - 1)}
+          glassmorphism
+          onClick={handleBack}
+          className="px-6"
         />
       )}
-      {showNextButton && (
+      {showExitButton ? (
+        <Button
+          label={EXIT}
+          variant="ghost"
+          glassmorphism
+          onClick={resetQuiz}
+          className="px-6"
+        />
+      ) : (
         <Button
           label={NEXT}
-          variant="primary"
-          iconRight={<ArrowRightIcon className="size-4" />}
-          onClick={() => setActiveStep(activeStep + 1)}
-          disabled={disabledNextButton}
-        />
-      )}
-      {showFinishButton && (
-        <Button
-          label="Finish"
-          variant="primary"
-          iconRight={<ArrowRightIcon className="size-4" />}
-          disabled={disabledNextButton}
-          onClick={handleShowResult}
-        />
-      )}
-      {showRetakeQuizButton && (
-        <Button
-          label={RETAKE_QUIZ}
           variant="ghost"
-          onClick={resetQuiz}
-          iconLeft={<ArrowPathIcon className="size-4" />}
+          glassmorphism
+          disabled={disableNextButton}
+          onClick={handleNext}
+          className="px-6"
         />
       )}
     </div>

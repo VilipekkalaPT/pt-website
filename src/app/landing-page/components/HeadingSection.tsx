@@ -31,7 +31,7 @@ export default function HeadingSection({
         <div className="mt-80 flex">
           <Button
             label={actionButtonText1}
-            variant="secondary"
+            variant="primary"
             glassmorphism
             hasShadow
             onClick={() => router.push(`${ROUTES.PRICING}/solo-packages`)}
@@ -39,7 +39,7 @@ export default function HeadingSection({
           />
           <Button
             label={actionButtonText2}
-            variant="secondary"
+            variant="primary"
             glassmorphism
             hasShadow
             onClick={() => router.push(`${ROUTES.PRICING}/duo-packages`)}

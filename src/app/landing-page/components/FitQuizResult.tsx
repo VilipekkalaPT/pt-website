@@ -10,18 +10,16 @@ import RecommendationPackageCard from "./RecommendationPackageCard";
 import { useMemo } from "react";
 
 interface FitQuizResultProps {
-  result: {
-    filteredPackages: FilteredPackage[];
-    specialPackages: FilteredPackage[];
-  };
+  filteredPackages: FilteredPackage[];
+  specialPackages: FilteredPackage[];
 }
 
 const ResultHeader = ({ hasMatches }: { hasMatches: boolean }) => (
   <>
-    <p className="mt-8 text-2xl font-semibold">
+    <p className="text-2xl">
       {hasMatches ? FIT_QUIZ_RESULT_TITLE : FIT_QUIZ_RESULT_TITLE_NO_MATCH}
     </p>
-    <p className="mt-1 mb-10 text-xl text-gray-400">
+    <p className="mt-1 mb-4 text-xl text-gray-400 font-light">
       {hasMatches
         ? FIT_QUIZ_RESULT_DESCRIPTION
         : FIT_QUIZ_RESULT_DESCRIPTION_NO_MATCH}
@@ -29,9 +27,10 @@ const ResultHeader = ({ hasMatches }: { hasMatches: boolean }) => (
   </>
 );
 
-export default function FitQuizResult({ result }: FitQuizResultProps) {
-  const { filteredPackages, specialPackages } = result;
-
+export default function FitQuizResult({
+  filteredPackages,
+  specialPackages,
+}: FitQuizResultProps) {
   const packagesToDisplay = useMemo(() => {
     if (filteredPackages.length === 0) {
       return specialPackages;
@@ -54,7 +53,7 @@ export default function FitQuizResult({ result }: FitQuizResultProps) {
   }, [filteredPackages, specialPackages]);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="w-full mt-4 flex flex-col items-center">
       <ResultHeader hasMatches={filteredPackages.length > 0} />
       <motion.div
         key="results"
@@ -62,11 +61,13 @@ export default function FitQuizResult({ result }: FitQuizResultProps) {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.4 }}
-        className="flex gap-8"
+        className="w-full flex gap-8"
       >
-        {packagesToDisplay.map((p) => (
-          <RecommendationPackageCard key={p.package.id} p={p} />
-        ))}
+        <div className="grid grid-cols-3 gap-6 items-start">
+          {packagesToDisplay.map((p) => (
+            <RecommendationPackageCard key={p.package.id} p={p} />
+          ))}
+        </div>
       </motion.div>
     </div>
   );

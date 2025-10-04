@@ -5,11 +5,12 @@ interface ChipProps {
   color?:
     | "black"
     | "gray"
-    | "green"
+    | "mint"
     | "light-green"
     | "yellow"
     | "blue"
-    | "orange";
+    | "orange"
+    | "none";
   label: string;
   iconRight?: React.ReactNode;
   href?: string;
@@ -24,15 +25,17 @@ export default function Chip({
   className,
 }: ChipProps) {
   const chipClassName = cn(
-    "px-2 py-1 rounded-md flex items-center gap-1 text-sm",
+    "px-2 py-1 rounded-2xl flex items-center gap-1 text-sm",
     {
       "bg-gray-800": color === "black",
       "bg-gray-100": color === "gray",
-      "bg-green-500/25": color === "green",
+      "bg-mint text-text-neutral": color === "mint",
       "bg-green-800": color === "light-green",
       "bg-yellow-600": color === "yellow",
       "bg-blue-800": color === "blue",
       "bg-orange-800": color === "orange",
+      "bg-transparent text-text-brand-secondary border border-border-brand-primary":
+        color === "none",
     },
     className
   );

@@ -4,50 +4,66 @@ export const fitQuizData: FitQuiz = {
   steps: [
     {
       id: 0,
-      question: "Welcome to the Fit Quiz!",
-      subtitle: "Let's find your perfect fitness match.",
-      options: [],
-    },
-    {
-      id: 1,
-      question: "What is your fitness goal?",
-      subtitle: "Pick what fits your vibe first",
+      title: "Pick training style",
       options: [
         {
           id: "solo",
-          label: "Just me (Solo)",
-          description:
-            "You want 1-on-1 attention to focus fully on your personal fitness journey",
+          label: "Solo",
+          description: "1-on-1 personal fitness journey",
         },
         {
           id: "duo",
-          label: " Me + someone (Duo)",
-          description:
-            "You and a friend or partner want to train together and slay side-by-side",
+          label: "Duo",
+          description: "You and a partner want to train together",
+        },
+      ],
+    },
+    {
+      id: 1,
+      title: "Choose one or more focus areas",
+      options: [
+        {
+          id: "gym",
+          label: "Gym training",
+          description: "In-person form correction, strength-building sessions",
+        },
+        {
+          id: "plan",
+          label: "Personal training plan",
+          description: "Structured, progressive plan for your goals",
+        },
+        {
+          id: "diet",
+          label: "Dietary coaching",
+          description: "Nutrition support to fuel your fitness.",
         },
       ],
     },
     {
       id: 2,
-      question: "What are you looking for?",
-      subtitle: "Choose one or more focus areas.",
+      title: "Select the format of package",
       options: [
         {
-          id: "gym",
-          label: "Gym Training",
-          description: "In-person form & strength coaching",
+          id: "online",
+          label: "Online",
+          description: "Train anywhere, fully guided online",
         },
         {
-          id: "plan",
-          label: "Personal Training Plan",
-          description: "Structured, progressive plan for your goals",
+          id: "offline",
+          label: "Offline",
+          description: "Face-to-face gym sessions with support",
         },
         {
-          id: "diet",
-          label: "Dietary Coaching",
-          description: "Nutrition support to fuel your fitness.",
+          id: "hybrid",
+          label: "Hybrid",
+          description: "Blend online flexibility with in-person coaching",
         },
       ],
+    },
+    {
+      id: 3,
+      title: "",
+      options: [],
     },
   ],
 };

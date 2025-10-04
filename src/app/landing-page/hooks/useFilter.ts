@@ -1,5 +1,5 @@
 import { TypePackageFields } from "app/lib/types/contentful/TypePackage";
-import { BEST_MATCH, MOST_POPULAR, MOST_VALUABLE } from "app/utils/variables";
+import { BEST_MATCH, MOST_POPULAR, BEST_VALUE } from "app/utils/variables";
 import { useMemo, useState } from "react";
 
 export type TagFilter = "gym" | "plan" | "diet";
@@ -58,11 +58,9 @@ export const useFilter = (packages: TypePackageFields[]) => {
 
   return {
     selectedOptions,
+    filteredPackages: filteredPackages,
+    specialPackages: specialPackages,
     handleOptionSelect,
-    filteredPackages: {
-      filteredPackages: filteredPackages,
-      specialPackages: specialPackages,
-    },
     clearSelectedOptions,
   };
 };
@@ -86,7 +84,7 @@ const addSpecialPackages = (
   if (typeFilter.includes("duo") && specialPackages.duoGymPlan) {
     result.push({
       package: specialPackages.duoGymPlan,
-      tag: MOST_VALUABLE,
+      tag: BEST_VALUE,
     });
     return result;
   }
@@ -94,7 +92,7 @@ const addSpecialPackages = (
   if (specialPackages.golden) {
     result.push({
       package: specialPackages.golden,
-      tag: MOST_VALUABLE,
+      tag: BEST_VALUE,
     });
   }
 

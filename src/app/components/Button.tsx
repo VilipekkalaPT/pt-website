@@ -32,8 +32,8 @@ export default function Button({
         cn(
           "flex items-center gap-2 p-3 text-base rounded-full cursor-pointer appearance-none no-underline border-0 select-none tap-transparent overflow-hidden focus:outline-none",
           {
-            "bg-primary": variant === "primary",
-            "bg-secondary text-text-black-30": variant === "secondary",
+            "bg-blue text-text-black-30": variant === "primary",
+            "bg-white text-text-black-30": variant === "secondary",
             "py-4 border border-gray-300 rounded hover:bg-gray-100":
               variant === "outlined",
             "bg-none": variant === "ghost",

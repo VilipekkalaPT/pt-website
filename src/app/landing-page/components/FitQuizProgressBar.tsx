@@ -1,37 +1,36 @@
-import { STEP } from "app/utils/variables";
+import { STEP, RESULT } from "app/utils/variables";
+import { fitQuizData } from "app/lib/data/fitQuiz";
+import cn from "classnames";
 
 interface FitQuizProgressBarProps {
   activeStep: number;
-  totalSteps: number;
 }
 
 export default function FitQuizProgressBar({
   activeStep,
-  totalSteps,
 }: FitQuizProgressBarProps) {
-  const totalStepsArray = Array.from(
-    { length: totalSteps - 1 },
-    (_, i) => i + 1
-  );
+  const totalSteps = fitQuizData.steps.length;
+  const totalStepsArray = Array.from({ length: totalSteps }, (_, i) => i);
 
   return (
-    <div className="w-full max-w-sm mx-auto">
-      {activeStep > 0 && (
-        <div className="flex justify-between border-b border-gray-200">
-          {totalStepsArray.map((step) => (
-            <p
-              key={step}
-              className={`flex-1 text-center py-2 font-medium text-sm ${
-                step === activeStep
-                  ? "border-b-2 border-black"
-                  : "text-gray-500"
-              }`}
-            >
-              {`${STEP} ${step}`}
-            </p>
-          ))}
-        </div>
-      )}
+    <div className="w-1/2 mx-auto">
+      <div className="flex justify-between">
+        {totalStepsArray.map((step) => (
+          <p
+            key={step}
+            className={cn("flex-1 text-center font-light py-2 border-b-2", {
+              "border-border-neutral-primary text-border-neutral-primary":
+                step === activeStep,
+              "border-border-neutral-tertiary text-border-neutral-tertiary":
+                step !== activeStep,
+            })}
+          >
+            {step === totalStepsArray.length - 1
+              ? `${RESULT}`
+              : `${STEP} ${step + 1}`}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }

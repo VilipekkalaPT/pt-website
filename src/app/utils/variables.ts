@@ -1,30 +1,37 @@
 // Common Variables
 export const BACK = "Back";
 export const NEXT = "Next";
-export const START = "Start";
+export const EXIT = "Exit";
 export const LATEST_REVIEWS = "Latest reviews";
 export const HERO_SECTION_IMAGE = "Hero image";
 export const HEADING_IMAGE = "Heading image";
 export const READ_MORE = "Read more";
 export const READ_LESS = "Read less";
 export const SLAY_PROCESS = "A glimpse of slay fit process";
+export const RESULT = "Result";
 
 // Landing Page Variables
 export const LOGO = "logo";
 export const FLIP_ME = "Flip me";
 export const STEP = "Step";
-export const MOST_VALUABLE = "Most valuable";
+export const BEST_VALUE = "Best value";
 export const MOST_POPULAR = "Most popular";
 export const BEST_MATCH = "Best match";
 export const SEE_FULL_PLAN = "See full plan";
+export const FIT_QUIZ_TITLE = "Fit quiz";
 export const FIT_QUIZ_RESULT_TITLE = "Your slayfit pathway";
 export const FIT_QUIZ_RESULT_DESCRIPTION =
-  "Based on your picks, here are your top 3 SlayFitVili programs to get started:";
-export const FIT_QUIZ_RESULT_TITLE_NO_MATCH = "Didn’t find the perfect match?";
+  "Your top 3 SlayFitVili programs to get started";
+export const FIT_QUIZ_RESULT_TITLE_NO_MATCH =
+  "Oops, we can't find a perfect match for you!";
 export const FIT_QUIZ_RESULT_DESCRIPTION_NO_MATCH =
   "Don’t worry! Here are a few alternative packages you might like:";
 export const RETAKE_QUIZ = "Slay the quiz again";
 export const HELP_BUTTON = "Need help choosing?";
+export const READY_TO_SLAY_FIT = "Ready to SlayFit?";
+export const BROWSE_ALL_PACKAGES = "Browse all packages";
+export const MORE_DETAILS = "More details";
+export const LEST_DETAILS = "Less details";
 
 // Package Page Variables
 export const ALL_PACKAGES = "All packages";

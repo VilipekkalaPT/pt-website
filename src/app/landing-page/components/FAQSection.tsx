@@ -36,12 +36,13 @@ export default function FAQSection({
           className="rounded-lg"
         />
       </div>
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col items-start justify-center">
         <p className="text-2xl font-medium mb-4">{title}</p>
         <RichTextRenderer text={content} paragraphClassName="font-light" />
         <Button
           label={buttonText}
           variant="ghost"
+          glassmorphism
           className="mt-4"
           iconRight={<ArrowRightIcon className="size-4" />}
           onClick={() => router.push(ROUTES.FAQs)}

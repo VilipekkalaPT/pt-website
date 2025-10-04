@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import cn from "classnames";
+
 import Button from "app/components/Button";
 import Card, { CardContent, CardHeader } from "app/components/Card";
 import Chip from "app/components/Chip";
@@ -10,7 +13,14 @@ import {
   capitalizeFirstLetter,
   getPricingPackagesRoute,
 } from "app/utils/utils";
-import { SEE_FULL_PLAN } from "app/utils/variables";
+import {
+  BEST_MATCH,
+  MOST_POPULAR,
+  BEST_VALUE,
+  SEE_FULL_PLAN,
+  MORE_DETAILS,
+  LEST_DETAILS,
+} from "app/utils/variables";
 import { useRouter } from "next/navigation";
 import { FilteredPackage } from "../hooks/useFilter";
 
@@ -22,6 +32,8 @@ export default function RecommendationPackageCard({
   p,
 }: RecommendationPackageCardProps) {
   const router = useRouter();
+  const [showMoreDetails, setShowMoreDetails] = useState<boolean>(false);
+
   const { package: pkg, tag } = p;
 
   const priceOptions = pkg.sessionOptions?.map(
@@ -29,12 +41,14 @@ export default function RecommendationPackageCard({
   ) as TypeSessionOptionFields[];
 
   return (
-    <Card key={pkg.id} className="flex-1">
-      <CardHeader className="flex flex-col items-center">
-        <Chip label={tag} />
-        <p className="text-lg font-semibold mt-4 text-center">{pkg.name}</p>
+    <Card key={pkg.id} glassmorphism className="flex-1 bg-primary/50">
+      <CardHeader
+        className={cn("flex flex-col items-center py-2", getTagStyle(tag))}
+      >
+        <p>{tag}</p>
       </CardHeader>
-      <CardContent className="flex flex-col items-center mt-4">
+      <CardContent className="flex flex-col items-center">
+        <p className="text-3xl font-bold text-center">{pkg.name}</p>
         <Price
           price={pkg.price}
           priceUnit={pkg.priceUnit}
@@ -43,16 +57,28 @@ export default function RecommendationPackageCard({
         />
         <Chip
           label={capitalizeFirstLetter(pkg.mode)}
-          color="gray"
-          className="my-4"
+          color="none"
+          className="mt-4"
         />
-        <RichTextRenderer
-          text={pkg.content}
-          listClassName="text-sm text-gray-500 text-center h-20 flex items-center justify-center"
-          listLimit={1}
+        <p className="text-center my-4">{pkg.shortDescription}</p>
+        {showMoreDetails && (
+          <RichTextRenderer
+            text={pkg.content}
+            listClassName="list-disc pl-5 font-light text-sm text-white/70"
+          />
+        )}
+        <Button
+          variant="ghost"
+          glassmorphism
+          label={showMoreDetails ? LEST_DETAILS : MORE_DETAILS}
+          onClick={() =>
+            setShowMoreDetails((prevShowMoreDetails) => !prevShowMoreDetails)
+          }
+          className="w-full flex justify-center mt-6"
         />
         <Button
-          variant="primary"
+          variant="secondary"
+          glassmorphism
           label={SEE_FULL_PLAN}
           onClick={() =>
             router.push(`${getPricingPackagesRoute(pkg.type)}/${pkg.slug}`)
@@ -63,3 +89,16 @@ export default function RecommendationPackageCard({
     </Card>
   );
 }
+
+const getTagStyle = (tag: string) => {
+  switch (tag) {
+    case BEST_MATCH:
+      return "bg-mint text-text-neutral";
+    case MOST_POPULAR:
+      return "bg-pink";
+    case BEST_VALUE:
+      return "bg-blue text-text-neutral";
+    default:
+      return "bg-pink";
+  }
+};

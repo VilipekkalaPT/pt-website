@@ -21,6 +21,7 @@ export default function CardsFitQuizSection({
 }: CardsFitQuizSectionProps) {
   const router = useRouter();
   const [showFitQuiz, setShowFitQuiz] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const fitQuizRef = useRef<HTMLDivElement | null>(null);
 
   const handleClick = () => {
@@ -39,20 +40,23 @@ export default function CardsFitQuizSection({
     }
   }, [showFitQuiz]);
 
+  const handleCloseFitQuiz = () => {
+    setShowFitQuiz(false);
+    if (containerRef.current) {
+      containerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="w-4/5 mx-auto">
+    <div ref={containerRef} className="w-4/5 mx-auto">
       <div className="mt-12 grid grid-cols-2 gap-4">
         {cards.map((card, index) => (
-          <Card
-            key={index}
-            glassmorphism
-            className="px-8 py-16 rounded-[20px] bg-primary/50"
-          >
+          <Card key={index} glassmorphism className="px-8 py-16 bg-primary/50">
             <CardContent className="flex flex-col items-center text-center gap-4">
               <p className="text-2xl font-medium mb-1">{card.title}</p>
               <Button
                 label={card.actionButtonText}
-                variant="secondary"
+                variant="primary"
                 glassmorphism
                 hasShadow
                 onClick={
@@ -63,7 +67,13 @@ export default function CardsFitQuizSection({
           </Card>
         ))}
       </div>
-      {showFitQuiz && <FitQuiz ref={fitQuizRef} packages={packages} />}
+      {showFitQuiz && (
+        <FitQuiz
+          ref={fitQuizRef}
+          packages={packages}
+          closeFitQuiz={handleCloseFitQuiz}
+        />
+      )}
     </div>
   );
 }

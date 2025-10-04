@@ -23,7 +23,7 @@ export default function Card({
   onClick,
 }: CardProps) {
   const defaultClassName =
-    "flex flex-col justify-between border border-border-default-secondary rounded-lg overflow-hidden shadow-lg";
+    "flex flex-col justify-between border border-border-default-secondary rounded-2xl overflow-hidden shadow-lg";
 
   return href ? (
     <Link

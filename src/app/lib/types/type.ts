@@ -21,8 +21,7 @@ export interface FitQuiz {
 
 export interface FitQuizStep {
   id: number;
-  question: string;
-  subtitle: string;
+  title: string;
   options: FitQuizOption[];
 }
 

@@ -1,5 +1,4 @@
 import { getEntries } from "app/lib/contentfulDataService";
-import Divider from "app/components/Divider";
 import KickOffProcess from "./components/KickOffProcess";
 import Review from "./components/Review";
 import { TypeKickOffProcessSkeleton } from "app/lib/types/contentful/TypeKickOffProcess";

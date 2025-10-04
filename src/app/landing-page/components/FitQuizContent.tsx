@@ -1,79 +1,48 @@
-import {
-  UserGroupIcon,
-  UserIcon,
-  UsersIcon,
-} from "@heroicons/react/24/outline";
-import Card from "app/components/Card";
 import React from "react";
-import cn from "classnames";
+
+import { fitQuizData } from "app/lib/data/fitQuiz";
+import FitQuizQuestion from "./FitQuizQuestion";
+import FitQuizResult from "./FitQuizResult";
 import { FilteredPackage } from "../hooks/useFilter";
-import { motion } from "framer-motion";
-import { FitQuizStep } from "app/lib/types/type";
 
 interface FitQuizContentProps {
-  stepData: FitQuizStep;
+  activeStep: number;
   selectedOptions: Map<number, string[]>;
-  handleOptionSelect: (stepId: number, options: string) => void;
-  filteredPackages: {
-    filteredPackages: FilteredPackage[];
-    specialPackages: FilteredPackage[];
-  };
   showResult: boolean;
+  filteredPackages: FilteredPackage[];
+  specialPackages: FilteredPackage[];
+  handleOptionSelect: (stepId: number, options: string) => void;
 }
 
 export default function FitQuizContent({
-  stepData,
+  activeStep,
   selectedOptions,
+  showResult,
+  filteredPackages,
+  specialPackages,
   handleOptionSelect,
 }: FitQuizContentProps) {
+  const stepData = fitQuizData.steps.find((step) => step.id === activeStep);
+
+  if (!stepData) return null;
+
   return (
-    <div className="w-full mx-auto flex flex-col items-center">
-      <div className="text-center">
-        <p className="mt-12 text-2xl font-semibold">{stepData.question}</p>
-        <p className="mt-1 mb-6 text-xl text-gray-400">{stepData.subtitle}</p>
-      </div>
-      <motion.div
-        key={stepData.id}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.4 }}
-        className="w-full flex gap-8"
-      >
-        {stepData.options.map((option, index) => (
-          <Card
-            key={option.id}
-            className={cn(
-              "flex-1 items-center text-center py-6 px-12 cursor-pointer hover:bg-gray-100",
-              {
-                "bg-gray-100": selectedOptions
-                  .get(stepData.id)
-                  ?.includes(option.id),
-              }
-            )}
-            onClick={() => handleOptionSelect(stepData.id, option.id)}
-          >
-            {getIconComponent(index)}
-            <p className="text-xl font-semibold">{option.label}</p>
-            <p className="text-gray-700">{option.description}</p>
-          </Card>
-        ))}
-      </motion.div>
+    <div className="w-full flex flex-col items-center">
+      {showResult ? (
+        <FitQuizResult
+          filteredPackages={filteredPackages}
+          specialPackages={specialPackages}
+        />
+      ) : (
+        <>
+          <p className="my-4 text-2xl font-light">{stepData.title}</p>
+          <FitQuizQuestion
+            stepData={stepData}
+            selectedOptions={selectedOptions}
+            handleOptionSelect={handleOptionSelect}
+          />
+        </>
+      )}
     </div>
   );
 }
-
-const getIconComponent = (index: number) => {
-  const style = "size-10 mb-4";
-
-  switch (index) {
-    case 0:
-      return <UserIcon className={style} />;
-    case 1:
-      return <UsersIcon className={style} />;
-    case 2:
-      return <UserGroupIcon className={style} />;
-    default:
-      return <UserIcon className={style} />;
-  }
-};
