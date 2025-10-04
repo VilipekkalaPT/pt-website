@@ -46,7 +46,6 @@ export default function Chip({
         className={cn({
           "text-gray-100": color === "black",
           "text-gray-900": color === "gray",
-          "text-green-900": color === "green",
           "text-green-100": color === "light-green",
           "text-yellow-100": color === "yellow",
           "text-blue-200": color === "blue",

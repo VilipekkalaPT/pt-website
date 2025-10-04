@@ -65,8 +65,8 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
     <Link
       key={item.id}
       href={item.url || "/"}
-      className={cn("py-2 px-4 width-fit- hover:bg-gray-100 rounded-lg", {
-        "bg-gray-100": pathName === item.url,
+      className={cn("py-2 px-4 rounded-lg", {
+        "bg-blue text-text-black-30": pathName === item.url,
       })}
     >
       {item.label}
