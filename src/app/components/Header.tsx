@@ -34,7 +34,7 @@ export default function Header({ navigations, logo }: HeaderProps) {
   const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
 
   return (
-    <div className="flex justify-between w-full px-12 py-6 shadow z-50">
+    <div className="flex justify-between w-[90%] mx-auto py-6 shadow z-50">
       <Link href="/" className="flex">
         <Image src={logoUrl} alt="Logo" width={200} height={200} />
       </Link>

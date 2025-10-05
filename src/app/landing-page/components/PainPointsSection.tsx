@@ -35,7 +35,7 @@ export default function PainPointsSection({
   };
 
   return (
-    <div className="mt-20 w-4/5 mx-auto flex flex-col items-center">
+    <div className="mt-20 w-[90%] mx-auto flex flex-col items-center">
       <p className="text-2xl font-medium mb-1">{title}</p>
       <p className="text-xl text-text-secondary mb-10">{subtitle}</p>
       <div className="w-full h-[220px] flex gap-8">
@@ -59,7 +59,7 @@ export default function PainPointsSection({
                 <div className={baseStyle}>
                   <RichTextRenderer
                     text={point.overlayText}
-                    paragraphClassName="mb-4 text-lg"
+                    paragraphClassName="mb-4"
                   />
                   <Button
                     label={FLIP_ME}

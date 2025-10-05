@@ -35,7 +35,7 @@ export default function ServiceSection({
             {[...services, ...services].map((goal, index) => (
               <p
                 key={index}
-                className="px-8 text-text-secondary text-center inline-block"
+                className="px-16 text-text-secondary text-center inline-block"
               >
                 {goal}
               </p>

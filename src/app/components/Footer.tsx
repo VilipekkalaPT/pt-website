@@ -1,37 +1,71 @@
 import { AssetFields } from "contentful";
 import Image from "next/image";
-import { getAssetUrl } from "app/utils/utils";
-import { FOOTER } from "app/lib/data/footer";
-import { FooterColumn, FooterLink as FooterLinkType } from "app/lib/types/type";
+import { capitalizeFirstLetter, getAssetUrl } from "app/utils/utils";
+import { FooterLink as FooterLinkType } from "app/lib/types/type";
 import Link from "next/link";
 import { localLogoUrl } from "app/utils/routes";
+import { TypeFooterFields } from "app/lib/types/contentful";
+import { useCallback, useMemo } from "react";
 
 interface FooterProps {
   logo?: AssetFields;
+  footerLinks?: TypeFooterFields[];
 }
 
-export default function Footer({ logo }: FooterProps) {
+export default function Footer({ logo, footerLinks }: FooterProps) {
   const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
-  const footerColumns = FOOTER.columns;
+
+  const columns = useMemo(() => {
+    return Array.from(new Set(footerLinks?.map((el) => el.column))).reverse();
+  }, [footerLinks]);
+
+  const getLinks = useCallback(
+    (col: string) => {
+      return (
+        footerLinks?.filter((link) => link.column === col && link.show) ?? []
+      );
+    },
+    [footerLinks]
+  );
 
   return (
-    <div className="mt-20 grid grid-cols-4 gap-4 w-4/5 mx-auto">
-      <Image src={logoUrl} alt="Logo" width={200} height={200} />
-      {footerColumns.map((col: FooterColumn) => (
-        <div className="flex flex-col" key={col.title}>
-          <p className="text-lg mb-6">{col.title}</p>
-          {col.links.map((link: FooterLinkType) => (
-            <Link
-              href={link.url ?? "#"}
-              className="mb-1 font-light"
-              key={link.label}
-            >
-              {link.label}
-              {link.description && `: ${link.description}`}
-            </Link>
-          ))}
+    <div className="mt-10 grid grid-cols-4 gap-4 w-[90%] mx-auto mb-40">
+      <div className="flex flex-col">
+        <Image src={logoUrl} alt="Logo" width={200} height={200} />
+        <div className="flex mt-4 gap-4">
+          <Image
+            src="/whatsapp.svg"
+            alt="Logo"
+            width={24}
+            height={24}
+            className="cursor-pointer"
+          />
+          <Image
+            src="/instagram.svg"
+            alt="Logo"
+            width={24}
+            height={24}
+            className="cursor-pointer"
+          />
         </div>
-      ))}
+      </div>
+      {columns.map((col: string) => {
+        return (
+          <div key={col} className="flex flex-col">
+            <p className="mb-6 font-medium">{capitalizeFirstLetter(col)}</p>
+            {getLinks(col).map((link: FooterLinkType) => (
+              <Link
+                href={link.url ?? "#"}
+                className="mb-3 font-light"
+                key={link.label}
+              >
+                {link.label}
+                {link.description && `: ${link.description}`}
+              </Link>
+            ))}
+          </div>
+        );
+      })}
     </div>
   );
 }

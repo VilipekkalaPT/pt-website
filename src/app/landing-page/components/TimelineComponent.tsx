@@ -3,7 +3,6 @@ import {
   ChatBubbleLeftRightIcon,
   ClipboardDocumentListIcon,
   FireIcon,
-  FlagIcon,
   GiftIcon,
   MegaphoneIcon,
 } from "@heroicons/react/24/outline";

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import BackgroundWrapper from "./components/BackgroundWrapper";
 import { TypeNavigationSkeleton } from "./lib/types/contentful/TypeNavigation";
 import { LOGO } from "./utils/variables";
+import { TypeFooterSkeleton } from "./lib/types/contentful/TypeFooter";
 
 const righteous = Righteous({
   weight: "400",
@@ -31,8 +32,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [navigations, image] = await Promise.all([
+  const [navigations, footer, image] = await Promise.all([
     await getEntries<TypeNavigationSkeleton>("navigation"),
+    await getEntries<TypeFooterSkeleton>("footer"),
     await getImageByTag(LOGO),
   ]);
 
@@ -43,7 +45,7 @@ export default async function RootLayout({
           <Header navigations={navigations} logo={image} />
           {children}
           <SpeedInsights />
-          <Footer logo={image} />
+          <Footer logo={image} footerLinks={footer} />
         </BackgroundWrapper>
       </body>
     </html>

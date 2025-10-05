@@ -31,10 +31,6 @@ export type {
   TypeLandingPagePainPoints,
   TypeLandingPagePainPointsFields,
 } from "./TypeLandingPagePainPoints";
-export type {
-  TypeLandingPageServices,
-  TypeLandingPageServicesFields,
-} from "./TypeLandingPageServices";
 export type { TypeNavigation, TypeNavigationFields } from "./TypeNavigation";
 export type { TypePackage, TypePackageFields } from "./TypePackage";
 export type {
@@ -62,3 +58,4 @@ export type {
   TypeTermsAndConditions,
   TypeTermsAndConditionsFields,
 } from "./TypeTermsAndConditions";
+export type { TypeFooter, TypeFooterFields } from "./TypeFooter";

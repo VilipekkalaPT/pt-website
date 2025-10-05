@@ -46,7 +46,7 @@ const ReviewCardHeader: React.FC<ReviewCardComponentProps> = ({
       {reviewCardType === "full" && (
         <div className="min-h-[3rem]">
           <p className="font-bold">{reviewer}</p>
-          <p className="text-sm text-gray-400">{date}</p>
+          <p className="text-gray-400">{date}</p>
         </div>
       )}
     </CardHeader>
@@ -65,8 +65,8 @@ const ReviewCardFooter: React.FC<ReviewCardComponentProps> = ({
         <>
           <Divider />
           <div className="flex flex-col mt-2">
-            <p className="text-sm font-medium text-white/70">{reviewer}</p>
-            <p className="text-sm text-white/40">{reviewPackage.join(", ")}</p>
+            <p className="font-medium text-white/70">{reviewer}</p>
+            <p className="text-white/40">{reviewPackage.join(", ")}</p>
           </div>
         </>
       )}
@@ -119,8 +119,8 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
     <CardContent className="flex-1 flex flex-col">
       {reviewCardType === "compact" && (
         <>
-          <p className="text-xl font-medium min-h-[4rem]">{title}</p>
-          <RichTextRenderer text={content} paragraphClassName="mt-2 text-sm" />
+          <p className="text-2xl font-medium min-h-[4rem]">{title}</p>
+          <RichTextRenderer text={content} paragraphClassName="mt-2" />
         </>
       )}
       {reviewCardType === "full" && (

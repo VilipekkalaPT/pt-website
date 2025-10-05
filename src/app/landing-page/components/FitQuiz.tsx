@@ -50,7 +50,7 @@ export default function FitQuiz({ ref, packages, closeFitQuiz }: FitQuizProps) {
   };
 
   return (
-    <div className="w-full py-20 min-h-screen flex gap-4" ref={ref}>
+    <div className="w-full py-20 min-h-screen flex gap-8" ref={ref}>
       <Card glassmorphism className="flex-3 p-8 justify-center bg-primary/50">
         <p className="mb-4 text-2xl font-medium text-center">
           {FIT_QUIZ_TITLE}

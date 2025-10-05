@@ -1,18 +1,23 @@
+import Image from "next/image";
+
 import { TypeKickOffProcessFields } from "app/lib/types/contentful";
 import { SLAY_PROCESS } from "app/utils/variables";
-import TimelineComponent from "./TimelineComponent";
 
 type KickOffProcessProps = {
   process: TypeKickOffProcessFields[];
 };
 
 export default function KickOffProcess({ process }: KickOffProcessProps) {
-  const sortedProcess = [...process].sort((a, b) => a.id - b.id);
-
   return (
-    <div className="mt-40">
+    <div className="mt-30 pb-20">
       <p className="text-2xl font-medium text-center">{SLAY_PROCESS}</p>
-      <TimelineComponent process={sortedProcess} />
+      <Image
+        src="/process.png"
+        alt="Divider"
+        width={1200}
+        height={403}
+        className="w-full mt-8 object-contain"
+      />
     </div>
   );
 }
