@@ -4,7 +4,7 @@ import { useState } from "react";
 import cn from "classnames";
 
 import Button from "app/components/Button";
-import Card, { CardContent, CardHeader } from "app/components/Card";
+import Card, { CardContent, CardFooter, CardHeader } from "app/components/Card";
 import Chip from "app/components/Chip";
 import RichTextRenderer from "app/components/RichTextRenderer";
 import { TypeSessionOptionFields } from "app/lib/types/contentful";
@@ -41,13 +41,13 @@ export default function RecommendationPackageCard({
   ) as TypeSessionOptionFields[];
 
   return (
-    <Card key={pkg.id} glassmorphism className="flex-1 bg-primary/50">
+    <Card key={pkg.id} glassmorphism className="h-full bg-primary/50">
       <CardHeader
         className={cn("flex flex-col items-center py-2", getTagStyle(tag))}
       >
         <p>{tag}</p>
       </CardHeader>
-      <CardContent className="flex flex-col items-center">
+      <CardContent className="flex-1 flex flex-col items-center">
         <p className="text-3xl font-bold text-center">{pkg.name}</p>
         <Price
           price={pkg.price}
@@ -67,6 +67,8 @@ export default function RecommendationPackageCard({
             listClassName="list-disc pl-5 font-light text-sm text-white/70"
           />
         )}
+      </CardContent>
+      <CardFooter className="w-full">
         <Button
           variant="ghost"
           glassmorphism
@@ -85,7 +87,7 @@ export default function RecommendationPackageCard({
           }
           className="w-full flex justify-center mt-4"
         />
-      </CardContent>
+      </CardFooter>
     </Card>
   );
 }

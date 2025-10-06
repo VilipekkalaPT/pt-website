@@ -33,8 +33,8 @@ export default function FitQuiz({ ref, packages, closeFitQuiz }: FitQuizProps) {
   const {
     selectedOptions,
     handleOptionSelect,
-    filteredPackages,
-    specialPackages,
+    hasMatchedPackages,
+    finalPackages,
     clearSelectedOptions,
   } = useFilter(packages);
 
@@ -60,8 +60,8 @@ export default function FitQuiz({ ref, packages, closeFitQuiz }: FitQuizProps) {
           activeStep={activeStep}
           selectedOptions={selectedOptions}
           showResult={showResult}
-          filteredPackages={filteredPackages}
-          specialPackages={specialPackages}
+          hasMatchedPackages={hasMatchedPackages}
+          finalPackages={finalPackages}
           handleOptionSelect={handleOptionSelect}
         />
         <FitQuizButtons

@@ -30,8 +30,8 @@ export const useFilter = (packages: TypePackageFields[]) => {
   };
 
   const filteredPackages = useMemo(() => {
-    const typeFilters = selectedOptions.get(1) || [];
-    const tagFilters = selectedOptions.get(2) || [];
+    const typeFilters = selectedOptions.get(0) || [];
+    const tagFilters = selectedOptions.get(1) || [];
 
     const filtered = packages.filter((pkg) => {
       const matchesType =
@@ -54,12 +54,17 @@ export const useFilter = (packages: TypePackageFields[]) => {
     return taggedPackages;
   }, [packages, selectedOptions]);
 
-  const specialPackages = addSpecialPackages(selectedOptions, packages);
+  const specialPackages = addSpecialPackages(
+    selectedOptions,
+    packages,
+    filteredPackages
+  );
+  const finalPackages = specialPackages.slice(0, 3);
 
   return {
     selectedOptions,
-    filteredPackages: filteredPackages,
-    specialPackages: specialPackages,
+    hasMatchedPackages: filteredPackages.length > 0,
+    finalPackages: finalPackages,
     handleOptionSelect,
     clearSelectedOptions,
   };
@@ -67,44 +72,74 @@ export const useFilter = (packages: TypePackageFields[]) => {
 
 const addSpecialPackages = (
   selectedOptions: Map<number, string[]>,
-  allPackages: TypePackageFields[]
+  allPackages: TypePackageFields[],
+  filteredPackages: FilteredPackage[]
 ): FilteredPackage[] => {
-  const result: FilteredPackage[] = [];
+  const result: FilteredPackage[] = [...filteredPackages];
+  const existingPackageIds = new Set(result.map((p) => p.package.id));
 
   const specialPackages = {
     golden: findPackage("golden", allPackages),
     bronze: findPackage("bronze", allPackages),
-    duoGymPlan: allPackages.find(
+    silver: findPackage("silver", allPackages),
+    duoSpecial: allPackages.find(
       (p) =>
         p.type === "duo" && p.tags.includes("gym") && p.tags.includes("plan")
     ),
   };
-  const typeFilter = selectedOptions.get(1) || [];
+  const typeFilter = selectedOptions.get(0) || [];
 
-  if (typeFilter.includes("duo") && specialPackages.duoGymPlan) {
-    result.push({
-      package: specialPackages.duoGymPlan,
-      tag: BEST_VALUE,
-    });
+  if (
+    !specialPackages.golden ||
+    !specialPackages.bronze ||
+    !specialPackages.silver ||
+    !specialPackages.duoSpecial
+  )
     return result;
+
+  if (typeFilter.includes("duo")) {
+    pushIfNotExists(
+      result,
+      existingPackageIds,
+      specialPackages.duoSpecial,
+      BEST_VALUE
+    );
+    existingPackageIds.add(specialPackages.duoSpecial.id);
   }
 
-  if (specialPackages.golden) {
-    result.push({
-      package: specialPackages.golden,
-      tag: BEST_VALUE,
-    });
-  }
-
-  if (specialPackages.bronze) {
-    result.push({
-      package: specialPackages.bronze,
-      tag: MOST_POPULAR,
-    });
-  }
+  pushIfNotExists(
+    result,
+    existingPackageIds,
+    specialPackages.golden,
+    BEST_VALUE
+  );
+  pushIfNotExists(
+    result,
+    existingPackageIds,
+    specialPackages.bronze,
+    MOST_POPULAR
+  );
+  pushIfNotExists(
+    result,
+    existingPackageIds,
+    specialPackages.silver,
+    BEST_VALUE
+  );
 
   return result;
 };
 
 const findPackage = (slug: string, allPackages: TypePackageFields[]) =>
   allPackages.find((p) => p.slug.includes(slug));
+
+const pushIfNotExists = (
+  result: FilteredPackage[],
+  existingPackageIds: Set<number>,
+  pkg: TypePackageFields,
+  tag: string
+) => {
+  if (!existingPackageIds.has(pkg.id)) {
+    result.push({ package: pkg, tag });
+    existingPackageIds.add(pkg.id);
+  }
+};

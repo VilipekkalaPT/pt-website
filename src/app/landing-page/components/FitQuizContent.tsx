@@ -9,8 +9,8 @@ interface FitQuizContentProps {
   activeStep: number;
   selectedOptions: Map<number, string[]>;
   showResult: boolean;
-  filteredPackages: FilteredPackage[];
-  specialPackages: FilteredPackage[];
+  hasMatchedPackages: boolean;
+  finalPackages: FilteredPackage[];
   handleOptionSelect: (stepId: number, options: string) => void;
 }
 
@@ -18,8 +18,8 @@ export default function FitQuizContent({
   activeStep,
   selectedOptions,
   showResult,
-  filteredPackages,
-  specialPackages,
+  hasMatchedPackages,
+  finalPackages,
   handleOptionSelect,
 }: FitQuizContentProps) {
   const stepData = fitQuizData.steps.find((step) => step.id === activeStep);
@@ -30,8 +30,8 @@ export default function FitQuizContent({
     <div className="w-full flex flex-col items-center">
       {showResult ? (
         <FitQuizResult
-          filteredPackages={filteredPackages}
-          specialPackages={specialPackages}
+          hasMatchedPackages={hasMatchedPackages}
+          finalPackages={finalPackages}
         />
       ) : (
         <>
