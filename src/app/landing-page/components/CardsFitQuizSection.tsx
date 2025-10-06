@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import FitQuiz from "./FitQuiz";
 import Card, { CardContent } from "app/components/Card";
 import Button from "app/components/Button";
@@ -9,6 +9,7 @@ import {
   TypePackageFields,
 } from "app/lib/types/contentful";
 import { useRouter } from "next/navigation";
+import { useFitQuizManager } from "../hooks/useFitQuizManager";
 
 interface CardsFitQuizSectionProps {
   cards: TypeImageCardFields[];
@@ -20,19 +21,22 @@ export default function CardsFitQuizSection({
   packages,
 }: CardsFitQuizSectionProps) {
   const router = useRouter();
-  const [showFitQuiz, setShowFitQuiz] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const fitQuizRef = useRef<HTMLDivElement | null>(null);
-
-  const handleClick = () => {
-    if (!showFitQuiz) {
-      setShowFitQuiz(true);
-    }
-
-    if (fitQuizRef.current) {
-      fitQuizRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const {
+    showFitQuiz,
+    activeStep,
+    showResult,
+    hasMatchedPackages,
+    selectedOptions,
+    storedFilterPackages,
+    finalPackages,
+    setActiveStep,
+    setShowFitQuiz,
+    handleOptionSelect,
+    handleShowResult,
+    handleClose,
+  } = useFitQuizManager(packages, containerRef);
 
   useEffect(() => {
     if (showFitQuiz && fitQuizRef.current) {
@@ -40,11 +44,8 @@ export default function CardsFitQuizSection({
     }
   }, [showFitQuiz]);
 
-  const handleCloseFitQuiz = () => {
-    setShowFitQuiz(false);
-    if (containerRef.current) {
-      containerRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+  const openFitQuiz = () => {
+    setShowFitQuiz(true);
   };
 
   return (
@@ -60,7 +61,7 @@ export default function CardsFitQuizSection({
                 glassmorphism
                 hasShadow
                 onClick={
-                  card.url ? () => router.push(`${card.url}`) : handleClick
+                  card.url ? () => router.push(`${card.url}`) : openFitQuiz
                 }
               />
             </CardContent>
@@ -70,8 +71,16 @@ export default function CardsFitQuizSection({
       {showFitQuiz && (
         <FitQuiz
           ref={fitQuizRef}
-          packages={packages}
-          closeFitQuiz={handleCloseFitQuiz}
+          activeStep={activeStep}
+          showResult={showResult}
+          hasMatchedPackages={hasMatchedPackages}
+          selectedOptions={selectedOptions}
+          storedFilterPackages={storedFilterPackages}
+          finalPackages={finalPackages}
+          setActiveStep={setActiveStep}
+          handleOptionSelect={handleOptionSelect}
+          handleShowResult={handleShowResult}
+          handleClose={handleClose}
         />
       )}
     </div>

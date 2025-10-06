@@ -4,13 +4,13 @@ import {
   FIT_QUIZ_RESULT_TITLE,
   FIT_QUIZ_RESULT_TITLE_NO_MATCH,
 } from "app/utils/variables";
-import { FilteredPackage } from "../hooks/useFilter";
+import { FilteredPackage } from "../hooks/useFitQuiz";
 import { motion } from "framer-motion";
 import RecommendationPackageCard from "./RecommendationPackageCard";
 
 interface FitQuizResultProps {
   hasMatchedPackages: boolean;
-  finalPackages: FilteredPackage[];
+  displayedPackages: FilteredPackage[];
 }
 
 const ResultHeader = ({ hasMatches }: { hasMatches: boolean }) => (
@@ -28,7 +28,7 @@ const ResultHeader = ({ hasMatches }: { hasMatches: boolean }) => (
 
 export default function FitQuizResult({
   hasMatchedPackages,
-  finalPackages,
+  displayedPackages,
 }: FitQuizResultProps) {
   return (
     <div className="w-full mt-4 flex flex-col items-center">
@@ -42,7 +42,7 @@ export default function FitQuizResult({
         className="w-full flex gap-8"
       >
         <div className="grid grid-cols-3 gap-6 items-start">
-          {finalPackages.map((p) => (
+          {displayedPackages.map((p) => (
             <RecommendationPackageCard key={p.package.id} p={p} />
           ))}
         </div>

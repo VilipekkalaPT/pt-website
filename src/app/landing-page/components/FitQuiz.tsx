@@ -1,13 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { fitQuizData } from "app/lib/data/fitQuiz";
 
-import { TypePackageFields } from "app/lib/types/contentful/TypePackage";
 import FitQuizButtons from "./FitQuizButtons";
 import FitQuizContent from "./FitQuizContent";
-import { useFilter } from "../hooks/useFilter";
+import { FilteredPackage } from "../hooks/useFitQuizManager";
 import Card from "app/components/Card";
 import {
   BROWSE_ALL_PACKAGES,
@@ -20,37 +18,40 @@ import { ROUTES } from "app/utils/routes";
 
 interface FitQuizProps {
   ref: React.RefObject<HTMLDivElement | null>;
-  packages: TypePackageFields[];
-  closeFitQuiz: () => void;
+  activeStep: number;
+  showResult: boolean;
+  hasMatchedPackages: boolean;
+  selectedOptions: Map<number, string[]>;
+  storedFilterPackages: FilteredPackage[];
+  finalPackages: FilteredPackage[];
+  setActiveStep: (step: number) => void;
+  handleOptionSelect: (stepId: number, option: string) => void;
+  handleShowResult: (showResult: boolean) => void;
+  handleClose: () => void;
 }
 
-export default function FitQuiz({ ref, packages, closeFitQuiz }: FitQuizProps) {
-  const [activeStep, setActiveStep] = useState<number>(fitQuizData.steps[0].id);
-  const [showResult, setShowResult] = useState<boolean>(false);
+export default function FitQuiz({
+  ref,
+  activeStep,
+  showResult,
+  hasMatchedPackages,
+  selectedOptions,
+  storedFilterPackages,
+  finalPackages,
+  setActiveStep,
+  handleOptionSelect,
+  handleShowResult,
+  handleClose,
+}: FitQuizProps) {
   const router = useRouter();
-
   const totalSteps = fitQuizData.steps.length;
-  const {
-    selectedOptions,
-    handleOptionSelect,
-    hasMatchedPackages,
-    finalPackages,
-    clearSelectedOptions,
-  } = useFilter(packages);
-
-  const resetQuiz = () => {
-    setActiveStep(fitQuizData.steps[0].id);
-    setShowResult(false);
-    clearSelectedOptions();
-    closeFitQuiz();
-  };
-
-  const handleShowResult = (showResult: boolean) => {
-    setShowResult(showResult);
-  };
 
   return (
-    <div className="w-full py-20 min-h-screen flex gap-8" ref={ref}>
+    <div
+      className="w-full py-20 min-h-screen flex gap-8"
+      id="fit-quiz"
+      ref={ref}
+    >
       <Card glassmorphism className="flex-3 p-8 justify-center bg-primary/50">
         <p className="mb-4 text-2xl font-medium text-center">
           {FIT_QUIZ_TITLE}
@@ -61,7 +62,11 @@ export default function FitQuiz({ ref, packages, closeFitQuiz }: FitQuizProps) {
           selectedOptions={selectedOptions}
           showResult={showResult}
           hasMatchedPackages={hasMatchedPackages}
-          finalPackages={finalPackages}
+          displayedPackages={
+            storedFilterPackages.length > 0
+              ? storedFilterPackages
+              : finalPackages
+          }
           handleOptionSelect={handleOptionSelect}
         />
         <FitQuizButtons
@@ -71,7 +76,7 @@ export default function FitQuiz({ ref, packages, closeFitQuiz }: FitQuizProps) {
           selectedOptions={selectedOptions}
           showResult={showResult}
           handleShowResult={handleShowResult}
-          resetQuiz={resetQuiz}
+          resetQuiz={handleClose}
         />
       </Card>
       <Card

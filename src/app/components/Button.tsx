@@ -22,7 +22,7 @@ export default function Button({
   iconLeft,
   iconRight,
   hasShadow,
-
+  glassmorphism,
   onClick,
   ...props
 }: ButtonProps) {
@@ -38,7 +38,7 @@ export default function Button({
               variant === "outlined",
             "bg-none": variant === "ghost",
             "cursor-not-allowed opacity-50": props.disabled,
-            "glass-effect": props.glassmorphism,
+            "glass-effect": glassmorphism,
             "outside-shadow": hasShadow,
           }
           // {

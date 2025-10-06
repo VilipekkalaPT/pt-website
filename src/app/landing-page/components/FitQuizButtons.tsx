@@ -34,10 +34,11 @@ export default function FitQuizButtons({
   };
 
   const handleBack = () => {
-    setActiveStep(activeStep - 1);
+    console.log(activeStep);
     if (activeStep === totalSteps - 1) {
       handleShowResult(false);
     }
+    setActiveStep(activeStep - 1);
   };
 
   return (

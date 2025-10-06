@@ -3,14 +3,14 @@ import React from "react";
 import { fitQuizData } from "app/lib/data/fitQuiz";
 import FitQuizQuestion from "./FitQuizQuestion";
 import FitQuizResult from "./FitQuizResult";
-import { FilteredPackage } from "../hooks/useFilter";
+import { FilteredPackage } from "../hooks/useFitQuiz";
 
 interface FitQuizContentProps {
   activeStep: number;
   selectedOptions: Map<number, string[]>;
   showResult: boolean;
   hasMatchedPackages: boolean;
-  finalPackages: FilteredPackage[];
+  displayedPackages: FilteredPackage[];
   handleOptionSelect: (stepId: number, options: string) => void;
 }
 
@@ -19,7 +19,7 @@ export default function FitQuizContent({
   selectedOptions,
   showResult,
   hasMatchedPackages,
-  finalPackages,
+  displayedPackages,
   handleOptionSelect,
 }: FitQuizContentProps) {
   const stepData = fitQuizData.steps.find((step) => step.id === activeStep);
@@ -31,7 +31,7 @@ export default function FitQuizContent({
       {showResult ? (
         <FitQuizResult
           hasMatchedPackages={hasMatchedPackages}
-          finalPackages={finalPackages}
+          displayedPackages={displayedPackages}
         />
       ) : (
         <>
