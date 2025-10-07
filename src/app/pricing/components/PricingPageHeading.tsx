@@ -35,19 +35,22 @@ export default function PricingPageHeading({
         headingSections={headingSections}
         fillImage={false}
       />
-      <div className="w-4/5 mx-auto absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex gap-8">
+      <div className="w-4/5 mx-auto absolute bottom-6 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex gap-8">
         {packageCards.map((card, index) => (
-          <div key={index} className="relative w-full">
-            <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-1/2 w-15 h-15 rounded-full bg-white/25 z-5 glass-effect flex justify-center items-center">
+          <div
+            key={index}
+            className="relative flex-1 flex flex-col items-center"
+          >
+            <div className="absolute top-0 left-0 transform translate-y-1/2 p-4 rounded-full bg-white/25 z-5 glass-effect flex justify-center items-center">
               {getIcon(card.title)}
             </div>
             <Card
               key={index}
               glassmorphism
-              className="w-full px-8 py-20 items-center bg-primary/50 border-none"
+              className="flex-1 w-full px-8 py-12 text-center justify-center items-center bg-primary/50 border-none"
             >
               <p className="text-2xl font-semibold">{card.title}</p>
-              <p className="text-xl font-light mt-2 mb-4">{card.subtitle}</p>
+              <p className="text-xl font-light mb-4">{card.subtitle}</p>
               <Button variant="primary" label={card.actionButtonText} />
             </Card>
           </div>
@@ -59,6 +62,6 @@ export default function PricingPageHeading({
 
 const getIcon = (cardTitle: string) => {
   const title = cardTitle.toLowerCase();
-  if (title.includes("solo")) return <UserIcon className="size-8" />;
-  return <UsersIcon className="size-8" />;
+  if (title.includes("solo")) return <UserIcon className="size-6" />;
+  return <UsersIcon className="size-6" />;
 };
