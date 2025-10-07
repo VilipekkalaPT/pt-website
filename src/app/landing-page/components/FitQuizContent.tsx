@@ -3,7 +3,7 @@ import React from "react";
 import { fitQuizData } from "app/lib/data/fitQuiz";
 import FitQuizQuestion from "./FitQuizQuestion";
 import FitQuizResult from "./FitQuizResult";
-import { FilteredPackage } from "../hooks/useFitQuiz";
+import { FilteredPackage } from "../hooks/useFitQuizManager";
 
 interface FitQuizContentProps {
   activeStep: number;

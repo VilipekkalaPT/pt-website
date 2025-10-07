@@ -4,7 +4,7 @@ import {
   FIT_QUIZ_RESULT_TITLE,
   FIT_QUIZ_RESULT_TITLE_NO_MATCH,
 } from "app/utils/variables";
-import { FilteredPackage } from "../hooks/useFitQuiz";
+import { FilteredPackage } from "../hooks/useFitQuizManager";
 import { motion } from "framer-motion";
 import RecommendationPackageCard from "./RecommendationPackageCard";
 

@@ -92,7 +92,7 @@ export default function PackageCard({
           {!!savedAmount && (
             <Chip
               label={`${SAVED_AMOUNT} €${savedAmount}`}
-              color={darkMode ? "light-green" : "green"}
+              color={darkMode ? "none" : "mint"}
             />
           )}
         </div>
@@ -108,7 +108,7 @@ const getChipColor = (mode: "hybrid" | "offline" | "online") => {
     case "online":
       return "yellow";
     case "hybrid":
-      return "light-green";
+      return "mint";
     default:
       return "black";
   }

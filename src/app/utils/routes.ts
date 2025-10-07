@@ -9,3 +9,5 @@ export const ROUTES = {
 };
 
 export const localLogoUrl = "/logo.svg";
+export const whatsappDomain = "https://wa.me/";
+export const instagramDefaultLink = "https://www.instagram.com/";

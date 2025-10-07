@@ -1,9 +1,6 @@
 "use client";
 
 import { TypeImageCardFields } from "app/lib/types/contentful";
-import { TypeImageCardFieldsWithImage } from "app/lib/types/contentful/TypeImageCard";
-import { useRouter } from "next/navigation";
-import ImageCard from "./ImageCard";
 import cn from "classnames";
 
 interface InfoSectionProps {
@@ -16,10 +13,8 @@ interface InfoSectionProps {
 export default function InfoSection({
   title,
   subtitle,
-  imageCards,
   className,
 }: InfoSectionProps) {
-  const router = useRouter();
   // const imageCardsWithImage = imageCards.map((card) => ({
   //   ...card,
   //   image: card.image.fields,

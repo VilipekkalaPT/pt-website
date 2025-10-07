@@ -1,3 +1,5 @@
+"use client";
+
 import { FilteredPackage } from "app/landing-page/hooks/useFitQuizManager";
 
 const FITQUIZ_KEY = "fitquiz";
@@ -8,6 +10,7 @@ export interface FitQuizData {
 }
 
 export function saveFitQuiz(fitQuizData: FitQuizData): void {
+  if (typeof window === "undefined") return;
   try {
     sessionStorage.setItem(FITQUIZ_KEY, JSON.stringify(fitQuizData));
   } catch (error) {
@@ -16,6 +19,8 @@ export function saveFitQuiz(fitQuizData: FitQuizData): void {
 }
 
 export function loadFitQuiz(): FitQuizData | null {
+  if (typeof window === "undefined") return null;
+
   const raw = sessionStorage.getItem(FITQUIZ_KEY);
   if (!raw) return null;
 
@@ -30,6 +35,8 @@ export function loadFitQuiz(): FitQuizData | null {
 }
 
 export function clearFitQuiz(): void {
+  if (typeof window === "undefined") return;
+
   try {
     sessionStorage.removeItem(FITQUIZ_KEY);
   } catch (error) {

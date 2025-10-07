@@ -22,7 +22,7 @@ import {
   LEST_DETAILS,
 } from "app/utils/variables";
 import { useRouter } from "next/navigation";
-import { FilteredPackage } from "../hooks/useFitQuiz";
+import { FilteredPackage } from "../hooks/useFitQuizManager";
 
 interface RecommendationPackageCardProps {
   p: FilteredPackage;

@@ -1,15 +1,21 @@
+"use client";
+
 import { AssetFields } from "contentful";
 import Image from "next/image";
 import { capitalizeFirstLetter, getAssetUrl } from "app/utils/utils";
 import { FooterLink as FooterLinkType } from "app/lib/types/type";
 import Link from "next/link";
-import { localLogoUrl } from "app/utils/routes";
+import {
+  localLogoUrl,
+  whatsappDomain,
+  instagramDefaultLink,
+} from "app/utils/routes";
 import { TypeFooterFields } from "app/lib/types/contentful";
 import { useCallback, useMemo } from "react";
 
 interface FooterProps {
   logo?: AssetFields;
-  footerLinks?: TypeFooterFields[];
+  footerLinks: TypeFooterFields[];
 }
 
 export default function Footer({ logo, footerLinks }: FooterProps) {
@@ -28,6 +34,23 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
     [footerLinks]
   );
 
+  const openWhatsApp = useCallback(() => {
+    const whatsappLink = footerLinks.find(
+      (link) => link.label.toLowerCase() === "whatsapp"
+    )?.description;
+    if (!whatsappLink) return;
+    const url = `${whatsappDomain}${whatsappLink}`;
+    window.open(url, "_blank");
+  }, [footerLinks]);
+
+  const openInstagram = useCallback(() => {
+    const instagramLink = footerLinks.find(
+      (link) => link.label.toLowerCase() === "instagram"
+    )?.url;
+    const url = instagramLink ?? instagramDefaultLink;
+    window.open(url, "_blank");
+  }, [footerLinks]);
+
   return (
     <div className="mt-10 grid grid-cols-4 gap-4 w-[90%] mx-auto mb-40">
       <div className="flex flex-col">
@@ -39,6 +62,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
             width={24}
             height={24}
             className="cursor-pointer"
+            onClick={openWhatsApp}
           />
           <Image
             src="/instagram.svg"
@@ -46,6 +70,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
             width={24}
             height={24}
             className="cursor-pointer"
+            onClick={openInstagram}
           />
         </div>
       </div>

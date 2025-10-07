@@ -1,23 +1,24 @@
 "use client";
 
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import Button from "app/components/Button";
-import { TypeImageCardFieldsWithImage } from "app/lib/types/contentful/TypeImageCard";
-import { getAssetUrl } from "app/utils/utils";
-import Image from "next/image";
+import { TypeImageCardFields } from "app/lib/types/contentful";
+
+// import { ArrowRightIcon } from "@heroicons/react/24/solid";
+// import Button from "app/components/Button";
+// import { getAssetUrl } from "app/utils/utils";
+// import Image from "next/image";
 
 interface ImageCardProps {
-  imageCard?: TypeImageCardFieldsWithImage;
+  imageCard?: TypeImageCardFields;
   handleClick?: () => void;
 }
 
-export default function ImageCard({ imageCard, handleClick }: ImageCardProps) {
-  const { title, actionButtonText } = imageCard || {};
-  const imageUrl = getAssetUrl(image);
+export default function ImageCard({}: ImageCardProps) {
+  // const { title, actionButtonText } = imageCard || {};
+  // const imageUrl = getAssetUrl(image);
 
   return (
     <div className="relative">
-      {imageCard && (
+      {/* {imageCard && (
         <Image
           src={imageUrl}
           alt={title}
@@ -34,7 +35,7 @@ export default function ImageCard({ imageCard, handleClick }: ImageCardProps) {
           shadowType="both"
           onClick={handleClick}
         />
-      </div>
+      </div> */}
     </div>
   );
 }
