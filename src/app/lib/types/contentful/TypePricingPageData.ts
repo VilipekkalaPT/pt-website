@@ -7,13 +7,7 @@ export interface TypePricingPageDataFields {
   title: EntryFields.Symbol;
   subtitle: EntryFields.Symbol;
   headingImage: Asset;
-  heading1: EntryFields.Symbol;
-  heading2: EntryFields.Symbol;
-  subheading: EntryFields.Symbol;
-  headingContent: EntryFields.RichText;
-  packagesTitle: EntryFields.Symbol;
-  packagesSubtitle: EntryFields.Symbol;
-  packageImageCards: Entry<TypeImageCardSkeleton>[];
+  packageCards: Entry<TypeImageCardSkeleton>[];
   packageTypeComparisonTitle: EntryFields.Symbol;
   packageTypeComparisonRows: Entry<TypePricingPackageTypeComparisionSkeleton>[];
   offerText: EntryFields.Symbol[];

@@ -17,7 +17,7 @@ const getTextColor = (index: number): string => {
 
 export default function OfferSection({ offers }: OfferSectionProps) {
   return (
-    <div className="w-1/2 mx-auto mt-35 text-center">
+    <div className="mt-70 w-4/5 mx-auto text-center">
       {offers.map((offer, index) => (
         <p
           key={index}

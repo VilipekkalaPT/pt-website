@@ -20,7 +20,7 @@ export default async function PricingPage() {
     "pricingPageData"
   );
   const pricingPageContent: TypePricingPageDataFields = pricingPageData[0];
-  const packageImageCards = pricingPageContent.packageImageCards.map(
+  const packageCards = pricingPageContent.packageCards.map(
     (el) => el.fields
   ) as TypeImageCardFields[];
   const packageTypeComparisonRows =
@@ -41,22 +41,13 @@ export default async function PricingPage() {
         title={pricingPageContent.title}
         subtitle={pricingPageContent.subtitle}
         image={pricingPageContent.headingImage}
-        heading1={pricingPageContent.heading1}
-        heading2={pricingPageContent.heading2}
-        subheading={pricingPageContent.subheading}
-        content={pricingPageContent.headingContent}
+        packageCards={packageCards}
       />
-      <InfoSection
-        title={pricingPageContent.infoSectionTitle}
-        subtitle={pricingPageContent.infoSectionSubtitle}
-        imageCards={packageImageCards}
-        className="mt-35 px-12"
-      />
+      <OfferSection offers={pricingPageContent.offerText} />
       <PackageTypeComparison
         title={pricingPageContent.packageTypeComparisonTitle}
         rows={packageTypeComparisonRows}
       />
-      <OfferSection offers={pricingPageContent.offerText} />
       <DifferentServicesComparison
         title={pricingPageContent.differentServicesComparisonTitle}
         subtitle={pricingPageContent.differentServicesComparisonSubtitle}

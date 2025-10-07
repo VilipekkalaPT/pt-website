@@ -1,27 +1,24 @@
-import HeroSection from "app/components/HeroSection";
-import { HeadingSectionType } from "app/lib/types/type";
 import { Asset, AssetFields } from "contentful";
-import { Document } from "@contentful/rich-text-types";
-import RichTextRenderer from "app/components/RichTextRenderer";
+
+import { HeadingSectionType } from "app/lib/types/type";
+import Card from "app/components/Card";
+import { TypeImageCardFields } from "app/lib/types/contentful";
+import HeroSection from "app/components/HeroSection";
+import Button from "app/components/Button";
+import { UserIcon, UsersIcon } from "@heroicons/react/24/outline";
 
 interface PricingPageHeadingProps {
-  image: Asset;
   title: string;
   subtitle: string;
-  heading1: string;
-  heading2: string;
-  subheading?: string;
-  content: Document;
+  image: Asset;
+  packageCards: TypeImageCardFields[];
 }
 
 export default function PricingPageHeading({
-  image,
   title,
   subtitle,
-  heading1,
-  heading2,
-  subheading,
-  content,
+  image,
+  packageCards,
 }: PricingPageHeadingProps) {
   const imageField: AssetFields = image.fields as AssetFields;
   const headingSections: HeadingSectionType[] = [
@@ -32,27 +29,36 @@ export default function PricingPageHeading({
   ];
 
   return (
-    <>
+    <div className="relative">
       <HeroSection
         image={imageField}
         headingSections={headingSections}
         fillImage={false}
       />
-      <div className="w-2/3 mx-auto mt-20 flex items-center">
-        <div className="flex-2 flex flex-col pr-20">
-          <p className="text-2xl font-semibold text-gray-800 w-full">
-            {heading2}
-          </p>
-          <p className="mt-1 mb-4 text-xl text-gray-400">{subheading}</p>
-          <RichTextRenderer
-            text={content}
-            paragraphClassName="mt-4 text-gray-600"
-          />
-        </div>
-        <p className="flex-1 text-center text-5xl font-bold text-gray-500">
-          {heading1}
-        </p>
+      <div className="w-4/5 mx-auto absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex gap-8">
+        {packageCards.map((card, index) => (
+          <div key={index} className="relative w-full">
+            <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-1/2 w-15 h-15 rounded-full bg-white/25 z-5 glass-effect flex justify-center items-center">
+              {getIcon(card.title)}
+            </div>
+            <Card
+              key={index}
+              glassmorphism
+              className="w-full px-8 py-20 items-center bg-primary/50 border-none"
+            >
+              <p className="text-2xl font-semibold">{card.title}</p>
+              <p className="text-xl font-light mt-2 mb-4">{card.subtitle}</p>
+              <Button variant="primary" label={card.actionButtonText} />
+            </Card>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
+
+const getIcon = (cardTitle: string) => {
+  const title = cardTitle.toLowerCase();
+  if (title.includes("solo")) return <UserIcon className="size-8" />;
+  return <UsersIcon className="size-8" />;
+};

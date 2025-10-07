@@ -2928,7 +2928,7 @@
         "id": "pricingPageData",
         "type": "ContentType",
         "createdAt": "2025-06-10T18:09:19.927Z",
-        "updatedAt": "2025-06-13T13:50:44.988Z",
+        "updatedAt": "2025-10-07T19:42:21.031Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2936,8 +2936,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 28,
-        "publishedAt": "2025-06-13T13:50:44.988Z",
+        "publishedVersion": 50,
+        "publishedAt": "2025-10-07T19:42:21.031Z",
         "firstPublishedAt": "2025-06-10T18:09:20.257Z",
         "createdBy": {
           "sys": {
@@ -2953,8 +2953,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 14,
-        "version": 29,
+        "publishedCounter": 25,
+        "version": 51,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3003,112 +3003,8 @@
           "linkType": "Asset"
         },
         {
-          "id": "heading1",
-          "name": "Heading 1",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "heading2",
-          "name": "Heading 2",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "subheading",
-          "name": "Subheading",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "headingContent",
-          "name": "Heading Content",
-          "type": "RichText",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript",
-                "strikethrough"
-              ],
-              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
-            },
-            {
-              "enabledNodeTypes": [
-                "heading-1",
-                "heading-2",
-                "heading-3",
-                "heading-4",
-                "heading-5",
-                "heading-6",
-                "ordered-list",
-                "unordered-list",
-                "hr",
-                "blockquote",
-                "embedded-entry-block",
-                "embedded-asset-block",
-                "table",
-                "asset-hyperlink",
-                "embedded-entry-inline",
-                "entry-hyperlink",
-                "hyperlink"
-              ],
-              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to asset, inline entry, link to entry, and link to Url nodes are allowed"
-            },
-            {
-              "nodes": {
-              }
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "packagesTitle",
-          "name": "Packages Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "packagesSubtitle",
-          "name": "Packages Subtitle",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "packageImageCards",
-          "name": "Package Image Cards",
+          "id": "packageCards",
+          "name": "Package Cards",
           "type": "Array",
           "localized": false,
           "required": true,
@@ -5881,7 +5777,7 @@
             "linkType": "Space"
           }
         },
-        "version": 28,
+        "version": 50,
         "createdAt": "2025-06-10T18:09:20.457Z",
         "createdBy": {
           "sys": {
@@ -5890,7 +5786,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-13T13:50:45.735Z",
+        "updatedAt": "2025-10-07T19:42:21.662Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5930,37 +5826,7 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "heading1",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "heading2",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "subheading",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "headingContent",
-          "widgetId": "richTextEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "packagesTitle",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "packagesSubtitle",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "packageImageCards",
+          "fieldId": "packageCards",
           "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
@@ -40508,7 +40374,7 @@
         "id": "3qq56D92N9NAAkIhYJNQVU",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:58.149Z",
-        "updatedAt": "2025-09-21T17:21:36.098Z",
+        "updatedAt": "2025-10-07T19:31:07.093Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40516,8 +40382,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 75,
-        "publishedAt": "2025-09-21T17:21:36.098Z",
+        "publishedVersion": 77,
+        "publishedAt": "2025-10-07T19:31:07.093Z",
         "firstPublishedAt": "2025-06-01T19:41:33.034Z",
         "createdBy": {
           "sys": {
@@ -40533,8 +40399,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 20,
-        "version": 76,
+        "publishedCounter": 21,
+        "version": 78,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40564,7 +40430,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "71g8OWYI9skPRPXNNnZJKe"
+              "id": "3AxyWrWRdyT4Cs4Astke1b"
             }
           }
         },
@@ -42440,7 +42306,7 @@
         "id": "462QO6JlHjTqVLbCZYuKAa",
         "type": "Entry",
         "createdAt": "2025-06-10T18:27:09.720Z",
-        "updatedAt": "2025-06-13T19:42:04.010Z",
+        "updatedAt": "2025-10-07T19:38:54.983Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42448,8 +42314,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2025-06-13T19:42:04.010Z",
+        "publishedVersion": 13,
+        "publishedAt": "2025-10-07T19:38:54.983Z",
         "firstPublishedAt": "2025-06-10T18:27:48.122Z",
         "createdBy": {
           "sys": {
@@ -42465,8 +42331,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 9,
+        "publishedCounter": 3,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42495,19 +42361,10 @@
           "en-US": "Solo Slay Packages"
         },
         "subtitle": {
-          "en-US": "One-on-one coaching tailored just for you"
-        },
-        "image": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "6LJFASShcQOH6rgfMfkGUR"
-            }
-          }
+          "en-US": "One-on-one coaching tailored just for you."
         },
         "actionButtonText": {
-          "en-US": "Explore"
+          "en-US": "Browse solo packages"
         },
         "url": {
           "en-US": "/pricing/solo-packages"
@@ -42532,7 +42389,7 @@
         "id": "2In8NPlLhyyEkjPgYaOlcD",
         "type": "Entry",
         "createdAt": "2025-06-10T18:28:07.620Z",
-        "updatedAt": "2025-06-26T05:59:13.542Z",
+        "updatedAt": "2025-10-07T19:39:18.169Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42540,8 +42397,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2025-06-26T05:59:13.542Z",
+        "publishedVersion": 12,
+        "publishedAt": "2025-10-07T19:39:18.169Z",
         "firstPublishedAt": "2025-06-10T18:28:44.160Z",
         "createdBy": {
           "sys": {
@@ -42557,8 +42414,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 10,
+        "publishedCounter": 4,
+        "version": 13,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42589,17 +42446,8 @@
         "subtitle": {
           "en-US": "Train with a friend or partner. Shared goals, individual plans."
         },
-        "image": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "74cDhoKxbxzmV1z9T7gw1m"
-            }
-          }
-        },
         "actionButtonText": {
-          "en-US": "Explore"
+          "en-US": "Browse duo packages"
         },
         "url": {
           "en-US": "/pricing/duo-packages"
@@ -43799,7 +43647,7 @@
         "id": "6wCYuTfgf5JHYGWCCcv7V4",
         "type": "Entry",
         "createdAt": "2025-06-10T20:02:39.810Z",
-        "updatedAt": "2025-08-13T12:46:38.389Z",
+        "updatedAt": "2025-10-07T19:42:06.757Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -43807,8 +43655,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 68,
-        "publishedAt": "2025-08-13T12:46:38.389Z",
+        "publishedVersion": 88,
+        "publishedAt": "2025-10-07T19:42:06.757Z",
         "firstPublishedAt": "2025-06-10T20:07:34.217Z",
         "createdBy": {
           "sys": {
@@ -43824,8 +43672,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 15,
-        "version": 69,
+        "publishedCounter": 24,
+        "version": 89,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -43851,109 +43699,21 @@
       },
       "fields": {
         "title": {
-          "en-US": "Slay Pricing"
+          "en-US": "Pricing"
         },
         "subtitle": {
-          "en-US": "Explore options & see how Vili’s services stack up"
+          "en-US": "Explore your options & see how Vili’s personalized service stacks up"
         },
         "headingImage": {
           "en-US": {
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "1DteAejwEb54AGv637Pl7Y"
+              "id": "6kOoLaqIg3jihZy9RhYkXK"
             }
           }
         },
-        "heading1": {
-          "en-US": "“Finding the right personal trainer shouldn’t feel like another workout”"
-        },
-        "heading2": {
-          "en-US": "Tired of trying everything and getting nowhere?"
-        },
-        "subheading": {
-          "en-US": "WERK it out till you GLOW it out!"
-        },
-        "headingContent": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Your journey’s your own and the way we train reflects that.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Whether you’re brand new or just feeling stuck, SlayFit Vili cuts through all the fitness noise. You’ll get real support, smart plans, and a style that works for ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "italic"
-                      }
-                    ],
-                    "value": "your",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": " life, not someone else’s.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Think of this page as your roadmap. Take what you need, leave what you don’t, and start building strength that actually lasts. (Right, muscular strength, and mindset strength)",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "packagesTitle": {
-          "en-US": "Choose Your Fit"
-        },
-        "packagesSubtitle": {
-          "en-US": "There’s a package that matches your vibe, goals, and schedule"
-        },
-        "packageImageCards": {
+        "packageCards": {
           "en-US": [
             {
               "sys": {
@@ -45972,7 +45732,7 @@
         "id": "7AYxENopSoZSvPTrlCQGHp",
         "type": "Entry",
         "createdAt": "2025-10-05T18:04:05.205Z",
-        "updatedAt": "2025-10-05T18:27:30.845Z",
+        "updatedAt": "2025-10-06T16:08:52.677Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45980,8 +45740,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2025-10-05T18:27:30.845Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-10-06T16:08:52.677Z",
         "firstPublishedAt": "2025-10-05T18:04:18.236Z",
         "createdBy": {
           "sys": {
@@ -45997,8 +45757,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 8,
+        "publishedCounter": 4,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46025,6 +45785,9 @@
       "fields": {
         "label": {
           "en-US": "Whatsapp"
+        },
+        "description": {
+          "en-US": "044 9764986"
         },
         "column": {
           "en-US": "contact"
@@ -50827,7 +50590,7 @@
         "id": "6kOoLaqIg3jihZy9RhYkXK",
         "type": "Asset",
         "createdAt": "2025-06-25T21:06:01.069Z",
-        "updatedAt": "2025-06-25T21:06:52.011Z",
+        "updatedAt": "2025-10-07T19:30:40.550Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -50835,8 +50598,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2025-06-25T21:06:52.011Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-10-07T19:30:40.550Z",
         "firstPublishedAt": "2025-06-25T21:06:52.011Z",
         "createdBy": {
           "sys": {
@@ -50852,8 +50615,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 11,
+        "publishedCounter": 3,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -50870,11 +50633,11 @@
       },
       "fields": {
         "title": {
-          "en-US": "Viili_Pekkala_2_1"
+          "en-US": "pricing_hero_image"
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/5yib965szeod/6kOoLaqIg3jihZy9RhYkXK/7bade11a92a7f8f4a3174e471a9f8ca1/Viili_Pekkala_2_1.jpg",
+            "url": "//images.ctfassets.net/5yib965szeod/6kOoLaqIg3jihZy9RhYkXK/fd16fbda0a9bf4eca6e54af59c60579d/pricing_hero_image.jpg",
             "details": {
               "size": 2339219,
               "image": {
@@ -50882,7 +50645,7 @@
                 "height": 2514
               }
             },
-            "fileName": "Viili_Pekkala_2_1.jpg",
+            "fileName": "pricing_hero_image.jpg",
             "contentType": "image/jpeg"
           }
         }
@@ -51759,6 +51522,85 @@
               }
             },
             "fileName": "Viili_Pekkala_1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "3AxyWrWRdyT4Cs4Astke1b",
+        "type": "Asset",
+        "createdAt": "2025-10-07T19:28:34.759Z",
+        "updatedAt": "2025-10-07T19:30:01.216Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-10-07T19:30:01.216Z",
+        "firstPublishedAt": "2025-10-07T19:28:58.871Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/3AxyWrWRdyT4Cs4Astke1b"
+      },
+      "fields": {
+        "title": {
+          "en-US": "landingpage_hero_image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/3AxyWrWRdyT4Cs4Astke1b/929269d569b50d18deda1ee1bfdc1e0b/landingpage_hero_image.jpg",
+            "details": {
+              "size": 2547141,
+              "image": {
+                "width": 5154,
+                "height": 3182
+              }
+            },
+            "fileName": "landingpage_hero_image.jpg",
             "contentType": "image/jpeg"
           }
         }

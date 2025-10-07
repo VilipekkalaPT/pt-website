@@ -1,7 +1,9 @@
-import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 
 export interface TypeImageCardFields {
   title: EntryFields.Symbol;
+  subtitle?: EntryFields.Symbol;
+  image?: Asset;
   actionButtonText: EntryFields.Symbol;
   url?: EntryFields.Symbol;
 }
