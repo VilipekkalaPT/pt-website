@@ -1,19 +1,17 @@
-import Divider from "app/components/Divider";
 import { getEntries } from "app/lib/contentfulDataService";
 import {
   TypePricingPageDataFields,
   TypePricingPageDataSkeleton,
 } from "app/lib/types/contentful/TypePricingPageData";
 import PricingPageHeading from "./components/PricingPageHeading";
-import PackageTypeComparison from "./components/PackageTypeComparison";
+import CompareDecideSection from "./components/CompareDecideSection";
 import {
   TypeImageCardFields,
   TypePricingDifferentServicesComparisonFields,
 } from "app/lib/types/contentful";
 import { TypePricingPackageTypeComparisionFields } from "app/lib/types/contentful/TypePricingPackageTypeComparision";
 import OfferSection from "./components/OfferSection";
-import DifferentServicesComparison from "./components/DifferentServicesComparison";
-import InfoSection from "app/components/InfoSection";
+import Button from "app/components/Button";
 
 export default async function PricingPage() {
   const pricingPageData = await getEntries<TypePricingPageDataSkeleton>(
@@ -31,9 +29,6 @@ export default async function PricingPage() {
     pricingPageContent.differentServicesComparisonRows.map(
       (el) => el.fields
     ) as TypePricingDifferentServicesComparisonFields[];
-  const infoSectionImageCards = pricingPageContent.infoImageCards.map(
-    (el) => el.fields
-  ) as TypeImageCardFields[];
 
   return (
     <>
@@ -44,22 +39,26 @@ export default async function PricingPage() {
         packageCards={packageCards}
       />
       <OfferSection offers={pricingPageContent.offerText} />
-      <PackageTypeComparison
-        title={pricingPageContent.packageTypeComparisonTitle}
-        rows={packageTypeComparisonRows}
+      <CompareDecideSection
+        title={pricingPageContent.compareDecideTitle}
+        packageTypeComparisonRows={packageTypeComparisonRows}
+        differentServicesComparisonRows={differentServicesComparisonRows}
+        steps={pricingPageContent.steps}
       />
-      <DifferentServicesComparison
-        title={pricingPageContent.differentServicesComparisonTitle}
-        subtitle={pricingPageContent.differentServicesComparisonSubtitle}
-        rows={differentServicesComparisonRows}
-      />
-      <InfoSection
-        title={pricingPageContent.infoSectionTitle}
-        subtitle={pricingPageContent.infoSectionSubtitle}
-        imageCards={infoSectionImageCards}
-        className="mt-35 px-12 mb-15"
-      />
-      <Divider />
+      <div className="mt-8 flex w-4/5 mx-auto justify-center gap-4">
+        <Button
+          label={pricingPageContent.actionButtonText1}
+          variant="primary"
+          glassmorphism
+          hasShadow
+        />
+        <Button
+          label={pricingPageContent.actionButtonText1}
+          variant="primary"
+          glassmorphism
+          hasShadow
+        />
+      </div>
     </>
   );
 }

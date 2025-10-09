@@ -11,19 +11,17 @@ import {
   instagramDefaultLink,
 } from "app/utils/routes";
 import { TypeFooterFields } from "app/lib/types/contentful";
-import { useCallback, useMemo } from "react";
+import { useCallback } from "react";
 
 interface FooterProps {
   logo?: AssetFields;
   footerLinks: TypeFooterFields[];
 }
 
+const COLUMNS = ["contact", "explore", "condition & policy"];
+
 export default function Footer({ logo, footerLinks }: FooterProps) {
   const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
-
-  const columns = useMemo(() => {
-    return Array.from(new Set(footerLinks?.map((el) => el.column))).reverse();
-  }, [footerLinks]);
 
   const getLinks = useCallback(
     (col: string) => {
@@ -52,7 +50,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
   }, [footerLinks]);
 
   return (
-    <div className="mt-10 grid grid-cols-4 gap-4 w-[90%] mx-auto mb-40">
+    <div className="mt-30 grid grid-cols-4 gap-4 w-[90%] mx-auto mb-40">
       <div className="flex flex-col">
         <Image src={logoUrl} alt="Logo" width={200} height={200} />
         <div className="flex mt-4 gap-4">
@@ -74,7 +72,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
           />
         </div>
       </div>
-      {columns.map((col: string) => {
+      {COLUMNS.map((col: string) => {
         return (
           <div key={col} className="flex flex-col">
             <p className="mb-6 font-medium">{capitalizeFirstLetter(col)}</p>

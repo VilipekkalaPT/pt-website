@@ -1,4 +1,3 @@
-import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/solid";
 import { TypePricingPackageTypeComparisionFields } from "app/lib/types/contentful";
 import {
   COMBO,
@@ -8,10 +7,10 @@ import {
   PackageTypeComparisonEnum,
   PLAN,
 } from "app/utils/variables";
+import Card from "app/components/Card";
 import cn from "classnames";
 
 interface PackageTypeComparisonProps {
-  title: string;
   rows: TypePricingPackageTypeComparisionFields[];
 }
 
@@ -39,25 +38,34 @@ const columnTitles = [
 ];
 
 export default function PackageTypeComparison({
-  title,
   rows,
 }: PackageTypeComparisonProps) {
   return (
-    <div className="mt-35 px-48 grid grid-cols-5">
-      <p className="col-span-5 text-2xl font-semibold mb-12 text-center">
-        {title}
-      </p>
+    <Card
+      glassmorphism
+      className="w-full grid grid-cols-5 auto-rows-fr p-8 gap-8"
+    >
       {columnTitles.map((col) => (
-        <div key={col.id}>
-          <p className="font-semibold">{col.label}</p>
-          {rows.map((row, index) => (
-            <div key={`${col.id}-${index}`} className="mt-6">
-              {PackageTypeComparisonCell({ columnId: col.id, row })}
-            </div>
-          ))}
-        </div>
+        <p
+          key={col.id}
+          className={cn({
+            "text-center": col.id !== PackageTypeComparisonEnum.FEATURES,
+          })}
+        >
+          {col.label}
+        </p>
       ))}
-    </div>
+      {rows.map((row, rowIndex) =>
+        columnTitles.map((col) => (
+          <div
+            key={`${col.id}-${rowIndex}`}
+            className="flex flex-col items-center"
+          >
+            {PackageTypeComparisonCell({ columnId: col.id, row })}
+          </div>
+        ))
+      )}
+    </Card>
   );
 }
 
@@ -86,23 +94,23 @@ const PackageTypeComparisonCell = ({
   columnId: PackageTypeComparisonEnum;
   row: TypePricingPackageTypeComparisionFields;
 }) => {
-  const textStyle = "text-gray-500";
+  const textStyle = "text-white/70 font-light text-sm";
 
   if (columnId === PackageTypeComparisonEnum.FEATURES) {
-    return <p className={textStyle}>{row.features}</p>;
+    return <p className={cn(textStyle, "self-start")}>{row.features}</p>;
   }
 
   if (row.availableFor?.includes(columnId)) {
     return (
-      <div className="flex items-center">
-        <CheckCircleIcon className="size-6 text-green-700" />
+      <div className="flex flex-col items-center">
+        <p className="text-sm">✅</p>
         {columnId === PackageTypeComparisonEnum.COMBO && row.extraText && (
-          <span className={cn("ml-1 text-sm", textStyle)}>{row.extraText}</span>
+          <span className={cn("ml-2 text-sm", textStyle)}>{row.extraText}</span>
         )}
       </div>
     );
   } else if (row.availableFor) {
-    return <XCircleIcon className="size-6 text-red-700" />;
+    return <p className="text-sm">❌</p>;
   }
 
   const bestForContent = getBestForContent(columnId, row);

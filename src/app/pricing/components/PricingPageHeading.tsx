@@ -49,7 +49,7 @@ export default function PricingPageHeading({
               glassmorphism
               className="flex-1 w-full px-8 py-12 text-center justify-center items-center bg-primary/50 border-none"
             >
-              <p className="text-2xl font-semibold">{card.title}</p>
+              <p className="text-2xl font-medium">{card.title}</p>
               <p className="text-xl font-light mb-4">{card.subtitle}</p>
               <Button variant="primary" label={card.actionButtonText} />
             </Card>

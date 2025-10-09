@@ -6,22 +6,21 @@ const getTextColor = (index: number): string => {
   switch (index) {
     case 0:
     case 1:
-      return "text-gray-400";
+      return "text-text-neutral-tertiary";
     case 2:
-    case 3:
-      return "text-gray-600";
+      return "text-text-neutral-default";
     default:
-      return "text-gray-800";
+      return "text-text-neutral-tertiary";
   }
 };
 
 export default function OfferSection({ offers }: OfferSectionProps) {
   return (
-    <div className="mt-70 w-4/5 mx-auto text-center">
+    <div className="mt-50 w-4/5 mx-auto text-center">
       {offers.map((offer, index) => (
         <p
           key={index}
-          className={`mt-2 text-5xl font-semibold ${getTextColor(index)}`}
+          className={`mt-2 text-2xl font-medium ${getTextColor(index)}`}
         >
           {offer}
         </p>

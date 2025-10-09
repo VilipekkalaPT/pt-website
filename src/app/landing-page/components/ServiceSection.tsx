@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDownIcon } from "@heroicons/react/24/solid";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
 
 interface ServiceSectionProps {
   title: string;
@@ -16,7 +16,7 @@ export default function ServiceSection({
 }: ServiceSectionProps) {
   return (
     <div className="mt-20 flex flex-col items-center">
-      <ArrowDownIcon className="size-10 text-icon-secondary flex items-center" />
+      <ArrowDownIcon className="size-12 text-icon-secondary stroke-2" />
       <p className="text-2xl font-medium mt-8">{title}</p>
       <p className="text-xl mt-2 text-text-secondary">{subtitle}</p>
       <div className="w-full mt-10 overflow-x-hidden">

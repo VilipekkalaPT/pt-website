@@ -2928,7 +2928,7 @@
         "id": "pricingPageData",
         "type": "ContentType",
         "createdAt": "2025-06-10T18:09:19.927Z",
-        "updatedAt": "2025-10-07T19:42:21.031Z",
+        "updatedAt": "2025-10-09T18:53:36.294Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2936,8 +2936,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 50,
-        "publishedAt": "2025-10-07T19:42:21.031Z",
+        "publishedVersion": 70,
+        "publishedAt": "2025-10-09T18:53:36.294Z",
         "firstPublishedAt": "2025-06-10T18:09:20.257Z",
         "createdBy": {
           "sys": {
@@ -2953,8 +2953,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 25,
-        "version": 51,
+        "publishedCounter": 35,
+        "version": 71,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3020,8 +3020,24 @@
           }
         },
         {
-          "id": "packageTypeComparisonTitle",
-          "name": "Package Type Comparison Title",
+          "id": "offerText",
+          "name": "Offer Text",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "compareDecideTitle",
+          "name": "Compare & Decide Title",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -3029,6 +3045,28 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "steps",
+          "name": "Steps",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "Focus areas",
+                  "Service types"
+                ]
+              }
+            ]
+          }
         },
         {
           "id": "packageTypeComparisonRows",
@@ -3048,44 +3086,6 @@
           }
         },
         {
-          "id": "offerText",
-          "name": "Offer Text",
-          "type": "Array",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Symbol",
-            "validations": [
-            ]
-          }
-        },
-        {
-          "id": "differentServicesComparisonTitle",
-          "name": "Different Services Comparison Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "differentServicesComparisonSubtitle",
-          "name": "Different Services Comparison Subtitle",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
           "id": "differentServicesComparisonRows",
           "name": "Different Services Comparison Rows",
           "type": "Array",
@@ -3103,8 +3103,8 @@
           }
         },
         {
-          "id": "infoSectionTitle",
-          "name": "Info Section Title",
+          "id": "actionButtonText1",
+          "name": "Action Button Text 1",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -3114,8 +3114,8 @@
           "omitted": false
         },
         {
-          "id": "infoSectionSubtitle",
-          "name": "Info Section Subtitle",
+          "id": "actionButtonText2",
+          "name": "Action Button Text 2",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -3123,23 +3123,6 @@
           ],
           "disabled": false,
           "omitted": false
-        },
-        {
-          "id": "infoImageCards",
-          "name": "Info Image Cards",
-          "type": "Array",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-            ],
-            "linkType": "Entry"
-          }
         }
       ]
     },
@@ -5777,7 +5760,7 @@
             "linkType": "Space"
           }
         },
-        "version": 50,
+        "version": 70,
         "createdAt": "2025-06-10T18:09:20.457Z",
         "createdBy": {
           "sys": {
@@ -5786,7 +5769,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-10-07T19:42:21.662Z",
+        "updatedAt": "2025-10-09T18:53:37.102Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5831,8 +5814,18 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "packageTypeComparisonTitle",
+          "fieldId": "offerText",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "compareDecideTitle",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "steps",
+          "widgetId": "checkbox",
           "widgetNamespace": "builtin"
         },
         {
@@ -5841,38 +5834,18 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "offerText",
-          "widgetId": "tagEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "differentServicesComparisonTitle",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "differentServicesComparisonSubtitle",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
           "fieldId": "differentServicesComparisonRows",
           "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "infoSectionTitle",
+          "fieldId": "actionButtonText1",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "infoSectionSubtitle",
+          "fieldId": "actionButtonText2",
           "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "infoImageCards",
-          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -42306,7 +42279,7 @@
         "id": "462QO6JlHjTqVLbCZYuKAa",
         "type": "Entry",
         "createdAt": "2025-06-10T18:27:09.720Z",
-        "updatedAt": "2025-10-07T19:38:54.983Z",
+        "updatedAt": "2025-10-07T20:00:40.670Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42314,8 +42287,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2025-10-07T19:38:54.983Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-10-07T20:00:40.670Z",
         "firstPublishedAt": "2025-06-10T18:27:48.122Z",
         "createdBy": {
           "sys": {
@@ -42331,8 +42304,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 14,
+        "publishedCounter": 4,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42358,7 +42331,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Solo Slay Packages"
+          "en-US": "Solo Packages"
         },
         "subtitle": {
           "en-US": "One-on-one coaching tailored just for you."
@@ -42389,7 +42362,7 @@
         "id": "2In8NPlLhyyEkjPgYaOlcD",
         "type": "Entry",
         "createdAt": "2025-06-10T18:28:07.620Z",
-        "updatedAt": "2025-10-07T19:39:18.169Z",
+        "updatedAt": "2025-10-07T20:00:46.145Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -42397,8 +42370,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2025-10-07T19:39:18.169Z",
+        "publishedVersion": 14,
+        "publishedAt": "2025-10-07T20:00:46.145Z",
         "firstPublishedAt": "2025-06-10T18:28:44.160Z",
         "createdBy": {
           "sys": {
@@ -42414,8 +42387,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 13,
+        "publishedCounter": 5,
+        "version": 15,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -42441,7 +42414,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Duo Slay Packages"
+          "en-US": "Duo Packages"
         },
         "subtitle": {
           "en-US": "Train with a friend or partner. Shared goals, individual plans."
@@ -43647,7 +43620,7 @@
         "id": "6wCYuTfgf5JHYGWCCcv7V4",
         "type": "Entry",
         "createdAt": "2025-06-10T20:02:39.810Z",
-        "updatedAt": "2025-10-07T19:42:06.757Z",
+        "updatedAt": "2025-10-09T18:53:55.782Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -43655,8 +43628,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 88,
-        "publishedAt": "2025-10-07T19:42:06.757Z",
+        "publishedVersion": 101,
+        "publishedAt": "2025-10-09T18:53:55.782Z",
         "firstPublishedAt": "2025-06-10T20:07:34.217Z",
         "createdBy": {
           "sys": {
@@ -43672,8 +43645,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 24,
-        "version": 89,
+        "publishedCounter": 28,
+        "version": 102,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -43731,8 +43704,21 @@
             }
           ]
         },
-        "packageTypeComparisonTitle": {
-          "en-US": "Package Type Comparison"
+        "offerText": {
+          "en-US": [
+            "Most apps offer templates",
+            "Most trainers stick to the gym",
+            "Vili brings you both with real care, energy, and results"
+          ]
+        },
+        "compareDecideTitle": {
+          "en-US": "Compare & Decide"
+        },
+        "steps": {
+          "en-US": [
+            "Focus areas",
+            "Service types"
+          ]
         },
         "packageTypeComparisonRows": {
           "en-US": [
@@ -43787,19 +43773,6 @@
             }
           ]
         },
-        "offerText": {
-          "en-US": [
-            "Apps offer framework.",
-            "Trainers train you in the gym.",
-            "Vili offers both and even more!"
-          ]
-        },
-        "differentServicesComparisonTitle": {
-          "en-US": "Why Choose SlayFitVili?"
-        },
-        "differentServicesComparisonSubtitle": {
-          "en-US": "What clients want, how Vili delivers, and how it compares"
-        },
         "differentServicesComparisonRows": {
           "en-US": [
             {
@@ -43839,29 +43812,11 @@
             }
           ]
         },
-        "infoSectionTitle": {
-          "en-US": "Need more info?"
+        "actionButtonText1": {
+          "en-US": "Read more reviews"
         },
-        "infoSectionSubtitle": {
-          "en-US": "We’re just a message away"
-        },
-        "infoImageCards": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "2VMSYaZEA1hWiPh823ji4S"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "4Iwlrxo583OUmv0prV3od6"
-              }
-            }
-          ]
+        "actionButtonText2": {
+          "en-US": "Book a free consultation"
         }
       }
     },
@@ -45569,7 +45524,7 @@
         "id": "12VhStH9rDfyAz9cEWFmsK",
         "type": "Entry",
         "createdAt": "2025-10-05T18:00:12.109Z",
-        "updatedAt": "2025-10-05T18:27:36.724Z",
+        "updatedAt": "2025-10-08T17:03:44.243Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45577,8 +45532,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2025-10-05T18:27:36.724Z",
+        "publishedVersion": 14,
+        "publishedAt": "2025-10-08T17:03:44.243Z",
         "firstPublishedAt": "2025-10-05T18:00:20.046Z",
         "createdBy": {
           "sys": {
@@ -45594,8 +45549,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 6,
-        "version": 13,
+        "publishedCounter": 7,
+        "version": 15,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45624,7 +45579,7 @@
           "en-US": "Hotline"
         },
         "description": {
-          "en-US": "044 9764986"
+          "en-US": "+358 44 9764986"
         },
         "column": {
           "en-US": "contact"
@@ -45652,7 +45607,7 @@
         "id": "5XvhjWgM22VYupIZjPJosh",
         "type": "Entry",
         "createdAt": "2025-10-05T18:03:47.319Z",
-        "updatedAt": "2025-10-05T18:27:25.158Z",
+        "updatedAt": "2025-10-08T17:08:08.052Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45660,8 +45615,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-10-05T18:27:25.158Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-10-08T17:08:08.052Z",
         "firstPublishedAt": "2025-10-05T18:03:58.927Z",
         "createdBy": {
           "sys": {
@@ -45677,8 +45632,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 7,
+        "publishedCounter": 4,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45705,6 +45660,9 @@
       "fields": {
         "label": {
           "en-US": "Instagram"
+        },
+        "description": {
+          "en-US": "@vili.pekkala3011"
         },
         "column": {
           "en-US": "contact"

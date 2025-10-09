@@ -13,7 +13,8 @@
   --color-white: rgba(255, 255, 255);
   --color-text-black-30: rgba(30, 30, 30);
   --color-text-secondary: rgba(255, 255, 255, 0.7);
-  --color-text-neutral: rgba(36, 36, 36);
+  --color-text-neutral-default: rgba(227, 227, 227);
+  --color-text-neutral-tertiary: rgba(178, 178, 178);
   --color-text-brand-secondary: rgba(217, 217, 217);
 
   --color-border-default-primary: rgba(68, 68, 68);

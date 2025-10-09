@@ -8,15 +8,13 @@ export interface TypePricingPageDataFields {
   subtitle: EntryFields.Symbol;
   headingImage: Asset;
   packageCards: Entry<TypeImageCardSkeleton>[];
-  packageTypeComparisonTitle: EntryFields.Symbol;
-  packageTypeComparisonRows: Entry<TypePricingPackageTypeComparisionSkeleton>[];
   offerText: EntryFields.Symbol[];
-  differentServicesComparisonTitle: EntryFields.Symbol;
-  differentServicesComparisonSubtitle: EntryFields.Symbol;
+  compareDecideTitle: EntryFields.Symbol;
+  steps: ("Focus areas" | "Service types")[];
+  packageTypeComparisonRows: Entry<TypePricingPackageTypeComparisionSkeleton>[];
   differentServicesComparisonRows: Entry<TypePricingDifferentServicesComparisonSkeleton>[];
-  infoSectionTitle: EntryFields.Symbol;
-  infoSectionSubtitle: EntryFields.Symbol;
-  infoImageCards: Entry<TypeImageCardSkeleton>[];
+  actionButtonText1: EntryFields.Symbol;
+  actionButtonText2: EntryFields.Symbol;
 }
 
 export interface TypePricingPageDataSkeleton extends EntrySkeletonType {

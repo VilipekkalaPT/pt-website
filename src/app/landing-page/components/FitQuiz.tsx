@@ -11,9 +11,11 @@ import {
   BROWSE_ALL_PACKAGES,
   FIT_QUIZ_TITLE,
   READY_TO_SLAY_FIT,
+  STEP,
+  RESULT,
 } from "app/utils/variables";
 import Button from "app/components/Button";
-import FitQuizProgressBar from "./FitQuizProgressBar";
+import StepIndicator from "app/components/StepIndicator";
 import { ROUTES } from "app/utils/routes";
 
 interface FitQuizProps {
@@ -45,6 +47,10 @@ export default function FitQuiz({
 }: FitQuizProps) {
   const router = useRouter();
   const totalSteps = fitQuizData.steps.length;
+  const totalStepsArray = [
+    ...Array.from({ length: totalSteps - 1 }, (_, i) => `${STEP} ${i + 1}`),
+    RESULT,
+  ];
 
   return (
     <div
@@ -56,7 +62,9 @@ export default function FitQuiz({
         <p className="mb-4 text-2xl font-medium text-center">
           {FIT_QUIZ_TITLE}
         </p>
-        <FitQuizProgressBar activeStep={activeStep} />
+        <div className="w-1/2 mx-auto">
+          <StepIndicator steps={totalStepsArray} activeStep={activeStep} />
+        </div>
         <FitQuizContent
           activeStep={activeStep}
           selectedOptions={selectedOptions}
