@@ -5,6 +5,7 @@
 
   --color-primary: rgba(138, 34, 115);
   --color-blue: rgba(44, 212, 255);
+  --color-blue-1000: rgba(14, 24, 111);
   --color-pink: rgba(234, 63, 184);
   --color-mint: rgba(78, 250, 213);
   --color-green: rgba(0, 128, 67);
@@ -40,6 +41,12 @@ a {
 
 div[data-radix-popper-content-wrapper] {
   z-index: 99;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }
 
 .glass-effect {

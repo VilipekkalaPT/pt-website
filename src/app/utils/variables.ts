@@ -52,6 +52,7 @@ export const INFO_SECTION_SUBTITLE =
   "Enrolling in this plan takes time, energy, and commitment. Make sure you’ve got all the info you need before jumping in!";
 
 // Pricing Page Variables
+export const PRICING_PAGE_TITLE = "Pricing";
 export const CURRENCY = "€";
 export const FROM = "From";
 export const VAT_INCLUDED = "VAT incl.";

@@ -66,7 +66,7 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
       key={item.id}
       href={item.url || "/"}
       className={cn("py-2 px-4 rounded-lg", {
-        "bg-blue text-text-black-30": pathName === item.url,
+        "bg-blue text-text-black-30": pathName.includes(item.url),
       })}
     >
       {item.label}

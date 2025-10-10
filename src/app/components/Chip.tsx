@@ -1,59 +1,58 @@
+import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 import cn from "classnames";
 
 interface ChipProps {
-  color?:
+  color:
     | "black"
     | "gray"
     | "mint"
-    | "light-green"
+    | "green"
     | "yellow"
     | "blue"
     | "orange"
-    | "none";
+    | "blue-1000"
+    | "none"
+    | "ghost";
   label: string;
+  glassmorphism?: boolean;
   iconRight?: React.ReactNode;
   href?: string;
   className?: string;
 }
 
 export default function Chip({
-  color = "black",
+  color,
   label,
+  glassmorphism,
   iconRight,
   href,
   className,
 }: ChipProps) {
-  const chipClassName = cn(
-    "px-2 py-1 rounded-2xl flex items-center gap-1 text-sm",
-    {
-      "bg-gray-800": color === "black",
-      "bg-gray-100": color === "gray",
-      "bg-mint text-text-neutral": color === "mint",
-      "bg-green-800": color === "light-green",
-      "bg-yellow-600": color === "yellow",
-      "bg-blue-800": color === "blue",
-      "bg-orange-800": color === "orange",
-      "bg-transparent text-text-brand-secondary border border-border-brand-primary":
-        color === "none",
-    },
-    className
+  const chipClassName = twMerge(
+    cn(
+      "px-4 py-2 rounded-2xl flex items-center gap-1.5 text-sm",
+      {
+        "bg-gray-800": color === "black",
+        "bg-gray-100": color === "gray",
+        "bg-mint text-text-neutral": color === "mint",
+        "bg-green": color === "green",
+        "bg-yellow-600": color === "yellow",
+        "bg-blue-800": color === "blue",
+        "bg-orange-800": color === "orange",
+        "bg-blue-1000": color === "blue-1000",
+        "bg-transparent text-text-brand-secondary border border-border-brand-primary":
+          color === "none",
+        "bg-transparent p-2": color === "ghost",
+        "glass-effect": glassmorphism,
+      },
+      className
+    )
   );
 
   const content = (
     <div className={chipClassName}>
-      <p
-        className={cn({
-          "text-gray-100": color === "black",
-          "text-gray-900": color === "gray",
-          "text-green-100": color === "light-green",
-          "text-yellow-100": color === "yellow",
-          "text-blue-200": color === "blue",
-          "text-orange-200": color === "orange",
-        })}
-      >
-        {label}
-      </p>
+      {label}
       {iconRight}
     </div>
   );

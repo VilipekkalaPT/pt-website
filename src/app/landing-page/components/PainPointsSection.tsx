@@ -26,7 +26,7 @@ export default function PainPointsSection({
   ]);
 
   const baseStyle =
-    "absolute inset-0 flex flex-col items-center justify-center text-center p-12 [backface-visibility:hidden]";
+    "absolute inset-0 flex flex-col items-center justify-center text-center p-12 backface-hidden rotate-x-0";
 
   const toggleCard = (index: number) => {
     setFlippedCards((prev) =>
@@ -35,7 +35,7 @@ export default function PainPointsSection({
   };
 
   return (
-    <div className="mt-20 w-[90%] mx-auto flex flex-col items-center">
+    <div className="mt-20 w-4/5 mx-auto flex flex-col items-center">
       <p className="text-2xl font-medium mb-1">{title}</p>
       <p className="text-xl text-text-secondary mb-10">{subtitle}</p>
       <div className="w-full h-[220px] flex gap-8">
@@ -43,7 +43,7 @@ export default function PainPointsSection({
           return (
             <div
               key={index}
-              className="group w-full h-full [perspective:1000px]"
+              className="w-full h-full [perspective:1000px]"
               role="button"
               tabIndex={0}
               aria-label={`Pain point: ${point.overlayText}`}
@@ -69,12 +69,7 @@ export default function PainPointsSection({
                   />
                 </div>
 
-                <div
-                  className={twMerge(
-                    `${baseStyle}`,
-                    "[transform:rotateY(180deg)]"
-                  )}
-                >
+                <div className={twMerge(`${baseStyle}`, "rotate-y-180")}>
                   <span className="mb-4">{point.backText}</span>
                   <Button
                     label={FLIP_ME}

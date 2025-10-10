@@ -10,7 +10,7 @@ export default function Review({ reviews }: ReviewProps) {
   const displayedReviews = reviews.filter((review) => review.showOnLandingPage);
 
   return (
-    <div className="mt-20 w-[90%] mx-auto">
+    <div className="mt-20 w-4/5 mx-auto">
       <p className="text-2xl text-center">{LATEST_REVIEWS}</p>
       <div className="grid grid-cols-3 gap-10 mt-10">
         {displayedReviews.map((review: TypeReviewFields) => (

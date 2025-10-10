@@ -18,9 +18,9 @@ export default function ComboSection({
   soloPackages,
 }: ComboSectionProps) {
   return (
-    <div className="mt-35 bg-black text-gray-100 pt-8 pb-16 px-12">
-      <h2 className="text-2xl font-bold text-center">{title}</h2>
-      <p className="mt-2 mb-8 text-xl text-center text-gray-400">{subtitle}</p>
+    <div className="mt-20 w-[95%] mx-auto flex flex-col items-center">
+      <h2 className="text-2xl font-medium">{title}</h2>
+      <p className="text-xl text-white/70 font-light mt-1 mb-8">{subtitle}</p>
       <div className="flex gap-8">
         {comboPackages?.map((pkg) => {
           const savedAmount = calculateSavedAmount(pkg, soloPackages);

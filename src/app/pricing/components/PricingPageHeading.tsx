@@ -1,4 +1,7 @@
+"use client";
+
 import { Asset, AssetFields } from "contentful";
+import { useRouter } from "next/navigation";
 
 import { HeadingSectionType } from "app/lib/types/type";
 import Card from "app/components/Card";
@@ -20,6 +23,7 @@ export default function PricingPageHeading({
   image,
   packageCards,
 }: PricingPageHeadingProps) {
+  const router = useRouter();
   const imageField: AssetFields = image.fields as AssetFields;
   const headingSections: HeadingSectionType[] = [
     {
@@ -51,7 +55,15 @@ export default function PricingPageHeading({
             >
               <p className="text-2xl font-medium">{card.title}</p>
               <p className="text-xl font-light mb-4">{card.subtitle}</p>
-              <Button variant="primary" label={card.actionButtonText} />
+              <Button
+                variant="primary"
+                label={card.actionButtonText}
+                onClick={() => {
+                  if (card.url) {
+                    router.push(card.url);
+                  }
+                }}
+              />
             </Card>
           </div>
         ))}

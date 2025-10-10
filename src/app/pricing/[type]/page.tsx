@@ -8,10 +8,9 @@ import { TypePackageFields } from "app/lib/types/contentful";
 import PackagesContainer from "../components/PackagesContainer";
 import QuestionsAndInfo from "../components/QuestionsAndInfo";
 import Divider from "app/components/Divider";
-import HeroSection from "app/components/HeroSection";
 import { AssetFields } from "contentful";
-import { HeadingSectionType } from "app/lib/types/type";
 import ComboSection from "../components/ComboSection";
+import HeadingSection from "../components/HeadingSection";
 
 async function getPageData(type: string) {
   const pageData = await getEntryWithSlug("packagesPageData", type);
@@ -41,24 +40,17 @@ export default async function PackagesPage({
     (p) => p.fields
   ) as TypePackageFields[];
   const imageField = packagesPageData.image.fields as AssetFields;
-  const headingSections: HeadingSectionType[] = [
-    {
-      heading: packagesPageData.title,
-      subheading: packagesPageData.subtitle,
-    },
-  ];
   const comboPackages = packagesPageData.comboPackages?.map(
     (pkg) => pkg.fields
   ) as TypePackageFields[];
 
   return (
     <>
-      <HeroSection
+      <HeadingSection
+        title={packagesPageData.title}
+        subtitle={packagesPageData.subtitle}
         image={imageField}
-        headingSections={headingSections}
-        fillImage={false}
       />
-      <PackagesContainer type={type} packages={soloPackages} />
       {comboPackages && (
         <ComboSection
           type={type}
@@ -68,6 +60,7 @@ export default async function PackagesPage({
           soloPackages={soloPackages}
         />
       )}
+      <PackagesContainer type={type} packages={soloPackages} />
       <QuestionsAndInfo packagesPageData={packagesPageData} />
       <Divider />
     </>

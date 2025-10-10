@@ -34,7 +34,7 @@ export default function Button({
           {
             "bg-blue text-text-black-30": variant === "primary",
             "bg-white text-text-black-30": variant === "secondary",
-            "py-4 border border-gray-300 rounded hover:bg-gray-100":
+            "bg-none border-1 border-border-brand-primary":
               variant === "outlined",
             "bg-none": variant === "ghost",
             "cursor-not-allowed opacity-50": props.disabled,
