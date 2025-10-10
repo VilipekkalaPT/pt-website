@@ -8,7 +8,6 @@ import { capitalizeFirstLetter, getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
 import Chip from "app/components/Chip";
 import Price from "./Price";
-import { MOST_POPULAR, SAVED_AMOUNT } from "app/utils/variables";
 import {
   ClipboardDocumentIcon,
   BoltIcon,
@@ -24,11 +23,7 @@ interface PackageCardProps {
   darkMode?: boolean;
 }
 
-export default function PackageCard({
-  singlePackage,
-  href,
-  savedAmount,
-}: PackageCardProps) {
+export default function PackageCard({ singlePackage, href }: PackageCardProps) {
   const {
     name,
     price,

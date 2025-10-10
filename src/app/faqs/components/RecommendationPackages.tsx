@@ -58,6 +58,7 @@ const ChipComponent = ({
         label={capitalizeFirstLetter(pkg.name)}
         iconRight={<ArrowUpRightIcon className={iconClassName} />}
         href={`${pricingPackagesRoute}/${pkg.slug}`}
+        color="black"
       />
     );
   }
@@ -68,6 +69,7 @@ const ChipComponent = ({
       label={`${SEE_ALL} ${pkg.title.toLowerCase()}`}
       iconRight={<ArrowUpRightIcon className={iconClassName} />}
       href={`${ROUTES.PRICING}/${pkg.slug}`}
+      color="black"
     />
   );
 };

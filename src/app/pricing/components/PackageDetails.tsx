@@ -56,7 +56,10 @@ export default function PackageDetails({
       <div>
         <p className="text-2xl font-bold">{packageDetails.name}</p>
         <div className="flex gap-2 mt-2">
-          <Chip label={capitalizeFirstLetter(packageDetails.mode)} />
+          <Chip
+            label={capitalizeFirstLetter(packageDetails.mode)}
+            color="black"
+          />
           {!!savedAmount && (
             <Chip label={`${SAVED_AMOUNT} €${savedAmount}`} color="mint" />
           )}
