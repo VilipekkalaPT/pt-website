@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 
-import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import { TypePricingPackageTypeComparisionFields } from "app/lib/types/contentful";
 import { TypePricingDifferentServicesComparisonFields } from "app/lib/types/contentful/TypePricingDifferentServicesComparison";
 import PackageTypeComparison from "./PackageTypeComparison";
 import DifferentServicesComparison from "./DifferentServicesComparison";
 import StepIndicator from "app/components/StepIndicator";
+import InfoSection from "app/components/InfoSection";
 
 interface CompareDecideSectionProps {
   title: string;
@@ -30,9 +30,8 @@ export default function CompareDecideSection({
 
   return (
     <div className="mt-14 w-4/5 mx-auto flex flex-col items-center">
-      <ArrowDownIcon className="size-12 text-icon-secondary stroke-2 mb-8" />
-      <p className="col-span-5 heading mb-8 text-center">{title}</p>
-      <div className="w-1/4 mb-6">
+      <InfoSection title={title} />
+      <div className="w-1/4 mt-6 mb-6">
         <StepIndicator
           steps={steps}
           activeStep={activeStep}

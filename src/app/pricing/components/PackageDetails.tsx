@@ -17,6 +17,7 @@ import {
   getAssetUrl,
 } from "app/utils/utils";
 import Chip from "app/components/Chip";
+import { getChipColor } from "app/utils/packageUtils";
 
 interface PackageDetailsProps {
   packageDetails: TypePackageFields;
@@ -45,23 +46,25 @@ export default function PackageDetails({
   );
 
   return (
-    <div className="grid grid-cols-2 gap-10 px-12">
-      <Image
-        src={imageUrl}
-        alt={image?.title || PACKAGE_IMAGE}
-        width={image?.file?.details.image?.width}
-        height={image?.file?.details.image?.height}
-        className="block w-full h-auto"
-      />
+    <div className="grid grid-cols-2 gap-10">
+      <div className="relative w-full h-full">
+        <Image
+          src={imageUrl}
+          alt={image?.title || PACKAGE_IMAGE}
+          fill
+          className="object-cover w-full h-full"
+        />
+      </div>
       <div>
-        <p className="text-2xl font-bold">{packageDetails.name}</p>
+        <p className="heading">{packageDetails.name}</p>
         <div className="flex gap-2 mt-2">
           <Chip
             label={capitalizeFirstLetter(packageDetails.mode)}
-            color="black"
+            color={getChipColor(packageDetails.mode)}
+            glassmorphism
           />
           {!!savedAmount && (
-            <Chip label={`${SAVED_AMOUNT} €${savedAmount}`} color="mint" />
+            <Chip label={`${SAVED_AMOUNT} €${savedAmount}`} color="green" />
           )}
         </div>
         <Price
@@ -72,7 +75,7 @@ export default function PackageDetails({
         />
         <RichTextRenderer
           text={packageDetails.content}
-          listClassName="list-disc ml-5 mb-6 text-sm text-gray-500"
+          listClassName="list-disc ml-5 mb-6 body-strong text-white/70"
         />
         <SessionSelector
           selectedOption={selectedOption}

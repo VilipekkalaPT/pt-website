@@ -15,6 +15,7 @@ import {
   DocumentIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
+import { getChipColor } from "app/utils/packageUtils";
 
 interface PackageCardProps {
   singlePackage: TypePackageFields;
@@ -96,19 +97,6 @@ export default function PackageCard({ singlePackage, href }: PackageCardProps) {
     </Card>
   );
 }
-
-const getChipColor = (mode: "hybrid" | "offline" | "online") => {
-  switch (mode) {
-    case "offline":
-      return "pink";
-    case "online":
-      return "cyan";
-    case "hybrid":
-      return "blue-1000";
-    default:
-      return "black";
-  }
-};
 
 const getIcon = (tag: "diet" | "gym" | "plan") => {
   const style = "size-4 stroke-[1.6]";

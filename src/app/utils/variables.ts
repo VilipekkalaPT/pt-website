@@ -49,7 +49,7 @@ export enum INFO_TABS {
 }
 export const INFO_SECTION_TITLE = "Take a moment to consider carefully";
 export const INFO_SECTION_SUBTITLE =
-  "Enrolling in this plan takes time, energy, and commitment. Make sure you’ve got all the info you need before jumping in!";
+  "Enrolling in this plan takes time, energy, and commitment";
 
 // Pricing Page Variables
 export const PRICING_PAGE_TITLE = "Pricing";
@@ -79,6 +79,8 @@ export const DURATION = "Duration";
 
 // Pricing Page Variables
 export const SESSION_SELECTOR_TITLE = "Select a number of sessions";
+export const READ_MORE_REVIEWS = "Read more reviews";
+export const BOOK_FREE_CONSULTATION = "Book a free consultation";
 
 // Faqs Page Variables
 export const MORE_QUESTIONS = "Still have questions?";

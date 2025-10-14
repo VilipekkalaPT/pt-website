@@ -77,7 +77,8 @@ export default function SessionSelector({
         <Button
           variant="primary"
           label={GET_STARTED}
-          className="w-full justify-center"
+          glassmorphism
+          hasShadow
           onClick={() => router.push(ROUTES.CONTACT)}
         />
       </div>

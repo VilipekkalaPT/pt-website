@@ -8,9 +8,9 @@ interface ReviewSectionProps {
 
 export default function ReviewSection({ reviews }: ReviewSectionProps) {
   return (
-    <>
-      <p className="px-12 text-2xl font-bold mt-35 mb-10">{LATEST_REVIEWS}</p>
-      <div className="px-12 grid grid-cols-3 gap-8 mb-15">
+    <div className="w-full mt-30 flex flex-col items-center">
+      <p className="heading mb-10">{LATEST_REVIEWS}</p>
+      <div className="grid grid-cols-3 gap-8">
         {reviews.length > 0 &&
           reviews.map((review) => (
             <ReviewCard
@@ -20,6 +20,6 @@ export default function ReviewSection({ reviews }: ReviewSectionProps) {
             />
           ))}
       </div>
-    </>
+    </div>
   );
 }

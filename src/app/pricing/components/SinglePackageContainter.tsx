@@ -3,22 +3,22 @@
 import {
   TypeCurriculumFields,
   TypeCurriculumPeriodFields,
-  TypeImageCardFields,
   TypePackageFields,
   TypeReviewFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
 import PackageDetails from "./PackageDetails";
-import Divider from "app/components/Divider";
 import Button from "app/components/Button";
 import {
   ALL_PACKAGES,
+  BOOK_FREE_CONSULTATION,
   EXPECTED_RESULTS,
   FOR_WHOM,
   INFO_SECTION_SUBTITLE,
   INFO_SECTION_TITLE,
   INFO_TABS,
   NOT_FOR_WHOM,
+  READ_MORE_REVIEWS,
   WHY,
 } from "app/utils/variables";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
@@ -35,7 +35,6 @@ interface SinglePackageContainerProps {
   curriculum: TypeCurriculumFields;
   soloPackages: TypePackageFields[];
   reviews: TypeReviewFields[];
-  imageCards: TypeImageCardFields[];
 }
 
 const createTabs = (
@@ -83,7 +82,6 @@ export default function SinglePackageContainer({
   curriculum,
   soloPackages,
   reviews,
-  imageCards,
 }: SinglePackageContainerProps) {
   const router = useRouter();
   const pricingPackagesRoute = getPricingPackagesRoute(packageDetails.type);
@@ -91,12 +89,12 @@ export default function SinglePackageContainer({
   const tabs = createTabs(packageDetails, curriculum);
 
   return (
-    <div className="mt-10">
+    <div className="w-4/5 mx-auto mt-10">
       <Button
         variant="ghost"
         label={ALL_PACKAGES}
         iconLeft={<ArrowLeftIcon className="size-4" />}
-        className="mb-6 px-12"
+        className="mb-6 p-0"
         onClick={() => router.push(pricingPackagesRoute)}
       />
       <PackageDetails
@@ -116,10 +114,22 @@ export default function SinglePackageContainer({
       <InfoSection
         title={INFO_SECTION_TITLE}
         subtitle={INFO_SECTION_SUBTITLE}
-        imageCards={imageCards}
-        className="mt-35 mb-15 px-12"
+        className="mt-20"
       />
-      <Divider />
+      <div className="mt-8 flex w-4/5 mx-auto justify-center gap-4">
+        <Button
+          label={READ_MORE_REVIEWS}
+          variant="primary"
+          glassmorphism
+          hasShadow
+        />
+        <Button
+          label={BOOK_FREE_CONSULTATION}
+          variant="primary"
+          glassmorphism
+          hasShadow
+        />
+      </div>
     </div>
   );
 }

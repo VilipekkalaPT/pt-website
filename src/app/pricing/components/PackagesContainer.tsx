@@ -1,8 +1,8 @@
 import { TypePackageFields } from "app/lib/types/contentful";
-import { ArrowDownIcon } from "@heroicons/react/24/outline";
 
 import PackageCard from "./PackageCard";
 import { calculateSavedAmount } from "app/utils/utils";
+import InfoSection from "app/components/InfoSection";
 
 interface PackagesContainerProps {
   type: string;
@@ -21,9 +21,7 @@ export default function PackagesContainer({
 
   return (
     <div className="w-4/5 mx-auto mt-20 flex flex-col items-center">
-      <ArrowDownIcon className="size-12 text-icon-secondary stroke-2" />
-      <p className="heading mt-8 mb-1">{title}</p>
-      <p className="subheading text-white/70">{subtitle}</p>
+      <InfoSection title={title} subtitle={subtitle} />
       <div className={`grid grid-cols-${numberOfColumns} gap-8 mt-6`}>
         {packages.map((pkg) => {
           const savedAmount = calculateSavedAmount(pkg, packages);
