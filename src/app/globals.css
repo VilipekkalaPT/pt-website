@@ -6,6 +6,7 @@
   --color-primary: rgba(138, 34, 115);
   --color-blue: rgba(44, 212, 255);
   --color-blue-1000: rgba(14, 24, 111);
+  --color-cyan: rgba(86, 231, 244);
   --color-pink: rgba(234, 63, 184);
   --color-mint: rgba(78, 250, 213);
   --color-green: rgba(0, 128, 67);
@@ -16,6 +17,7 @@
   --color-text-secondary: rgba(255, 255, 255, 0.7);
   --color-text-neutral-default: rgba(227, 227, 227);
   --color-text-neutral-tertiary: rgba(178, 178, 178);
+  --color-text-brand-primary: rgba(44, 44, 44);
   --color-text-brand-secondary: rgba(217, 217, 217);
 
   --color-border-default-primary: rgba(68, 68, 68);
@@ -25,6 +27,44 @@
   --color-border-neutral-tertiary: rgba(118, 118, 118);
 
   --color-icon-secondary: rgba(255, 255, 255, 0.4);
+}
+
+.title-hero {
+  font-family: var(--font-righteous);
+  font-size: var(--text-7xl);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  font-size: var(--text-4xl);
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.heading {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+.subheading {
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+.body-strong {
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.body-small {
+  font-size: var(--text-sm);
+  line-height: 140%;
 }
 
 html,

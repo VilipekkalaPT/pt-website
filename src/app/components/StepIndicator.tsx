@@ -19,7 +19,7 @@ export default function StepIndicator({
         <div
           onClick={() => toggleStep && toggleStep(index)}
           key={step}
-          className={cn("flex-1 text-center font-light py-2 border-b-2", {
+          className={cn("flex-1 text-center leading-[1.4] py-2 border-b-2", {
             "border-border-neutral-primary text-border-neutral-primary":
               index === activeStep,
             "border-border-neutral-tertiary text-border-neutral-tertiary":

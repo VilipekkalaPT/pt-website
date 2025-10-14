@@ -43,12 +43,12 @@ export default function AccordionComponent({
     >
       <Accordion.Item
         value={value}
-        className={cn("mt-4 p-3 text-sm border border-gray-300 rounded-md", {
-          "bg-gray-100": !isAcdordionOpen,
-        })}
+        className={cn(
+          "mt-4 p-4 border border-border-default-primary bg-black/50 rounded-lg"
+        )}
       >
         <Accordion.Header className="flex">
-          <Accordion.Trigger className="flex w-full justify-between items-center font-bold cursor-pointer">
+          <Accordion.Trigger className="flex w-full justify-between items-center cursor-pointer body-strong">
             {triggerText}
             <ChevronDownIcon
               className={cn("size-4 ", { "rotate-180": isAcdordionOpen })}
@@ -57,7 +57,7 @@ export default function AccordionComponent({
           </Accordion.Trigger>
         </Accordion.Header>
         <Accordion.Content
-          className={cn("mt-2 overflow-hidden", {
+          className={cn("mt-2 overflow-hidden leading-[1.4]", {
             "animate-[slideUp_300ms_ease-in-out]": !isAcdordionOpen,
             "animate-[slideDown_300ms_ease-in-out]": isAcdordionOpen,
           })}

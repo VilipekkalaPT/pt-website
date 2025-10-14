@@ -65,15 +65,17 @@ const ReviewCardFooter: React.FC<ReviewCardComponentProps> = ({
         <>
           <Divider />
           <div className="flex flex-col mt-2">
-            <p className="font-medium text-white/70">{reviewer}</p>
-            <p className="text-white/40">{reviewPackage.join(", ")}</p>
+            <p className="body-strong text-white/70">{reviewer}</p>
+            <p className="leading-[1.4] text-white/40">
+              {reviewPackage.join(", ")}
+            </p>
           </div>
         </>
       )}
       {reviewCardType === "full" && (
         <div className="mt-4 flex flex-wrap items-end gap-2 min-h-[4rem] max-h-[6rem]">
           {changes?.map((change: string, index: number) => {
-            return <Chip key={index} color="gray" label={change} />;
+            return <Chip key={index} color="black" label={change} />;
           })}
         </div>
       )}
@@ -119,7 +121,7 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
     <CardContent className="flex-1 flex flex-col">
       {reviewCardType === "compact" && (
         <>
-          <p className="text-2xl font-medium min-h-[4rem]">{title}</p>
+          <p className="heading min-h-[4rem]">{title}</p>
           <RichTextRenderer text={content} paragraphClassName="mt-2" />
         </>
       )}

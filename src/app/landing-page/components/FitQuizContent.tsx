@@ -35,7 +35,7 @@ export default function FitQuizContent({
         />
       ) : (
         <>
-          <p className="my-4 text-2xl font-light">{stepData.title}</p>
+          <p className="my-4 subheading">{stepData.title}</p>
           <FitQuizQuestion
             stepData={stepData}
             selectedOptions={selectedOptions}

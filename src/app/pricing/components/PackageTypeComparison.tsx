@@ -49,7 +49,8 @@ export default function PackageTypeComparison({
         <p
           key={col.id}
           className={cn({
-            "text-center": col.id !== PackageTypeComparisonEnum.FEATURES,
+            "text-center body-strong":
+              col.id !== PackageTypeComparisonEnum.FEATURES,
           })}
         >
           {col.label}
@@ -94,7 +95,7 @@ const PackageTypeComparisonCell = ({
   columnId: PackageTypeComparisonEnum;
   row: TypePricingPackageTypeComparisionFields;
 }) => {
-  const textStyle = "text-white/70 font-light text-sm";
+  const textStyle = "text-white/70 body-small";
 
   if (columnId === PackageTypeComparisonEnum.FEATURES) {
     return <p className={cn(textStyle, "self-start")}>{row.features}</p>;

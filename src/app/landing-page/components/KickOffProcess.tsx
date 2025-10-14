@@ -10,7 +10,7 @@ type KickOffProcessProps = {
 export default function KickOffProcess({}: KickOffProcessProps) {
   return (
     <div className="mt-30">
-      <p className="text-2xl font-medium text-center">{SLAY_PROCESS}</p>
+      <p className="heading text-center">{SLAY_PROCESS}</p>
       <Image
         src="/process.png"
         alt="Divider"

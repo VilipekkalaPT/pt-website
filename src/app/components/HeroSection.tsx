@@ -64,10 +64,8 @@ export default function HeroSection({
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p className="w-2/3 mx-auto text-7xl mb-6 font-righteous">
-              {section.heading}
-            </p>
-            <p className="text-4xl font-light">{section.subheading}</p>
+            <p className="w-2/3 mx-auto mb-6 title-hero">{section.heading}</p>
+            <p className="subtitle">{section.subheading}</p>
           </div>
         ))}
         {heroSectionContent}

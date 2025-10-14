@@ -1,11 +1,9 @@
 "use client";
 
 import AccordionComponent from "app/components/AccordionComponent";
-import InfoSection from "app/components/InfoSection";
 import RichTextRenderer from "app/components/RichTextRenderer";
 import {
   TypeFaqFields,
-  TypeImageCardFields,
   TypePackagesPageDataFields,
 } from "app/lib/types/contentful";
 import { useState } from "react";
@@ -20,23 +18,18 @@ export default function QuestionsAndInfo({
   const questions = packagesPageData.faqs.map(
     (q) => q.fields
   ) as TypeFaqFields[];
-  const imageCards = packagesPageData.infoImageCards.map(
-    (card) => card.fields
-  ) as TypeImageCardFields[];
 
   const [selectedAccordion, setSelectedAccordion] = useState<string>(
     questions[0].question
   );
 
   return (
-    <div className="mt-20">
-      <p className="text-2xl font-bold text-center">
-        {packagesPageData.faqsTitle}
-      </p>
-      <p className="text-xl text-gray-500 mb-8 text-center">
+    <div className="mt-40 w-1/2 mx-auto flex flex-col items-center">
+      <p className="heading">{packagesPageData.faqsTitle}</p>
+      <p className="subheading text-white/70 mt-2">
         {packagesPageData.faqsSubtitle}
       </p>
-      <div className="h-96 w-1/2 mx-auto">
+      <div className="min-h-48 w-full mt-8">
         {questions.map((question) => (
           <AccordionComponent
             key={question.question}
@@ -48,12 +41,6 @@ export default function QuestionsAndInfo({
           />
         ))}
       </div>
-      <InfoSection
-        title={packagesPageData.infoTitle}
-        subtitle={packagesPageData.infoSubtitle}
-        imageCards={imageCards}
-        className="my-15 px-12"
-      />
     </div>
   );
 }

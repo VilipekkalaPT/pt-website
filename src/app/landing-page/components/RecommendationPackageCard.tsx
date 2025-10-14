@@ -48,7 +48,7 @@ export default function RecommendationPackageCard({
         <p>{tag}</p>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col items-center">
-        <p className="text-3xl font-bold text-center">{pkg.name}</p>
+        <p className="heading text-center">{pkg.name}</p>
         <Price
           price={pkg.price}
           priceUnit={pkg.priceUnit}
@@ -60,11 +60,11 @@ export default function RecommendationPackageCard({
           color="none"
           className="mt-4"
         />
-        <p className="text-center my-4">{pkg.shortDescription}</p>
+        <p className="text-center mt-4">{pkg.shortDescription}</p>
         {showMoreDetails && (
           <RichTextRenderer
             text={pkg.content}
-            listClassName="list-disc pl-5 font-light text-sm text-white/70"
+            listClassName="list-disc pl-5 mt-4 body-small text-white/70"
           />
         )}
       </CardContent>

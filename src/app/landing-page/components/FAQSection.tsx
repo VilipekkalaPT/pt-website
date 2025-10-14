@@ -5,7 +5,6 @@ import RichTextRenderer from "app/components/RichTextRenderer";
 import { getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
 import Button from "app/components/Button";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "app/utils/routes";
 
@@ -37,14 +36,13 @@ export default function FAQSection({
         />
       </div>
       <div className="flex flex-col items-start justify-center">
-        <p className="text-2xl font-medium mb-4">{title}</p>
-        <RichTextRenderer text={content} paragraphClassName="font-light" />
+        <p className="heading mb-4">{title}</p>
+        <RichTextRenderer text={content} />
         <Button
           label={buttonText}
           variant="ghost"
           glassmorphism
-          className="mt-4"
-          iconRight={<ArrowRightIcon className="size-4" />}
+          className="mt-4 p-2"
           onClick={() => router.push(ROUTES.FAQs)}
         />
       </div>

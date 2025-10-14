@@ -30,7 +30,7 @@ export default function Button({
     <button
       className={twMerge(
         cn(
-          "flex items-center gap-2 p-3 text-base rounded-full cursor-pointer appearance-none no-underline border-0 select-none tap-transparent overflow-hidden focus:outline-none",
+          "flex items-center gap-2 p-3 leading-4 rounded-full cursor-pointer appearance-none no-underline border-0 select-none tap-transparent overflow-hidden focus:outline-none",
           {
             "bg-blue text-text-black-30": variant === "primary",
             "bg-white text-text-black-30": variant === "secondary",
@@ -41,14 +41,6 @@ export default function Button({
             "glass-effect": glassmorphism,
             "outside-shadow": hasShadow,
           }
-          // {
-          //   "shadow-[inset_0.7px_0.7px_rgba(193,249,255,0.9),inset_-0.7px_-0.7px_rgba(193,249,255,0.9)]":
-          //     hasShadow === "inset",
-          //   "0_0_15px_rgba(255,255,255,0.4),0_1px_8px_rgba(0,0,0,0.12)]":
-          //     shadowType === "outset",
-          //   "shadow-[inset_0.7px_0.7px_rgba(193,249,255,0.9),inset_-0.7px_-0.7px_rgba(193,249,255,0.9),0_0_15px_rgba(255,255,255,0.4),0_1px_8px_rgba(0,0,0,0.12)]":
-          //     shadowType === "both",
-          // }
         ),
         className
       )}

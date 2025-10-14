@@ -75,11 +75,11 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
       {COLUMNS.map((col: string) => {
         return (
           <div key={col} className="flex flex-col">
-            <p className="mb-6 font-medium">{capitalizeFirstLetter(col)}</p>
+            <p className="mb-6 body-strong">{capitalizeFirstLetter(col)}</p>
             {getLinks(col).map((link: FooterLinkType) => (
               <Link
                 href={link.url ?? "#"}
-                className="mb-3 font-light"
+                className="mb-3 leading-[1.4]"
                 key={link.label}
               >
                 {link.label}

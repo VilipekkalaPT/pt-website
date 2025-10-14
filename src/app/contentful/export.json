@@ -2110,7 +2110,7 @@
         "id": "packagesPageData",
         "type": "ContentType",
         "createdAt": "2025-05-25T18:51:32.715Z",
-        "updatedAt": "2025-06-13T19:32:29.430Z",
+        "updatedAt": "2025-10-13T20:49:36.156Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2118,8 +2118,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 35,
-        "publishedAt": "2025-06-13T19:32:29.430Z",
+        "publishedVersion": 41,
+        "publishedAt": "2025-10-13T20:49:36.156Z",
         "firstPublishedAt": "2025-05-25T18:51:33.027Z",
         "createdBy": {
           "sys": {
@@ -2135,8 +2135,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 18,
-        "version": 36,
+        "publishedCounter": 21,
+        "version": 42,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2196,23 +2196,6 @@
           "linkType": "Asset"
         },
         {
-          "id": "packages",
-          "name": "Packages",
-          "type": "Array",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
           "id": "comboSectionTitle",
           "name": "Combo Section Title",
           "type": "Symbol",
@@ -2250,6 +2233,67 @@
             ],
             "linkType": "Entry"
           }
+        },
+        {
+          "id": "packageSectionTitle",
+          "name": "Package Section Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "packageSectionSubtitle",
+          "name": "Package Section Subtitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "packages",
+          "name": "Packages",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "actionButtonText1",
+          "name": "Action Button Text 1",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "actionButtonText2",
+          "name": "Action Button Text 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         },
         {
           "id": "faqsTitle",
@@ -5376,7 +5420,7 @@
             "linkType": "Space"
           }
         },
-        "version": 36,
+        "version": 42,
         "createdAt": "2025-05-25T18:51:33.259Z",
         "createdBy": {
           "sys": {
@@ -5385,7 +5429,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-13T19:32:30.073Z",
+        "updatedAt": "2025-10-13T20:49:36.932Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5430,11 +5474,6 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "packages",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
           "fieldId": "comboSectionTitle",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
@@ -5447,6 +5486,31 @@
         {
           "fieldId": "comboPackages",
           "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "packageSectionTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "packageSectionSubtitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "packages",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "actionButtonText1",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "actionButtonText2",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
@@ -38840,7 +38904,7 @@
         "id": "51hQCsTcvhP1Sxt3fsqutq",
         "type": "Entry",
         "createdAt": "2025-05-25T18:51:39.425Z",
-        "updatedAt": "2025-06-26T05:53:40.282Z",
+        "updatedAt": "2025-10-13T20:50:06.061Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38848,8 +38912,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 44,
-        "publishedAt": "2025-06-26T05:53:40.282Z",
+        "publishedVersion": 56,
+        "publishedAt": "2025-10-13T20:50:06.061Z",
         "firstPublishedAt": "2025-05-25T18:55:31.071Z",
         "createdBy": {
           "sys": {
@@ -38865,8 +38929,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 15,
-        "version": 45,
+        "publishedCounter": 20,
+        "version": 57,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -38892,7 +38956,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Solo Slay Packages"
+          "en-US": "Solo Packages"
         },
         "slug": {
           "en-US": "solo-packages"
@@ -38908,6 +38972,43 @@
               "id": "10JfJL2rI2SMoYr9Z4BoDu"
             }
           }
+        },
+        "comboSectionTitle": {
+          "en-US": "Combo deals"
+        },
+        "comboSectionSubtitle": {
+          "en-US": "Slay more for less"
+        },
+        "comboPackages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "77L4FMXnwpO4AMr3rTal7u"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5bRqCJ27ZxHecwROd2iZ59"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "47eUqAtKWxng6AfmQnADar"
+              }
+            }
+          ]
+        },
+        "packageSectionTitle": {
+          "en-US": "Standard deals"
+        },
+        "packageSectionSubtitle": {
+          "en-US": "Start with the basics"
         },
         "packages": {
           "en-US": [
@@ -38941,36 +39042,11 @@
             }
           ]
         },
-        "comboSectionTitle": {
-          "en-US": "Slay More For Less"
+        "actionButtonText1": {
+          "en-US": "Read more reviews"
         },
-        "comboSectionSubtitle": {
-          "en-US": "Combo service deals"
-        },
-        "comboPackages": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "77L4FMXnwpO4AMr3rTal7u"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "5bRqCJ27ZxHecwROd2iZ59"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "47eUqAtKWxng6AfmQnADar"
-              }
-            }
-          ]
+        "actionButtonText2": {
+          "en-US": "Browse duo packages"
         },
         "faqsTitle": {
           "en-US": "FAQs"

@@ -5,11 +5,10 @@ import cn from "classnames";
 interface ChipProps {
   color:
     | "black"
-    | "gray"
-    | "mint"
+    | "pink"
     | "green"
-    | "yellow"
     | "blue"
+    | "cyan"
     | "orange"
     | "blue-1000"
     | "none"
@@ -31,19 +30,18 @@ export default function Chip({
 }: ChipProps) {
   const chipClassName = twMerge(
     cn(
-      "px-4 py-2 rounded-2xl flex items-center gap-1.5 text-sm",
+      "px-4 py-2 rounded-3xl flex items-center gap-1.5",
       {
         "bg-gray-800": color === "black",
-        "bg-gray-100": color === "gray",
-        "bg-mint text-text-neutral": color === "mint",
+        "bg-pink text-text-brand-primary": color === "pink",
+        "bg-cyan text-text-brand-primary": color === "cyan",
         "bg-green": color === "green",
-        "bg-yellow-600": color === "yellow",
         "bg-blue-800": color === "blue",
         "bg-orange-800": color === "orange",
         "bg-blue-1000": color === "blue-1000",
         "bg-transparent text-text-brand-secondary border border-border-brand-primary":
           color === "none",
-        "bg-transparent p-2": color === "ghost",
+        "bg-transparent p-2 font-light text-sm": color === "ghost",
         "glass-effect": glassmorphism,
       },
       className

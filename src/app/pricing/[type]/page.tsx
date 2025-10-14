@@ -7,10 +7,10 @@ import {
 import { TypePackageFields } from "app/lib/types/contentful";
 import PackagesContainer from "../components/PackagesContainer";
 import QuestionsAndInfo from "../components/QuestionsAndInfo";
-import Divider from "app/components/Divider";
 import { AssetFields } from "contentful";
 import ComboSection from "../components/ComboSection";
 import HeadingSection from "../components/HeadingSection";
+import Button from "app/components/Button";
 
 async function getPageData(type: string) {
   const pageData = await getEntryWithSlug("packagesPageData", type);
@@ -60,9 +60,27 @@ export default async function PackagesPage({
           soloPackages={soloPackages}
         />
       )}
-      <PackagesContainer type={type} packages={soloPackages} />
+      <PackagesContainer
+        type={type}
+        title={packagesPageData.packageSectionTitle}
+        subtitle={packagesPageData.packageSectionSubtitle}
+        packages={soloPackages}
+      />
+      <div className="mt-8 flex w-4/5 mx-auto justify-center gap-4">
+        <Button
+          label={packagesPageData.actionButtonText1}
+          variant="primary"
+          glassmorphism
+          hasShadow
+        />
+        <Button
+          label={packagesPageData.actionButtonText2}
+          variant="primary"
+          glassmorphism
+          hasShadow
+        />
+      </div>
       <QuestionsAndInfo packagesPageData={packagesPageData} />
-      <Divider />
     </>
   );
 }

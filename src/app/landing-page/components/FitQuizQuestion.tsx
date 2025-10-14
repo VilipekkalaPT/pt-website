@@ -42,8 +42,8 @@ export default function FitQuizQuestion({
             )}
             onClick={() => handleOptionSelect(stepData.id, option.id)}
           >
-            <p className="text-xl font-medium">{option.label}</p>
-            <p className="font-light">{option.description}</p>
+            <p className="body-strong">{option.label}</p>
+            <p className="body-small">{option.description}</p>
             {isSelected && (
               <CheckCircleIcon className="size-6 absolute bottom-2 right-2" />
             )}

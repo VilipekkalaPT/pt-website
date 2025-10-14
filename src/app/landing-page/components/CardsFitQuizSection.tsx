@@ -54,7 +54,7 @@ export default function CardsFitQuizSection({
         {cards.map((card, index) => (
           <Card key={index} glassmorphism className="px-8 py-16 bg-primary/50">
             <CardContent className="flex flex-col items-center text-center gap-4">
-              <p className="text-2xl font-medium mb-1">{card.title}</p>
+              <p className="heading mb-1">{card.title}</p>
               <Button
                 label={card.actionButtonText}
                 variant="primary"

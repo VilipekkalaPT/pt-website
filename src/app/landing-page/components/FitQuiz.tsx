@@ -59,9 +59,7 @@ export default function FitQuiz({
       ref={ref}
     >
       <Card glassmorphism className="flex-3 p-8 justify-center bg-primary/50">
-        <p className="mb-4 text-2xl font-medium text-center">
-          {FIT_QUIZ_TITLE}
-        </p>
+        <p className="mb-4 heading text-center">{FIT_QUIZ_TITLE}</p>
         <div className="w-1/2 mx-auto">
           <StepIndicator steps={totalStepsArray} activeStep={activeStep} />
         </div>
@@ -91,7 +89,7 @@ export default function FitQuiz({
         glassmorphism
         className="flex-1 flex flex-col items-center justify-center bg-primary/50"
       >
-        <p className="text-2xl font-medium mb-4">{READY_TO_SLAY_FIT}</p>
+        <p className="heading mb-4">{READY_TO_SLAY_FIT}</p>
         <Button
           label={BROWSE_ALL_PACKAGES}
           variant="primary"

@@ -43,10 +43,7 @@ export default function PackageCard({ singlePackage, href }: PackageCardProps) {
   ) as TypeSessionOptionFields[];
 
   return (
-    <Card
-      href={href}
-      className="border border-border-default-primary bg-black/50"
-    >
+    <Card href={href} glassmorphism className="bg-primary/50">
       <CardHeader className="relative inline-block">
         <Image
           src={imageUrl}
@@ -67,19 +64,19 @@ export default function PackageCard({ singlePackage, href }: PackageCardProps) {
           </div>
         )}
       </CardHeader>
-      <CardContent className="flex-1 flex flex-col justify-start items-start mt-2">
+      <CardContent className="flex-1 flex flex-col justify-start items-start">
         <Chip
           label={capitalizeFirstLetter(mode)}
           color={getChipColor(mode)}
           glassmorphism
         />
-        <p className="my-2">{name}</p>
+        <p className="my-2 leading-[1.4]">{name}</p>
         <Price
           price={price}
           priceUnit={priceUnit}
           priceOptions={priceOptions}
         />
-        <p className="mt-2 text-sm text-white/70">{shortDescription}</p>
+        <p className="mt-2 body-small text-white/70">{shortDescription}</p>
       </CardContent>
       <CardFooter>
         <div className="mt-2 flex justify-between">
@@ -103,9 +100,9 @@ export default function PackageCard({ singlePackage, href }: PackageCardProps) {
 const getChipColor = (mode: "hybrid" | "offline" | "online") => {
   switch (mode) {
     case "offline":
-      return "blue";
+      return "pink";
     case "online":
-      return "yellow";
+      return "cyan";
     case "hybrid":
       return "blue-1000";
     default:

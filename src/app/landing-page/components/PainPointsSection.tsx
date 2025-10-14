@@ -36,8 +36,8 @@ export default function PainPointsSection({
 
   return (
     <div className="mt-20 w-4/5 mx-auto flex flex-col items-center">
-      <p className="text-2xl font-medium mb-1">{title}</p>
-      <p className="text-xl text-text-secondary mb-10">{subtitle}</p>
+      <p className="heading mb-1">{title}</p>
+      <p className="subheading text-text-secondary mb-10">{subtitle}</p>
       <div className="w-full h-[220px] flex gap-8">
         {painPoints.map((point, index) => {
           return (
@@ -59,23 +59,25 @@ export default function PainPointsSection({
                 <div className={baseStyle}>
                   <RichTextRenderer
                     text={point.overlayText}
-                    paragraphClassName="mb-4"
+                    paragraphClassName="mb-4 body-strong"
                   />
                   <Button
                     label={FLIP_ME}
                     variant="ghost"
                     glassmorphism
                     onClick={() => toggleCard(index)}
+                    className="p-2"
                   />
                 </div>
 
                 <div className={twMerge(`${baseStyle}`, "rotate-y-180")}>
-                  <span className="mb-4">{point.backText}</span>
+                  <span className="mb-4 body-strong">{point.backText}</span>
                   <Button
                     label={FLIP_ME}
                     variant="ghost"
                     glassmorphism
                     onClick={() => toggleCard(index)}
+                    className="p-2"
                   />
                 </div>
               </div>

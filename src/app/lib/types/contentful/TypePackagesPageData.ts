@@ -8,10 +8,14 @@ export interface TypePackagesPageDataFields {
   slug?: EntryFields.Symbol;
   subtitle: EntryFields.Symbol;
   image: Asset;
-  packages: Entry<TypePackageSkeleton>[];
   comboSectionTitle?: EntryFields.Symbol;
   comboSectionSubtitle?: EntryFields.Symbol;
   comboPackages?: Entry<TypePackageSkeleton>[];
+  packageSectionTitle: EntryFields.Symbol;
+  packageSectionSubtitle: EntryFields.Symbol;
+  packages: Entry<TypePackageSkeleton>[];
+  actionButtonText1: EntryFields.Symbol;
+  actionButtonText2: EntryFields.Symbol;
   faqsTitle: EntryFields.Symbol;
   faqsSubtitle: EntryFields.Symbol;
   faqs: Entry<TypeFaqSkeleton>[];

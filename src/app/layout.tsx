@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Red_Rose, Righteous } from "next/font/google";
-import "./globals.css";
 import { getEntries, getImageByTag } from "./lib/contentfulDataService";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -9,6 +8,8 @@ import BackgroundWrapper from "./components/BackgroundWrapper";
 import { TypeNavigationSkeleton } from "./lib/types/contentful/TypeNavigation";
 import { LOGO } from "./utils/variables";
 import { TypeFooterSkeleton } from "./lib/types/contentful/TypeFooter";
+
+import "./globals.css";
 
 const righteous = Righteous({
   weight: "400",

@@ -30,7 +30,7 @@ export default function DifferentServicesComparison({
       {columnHeaders.map((header, index) => (
         <div
           key={index}
-          className={cn("font-medium", {
+          className={cn("font-medium body-strong", {
             "text-center": index !== 0,
           })}
         >
@@ -49,7 +49,7 @@ const ComparisonRow = ({
 }: {
   row: TypePricingDifferentServicesComparisonFields;
 }) => {
-  const commonStyle = "text-white/70 text-sm font-light";
+  const commonStyle = "text-white/70 body-small";
   const textCenterStyle = "text-center";
 
   return (

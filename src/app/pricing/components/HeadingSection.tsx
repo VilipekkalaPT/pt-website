@@ -42,8 +42,8 @@ export default function HeadingSection({
           onClick={() => router.back()}
           className="py-1"
         />
-        <p className="text-7xl font-righteous">{title}</p>
-        <p className="text-4xl font-light">{subtitle}</p>
+        <p className="title-hero">{title}</p>
+        <p className="subtitle">{subtitle}</p>
       </div>
     </div>
   );
