@@ -33,8 +33,10 @@ export default function SessionSelector({
 
   return (
     <>
-      {sessionOptions && <p className="mb-2">{SESSION_SELECTOR_TITLE}</p>}
-      <div className="flex gap-10">
+      {sessionOptions && (
+        <p className="mb-3 leading-[1.4]">{SESSION_SELECTOR_TITLE}</p>
+      )}
+      <div className="flex gap-8 items-center">
         {sessionOptions && (
           <Select.Root
             defaultValue={selectedOption?.numberOfSessions.toString()}
@@ -42,27 +44,30 @@ export default function SessionSelector({
           >
             <Select.Trigger
               aria-label={SESSION_SELECTOR_TITLE}
-              className="flex items-center justify-between w-full p-2 border border-gray-300 rounded-md cursor-pointer"
+              className="flex items-center justify-between w-2/3 p-4 border border-border-default-primary bg-black/50 rounded-md cursor-pointer"
             >
               <Select.Value>
                 {selectedOption?.numberOfSessions} {selectedOption?.priceUnit}
               </Select.Value>
               <Select.Icon>
-                <ChevronDownIcon className="size-4" />
+                <ChevronDownIcon
+                  className="size-4 stroke-[1.6]"
+                  color="white"
+                />
               </Select.Icon>
             </Select.Trigger>
 
             <Select.Portal>
               <Select.Content
                 position="popper"
-                className="w-[var(--radix-select-trigger-width)] bg-white border border-gray-300 rounded-md"
+                className="w-[var(--radix-select-trigger-width)] border border-border-default-primary bg-black/50 rounded-md"
               >
                 <Select.Viewport className="p-1">
                   {sessionOptions.map((option) => (
                     <Select.Item
                       key={option.numberOfSessions}
                       value={option.numberOfSessions.toString()}
-                      className="relative flex items-center justify-between px-3 py-2 rounded cursor-pointer hover:bg-gray-100 data-[state=checked]:bg-blue-100"
+                      className="relative flex items-center justify-between px-3 py-2 rounded cursor-pointer hover:bg-primary/50 data-[state=checked]:bg-primary"
                     >
                       <Select.ItemText>
                         {option.numberOfSessions} {option.priceUnit}

@@ -30,7 +30,6 @@ export default function ComboSection({
               singlePackage={pkg}
               href={`${type}/${pkg.slug}`}
               savedAmount={savedAmount}
-              darkMode
             />
           );
         })}

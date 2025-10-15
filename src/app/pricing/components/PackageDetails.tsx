@@ -2,22 +2,22 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { PACKAGE_IMAGE, SAVED_AMOUNT } from "app/utils/variables";
+import { PACKAGE_IMAGE } from "app/utils/variables";
 import {
   TypePackageFields,
   TypeSessionOptionFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
-import Price from "./Price";
 import RichTextRenderer from "app/components/RichTextRenderer";
 import SessionSelector from "./SessionSelector";
 import {
   calculateSavedAmount,
   capitalizeFirstLetter,
   getAssetUrl,
+  getChipColor,
 } from "app/utils/utils";
 import Chip from "app/components/Chip";
-import { getChipColor } from "app/utils/packageUtils";
+import { PricePackageDetails } from "./PricePackageDetails";
 
 interface PackageDetailsProps {
   packageDetails: TypePackageFields;
@@ -57,25 +57,21 @@ export default function PackageDetails({
       </div>
       <div>
         <p className="heading">{packageDetails.name}</p>
-        <div className="flex gap-2 mt-2">
+        <div className="flex gap-2 mt-2 mb-2">
           <Chip
             label={capitalizeFirstLetter(packageDetails.mode)}
             color={getChipColor(packageDetails.mode)}
             glassmorphism
           />
-          {!!savedAmount && (
-            <Chip label={`${SAVED_AMOUNT} €${savedAmount}`} color="green" />
-          )}
         </div>
-        <Price
+        <PricePackageDetails
           price={selectedOption?.price ?? packageDetails.price}
           priceUnit={packageDetails.priceUnit}
-          variant="large"
-          className="my-4"
+          savedAmount={savedAmount}
         />
         <RichTextRenderer
           text={packageDetails.content}
-          listClassName="list-disc ml-5 mb-6 body-strong text-white/70"
+          listClassName="list-disc ml-5 mt-4 mb-6 body-strong text-white/70"
         />
         <SessionSelector
           selectedOption={selectedOption}

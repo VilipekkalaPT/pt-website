@@ -15,16 +15,19 @@ import {
   DocumentIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
-import { getChipColor } from "app/utils/packageUtils";
+import { getChipColor } from "app/utils/utils";
 
 interface PackageCardProps {
   singlePackage: TypePackageFields;
   href: string;
   savedAmount?: number;
-  darkMode?: boolean;
 }
 
-export default function PackageCard({ singlePackage, href }: PackageCardProps) {
+export default function PackageCard({
+  singlePackage,
+  href,
+  savedAmount,
+}: PackageCardProps) {
   const {
     name,
     price,
@@ -76,6 +79,7 @@ export default function PackageCard({ singlePackage, href }: PackageCardProps) {
           price={price}
           priceUnit={priceUnit}
           priceOptions={priceOptions}
+          savedAmount={savedAmount}
         />
         <p className="mt-2 body-small text-white/70">{shortDescription}</p>
       </CardContent>

@@ -53,7 +53,6 @@ export default function RecommendationPackageCard({
           price={pkg.price}
           priceUnit={pkg.priceUnit}
           priceOptions={priceOptions}
-          variant="large"
         />
         <Chip
           label={capitalizeFirstLetter(pkg.mode)}

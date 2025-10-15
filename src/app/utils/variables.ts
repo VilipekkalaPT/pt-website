@@ -53,8 +53,8 @@ export const INFO_SECTION_SUBTITLE =
 
 // Pricing Page Variables
 export const PRICING_PAGE_TITLE = "Pricing";
+export const SAVING = "Save more with 10 or 15 sessions";
 export const CURRENCY = "€";
-export const FROM = "From";
 export const VAT_INCLUDED = "VAT incl.";
 export const FEATURES = "Features/Benefits";
 export const PLAN = "Training plan";

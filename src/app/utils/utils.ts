@@ -5,6 +5,7 @@ import {
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
 import { ROUTES } from "./routes";
+import { CURRENCY, SAVED_AMOUNT, SAVING } from "./variables";
 
 export const isStringArray = (input: Array<unknown>): input is string[] => {
   return (
@@ -51,19 +52,6 @@ export const getAssetUrl = (asset?: AssetFields) => {
   return url.startsWith("//") ? `https:${url}` : url;
 };
 
-export const getMinPrice = (options?: TypeSessionOptionFields[]) => {
-  if (!options || options.length === 0) {
-    return undefined;
-  }
-
-  const minPrices = options.map(
-    (option) => option.price / option.numberOfSessions
-  );
-  const minPrice = Math.min(...minPrices);
-
-  return Math.round(minPrice * 10) / 10;
-};
-
 export const getPricingPackagesRoute = (type: "combo" | "duo" | "solo") => {
   return `${ROUTES.PRICING}/${type}-packages`;
 };
@@ -74,7 +62,7 @@ export const calculateSavedAmount = (
   selectedOption?: TypeSessionOptionFields,
   sessionOptions?: TypeSessionOptionFields[]
 ) => {
-  const { tags, price, slug } = packageDetails;
+  const { tags, slug } = packageDetails;
 
   if (tags.length === 1 && tags[0] === "gym") {
     const pricePerSession = sessionOptions?.find(
@@ -90,43 +78,64 @@ export const calculateSavedAmount = (
     slug.includes("silver") ||
     slug.includes("gold")
   ) {
-    return calculateComboPackageSavings(tags, slug, soloPackages, price);
+    return calculateComboPackageSavings(packageDetails, soloPackages);
   }
 
   return 0;
 };
 
+const getPriceForPackage = (pkg: TypePackageFields, slug: string): number => {
+  if (!pkg.sessionOptions) return pkg.price;
+
+  const sessionOptions = pkg.sessionOptions.map(
+    (option) => option.fields
+  ) as TypeSessionOptionFields[];
+
+  if (sessionOptions.length === 0) return pkg.price;
+
+  const per10 =
+    sessionOptions.find((option) => option.numberOfSessions === 10)?.price ?? 0;
+  const per5 =
+    (sessionOptions.find((option) => option.numberOfSessions === 1)?.price ??
+      0) * 5;
+
+  return slug.includes("silver") ? per5 : per10;
+};
+
 const calculateComboPackageSavings = (
-  tags: ("diet" | "gym" | "plan")[],
-  slug: string,
-  soloPackages: TypePackageFields[],
-  comboPrice: number
+  packageDetails: TypePackageFields,
+  soloPackages: TypePackageFields[]
 ): number => {
-  let originalComboPrice = 0;
-  const test = [...soloPackages];
+  const { tags, price, slug } = packageDetails;
 
-  for (const tag of tags) {
-    const pkg = test.find((p) => p.tags.length === 1 && p.tags.includes(tag));
-    if (!pkg) continue;
+  const originalComboPrice = tags.reduce((sum, tag) => {
+    const pkg = soloPackages.find(
+      (p) => p.tags.length === 1 && p.tags[0] === tag
+    );
+    return pkg ? sum + getPriceForPackage(pkg, slug) : sum;
+  }, 0);
 
-    const packageSessionOptions = pkg.sessionOptions?.map(
-      (option) => option.fields
-    ) as TypeSessionOptionFields[] | undefined;
+  return originalComboPrice - price;
+};
 
-    if (packageSessionOptions) {
-      const pricePer10Sessions =
-        packageSessionOptions.find((option) => option.numberOfSessions === 10)
-          ?.price ?? 0;
-      const pricePer5Sessions =
-        (packageSessionOptions.find((option) => option.numberOfSessions === 1)
-          ?.price ?? 0) * 5;
-      originalComboPrice += slug.includes("silver")
-        ? pricePer5Sessions
-        : pricePer10Sessions;
-    } else {
-      originalComboPrice += pkg.price;
-    }
+export const getChipColor = (mode: "hybrid" | "offline" | "online") => {
+  switch (mode) {
+    case "offline":
+      return "pink";
+    case "online":
+      return "cyan";
+    case "hybrid":
+      return "blue-1000";
+    default:
+      return "black";
   }
+};
 
-  return originalComboPrice - comboPrice;
+export const getSavedAmountText = (
+  savedAmount?: number,
+  priceOptions?: TypeSessionOptionFields[]
+) => {
+  if (savedAmount) return `(${SAVED_AMOUNT} ${CURRENCY}${savedAmount})`;
+  if (priceOptions) return `(${SAVING})`;
+  return undefined;
 };

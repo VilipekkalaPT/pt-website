@@ -1,7 +1,6 @@
 import HeroSection from "app/components/HeroSection";
 import InfoSection from "app/components/InfoSection";
 import { getEntries } from "app/lib/contentfulDataService";
-import { TypeImageCardFields } from "app/lib/types/contentful";
 import { TypeReviewFields } from "app/lib/types/contentful/TypeReview";
 import {
   TypeReviewsPageDataFields,
@@ -21,9 +20,6 @@ export default async function ClientSpotlights() {
   const allReviews = reviewsPageContent.allReviews.map(
     (el) => el.fields
   ) as TypeReviewFields[];
-  const imageCards = reviewsPageContent.infoImageCards.map(
-    (el) => el.fields
-  ) as TypeImageCardFields[];
 
   const headingSections: HeadingSectionType[] = [
     {
@@ -47,7 +43,6 @@ export default async function ClientSpotlights() {
       <InfoSection
         title={reviewsPageContent.infoSectionTitle}
         subtitle={reviewsPageContent.infoSectionSubtitle}
-        imageCards={imageCards}
         className="mt-20 px-24"
       />
     </>
