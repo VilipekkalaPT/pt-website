@@ -1,4 +1,4 @@
-import { LATEST_REVIEWS } from "app/utils/variables";
+import { CLIENT_REVIEWS } from "app/utils/variables";
 import ReviewCard from "./ReviewCard";
 import { TypeReviewFields } from "app/lib/types/contentful";
 
@@ -11,7 +11,7 @@ export default function Review({ reviews }: ReviewProps) {
 
   return (
     <div className="mt-20 w-4/5 mx-auto">
-      <p className="heading text-center">{LATEST_REVIEWS}</p>
+      <p className="heading text-center">{CLIENT_REVIEWS}</p>
       <div className="grid grid-cols-3 gap-10 mt-10">
         {displayedReviews.map((review: TypeReviewFields) => (
           <ReviewCard

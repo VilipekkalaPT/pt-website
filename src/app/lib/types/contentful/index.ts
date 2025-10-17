@@ -14,6 +14,7 @@ export type {
   TypeFaQsPageData,
   TypeFaQsPageDataFields,
 } from "./TypeFaQsPageData";
+export type { TypeFooter, TypeFooterFields } from "./TypeFooter";
 export type {
   TypeHowTrainingSessionLooksLike,
   TypeHowTrainingSessionLooksLikeFields,
@@ -51,6 +52,10 @@ export type {
 } from "./TypePricingPageData";
 export type { TypeReview, TypeReviewFields } from "./TypeReview";
 export type {
+  TypeReviewsPageData,
+  TypeReviewsPageDataFields,
+} from "./TypeReviewsPageData";
+export type {
   TypeSessionOption,
   TypeSessionOptionFields,
 } from "./TypeSessionOption";
@@ -58,4 +63,7 @@ export type {
   TypeTermsAndConditions,
   TypeTermsAndConditionsFields,
 } from "./TypeTermsAndConditions";
-export type { TypeFooter, TypeFooterFields } from "./TypeFooter";
+export type {
+  TypeTimelinePeriod,
+  TypeTimelinePeriodFields,
+} from "./TypeTimelinePeriod";

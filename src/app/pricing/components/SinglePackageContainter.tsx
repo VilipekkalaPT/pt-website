@@ -3,6 +3,7 @@
 import {
   TypeCurriculumFields,
   TypeCurriculumPeriodFields,
+  TypeHowTrainingSessionLooksLikeFields,
   TypePackageFields,
   TypeReviewFields,
 } from "app/lib/types/contentful";
@@ -87,6 +88,10 @@ export default function SinglePackageContainer({
   const pricingPackagesRoute = getPricingPackagesRoute(packageDetails.type);
   const image = packageDetails.image?.fields as AssetFields;
   const tabs = createTabs(packageDetails, curriculum);
+  const trainingSessionData =
+    packageDetails.howTrainingSessionLooksLikeImages?.map(
+      (item) => item.fields
+    ) as TypeHowTrainingSessionLooksLikeFields[];
 
   return (
     <div className="w-4/5 mx-auto mt-10">
@@ -107,7 +112,7 @@ export default function SinglePackageContainer({
         <HowTrainingSessionLookLike
           title={packageDetails.howTrainingSessionLooksLikeTitle}
           subtitle={packageDetails.howTrainingSessionLooksLikeSubtitle}
-          images={packageDetails.howTrainingSessionLooksLikeImages}
+          data={trainingSessionData}
         />
       )}
       {reviews.length > 0 && <ReviewSection reviews={reviews} />}

@@ -84,7 +84,10 @@ export const calculateSavedAmount = (
   return 0;
 };
 
-const getPriceForPackage = (pkg: TypePackageFields, slug: string): number => {
+const getPriceForPackage = (
+  pkg: TypePackageFields,
+  comboSlug: string
+): number => {
   if (!pkg.sessionOptions) return pkg.price;
 
   const sessionOptions = pkg.sessionOptions.map(
@@ -99,23 +102,27 @@ const getPriceForPackage = (pkg: TypePackageFields, slug: string): number => {
     (sessionOptions.find((option) => option.numberOfSessions === 1)?.price ??
       0) * 5;
 
-  return slug.includes("silver") ? per5 : per10;
+  return comboSlug.includes("silver") ? per5 : per10;
 };
 
 const calculateComboPackageSavings = (
   packageDetails: TypePackageFields,
   soloPackages: TypePackageFields[]
 ): number => {
-  const { tags, price, slug } = packageDetails;
+  const {
+    tags: comboTags,
+    price: comboPrice,
+    slug: comboSlug,
+  } = packageDetails;
 
-  const originalComboPrice = tags.reduce((sum, tag) => {
+  const nonComboPrice = comboTags.reduce((sum, tag) => {
     const pkg = soloPackages.find(
       (p) => p.tags.length === 1 && p.tags[0] === tag
     );
-    return pkg ? sum + getPriceForPackage(pkg, slug) : sum;
+    return pkg ? sum + getPriceForPackage(pkg, comboSlug) : sum;
   }, 0);
 
-  return originalComboPrice - price;
+  return nonComboPrice - comboPrice;
 };
 
 export const getChipColor = (mode: "hybrid" | "offline" | "online") => {

@@ -409,7 +409,7 @@
         "id": "package",
         "type": "ContentType",
         "createdAt": "2025-04-16T20:55:40.950Z",
-        "updatedAt": "2025-06-28T20:16:04.170Z",
+        "updatedAt": "2025-10-17T18:46:02.598Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -417,8 +417,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 139,
-        "publishedAt": "2025-06-28T20:16:04.170Z",
+        "publishedVersion": 147,
+        "publishedAt": "2025-10-17T18:46:02.598Z",
         "firstPublishedAt": "2025-04-16T20:55:41.312Z",
         "createdBy": {
           "sys": {
@@ -434,8 +434,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 70,
-        "version": 140,
+        "publishedCounter": 74,
+        "version": 148,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -872,7 +872,7 @@
             "type": "Link",
             "validations": [
             ],
-            "linkType": "Asset"
+            "linkType": "Entry"
           }
         },
         {
@@ -3924,6 +3924,94 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "howTrainingSessionLooksLike",
+        "type": "ContentType",
+        "createdAt": "2025-10-17T18:39:57.596Z",
+        "updatedAt": "2025-10-17T18:39:57.995Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-10-17T18:39:57.995Z",
+        "firstPublishedAt": "2025-10-17T18:39:57.995Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/content_types/howTrainingSessionLooksLike"
+      },
+      "displayField": "title",
+      "name": "How Training Session Looks Like",
+      "description": "",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -4666,7 +4754,7 @@
             "linkType": "Space"
           }
         },
-        "version": 140,
+        "version": 148,
         "createdAt": "2025-04-16T20:55:41.413Z",
         "createdBy": {
           "sys": {
@@ -4675,7 +4763,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-28T20:16:04.998Z",
+        "updatedAt": "2025-10-17T18:46:03.214Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -4789,7 +4877,7 @@
         },
         {
           "fieldId": "howTrainingSessionLooksLikeImages",
-          "widgetId": "assetLinksEditor",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -6364,6 +6452,67 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5yib965szeod",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-10-17T18:39:58.131Z",
+        "createdBy": {
+          "sys": {
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-10-17T18:39:58.575Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "howTrainingSessionLooksLike",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -7468,7 +7617,7 @@
         "id": "7gY5HEfKdxEd54ge40eZNZ",
         "type": "Entry",
         "createdAt": "2025-04-20T04:20:05.898Z",
-        "updatedAt": "2025-06-30T17:58:05.936Z",
+        "updatedAt": "2025-10-17T18:46:25.340Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7476,8 +7625,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 160,
-        "publishedAt": "2025-06-30T17:58:05.936Z",
+        "publishedVersion": 162,
+        "publishedAt": "2025-10-17T18:46:25.340Z",
         "firstPublishedAt": "2025-04-20T04:24:14.892Z",
         "createdBy": {
           "sys": {
@@ -7493,8 +7642,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 42,
-        "version": 161,
+        "publishedCounter": 43,
+        "version": 163,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8313,29 +8462,43 @@
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Asset",
-                "id": "2bA5t1sC24Z5YKxemf3J7"
+                "linkType": "Entry",
+                "id": "2toiZqgemXD3CLg22Ximao"
               }
             },
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Asset",
-                "id": "5xx2G7mIyioiOIESHbQM7f"
+                "linkType": "Entry",
+                "id": "7zafOwPn5rtYqsub8g0Eul"
               }
             },
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Asset",
-                "id": "1bzjt2fj6r4HWwD6m8pxZu"
+                "linkType": "Entry",
+                "id": "1EOe3HqZLGRCd8A2H71AiH"
               }
             },
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Asset",
-                "id": "1jMkmVDFaD6tGEJsvzcJfw"
+                "linkType": "Entry",
+                "id": "1h4SPklLhNQditkHhdMADk"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "54VgViboHcRauRAvk4C6VX"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2JVSOxTpE9n5ayUnMYyDKC"
               }
             }
           ]
@@ -38904,7 +39067,7 @@
         "id": "51hQCsTcvhP1Sxt3fsqutq",
         "type": "Entry",
         "createdAt": "2025-05-25T18:51:39.425Z",
-        "updatedAt": "2025-10-13T20:50:06.061Z",
+        "updatedAt": "2025-10-13T20:51:17.493Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38912,8 +39075,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 56,
-        "publishedAt": "2025-10-13T20:50:06.061Z",
+        "publishedVersion": 59,
+        "publishedAt": "2025-10-13T20:51:17.493Z",
         "firstPublishedAt": "2025-05-25T18:55:31.071Z",
         "createdBy": {
           "sys": {
@@ -38929,8 +39092,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 20,
-        "version": 57,
+        "publishedCounter": 21,
+        "version": 60,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -39049,10 +39212,10 @@
           "en-US": "Browse duo packages"
         },
         "faqsTitle": {
-          "en-US": "FAQs"
+          "en-US": "FAQs about Solo packages"
         },
         "faqsSubtitle": {
-          "en-US": "All packages are designed with clear purposes and target groups, so  please take some time to learn about them before registering."
+          "en-US": "Please take some time to learn about them before registration"
         },
         "faqs": {
           "en-US": [
@@ -40423,7 +40586,7 @@
         "id": "3qq56D92N9NAAkIhYJNQVU",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:58.149Z",
-        "updatedAt": "2025-10-07T19:31:07.093Z",
+        "updatedAt": "2025-10-14T19:12:27.443Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40431,8 +40594,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 77,
-        "publishedAt": "2025-10-07T19:31:07.093Z",
+        "publishedVersion": 81,
+        "publishedAt": "2025-10-14T19:12:27.443Z",
         "firstPublishedAt": "2025-06-01T19:41:33.034Z",
         "createdBy": {
           "sys": {
@@ -40448,8 +40611,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 21,
-        "version": 78,
+        "publishedCounter": 23,
+        "version": 82,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -40533,10 +40696,10 @@
           ]
         },
         "actionButtonText1": {
-          "en-US": "Solo Slay packages"
+          "en-US": "Solo packages"
         },
         "actionButtonText2": {
-          "en-US": "Duo Slay packages"
+          "en-US": "Duo packages"
         },
         "serviceTitle": {
           "en-US": "Let’s change that together!"
@@ -40598,7 +40761,7 @@
           }
         },
         "faqButtonText": {
-          "en-US": "FAQs slayed"
+          "en-US": "Read FAQs"
         },
         "faqImage": {
           "en-US": {
@@ -46326,6 +46489,522 @@
         },
         "show": {
           "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "2toiZqgemXD3CLg22Ximao",
+        "type": "Entry",
+        "createdAt": "2025-10-17T18:42:12.526Z",
+        "updatedAt": "2025-10-17T18:42:38.215Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-10-17T18:42:38.215Z",
+        "firstPublishedAt": "2025-10-17T18:42:38.215Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "howTrainingSessionLooksLike"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2toiZqgemXD3CLg22Ximao"
+      },
+      "fields": {
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2bA5t1sC24Z5YKxemf3J7"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Assessment & personalization"
+        },
+        "description": {
+          "en-US": "We start by looking at your body metrics, goals, and preferences to create a plan tailored to you."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "7zafOwPn5rtYqsub8g0Eul",
+        "type": "Entry",
+        "createdAt": "2025-10-17T18:42:45.251Z",
+        "updatedAt": "2025-10-17T18:43:34.712Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-10-17T18:43:34.712Z",
+        "firstPublishedAt": "2025-10-17T18:43:34.712Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "howTrainingSessionLooksLike"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/7zafOwPn5rtYqsub8g0Eul"
+      },
+      "fields": {
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1jMkmVDFaD6tGEJsvzcJfw"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Warm-Up & Mobility"
+        },
+        "description": {
+          "en-US": "text"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "2JVSOxTpE9n5ayUnMYyDKC",
+        "type": "Entry",
+        "createdAt": "2025-10-17T18:43:47.858Z",
+        "updatedAt": "2025-10-17T18:45:38.490Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-10-17T18:45:38.490Z",
+        "firstPublishedAt": "2025-10-17T18:44:07.298Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "howTrainingSessionLooksLike"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/2JVSOxTpE9n5ayUnMYyDKC"
+      },
+      "fields": {
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "34sjowLC63N5hQDVmCowDX"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Strength & Core Activation"
+        },
+        "description": {
+          "en-US": "Text"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "1EOe3HqZLGRCd8A2H71AiH",
+        "type": "Entry",
+        "createdAt": "2025-10-17T18:44:13.571Z",
+        "updatedAt": "2025-10-17T18:44:32.716Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-10-17T18:44:32.716Z",
+        "firstPublishedAt": "2025-10-17T18:44:32.716Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "howTrainingSessionLooksLike"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/1EOe3HqZLGRCd8A2H71AiH"
+      },
+      "fields": {
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5xx2G7mIyioiOIESHbQM7f"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Main Workout"
+        },
+        "description": {
+          "en-US": "Text"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "1h4SPklLhNQditkHhdMADk",
+        "type": "Entry",
+        "createdAt": "2025-10-17T18:44:44.023Z",
+        "updatedAt": "2025-10-17T18:44:53.677Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-10-17T18:44:53.677Z",
+        "firstPublishedAt": "2025-10-17T18:44:53.677Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "howTrainingSessionLooksLike"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/1h4SPklLhNQditkHhdMADk"
+      },
+      "fields": {
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "42k2blCc2EVvYG3SvlUuGf"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Conditioning & Cardio Boost"
+        },
+        "description": {
+          "en-US": "Text"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "54VgViboHcRauRAvk4C6VX",
+        "type": "Entry",
+        "createdAt": "2025-10-17T18:44:58.944Z",
+        "updatedAt": "2025-10-17T18:45:16.755Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-10-17T18:45:16.755Z",
+        "firstPublishedAt": "2025-10-17T18:45:16.755Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "howTrainingSessionLooksLike"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/54VgViboHcRauRAvk4C6VX"
+      },
+      "fields": {
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6GqpFc3jSkIw9oqv40Le5R"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Cool-Down & Recovery"
+        },
+        "description": {
+          "en-US": "Text"
         }
       }
     }

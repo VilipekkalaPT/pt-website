@@ -164,24 +164,26 @@ const addSpecialPackages = (
     existingPackageIds.add(specialPackages.duoSpecial.id);
   }
 
-  pushIfNotExists(
-    result,
-    existingPackageIds,
-    specialPackages.golden,
-    BEST_VALUE
-  );
-  pushIfNotExists(
-    result,
-    existingPackageIds,
-    specialPackages.bronze,
-    MOST_POPULAR
-  );
-  pushIfNotExists(
-    result,
-    existingPackageIds,
-    specialPackages.silver,
-    BEST_VALUE
-  );
+  if (typeFilter.includes("solo")) {
+    pushIfNotExists(
+      result,
+      existingPackageIds,
+      specialPackages.golden,
+      BEST_VALUE
+    );
+    pushIfNotExists(
+      result,
+      existingPackageIds,
+      specialPackages.bronze,
+      MOST_POPULAR
+    );
+    pushIfNotExists(
+      result,
+      existingPackageIds,
+      specialPackages.silver,
+      BEST_VALUE
+    );
+  }
 
   return result;
 };

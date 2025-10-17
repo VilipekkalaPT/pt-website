@@ -2,7 +2,7 @@
 export const BACK = "Back";
 export const NEXT = "Next";
 export const EXIT = "Exit";
-export const LATEST_REVIEWS = "Latest reviews";
+export const CLIENT_REVIEWS = "Client's reviews";
 export const HERO_SECTION_IMAGE = "Hero image";
 export const HEADING_IMAGE = "Heading image";
 export const READ_MORE = "Read more";
@@ -72,6 +72,7 @@ export const DIFFERENT_SERVICES_CRITERIA = "What matters most";
 export const DIFFERENT_SERVICES_SLAYFITVILI = "SlayFitVili";
 export const DIFFERENT_SERVICES_TYPICAL_GYM_PT = "Typical gym PT";
 export const DIFFERENT_SERVICES_FITNESS_APP = "Fitness app";
+export const SESSION_IMAGE = "Session image";
 
 // Reviews Page Variables
 export const PACKAGE_TITLE = "Package";

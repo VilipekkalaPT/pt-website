@@ -1,4 +1,5 @@
 import { Document } from "@contentful/rich-text-types";
+
 export interface HeadingSectionType {
   heading: string;
   subheading: string;
@@ -44,4 +45,10 @@ export interface FooterLink {
   label: string;
   url?: string;
   description?: string;
+}
+
+export interface TrainingSessionData {
+  title: string;
+  description: string;
+  imageUrl: string;
 }

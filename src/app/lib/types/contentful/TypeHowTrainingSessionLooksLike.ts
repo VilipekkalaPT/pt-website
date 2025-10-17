@@ -1,9 +1,9 @@
-import type { Entry, EntryFields, EntrySkeletonType } from "contentful";
+import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 
 export interface TypeHowTrainingSessionLooksLikeFields {
+  image: Asset;
   title: EntryFields.Symbol;
-  slug: EntryFields.Symbol;
-  content: EntryFields.RichText;
+  description: EntryFields.Symbol;
 }
 
 export interface TypeHowTrainingSessionLooksLikeSkeleton

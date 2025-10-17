@@ -1,27 +1,34 @@
-import Carousel from "app/components/Carousel";
-import { Asset, AssetFields } from "contentful";
+import Carousel from "./Carousel";
+import InfoSection from "app/components/InfoSection";
+import { TypeHowTrainingSessionLooksLikeFields } from "app/lib/types/contentful";
+import { TrainingSessionData } from "app/lib/types/type";
+import { getAssetUrl } from "app/utils/utils";
+import { AssetFields } from "contentful";
 
 interface HowTrainingSessionLookLikeProps {
   title: string;
   subtitle?: string;
-  images?: Asset[];
+  data?: TypeHowTrainingSessionLooksLikeFields[];
 }
 
 export default function HowTrainingSessionLookLike({
   title,
   subtitle,
-  images,
+  data,
 }: HowTrainingSessionLookLikeProps) {
-  const imageFields = images?.map((image) => image.fields as AssetFields) ?? [];
+  if (!data || data.length === 0) return null;
+
+  const trainingSessionData: TrainingSessionData[] = data.map((item) => ({
+    title: item.title,
+    description: item.description,
+    imageUrl: getAssetUrl(item.image.fields as AssetFields | undefined),
+  }));
 
   return (
-    <div className="mt-25 px-12 w-full">
-      <p className="text-2xl font-bold mb-2">{title}</p>
-      <p className="text-xl text-gray-500 mb-4">{subtitle}</p>
-      <div className="w-full h-[44rem]">
-        {imageFields.length > 0 && (
-          <Carousel images={imageFields} sliderPerView={3} fillImage={false} />
-        )}
+    <div className="mt-30 w-full">
+      <InfoSection title={title} subtitle={subtitle} />
+      <div className="mt-10">
+        <Carousel trainingSessionData={trainingSessionData} />
       </div>
     </div>
   );

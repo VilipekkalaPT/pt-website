@@ -55,9 +55,9 @@ export const CardHeader = ({ className, children }: CardContentProps) => {
 };
 
 export const CardContent = ({ children, className }: CardContentProps) => {
-  return <div className={cn("p-4", className)}>{children}</div>;
+  return <div className={twMerge(cn("p-4", className))}>{children}</div>;
 };
 
 export const CardFooter = ({ children, className }: CardContentProps) => {
-  return <div className={cn("px-4 pb-4", className)}>{children}</div>;
+  return <div className={twMerge(cn("px-4 pb-4", className))}>{children}</div>;
 };

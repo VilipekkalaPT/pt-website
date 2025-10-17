@@ -1,5 +1,6 @@
 import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 import { TypeSessionOptionSkeleton } from "./TypeSessionOption";
+import { TypeHowTrainingSessionLooksLikeSkeleton } from "./TypeHowTrainingSessionLooksLike";
 
 export interface TypePackageFields {
   id: EntryFields.Integer;
@@ -19,7 +20,7 @@ export interface TypePackageFields {
   notForWhom: EntryFields.RichText;
   howTrainingSessionLooksLikeTitle?: EntryFields.Symbol;
   howTrainingSessionLooksLikeSubtitle?: EntryFields.Symbol;
-  howTrainingSessionLooksLikeImages?: Asset[];
+  howTrainingSessionLooksLikeImages?: Entry<TypeHowTrainingSessionLooksLikeSkeleton>[];
   tags: ("diet" | "gym" | "plan")[];
   isMostPopular: EntryFields.Boolean;
 }
