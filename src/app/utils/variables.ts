@@ -32,6 +32,7 @@ export const READY_TO_SLAY_FIT = "Ready to SlayFit?";
 export const BROWSE_ALL_PACKAGES = "Browse all packages";
 export const MORE_DETAILS = "More details";
 export const LEST_DETAILS = "Less details";
+export const SEND_WHATSAPP = "Send to Whatsapp";
 
 // Package Page Variables
 export const ALL_PACKAGES = "All packages";

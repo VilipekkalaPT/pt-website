@@ -17,10 +17,10 @@ export default function FormField({
 
   return (
     <>
-      <label className="block mt-5 font-medium">{label}</label>
+      <label className="leading-[1.4] text-left">{label}</label>
       <InputComponent
         {...register}
-        className="mt-1 p-2 block w-full rounded-md border border-gray-300"
+        className="bg-black/50 border border-border-default-primary rounded-lg p-4"
       />
       {error && <p className="text-red-500 text-sm pt-1">{error}</p>}
     </>
