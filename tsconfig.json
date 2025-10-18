@@ -19,10 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    },
-    "baseUrl": "src",
-    "ignoreDeprecations": "6.0"
+      "@/*": ["./src/*"],
+      "app/*": ["./src/app/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
