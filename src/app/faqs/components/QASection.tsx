@@ -51,7 +51,7 @@ export default function QASection({ questions }: QASectionProps) {
   }, []);
 
   return (
-    <div className="mt-20 px-12 flex gap-8 items-start">
+    <div className="mt-20 w-4/5 mx-auto flex gap-8 items-start">
       <TopicList
         topicQuestions={topicQuestions}
         handleSelectTopic={handleSelectTopic}

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Button from "app/components/Button";
 import RichTextRenderer from "app/components/RichTextRenderer";
 import { ROUTES } from "app/utils/routes";
@@ -31,15 +30,15 @@ export default function QuestionsList({
   const [selectedAccordion, setSelectedAccordion] = useState<string>("");
 
   return (
-    <div className="flex-2">
+    <div className="flex-2 flex flex-col gap-8">
       {topicQuestions.map((topic) => (
         <div
           id={topic.topicType}
           key={topic.topicType}
-          className="mb-8"
+          className="glass-effect rounded-2xl p-6"
           ref={topic.topicType === selectedTopicType ? ref : null}
         >
-          <p className="text-xl mb-2">{topic.topicLabel}</p>
+          <p className="heading">{topic.topicLabel}</p>
           {topic.questions.map((q, index) => {
             const questionIndex = `${q.topicType}-${index}`;
             return (
@@ -56,8 +55,8 @@ export default function QuestionsList({
             label={MORE_QUESTIONS}
             onClick={() => router.push(ROUTES.CONTACT)}
             variant="ghost"
-            iconRight={<ArrowRightIcon className="size-3" />}
-            className="text-xs mt-2"
+            glassmorphism
+            className="mt-6 text-text-neutral-default"
           />
         </div>
       ))}
@@ -89,7 +88,7 @@ const AccordionContent = ({
         <>
           <RichTextRenderer
             text={question.answer}
-            listClassName="list-disc ml-5"
+            listClassName="list-disc ml-5 mt-2 text-white/70"
           />
           <RecommendationPackages packages={recommendedPackages} />
         </>

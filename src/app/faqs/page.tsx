@@ -3,8 +3,7 @@ import {
   TypeFaQsPageDataFields,
   TypeFaQsPageDataSkeleton,
 } from "app/lib/types/contentful/TypeFaQsPageData";
-import HeadingSection from "./components/HeadingSection";
-import Divider from "app/components/Divider";
+import HeadingSection from "app/components/HeadingSection";
 import QASection from "./components/QASection";
 import { TypeFaqFields } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
@@ -14,7 +13,7 @@ export default async function FAQs() {
     "faQsPageData"
   );
 
-  const { title, image, description, questions } =
+  const { title, subtitle, image, questions } =
     faqsPageData[0] as TypeFaQsPageDataFields;
 
   const imageField = image.fields as AssetFields;
@@ -22,13 +21,8 @@ export default async function FAQs() {
 
   return (
     <>
-      <HeadingSection
-        title={title}
-        description={description}
-        image={imageField}
-      />
+      <HeadingSection title={title} subtitle={subtitle} image={imageField} />
       <QASection questions={allQuestions} />
-      <Divider />
     </>
   );
 }

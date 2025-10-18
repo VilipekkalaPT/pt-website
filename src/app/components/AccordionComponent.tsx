@@ -48,7 +48,7 @@ export default function AccordionComponent({
         )}
       >
         <Accordion.Header className="flex">
-          <Accordion.Trigger className="flex w-full justify-between items-center cursor-pointer body-strong">
+          <Accordion.Trigger className="flex w-full justify-between items-center text-left cursor-pointer body-strong">
             {triggerText}
             <ChevronDownIcon
               className={cn("size-4 ", { "rotate-180": isAcdordionOpen })}

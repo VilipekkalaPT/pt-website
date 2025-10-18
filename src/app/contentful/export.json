@@ -1853,7 +1853,7 @@
         "id": "faQsPageData",
         "type": "ContentType",
         "createdAt": "2025-05-16T20:47:18.528Z",
-        "updatedAt": "2025-06-13T18:35:34.864Z",
+        "updatedAt": "2025-10-18T10:30:24.621Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1861,8 +1861,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-13T18:35:34.864Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-10-18T10:30:24.621Z",
         "firstPublishedAt": "2025-05-16T20:47:18.932Z",
         "createdBy": {
           "sys": {
@@ -1878,8 +1878,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 5,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1905,6 +1905,17 @@
           "omitted": false
         },
         {
+          "id": "subtitle",
+          "name": "Subtitle",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
           "id": "image",
           "name": "Image",
           "type": "Link",
@@ -1915,55 +1926,6 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
-        },
-        {
-          "id": "description",
-          "name": "Description",
-          "type": "RichText",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript",
-                "strikethrough"
-              ],
-              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
-            },
-            {
-              "enabledNodeTypes": [
-                "heading-1",
-                "heading-2",
-                "heading-3",
-                "heading-4",
-                "heading-5",
-                "heading-6",
-                "ordered-list",
-                "unordered-list",
-                "hr",
-                "blockquote",
-                "embedded-entry-block",
-                "embedded-asset-block",
-                "table",
-                "asset-hyperlink",
-                "embedded-entry-inline",
-                "entry-hyperlink",
-                "hyperlink"
-              ],
-              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to asset, inline entry, link to entry, and link to Url nodes are allowed"
-            },
-            {
-              "nodes": {
-              }
-            }
-          ],
-          "disabled": false,
-          "omitted": false
         },
         {
           "id": "questions",
@@ -5386,7 +5348,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 10,
         "createdAt": "2025-05-16T20:47:19.094Z",
         "createdBy": {
           "sys": {
@@ -5395,7 +5357,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-13T18:35:35.594Z",
+        "updatedAt": "2025-10-18T10:30:25.249Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5425,13 +5387,13 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "image",
-          "widgetId": "assetLinkEditor",
+          "fieldId": "subtitle",
+          "widgetId": "markdown",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "description",
-          "widgetId": "richTextEditor",
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -7617,7 +7579,7 @@
         "id": "7gY5HEfKdxEd54ge40eZNZ",
         "type": "Entry",
         "createdAt": "2025-04-20T04:20:05.898Z",
-        "updatedAt": "2025-10-17T18:46:25.340Z",
+        "updatedAt": "2025-10-17T19:10:40.139Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7625,8 +7587,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 162,
-        "publishedAt": "2025-10-17T18:46:25.340Z",
+        "publishedVersion": 164,
+        "publishedAt": "2025-10-17T19:10:40.139Z",
         "firstPublishedAt": "2025-04-20T04:24:14.892Z",
         "createdBy": {
           "sys": {
@@ -7642,8 +7604,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 43,
-        "version": 163,
+        "publishedCounter": 44,
+        "version": 165,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8477,6 +8439,13 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
+                "id": "2JVSOxTpE9n5ayUnMYyDKC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
                 "id": "1EOe3HqZLGRCd8A2H71AiH"
               }
             },
@@ -8492,13 +8461,6 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "54VgViboHcRauRAvk4C6VX"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "2JVSOxTpE9n5ayUnMYyDKC"
               }
             }
           ]
@@ -35952,7 +35914,7 @@
         "id": "4oysQmBjnGmMWzpzrlDfzv",
         "type": "Entry",
         "createdAt": "2025-05-16T20:47:30.266Z",
-        "updatedAt": "2025-06-13T18:35:47.227Z",
+        "updatedAt": "2025-10-18T10:30:42.792Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -35960,8 +35922,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2025-06-13T18:35:47.227Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-10-18T10:30:42.792Z",
         "firstPublishedAt": "2025-05-16T20:48:21.401Z",
         "createdBy": {
           "sys": {
@@ -35977,8 +35939,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 14,
+        "publishedCounter": 6,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -36006,6 +35968,9 @@
         "title": {
           "en-US": "Frequently asked questions"
         },
+        "subtitle": {
+          "en-US": "Vili is here to cut through your confusion from a lot of noise out there"
+        },
         "image": {
           "en-US": {
             "sys": {
@@ -36013,45 +35978,6 @@
               "linkType": "Asset",
               "id": "4Luu0TXL4pG7ngkQ064y8K"
             }
-          }
-        },
-        "description": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Vili is here to cut through your confusion from a lot of noise out there - ”quick fixes”, “contradicting tips”, and “flashy promises” by giving you real, science-based answers that support your progress.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "\nAll of this is designed to help you take charge of your health with clarity, not guesswork. ",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
           }
         },
         "questions": {

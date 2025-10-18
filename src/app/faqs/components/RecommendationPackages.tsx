@@ -31,9 +31,9 @@ export default function RecommendationPackages({
   if (!packages || packages.length === 0) return null;
 
   return (
-    <div className="flex items-center gap-1 mt-4">
-      <p>{RECOMMENDATION_TITLE}</p>
-      <div className="flex flex-wrap gap-2 ml-2">
+    <div className="flex items-center gap-2 mt-4">
+      <p className="leading-[1.4]">{RECOMMENDATION_TITLE}</p>
+      <div className="flex flex-wrap gap-4 ml-2">
         {packages.map((p, index) => (
           <ChipComponent key={index} package={p} />
         ))}
@@ -47,7 +47,7 @@ const ChipComponent = ({
 }: {
   package: TypePackageFields | TypePackagesPageDataFields;
 }) => {
-  const iconClassName = "size-3 text-gray-100";
+  const iconClassName = "size-4 stroke-[1.6]";
 
   if (isTypePackageFields(pkg)) {
     const pricingPackagesRoute = getPricingPackagesRoute(pkg.type);
@@ -59,6 +59,7 @@ const ChipComponent = ({
         iconRight={<ArrowUpRightIcon className={iconClassName} />}
         href={`${pricingPackagesRoute}/${pkg.slug}`}
         color="black"
+        className="p-3 leading-1"
       />
     );
   }
@@ -70,6 +71,7 @@ const ChipComponent = ({
       iconRight={<ArrowUpRightIcon className={iconClassName} />}
       href={`${ROUTES.PRICING}/${pkg.slug}`}
       color="black"
+      className="p-3 leading-1"
     />
   );
 };

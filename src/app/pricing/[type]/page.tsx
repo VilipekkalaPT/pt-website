@@ -1,5 +1,4 @@
 import { getEntries, getEntryWithSlug } from "app/lib/contentfulDataService";
-
 import {
   TypePackagesPageDataFields,
   TypePackagesPageDataSkeleton,
@@ -9,8 +8,9 @@ import PackagesContainer from "../components/PackagesContainer";
 import QuestionsAndInfo from "../components/QuestionsAndInfo";
 import { AssetFields } from "contentful";
 import ComboSection from "../components/ComboSection";
-import HeadingSection from "../components/HeadingSection";
+import HeadingSection from "app/components/HeadingSection";
 import Button from "app/components/Button";
+import { PRICING_PAGE_TITLE } from "app/utils/variables";
 
 async function getPageData(type: string) {
   const pageData = await getEntryWithSlug("packagesPageData", type);
@@ -50,6 +50,7 @@ export default async function PackagesPage({
         title={packagesPageData.title}
         subtitle={packagesPageData.subtitle}
         image={imageField}
+        backButtonLabel={PRICING_PAGE_TITLE}
       />
       {comboPackages && (
         <ComboSection

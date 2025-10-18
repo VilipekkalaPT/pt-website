@@ -25,6 +25,7 @@
   --color-border-default-secondary: rgba(117, 117, 117);
   --color-border-brand-primary: rgba(245, 245, 245);
   --color-border-neutral-primary: rgba(243, 243, 243);
+  --color-border-neutral-secondary: rgba(148, 148, 148);
   --color-border-neutral-tertiary: rgba(118, 118, 118);
 
   --color-icon-secondary: rgba(255, 255, 255, 0.4);
@@ -74,6 +75,7 @@ body {
   overflow-x: hidden;
   color: var(--color-white);
   font-size: var(--text-base);
+  line-height: 100%;
 }
 
 a {

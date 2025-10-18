@@ -3,7 +3,12 @@
 import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 
-export type ButtonVariant = "primary" | "secondary" | "outlined" | "ghost";
+export type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "outlined"
+  | "outline-tertiary"
+  | "ghost";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
   variant: ButtonVariant;
@@ -34,8 +39,10 @@ export default function Button({
           {
             "bg-blue text-text-black-30": variant === "primary",
             "bg-white text-text-black-30": variant === "secondary",
-            "bg-none border-1 border-border-brand-primary":
+            "bg-none border border-border-brand-primary":
               variant === "outlined",
+            "bg-white/25 border border-text-default-tertiary":
+              variant === "outline-tertiary",
             "bg-none": variant === "ghost",
             "cursor-not-allowed opacity-50": props.disabled,
             "glass-effect": glassmorphism,
@@ -50,9 +57,9 @@ export default function Button({
       disabled={props.disabled}
       {...props}
     >
-      {iconLeft}
+      {iconLeft && <span className="flex-shrink-0">{iconLeft}</span>}
       {label}
-      {iconRight}
+      {iconRight && <span className="flex-shrink-0">{iconRight}</span>}
     </button>
   );
 }

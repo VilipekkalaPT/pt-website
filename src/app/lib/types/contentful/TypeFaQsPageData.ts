@@ -3,8 +3,8 @@ import { TypeFaqSkeleton } from "./TypeFaq";
 
 export interface TypeFaQsPageDataFields {
   title: EntryFields.Symbol;
+  subtitle: EntryFields.Text;
   image: Asset;
-  description: EntryFields.RichText;
   questions: Entry<TypeFaqSkeleton>[];
 }
 

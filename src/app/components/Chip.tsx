@@ -32,7 +32,8 @@ export default function Chip({
     cn(
       "px-4 py-2 rounded-3xl flex items-center gap-1.5",
       {
-        "bg-gray-800": color === "black",
+        "bg-border-default-primary border border-border-neutral-secondary":
+          color === "black",
         "bg-pink text-text-brand-primary": color === "pink",
         "bg-cyan text-text-brand-primary": color === "cyan",
         "bg-green": color === "green",
