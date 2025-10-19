@@ -1,11 +1,28 @@
+.vertical-timeline {
+  padding: 0;
+  margin-top: 24px;
+}
+
 .vertical-timeline-element {
   .vertical-timeline-element-content {
     box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  .vertical-timeline-element-content-arrow {
+    display: none;
+  }
+
+  .vertical-timeline-element-icon {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+    margin-left: -9px;
+    background: white;
   }
 
   .card {
     width: 100%;
-    border: 1px solid var(--color-gray-300);
     border-radius: var(--radius-xl);
     padding: var(--spacing-l);
     cursor: pointer;
@@ -35,19 +52,22 @@
   }
 
   .date-style {
-    color: var(--color-gray-600);
+    line-height: 1.4;
+    margin-top: -4px;
+    opacity: 1;
   }
 
   .title {
-    margin: var(--spacing-m) 0 var(--spacing-s);
-    font-size: var(--text-xl);
-    font-weight: bold;
+    margin: 0;
+    line-height: 1.4;
   }
 
   .content {
-    margin: 0;
+    margin-top: 8px;
     font-size: var(--text-sm);
-    color: var(--color-gray-400);
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 3;
   }
 
   .button {
@@ -59,8 +79,28 @@
   .vertical-timeline--two-columns
     .vertical-timeline-element-content
     .vertical-timeline-element-date {
-    font-size: var(--text-xl);
-    font-weight: bold;
-    padding-top: var(--spacing-s);
+    padding: 0;
+    top: 0;
+    font-size: var(--text-base);
+    line-height: 1.4;
+  }
+}
+
+@media only screen and (width < 1170px) {
+  .vertical-timeline-element {
+    .vertical-timeline-element-icon {
+      margin-left: calc(var(--spacing) * 3);
+    }
+
+    .date-style {
+      margin-top: 0;
+      margin-bottom: calc(var(--spacing) * 3);
+      font-size: var(--text-lg);
+      line-height: 1;
+    }
+
+    .vertical-timeline-element-date {
+      display: none;
+    }
   }
 }

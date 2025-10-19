@@ -2,7 +2,7 @@ import cn from "classnames";
 
 interface IconButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: "primary" | "secondary" | "outlined" | "ghost";
+  variant: "primary" | "secondary";
   icon: React.ReactNode;
   className?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -18,12 +18,11 @@ export default function IconButton({
   return (
     <button
       className={cn(
-        "py-3 px-3 text-base rounded-full cursor-pointer",
+        "w-[52px] h-[52px] flex items-center justify-center rounded-full cursor-pointer",
         {
-          "bg-black text-white": variant === "primary",
-          "bg-gray-200 text-black": variant === "secondary",
-          "border border-black text-black": variant === "outlined",
-          "text-white": variant === "ghost",
+          "bg-black": variant === "primary",
+          "bg-text-black-30/20 border border-border-brand-primary backdrop-blur-xs":
+            variant === "secondary",
         },
         className
       )}

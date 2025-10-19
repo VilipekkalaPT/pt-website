@@ -97,3 +97,9 @@ export enum TOPIC_TYPE {
 }
 export const RECOMMENDATION_TITLE = "You may want to";
 export const SEE_ALL = "See all";
+
+// About Page Variables
+export const EREPS =
+  "*EREPS stands for European Register of Exercise Professionals.";
+export const EQF =
+  "**EQF Level 4 refers to a level of qualification in the European Qualifications Framework (EQF), which standardizes education levels across Europe. In the fitness industry, EQF Level 4 typically corresponds to a certified personal trainer.";

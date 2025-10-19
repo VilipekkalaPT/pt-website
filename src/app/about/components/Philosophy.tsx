@@ -21,22 +21,32 @@ export default function Philosophy({
   const imageUrl = getAssetUrl(image);
 
   return (
-    <div className="my-15 mx-12 grid grid-cols-2 gap-10">
+    <div className="relative">
       <Image
-        src={imageUrl}
-        alt="Philosophy Banner"
-        width={image.file?.details.image?.width}
-        height={image.file?.details.image?.height}
+        src="/background-2.svg"
+        alt="Philosophy Banner Background"
+        fill
+        className="object-cover object-top"
       />
-      <div className="mr-15">
-        <p className="text-2xl font-bold">{title}</p>
-        <p className="text-xl text-gray-400 pb-2">{subtitle}</p>
-        <RichTextRenderer
-          text={content}
-          listClassName="text-gray-700"
-          listIcon={<StarIcon className="size-4" />}
-          paragraphClassName="mt-4 text-gray-700"
-        />
+      <div className="grid grid-cols-2 gap-4 relative py-16">
+        <div className="ml-16">
+          <p className="heading mb-2">{title}</p>
+          <p className="subheading text-white/70">{subtitle}</p>
+          <RichTextRenderer
+            text={content}
+            listClassName="text-white/70 leading-[1.4]"
+            listIcon={<StarIcon className="size-4" />}
+            paragraphClassName="mt-4 text-white/70 leading-[1.4]"
+          />
+        </div>
+        <div className="relative w-full h-auto">
+          <Image
+            src={imageUrl}
+            alt={image.title ?? "Philosophy Image"}
+            fill
+            className="rounded-lg object-cover object-center"
+          />
+        </div>
       </div>
     </div>
   );

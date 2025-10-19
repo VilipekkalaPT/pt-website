@@ -35,7 +35,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
   const openWhatsApp = useCallback(() => {
     const whatsappLink = footerLinks.find(
       (link) => link.label.toLowerCase() === "whatsapp"
-    )?.description;
+    )?.url;
     if (!whatsappLink) return;
     const url = `${whatsappDomain}${whatsappLink}`;
     window.open(url, "_blank");
@@ -56,7 +56,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
         <div className="flex mt-4 gap-4">
           <Image
             src="/whatsapp.svg"
-            alt="Logo"
+            alt="Whatsapp logo"
             width={24}
             height={24}
             className="cursor-pointer"
@@ -64,7 +64,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
           />
           <Image
             src="/instagram.svg"
-            alt="Logo"
+            alt="Instagram logo"
             width={24}
             height={24}
             className="cursor-pointer"

@@ -4,11 +4,12 @@ import { TypeTimelinePeriodSkeleton } from "./TypeTimelinePeriod";
 export interface TypeAboutPageDataFields {
   name: EntryFields.Symbol;
   shortDescription: EntryFields.Symbol;
-  image: Asset;
+  headingSectionImage: Asset;
   vision: EntryFields.Symbol;
   philosophyTitle: EntryFields.Symbol;
   philosophySubtitle: EntryFields.Symbol;
   philosophyContent: EntryFields.RichText;
+  philosophyImage: Asset;
   slogans: EntryFields.Symbol[];
   journeyTitle: EntryFields.Symbol;
   journeySubtitle?: EntryFields.Symbol;

@@ -1,13 +1,10 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { BriefcaseIcon } from "@heroicons/react/24/outline";
 import { AssetFields } from "contentful";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { TypeTimelinePeriodFields } from "app/lib/types/contentful/TypeTimelinePeriod";
-import Button from "app/components/Button";
-import Carousel from "app/components/Carousel";
-import { ROUTES } from "app/utils/routes";
+import Carousel from "@/app/about/components/Carousel";
+import { useEffect, useState } from "react";
 
 interface JourneyTimeLineElementProps {
   period: TypeTimelinePeriodFields;
@@ -21,33 +18,34 @@ export default function JourneyTimeLineElement({
   period,
   handleImageClick,
 }: JourneyTimeLineElementProps) {
-  const router = useRouter();
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1170);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const journeyImages = period.images.map(
     (image) => image.fields
   ) as AssetFields[];
 
   return (
     <VerticalTimelineElement
-      date={period.period}
-      dateClassName="date-style"
-      iconStyle={{ background: "#2c2c2c", color: "#fff" }}
-      icon={<BriefcaseIcon />}
+      date={isDesktop ? period.period : ""}
+      dateClassName={`${isDesktop ? "date-style" : ""}`}
     >
+      {!isDesktop && <div className="date-style">{period.period}</div>}
       <div
         onClick={(event) => handleImageClick(event, journeyImages)}
-        className="card"
+        className="card glass-effect"
       >
         <Carousel images={journeyImages} />
-        <p className="title">{period.title}</p>
-        <p className="content">{period.description}</p>
-        {period.buttonText && (
-          <Button
-            label={period.buttonText}
-            variant="primary"
-            className="mt-6"
-            onClick={() => router.push(ROUTES.CONTACT)}
-          />
-        )}
+        <div className="p-6">
+          <p className="title">{period.title}</p>
+          <p className="content">{period.description}</p>
+        </div>
       </div>
     </VerticalTimelineElement>
   );

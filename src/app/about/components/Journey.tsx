@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import Lightbox from "yet-another-react-lightbox";
@@ -44,23 +45,32 @@ export default function Journey({
   };
 
   return (
-    <div className="my-15 mx-12">
-      <p className="text-2xl font-bold">{title}</p>
-      <p className="text-gray-500 mt-1 mb-4">{subtitle}</p>
-      <VerticalTimeline lineColor="#e6e6e6">
-        {timelinePeriods.map((period, index) => (
-          <JourneyTimeLineElement
-            key={index}
-            period={period}
-            handleImageClick={handleImageClick}
-          />
-        ))}
-      </VerticalTimeline>
-      <Lightbox
-        open={openLightbox}
-        close={closeLightbox}
-        slides={currentImages.map((img) => ({ src: getAssetUrl(img) }))}
+    <div className="relative">
+      <Image
+        src="/background-1.svg"
+        alt="Philosophy Banner Background"
+        fill
+        className="object-cover object-bottom"
       />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50" />
+      <div className="py-16 w-4/5 mx-auto relative">
+        <p className="heading">{title}</p>
+        <p className="subheading text-white/70">{subtitle}</p>
+        <VerticalTimeline lineColor="rgba(68, 68, 68)">
+          {timelinePeriods.map((period, index) => (
+            <JourneyTimeLineElement
+              key={index}
+              period={period}
+              handleImageClick={handleImageClick}
+            />
+          ))}
+        </VerticalTimeline>
+        <Lightbox
+          open={openLightbox}
+          close={closeLightbox}
+          slides={currentImages.map((img) => ({ src: getAssetUrl(img) }))}
+        />
+      </div>
     </div>
   );
 }

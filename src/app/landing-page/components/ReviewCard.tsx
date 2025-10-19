@@ -6,7 +6,7 @@ import RichTextRenderer from "app/components/RichTextRenderer";
 import Rating from "app/components/Rating";
 import { getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
-import Carousel from "app/components/Carousel";
+import Carousel from "@/app/about/components/Carousel";
 import { DURATION, PACKAGE_TITLE } from "app/utils/variables";
 import Chip from "app/components/Chip";
 import ReadMore from "app/client-spotlights/components/ReadMore";

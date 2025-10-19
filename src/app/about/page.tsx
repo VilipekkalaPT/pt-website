@@ -3,10 +3,9 @@ import {
   TypeAboutPageDataFields,
   TypeAboutPageDataSkeleton,
 } from "app/lib/types/contentful/TypeAboutPageData";
-import Divider from "app/components/Divider";
 import Philosophy from "./components/Philosophy";
 import Journey from "./components/Journey";
-import Introduction from "./components/Introduction";
+import HeadingSection from "./components/HeadingSection";
 import { AssetFields } from "contentful";
 import { TypeTimelinePeriodFields } from "app/lib/types/contentful/TypeTimelinePeriod";
 
@@ -16,37 +15,32 @@ export default async function About() {
   );
 
   const aboutPageContent: TypeAboutPageDataFields = aboutPageData[0];
-  const image = aboutPageContent.image.fields as AssetFields;
+  const headingSectionImage = aboutPageContent.headingSectionImage
+    .fields as AssetFields;
+  const philosophyImage = aboutPageContent.philosophyImage
+    .fields as AssetFields;
   const timelinePeriods = aboutPageContent.journeyTimelinePeriods.map(
     (el) => el.fields
   ) as TypeTimelinePeriodFields[];
 
   return (
     <>
-      <Introduction
+      <HeadingSection
         name={aboutPageContent.name}
         shortDescription={aboutPageContent.shortDescription}
-        vision={aboutPageContent.vision}
+        image={headingSectionImage}
       />
       <Philosophy
         title={aboutPageContent.philosophyTitle}
         subtitle={aboutPageContent.philosophySubtitle}
         content={aboutPageContent.philosophyContent}
-        image={image}
+        image={philosophyImage}
       />
-      <div className="bg-gray-100 py-40 flex flex-col items-center justify-center">
-        {aboutPageContent.slogans.map((slogan) => (
-          <p key={slogan} className="text-5xl font-bold mb-1">
-            {slogan}
-          </p>
-        ))}
-      </div>
       <Journey
         title={aboutPageContent.journeyTitle}
         subtitle={aboutPageContent.journeySubtitle ?? ""}
         timelinePeriods={timelinePeriods}
       />
-      <Divider />
     </>
   );
 }
