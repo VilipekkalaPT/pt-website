@@ -94,7 +94,7 @@
 
 @media only screen and (width < 1170px) {
   .vertical-timeline.vertical-timeline--two-columns:before {
-    left: calc(var(--spacing) * 3.6);
+    left: calc(var(--spacing) * 3.7);
   }
 
   .vertical-timeline-element {
