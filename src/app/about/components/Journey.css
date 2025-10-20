@@ -3,6 +3,12 @@
   margin-top: 24px;
 }
 
+.vertical-timeline.vertical-timeline--two-columns:before {
+  width: calc(var(--spacing) * 2.5);
+  border-radius: calc(var(--spacing) * 2);
+  left: 49.7%;
+}
+
 .vertical-timeline-element {
   .vertical-timeline-element-content {
     box-shadow: none;
@@ -17,7 +23,7 @@
   .vertical-timeline-element-icon {
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
-    margin-left: -9px;
+    margin-left: -8px;
     background: white;
   }
 
@@ -87,6 +93,10 @@
 }
 
 @media only screen and (width < 1170px) {
+  .vertical-timeline.vertical-timeline--two-columns:before {
+    left: calc(var(--spacing) * 3.6);
+  }
+
   .vertical-timeline-element {
     .vertical-timeline-element-icon {
       margin-left: calc(var(--spacing) * 3);

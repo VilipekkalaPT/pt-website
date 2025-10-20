@@ -1016,7 +1016,7 @@
         "id": "aboutPageData",
         "type": "ContentType",
         "createdAt": "2025-04-23T18:56:35.106Z",
-        "updatedAt": "2025-10-18T20:30:23.560Z",
+        "updatedAt": "2025-10-20T17:00:30.283Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1024,8 +1024,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 57,
-        "publishedAt": "2025-10-18T20:30:23.560Z",
+        "publishedVersion": 63,
+        "publishedAt": "2025-10-20T17:00:30.283Z",
         "firstPublishedAt": "2025-04-23T18:56:35.529Z",
         "createdBy": {
           "sys": {
@@ -1041,8 +1041,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 29,
-        "version": 58,
+        "publishedCounter": 32,
+        "version": 64,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1188,22 +1188,6 @@
           "linkType": "Asset"
         },
         {
-          "id": "slogans",
-          "name": "Slogans",
-          "type": "Array",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Symbol",
-            "validations": [
-            ]
-          }
-        },
-        {
           "id": "journeyTitle",
           "name": "Journey Title",
           "type": "Symbol",
@@ -1241,6 +1225,50 @@
             ],
             "linkType": "Entry"
           }
+        },
+        {
+          "id": "infoSectionTitle",
+          "name": "Info Section Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "infoSectionSubtitle",
+          "name": "Info Section Subtitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "infoButtonText1",
+          "name": "Info Button Text 1",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "infoButtonText2",
+          "name": "Info Button Text 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     },
@@ -4977,7 +5005,7 @@
             "linkType": "Space"
           }
         },
-        "version": 58,
+        "version": 64,
         "createdAt": "2025-04-23T18:56:35.691Z",
         "createdBy": {
           "sys": {
@@ -4986,7 +5014,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-10-18T20:30:24.220Z",
+        "updatedAt": "2025-10-20T17:00:31.191Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5051,11 +5079,6 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "slogans",
-          "widgetId": "tagEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
           "fieldId": "journeyTitle",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
@@ -5068,6 +5091,26 @@
         {
           "fieldId": "journeyTimelinePeriods",
           "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "infoSectionTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "infoSectionSubtitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "infoButtonText1",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "infoButtonText2",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -11462,7 +11505,7 @@
         "id": "5YU8BsOnoGWWroWyWSkUkr",
         "type": "Entry",
         "createdAt": "2025-04-23T18:57:49.277Z",
-        "updatedAt": "2025-10-18T20:30:53.392Z",
+        "updatedAt": "2025-10-20T17:01:04.254Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11470,8 +11513,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 200,
-        "publishedAt": "2025-10-18T20:30:53.392Z",
+        "publishedVersion": 211,
+        "publishedAt": "2025-10-20T17:01:04.254Z",
         "firstPublishedAt": "2025-04-23T18:59:02.190Z",
         "createdBy": {
           "sys": {
@@ -11487,8 +11530,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 35,
-        "version": 201,
+        "publishedCounter": 39,
+        "version": 212,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11642,16 +11685,9 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "cR6wCgxrKlAXg7fPfTiUa"
+              "id": "6fWI6vxJdBUl7TPjDRI2ef"
             }
           }
-        },
-        "slogans": {
-          "en-US": [
-            "Move with purpose.",
-            "Train with soul.",
-            "Slay with intention."
-          ]
         },
         "journeyTitle": {
           "en-US": "From Slump to Slay"
@@ -11690,6 +11726,18 @@
               }
             }
           ]
+        },
+        "infoSectionTitle": {
+          "en-US": "Reach out and let’s build a personal, practical, and powerful plan"
+        },
+        "infoSectionSubtitle": {
+          "en-US": "Vili hopes you’ve gained more confidence in your choices about training, eating, and recovery"
+        },
+        "infoButtonText1": {
+          "en-US": "Browse all packages"
+        },
+        "infoButtonText2": {
+          "en-US": "Book a free consultation"
         }
       }
     },
@@ -44392,7 +44440,7 @@
         "id": "3WiV0nyJtNb4JKqPzF9H4X",
         "type": "Entry",
         "createdAt": "2025-06-24T16:55:18.961Z",
-        "updatedAt": "2025-06-24T16:57:21.137Z",
+        "updatedAt": "2025-10-19T17:48:37.695Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -44400,8 +44448,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2025-06-24T16:57:21.137Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-10-19T17:48:37.695Z",
         "firstPublishedAt": "2025-06-24T16:57:21.137Z",
         "createdBy": {
           "sys": {
@@ -44417,8 +44465,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 8,
+        "publishedCounter": 2,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -44476,9 +44524,6 @@
               }
             }
           ]
-        },
-        "buttonText": {
-          "en-US": "Book a free consultation"
         }
       }
     },
@@ -45926,7 +45971,7 @@
         "id": "7AYxENopSoZSvPTrlCQGHp",
         "type": "Entry",
         "createdAt": "2025-10-05T18:04:05.205Z",
-        "updatedAt": "2025-10-18T18:20:45.737Z",
+        "updatedAt": "2025-10-19T17:28:44.278Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45934,8 +45979,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2025-10-18T18:20:45.737Z",
+        "publishedVersion": 21,
+        "publishedAt": "2025-10-19T17:27:45.167Z",
         "firstPublishedAt": "2025-10-05T18:04:18.236Z",
         "createdBy": {
           "sys": {
@@ -45951,8 +45996,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 12,
+        "publishedCounter": 9,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45962,7 +46007,7 @@
         },
         "fieldStatus": {
           "*": {
-            "en-US": "published"
+            "en-US": "changed"
           }
         },
         "automationTags": [
@@ -45981,7 +46026,10 @@
           "en-US": "Whatsapp"
         },
         "description": {
-          "en-US": "044 9764986"
+          "en-US": "+358 44 9764986"
+        },
+        "url": {
+          "en-US": "358449764986"
         },
         "column": {
           "en-US": "contact"
@@ -52469,6 +52517,85 @@
               }
             },
             "fileName": "About_heading_image.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "6fWI6vxJdBUl7TPjDRI2ef",
+        "type": "Asset",
+        "createdAt": "2025-10-18T20:48:58.989Z",
+        "updatedAt": "2025-10-18T20:49:39.035Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-10-18T20:49:39.035Z",
+        "firstPublishedAt": "2025-10-18T20:49:39.035Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/6fWI6vxJdBUl7TPjDRI2ef"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Philosophy_image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/6fWI6vxJdBUl7TPjDRI2ef/6efc3137503a66147cfe452337fa6f3e/Philosophy_image.jpg",
+            "details": {
+              "size": 2059208,
+              "image": {
+                "width": 6321,
+                "height": 3055
+              }
+            },
+            "fileName": "Philosophy_image.jpg",
             "contentType": "image/jpeg"
           }
         }

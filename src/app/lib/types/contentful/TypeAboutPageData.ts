@@ -10,10 +10,13 @@ export interface TypeAboutPageDataFields {
   philosophySubtitle: EntryFields.Symbol;
   philosophyContent: EntryFields.RichText;
   philosophyImage: Asset;
-  slogans: EntryFields.Symbol[];
   journeyTitle: EntryFields.Symbol;
   journeySubtitle?: EntryFields.Symbol;
   journeyTimelinePeriods: Entry<TypeTimelinePeriodSkeleton>[];
+  infoSectionTitle: EntryFields.Symbol;
+  infoSectionSubtitle: EntryFields.Symbol;
+  infoButtonText1: EntryFields.Symbol;
+  infoButtonText2: EntryFields.Symbol;
 }
 
 export interface TypeAboutPageDataSkeleton extends EntrySkeletonType {

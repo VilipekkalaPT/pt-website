@@ -45,7 +45,7 @@ export default async function PricingPage() {
         differentServicesComparisonRows={differentServicesComparisonRows}
         steps={pricingPageContent.steps}
       />
-      <div className="mt-8 flex w-4/5 mx-auto justify-center gap-4">
+      <div className="mt-6 flex w-4/5 mx-auto justify-center gap-4">
         <Button
           label={pricingPageContent.actionButtonText1}
           variant="primary"
