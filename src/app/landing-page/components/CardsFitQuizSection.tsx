@@ -49,8 +49,8 @@ export default function CardsFitQuizSection({
   };
 
   return (
-    <div ref={containerRef} className="w-4/5 mx-auto">
-      <div className="mt-12 grid grid-cols-2 gap-8">
+    <div ref={containerRef} className="mx-16 mt-6">
+      <div className="grid grid-cols-2 gap-8">
         {cards.map((card, index) => (
           <Card key={index} glassmorphism className="px-8 py-16 bg-primary/50">
             <CardContent className="flex flex-col items-center text-center gap-4">

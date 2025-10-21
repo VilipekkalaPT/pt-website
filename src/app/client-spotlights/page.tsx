@@ -30,11 +30,14 @@ export default async function ClientSpotlights() {
 
   return (
     <>
-      <HeroSection
-        image={image}
-        headingSections={headingSections}
-        fillImage={false}
-      />
+      <div className="relative">
+        <HeroSection
+          image={image}
+          headingSections={headingSections}
+          fillImage={false}
+        />
+        <div className="absolute inset-0 bg-linear-to-b bg-black/40" />
+      </div>
       <AllReviews
         title={reviewsPageContent.reviewSectionTitle}
         subtitle={reviewsPageContent.reviewSectionSubtitle}

@@ -9,7 +9,7 @@ import QuestionsAndInfo from "../components/QuestionsAndInfo";
 import { AssetFields } from "contentful";
 import ComboSection from "../components/ComboSection";
 import HeadingSection from "app/components/HeadingSection";
-import Button from "app/components/Button";
+import ButtonGroup from "@/app/components/ButtonGroup";
 import { PRICING_PAGE_TITLE } from "app/utils/variables";
 
 async function getPageData(type: string) {
@@ -66,21 +66,16 @@ export default async function PackagesPage({
         title={packagesPageData.packageSectionTitle}
         subtitle={packagesPageData.packageSectionSubtitle}
         packages={soloPackages}
+        hasComboPackages={!!comboPackages}
       />
-      <div className="mt-8 flex w-4/5 mx-auto justify-center gap-4">
-        <Button
-          label={packagesPageData.actionButtonText1}
-          variant="primary"
-          glassmorphism
-          hasShadow
-        />
-        <Button
-          label={packagesPageData.actionButtonText2}
-          variant="primary"
-          glassmorphism
-          hasShadow
-        />
-      </div>
+      <ButtonGroup
+        infoButtonText1={packagesPageData.actionButtonText1}
+        infoButtonText2={packagesPageData.actionButtonText2}
+        button1Url={packagesPageData.button1Url}
+        button2Url={packagesPageData.button2Url}
+        className="mb-16 mx-16"
+      />
+
       <QuestionsAndInfo packagesPageData={packagesPageData} />
     </>
   );

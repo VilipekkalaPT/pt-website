@@ -15,6 +15,8 @@ export interface TypePricingPageDataFields {
   differentServicesComparisonRows: Entry<TypePricingDifferentServicesComparisonSkeleton>[];
   actionButtonText1: EntryFields.Symbol;
   actionButtonText2: EntryFields.Symbol;
+  button1Url: EntryFields.Symbol;
+  button2Url: EntryFields.Symbol;
 }
 
 export interface TypePricingPageDataSkeleton extends EntrySkeletonType {

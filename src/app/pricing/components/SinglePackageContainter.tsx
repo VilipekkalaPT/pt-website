@@ -94,7 +94,7 @@ export default function SinglePackageContainer({
     ) as TypeHowTrainingSessionLooksLikeFields[];
 
   return (
-    <div className="w-4/5 mx-auto mt-10">
+    <div className="mx-16 py-16">
       <Button
         variant="ghost"
         label={ALL_PACKAGES}
@@ -119,9 +119,9 @@ export default function SinglePackageContainer({
       <InfoSection
         title={INFO_SECTION_TITLE}
         subtitle={INFO_SECTION_SUBTITLE}
-        className="mt-20"
+        className="mt-4"
       />
-      <div className="mt-8 flex w-4/5 mx-auto justify-center gap-4">
+      <div className="mt-6 mx-16 flex justify-center gap-4">
         <Button
           label={READ_MORE_REVIEWS}
           variant="primary"

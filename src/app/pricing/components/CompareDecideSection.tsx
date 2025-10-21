@@ -29,9 +29,9 @@ export default function CompareDecideSection({
   };
 
   return (
-    <div className="mt-14 w-4/5 mx-auto flex flex-col items-center">
+    <div className="mt-12 mx-16 flex flex-col items-center">
       <InfoSection title={title} />
-      <div className="w-1/4 mt-6 mb-6">
+      <div className="w-1/4 my-6">
         <StepIndicator
           steps={steps}
           activeStep={activeStep}

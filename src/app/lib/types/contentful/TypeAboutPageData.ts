@@ -17,6 +17,8 @@ export interface TypeAboutPageDataFields {
   infoSectionSubtitle: EntryFields.Symbol;
   infoButtonText1: EntryFields.Symbol;
   infoButtonText2: EntryFields.Symbol;
+  button1Url: EntryFields.Symbol;
+  button2Url: EntryFields.Symbol;
 }
 
 export interface TypeAboutPageDataSkeleton extends EntrySkeletonType {

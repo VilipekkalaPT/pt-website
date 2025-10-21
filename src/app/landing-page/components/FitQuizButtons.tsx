@@ -42,7 +42,7 @@ export default function FitQuizButtons({
   };
 
   return (
-    <div className={`mt-8 w-full flex justify-center gap-4`}>
+    <div className={`mt-4 w-full flex justify-center gap-4`}>
       {showBackButton && (
         <Button
           label={BACK}

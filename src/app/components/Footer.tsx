@@ -50,7 +50,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
   }, [footerLinks]);
 
   return (
-    <div className="mt-30 grid grid-cols-4 gap-4 w-[90%] mx-auto mb-40">
+    <div className="mt-8 grid grid-cols-4 gap-4 w-[90%] mx-auto mb-40">
       <div className="flex flex-col">
         <Image src={logoUrl} alt="Logo" width={200} height={200} />
         <div className="flex mt-4 gap-4">

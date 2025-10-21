@@ -8,6 +8,7 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Button from "app/components/Button";
 import { getAssetUrl } from "app/utils/utils";
 import { HEADING_IMAGE } from "app/utils/variables";
+import { ROUTES } from "../utils/routes";
 
 interface HeadingSectionProps {
   title: string;
@@ -41,7 +42,7 @@ export default function HeadingSection({
             label={backButtonLabel}
             variant="outlined"
             iconLeft={<ArrowLeftIcon className="size-4" strokeWidth={2} />}
-            onClick={() => router.back()}
+            onClick={() => router.push(ROUTES.PRICING)}
             className="py-1"
           />
         )}

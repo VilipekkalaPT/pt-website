@@ -58,7 +58,7 @@ export default function FitQuiz({
       id="fit-quiz"
       ref={ref}
     >
-      <Card glassmorphism className="flex-3 p-8 justify-center bg-primary/50">
+      <Card glassmorphism className="flex-3 p-6 justify-center bg-primary/50">
         <p className="mb-4 heading text-center">{FIT_QUIZ_TITLE}</p>
         <div className="w-1/2 mx-auto">
           <StepIndicator steps={totalStepsArray} activeStep={activeStep} />

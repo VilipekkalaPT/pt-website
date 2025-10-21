@@ -19,15 +19,18 @@ export default function AllReviews({
   const { sortedReviews, selectedSort, handleSortChange } = useSort(allReviews);
 
   return (
-    <div className="mt-10 px-24">
-      <p className="text-2xl font-bold mb-1">{title}</p>
-      <p className="text-gray-500 mb-4">{subtitle}</p>
+    <div className="mt-16 mx-16">
+      <div className="text-center">
+        <p className="heading">{title}</p>
+        <p className="subheading text-white/70 mt-1">{subtitle}</p>
+      </div>
+
       <Sort
         selectedSort={selectedSort}
         options={sortOptions}
         handleSortChange={handleSortChange}
       />
-      <div className="mt-10 grid grid-cols-3 gap-8 items-start">
+      <div className="mt-6 grid grid-cols-2 gap-6 items-start">
         {sortedReviews.map((review) => (
           <ReviewCard key={review.id} review={review} reviewCardType="full" />
         ))}

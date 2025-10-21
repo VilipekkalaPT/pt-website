@@ -25,9 +25,9 @@ export default function HowTrainingSessionLookLike({
   }));
 
   return (
-    <div className="mt-30 w-full">
+    <div className="py-12 w-full">
       <InfoSection title={title} subtitle={subtitle} />
-      <div className="mt-10">
+      <div className="mt-12">
         <Carousel trainingSessionData={trainingSessionData} />
       </div>
     </div>

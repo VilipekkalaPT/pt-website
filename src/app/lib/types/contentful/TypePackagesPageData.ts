@@ -15,7 +15,9 @@ export interface TypePackagesPageDataFields {
   packageSectionSubtitle: EntryFields.Symbol;
   packages: Entry<TypePackageSkeleton>[];
   actionButtonText1: EntryFields.Symbol;
+  button1Url: EntryFields.Symbol;
   actionButtonText2: EntryFields.Symbol;
+  button2Url: EntryFields.Symbol;
   faqsTitle: EntryFields.Symbol;
   faqsSubtitle: EntryFields.Symbol;
   faqs: Entry<TypeFaqSkeleton>[];

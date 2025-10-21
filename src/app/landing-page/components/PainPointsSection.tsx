@@ -35,10 +35,10 @@ export default function PainPointsSection({
   };
 
   return (
-    <div className="mt-20 w-4/5 mx-auto flex flex-col items-center">
+    <div className="mt-12 mx-16 flex flex-col items-center">
       <p className="heading mb-1">{title}</p>
-      <p className="subheading text-text-secondary mb-10">{subtitle}</p>
-      <div className="w-full h-[220px] flex gap-8">
+      <p className="subheading text-text-secondary">{subtitle}</p>
+      <div className="mt-12 w-full h-[220px] flex gap-8">
         {painPoints.map((point, index) => {
           return (
             <div

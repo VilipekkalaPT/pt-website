@@ -15,9 +15,9 @@ export default function InfoSection({
   return (
     <div className={cn("w-full flex flex-col items-center", className)}>
       <ArrowDownIcon className="size-12 text-icon-secondary stroke-2" />
-      <p className="heading mt-8">{title}</p>
+      <p className="heading mt-6">{title}</p>
       {subtitle && (
-        <p className="subheading mt-2 text-text-secondary">{subtitle}</p>
+        <p className="subheading mt-1 text-text-secondary">{subtitle}</p>
       )}
     </div>
   );

@@ -9,7 +9,7 @@ type KickOffProcessProps = {
 
 export default function KickOffProcess({}: KickOffProcessProps) {
   return (
-    <div className="mt-30">
+    <div className="py-16">
       <p className="heading text-center">{SLAY_PROCESS}</p>
       <Image
         src="/process.png"

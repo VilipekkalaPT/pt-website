@@ -16,7 +16,7 @@ export default function InfoTabs({ tabs }: TabsProps) {
   const steps = tabs.map((tab) => tab.label);
 
   return (
-    <div className="mt-30 w-full">
+    <div className="py-16 w-full">
       <div className="w-2/3 mx-auto">
         <StepIndicator
           steps={steps}
@@ -34,7 +34,7 @@ export default function InfoTabs({ tabs }: TabsProps) {
             label={tabs[activeIndex].subtitle}
             variant="ghost"
             glassmorphism
-            className="mt-18 mx-auto text-white/40"
+            className="mt-16 mx-auto text-white/40"
           />
         )}
       </div>

@@ -52,8 +52,8 @@ export default function Journey({
         fill
         className="object-cover object-bottom"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50" />
-      <div className="py-16 w-4/5 mx-auto relative">
+      <div className="absolute inset-0 bg-linear-to-b bg-black/50" />
+      <div className="py-16 mx-16 relative">
         <p className="heading">{title}</p>
         <p className="subheading text-white/70">{subtitle}</p>
         <VerticalTimeline lineColor="rgba(68, 68, 68)">

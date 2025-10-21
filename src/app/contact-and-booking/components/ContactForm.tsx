@@ -42,7 +42,7 @@ export default function ContactForm({
   };
 
   return (
-    <div className="mt-40 w-4/5 mx-auto text-center">
+    <div className="mt-40 mx-16 text-center">
       <p className="title-hero">{title}</p>
       <p className="subtitle">{subtitle}</p>
       <form

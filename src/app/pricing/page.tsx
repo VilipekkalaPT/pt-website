@@ -11,7 +11,7 @@ import {
 } from "app/lib/types/contentful";
 import { TypePricingPackageTypeComparisionFields } from "app/lib/types/contentful/TypePricingPackageTypeComparision";
 import OfferSection from "./components/OfferSection";
-import Button from "app/components/Button";
+import ButtonGroup from "../components/ButtonGroup";
 
 export default async function PricingPage() {
   const pricingPageData = await getEntries<TypePricingPageDataSkeleton>(
@@ -45,20 +45,13 @@ export default async function PricingPage() {
         differentServicesComparisonRows={differentServicesComparisonRows}
         steps={pricingPageContent.steps}
       />
-      <div className="mt-6 flex w-4/5 mx-auto justify-center gap-4">
-        <Button
-          label={pricingPageContent.actionButtonText1}
-          variant="primary"
-          glassmorphism
-          hasShadow
-        />
-        <Button
-          label={pricingPageContent.actionButtonText1}
-          variant="primary"
-          glassmorphism
-          hasShadow
-        />
-      </div>
+      <ButtonGroup
+        infoButtonText1={pricingPageContent.actionButtonText1}
+        infoButtonText2={pricingPageContent.actionButtonText2}
+        button1Url={pricingPageContent.button1Url}
+        button2Url={pricingPageContent.button2Url}
+        className="mt-6 mx-16 pb-16"
+      />
     </>
   );
 }

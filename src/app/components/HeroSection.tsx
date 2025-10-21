@@ -36,7 +36,7 @@ export default function HeroSection({
 
   const containerStyle = cn({
     "relative w-screen h-[calc(100vh-80px)]": fillImage,
-    "relative w-full h-full": !fillImage,
+    "relative w-full h-[33rem]": !fillImage,
   });
 
   return (
@@ -52,8 +52,8 @@ export default function HeroSection({
         <Image
           src={imageUrl}
           alt={HERO_SECTION_IMAGE}
-          width={image.file?.details.image?.width}
-          height={image.file?.details.image?.height}
+          fill
+          className="object-cover object-center"
         />
       )}
       <div className="absolute inset-0 z-10 flex items-center justify-center">
@@ -64,7 +64,7 @@ export default function HeroSection({
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p className="w-2/3 mx-auto mb-6 title-hero">{section.heading}</p>
+            <p className="w-2/3 mx-auto mb-1 title-hero">{section.heading}</p>
             <p className="subtitle">{section.subheading}</p>
           </div>
         ))}

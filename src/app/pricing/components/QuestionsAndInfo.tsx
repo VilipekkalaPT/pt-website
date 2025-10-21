@@ -24,7 +24,7 @@ export default function QuestionsAndInfo({
   );
 
   return (
-    <div className="mt-40 w-1/2 mx-auto flex flex-col items-center">
+    <div className="py-16 w-1/2 mx-auto flex flex-col items-center">
       <p className="heading">{packagesPageData.faqsTitle}</p>
       <p className="subheading text-white/70 mt-2">
         {packagesPageData.faqsSubtitle}

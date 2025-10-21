@@ -15,9 +15,9 @@ export default function ServiceSection({
   services,
 }: ServiceSectionProps) {
   return (
-    <div className="mt-20 flex flex-col items-center">
+    <div className="mt-16 flex flex-col items-center">
       <InfoSection title={title} subtitle={subtitle} />
-      <div className="w-full mt-10 overflow-x-hidden">
+      <div className="w-full mt-6 overflow-x-hidden">
         <div className="w-full flex">
           <motion.div
             initial={{ x: 0 }}
@@ -33,7 +33,7 @@ export default function ServiceSection({
             {[...services, ...services].map((goal, index) => (
               <p
                 key={index}
-                className="px-16 leading-[1.4] text-text-secondary text-center inline-block"
+                className="px-16 py-4 leading-[1.4] text-text-secondary text-center inline-block"
               >
                 {goal}
               </p>
