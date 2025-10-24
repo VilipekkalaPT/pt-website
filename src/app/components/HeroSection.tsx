@@ -36,7 +36,7 @@ export default function HeroSection({
 
   const containerStyle = cn({
     "relative w-screen h-[calc(100vh-80px)]": fillImage,
-    "relative w-full h-[33rem]": !fillImage,
+    "relative w-full h-[40rem]": !fillImage,
   });
 
   return (
