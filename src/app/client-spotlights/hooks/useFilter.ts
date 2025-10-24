@@ -16,6 +16,7 @@ export type ReviewChange =
 export type FilterValue = ReviewChange | typeof FILTER_NONE;
 
 export const filterOptions: FilterValue[] = [
+  FILTER_NONE,
   "Adopt a new lifestyle",
   "Boost overall fitness",
   "Improve posture",
@@ -30,16 +31,9 @@ export const useFilter = (allReviews: TypeReviewFields[]) => {
   const [selectedFilter, setSelectedFilter] =
     useState<FilterValue>(FILTER_NONE);
 
-  const handleFilterChange = useCallback(
-    (value: string) => {
-      if (selectedFilter === value) {
-        setSelectedFilter(FILTER_NONE);
-        return;
-      }
-      setSelectedFilter(value as FilterValue);
-    },
-    [selectedFilter]
-  );
+  const handleFilterChange = useCallback((value: string) => {
+    setSelectedFilter(value as FilterValue);
+  }, []);
 
   const filteredReviews = useMemo(() => {
     if (selectedFilter === FILTER_NONE) {

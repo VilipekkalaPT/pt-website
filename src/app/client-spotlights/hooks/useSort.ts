@@ -36,7 +36,7 @@ const sortingFunctions: Record<
 };
 
 export const useSort = (allReviews: TypeReviewFields[]) => {
-  const [selectedSort, setSelectedSort] = useState<SortOption>(sortOptions[0]);
+  const [selectedSort, setSelectedSort] = useState<SortOption>(sortOptions[3]);
 
   const handleSortChange = useCallback((value: string) => {
     const newSortOption = sortOptions.find((option) => option.label === value);
