@@ -47,7 +47,7 @@ export default function PackageDetails({
 
   return (
     <div className="grid grid-cols-2 gap-16">
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-[33rem]">
         <Image
           src={imageUrl}
           alt={image?.title || PACKAGE_IMAGE}

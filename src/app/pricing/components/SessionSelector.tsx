@@ -19,6 +19,19 @@ export default function SessionSelector({
   onSelect,
 }: SessionSelectorProps) {
   const router = useRouter();
+
+  if (!sessionOptions) {
+    return (
+      <Button
+        variant="primary"
+        label={GET_STARTED}
+        glassmorphism
+        hasShadow
+        onClick={() => router.push(ROUTES.CONTACT)}
+      />
+    );
+  }
+
   const selectedValue = `${selectedOption?.numberOfSessions} ${selectedOption?.priceUnit}`;
 
   const options: Option[] = sessionOptions.map((option) => ({
@@ -38,9 +51,7 @@ export default function SessionSelector({
 
   return (
     <>
-      {sessionOptions && (
-        <p className="mb-3 leading-[1.4]">{SESSION_SELECTOR_TITLE}</p>
-      )}
+      <p className="mb-3 leading-[1.4]">{SESSION_SELECTOR_TITLE}</p>
       <div className="flex gap-8 items-center">
         <SelectComponent
           selectName={SESSION_SELECTOR_TITLE}

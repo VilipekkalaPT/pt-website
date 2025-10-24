@@ -28,7 +28,7 @@ export default function HeadingSection({
 
   return (
     <div className="flex">
-      <div className="w-1/2 relative h-[40rem]">
+      <div className="w-1/2 relative h-[45rem]">
         <Image
           src={imageUrl}
           alt={HEADING_IMAGE}
