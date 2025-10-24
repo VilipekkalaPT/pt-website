@@ -52,7 +52,7 @@ export default function PackageDetails({
           src={imageUrl}
           alt={image?.title || PACKAGE_IMAGE}
           fill
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full rounded-lg"
         />
       </div>
       <div>

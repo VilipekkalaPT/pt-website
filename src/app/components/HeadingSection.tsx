@@ -33,7 +33,7 @@ export default function HeadingSection({
           src={imageUrl}
           alt={HEADING_IMAGE}
           fill
-          className="object-cover object-center"
+          className="object-cover object-center rounded-r-lg"
         />
       </div>
       <div className="w-1/2 flex flex-col justify-center items-center text-center gap-4 p-20">
