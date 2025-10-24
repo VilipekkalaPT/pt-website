@@ -23,11 +23,7 @@ export interface TypeReviewFields {
   changes?: (
     | "Adopt a new lifestyle"
     | "Boost overall fitness"
-    | "Feel lighter"
-    | "Feel stronger"
-    | "Improve fitness capacity"
     | "Improve posture"
-    | "Improve squat strength"
     | "Increase strength"
     | "Look more fit"
     | "Lose weight"

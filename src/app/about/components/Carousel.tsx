@@ -9,6 +9,7 @@ import {
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
 } from "@heroicons/react/24/solid";
+import { getAssetUrl } from "app/utils/utils";
 
 interface CarouselProps {
   images: AssetFields[];
@@ -42,16 +43,20 @@ export default function Carousel({ images, sliderPerView }: CarouselProps) {
         ref={sliderRef}
         className="keen-slider h-full overflow-hidden rounded-lg"
       >
-        {images.map((image, index) => (
-          <div key={index} className="keen-slider__slide">
-            <Image
-              src={`https:${image.file?.url ?? ""}`}
-              alt={image.title ?? "Image"}
-              width={image.file?.details.image?.width}
-              height={image.file?.details.image?.height}
-            />
-          </div>
-        ))}
+        {images.map((image, index) => {
+          const imageUrl = getAssetUrl(image);
+
+          return (
+            <div key={index} className="keen-slider__slide">
+              <Image
+                src={imageUrl}
+                alt={image.title ?? "Image"}
+                width={image.file?.details.image?.width}
+                height={image.file?.details.image?.height}
+              />
+            </div>
+          );
+        })}
       </div>
       <>
         <IconButton

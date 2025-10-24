@@ -46,7 +46,7 @@ export default function DropdownMenuComponent({
           ))}
           {additionalItems && additionalItems.length > 0 && (
             <>
-              <Divider className="my-0" />
+              <Divider />
               {additionalItems.map((item) => (
                 <DropdownItemComponent
                   key={item.label}

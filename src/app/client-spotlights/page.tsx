@@ -9,6 +9,7 @@ import {
 import { HeadingSectionType } from "app/lib/types/type";
 import { AssetFields } from "contentful";
 import AllReviews from "./components/AllReviews";
+import ButtonGroup from "../components/ButtonGroup";
 
 export default async function ClientSpotlights() {
   const reviewsPageData = await getEntries<TypeReviewsPageDataSkeleton>(
@@ -46,7 +47,14 @@ export default async function ClientSpotlights() {
       <InfoSection
         title={reviewsPageContent.infoSectionTitle}
         subtitle={reviewsPageContent.infoSectionSubtitle}
-        className="mt-20 px-24"
+        className="mt-4 mb-6"
+      />
+      <ButtonGroup
+        infoButtonText1={reviewsPageContent.infoButtonText1}
+        infoButtonText2={reviewsPageContent.infoButtonText2}
+        button1Url={reviewsPageContent.infoButton1Url}
+        button2Url={reviewsPageContent.infoButton2Url}
+        className="pb-16"
       />
     </>
   );

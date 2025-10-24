@@ -1,6 +1,5 @@
 import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 import { TypeReviewSkeleton } from "./TypeReview";
-import { TypeImageCardSkeleton } from "./TypeImageCard";
 
 export interface TypeReviewsPageDataFields {
   heading: EntryFields.Symbol;
@@ -11,7 +10,10 @@ export interface TypeReviewsPageDataFields {
   allReviews: Entry<TypeReviewSkeleton>[];
   infoSectionTitle: EntryFields.Symbol;
   infoSectionSubtitle: EntryFields.Symbol;
-  infoImageCards: Entry<TypeImageCardSkeleton>[];
+  infoButtonText1: EntryFields.Symbol;
+  infoButtonText2: EntryFields.Symbol;
+  infoButton1Url: EntryFields.Symbol;
+  infoButton2Url: EntryFields.Symbol;
 }
 
 export interface TypeReviewsPageDataSkeleton extends EntrySkeletonType {

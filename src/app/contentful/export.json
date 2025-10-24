@@ -2200,7 +2200,7 @@
         "id": "packagesPageData",
         "type": "ContentType",
         "createdAt": "2025-05-25T18:51:32.715Z",
-        "updatedAt": "2025-10-13T20:49:36.156Z",
+        "updatedAt": "2025-10-21T21:41:52.047Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2208,8 +2208,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 41,
-        "publishedAt": "2025-10-13T20:49:36.156Z",
+        "publishedVersion": 43,
+        "publishedAt": "2025-10-21T21:41:52.047Z",
         "firstPublishedAt": "2025-05-25T18:51:33.027Z",
         "createdBy": {
           "sys": {
@@ -2225,8 +2225,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 21,
-        "version": 42,
+        "publishedCounter": 22,
+        "version": 44,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2375,8 +2375,30 @@
           "omitted": false
         },
         {
+          "id": "button1Url",
+          "name": "Button 1 url",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
           "id": "actionButtonText2",
           "name": "Action Button Text 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "button2Url",
+          "name": "Button 2 url",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -3062,7 +3084,7 @@
         "id": "pricingPageData",
         "type": "ContentType",
         "createdAt": "2025-06-10T18:09:19.927Z",
-        "updatedAt": "2025-10-09T18:53:36.294Z",
+        "updatedAt": "2025-10-21T21:38:59.100Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3070,8 +3092,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 70,
-        "publishedAt": "2025-10-09T18:53:36.294Z",
+        "publishedVersion": 72,
+        "publishedAt": "2025-10-21T21:38:59.100Z",
         "firstPublishedAt": "2025-06-10T18:09:20.257Z",
         "createdBy": {
           "sys": {
@@ -3087,8 +3109,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 35,
-        "version": 71,
+        "publishedCounter": 36,
+        "version": 73,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3250,6 +3272,28 @@
         {
           "id": "actionButtonText2",
           "name": "Action Button Text 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "button1Url",
+          "name": "Button 1 url",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "button2Url",
+          "name": "Button 2 url",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -3739,7 +3783,7 @@
         "id": "reviewsPageData",
         "type": "ContentType",
         "createdAt": "2025-06-25T20:16:33.906Z",
-        "updatedAt": "2025-10-21T20:18:54.494Z",
+        "updatedAt": "2025-10-24T18:40:36.188Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3747,8 +3791,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2025-10-21T20:18:54.494Z",
+        "publishedVersion": 21,
+        "publishedAt": "2025-10-24T18:40:36.188Z",
         "firstPublishedAt": "2025-06-25T20:16:34.322Z",
         "createdBy": {
           "sys": {
@@ -3764,8 +3808,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 11,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3875,21 +3919,48 @@
           "omitted": false
         },
         {
-          "id": "infoImageCards",
-          "name": "Info Image Cards",
-          "type": "Array",
+          "id": "infoButtonText1",
+          "name": "Info Button Text 1",
+          "type": "Symbol",
           "localized": false,
           "required": true,
           "validations": [
           ],
           "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-            ],
-            "linkType": "Entry"
-          }
+          "omitted": false
+        },
+        {
+          "id": "infoButton1Url",
+          "name": "Info Button 1 Url",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "infoButtonText2",
+          "name": "Info Button Text 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "infoButton2Url",
+          "name": "Info Button 2 Url",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     },
@@ -5697,7 +5768,7 @@
             "linkType": "Space"
           }
         },
-        "version": 42,
+        "version": 44,
         "createdAt": "2025-05-25T18:51:33.259Z",
         "createdBy": {
           "sys": {
@@ -5706,7 +5777,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-10-13T20:49:36.932Z",
+        "updatedAt": "2025-10-21T21:41:52.918Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5786,7 +5857,17 @@
           "widgetNamespace": "builtin"
         },
         {
+          "fieldId": "button1Url",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
           "fieldId": "actionButtonText2",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "button2Url",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -6101,7 +6182,7 @@
             "linkType": "Space"
           }
         },
-        "version": 70,
+        "version": 72,
         "createdAt": "2025-06-10T18:09:20.457Z",
         "createdBy": {
           "sys": {
@@ -6110,7 +6191,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-10-09T18:53:37.102Z",
+        "updatedAt": "2025-10-21T21:38:59.801Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -6186,6 +6267,16 @@
         },
         {
           "fieldId": "actionButtonText2",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "button1Url",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "button2Url",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
@@ -6491,7 +6582,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 22,
         "createdAt": "2025-06-25T20:16:34.515Z",
         "createdBy": {
           "sys": {
@@ -6500,7 +6591,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-10-21T20:18:55.189Z",
+        "updatedAt": "2025-10-24T18:40:36.793Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -6565,8 +6656,23 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "infoImageCards",
-          "widgetId": "entryLinksEditor",
+          "fieldId": "infoButtonText1",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "infoButton1Url",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "infoButtonText2",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "infoButton2Url",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -39258,7 +39364,7 @@
         "id": "51hQCsTcvhP1Sxt3fsqutq",
         "type": "Entry",
         "createdAt": "2025-05-25T18:51:39.425Z",
-        "updatedAt": "2025-10-13T20:51:17.493Z",
+        "updatedAt": "2025-10-21T21:44:43.485Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -39266,8 +39372,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 59,
-        "publishedAt": "2025-10-13T20:51:17.493Z",
+        "publishedVersion": 64,
+        "publishedAt": "2025-10-21T21:44:43.485Z",
         "firstPublishedAt": "2025-05-25T18:55:31.071Z",
         "createdBy": {
           "sys": {
@@ -39283,8 +39389,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 21,
-        "version": 60,
+        "publishedCounter": 23,
+        "version": 65,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -39399,8 +39505,14 @@
         "actionButtonText1": {
           "en-US": "Read more reviews"
         },
+        "button1Url": {
+          "en-US": "/client-spotlights"
+        },
         "actionButtonText2": {
           "en-US": "Browse duo packages"
+        },
+        "button2Url": {
+          "en-US": "/pricing/duo-packages"
         },
         "faqsTitle": {
           "en-US": "FAQs about Solo packages"
@@ -39484,7 +39596,7 @@
         "id": "2IxLWlO95vsGHcGtN0ShWC",
         "type": "Entry",
         "createdAt": "2025-05-25T18:55:52.172Z",
-        "updatedAt": "2025-06-14T20:23:05.136Z",
+        "updatedAt": "2025-10-21T21:46:13.838Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -39492,8 +39604,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 32,
-        "publishedAt": "2025-06-14T20:23:05.136Z",
+        "publishedVersion": 39,
+        "publishedAt": "2025-10-21T21:46:13.838Z",
         "firstPublishedAt": "2025-05-25T18:57:52.469Z",
         "createdBy": {
           "sys": {
@@ -39509,8 +39621,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 10,
-        "version": 33,
+        "publishedCounter": 11,
+        "version": 40,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -39536,7 +39648,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Duo Slay packages"
+          "en-US": "Duo packages"
         },
         "slug": {
           "en-US": "duo-packages"
@@ -39552,6 +39664,12 @@
               "id": "74cDhoKxbxzmV1z9T7gw1m"
             }
           }
+        },
+        "packageSectionTitle": {
+          "en-US": "Standard deals"
+        },
+        "packageSectionSubtitle": {
+          "en-US": "Slayfit more together"
         },
         "packages": {
           "en-US": [
@@ -39577,6 +39695,18 @@
               }
             }
           ]
+        },
+        "actionButtonText1": {
+          "en-US": "Read more reviews"
+        },
+        "button1Url": {
+          "en-US": "/client-spotlights"
+        },
+        "actionButtonText2": {
+          "en-US": "Browse solo packages"
+        },
+        "button2Url": {
+          "en-US": "/pricing/solo-packages"
         },
         "faqsTitle": {
           "en-US": "FAQs"
@@ -44050,7 +44180,7 @@
         "id": "6wCYuTfgf5JHYGWCCcv7V4",
         "type": "Entry",
         "createdAt": "2025-06-10T20:02:39.810Z",
-        "updatedAt": "2025-10-09T18:53:55.782Z",
+        "updatedAt": "2025-10-21T21:39:13.634Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -44058,8 +44188,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 101,
-        "publishedAt": "2025-10-09T18:53:55.782Z",
+        "publishedVersion": 104,
+        "publishedAt": "2025-10-21T21:39:13.634Z",
         "firstPublishedAt": "2025-06-10T20:07:34.217Z",
         "createdBy": {
           "sys": {
@@ -44075,8 +44205,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 28,
-        "version": 102,
+        "publishedCounter": 29,
+        "version": 105,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -44247,6 +44377,12 @@
         },
         "actionButtonText2": {
           "en-US": "Book a free consultation"
+        },
+        "button1Url": {
+          "en-US": "/pricing"
+        },
+        "button2Url": {
+          "en-US": "/contact-and-booking"
         }
       }
     },
@@ -45080,7 +45216,7 @@
         "id": "37Zm2d5gHSB8MHFYRt8AIj",
         "type": "Entry",
         "createdAt": "2025-06-25T20:34:12.296Z",
-        "updatedAt": "2025-10-21T20:28:00.512Z",
+        "updatedAt": "2025-10-24T18:41:06.590Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45088,8 +45224,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 49,
-        "publishedAt": "2025-10-21T20:28:00.512Z",
+        "publishedVersion": 60,
+        "publishedAt": "2025-10-24T18:41:06.590Z",
         "firstPublishedAt": "2025-06-25T20:37:18.795Z",
         "createdBy": {
           "sys": {
@@ -45105,8 +45241,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 14,
-        "version": 50,
+        "publishedCounter": 15,
+        "version": 61,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45220,28 +45356,22 @@
           ]
         },
         "infoSectionTitle": {
-          "en-US": "Ready to Make Your Move?"
+          "en-US": "Take a moment to consider carefully"
         },
         "infoSectionSubtitle": {
-          "en-US": "Vili’s got you covered!"
+          "en-US": "Enrolling in this plan takes time, energy, and commitment"
         },
-        "infoImageCards": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "1hHsEQbtM4Rs4YmipT9oBA"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "3go8qDSqDHdL30klhkPJqh"
-              }
-            }
-          ]
+        "infoButtonText1": {
+          "en-US": "Browse all packages"
+        },
+        "infoButton1Url": {
+          "en-US": "/pricing"
+        },
+        "infoButtonText2": {
+          "en-US": "Book a free consultation"
+        },
+        "infoButton2Url": {
+          "en-US": "/contact-and-booking"
         }
       }
     },

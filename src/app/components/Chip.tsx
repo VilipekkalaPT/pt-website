@@ -42,7 +42,7 @@ export default function Chip({
         "bg-blue-1000": color === "blue-1000",
         "bg-transparent text-text-brand-secondary border border-border-brand-primary":
           color === "none",
-        "bg-transparent p-2 font-light text-sm": color === "ghost",
+        "bg-none": color === "ghost",
         "glass-effect": glassmorphism,
       },
       className

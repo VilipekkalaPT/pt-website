@@ -1,12 +1,14 @@
 import { StarIcon as SolidStarIcon } from "@heroicons/react/24/solid";
 import { StarIcon as OutlinedStarIcon } from "@heroicons/react/24/outline";
 import HalfStarIcon from "./HalfStarIcon";
+import { twMerge } from "tailwind-merge";
 
 interface RatingProps {
   rating: number;
+  className?: string;
 }
 
-export default function Rating({ rating }: RatingProps) {
+export default function Rating({ rating, className }: RatingProps) {
   const stars = Math.floor(rating);
   const starArray = Array.from({ length: stars }, (_, i) => i + 1);
   const halfStar = rating % 1 >= 0.5 ? 1 : 0;
@@ -14,7 +16,7 @@ export default function Rating({ rating }: RatingProps) {
   const emptyStarArray = Array.from({ length: emptyStars }, (_, i) => i + 1);
 
   return (
-    <div className="flex items-center">
+    <div className={twMerge("flex items-center", className)}>
       {starArray.map((star) => (
         <SolidStarIcon key={star} className="size-4" />
       ))}

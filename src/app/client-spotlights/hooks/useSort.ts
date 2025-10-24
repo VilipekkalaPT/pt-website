@@ -10,14 +10,14 @@ export enum SORT_TYPE {
 
 export interface SortOption {
   label: string;
-  value: SORT_TYPE;
+  type: SORT_TYPE;
 }
 
 export const sortOptions: SortOption[] = [
-  { label: "Rating ascending", value: SORT_TYPE.RATING_ASC },
-  { label: "Rating descending", value: SORT_TYPE.RATING_DESC },
-  { label: "Oldest first", value: SORT_TYPE.DATE_ASC },
-  { label: "Newest first", value: SORT_TYPE.DATE_DESC },
+  { label: "Rating ascending", type: SORT_TYPE.RATING_ASC },
+  { label: "Rating descending", type: SORT_TYPE.RATING_DESC },
+  { label: "Oldest first", type: SORT_TYPE.DATE_ASC },
+  { label: "Newest first", type: SORT_TYPE.DATE_DESC },
 ];
 
 const sortingFunctions: Record<
@@ -36,18 +36,19 @@ const sortingFunctions: Record<
 };
 
 export const useSort = (allReviews: TypeReviewFields[]) => {
-  const [selectedSort, setSelectedSort] = useState<SORT_TYPE>(
-    SORT_TYPE.DATE_DESC
-  );
+  const [selectedSort, setSelectedSort] = useState<SortOption>(sortOptions[0]);
 
-  const handleSortChange = useCallback((value: SORT_TYPE) => {
-    setSelectedSort(value);
+  const handleSortChange = useCallback((value: string) => {
+    const newSortOption = sortOptions.find((option) => option.label === value);
+    if (newSortOption) {
+      setSelectedSort(newSortOption);
+    }
   }, []);
 
   const sortedReviews = useMemo(() => {
     if (!allReviews.length) return [];
 
-    const sortFunction = sortingFunctions[selectedSort];
+    const sortFunction = sortingFunctions[selectedSort.type];
     if (!sortFunction) {
       console.warn(`Unknown sort type: ${selectedSort}`);
       return [...allReviews];

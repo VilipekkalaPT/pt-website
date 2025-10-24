@@ -1,12 +1,11 @@
 "use client";
 
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import SelectComponent, { Option } from "app/components/SelectComponent";
 import Button from "app/components/Button";
 import { TypeSessionOptionFields } from "app/lib/types/contentful";
 import { ROUTES } from "app/utils/routes";
 import { GET_STARTED, SESSION_SELECTOR_TITLE } from "app/utils/variables";
 import { useRouter } from "next/navigation";
-import { Select } from "radix-ui";
 
 interface SessionSelectorProps {
   sessionOptions: TypeSessionOptionFields[];
@@ -20,6 +19,12 @@ export default function SessionSelector({
   onSelect,
 }: SessionSelectorProps) {
   const router = useRouter();
+  const selectedValue = `${selectedOption?.numberOfSessions} ${selectedOption?.priceUnit}`;
+
+  const options: Option[] = sessionOptions.map((option) => ({
+    key: option.numberOfSessions.toString(),
+    value: `${option.numberOfSessions} ${option.priceUnit}`,
+  }));
 
   const handleSelectChange = (value: string) => {
     const selectedOption = sessionOptions.find(
@@ -37,48 +42,14 @@ export default function SessionSelector({
         <p className="mb-3 leading-[1.4]">{SESSION_SELECTOR_TITLE}</p>
       )}
       <div className="flex gap-8 items-center">
-        {sessionOptions && (
-          <Select.Root
-            defaultValue={selectedOption?.numberOfSessions.toString()}
-            onValueChange={(value) => handleSelectChange(value)}
-          >
-            <Select.Trigger
-              aria-label={SESSION_SELECTOR_TITLE}
-              className="flex items-center justify-between w-2/3 p-4 border border-border-default-primary bg-black/50 rounded-md cursor-pointer"
-            >
-              <Select.Value>
-                {selectedOption?.numberOfSessions} {selectedOption?.priceUnit}
-              </Select.Value>
-              <Select.Icon>
-                <ChevronDownIcon
-                  className="size-4 stroke-[1.6]"
-                  color="white"
-                />
-              </Select.Icon>
-            </Select.Trigger>
-
-            <Select.Portal>
-              <Select.Content
-                position="popper"
-                className="w-[var(--radix-select-trigger-width)] border border-border-default-primary bg-black/50 rounded-md"
-              >
-                <Select.Viewport className="p-1">
-                  {sessionOptions.map((option) => (
-                    <Select.Item
-                      key={option.numberOfSessions}
-                      value={option.numberOfSessions.toString()}
-                      className="relative flex items-center justify-between px-3 py-2 rounded cursor-pointer hover:bg-primary/50 data-[state=checked]:bg-primary"
-                    >
-                      <Select.ItemText>
-                        {option.numberOfSessions} {option.priceUnit}
-                      </Select.ItemText>
-                    </Select.Item>
-                  ))}
-                </Select.Viewport>
-              </Select.Content>
-            </Select.Portal>
-          </Select.Root>
-        )}
+        <SelectComponent
+          selectName={SESSION_SELECTOR_TITLE}
+          defaultValue={selectedOption?.numberOfSessions.toString() ?? ""}
+          selectedValue={selectedValue}
+          options={options}
+          onValueChange={handleSelectChange}
+          inputClassName="w-2/3"
+        />
         <Button
           variant="primary"
           label={GET_STARTED}

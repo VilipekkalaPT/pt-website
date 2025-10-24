@@ -7,9 +7,10 @@ import Rating from "app/components/Rating";
 import { getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
 import Carousel from "@/app/about/components/Carousel";
-import { DURATION, PACKAGE_TITLE } from "app/utils/variables";
+import { DURATION, PURCHASED } from "app/utils/variables";
 import Chip from "app/components/Chip";
 import ReadMore from "app/client-spotlights/components/ReadMore";
+import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 
 interface ReviewCardComponentProps {
   reviewCardType: "full" | "compact";
@@ -26,7 +27,10 @@ export default function ReviewCard({
   reviewCardType,
 }: ReviewCardProps) {
   return (
-    <Card key={review.id} className="bg-black/50">
+    <Card
+      key={review.id}
+      className="bg-black/50 border border-border-default-primary rounded-lg p-6"
+    >
       <ReviewCardHeader reviewCardType={reviewCardType} review={review} />
       <ReviewCardContent reviewCardType={reviewCardType} review={review} />
       <ReviewCardFooter reviewCardType={reviewCardType} review={review} />
@@ -41,12 +45,17 @@ const ReviewCardHeader: React.FC<ReviewCardComponentProps> = ({
   const { rating, reviewer, date } = review;
 
   return (
-    <CardHeader className="px-4 mt-4">
-      {reviewCardType === "compact" && <Rating rating={rating} />}
+    <CardHeader>
+      {reviewCardType === "compact" && (
+        <Rating rating={rating} className="mb-6" />
+      )}
       {reviewCardType === "full" && (
-        <div className="min-h-[3rem]">
-          <p className="font-bold">{reviewer}</p>
-          <p className="text-gray-400">{date}</p>
+        <div className="grid grid-cols-2 mb-4">
+          <div>
+            <p className="body-strong text-white/70">{reviewer}</p>
+            <p className="leading-[1.4] text-white/40">{date}</p>
+          </div>
+          <Rating rating={rating} className="justify-self-end items-start" />
         </div>
       )}
     </CardHeader>
@@ -60,26 +69,28 @@ const ReviewCardFooter: React.FC<ReviewCardComponentProps> = ({
   const { reviewer, package: reviewPackage, changes } = review;
 
   return (
-    <CardFooter>
+    <>
       {reviewCardType === "compact" && (
-        <>
-          <Divider />
-          <div className="flex flex-col mt-2">
+        <CardFooter className="p-0">
+          <Divider className="mt-6 flex-shrink-0" />
+          <div className="mt-6 flex flex-col flex-grow min-h-[4rem]">
             <p className="body-strong text-white/70">{reviewer}</p>
-            <p className="leading-[1.4] text-white/40">
+            <p className="leading-[1.4] text-white/40 break-words whitespace-normal">
               {reviewPackage.join(", ")}
             </p>
           </div>
-        </>
+        </CardFooter>
       )}
       {reviewCardType === "full" && (
-        <div className="mt-4 flex flex-wrap items-end gap-2 min-h-[4rem] max-h-[6rem]">
+        <CardFooter className="mt-4 p-0 flex flex-wrap items-end gap-4 min-h-[2rem]">
           {changes?.map((change: string, index: number) => {
-            return <Chip key={index} color="black" label={change} />;
+            return (
+              <Chip key={index} color="ghost" glassmorphism label={change} />
+            );
           })}
-        </div>
+        </CardFooter>
       )}
-    </CardFooter>
+    </>
   );
 };
 
@@ -93,7 +104,7 @@ const ReviewImages = ({
   if (images.length === 0) return null;
 
   return (
-    <div className="mt-4 min-h-[33rem]">
+    <div className="min-h-[33rem]">
       {images.length === 1 ? (
         <Image
           src={getAssetUrl(images[0])}
@@ -113,32 +124,32 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
   reviewCardType,
   review,
 }) => {
-  const { title, content, rating, images } = review;
+  const { title, content, images } = review;
   const imageFields =
     (images?.map((image) => image.fields) as AssetFields[]) ?? [];
 
   return (
-    <CardContent className="flex-1 flex flex-col">
+    <CardContent className="flex-1 flex flex-col p-0">
       {reviewCardType === "compact" && (
         <>
-          <p className="heading min-h-[4rem]">{title}</p>
-          <RichTextRenderer text={content} paragraphClassName="mt-2" />
+          <p className="heading">{title}</p>
+          <RichTextRenderer text={content} paragraphClassName="leading-[1.4]" />
         </>
       )}
       {reviewCardType === "full" && (
         <>
-          <Rating rating={rating} />
           <ReviewImages images={imageFields} title={title} />
-          <p className="mt-4 text-xl font-bold min-h-[4rem] line-clamp-2">
-            {title}
-          </p>
+          <p className="mt-4 heading line-clamp-2">{title}</p>
           <ReadMore document={content} />
-          <Divider />
-          <div className="flex justify-between text-sm text-gray-400">
-            <span>{PACKAGE_TITLE}</span>
+          <Divider className="my-4" />
+          <div className="py-2 flex justify-between leading-[1.4] text-white/70">
+            <div className="flex items-center justify-center gap-1">
+              <span>{PURCHASED}</span>
+              <CheckBadgeIcon className="size-6 text-green-light" />
+            </div>
             <span>{review.package.slice(0, 2).join(", ")}</span>
           </div>
-          <div className="mt-4 flex justify-between text-sm text-gray-400">
+          <div className="py-2 flex justify-between leading-[1.4] text-white/70">
             <span>{DURATION}</span>
             <span>{review.duration}</span>
           </div>

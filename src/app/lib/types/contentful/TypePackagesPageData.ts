@@ -1,7 +1,6 @@
 import type { Asset, Entry, EntryFields, EntrySkeletonType } from "contentful";
 import { TypePackageSkeleton } from "./TypePackage";
 import { TypeFaqSkeleton } from "./TypeFaq";
-import { TypeImageCardSkeleton } from "./TypeImageCard";
 
 export interface TypePackagesPageDataFields {
   title: EntryFields.Symbol;
@@ -21,9 +20,6 @@ export interface TypePackagesPageDataFields {
   faqsTitle: EntryFields.Symbol;
   faqsSubtitle: EntryFields.Symbol;
   faqs: Entry<TypeFaqSkeleton>[];
-  infoTitle: EntryFields.Symbol;
-  infoSubtitle: EntryFields.Text;
-  infoImageCards: Entry<TypeImageCardSkeleton>[];
 }
 
 export interface TypePackagesPageDataSkeleton extends EntrySkeletonType {

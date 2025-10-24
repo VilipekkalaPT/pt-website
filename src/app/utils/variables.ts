@@ -76,8 +76,9 @@ export const DIFFERENT_SERVICES_FITNESS_APP = "Fitness app";
 export const SESSION_IMAGE = "Session image";
 
 // Reviews Page Variables
-export const PACKAGE_TITLE = "Package";
+export const PURCHASED = "Purchased";
 export const DURATION = "Duration";
+export const FILTER_NONE = "None";
 
 // Pricing Page Variables
 export const SESSION_SELECTOR_TITLE = "Select a number of sessions";

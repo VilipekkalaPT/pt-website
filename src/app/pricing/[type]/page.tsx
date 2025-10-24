@@ -75,7 +75,6 @@ export default async function PackagesPage({
         button2Url={packagesPageData.button2Url}
         className="mb-16 mx-16"
       />
-
       <QuestionsAndInfo packagesPageData={packagesPageData} />
     </>
   );
