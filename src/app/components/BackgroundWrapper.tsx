@@ -10,10 +10,9 @@ export default function BackgroundWrapper({
   return (
     <div className="relative h-full w-full overflow-hidden">
       <Image
-        src="/background-1.svg"
+        src="/background-1.png"
         alt="Background"
         fill
-        priority
         sizes="100vw"
         className="object-cover object-center"
       />

@@ -47,7 +47,7 @@ export default function Journey({
   return (
     <div className="relative">
       <Image
-        src="/background-1.svg"
+        src="/background-1.png"
         alt="Philosophy Banner Background"
         fill
         className="object-cover object-bottom"

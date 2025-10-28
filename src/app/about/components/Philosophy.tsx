@@ -23,7 +23,7 @@ export default function Philosophy({
   return (
     <div className="relative">
       <Image
-        src="/background-2.svg"
+        src="/background-2.png"
         alt="Philosophy Banner Background"
         fill
         className="object-cover object-top"
