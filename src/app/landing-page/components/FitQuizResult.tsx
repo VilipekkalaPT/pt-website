@@ -31,10 +31,10 @@ export default function FitQuizResult({
   displayedPackages,
 }: FitQuizResultProps) {
   const colStyle =
-    displayedPackages.length === 2 ? "grid-cols-2" : "grid-cols-3";
+    displayedPackages.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
 
   return (
-    <div className="w-full mt-4 flex flex-col items-center">
+    <div className="w-full mt-4 flex flex-col items-center text-center">
       <ResultHeader hasMatches={hasMatchedPackages} />
       <motion.div
         key="results"
@@ -44,7 +44,7 @@ export default function FitQuizResult({
         transition={{ duration: 0.4 }}
         className="w-full flex gap-8"
       >
-        <div className={`grid ${colStyle} gap-6 items-start`}>
+        <div className={`grid grid-cols-1 ${colStyle} gap-6 items-start`}>
           {displayedPackages.map((p) => (
             <RecommendationPackageCard key={p.package.id} p={p} />
           ))}

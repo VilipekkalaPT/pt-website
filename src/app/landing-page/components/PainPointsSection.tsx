@@ -34,11 +34,14 @@ export default function PainPointsSection({
     );
   };
 
+  const mobileStyle = "flex-col h-[560px]";
+  const desktopStyle = "md:flex-row md:h-[220px]";
+
   return (
-    <div className="mt-12 mx-16 flex flex-col items-center">
+    <div className="mt-12 mx-8 md:mx-16 flex flex-col items-center text-center">
       <p className="heading mb-1">{title}</p>
       <p className="subheading text-text-secondary">{subtitle}</p>
-      <div className="mt-12 w-full h-[220px] flex gap-8">
+      <div className={cn("mt-12 w-full gap-8 flex", mobileStyle, desktopStyle)}>
         {painPoints.map((point, index) => {
           return (
             <div

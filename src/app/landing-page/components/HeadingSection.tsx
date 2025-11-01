@@ -28,7 +28,7 @@ export default function HeadingSection({
       headingSections={headingSections}
       fillImage
       heroSectionContent={
-        <div className="mt-80 flex">
+        <div className="mt-90 md:mt-100 flex">
           <Button
             label={actionButtonText1}
             variant="primary"

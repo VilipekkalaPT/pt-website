@@ -135,3 +135,21 @@ div[data-radix-popper-content-wrapper] {
     height: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .title-hero {
+    font-size: var(--text-4xl);
+  }
+
+  .subtitle {
+    font-size: var(--text-2xl);
+  }
+
+  .heading {
+    font-size: var(--text-xl);
+  }
+
+  .subheading {
+    font-size: var(--text-lg);
+  }
+}

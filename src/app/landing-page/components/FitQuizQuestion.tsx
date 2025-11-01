@@ -23,7 +23,7 @@ export default function FitQuizQuestion({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
-      className="w-full flex gap-8"
+      className="w-full flex gap-4 md:gap-8"
     >
       {stepData.options.map((option) => {
         const isSelected = selectedOptions
@@ -35,7 +35,7 @@ export default function FitQuizQuestion({
             glassmorphism
             key={option.id}
             className={cn(
-              "flex-1 py-12 px-6 justify-center items-center text-center cursor-pointer hover:bg-black/50",
+              "flex-1 py-8 px-4 md:px-6 md:py-12 justify-center items-center text-center cursor-pointer hover:bg-black/50",
               {
                 "bg-black/50": isSelected,
               }

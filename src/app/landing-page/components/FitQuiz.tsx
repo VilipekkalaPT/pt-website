@@ -54,13 +54,13 @@ export default function FitQuiz({
 
   return (
     <div
-      className="w-full py-20 min-h-screen flex gap-8"
+      className="w-full py-10 md:py-20 min-h-screen flex flex-col md:flex-row gap-8"
       id="fit-quiz"
       ref={ref}
     >
       <Card glassmorphism className="flex-3 p-6 justify-center bg-primary/50">
         <p className="mb-4 heading text-center">{FIT_QUIZ_TITLE}</p>
-        <div className="w-1/2 mx-auto">
+        <div className="w-full md:w-1/2 mx-auto">
           <StepIndicator steps={totalStepsArray} activeStep={activeStep} />
         </div>
         <FitQuizContent
@@ -87,7 +87,7 @@ export default function FitQuiz({
       </Card>
       <Card
         glassmorphism
-        className="flex-1 flex flex-col items-center justify-center bg-primary/50"
+        className="flex-1 flex flex-col items-center justify-center bg-primary/50 py-6 md:py-0"
       >
         <p className="heading mb-4">{READY_TO_SLAY_FIT}</p>
         <Button
