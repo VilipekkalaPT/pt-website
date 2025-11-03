@@ -25,8 +25,8 @@ export default function FAQSection({
   const imageUrl = getAssetUrl(image);
 
   return (
-    <div className="mt-8 md:mt-16 mx-8 md:mx-16 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div className="w-full h-full md:h-[400px] overflow-hidden">
+    <div className="mt-8 w-4/5 mx-auto py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="w-full h-full md:h-[22rem] overflow-hidden">
         <Image
           src={imageUrl}
           alt="FAQ Section Image"
@@ -37,7 +37,7 @@ export default function FAQSection({
       </div>
       <div className="flex flex-col items-start justify-center">
         <p className="heading mb-4">{title}</p>
-        <RichTextRenderer text={content} />
+        <RichTextRenderer text={content} paragraphClassName="leading-[1.4]" />
         <Button
           label={buttonText}
           variant="ghost"

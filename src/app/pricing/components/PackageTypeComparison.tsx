@@ -41,31 +41,37 @@ export default function PackageTypeComparison({
   rows,
 }: PackageTypeComparisonProps) {
   return (
-    <Card
-      glassmorphism
-      className="w-full grid grid-cols-5 auto-rows-fr p-8 gap-8"
-    >
-      {columnTitles.map((col) => (
-        <p
-          key={col.id}
-          className={cn({
-            "text-center body-strong":
-              col.id !== PackageTypeComparisonEnum.FEATURES,
+    <Card glassmorphism className="w-full py-8">
+      <div className="grid grid-cols-5 gap-8 p-4">
+        {columnTitles.map((col) => (
+          <p
+            key={col.id}
+            className={cn({
+              "text-center body-strong":
+                col.id !== PackageTypeComparisonEnum.FEATURES,
+            })}
+          >
+            {col.label}
+          </p>
+        ))}
+      </div>
+      {rows.map((row, rowIndex) => (
+        <div
+          key={rowIndex}
+          className={cn("grid grid-cols-5 h-20 gap-8 rounded-lg p-4", {
+            "bg-white/10": rowIndex % 2 === 0,
           })}
         >
-          {col.label}
-        </p>
+          {columnTitles.map((col) => (
+            <div
+              key={`${col.id}-${rowIndex}`}
+              className="flex flex-col items-center justify-center"
+            >
+              <PackageTypeComparisonCell columnId={col.id} row={row} />
+            </div>
+          ))}
+        </div>
       ))}
-      {rows.map((row, rowIndex) =>
-        columnTitles.map((col) => (
-          <div
-            key={`${col.id}-${rowIndex}`}
-            className="flex flex-col items-center"
-          >
-            {PackageTypeComparisonCell({ columnId: col.id, row })}
-          </div>
-        ))
-      )}
     </Card>
   );
 }
@@ -103,12 +109,12 @@ const PackageTypeComparisonCell = ({
 
   if (row.availableFor?.includes(columnId)) {
     return (
-      <div className="flex flex-col items-center">
+      <>
         <p className="text-sm">✅</p>
         {columnId === PackageTypeComparisonEnum.COMBO && row.extraText && (
           <span className={cn("ml-2 text-sm", textStyle)}>{row.extraText}</span>
         )}
-      </div>
+      </>
     );
   } else if (row.availableFor) {
     return <p className="text-sm">❌</p>;

@@ -35,7 +35,9 @@ export default function Button({
     <button
       className={twMerge(
         cn(
-          "flex items-center gap-2 p-3 leading-4 rounded-full cursor-pointer appearance-none no-underline border-0 select-none tap-transparent overflow-hidden focus:outline-none",
+          "flex items-center gap-2 p-3 overflow-hidden border-0 rounded-full",
+          "leading-4 font-normal",
+          "cursor-pointer appearance-none no-underline select-none tap-transparent focus:outline-none",
           {
             "bg-blue text-text-black-30": variant === "primary",
             "bg-white text-text-black-30": variant === "secondary",

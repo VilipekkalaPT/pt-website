@@ -49,7 +49,7 @@ export default function CardsFitQuizSection({
   };
 
   return (
-    <div ref={containerRef} className="mx-8 md:mx-16 mt-6">
+    <div ref={containerRef} className="w-4/5 mx-auto mt-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {cards.map((card, index) => (
           <Card key={index} glassmorphism className="px-8 py-16 bg-primary/50">

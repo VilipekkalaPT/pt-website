@@ -39,8 +39,7 @@ export default function PricingPageHeading({
         headingSections={headingSections}
         fillImage={false}
       />
-      <div className="absolute inset-0 bg-linear-to-b bg-black/40 z-8" />
-      <div className="w-[93%] absolute bottom-6 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex gap-8 z-20">
+      <div className="w-4/5 mx-auto absolute bottom-6 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex gap-8 z-20">
         {packageCards.map((card, index) => (
           <div
             key={index}
@@ -58,6 +57,8 @@ export default function PricingPageHeading({
               <p className="subheading mb-4">{card.subtitle}</p>
               <Button
                 variant="primary"
+                glassmorphism
+                hasShadow
                 label={card.actionButtonText}
                 onClick={() => {
                   if (card.url) {

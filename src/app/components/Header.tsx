@@ -38,7 +38,7 @@ export default function Header({ navigations, logo }: HeaderProps) {
   const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
 
   return (
-    <div className="flex items-center justify-between mx-8 py-6 shadow z-50">
+    <div className="flex items-center justify-between mx-8 py-6 shadow z-50 font-normal">
       <Link href="/" className="flex items-center">
         <Image src={logoUrl} alt="Logo" width={200} height={200} />
       </Link>
@@ -134,7 +134,7 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
     <Link
       key={item.id}
       href={item.url || "/"}
-      className={cn("py-2 px-4 rounded-lg", {
+      className={cn("py-2 px-4 rounded-lg hover:bg-blue-hover", {
         "bg-blue text-text-black-30": pathName.includes(item.url),
       })}
     >

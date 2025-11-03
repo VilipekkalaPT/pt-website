@@ -38,7 +38,7 @@ export default function PainPointsSection({
   const desktopStyle = "md:flex-row md:h-[220px]";
 
   return (
-    <div className="mt-12 mx-8 md:mx-16 flex flex-col items-center text-center">
+    <div className="mt-12 w-4/5 mx-auto flex flex-col items-center text-center">
       <p className="heading mb-1">{title}</p>
       <p className="subheading text-text-secondary">{subtitle}</p>
       <div className={cn("mt-12 w-full gap-8 flex", mobileStyle, desktopStyle)}>

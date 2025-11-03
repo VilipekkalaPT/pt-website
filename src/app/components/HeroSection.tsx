@@ -56,6 +56,7 @@ export default function HeroSection({
           className="object-cover object-center"
         />
       )}
+      <div className="absolute inset-0 bg-linear-to-b bg-black/40" />
       <div className="absolute inset-0 z-10 flex items-center justify-center">
         {headingSections.map((section, i) => (
           <div

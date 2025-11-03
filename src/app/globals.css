@@ -6,6 +6,7 @@
   --color-primary: rgba(138, 34, 115);
   --color-blue: rgba(44, 212, 255);
   --color-blue-1000: rgba(14, 24, 111);
+  --color-blue-hover: rgba(0, 161, 202);
   --color-cyan: rgba(86, 231, 244);
   --color-pink: rgba(234, 63, 184);
   --color-mint: rgba(78, 250, 213);
@@ -75,6 +76,7 @@ body {
   overflow-x: hidden;
   color: var(--color-white);
   font-size: var(--text-base);
+  font-weight: 300;
   line-height: 100%;
 }
 

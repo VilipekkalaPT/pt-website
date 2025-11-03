@@ -132,7 +132,7 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
     <CardContent className="flex-1 flex flex-col p-0">
       {reviewCardType === "compact" && (
         <>
-          <p className="heading">{title}</p>
+          <p className="heading mb-4">{title}</p>
           <RichTextRenderer text={content} paragraphClassName="leading-[1.4]" />
         </>
       )}
