@@ -78,7 +78,8 @@ export const SESSION_IMAGE = "Session image";
 // Reviews Page Variables
 export const PURCHASED = "Purchased";
 export const DURATION = "Duration";
-export const FILTER_NONE = "None";
+export const SELECT_FILTER = "Select filter";
+export const CLEAR_ALL_FILTERS = "Clear all filters";
 
 // Pricing Page Variables
 export const SESSION_SELECTOR_TITLE = "Select a number of sessions";

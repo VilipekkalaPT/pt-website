@@ -22,7 +22,7 @@ export interface TypePackageFields {
   howTrainingSessionLooksLikeSubtitle?: EntryFields.Symbol;
   howTrainingSessionLooksLikeImages?: Entry<TypeHowTrainingSessionLooksLikeSkeleton>[];
   tags: ("diet" | "gym" | "plan")[];
-  isMostPopular: EntryFields.Boolean;
+  hasFreeGift: EntryFields.Boolean;
 }
 
 export interface TypePackageSkeleton extends EntrySkeletonType {

@@ -8,7 +8,7 @@ export default function BackgroundWrapper({
   children,
 }: BackgroundWrapperProps) {
   return (
-    <div className="relative h-full w-full overflow-hidden">
+    <div className="relative h-full w-full">
       <Image
         src="/background-1.png"
         alt="Background"

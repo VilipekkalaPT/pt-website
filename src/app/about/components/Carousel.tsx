@@ -41,7 +41,7 @@ export default function Carousel({ images, sliderPerView }: CarouselProps) {
     <div className="relative w-full mx-auto h-full">
       <div
         ref={sliderRef}
-        className="keen-slider h-full overflow-hidden rounded-lg"
+        className="keen-slider h-120 overflow-hidden rounded-lg"
       >
         {images.map((image, index) => {
           const imageUrl = getAssetUrl(image);
@@ -51,8 +51,8 @@ export default function Carousel({ images, sliderPerView }: CarouselProps) {
               <Image
                 src={imageUrl}
                 alt={image.title ?? "Image"}
-                width={image.file?.details.image?.width}
-                height={image.file?.details.image?.height}
+                fill
+                className="object-cover object-top"
               />
             </div>
           );

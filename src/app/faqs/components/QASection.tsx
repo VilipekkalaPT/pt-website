@@ -51,7 +51,7 @@ export default function QASection({ questions }: QASectionProps) {
   }, []);
 
   return (
-    <div className="mx-16 py-16 flex gap-8 items-start">
+    <div className="w-4/5 mx-auto py-16 flex gap-8 items-start">
       <TopicList
         topicQuestions={topicQuestions}
         handleSelectTopic={handleSelectTopic}

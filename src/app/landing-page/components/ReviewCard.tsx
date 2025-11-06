@@ -104,7 +104,7 @@ const ReviewImages = ({
   if (images.length === 0) return null;
 
   return (
-    <div className="min-h-[33rem]">
+    <div className="min-h-48">
       {images.length === 1 ? (
         <Image
           src={getAssetUrl(images[0])}
@@ -139,9 +139,9 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
       {reviewCardType === "full" && (
         <>
           <ReviewImages images={imageFields} title={title} />
-          <p className="mt-4 heading line-clamp-2">{title}</p>
+          <p className="min-h-14 mt-4 heading line-clamp-2">{title}</p>
           <ReadMore document={content} />
-          <Divider className="my-4" />
+          <Divider className="my-6" />
           <div className="py-2 flex justify-between leading-[1.4] text-white/70">
             <div className="flex items-center justify-center gap-1">
               <span>{PURCHASED}</span>

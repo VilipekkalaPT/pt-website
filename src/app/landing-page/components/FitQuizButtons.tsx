@@ -34,7 +34,6 @@ export default function FitQuizButtons({
   };
 
   const handleBack = () => {
-    console.log(activeStep);
     if (activeStep === totalSteps - 1) {
       handleShowResult(false);
     }

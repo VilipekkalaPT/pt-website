@@ -40,8 +40,13 @@ export default function SessionSelector({
   }));
 
   const handleSelectChange = (value: string) => {
+    const numberOfSessions = parseInt(value.split(" ")[0], 10);
+    if (isNaN(numberOfSessions)) {
+      return;
+    }
+
     const selectedOption = sessionOptions.find(
-      (option) => option.numberOfSessions.toString() === value
+      (option) => option.numberOfSessions === numberOfSessions
     );
 
     if (selectedOption) {

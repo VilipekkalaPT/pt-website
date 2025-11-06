@@ -1,7 +1,6 @@
 import { useState, useCallback, useMemo } from "react";
 
 import { TypeReviewFields } from "app/lib/types/contentful";
-import { FILTER_NONE } from "app/utils/variables";
 
 export type ReviewChange =
   | "Adopt a new lifestyle"
@@ -13,10 +12,7 @@ export type ReviewChange =
   | "Move better"
   | "Sleep better";
 
-export type FilterValue = ReviewChange | typeof FILTER_NONE;
-
-export const filterOptions: FilterValue[] = [
-  FILTER_NONE,
+export const filterOptions: ReviewChange[] = [
   "Adopt a new lifestyle",
   "Boost overall fitness",
   "Improve posture",
@@ -28,26 +24,38 @@ export const filterOptions: FilterValue[] = [
 ];
 
 export const useFilter = (allReviews: TypeReviewFields[]) => {
-  const [selectedFilter, setSelectedFilter] =
-    useState<FilterValue>(FILTER_NONE);
+  const [selectedFilter, setSelectedFilter] = useState<ReviewChange[]>([]);
 
   const handleFilterChange = useCallback((value: string) => {
-    setSelectedFilter(value as FilterValue);
+    const filterValue = value as ReviewChange;
+
+    setSelectedFilter((prev) => {
+      if (prev.includes(filterValue)) {
+        return prev.filter((filter) => filter !== filterValue);
+      } else {
+        return [...prev, filterValue];
+      }
+    });
+  }, []);
+
+  const clearAllFilters = useCallback(() => {
+    setSelectedFilter([]);
   }, []);
 
   const filteredReviews = useMemo(() => {
-    if (selectedFilter === FILTER_NONE) {
+    if (selectedFilter.length === 0) {
       return allReviews;
     }
-
-    return allReviews.filter((review) =>
-      review.changes?.includes(selectedFilter)
-    );
+    return allReviews.filter((review) => {
+      if (!review.changes || review.changes.length === 0) return false;
+      return selectedFilter.some((filter) => review.changes?.includes(filter));
+    });
   }, [allReviews, selectedFilter]);
 
   return {
     filteredReviews,
     selectedFilter,
     handleFilterChange,
+    clearAllFilters,
   };
 };

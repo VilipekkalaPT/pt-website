@@ -24,7 +24,7 @@ export default function PackagesContainer({
 
   return (
     <div
-      className={cn("mx-16 flex flex-col items-center", {
+      className={cn("w-3/5 mx-auto flex flex-col items-center", {
         "pt-16 pb-12": !hasComboPackages,
         "pt-4 pb-6": hasComboPackages,
       })}

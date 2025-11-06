@@ -13,7 +13,7 @@ import {
   BoltIcon,
   FireIcon,
   DocumentIcon,
-  SparklesIcon,
+  GiftIcon,
 } from "@heroicons/react/24/outline";
 import { getChipColor } from "app/utils/utils";
 
@@ -37,7 +37,7 @@ export default function PackageCard({
     mode,
     tags,
     image,
-    isMostPopular,
+    hasFreeGift,
   } = singlePackage;
   const imageField = image?.fields as AssetFields | undefined;
   const imageUrl = getAssetUrl(imageField);
@@ -54,21 +54,20 @@ export default function PackageCard({
           alt={`Landscape image for ${name}`}
           width={imageField?.file?.details.image?.width}
           height={imageField?.file?.details.image?.height}
-          className="block w-full h-auto"
         />
-        {isMostPopular && (
+        {hasFreeGift && (
           <div className="absolute bottom-0 right-6 translate-y-1/2">
             <Chip
               label=""
               color="green"
               className="rounded-full w-13 h-13 p-0 justify-center"
               glassmorphism
-              iconRight={<SparklesIcon className="size-6 stroke-[1.5]" />}
+              iconRight={<GiftIcon className="size-6 stroke-[1.5]" />}
             />
           </div>
         )}
       </CardHeader>
-      <CardContent className="flex-1 flex flex-col justify-start items-start">
+      <CardContent className="flex flex-col justify-start items-start">
         <Chip
           label={capitalizeFirstLetter(mode)}
           color={getChipColor(mode)}

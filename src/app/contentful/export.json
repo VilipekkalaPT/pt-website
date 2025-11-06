@@ -409,7 +409,7 @@
         "id": "package",
         "type": "ContentType",
         "createdAt": "2025-04-16T20:55:40.950Z",
-        "updatedAt": "2025-10-17T18:46:02.598Z",
+        "updatedAt": "2025-11-04T20:27:40.396Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -417,8 +417,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 147,
-        "publishedAt": "2025-10-17T18:46:02.598Z",
+        "publishedVersion": 149,
+        "publishedAt": "2025-11-04T20:27:40.396Z",
         "firstPublishedAt": "2025-04-16T20:55:41.312Z",
         "createdBy": {
           "sys": {
@@ -434,8 +434,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 74,
-        "version": 148,
+        "publishedCounter": 75,
+        "version": 150,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -899,8 +899,8 @@
           }
         },
         {
-          "id": "isMostPopular",
-          "name": "Is most popular",
+          "id": "hasFreeGift",
+          "name": "Has free gift",
           "type": "Boolean",
           "localized": false,
           "required": true,
@@ -2200,7 +2200,7 @@
         "id": "packagesPageData",
         "type": "ContentType",
         "createdAt": "2025-05-25T18:51:32.715Z",
-        "updatedAt": "2025-10-21T21:41:52.047Z",
+        "updatedAt": "2025-10-24T18:45:17.199Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2208,8 +2208,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 43,
-        "publishedAt": "2025-10-21T21:41:52.047Z",
+        "publishedVersion": 47,
+        "publishedAt": "2025-10-24T18:45:17.199Z",
         "firstPublishedAt": "2025-05-25T18:51:33.027Z",
         "createdBy": {
           "sys": {
@@ -2225,8 +2225,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 22,
-        "version": 44,
+        "publishedCounter": 24,
+        "version": 48,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2432,45 +2432,6 @@
         {
           "id": "faqs",
           "name": "FAQs",
-          "type": "Array",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "infoTitle",
-          "name": "Info Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "infoSubtitle",
-          "name": "Info Subtitle",
-          "type": "Text",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "infoImageCards",
-          "name": "Info Image Cards",
           "type": "Array",
           "localized": false,
           "required": true,
@@ -3976,7 +3937,7 @@
         "id": "footer",
         "type": "ContentType",
         "createdAt": "2025-10-05T17:59:10.177Z",
-        "updatedAt": "2025-10-05T18:27:10.328Z",
+        "updatedAt": "2025-11-01T20:52:11.556Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3984,8 +3945,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2025-10-05T18:27:10.328Z",
+        "publishedVersion": 19,
+        "publishedAt": "2025-11-01T20:52:11.556Z",
         "firstPublishedAt": "2025-10-05T17:59:10.630Z",
         "createdBy": {
           "sys": {
@@ -4001,8 +3962,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 9,
-        "version": 18,
+        "publishedCounter": 10,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4063,7 +4024,7 @@
               "in": [
                 "contact",
                 "explore",
-                "condtion & policy"
+                "condition & policy"
               ]
             }
           ],
@@ -4954,7 +4915,7 @@
             "linkType": "Space"
           }
         },
-        "version": 148,
+        "version": 150,
         "createdAt": "2025-04-16T20:55:41.413Z",
         "createdBy": {
           "sys": {
@@ -4963,7 +4924,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-10-17T18:46:03.214Z",
+        "updatedAt": "2025-11-04T20:27:41.319Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5086,7 +5047,7 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "isMostPopular",
+          "fieldId": "hasFreeGift",
           "widgetId": "boolean",
           "widgetNamespace": "builtin"
         }
@@ -5768,7 +5729,7 @@
             "linkType": "Space"
           }
         },
-        "version": 44,
+        "version": 48,
         "createdAt": "2025-05-25T18:51:33.259Z",
         "createdBy": {
           "sys": {
@@ -5777,7 +5738,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-10-21T21:41:52.918Z",
+        "updatedAt": "2025-10-24T18:45:17.963Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -5883,21 +5844,6 @@
         },
         {
           "fieldId": "faqs",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "infoTitle",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "infoSubtitle",
-          "widgetId": "markdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "infoImageCards",
           "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         }
@@ -6688,7 +6634,7 @@
             "linkType": "Space"
           }
         },
-        "version": 18,
+        "version": 20,
         "createdAt": "2025-10-05T17:59:10.759Z",
         "createdBy": {
           "sys": {
@@ -6697,7 +6643,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-10-05T18:27:11.014Z",
+        "updatedAt": "2025-11-01T20:52:12.192Z",
         "updatedBy": {
           "sys": {
             "id": "6K7VOlm7DWbvmf3Xjwpzvw",
@@ -7594,7 +7540,7 @@
         "id": "2g6sVtL4Ep7MWdWetsbhan",
         "type": "Entry",
         "createdAt": "2025-04-18T15:36:56.249Z",
-        "updatedAt": "2025-06-28T12:22:42.548Z",
+        "updatedAt": "2025-11-02T18:59:45.859Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7602,8 +7548,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 128,
-        "publishedAt": "2025-06-28T12:22:42.548Z",
+        "publishedVersion": 132,
+        "publishedAt": "2025-11-02T18:59:45.859Z",
         "firstPublishedAt": "2025-04-18T15:38:46.785Z",
         "createdBy": {
           "sys": {
@@ -7619,8 +7565,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 35,
-        "version": 129,
+        "publishedCounter": 37,
+        "version": 133,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7707,7 +7653,9 @@
         },
         "changes": {
           "en-US": [
-            "Improve posture"
+            "Improve posture",
+            "Sleep better",
+            "Boost overall fitness"
           ]
         },
         "rating": {
@@ -8803,7 +8751,7 @@
             "gym"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -9842,7 +9790,7 @@
             "plan"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -10732,7 +10680,7 @@
             "plan"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -11716,7 +11664,7 @@
             "diet"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -12922,7 +12870,7 @@
             "gym"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -14463,7 +14411,7 @@
             "diet"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -15507,7 +15455,7 @@
             "diet"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -16496,7 +16444,7 @@
             "plan"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": true
         }
       }
@@ -17545,7 +17493,7 @@
             "diet"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -18680,7 +18628,7 @@
         "id": "4oqrXQ2ajYK4LwnqXRN9g8",
         "type": "Entry",
         "createdAt": "2025-05-04T20:30:33.049Z",
-        "updatedAt": "2025-05-06T11:07:47.002Z",
+        "updatedAt": "2025-11-02T19:36:01.792Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -18688,8 +18636,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 16,
-        "publishedAt": "2025-05-06T11:07:47.002Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-11-02T19:36:01.792Z",
         "firstPublishedAt": "2025-05-04T20:31:04.324Z",
         "createdBy": {
           "sys": {
@@ -18705,8 +18653,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 17,
+        "publishedCounter": 6,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -18736,165 +18684,151 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Build comfort in the gym, learn core movement patterns, and develop coordination as a training pair.",
                     "marks": [
                     ],
-                    "value": " Build comfort in the gym, learn core movement patterns, and develop coordination as a training pair.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "heading-4",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
+                    "nodeType": "text",
                     "value": "In-Person Gym Sessions",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-4"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Introduction to gym equipment and basic exercises: safe handling, setup, and correct form. Also in-gym terminologies",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Learn how to train together—spotting, pacing, and supporting each other.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Establish routines around warm-ups, cool-downs, and movement preparation.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Set individual goals and shared expectations for teamwork and accountability.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Introduction to gym equipment and basic exercises: safe handling, setup, and correct form. Also in-gym terminologies",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Learn how to train together—spotting, pacing, and supporting each other.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Establish routines around warm-ups, cool-downs, and movement preparation.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Set individual goals and shared expectations for teamwork and accountability.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -18917,7 +18851,7 @@
         "id": "3tjmxujEzUFjcz1KlK0tQv",
         "type": "Entry",
         "createdAt": "2025-05-04T20:31:11.071Z",
-        "updatedAt": "2025-05-06T11:08:21.410Z",
+        "updatedAt": "2025-11-02T19:36:14.061Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -18925,8 +18859,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 14,
-        "publishedAt": "2025-05-06T11:08:21.410Z",
+        "publishedVersion": 16,
+        "publishedAt": "2025-11-02T19:36:14.061Z",
         "firstPublishedAt": "2025-05-04T20:31:29.133Z",
         "createdBy": {
           "sys": {
@@ -18942,8 +18876,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 15,
+        "publishedCounter": 6,
+        "version": 17,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -18973,147 +18907,136 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Start pushing performance and technique while maintaining teamwork and fun.",
                     "marks": [
                     ],
-                    "value": " Start pushing performance and technique while maintaining teamwork and fun.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Increase difficulty: more load, volume, or complexity in chosen exercises.",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Introduce new movements and slight variations tailored to each person.",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Practice consistent spotting and workout flow as a duo.",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Build mutual confidence through shared wins and challenges.",
                             "marks": [
                             ],
-                            "value": "Build mutual confidence through shared wins and challenges.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -19136,7 +19059,7 @@
         "id": "7mhTg6IQfGuGbAg3QdNyJu",
         "type": "Entry",
         "createdAt": "2025-05-04T20:31:35.376Z",
-        "updatedAt": "2025-05-06T11:08:30.418Z",
+        "updatedAt": "2025-11-02T19:36:22.875Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -19144,8 +19067,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 20,
-        "publishedAt": "2025-05-06T11:08:30.418Z",
+        "publishedVersion": 22,
+        "publishedAt": "2025-11-02T19:36:22.875Z",
         "firstPublishedAt": "2025-05-04T20:31:51.800Z",
         "createdBy": {
           "sys": {
@@ -19161,8 +19084,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 21,
+        "publishedCounter": 6,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -19192,169 +19115,158 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Strengthen movement quality, increase self-reliance, and prepare for continued progress beyond the program.",
                     "marks": [
                     ],
-                    "value": " Strengthen movement quality, increase self-reliance, and prepare for continued progress beyond the program.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Refine form and reinforce technique in foundational lifts.",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Switch up exercises, introduce the basics of planning a session",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Encourage each person to lead parts of the session to boost autonomy.",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
+                            "nodeType": "text",
                             "value": "Recap all learned skills and create a framework for training beyond coaching.",
-                            "nodeType": "text"
+                            "marks": [
+                            ],
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Celebrate progress and set up strategies for staying consistent as training partners.",
                             "marks": [
                             ],
-                            "value": "Celebrate progress and set up strategies for staying consistent as training partners.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -19377,7 +19289,7 @@
         "id": "53U8503ckKN6ITmSXKLe5S",
         "type": "Entry",
         "createdAt": "2025-05-04T20:31:59.034Z",
-        "updatedAt": "2025-05-06T10:39:28.338Z",
+        "updatedAt": "2025-11-02T19:36:31.365Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -19385,8 +19297,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2025-05-06T10:39:28.338Z",
+        "publishedVersion": 13,
+        "publishedAt": "2025-11-02T19:36:31.365Z",
         "firstPublishedAt": "2025-05-04T20:32:11.984Z",
         "createdBy": {
           "sys": {
@@ -19402,8 +19314,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 12,
+        "publishedCounter": 6,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -19433,249 +19345,143 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A targeted solution to your challenges and a science-backed game plan to crush your goals",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "targeted solution to your challenges",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " and a ",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "science-backed game plan",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " to crush your goals",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Smarter, more effective workouts",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Smarter, more effective workouts that actually move the needle",
                             "marks": [
                             ],
-                            "value": " that actually move the needle",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A clear understanding of how to train right—no more guesswork",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "clear understanding of how to train right",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "—no more guesswork",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A real strategy for long-term success, not just quick fixes",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "real strategy for long-term success",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": ", not just quick fixes",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A boost in confidence, drive, and results—because you’re training with purpose",
                             "marks": [
                             ],
-                            "value": "A boost in ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "confidence, drive, and results",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "—because you’re training with purpose",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -21264,7 +21070,7 @@
         "id": "4wbUo0dRcZs2ogd0w6tMUO",
         "type": "Entry",
         "createdAt": "2025-05-05T12:43:03.638Z",
-        "updatedAt": "2025-05-06T11:09:00.519Z",
+        "updatedAt": "2025-11-02T19:37:22.884Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -21272,8 +21078,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2025-05-06T11:09:00.519Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-11-02T19:37:22.884Z",
         "firstPublishedAt": "2025-05-05T12:43:34.923Z",
         "createdBy": {
           "sys": {
@@ -21289,8 +21095,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 13,
+        "publishedCounter": 7,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -21320,300 +21126,223 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Build solid habits for both training and nutrition, focusing on simple yet effective strategies that are easy to maintain.",
                     "marks": [
                     ],
-                    "value": " Build solid habits for both training and nutrition, focusing on simple yet effective strategies that are easy to maintain.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "heading-4",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
+                    "nodeType": "text",
                     "value": "Training Plan Focus",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-4"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Intro to Basic Exercises & Movement Patterns:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Learn key exercises (e.g., squats, push-ups) to build strength and mobility with proper form.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Progressive Overload:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Start with lighter resistance and gradually increase intensity.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Form Check:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Submit workout videos for feedback on technique.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
                     "marks": [
                       {
                         "type": "bold"
                       }
                     ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Intro to Basic Exercises & Movement Patterns: Learn key exercises (e.g., squats, push-ups) to build strength and mobility with proper form.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Progressive Overload: Start with lighter resistance and gradually increase intensity.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Form Check: Submit workout videos for feedback on technique.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
                     "value": "Diet Coaching Focus",
-                    "nodeType": "text"
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "heading-4"
+                ]
               },
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Calorie Tracking & Photo Logging:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Calorie Tracking & Photo Logging: Start using a tracking app and send daily food photos to improve awareness.",
                             "marks": [
                             ],
-                            "value": " Start using a tracking app (e.g., MyFitnessPal) and send daily food photos to improve awareness.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Visual Guides:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Visual Guides: Use portion guides and balanced meal templates to simplify eating choices.",
                             "marks": [
                             ],
-                            "value": " Use portion guides and balanced meal templates to simplify eating choices.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Weekly Check-In:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Weekly Check-In: Share weight progress weekly (optional) and reflect on eating habits.",
                             "marks": [
                             ],
-                            "value": " Share weight progress weekly (optional) and reflect on eating habits.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -21636,7 +21365,7 @@
         "id": "48giCxDmUkU3WxHuGGW5x3",
         "type": "Entry",
         "createdAt": "2025-05-05T12:43:39.797Z",
-        "updatedAt": "2025-05-06T11:09:06.435Z",
+        "updatedAt": "2025-11-02T19:39:21.338Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -21644,8 +21373,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2025-05-06T11:09:06.435Z",
+        "publishedVersion": 25,
+        "publishedAt": "2025-11-02T19:39:21.338Z",
         "firstPublishedAt": "2025-05-05T12:43:54.210Z",
         "createdBy": {
           "sys": {
@@ -21661,8 +21390,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 12,
+        "publishedCounter": 5,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -21692,300 +21421,217 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Customize workouts and nutrition based on individual progress, while introducing flexibility in both areas for long-term sustainability.",
                     "marks": [
                     ],
-                    "value": " Customize workouts and nutrition based on individual progress, while introducing flexibility in both areas for long-term sustainability.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "heading-4",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
+                    "nodeType": "text",
                     "value": "Training Plan Focus",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-4"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Progressive Overload:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Continue to increase workout intensity (e.g., adding weights, reps) to promote strength gains.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Exercise Variations:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Introduce new exercises to keep workouts fresh and prevent plateaus.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Personal Adjustments:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Modify exercises and training volume based on feedback to meet individual needs.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
                     "marks": [
-                      {
-                        "type": "bold"
-                      }
                     ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Progressive Overload: Continue to increase workout intensity or volume to promote strength gains.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Exercise Variations: Introduce new exercises accordingly",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Personal Adjustments: Modify exercises and training volume based on feedback",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
                     "value": "Diet Coaching Focus",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-4"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Personalized Nutrition:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Fine-tune calorie intake and macronutrient balance based on progress and goals.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Meal Flexibility:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Teach strategies for dining out, managing busy schedules, and making healthy choices without rigid plans.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Weekly Check-In:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Continue weight check-ins and reflect on food choices, discussing areas for improvement or celebration.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Personalized Nutrition: Fine-tune calorie intake and macronutrient.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Meal Flexibility: Teach strategies for dining out, managing busy schedules, and making healthy choices without rigid plans.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Weekly Check-In: Continue weight check-ins and reflect on food choices.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -22008,7 +21654,7 @@
         "id": "HwxdsYb0aBs5hrxWbfdaD",
         "type": "Entry",
         "createdAt": "2025-05-05T12:43:59.027Z",
-        "updatedAt": "2025-05-06T11:09:12.278Z",
+        "updatedAt": "2025-11-02T19:45:18.776Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -22016,8 +21662,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2025-05-06T11:09:12.278Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-11-02T19:45:18.776Z",
         "firstPublishedAt": "2025-05-05T12:44:14.261Z",
         "createdBy": {
           "sys": {
@@ -22033,8 +21679,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 11,
+        "publishedCounter": 5,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -22064,300 +21710,217 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Empower clients to make confident, independent choices and ensure they have a sustainable plan for continued progress after the program.",
                     "marks": [
                     ],
-                    "value": " Empower clients to make confident, independent choices and ensure they have a sustainable plan for continued progress after the program.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "heading-4",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
+                    "nodeType": "text",
                     "value": "Training Plan Focus",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-4"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Independent Workout Design:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Teach clients how to structure their own workouts based on goals, increasing intensity or changing exercises.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Advanced Techniques:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Introduce advanced methods (e.g., supersets, drop sets) for continued progress.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Final Form Check:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Ensure correct form on key exercises and solidify routine for independent training.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
                     "marks": [
-                      {
-                        "type": "bold"
-                      }
                     ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Independent Workout Design: Teach clients how to structure their own workouts based on goals.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Advanced Techniques: Introduce advanced methods (e.g., supersets, drop sets) for continued progress.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Final Form Check: Ensure correct form on key exercises and solidify routine.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
                     "value": "Diet Coaching Focus",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-4"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Intuitive Eating:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Focus on listening to hunger and fullness cues, and building a balanced approach without rigid rules.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Sustainable Maintenance:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Create a personalized long-term nutrition plan that fits the client’s lifestyle and goals.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Weekly Check-In:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " Reflect on progress using both weight and non-weight metrics (e.g., energy, mood) and set the stage for future success.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Intuitive Eating: Focus on listening to hunger and fullness cues, and building a balanced approach.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Sustainable Maintenance: Create a personalized long-term nutrition plan.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Weekly Check-In: Reflect on progress using both weight and non-weight metrics (e.g., energy, mood)",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -22380,7 +21943,7 @@
         "id": "hAXGxIsWBKwdEc1sxRYq4",
         "type": "Entry",
         "createdAt": "2025-05-05T12:44:18.571Z",
-        "updatedAt": "2025-05-06T10:59:02.346Z",
+        "updatedAt": "2025-11-02T19:45:29.804Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -22388,8 +21951,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-05-06T10:59:02.346Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-11-02T19:45:29.804Z",
         "firstPublishedAt": "2025-05-05T12:44:35.985Z",
         "createdBy": {
           "sys": {
@@ -22405,8 +21968,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -22436,249 +21999,143 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A targeted solution to your challenges and a science-backed game plan to crush your goals",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "targeted solution to your challenges",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " and a ",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "science-backed game plan",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " to crush your goals",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Smarter, more effective workouts",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Smarter, more effective workouts that actually move the needle",
                             "marks": [
                             ],
-                            "value": " that actually move the needle",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A clear understanding of how to train right—no more guesswork",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "clear understanding of how to train right",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "—no more guesswork",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A real strategy for long-term success, not just quick fixes",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "real strategy for long-term success",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": ", not just quick fixes",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A boost in confidence, drive, and results—because you’re training with purpose",
                             "marks": [
                             ],
-                            "value": "A boost in ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "confidence, drive, and results",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "—because you’re training with purpose",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -22813,7 +22270,7 @@
         "id": "5AlwI02N3hvLFSN6bfRwiE",
         "type": "Entry",
         "createdAt": "2025-05-05T12:45:20.085Z",
-        "updatedAt": "2025-05-06T11:09:24.120Z",
+        "updatedAt": "2025-11-02T19:46:12.226Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -22821,8 +22278,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2025-05-06T11:09:24.120Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-11-02T19:46:12.226Z",
         "firstPublishedAt": "2025-05-05T12:45:44.115Z",
         "createdBy": {
           "sys": {
@@ -22838,8 +22295,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 14,
+        "publishedCounter": 6,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -22869,191 +22326,136 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Build confidence with fundamental training, correct form early, and get familiar with your plan both online and in-person.",
                     "marks": [
                     ],
-                    "value": " Build confidence with fundamental training, correct form early, and get familiar with your plan both online and in-person.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Training Plan Kickoff:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Training Plan Kickoff: Start a structured online strength plan with guidance on how to follow sessions independently (e.g., warm-ups, sets, rest).",
                             "marks": [
                             ],
-                            "value": " Start a structured online strength plan with guidance on how to follow sessions independently (e.g., warm-ups, sets, rest).",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "In-Person Sessions for Technique & Setup:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "In-Person Sessions for Technique & Setup: Use early gym sessions to learn proper form, breathing, and how to set up equipment correctly.",
                             "marks": [
                             ],
-                            "value": " Use early gym sessions to learn proper form, breathing, and how to set up equipment correctly.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Learning the Language of Training:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Learning the Language of Training: Teach terms like reps, sets, failure, rest intervals, tempo—so clients can follow programs confidently.",
                             "marks": [
                             ],
-                            "value": " Teach terms like reps, sets, failure, rest intervals, tempo—so clients can follow programs confidently.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Form Corrections & Movement Patterns:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Form Corrections & Movement Patterns: Use live coaching to identify and fix form issues early while reinforcing safe movement habits.",
                             "marks": [
                             ],
-                            "value": " Use live coaching to identify and fix form issues early while reinforcing safe movement habits.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -23076,7 +22478,7 @@
         "id": "6sNBDvmLXKbiwKNwPH8dwz",
         "type": "Entry",
         "createdAt": "2025-05-05T12:45:50.327Z",
-        "updatedAt": "2025-05-06T11:09:46.590Z",
+        "updatedAt": "2025-11-02T19:46:21.439Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -23084,8 +22486,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2025-05-06T11:09:46.590Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-11-02T19:46:21.439Z",
         "firstPublishedAt": "2025-05-05T12:46:06.389Z",
         "createdBy": {
           "sys": {
@@ -23101,8 +22503,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 14,
+        "publishedCounter": 6,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -23132,191 +22534,136 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Build strength, apply progressive overload, and use gym sessions for personalized support.",
                     "marks": [
                     ],
-                    "value": " Build strength, apply progressive overload, and use gym sessions for personalized support.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Strength Progression Focus:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Strength Progression Focus: Teach how to gradually increase difficulty (load, reps, variation) to keep improving over time.",
                             "marks": [
                             ],
-                            "value": " Teach how to gradually increase difficulty (load, reps, variation) to keep improving over time.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "In-Person Feedback & Corrections:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "In-Person Feedback & Corrections: Continue using gym sessions to reinforce technique, troubleshoot sticking points, or learn more advanced variations.",
                             "marks": [
                             ],
-                            "value": " Continue using gym sessions to reinforce technique, troubleshoot sticking points, or learn more advanced variations.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Personal Adaptation:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Personal Adaptation: Adjust online plan based on feedback—mobility issues, strength imbalances, or scheduling needs.",
                             "marks": [
                             ],
-                            "value": " Adjust online plan based on feedback—mobility issues, strength imbalances, or scheduling needs.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Accountability & Tracking:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Accountability & Tracking: Encourage logging of weights, performance, and session notes to build consistency and motivation.",
                             "marks": [
                             ],
-                            "value": " Encourage logging of weights, performance, and session notes to build consistency and motivation.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -23339,7 +22686,7 @@
         "id": "6pov5zlN4AGrQQ6Oq4a33S",
         "type": "Entry",
         "createdAt": "2025-05-05T12:46:10.210Z",
-        "updatedAt": "2025-05-06T11:09:51.922Z",
+        "updatedAt": "2025-11-02T20:29:59.634Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -23347,8 +22694,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2025-05-06T11:09:51.922Z",
+        "publishedVersion": 14,
+        "publishedAt": "2025-11-02T20:29:59.634Z",
         "firstPublishedAt": "2025-05-05T12:46:26.037Z",
         "createdBy": {
           "sys": {
@@ -23364,8 +22711,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 5,
-        "version": 13,
+        "publishedCounter": 6,
+        "version": 15,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -23395,191 +22742,136 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "bold"
-                      }
-                    ],
-                    "value": "Goal:",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Goal: Reinforce progress, sharpen technique, and prepare the client to continue training with confidence beyond the program.",
                     "marks": [
                     ],
-                    "value": " Reinforce progress, sharpen technique, and prepare the client to continue training with confidence beyond the program.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Independent Execution:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Independent Execution: Client should now be more comfortable following workouts solo, making adjustments as needed.",
                             "marks": [
                             ],
-                            "value": " Client should now be more comfortable following workouts solo, making adjustments as needed.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Final In-Gym Polish:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Final In-Gym Polish: Use remaining sessions to refine advanced cues, improve efficiency, or push toward personal bests.",
                             "marks": [
                             ],
-                            "value": " Use remaining sessions to refine advanced cues, improve efficiency, or push toward personal bests.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Long-Term Structure:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Long-Term Structure: Teach how to structure future training phases—when to push, when to deload, and how to plan workouts independently.",
                             "marks": [
                             ],
-                            "value": " Teach how to structure future training phases—when to push, when to deload, and how to plan workouts independently.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Lifestyle Integration:",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Lifestyle Integration: Reinforce daily habits (mobility, training time, recovery) that support long-term fitness success.",
                             "marks": [
                             ],
-                            "value": " Reinforce daily habits (mobility, training time, recovery) that support long-term fitness success.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -23602,7 +22894,7 @@
         "id": "4blFYDencs10yZmoW9Zklp",
         "type": "Entry",
         "createdAt": "2025-05-05T12:46:29.062Z",
-        "updatedAt": "2025-05-06T11:01:52.305Z",
+        "updatedAt": "2025-11-02T20:30:09.640Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -23610,8 +22902,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2025-05-06T11:01:52.305Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-11-02T20:30:09.640Z",
         "firstPublishedAt": "2025-05-05T12:46:43.157Z",
         "createdBy": {
           "sys": {
@@ -23627,8 +22919,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 8,
+        "publishedCounter": 4,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -23658,249 +22950,143 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A targeted solution to your challenges and a science-backed game plan to crush your goals",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "targeted solution to your challenges",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " and a ",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "science-backed game plan",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " to crush your goals",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "Smarter, more effective workouts",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Smarter, more effective workouts that actually move the needle",
                             "marks": [
                             ],
-                            "value": " that actually move the needle",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A clear understanding of how to train right—no more guesswork",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "clear understanding of how to train right",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "—no more guesswork",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A real strategy for long-term success, not just quick fixes",
                             "marks": [
                             ],
-                            "value": "A ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "real strategy for long-term success",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": ", not just quick fixes",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "A boost in confidence, drive, and results—because you’re training with purpose",
                             "marks": [
                             ],
-                            "value": "A boost in ",
-                            "nodeType": "text"
-                          },
-                          {
                             "data": {
-                            },
-                            "marks": [
-                              {
-                                "type": "bold"
-                              }
-                            ],
-                            "value": "confidence, drive, and results",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "—because you’re training with purpose",
-                            "nodeType": "text"
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
-                    "value": "",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -36267,7 +35453,7 @@
         "id": "4oysQmBjnGmMWzpzrlDfzv",
         "type": "Entry",
         "createdAt": "2025-05-16T20:47:30.266Z",
-        "updatedAt": "2025-10-21T21:23:50.771Z",
+        "updatedAt": "2025-11-02T19:02:07.073Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -36275,8 +35461,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 29,
-        "publishedAt": "2025-10-21T21:23:50.771Z",
+        "publishedVersion": 42,
+        "publishedAt": "2025-11-02T19:02:07.073Z",
         "firstPublishedAt": "2025-05-16T20:48:21.401Z",
         "createdBy": {
           "sys": {
@@ -36292,8 +35478,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 11,
-        "version": 30,
+        "publishedCounter": 16,
+        "version": 43,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -36319,7 +35505,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Frequently asked questions"
+          "en-US": "Frequently Asked Questions"
         },
         "subtitle": {
           "en-US": "Vili is here to cut through your confusion from a lot of noise out there"
@@ -36329,7 +35515,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "4QdbBjq1P5alIpNaaHabgo"
+              "id": "HC53DjzuP2nBEsjIrtTFL"
             }
           }
         },
@@ -37572,7 +36758,7 @@
             "plan"
           ]
         },
-        "isMostPopular": {
+        "hasFreeGift": {
           "en-US": false
         }
       }
@@ -38927,7 +38113,7 @@
         "id": "7hqQQn8Xw2goqPeIv0zneD",
         "type": "Entry",
         "createdAt": "2025-05-25T17:17:30.218Z",
-        "updatedAt": "2025-07-02T17:15:54.812Z",
+        "updatedAt": "2025-11-02T18:59:32.121Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -38935,8 +38121,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 35,
-        "publishedAt": "2025-07-02T17:15:54.812Z",
+        "publishedVersion": 37,
+        "publishedAt": "2025-11-02T18:59:32.121Z",
         "firstPublishedAt": "2025-05-25T17:19:09.795Z",
         "createdBy": {
           "sys": {
@@ -38952,8 +38138,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 9,
-        "version": 36,
+        "publishedCounter": 10,
+        "version": 38,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -39021,6 +38207,13 @@
         },
         "date": {
           "en-US": "2025-05-21"
+        },
+        "changes": {
+          "en-US": [
+            "Boost overall fitness",
+            "Sleep better",
+            "Move better"
+          ]
         },
         "rating": {
           "en-US": 4
@@ -39364,7 +38557,7 @@
         "id": "51hQCsTcvhP1Sxt3fsqutq",
         "type": "Entry",
         "createdAt": "2025-05-25T18:51:39.425Z",
-        "updatedAt": "2025-10-21T21:44:43.485Z",
+        "updatedAt": "2025-10-24T18:44:56.834Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -39390,7 +38583,7 @@
           }
         },
         "publishedCounter": 23,
-        "version": 65,
+        "version": 66,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -39400,7 +38593,7 @@
         },
         "fieldStatus": {
           "*": {
-            "en-US": "published"
+            "en-US": "changed"
           }
         },
         "automationTags": [
@@ -39548,30 +38741,6 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "2HwYOdQwmGzhTTGJRDiGoX"
-              }
-            }
-          ]
-        },
-        "infoTitle": {
-          "en-US": "Need more info?"
-        },
-        "infoSubtitle": {
-          "en-US": "We’re just a message away"
-        },
-        "infoImageCards": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "16LqeiKHSyMq0TAiJKYwdK"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "abdqDD7sPwxw4tVxkNwrL"
               }
             }
           ]
@@ -39742,30 +38911,6 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "41hldhUnROCXVaiEHnJ0D3"
-              }
-            }
-          ]
-        },
-        "infoTitle": {
-          "en-US": "Need more info?"
-        },
-        "infoSubtitle": {
-          "en-US": "We’re just a message away"
-        },
-        "infoImageCards": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "16LqeiKHSyMq0TAiJKYwdK"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "abdqDD7sPwxw4tVxkNwrL"
               }
             }
           ]
@@ -40907,7 +40052,7 @@
         "id": "3qq56D92N9NAAkIhYJNQVU",
         "type": "Entry",
         "createdAt": "2025-06-01T19:37:58.149Z",
-        "updatedAt": "2025-10-20T18:17:41.293Z",
+        "updatedAt": "2025-10-24T20:50:09.211Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -40915,8 +40060,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 95,
-        "publishedAt": "2025-10-20T18:17:41.293Z",
+        "publishedVersion": 115,
+        "publishedAt": "2025-10-24T20:50:09.211Z",
         "firstPublishedAt": "2025-06-01T19:41:33.034Z",
         "createdBy": {
           "sys": {
@@ -40932,8 +40077,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 29,
-        "version": 96,
+        "publishedCounter": 35,
+        "version": 116,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41089,7 +40234,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "1MPnm1lerpegtJGUABhz9X"
+              "id": "4Luu0TXL4pG7ngkQ064y8K"
             }
           }
         }
@@ -41634,7 +40779,7 @@
         "id": "3uHzOSWiHisEdGkF3EsESN",
         "type": "Entry",
         "createdAt": "2025-06-07T19:05:57.298Z",
-        "updatedAt": "2025-06-07T19:07:04.509Z",
+        "updatedAt": "2025-11-02T19:01:07.437Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -41642,8 +40787,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-06-07T19:07:04.509Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-11-02T19:01:07.437Z",
         "firstPublishedAt": "2025-06-07T19:07:04.509Z",
         "createdBy": {
           "sys": {
@@ -41659,8 +40804,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -41770,6 +40915,16 @@
           "en-US": [
             "Eat better live better",
             "Come train with Vili"
+          ]
+        },
+        "date": {
+          "en-US": "2025-07-01"
+        },
+        "changes": {
+          "en-US": [
+            "Lose weight",
+            "Look more fit",
+            "Adopt a new lifestyle"
           ]
         },
         "rating": {
@@ -43765,7 +42920,7 @@
         "id": "1bbSkiT01uxF3I0GBpmRam",
         "type": "Entry",
         "createdAt": "2025-06-10T19:36:52.611Z",
-        "updatedAt": "2025-06-10T19:37:08.981Z",
+        "updatedAt": "2025-11-02T18:31:21.974Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -43773,8 +42928,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-06-10T19:37:08.981Z",
+        "publishedVersion": 6,
+        "publishedAt": "2025-11-02T18:31:21.974Z",
         "firstPublishedAt": "2025-06-10T19:37:08.981Z",
         "createdBy": {
           "sys": {
@@ -43790,8 +42945,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -43817,7 +42972,7 @@
       },
       "fields": {
         "criteria": {
-          "en-US": "🧠 Custom to your life"
+          "en-US": "Custom to your life"
         },
         "slayFitVili": {
           "en-US": "Personalized coaching based on your goals, energy, cycle & stress"
@@ -43848,7 +43003,7 @@
         "id": "2Q2agFLl94CyhkwTsgN9Of",
         "type": "Entry",
         "createdAt": "2025-06-10T19:37:14.696Z",
-        "updatedAt": "2025-06-10T19:37:31.453Z",
+        "updatedAt": "2025-11-02T18:31:13.762Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -43856,8 +43011,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:37:31.453Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-11-02T18:31:13.762Z",
         "firstPublishedAt": "2025-06-10T19:37:31.453Z",
         "createdBy": {
           "sys": {
@@ -43873,8 +43028,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -43900,7 +43055,7 @@
       },
       "fields": {
         "criteria": {
-          "en-US": "🤝 Relatable & inclusive"
+          "en-US": "Relatable & inclusive"
         },
         "slayFitVili": {
           "en-US": "Approachable, understands your background and language, culture"
@@ -43931,7 +43086,7 @@
         "id": "47LrTl4weLhEMTlNL5lXbQ",
         "type": "Entry",
         "createdAt": "2025-06-10T19:57:07.575Z",
-        "updatedAt": "2025-06-10T19:57:30.523Z",
+        "updatedAt": "2025-11-02T18:31:06.971Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -43939,8 +43094,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-06-10T19:57:30.523Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-11-02T18:31:06.971Z",
         "firstPublishedAt": "2025-06-10T19:57:30.523Z",
         "createdBy": {
           "sys": {
@@ -43956,8 +43111,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -43983,7 +43138,7 @@
       },
       "fields": {
         "criteria": {
-          "en-US": "🧘‍♀️ Mind-body balance"
+          "en-US": " Mind-body balance"
         },
         "slayFitVili": {
           "en-US": "Mood, cycle, posture, and mental energy included"
@@ -44014,7 +43169,7 @@
         "id": "zW7E2NtEyWfz6YSLGVrmX",
         "type": "Entry",
         "createdAt": "2025-06-10T19:59:14.294Z",
-        "updatedAt": "2025-06-10T19:59:27.777Z",
+        "updatedAt": "2025-11-02T18:30:58.499Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -44022,8 +43177,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:59:27.777Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-11-02T18:30:58.499Z",
         "firstPublishedAt": "2025-06-10T19:59:27.777Z",
         "createdBy": {
           "sys": {
@@ -44039,8 +43194,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -44066,7 +43221,7 @@
       },
       "fields": {
         "criteria": {
-          "en-US": "💬 Coaching style"
+          "en-US": "Coaching style"
         },
         "slayFitVili": {
           "en-US": "Body-neutral, empowering, human"
@@ -44097,7 +43252,7 @@
         "id": "7GYs8TjAxGHQ8unuNBrukU",
         "type": "Entry",
         "createdAt": "2025-06-10T19:59:31.865Z",
-        "updatedAt": "2025-06-10T19:59:44.263Z",
+        "updatedAt": "2025-11-02T18:30:44.725Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -44105,8 +43260,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-06-10T19:59:44.263Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-11-02T18:30:44.725Z",
         "firstPublishedAt": "2025-06-10T19:59:44.263Z",
         "createdBy": {
           "sys": {
@@ -44122,8 +43277,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -44149,7 +43304,7 @@
       },
       "fields": {
         "criteria": {
-          "en-US": "📈 Results that show"
+          "en-US": "Results that show"
         },
         "slayFitVili": {
           "en-US": "Visible physical transformation with emotional confidence"
@@ -44728,7 +43883,7 @@
         "id": "3WiV0nyJtNb4JKqPzF9H4X",
         "type": "Entry",
         "createdAt": "2025-06-24T16:55:18.961Z",
-        "updatedAt": "2025-10-19T17:48:37.695Z",
+        "updatedAt": "2025-11-02T19:06:21.016Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -44736,8 +43891,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2025-10-19T17:48:37.695Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-11-02T19:06:21.016Z",
         "firstPublishedAt": "2025-06-24T16:57:21.137Z",
         "createdBy": {
           "sys": {
@@ -44753,8 +43908,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 10,
+        "publishedCounter": 3,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -44786,7 +43941,7 @@
           "en-US": "Coaching & Build SlayFitVili"
         },
         "description": {
-          "en-US": "Building SlayFitVili — coaching with heart + strategy. Coaching office men and women alike across the world to slay with strength and softness. If this strokes a string in you..."
+          "en-US": "Building SlayFitVili - coaching with heart + strategy. Coaching office men and women alike across the world to slay with strength and softness. If this strokes a string in you, don't hesitate to connect!"
         },
         "images": {
           "en-US": [
@@ -45747,7 +44902,7 @@
         "id": "3ijjp3wFmD7rjzQ1k2qijV",
         "type": "Entry",
         "createdAt": "2025-07-02T17:24:07.553Z",
-        "updatedAt": "2025-10-18T18:12:59.717Z",
+        "updatedAt": "2025-11-02T18:58:57.101Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -45755,8 +44910,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 26,
-        "publishedAt": "2025-10-18T18:12:59.717Z",
+        "publishedVersion": 28,
+        "publishedAt": "2025-11-02T18:58:57.101Z",
         "firstPublishedAt": "2025-07-02T17:28:12.868Z",
         "createdBy": {
           "sys": {
@@ -45772,8 +44927,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 27,
+        "publishedCounter": 3,
+        "version": 29,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -45888,7 +45043,8 @@
             "Lose weight",
             "Increase strength",
             "Adopt a new lifestyle",
-            "Improve posture"
+            "Improve posture",
+            "Move better"
           ]
         },
         "rating": {
@@ -46163,7 +45319,7 @@
         "id": "5XvhjWgM22VYupIZjPJosh",
         "type": "Entry",
         "createdAt": "2025-10-05T18:03:47.319Z",
-        "updatedAt": "2025-10-08T17:08:08.052Z",
+        "updatedAt": "2025-11-02T18:29:23.117Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46171,8 +45327,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2025-10-08T17:08:08.052Z",
+        "publishedVersion": 11,
+        "publishedAt": "2025-11-02T18:29:23.117Z",
         "firstPublishedAt": "2025-10-05T18:03:58.927Z",
         "createdBy": {
           "sys": {
@@ -46188,8 +45344,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 4,
-        "version": 10,
+        "publishedCounter": 5,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46219,6 +45375,9 @@
         },
         "description": {
           "en-US": "@vili.pekkala3011"
+        },
+        "url": {
+          "en-US": "https://www.instagram.com/vili.pekkala3011?igsh=ZjZuNnIyYTh2ejFr&utm_source=qr"
         },
         "column": {
           "en-US": "contact"
@@ -46339,7 +45498,7 @@
         "id": "5wDC6v6gpwqEbnDT37dWMZ",
         "type": "Entry",
         "createdAt": "2025-10-05T18:06:33.464Z",
-        "updatedAt": "2025-10-05T18:28:14.797Z",
+        "updatedAt": "2025-11-03T20:18:52.792Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46347,8 +45506,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-10-05T18:28:14.797Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-11-03T20:18:52.792Z",
         "firstPublishedAt": "2025-10-05T18:06:50.784Z",
         "createdBy": {
           "sys": {
@@ -46364,8 +45523,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46394,7 +45553,7 @@
           "en-US": "Solo packages"
         },
         "url": {
-          "en-US": "/solo-packages"
+          "en-US": "pricing/solo-packages"
         },
         "column": {
           "en-US": "explore"
@@ -46422,7 +45581,7 @@
         "id": "1negLBfFe3YuHj3H88NaZx",
         "type": "Entry",
         "createdAt": "2025-10-05T18:06:56.778Z",
-        "updatedAt": "2025-10-05T18:28:08.665Z",
+        "updatedAt": "2025-11-03T20:18:59.925Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46430,8 +45589,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-10-05T18:28:08.665Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-11-03T20:18:59.925Z",
         "firstPublishedAt": "2025-10-05T18:07:09.280Z",
         "createdBy": {
           "sys": {
@@ -46447,8 +45606,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46477,7 +45636,7 @@
           "en-US": "Duo packages"
         },
         "url": {
-          "en-US": "/duo-packages"
+          "en-US": "pricing/duo-packages"
         },
         "column": {
           "en-US": "explore"
@@ -46754,7 +45913,7 @@
         "id": "2g8UTPTDf0MU5WxXubydDn",
         "type": "Entry",
         "createdAt": "2025-10-05T18:08:35.259Z",
-        "updatedAt": "2025-10-05T18:27:42.259Z",
+        "updatedAt": "2025-11-01T20:52:17.981Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46762,8 +45921,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2025-10-05T18:27:42.259Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-11-01T20:52:17.981Z",
         "firstPublishedAt": "2025-10-05T18:08:43.343Z",
         "createdBy": {
           "sys": {
@@ -46779,8 +45938,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 3,
-        "version": 8,
+        "publishedCounter": 4,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46812,7 +45971,7 @@
           "en-US": "/terms-and-conditions"
         },
         "column": {
-          "en-US": "condtion & policy"
+          "en-US": "condition & policy"
         },
         "show": {
           "en-US": true
@@ -46837,7 +45996,7 @@
         "id": "2toiZqgemXD3CLg22Ximao",
         "type": "Entry",
         "createdAt": "2025-10-17T18:42:12.526Z",
-        "updatedAt": "2025-10-17T18:42:38.215Z",
+        "updatedAt": "2025-11-02T18:50:37.596Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46845,8 +46004,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-10-17T18:42:38.215Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-11-02T18:50:37.596Z",
         "firstPublishedAt": "2025-10-17T18:42:38.215Z",
         "createdBy": {
           "sys": {
@@ -46862,8 +46021,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46898,7 +46057,7 @@
           }
         },
         "title": {
-          "en-US": "Assessment & personalization"
+          "en-US": "1. Assessment & personalization"
         },
         "description": {
           "en-US": "We start by looking at your body metrics, goals, and preferences to create a plan tailored to you."
@@ -46923,7 +46082,7 @@
         "id": "7zafOwPn5rtYqsub8g0Eul",
         "type": "Entry",
         "createdAt": "2025-10-17T18:42:45.251Z",
-        "updatedAt": "2025-10-17T18:43:34.712Z",
+        "updatedAt": "2025-11-02T18:50:51.574Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -46931,8 +46090,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-10-17T18:43:34.712Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-11-02T18:50:51.574Z",
         "firstPublishedAt": "2025-10-17T18:43:34.712Z",
         "createdBy": {
           "sys": {
@@ -46948,8 +46107,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -46984,7 +46143,7 @@
           }
         },
         "title": {
-          "en-US": "Warm-Up & Mobility"
+          "en-US": "2. Warm-Up & Mobility"
         },
         "description": {
           "en-US": "text"
@@ -47009,7 +46168,7 @@
         "id": "2JVSOxTpE9n5ayUnMYyDKC",
         "type": "Entry",
         "createdAt": "2025-10-17T18:43:47.858Z",
-        "updatedAt": "2025-10-17T18:45:38.490Z",
+        "updatedAt": "2025-11-02T18:55:08.796Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -47017,8 +46176,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-10-17T18:45:38.490Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-11-02T18:55:08.796Z",
         "firstPublishedAt": "2025-10-17T18:44:07.298Z",
         "createdBy": {
           "sys": {
@@ -47034,8 +46193,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 5,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -47065,12 +46224,12 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "34sjowLC63N5hQDVmCowDX"
+              "id": "1FquBRr7t4hFs4frVILVRg"
             }
           }
         },
         "title": {
-          "en-US": "Strength & Core Activation"
+          "en-US": "3. Capacity/ Functional Training"
         },
         "description": {
           "en-US": "Text"
@@ -47095,7 +46254,7 @@
         "id": "1EOe3HqZLGRCd8A2H71AiH",
         "type": "Entry",
         "createdAt": "2025-10-17T18:44:13.571Z",
-        "updatedAt": "2025-10-17T18:44:32.716Z",
+        "updatedAt": "2025-11-02T18:54:26.767Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -47103,8 +46262,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-10-17T18:44:32.716Z",
+        "publishedVersion": 10,
+        "publishedAt": "2025-11-02T18:54:26.767Z",
         "firstPublishedAt": "2025-10-17T18:44:32.716Z",
         "createdBy": {
           "sys": {
@@ -47120,8 +46279,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -47151,12 +46310,12 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "5xx2G7mIyioiOIESHbQM7f"
+              "id": "24TcZSFnTcovaRDg6iUazP"
             }
           }
         },
         "title": {
-          "en-US": "Main Workout"
+          "en-US": "4. Main Workout"
         },
         "description": {
           "en-US": "Text"
@@ -47181,7 +46340,7 @@
         "id": "1h4SPklLhNQditkHhdMADk",
         "type": "Entry",
         "createdAt": "2025-10-17T18:44:44.023Z",
-        "updatedAt": "2025-10-17T18:44:53.677Z",
+        "updatedAt": "2025-11-02T18:51:42.491Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -47189,8 +46348,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2025-10-17T18:44:53.677Z",
+        "publishedVersion": 4,
+        "publishedAt": "2025-11-02T18:51:42.491Z",
         "firstPublishedAt": "2025-10-17T18:44:53.677Z",
         "createdBy": {
           "sys": {
@@ -47206,8 +46365,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 2,
+        "version": 5,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -47242,7 +46401,7 @@
           }
         },
         "title": {
-          "en-US": "Conditioning & Cardio Boost"
+          "en-US": "5. Conditioning & Cardio Boost"
         },
         "description": {
           "en-US": "Text"
@@ -47267,7 +46426,7 @@
         "id": "54VgViboHcRauRAvk4C6VX",
         "type": "Entry",
         "createdAt": "2025-10-17T18:44:58.944Z",
-        "updatedAt": "2025-10-17T18:45:16.755Z",
+        "updatedAt": "2025-11-02T18:51:59.091Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -47275,8 +46434,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-10-17T18:45:16.755Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-11-02T18:51:59.091Z",
         "firstPublishedAt": "2025-10-17T18:45:16.755Z",
         "createdBy": {
           "sys": {
@@ -47292,8 +46451,8 @@
             "id": "6K7VOlm7DWbvmf3Xjwpzvw"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -47328,10 +46487,93 @@
           }
         },
         "title": {
-          "en-US": "Cool-Down & Recovery"
+          "en-US": "6. Cool-Down & Recovery"
         },
         "description": {
           "en-US": "Text"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "12VOygiEdYIxYQWg98vfzt",
+        "type": "Entry",
+        "createdAt": "2025-11-02T18:23:06.322Z",
+        "updatedAt": "2025-11-02T18:26:49.057Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-11-02T18:26:49.057Z",
+        "firstPublishedAt": "2025-11-02T18:26:49.057Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "footer"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/entries/12VOygiEdYIxYQWg98vfzt"
+      },
+      "fields": {
+        "label": {
+          "en-US": "Y- Tunnus"
+        },
+        "description": {
+          "en-US": "3540976-2"
+        },
+        "column": {
+          "en-US": "contact"
+        },
+        "show": {
+          "en-US": true
         }
       }
     }
@@ -52878,6 +52120,85 @@
               }
             },
             "fileName": "Philosophy_image.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5yib965szeod"
+          }
+        },
+        "id": "HC53DjzuP2nBEsjIrtTFL",
+        "type": "Asset",
+        "createdAt": "2025-10-24T20:44:29.601Z",
+        "updatedAt": "2025-10-24T20:45:16.442Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-10-24T20:45:16.442Z",
+        "firstPublishedAt": "2025-10-24T20:45:16.442Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6K7VOlm7DWbvmf3Xjwpzvw"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/5yib965szeod/environments/master/assets/HC53DjzuP2nBEsjIrtTFL"
+      },
+      "fields": {
+        "title": {
+          "en-US": "FAQs_heading_image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5yib965szeod/HC53DjzuP2nBEsjIrtTFL/f0328136696ff5f21df4d5e958838c46/FAQs_heading_image.jpg",
+            "details": {
+              "size": 5591072,
+              "image": {
+                "width": 4660,
+                "height": 5808
+              }
+            },
+            "fileName": "FAQs_heading_image.jpg",
             "contentType": "image/jpeg"
           }
         }

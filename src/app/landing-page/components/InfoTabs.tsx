@@ -25,7 +25,7 @@ export default function InfoTabs({ tabs }: TabsProps) {
         />
       </div>
       <div className="my-2">
-        <InfoCard infoCard={tabs[activeIndex].infoCards} />
+        <InfoCard infoCards={tabs[activeIndex].infoCards} />
         {tabs[activeIndex].subtitle && (
           <Button
             iconLeft={

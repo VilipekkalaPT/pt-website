@@ -7,7 +7,7 @@ interface CardContentProps {
   className?: string;
 }
 
-interface CardProps {
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   href?: string;
@@ -21,6 +21,7 @@ export default function Card({
   href,
   glassmorphism,
   onClick,
+  ...props
 }: CardProps) {
   const defaultClassName =
     "flex flex-col justify-between rounded-2xl overflow-hidden shadow-lg";
@@ -44,6 +45,7 @@ export default function Card({
         })
       )}
       onClick={onClick}
+      {...props}
     >
       {children}
     </div>

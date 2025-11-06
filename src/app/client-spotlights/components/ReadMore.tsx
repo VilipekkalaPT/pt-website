@@ -39,7 +39,7 @@ export default function ReadMore({ document }: ReadMoreProps) {
           variant="ghost"
           glassmorphism
           onClick={toggle}
-          className="mt-2 flex justify-center"
+          className="mt-6 flex justify-center"
         />
       )}
     </div>

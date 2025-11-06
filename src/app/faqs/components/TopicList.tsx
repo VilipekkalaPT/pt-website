@@ -34,7 +34,7 @@ export default function TopicList({
 }: TopicListProps) {
   return (
     <div
-      style={{ position: "sticky", top: 20, flex: 1 }}
+      style={{ position: "sticky", top: 20, zIndex: 10 }}
       className="glass-effect p-6 rounded-2xl flex flex-col justify-center gap-4"
     >
       {topicQuestions.map((topic) => (

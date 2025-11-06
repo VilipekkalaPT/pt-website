@@ -53,7 +53,7 @@ export default function Journey({
         className="object-cover object-bottom"
       />
       <div className="absolute inset-0 bg-linear-to-b bg-black/50" />
-      <div className="py-16 mx-16 relative">
+      <div className="py-16 w-4/5 mx-auto relative">
         <p className="heading">{title}</p>
         <p className="subheading text-white/70">{subtitle}</p>
         <VerticalTimeline lineColor="rgba(68, 68, 68)">

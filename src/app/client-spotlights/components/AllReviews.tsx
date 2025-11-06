@@ -18,13 +18,17 @@ export default function AllReviews({
   subtitle,
   allReviews,
 }: AllReviewsProps) {
-  const { filteredReviews, selectedFilter, handleFilterChange } =
-    useFilter(allReviews);
+  const {
+    filteredReviews,
+    selectedFilter,
+    handleFilterChange,
+    clearAllFilters,
+  } = useFilter(allReviews);
   const { sortedReviews, selectedSort, handleSortChange } =
     useSort(filteredReviews);
 
   return (
-    <div className="py-16 mx-16">
+    <div className="py-16 w-4/5 mx-auto">
       <div className="text-center">
         <p className="heading">{title}</p>
         <p className="subheading text-white/70 mt-1">{subtitle}</p>
@@ -34,6 +38,7 @@ export default function AllReviews({
           <Filter
             selectedFilter={selectedFilter}
             handleFilterChange={handleFilterChange}
+            clearAllFilters={clearAllFilters}
           />
           <Sort
             selectedSort={selectedSort}
@@ -43,7 +48,7 @@ export default function AllReviews({
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-2 gap-6 items-start">
+      <div className="mt-6 grid grid-cols-2 gap-6">
         {sortedReviews.length > 0 ? (
           sortedReviews.map((review) => (
             <ReviewCard key={review.id} review={review} reviewCardType="full" />

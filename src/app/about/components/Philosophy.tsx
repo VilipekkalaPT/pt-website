@@ -28,8 +28,8 @@ export default function Philosophy({
         fill
         className="object-cover object-top"
       />
-      <div className="grid grid-cols-2 gap-4 relative py-16">
-        <div className="ml-16">
+      <div className="w-4/5 mx-auto grid grid-cols-2 gap-4 relative py-16">
+        <div>
           <p className="heading mb-2">{title}</p>
           <p className="subheading text-white/70">{subtitle}</p>
           <RichTextRenderer
