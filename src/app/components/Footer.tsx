@@ -50,7 +50,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
     window.open(url, "_blank");
   }, [footerLinks]);
 
-  const desktopStyle = "md:grid-cols-4 md:gap-4 md:mx-16 text-left md:pb-40";
+  const desktopStyle = "md:grid-cols-4 md:gap-4 md:mx-16 md:text-left md:pb-40";
   const mobileStyle = "grid-cols-1 gap-16 text-center pb-20";
 
   return (

@@ -104,14 +104,13 @@ const ReviewImages = ({
   if (images.length === 0) return null;
 
   return (
-    <div className="min-h-48">
+    <div className="relative h-120">
       {images.length === 1 ? (
         <Image
           src={getAssetUrl(images[0])}
           alt={title}
-          className="rounded-lg w-full h-auto object-cover"
-          width={images[0].file?.details.image?.width || 400}
-          height={images[0].file?.details.image?.height || 300}
+          fill
+          className="object-cover object-top rounded-lg"
         />
       ) : (
         <Carousel images={images} />
