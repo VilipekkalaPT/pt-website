@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import cn from "classnames";
 
 import Button from "app/components/Button";
 import Card, { CardContent, CardFooter, CardHeader } from "app/components/Card";
