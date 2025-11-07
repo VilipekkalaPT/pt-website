@@ -25,6 +25,7 @@ export default function ContactForm({
     register,
     handleSubmit,
     reset,
+    getValues,
     formState: { errors },
   } = useForm<FormInput>();
   const [isSending, setIsSending] = useState(false);
@@ -37,7 +38,11 @@ export default function ContactForm({
 
   const openWhatsApp = () => {
     if (!whatsappLink) return;
-    const url = `${whatsappDomain}${whatsappLink}`;
+    const values = getValues();
+    const message = `Hi, I'm ${values.name}. Email: ${values.email}. ${values.message}`;
+    const url = `${whatsappDomain}${whatsappLink}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(url, "_blank");
   };
 

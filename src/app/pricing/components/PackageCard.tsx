@@ -67,7 +67,7 @@ export default function PackageCard({
           </div>
         )}
       </CardHeader>
-      <CardContent className="flex flex-col justify-start items-start">
+      <CardContent className="flex-1 flex flex-col justify-start items-start">
         <Chip
           label={capitalizeFirstLetter(mode)}
           color={getChipColor(mode)}

@@ -23,6 +23,7 @@ import {
 } from "app/utils/variables";
 import { useRouter } from "next/navigation";
 import { FilteredPackage } from "../hooks/useFitQuizManager";
+import { twMerge } from "tailwind-merge";
 
 interface RecommendationPackageCardProps {
   p: FilteredPackage;
@@ -43,7 +44,7 @@ export default function RecommendationPackageCard({
   return (
     <Card key={pkg.id} glassmorphism className="h-full bg-primary/50">
       <CardHeader
-        className={cn("flex flex-col items-center py-2", getTagStyle(tag))}
+        className={twMerge("flex flex-col items-center py-2", getTagStyle(tag))}
       >
         <p>{tag}</p>
       </CardHeader>
@@ -94,11 +95,11 @@ export default function RecommendationPackageCard({
 const getTagStyle = (tag: string) => {
   switch (tag) {
     case BEST_MATCH:
-      return "bg-mint text-text-neutral";
+      return "bg-mint text-text-black-30";
     case MOST_POPULAR:
       return "bg-pink";
     case BEST_VALUE:
-      return "bg-blue text-text-neutral";
+      return "bg-blue text-text-black-30";
     default:
       return "bg-pink";
   }
