@@ -42,36 +42,41 @@ export default function PackageTypeComparison({
 }: PackageTypeComparisonProps) {
   return (
     <Card glassmorphism className="w-full py-8">
-      <div className="grid grid-cols-5 gap-8 p-4">
-        {columnTitles.map((col) => (
-          <p
-            key={col.id}
-            className={cn({
-              "text-center body-strong":
-                col.id !== PackageTypeComparisonEnum.FEATURES,
-            })}
-          >
-            {col.label}
-          </p>
-        ))}
-      </div>
-      {rows.map((row, rowIndex) => (
-        <div
-          key={rowIndex}
-          className={cn("grid grid-cols-5 h-20 gap-8 rounded-lg p-4", {
-            "bg-white/10": rowIndex % 2 === 0,
-          })}
-        >
-          {columnTitles.map((col) => (
+      <div className="overflow-x-scroll">
+        <div className="min-w-[620px]">
+          <div className="grid grid-cols-5 gap-8 pb-4">
+            {columnTitles.map((col) => (
+              <p
+                key={col.id}
+                className={cn("whitespace-normal break-words", {
+                  "text-center body-strong":
+                    col.id !== PackageTypeComparisonEnum.FEATURES,
+                  "ml-4": col.id === PackageTypeComparisonEnum.FEATURES,
+                })}
+              >
+                {col.label}
+              </p>
+            ))}
+          </div>
+          {rows.map((row, rowIndex) => (
             <div
-              key={`${col.id}-${rowIndex}`}
-              className="flex flex-col items-center justify-center"
+              key={rowIndex}
+              className={cn("grid grid-cols-5 h-26 md:h-20 gap-8 rounded-lg", {
+                "bg-white/10": rowIndex % 2 === 0,
+              })}
             >
-              <PackageTypeComparisonCell columnId={col.id} row={row} />
+              {columnTitles.map((col) => (
+                <div
+                  key={`${col.id}-${rowIndex}`}
+                  className="flex flex-col items-center justify-center"
+                >
+                  <PackageTypeComparisonCell columnId={col.id} row={row} />
+                </div>
+              ))}
             </div>
           ))}
         </div>
-      ))}
+      </div>
     </Card>
   );
 }
@@ -104,7 +109,7 @@ const PackageTypeComparisonCell = ({
   const textStyle = "text-white/70 body-small";
 
   if (columnId === PackageTypeComparisonEnum.FEATURES) {
-    return <p className={cn(textStyle, "self-start")}>{row.features}</p>;
+    return <p className={cn(textStyle, "self-start, ml-4")}>{row.features}</p>;
   }
 
   if (row.availableFor?.includes(columnId)) {
@@ -112,7 +117,9 @@ const PackageTypeComparisonCell = ({
       <>
         <p className="text-sm">✅</p>
         {columnId === PackageTypeComparisonEnum.COMBO && row.extraText && (
-          <span className={cn("ml-2 text-sm", textStyle)}>{row.extraText}</span>
+          <span className={cn("mt-1 text-sm text-center", textStyle)}>
+            {row.extraText}
+          </span>
         )}
       </>
     );

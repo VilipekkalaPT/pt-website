@@ -47,11 +47,11 @@ export default function ContactForm({
   };
 
   return (
-    <div className="mt-40 mx-16 text-center">
+    <div className="mt-40 pb-40 w-4/5 mx-auto text-center">
       <p className="title-hero">{title}</p>
       <p className="subtitle">{subtitle}</p>
       <form
-        className="mt-8 w-1/3 mx-auto p-4 bg-black/50 border border-border-default-primary flex flex-col rounded-lg justify-start gap-2"
+        className="mt-8 w-full md:w-1/2 mx-auto p-4 bg-black/50 border border-border-default-primary flex flex-col rounded-lg justify-start gap-2"
         onSubmit={handleSubmit(onSubmit)}
       >
         <FormField
@@ -85,16 +85,10 @@ export default function ContactForm({
             disabled={isSending}
             variant="ghost"
             glassmorphism
-            className="mt-1 justify-center"
+            className="mt-4 justify-center"
             onClick={openWhatsApp}
             iconRight={
-              <Image
-                src="/whatsapp.svg"
-                alt="Logo"
-                width={24}
-                height={24}
-                className=""
-              />
+              <Image src="/whatsapp.svg" alt="Logo" width={24} height={24} />
             }
           />
         )}

@@ -9,6 +9,7 @@ import { TypeImageCardFields } from "app/lib/types/contentful";
 import HeroSection from "app/components/HeroSection";
 import Button from "app/components/Button";
 import { UserIcon, UsersIcon } from "@heroicons/react/24/outline";
+import cn from "classnames";
 
 interface PricingPageHeadingProps {
   title: string;
@@ -32,14 +33,24 @@ export default function PricingPageHeading({
     },
   ];
 
+  const desktopStyle = "md:flex-row md:gap-8 md:bottom-6 md:translate-y-1/2";
+  const mobileStyle = "flex-col top-1/2 gap-0";
+
   return (
     <div className="relative">
       <HeroSection
         image={imageField}
         headingSections={headingSections}
         fillImage={false}
+        textClassName="top-6"
       />
-      <div className="w-4/5 mx-auto absolute bottom-6 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex gap-8 z-20">
+      <div
+        className={cn(
+          "absolute left-1/2 -translate-x-1/2 transform w-4/5 mx-auto z-20 flex",
+          desktopStyle,
+          mobileStyle
+        )}
+      >
         {packageCards.map((card, index) => (
           <div
             key={index}

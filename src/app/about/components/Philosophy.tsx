@@ -4,6 +4,7 @@ import { AssetFields } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 import { StarIcon } from "@heroicons/react/24/solid";
 import { getAssetUrl } from "app/utils/utils";
+import cn from "classnames";
 
 interface PhilosophyProps {
   title: string;
@@ -20,6 +21,9 @@ export default function Philosophy({
 }: PhilosophyProps) {
   const imageUrl = getAssetUrl(image);
 
+  const desktopStyle = "md:grid-cols-2 md:gap-4 md:items-center";
+  const mobileStyle = "grid-cols-1 gap-8";
+
   return (
     <div className="relative">
       <Image
@@ -28,7 +32,13 @@ export default function Philosophy({
         fill
         className="object-cover object-top"
       />
-      <div className="w-4/5 mx-auto grid grid-cols-2 gap-4 relative py-16">
+      <div
+        className={cn(
+          "w-4/5 mx-auto grid relative py-16",
+          desktopStyle,
+          mobileStyle
+        )}
+      >
         <div>
           <p className="heading mb-2">{title}</p>
           <p className="subheading text-white/70">{subtitle}</p>
@@ -39,7 +49,7 @@ export default function Philosophy({
             paragraphClassName="mt-4 text-white/70 leading-[1.4]"
           />
         </div>
-        <div className="relative w-full h-auto">
+        <div className="relative w-full h-64 md:h-auto">
           <Image
             src={imageUrl}
             alt={image.title ?? "Philosophy Image"}

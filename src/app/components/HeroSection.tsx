@@ -13,6 +13,7 @@ interface HeroSectionProps {
   headingSections: HeadingSectionType[];
   fillImage?: boolean;
   heroSectionContent?: React.ReactNode;
+  textClassName?: string;
 }
 
 export default function HeroSection({
@@ -20,6 +21,7 @@ export default function HeroSection({
   headingSections,
   fillImage = true,
   heroSectionContent,
+  textClassName,
 }: HeroSectionProps) {
   const imageUrl = getAssetUrl(image);
 
@@ -36,7 +38,7 @@ export default function HeroSection({
 
   const containerStyle = cn({
     "relative w-screen h-[calc(100vh-80px)]": fillImage,
-    "relative w-full h-[40rem]": !fillImage,
+    "relative w-full h-[20rem] md:h-[40rem]": !fillImage,
   });
 
   return (
@@ -61,9 +63,15 @@ export default function HeroSection({
         {headingSections.map((section, i) => (
           <div
             key={i}
-            className={`absolute w-full p-4 text-center text-white transition-opacity duration-1000 ${
-              i === index ? "opacity-100" : "opacity-0"
-            }`}
+            className={cn(
+              "absolute md:top-1/2 w-full",
+              "p-4 text-center text-white transition-opacity duration-1000",
+              {
+                "opacity-100": i === index,
+                "opacity-0": i !== index,
+              },
+              textClassName
+            )}
           >
             <p className="w-4/5 mx-auto mb-1 title-hero">{section.heading}</p>
             <p className="subtitle">{section.subheading}</p>

@@ -24,21 +24,26 @@ export default function DifferentServicesComparison({
 }: DifferentServicesComparisonProps) {
   return (
     <Card glassmorphism className="w-full py-8">
-      <div className="grid grid-cols-4 px-8 pb-4">
-        {columnHeaders.map((header, index) => (
-          <div
-            key={index}
-            className={cn("font-medium body-strong", {
-              "text-center": index !== 0,
-            })}
-          >
-            {header}
+      <div className="overflow-x-scroll">
+        <div className="min-w-[700px]">
+          <div className="grid grid-cols-4 pb-4">
+            {columnHeaders.map((header, index) => (
+              <div
+                key={index}
+                className={cn("font-medium body-strong", {
+                  "text-center": index !== 0,
+                  "ml-8": index === 0,
+                })}
+              >
+                {header}
+              </div>
+            ))}
           </div>
-        ))}
+          {rows.map((row, index) => (
+            <ComparisonRow key={index} row={row} index={index} />
+          ))}
+        </div>
       </div>
-      {rows.map((row, index) => (
-        <ComparisonRow key={index} row={row} index={index} />
-      ))}
     </Card>
   );
 }
@@ -55,11 +60,14 @@ const ComparisonRow = ({
 
   return (
     <div
-      className={cn("grid grid-cols-4 gap-8 h-22 rounded-lg p-8", {
-        "bg-white/10": index % 2 === 0,
-      })}
+      className={cn(
+        "grid grid-cols-4 gap-8 h-30 md:h-22 rounded-lg items-center",
+        {
+          "bg-white/10": index % 2 === 0,
+        }
+      )}
     >
-      <p className={commonStyle}>{row.criteria}</p>
+      <p className={cn(commonStyle, "ml-8")}>{row.criteria}</p>
       <p className={cn(commonStyle, textCenterStyle)}>{row.slayFitVili}</p>
       <p className={cn(commonStyle, textCenterStyle)}>{row.typicalGymPt}</p>
       <p className={cn(commonStyle, textCenterStyle)}>{row.fitnessApp}</p>

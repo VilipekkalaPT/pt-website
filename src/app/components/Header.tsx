@@ -22,6 +22,7 @@ export interface DropdownItem {
 interface NavigationItemProps {
   item: TypeNavigationFields;
   pathName: string;
+  onToggle?: (isOpen: boolean) => void;
 }
 
 interface HeaderProps {
@@ -38,7 +39,7 @@ export default function Header({ navigations, logo }: HeaderProps) {
   const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
 
   return (
-    <div className="flex items-center justify-between mx-8 py-6 shadow z-50 font-normal">
+    <div className="flex items-center justify-between mx-4 md:mx-8 py-6 shadow z-50 font-normal">
       <Link href="/" className="flex items-center">
         <Image src={logoUrl} alt="Logo" width={200} height={200} />
       </Link>
@@ -108,7 +109,12 @@ const MobileNavigation = ({
         <MobileMenuToggle isOpen={isOpen} onToggle={onToggle} />
         <div className="flex flex-col gap-4 items-start">
           {navigationItems.map((item) => (
-            <NavigationItem key={item.id} item={item} pathName={pathName} />
+            <NavigationItem
+              key={item.id}
+              item={item}
+              pathName={pathName}
+              onToggle={onToggle}
+            />
           ))}
         </div>
       </nav>
@@ -116,8 +122,15 @@ const MobileNavigation = ({
   );
 };
 
-const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
+const NavigationItem = ({ item, pathName, onToggle }: NavigationItemProps) => {
   const router = useRouter();
+
+  const handleClick = () => {
+    if (onToggle) {
+      onToggle(false);
+    }
+    router.push(item.url || "/");
+  };
 
   if (item.isButton) {
     return (
@@ -125,7 +138,7 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
         key={item.id}
         label={item.label}
         variant="primary"
-        onClick={() => router.push(item.url)}
+        onClick={handleClick}
       />
     );
   }
@@ -137,6 +150,7 @@ const NavigationItem = ({ item, pathName }: NavigationItemProps) => {
       className={cn("py-2 px-4 rounded-lg hover:bg-blue-hover", {
         "bg-blue text-text-black-30": pathName.includes(item.url),
       })}
+      onClick={onToggle ? () => onToggle(false) : undefined}
     >
       {item.label}
     </Link>
