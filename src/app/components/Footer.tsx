@@ -13,6 +13,7 @@ import {
 import { TypeFooterFields } from "app/lib/types/contentful";
 import { useCallback } from "react";
 import cn from "classnames";
+import { DIFFERENT_SERVICES_SLAYFITVILI } from "../utils/variables";
 
 interface FooterProps {
   logo?: AssetFields;
@@ -23,6 +24,7 @@ const COLUMNS = ["contact", "explore", "condition & policy"];
 
 export default function Footer({ logo, footerLinks }: FooterProps) {
   const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
+  const year = new Date().getFullYear();
 
   const getLinks = useCallback(
     (col: string) => {
@@ -50,11 +52,11 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
     window.open(url, "_blank");
   }, [footerLinks]);
 
-  const desktopStyle = "md:grid-cols-4 md:gap-4 md:mx-16 md:text-left md:pb-40";
-  const mobileStyle = "grid-cols-1 gap-16 text-center pb-20";
+  const desktopStyle = "md:grid-cols-4 md:gap-4 md:mx-16 md:text-left";
+  const mobileStyle = "grid-cols-1 gap-16 text-center";
 
   return (
-    <div className={cn("mt-8 grid", desktopStyle, mobileStyle)}>
+    <div className={cn("mt-8 grid pb-6", desktopStyle, mobileStyle)}>
       <div className="flex flex-col items-center md:items-start">
         <Image src={logoUrl} alt="Logo" width={200} height={200} />
         <div className="flex mt-4 gap-4">
@@ -95,6 +97,9 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
           </div>
         );
       })}
+      <div className="text-sm pt-20">
+        © {year}, <Link href="/">{DIFFERENT_SERVICES_SLAYFITVILI}</Link>
+      </div>
     </div>
   );
 }
