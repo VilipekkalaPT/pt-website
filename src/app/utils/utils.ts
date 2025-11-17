@@ -1,11 +1,18 @@
 import {
+  PlusIcon,
+  ScissorsIcon,
+  SparklesIcon,
+  SquaresPlusIcon,
+  UsersIcon,
+} from "@heroicons/react/24/solid";
+import {
   TypeFaqFields,
   TypePackageFields,
   TypeSessionOptionFields,
 } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
 import { ROUTES } from "./routes";
-import { CURRENCY, SAVED_AMOUNT, SAVING } from "./variables";
+import { CURRENCY, SAVED_AMOUNT, SAVING, TOPIC_TYPE } from "./variables";
 
 export const isStringArray = (input: Array<unknown>): input is string[] => {
   return (

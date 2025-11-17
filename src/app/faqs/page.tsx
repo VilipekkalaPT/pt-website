@@ -4,7 +4,7 @@ import {
   TypeFaQsPageDataSkeleton,
 } from "app/lib/types/contentful/TypeFaQsPageData";
 import HeadingSection from "app/components/HeadingSection";
-import QASection from "./components/QASection";
+import QASection, { MobileQASection } from "./components/QASection";
 import { TypeFaqFields } from "app/lib/types/contentful";
 import { AssetFields } from "contentful";
 import InfoSection from "../components/InfoSection";

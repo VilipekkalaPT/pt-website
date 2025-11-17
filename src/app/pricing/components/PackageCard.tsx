@@ -16,17 +16,21 @@ import {
   GiftIcon,
 } from "@heroicons/react/24/outline";
 import { getChipColor } from "app/utils/utils";
+import cn from "classnames";
+import { twMerge } from "tailwind-merge";
 
 interface PackageCardProps {
   singlePackage: TypePackageFields;
   href: string;
   savedAmount?: number;
+  className?: string;
 }
 
 export default function PackageCard({
   singlePackage,
   href,
   savedAmount,
+  className,
 }: PackageCardProps) {
   const {
     name,
@@ -47,14 +51,16 @@ export default function PackageCard({
   ) as TypeSessionOptionFields[];
 
   return (
-    <Card href={href} glassmorphism className="bg-primary/50">
+    <Card href={href} glassmorphism className={cn("bg-primary/50", className)}>
       <CardHeader className="relative inline-block">
-        <Image
-          src={imageUrl}
-          alt={`Landscape image for ${name}`}
-          width={imageField?.file?.details.image?.width}
-          height={imageField?.file?.details.image?.height}
-        />
+        <div className="h-[20rem]">
+          <Image
+            src={imageUrl}
+            alt={`Landscape image for ${name}`}
+            fill
+            className="object-cover"
+          />
+        </div>
         {hasFreeGift && (
           <div className="absolute bottom-0 right-6 translate-y-1/2">
             <Chip
@@ -84,7 +90,7 @@ export default function PackageCard({
       </CardContent>
       <CardFooter>
         <div className="mt-2 flex justify-between">
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
               <Chip
                 key={tag}

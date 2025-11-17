@@ -34,7 +34,7 @@ export default function AllReviews({
         <p className="subheading text-white/70 mt-1">{subtitle}</p>
       </div>
       <div className="mt-6 flex justify-end">
-        <div className="w-1/2 flex gap-6">
+        <div className="w-full md:w-1/2 flex gap-6">
           <Filter
             selectedFilter={selectedFilter}
             handleFilterChange={handleFilterChange}
@@ -47,8 +47,7 @@ export default function AllReviews({
           />
         </div>
       </div>
-
-      <div className="mt-6 grid grid-cols-2 gap-6">
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         {sortedReviews.length > 0 ? (
           sortedReviews.map((review) => (
             <ReviewCard key={review.id} review={review} reviewCardType="full" />

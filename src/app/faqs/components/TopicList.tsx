@@ -8,14 +8,15 @@ import {
 import Button from "app/components/Button";
 import { TopicQuestions } from "app/utils/utils";
 import { TOPIC_TYPE } from "app/utils/variables";
+import cn from "classnames";
 
-interface TopicListProps {
+export interface TopicListProps {
   topicQuestions: TopicQuestions[];
   handleSelectTopic: (topic: string) => void;
 }
 
-const getIconComponent = (topicType: TOPIC_TYPE) => {
-  const className = "size-8";
+export const getIconComponent = (topicType: TOPIC_TYPE) => {
+  const className = "size-4 md:size-8";
   const icons = {
     [TOPIC_TYPE.WEIGHT_LOSS]: <ScissorsIcon className={className} />,
     [TOPIC_TYPE.GAINING_MUSCLES]: <PlusIcon className={className} />,
@@ -32,10 +33,13 @@ export default function TopicList({
   topicQuestions,
   handleSelectTopic,
 }: TopicListProps) {
+  const desktopStyle = "md:glass-effect md:flex-col justify-center md:gap-4";
+  const mobileStyle = "flex-row flex-wrap gap-2";
+
   return (
     <div
       style={{ position: "sticky", top: 20, zIndex: 10 }}
-      className="glass-effect p-6 rounded-2xl flex flex-col justify-center gap-4"
+      className={cn("flex rounded-2xl p-6", desktopStyle, mobileStyle)}
     >
       {topicQuestions.map((topic) => (
         <Button
@@ -45,7 +49,7 @@ export default function TopicList({
           iconLeft={getIconComponent(
             TOPIC_TYPE[topic.topicType as keyof typeof TOPIC_TYPE]
           )}
-          className="rounded-lg heading text-left"
+          className="rounded-lg sub-heading md:heading text-left"
           onClick={() => handleSelectTopic(topic.topicType)}
         />
       ))}

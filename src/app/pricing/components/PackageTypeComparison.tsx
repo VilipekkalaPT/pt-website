@@ -41,9 +41,9 @@ export default function PackageTypeComparison({
   rows,
 }: PackageTypeComparisonProps) {
   return (
-    <Card glassmorphism className="w-full py-8">
+    <Card glassmorphism className="w-full">
       <div className="overflow-x-scroll">
-        <div className="min-w-[620px]">
+        <div className="min-w-[620px] py-8">
           <div className="grid grid-cols-5 gap-8 pb-4">
             {columnTitles.map((col) => (
               <p

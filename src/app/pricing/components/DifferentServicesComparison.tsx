@@ -23,9 +23,9 @@ export default function DifferentServicesComparison({
   rows,
 }: DifferentServicesComparisonProps) {
   return (
-    <Card glassmorphism className="w-full py-8">
+    <Card glassmorphism className="w-full">
       <div className="overflow-x-scroll">
-        <div className="min-w-[700px]">
+        <div className="min-w-[700px] py-8">
           <div className="grid grid-cols-4 pb-4">
             {columnHeaders.map((header, index) => (
               <div

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { TypeFaqFields } from "app/lib/types/contentful/TypeFaq";
-import { mapTopicQuestions } from "app/utils/utils";
+import { mapTopicQuestions, TopicQuestions } from "app/utils/utils";
 import cn from "classnames";
 import TopicList from "./TopicList";
 import QuestionsList from "./QuestionList";
@@ -51,16 +51,70 @@ export default function QASection({ questions }: QASectionProps) {
   }, []);
 
   return (
-    <div className="w-4/5 mx-auto py-16 flex gap-8 items-start">
-      <TopicList
+    <>
+      <div className="hidden md:flex w-4/5 mx-auto my-16 gap-8 items-start">
+        <TopicList
+          topicQuestions={topicQuestions}
+          handleSelectTopic={handleSelectTopic}
+        />
+        <QuestionsList
+          topicQuestions={topicQuestions}
+          selectedTopicType={selectedTopicType}
+          ref={ref}
+        />
+        <IconButton
+          variant="primary"
+          icon={<ChevronUpIcon className="size-4" />}
+          className={cn("fixed bottom-6 right-6", {
+            "opacity-100": scrollToTopVisible,
+            "opacity-0 pointer-events-none": !scrollToTopVisible,
+          })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Scroll to top"
+        />
+      </div>
+      <MobileQASection
         topicQuestions={topicQuestions}
         handleSelectTopic={handleSelectTopic}
-      />
-      <QuestionsList
-        topicQuestions={topicQuestions}
         selectedTopicType={selectedTopicType}
+        scrollToTopVisible={scrollToTopVisible}
         ref={ref}
       />
+    </>
+  );
+}
+
+export const MobileQASection = ({
+  topicQuestions,
+  handleSelectTopic,
+  selectedTopicType,
+  scrollToTopVisible,
+  ref,
+}: {
+  topicQuestions: TopicQuestions[];
+  handleSelectTopic: (topic: string) => void;
+  selectedTopicType: string;
+  scrollToTopVisible: boolean;
+  ref: React.RefObject<HTMLDivElement | null>;
+}) => {
+  return (
+    <div className="md:hidden flex flex-col gap-8 items-start">
+      <div
+        className="w-full backdrop-blur-3xl shadow-[0_8px_16px_-4px_rgba(0,0,0,0.2)]"
+        style={{ position: "sticky", top: 0, zIndex: 10 }}
+      >
+        <TopicList
+          topicQuestions={topicQuestions}
+          handleSelectTopic={handleSelectTopic}
+        />
+      </div>
+      <div className="w-4/5 mx-auto">
+        <QuestionsList
+          topicQuestions={topicQuestions}
+          selectedTopicType={selectedTopicType}
+          ref={ref}
+        />
+      </div>
       <IconButton
         variant="primary"
         icon={<ChevronUpIcon className="size-4" />}
@@ -73,4 +127,4 @@ export default function QASection({ questions }: QASectionProps) {
       />
     </div>
   );
-}
+};

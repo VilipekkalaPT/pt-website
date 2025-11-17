@@ -13,7 +13,12 @@ export default function InfoSection({
   className,
 }: InfoSectionProps) {
   return (
-    <div className={cn("w-full flex flex-col items-center", className)}>
+    <div
+      className={cn(
+        "w-4/5 mx-auto flex flex-col items-center text-center",
+        className
+      )}
+    >
       <ArrowDownIcon className="size-12 text-icon-secondary stroke-2" />
       <p className="heading mt-6">{title}</p>
       {subtitle && (

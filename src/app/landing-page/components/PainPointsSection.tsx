@@ -26,7 +26,7 @@ export default function PainPointsSection({
   ]);
 
   const baseStyle =
-    "absolute inset-0 flex flex-col items-center justify-center text-center p-12 backface-hidden rotate-x-0";
+    "absolute inset-0 flex flex-col items-center justify-center text-center p-6 md:p-12 backface-hidden rotate-x-0";
 
   const toggleCard = (index: number) => {
     setFlippedCards((prev) =>
@@ -72,7 +72,6 @@ export default function PainPointsSection({
                     className="p-2"
                   />
                 </div>
-
                 <div className={twMerge(`${baseStyle}`, "rotate-y-180")}>
                   <span className="mb-4 body-strong">{point.backText}</span>
                   <Button
