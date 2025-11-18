@@ -17,7 +17,7 @@ interface InfoCardProps {
 
 export default function InfoCard({ infoCards }: InfoCardProps) {
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {infoCards.map((card, index) => (
         <div
           className="relative w-full h-full flex flex-col items-center"

@@ -19,6 +19,7 @@ import {
 } from "app/utils/utils";
 import Chip from "app/components/Chip";
 import { PricePackageDetails } from "./PricePackageDetails";
+import cn from "classnames";
 
 interface PackageDetailsProps {
   packageDetails: TypePackageFields;
@@ -46,9 +47,12 @@ export default function PackageDetails({
     sessionOptions
   );
 
+  const desktopStyle = "md:grid-cols-2 md:gap-16";
+  const mobileStyle = "grid-cols-1 gap-8";
+
   return (
-    <div className="grid grid-cols-2 gap-16">
-      <div className="relative w-full h-[33rem]">
+    <div className={cn("grid", desktopStyle, mobileStyle)}>
+      <div className="relative w-full h-[20rem] md:h-[33rem]">
         <Image
           src={imageUrl}
           alt={image?.title || PACKAGE_IMAGE}

@@ -20,7 +20,7 @@ export default function IconButton({
     <button
       className={twMerge(
         cn(
-          "w-[52px] h-[52px] flex items-center justify-center rounded-full cursor-pointer",
+          "w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full cursor-pointer",
           {
             "bg-black": variant === "primary",
             "bg-text-black-30/20 border border-border-brand-primary backdrop-blur-xs":

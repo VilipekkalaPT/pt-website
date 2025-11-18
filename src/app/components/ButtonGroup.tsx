@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 import { useRouter } from "next/navigation";
 
-import Button from "@/app/components/Button";
+import Button from "app/components/Button";
 
 interface ButtonGroupProps {
   infoButtonText1: string;

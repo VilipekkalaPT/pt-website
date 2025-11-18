@@ -34,7 +34,7 @@ export default function Philosophy({
       />
       <div
         className={cn(
-          "w-4/5 mx-auto grid relative py-16",
+          "w-[90%] md:w-4/5 mx-auto grid relative py-8 md:py-16",
           desktopStyle,
           mobileStyle
         )}

@@ -46,7 +46,7 @@ export default function PricingPageHeading({
       />
       <div
         className={cn(
-          "absolute left-1/2 -translate-x-1/2 transform w-4/5 mx-auto z-20 flex",
+          "absolute left-1/2 -translate-x-1/2 transform w-[90%] md:w-4/5 mx-auto z-20 flex",
           desktopStyle,
           mobileStyle
         )}

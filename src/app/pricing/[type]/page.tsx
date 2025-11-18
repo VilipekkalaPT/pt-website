@@ -9,7 +9,7 @@ import QuestionsAndInfo from "../components/QuestionsAndInfo";
 import { AssetFields } from "contentful";
 import ComboSection from "../components/ComboSection";
 import HeadingSection from "app/components/HeadingSection";
-import ButtonGroup from "@/app/components/ButtonGroup";
+import ButtonGroup from "app/components/ButtonGroup";
 import { PRICING_PAGE_TITLE } from "app/utils/variables";
 
 async function getPageData(type: string) {

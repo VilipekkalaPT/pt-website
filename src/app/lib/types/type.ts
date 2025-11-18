@@ -1,4 +1,5 @@
 import { Document } from "@contentful/rich-text-types";
+import { AssetFields } from "contentful";
 
 export interface HeadingSectionType {
   heading: string;
@@ -51,4 +52,10 @@ export interface TrainingSessionData {
   title: string;
   description: string;
   imageUrl: string;
+}
+
+export interface CarouselImage {
+  image: AssetFields;
+  title?: string;
+  description?: string;
 }

@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import Lightbox from "yet-another-react-lightbox";
-import { AssetFields } from "contentful";
 import { TypeTimelinePeriodFields } from "app/lib/types/contentful/TypeTimelinePeriod";
 import { getAssetUrl } from "app/utils/utils";
 
@@ -12,6 +11,7 @@ import "react-vertical-timeline-component/style.min.css";
 import "yet-another-react-lightbox/styles.css";
 import "./Journey.css";
 import JourneyTimeLineElement from "./JourneyTimelineElement";
+import { CarouselImage } from "@/app/lib/types/type";
 
 interface JourneyProps {
   title: string;
@@ -25,16 +25,17 @@ export default function Journey({
   timelinePeriods,
 }: JourneyProps) {
   const [openLightbox, setOpenLightbox] = useState(false);
-  const [currentImages, setCurrentImages] = useState<AssetFields[]>([]);
+  const [currentImages, setCurrentImages] = useState<CarouselImage[]>([]);
 
   const handleImageClick = (
     event: React.MouseEvent<HTMLDivElement>,
-    images: AssetFields[]
+    images: CarouselImage[]
   ) => {
     const target = event.target as Element;
     if (target.closest(".prev-btn") || target.closest(".next-btn")) {
       return;
     }
+
     setCurrentImages(images);
     setOpenLightbox(true);
   };
@@ -53,7 +54,7 @@ export default function Journey({
         className="object-cover object-bottom"
       />
       <div className="absolute inset-0 bg-linear-to-b bg-black/50" />
-      <div className="py-16 w-4/5 mx-auto relative">
+      <div className="py-8 md:py-16 w-[90%] md:w-4/5 mx-auto relative">
         <p className="heading">{title}</p>
         <p className="subheading text-white/70">{subtitle}</p>
         <VerticalTimeline lineColor="rgba(68, 68, 68)">
@@ -68,7 +69,7 @@ export default function Journey({
         <Lightbox
           open={openLightbox}
           close={closeLightbox}
-          slides={currentImages.map((img) => ({ src: getAssetUrl(img) }))}
+          slides={currentImages.map((img) => ({ src: getAssetUrl(img.image) }))}
         />
       </div>
     </div>

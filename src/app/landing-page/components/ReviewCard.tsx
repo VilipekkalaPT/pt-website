@@ -6,11 +6,12 @@ import RichTextRenderer from "app/components/RichTextRenderer";
 import Rating from "app/components/Rating";
 import { getAssetUrl } from "app/utils/utils";
 import { AssetFields } from "contentful";
-import Carousel from "@/app/about/components/Carousel";
+import Carousel from "app/components/Carousel";
 import { DURATION, PURCHASED } from "app/utils/variables";
 import Chip from "app/components/Chip";
 import ReadMore from "app/client-spotlights/components/ReadMore";
 import { CheckBadgeIcon } from "@heroicons/react/24/solid";
+import { CarouselImage } from "app/lib/types/type";
 
 interface ReviewCardComponentProps {
   reviewCardType: "full" | "compact";
@@ -103,8 +104,12 @@ const ReviewImages = ({
 }) => {
   if (images.length === 0) return null;
 
+  const carouselImages: CarouselImage[] = images.map((image) => ({
+    image: image,
+  }));
+
   return (
-    <div className="relative h-120">
+    <div className="relative h-60 md:h-120">
       {images.length === 1 ? (
         <Image
           src={getAssetUrl(images[0])}
@@ -113,7 +118,7 @@ const ReviewImages = ({
           className="object-cover object-top rounded-lg"
         />
       ) : (
-        <Carousel images={images} />
+        <Carousel carouselImages={carouselImages} />
       )}
     </div>
   );

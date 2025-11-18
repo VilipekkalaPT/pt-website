@@ -16,8 +16,8 @@ export default function InfoTabs({ tabs }: TabsProps) {
   const steps = tabs.map((tab) => tab.label);
 
   return (
-    <div className="py-16 w-full">
-      <div className="w-2/3 mx-auto">
+    <div className="py-8 md:py-16 w-full">
+      <div className="w-full md:w-2/3 mx-auto">
         <StepIndicator
           steps={steps}
           activeStep={activeIndex}

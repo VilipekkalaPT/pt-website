@@ -1,6 +1,6 @@
 import Image from "next/image";
 import cn from "classnames";
-import { TrainingSessionData } from "@/app/lib/types/type";
+import { TrainingSessionData } from "app/lib/types/type";
 import Card from "app/components/Card";
 
 interface ExpandableHorizontalCardProps {

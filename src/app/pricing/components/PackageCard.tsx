@@ -17,7 +17,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { getChipColor } from "app/utils/utils";
 import cn from "classnames";
-import { twMerge } from "tailwind-merge";
 
 interface PackageCardProps {
   singlePackage: TypePackageFields;

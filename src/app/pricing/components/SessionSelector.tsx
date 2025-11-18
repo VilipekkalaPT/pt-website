@@ -57,14 +57,14 @@ export default function SessionSelector({
   return (
     <>
       <p className="mb-3 leading-[1.4]">{SESSION_SELECTOR_TITLE}</p>
-      <div className="flex gap-8 items-center">
+      <div className="flex gap-4 md:gap-8 items-center">
         <SelectComponent
           selectName={SESSION_SELECTOR_TITLE}
           defaultValue={selectedOption?.numberOfSessions.toString() ?? ""}
           selectedValue={selectedValue}
           options={options}
           onValueChange={handleSelectChange}
-          inputClassName="w-2/3"
+          inputClassName="w-[60%] md:w-2/3"
         />
         <Button
           variant="primary"

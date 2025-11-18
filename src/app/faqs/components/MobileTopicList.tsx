@@ -1,7 +1,7 @@
 import Button from "app/components/Button";
 import { TOPIC_TYPE } from "app/utils/variables";
 import { getIconComponent } from "./TopicList";
-import { TopicQuestions } from "@/app/utils/utils";
+import { TopicQuestions } from "app/utils/utils";
 
 interface TopicListProps {
   topicQuestions: TopicQuestions[];

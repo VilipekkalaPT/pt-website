@@ -94,7 +94,7 @@ export default function SinglePackageContainer({
     ) as TypeHowTrainingSessionLooksLikeFields[];
 
   return (
-    <div className="w-4/5 mx-auto py-16">
+    <div className="w-[90%] md:w-4/5 mx-auto py-8 md:py-16">
       <Button
         variant="ghost"
         label={ALL_PACKAGES}
