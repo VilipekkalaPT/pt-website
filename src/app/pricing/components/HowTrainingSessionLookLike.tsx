@@ -80,7 +80,7 @@ const MobileTrainingSessionLookLike = ({
 
   return (
     <div className="md:hidden mt-6">
-      <Carousel carouselImages={carouselImages} sliderPerView={1} />
+      <Carousel carouselImages={carouselImages} sliderPerView={1} hasText />
     </div>
   );
 };

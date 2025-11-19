@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import "keen-slider/keen-slider.min.css";
@@ -17,63 +16,50 @@ import Card, { CardContent, CardHeader } from "./Card";
 interface CarouselProps {
   carouselImages: CarouselImage[];
   sliderPerView?: number;
+  hasText?: boolean;
 }
 
 export default function Carousel({
   carouselImages,
   sliderPerView,
+  hasText = false,
 }: CarouselProps) {
-  const [isMobile, setIsMobile] = useState(false);
-  const [desktopRef, desktopInstance] = useKeenSlider<HTMLDivElement>({
+  const [ref, instance] = useKeenSlider<HTMLDivElement>({
     loop: true,
     ...(sliderPerView && {
       slides: { perView: sliderPerView, spacing: 20 },
     }),
   });
 
-  const [mobileRef, mobileInstance] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-  });
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
   const handlePrevClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    desktopInstance.current?.prev();
-    mobileInstance.current?.prev();
+    instance.current?.prev();
   };
 
   const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    desktopInstance.current?.next();
-    mobileInstance.current?.next();
+    instance.current?.next();
   };
-
-  const commonStyle = "keen-slider overflow-hidden rounded-lg";
 
   return (
     <div className="relative w-full mx-auto h-full">
-      {isMobile ? (
-        <div ref={mobileRef} className={cn(commonStyle, "h-90")}>
-          <MobileCarousel carouselImages={carouselImages} />
-        </div>
-      ) : (
-        <div ref={desktopRef} className={cn(commonStyle, "h-120")}>
-          <DesktopCarousel carouselImages={carouselImages} />
-        </div>
-      )}
+      <div
+        ref={ref}
+        className={cn("keen-slider overflow-hidden rounded-lg", "md:h-120", {
+          "h-90": hasText,
+          "h-60": !hasText,
+        })}
+      >
+        <CarouselCard carouselImages={carouselImages} hasText={hasText} />
+      </div>
+
       <>
         <IconButton
           variant="secondary"
           icon={<ArrowLongLeftIcon className="size-4 md:size-6" />}
           className={cn("prev-btn absolute left-4", {
-            "bottom-32": isMobile,
-            "bottom-4": !isMobile,
+            "bottom-4": !hasText,
+            "bottom-32": hasText,
           })}
           onClick={handlePrevClick}
           aria-label="Previous slide"
@@ -82,8 +68,8 @@ export default function Carousel({
           variant="secondary"
           icon={<ArrowLongRightIcon className="size-4 md:size-6" />}
           className={cn("next-btn absolute right-4", {
-            "bottom-32": isMobile,
-            "bottom-4": !isMobile,
+            "bottom-4": !hasText,
+            "bottom-32": hasText,
           })}
           onClick={handleNextClick}
           aria-label="Next slide"
@@ -93,42 +79,19 @@ export default function Carousel({
   );
 }
 
-const DesktopCarousel = ({
+const CarouselCard = ({
   carouselImages,
+  hasText,
 }: {
   carouselImages: CarouselImage[];
+  hasText: boolean;
 }) => {
   return (
     <>
       {carouselImages.map((image, index) => {
         const imageUrl = getAssetUrl(image.image);
 
-        return (
-          <div key={index} className="keen-slider__slide">
-            <Image
-              src={imageUrl}
-              alt={image.title ?? "Image"}
-              fill
-              className="object-cover object-center"
-            />
-          </div>
-        );
-      })}
-    </>
-  );
-};
-
-const MobileCarousel = ({
-  carouselImages,
-}: {
-  carouselImages: CarouselImage[];
-}) => {
-  return (
-    <>
-      {carouselImages.map((image, index) => {
-        const imageUrl = getAssetUrl(image.image);
-
-        return (
+        return hasText ? (
           <Card
             key={index}
             className="keen-slider__slide border border-border-default-primary"
@@ -146,6 +109,15 @@ const MobileCarousel = ({
               <p className="body-small mt-2">{image.description}</p>
             </CardContent>
           </Card>
+        ) : (
+          <div key={index} className="keen-slider__slide">
+            <Image
+              src={imageUrl}
+              alt={image.title ?? "Image"}
+              fill
+              className="object-cover object-center"
+            />
+          </div>
         );
       })}
     </>

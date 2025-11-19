@@ -45,7 +45,7 @@ export default async function FAQs() {
         infoButtonText2={infoButtonText2}
         button1Url={button1Url}
         button2Url={button2Url}
-        className="mt-6 mx-16 pb-16"
+        className="mt-6 w-4/5 mx-auto pb-16"
       />
     </>
   );

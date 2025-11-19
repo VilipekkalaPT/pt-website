@@ -73,7 +73,7 @@ export default async function PackagesPage({
         infoButtonText2={packagesPageData.actionButtonText2}
         button1Url={packagesPageData.button1Url}
         button2Url={packagesPageData.button2Url}
-        className="mb-16 mx-16"
+        className="mb-16 w-4/5 mx-auto"
       />
       <QuestionsAndInfo packagesPageData={packagesPageData} />
     </>

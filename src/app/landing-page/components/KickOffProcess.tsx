@@ -11,13 +11,9 @@ export default function KickOffProcess({}: KickOffProcessProps) {
   return (
     <div className="py-16">
       <p className="heading text-center">{SLAY_PROCESS}</p>
-      <Image
-        src="/process.png"
-        alt="Divider"
-        width={1200}
-        height={403}
-        className="w-full mt-8 object-contain"
-      />
+      <div className="w-full h-[9rem] md:h-[32rem] relative">
+        <Image src="/process.png" alt="Divider" fill className="object-cover" />
+      </div>
     </div>
   );
 }

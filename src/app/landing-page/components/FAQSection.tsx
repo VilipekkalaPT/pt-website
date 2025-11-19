@@ -25,7 +25,7 @@ export default function FAQSection({
   const imageUrl = getAssetUrl(image);
 
   return (
-    <div className="mt-8 w-4/5 mx-auto py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="mt-8 w-4/5 mx-auto py-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10">
       <div className="w-full h-full md:h-[22rem] overflow-hidden">
         <Image
           src={imageUrl}

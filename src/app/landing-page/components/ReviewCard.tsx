@@ -143,15 +143,19 @@ const ReviewCardContent: React.FC<ReviewCardComponentProps> = ({
       {reviewCardType === "full" && (
         <>
           <ReviewImages images={imageFields} title={title} />
-          <p className="min-h-14 mt-4 heading line-clamp-2">{title}</p>
+          <p className="min-h-18 md:min-h-14 mt-4 heading line-clamp-2">
+            {title}
+          </p>
           <ReadMore document={content} />
           <Divider className="my-6" />
-          <div className="py-2 flex justify-between leading-[1.4] text-white/70">
+          <div className="py-2 flex justify-between gap-8 leading-[1.4] text-white/70">
             <div className="flex items-center justify-center gap-1">
               <span>{PURCHASED}</span>
               <CheckBadgeIcon className="size-6 text-green-light" />
             </div>
-            <span>{review.package.slice(0, 2).join(", ")}</span>
+            <span className="text-right">
+              {review.package.slice(0, 2).join(", ")}
+            </span>
           </div>
           <div className="py-2 flex justify-between leading-[1.4] text-white/70">
             <span>{DURATION}</span>

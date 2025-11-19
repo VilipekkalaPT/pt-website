@@ -27,7 +27,9 @@ export default function QASection({ questions }: QASectionProps) {
   useEffect(() => {
     if (ref.current) {
       const top = ref.current.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ behavior: "smooth", top: top - 20 });
+      const mobileTopicList = document.getElementById("mobile-topic-list");
+      const offset = mobileTopicList ? mobileTopicList.offsetHeight : 0;
+      window.scrollTo({ behavior: "smooth", top: top - 20 - offset });
       setSelectedTopicType("");
     }
   }, [selectedTopicType]);
@@ -100,6 +102,7 @@ export const MobileQASection = ({
   return (
     <div className="md:hidden flex flex-col gap-8 items-start">
       <div
+        id="mobile-topic-list"
         className="w-full backdrop-blur-3xl shadow-[0_8px_16px_-4px_rgba(0,0,0,0.2)]"
         style={{ position: "sticky", top: 0, zIndex: 10 }}
       >
@@ -108,7 +111,7 @@ export const MobileQASection = ({
           handleSelectTopic={handleSelectTopic}
         />
       </div>
-      <div className="w-4/5 mx-auto">
+      <div className="w-[90%] mx-auto">
         <QuestionsList
           topicQuestions={topicQuestions}
           selectedTopicType={selectedTopicType}
