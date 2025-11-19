@@ -49,13 +49,14 @@ export default function Philosophy({
             paragraphClassName="mt-4 text-white/70 leading-[1.4]"
           />
         </div>
-        <div className="relative w-full h-64 md:h-auto">
-          <Image
-            src={imageUrl}
-            alt={image.title ?? "Philosophy Image"}
-            fill
-            className="rounded-lg object-cover object-center"
-          />
+        <div className="relative w-full h-64 md:h-full">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/uYlDp6dqYH8"
+            title="Philosophy video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
