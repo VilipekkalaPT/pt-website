@@ -33,13 +33,17 @@ export default function TopicList({
   topicQuestions,
   handleSelectTopic,
 }: TopicListProps) {
-  const desktopStyle = "md:glass-effect md:flex-col justify-center md:gap-4";
-  const mobileStyle = "flex-row flex-wrap gap-2";
+  const desktopStyle =
+    "md:border md:border-border-brand-primary md:flex-col md:justify-center md:gap-4";
+  const mobileStyle = "flex-row flex-wrap justify-start gap-2";
 
   return (
     <div
-      style={{ position: "sticky", top: 20, zIndex: 10 }}
-      className={cn("flex rounded-2xl p-6", desktopStyle, mobileStyle)}
+      className={cn(
+        "flex rounded-2xl p-6 md:sticky md:top-5 md:z-10",
+        desktopStyle,
+        mobileStyle
+      )}
     >
       {topicQuestions.map((topic) => (
         <Button

@@ -103,8 +103,12 @@ export const MobileQASection = ({
     <div className="md:hidden flex flex-col gap-8 items-start">
       <div
         id="mobile-topic-list"
-        className="w-full backdrop-blur-3xl shadow-[0_8px_16px_-4px_rgba(0,0,0,0.2)]"
-        style={{ position: "sticky", top: 0, zIndex: 10 }}
+        className={cn(
+          "sticky top-0 z-10",
+          "w-full min-h-4 backdrop-blur-3xl",
+          "shadow-[0_8px_16px_-4px_rgba(0,0,0,0.2)]",
+          "pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)]"
+        )}
       >
         <TopicList
           topicQuestions={topicQuestions}
