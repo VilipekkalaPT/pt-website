@@ -19,8 +19,6 @@ export default async function About() {
   const aboutPageContent: TypeAboutPageDataFields = aboutPageData[0];
   const headingSectionImage = aboutPageContent.headingSectionImage
     .fields as AssetFields;
-  const philosophyImage = aboutPageContent.philosophyImage
-    .fields as AssetFields;
   const timelinePeriods = aboutPageContent.journeyTimelinePeriods.map(
     (el) => el.fields
   ) as TypeTimelinePeriodFields[];
@@ -36,7 +34,6 @@ export default async function About() {
         title={aboutPageContent.philosophyTitle}
         subtitle={aboutPageContent.philosophySubtitle}
         content={aboutPageContent.philosophyContent}
-        image={philosophyImage}
       />
       <Journey
         title={aboutPageContent.journeyTitle}

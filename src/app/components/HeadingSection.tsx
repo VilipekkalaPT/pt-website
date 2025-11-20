@@ -100,13 +100,16 @@ const MobileHeadingSection = ({
         headingSections={headingSections}
         fillImage={false}
       />
-      <div className="absolute top-3/4 left-1/2 -translate-x-1/2">
+      <div className="absolute top-3/4 left-1/2 -translate-x-1/2 z-20">
         {backButtonLabel && (
           <Button
             label={backButtonLabel}
             variant="outlined"
             iconLeft={<ArrowLeftIcon className="size-4" strokeWidth={2} />}
-            onClick={() => router.push(ROUTES.PRICING)}
+            onClick={() => {
+              console.log("Clicked back button");
+              router.push(ROUTES.PRICING);
+            }}
             className="py-1"
           />
         )}

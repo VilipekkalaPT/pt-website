@@ -1,26 +1,20 @@
 import Image from "next/image";
 import RichTextRenderer from "app/components/RichTextRenderer";
-import { AssetFields } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 import { StarIcon } from "@heroicons/react/24/solid";
-import { getAssetUrl } from "app/utils/utils";
 import cn from "classnames";
 
 interface PhilosophyProps {
   title: string;
   subtitle: string;
   content: Document;
-  image: AssetFields;
 }
 
 export default function Philosophy({
   title,
   subtitle,
   content,
-  image,
 }: PhilosophyProps) {
-  const imageUrl = getAssetUrl(image);
-
   const desktopStyle = "md:grid-cols-2 md:gap-4 md:items-center";
   const mobileStyle = "grid-cols-1 gap-8";
 
