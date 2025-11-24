@@ -64,7 +64,7 @@ export default function HeroSection({
           <div
             key={i}
             className={cn(
-              "absolute md:top-1/2 w-full",
+              "absolute top-1/2 -translate-y-1/2 w-full",
               "p-4 text-center text-white transition-opacity duration-1000",
               {
                 "opacity-100": i === index,
