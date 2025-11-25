@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { HeadingSectionType } from "app/lib/types/type";
 import { HERO_SECTION_IMAGE } from "app/utils/variables";
 import cn from "classnames";
+import { twMerge } from "tailwind-merge";
 
 interface HeroSectionProps {
   image: AssetFields;
@@ -63,14 +64,16 @@ export default function HeroSection({
         {headingSections.map((section, i) => (
           <div
             key={i}
-            className={cn(
-              "absolute top-1/2 -translate-y-1/2 w-full",
-              "p-4 text-center text-white transition-opacity duration-1000",
-              {
-                "opacity-100": i === index,
-                "opacity-0": i !== index,
-              },
-              textClassName
+            className={twMerge(
+              cn(
+                "absolute top-1/2 -translate-y-1/2 w-full",
+                "p-4 text-center text-white transition-opacity duration-1000",
+                {
+                  "opacity-100": i === index,
+                  "opacity-0": i !== index,
+                },
+                textClassName
+              )
             )}
           >
             <p className="w-4/5 mx-auto mb-1 title-hero">{section.heading}</p>

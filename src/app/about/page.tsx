@@ -50,7 +50,7 @@ export default async function About() {
         infoButtonText2={aboutPageContent.infoButtonText2}
         button1Url={aboutPageContent.button1Url}
         button2Url={aboutPageContent.button2Url}
-        className="mt-6 mx-16 pb-16"
+        className="mt-6 pb-16 w-4/5 mx-auto"
       />
     </>
   );

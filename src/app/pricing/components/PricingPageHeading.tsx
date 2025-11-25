@@ -42,7 +42,7 @@ export default function PricingPageHeading({
         image={imageField}
         headingSections={headingSections}
         fillImage={false}
-        textClassName="top-6"
+        textClassName="-translate-y-4/5"
       />
       <div
         className={cn(

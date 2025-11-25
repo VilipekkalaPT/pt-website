@@ -51,7 +51,7 @@ export default async function ClientSpotlights() {
         infoButtonText2={reviewsPageContent.infoButtonText2}
         button1Url={reviewsPageContent.infoButton1Url}
         button2Url={reviewsPageContent.infoButton2Url}
-        className="pb-16"
+        className="pb-16 w-4/5 mx-auto"
       />
     </>
   );
