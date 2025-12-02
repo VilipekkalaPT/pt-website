@@ -50,7 +50,7 @@ export default async function PricingPage() {
         infoButtonText2={pricingPageContent.actionButtonText2}
         button1Url={pricingPageContent.button1Url}
         button2Url={pricingPageContent.button2Url}
-        className="mt-6 w-4/5 mx-auto pb-16"
+        className="mt-6 w-[90%] mx-auto pb-16"
       />
     </>
   );
