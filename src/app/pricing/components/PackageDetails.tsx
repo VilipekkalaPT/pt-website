@@ -59,15 +59,17 @@ export default function PackageDetails({
           fill
           className="object-cover w-full h-full rounded-lg"
         />
-        <div className="absolute top-4 right-4">
-          <Chip
-            label=""
-            color="green"
-            className="rounded-full w-13 h-13 p-0 justify-center"
-            glassmorphism
-            iconRight={<GiftIcon className="size-6 stroke-[1.5]" />}
-          />
-        </div>
+        {packageDetails.hasFreeGift && (
+          <div className="absolute top-4 right-4">
+            <Chip
+              label=""
+              color="green"
+              className="rounded-full w-13 h-13 p-0 justify-center"
+              glassmorphism
+              iconRight={<GiftIcon className="size-6 stroke-[1.5]" />}
+            />
+          </div>
+        )}
       </div>
       <div>
         <p className="heading">{packageDetails.name}</p>
