@@ -10,10 +10,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Forbidden" }, { status: 403 });
   }
 
-  try { 
+  try {
     revalidatePath(ROUTES.CLIENT_SPOTLIGHTS);
-    revalidatePath(ROUTES.PRICING + "/solo-packages", "layout");
-    revalidatePath(ROUTES.PRICING + "/duo-packages", "layout");
+    revalidatePath(ROUTES.PRICING, "layout");
     return NextResponse.json({
       message: "Revalidation triggered successfully",
     });

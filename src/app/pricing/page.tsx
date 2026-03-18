@@ -13,8 +13,6 @@ import { TypePricingPackageTypeComparisionFields } from "app/lib/types/contentfu
 import OfferSection from "./components/OfferSection";
 import ButtonGroup from "../components/ButtonGroup";
 
-export const revalidate = 86400;
-
 export default async function PricingPage() {
   const pricingPageData =
     await getEntries<TypePricingPageDataSkeleton>("pricingPageData");
