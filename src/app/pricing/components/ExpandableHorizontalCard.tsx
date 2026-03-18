@@ -24,7 +24,7 @@ export default function ExpandableHorizontalCard({
     <Card
       className={cn(
         "flex flex-col rounded-lg transition-all duration-500 ease-in-out cursor-pointer overflow-hidden",
-        isExpanded ? "w-[40rem]" : "w-[15rem]"
+        isExpanded ? "w-[40rem]" : "w-[15rem]",
       )}
       glassmorphism
       onMouseEnter={() => setExpandedIndex(index)}
@@ -34,6 +34,7 @@ export default function ExpandableHorizontalCard({
           src={imageUrl}
           alt={title}
           fill
+          sizes="75vw"
           className="object-cover transition-transform duration-500"
         />
       </div>

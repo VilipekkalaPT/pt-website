@@ -101,6 +101,7 @@ const CarouselCard = ({
                 src={imageUrl}
                 alt={image.title ?? "Image"}
                 fill
+                sizes="75vw"
                 className="object-cover object-center"
               />
             </CardHeader>
@@ -115,7 +116,8 @@ const CarouselCard = ({
               src={imageUrl}
               alt={image.title ?? "Image"}
               fill
-              className="object-cover object-center"
+              sizes="75vw"
+              className="object-cover object-top"
             />
           </div>
         );

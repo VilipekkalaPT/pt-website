@@ -4,7 +4,16 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images: {
-    domains: ["images.ctfassets.net", "downloads.ctfassets.net"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+      },
+      {
+        protocol: "https",
+        hostname: "downloads.ctfassets.net",
+      },
+    ],
   },
 };
 

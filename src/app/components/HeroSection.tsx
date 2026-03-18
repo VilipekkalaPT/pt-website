@@ -49,6 +49,8 @@ export default function HeroSection({
           src={imageUrl}
           alt={HERO_SECTION_IMAGE}
           fill
+          sizes="100vw"
+          priority
           className="block w-full h-auto object-cover object-center"
         />
       ) : (
@@ -56,6 +58,7 @@ export default function HeroSection({
           src={imageUrl}
           alt={HERO_SECTION_IMAGE}
           fill
+          sizes="75vw"
           className="object-cover object-center"
         />
       )}
@@ -72,8 +75,8 @@ export default function HeroSection({
                   "opacity-100": i === index,
                   "opacity-0": i !== index,
                 },
-                textClassName
-              )
+                textClassName,
+              ),
             )}
           >
             <p className="w-4/5 mx-auto mb-1 title-hero">{section.heading}</p>

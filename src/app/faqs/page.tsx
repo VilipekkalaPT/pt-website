@@ -10,6 +10,8 @@ import { AssetFields } from "contentful";
 import InfoSection from "../components/InfoSection";
 import ButtonGroup from "../components/ButtonGroup";
 
+export const revalidate = 86400;
+
 export default async function FAQs() {
   const faqsPageData = await getEntries<TypeFaQsPageDataSkeleton>(
     "faQsPageData"

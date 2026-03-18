@@ -8,6 +8,6 @@ export const ROUTES = {
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
 };
 
-export const localLogoUrl = "/logo.svg";
+export const logoUrl = "/logo.svg";
 export const whatsappDomain = "https://wa.me/";
 export const instagramDefaultLink = "https://www.instagram.com/";

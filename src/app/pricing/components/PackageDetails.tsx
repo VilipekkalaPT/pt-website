@@ -34,7 +34,7 @@ export default function PackageDetails({
 }: PackageDetailsProps) {
   const imageUrl = getAssetUrl(image);
   const sessionOptions = packageDetails.sessionOptions?.map(
-    (option) => option.fields
+    (option) => option.fields,
   ) as TypeSessionOptionFields[];
   const [selectedOption, setSelectedOption] = useState<
     TypeSessionOptionFields | undefined
@@ -44,7 +44,7 @@ export default function PackageDetails({
     packageDetails,
     soloPackages,
     selectedOption,
-    sessionOptions
+    sessionOptions,
   );
 
   const desktopStyle = "md:grid-cols-2 md:gap-16";
@@ -57,6 +57,7 @@ export default function PackageDetails({
           src={imageUrl}
           alt={image?.title || PACKAGE_IMAGE}
           fill
+          sizes="75vw"
           className="object-cover w-full h-full rounded-lg"
         />
         {packageDetails.hasFreeGift && (

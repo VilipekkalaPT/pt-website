@@ -3,6 +3,8 @@ import RichTextRenderer from "app/components/RichTextRenderer";
 import { getEntries } from "app/lib/contentfulDataService";
 import { TypeTermsAndConditionsSkeleton } from "app/lib/types/contentful/TypeTermsAndConditions";
 
+export const revalidate = 86400;
+
 export default async function TermsConditions() {
   const termsConditionsPageData =
     await getEntries<TypeTermsAndConditionsSkeleton>("termsAndConditions");

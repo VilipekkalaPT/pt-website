@@ -7,9 +7,7 @@ import { TypeNavigationFields } from "app/lib/types/contentful";
 import { useRouter, usePathname } from "next/navigation";
 import cn from "classnames";
 import Image from "next/image";
-import { AssetFields } from "contentful";
-import { getAssetUrl } from "app/utils/utils";
-import { localLogoUrl } from "app/utils/routes";
+import { logoUrl } from "app/utils/routes";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import IconButton from "./IconButton";
 
@@ -27,21 +25,24 @@ interface NavigationItemProps {
 
 interface HeaderProps {
   navigations: TypeNavigationFields[];
-  logo?: AssetFields;
 }
 
-export default function Header({ navigations, logo }: HeaderProps) {
+export default function Header({ navigations }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const navigationItems = navigations.sort((a, b) => a.order - b.order);
 
-  const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
-
   return (
     <div className="flex items-center justify-between mx-4 md:mx-8 py-6 shadow z-50 font-normal">
       <Link href="/" className="flex items-center">
-        <Image src={logoUrl} alt="Logo" width={200} height={200} />
+        <Image
+          src={logoUrl}
+          alt="Logo"
+          width={230}
+          height={41}
+          className="w-48 h-auto"
+        />
       </Link>
       <MobileMenuToggle
         isOpen={isOpen}
@@ -94,7 +95,7 @@ const MobileNavigation = ({
     {
       "translate-x-full": !isOpen,
       "translate-x-0": isOpen,
-    }
+    },
   );
   return (
     <>

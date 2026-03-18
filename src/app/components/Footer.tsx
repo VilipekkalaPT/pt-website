@@ -1,12 +1,11 @@
 "use client";
 
-import { AssetFields } from "contentful";
 import Image from "next/image";
-import { capitalizeFirstLetter, getAssetUrl } from "app/utils/utils";
+import { capitalizeFirstLetter } from "app/utils/utils";
 import { FooterLink as FooterLinkType } from "app/lib/types/type";
 import Link from "next/link";
 import {
-  localLogoUrl,
+  logoUrl,
   whatsappDomain,
   instagramDefaultLink,
 } from "app/utils/routes";
@@ -16,14 +15,12 @@ import cn from "classnames";
 import { DIFFERENT_SERVICES_SLAYFITVILI } from "../utils/variables";
 
 interface FooterProps {
-  logo?: AssetFields;
   footerLinks: TypeFooterFields[];
 }
 
 const COLUMNS = ["contact", "explore", "condition & policy"];
 
-export default function Footer({ logo, footerLinks }: FooterProps) {
-  const logoUrl = logo ? getAssetUrl(logo) : localLogoUrl;
+export default function Footer({ footerLinks }: FooterProps) {
   const year = new Date().getFullYear();
 
   const getLinks = useCallback(
@@ -32,12 +29,12 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
         footerLinks?.filter((link) => link.column === col && link.show) ?? []
       );
     },
-    [footerLinks]
+    [footerLinks],
   );
 
   const openWhatsApp = useCallback(() => {
     const whatsappLink = footerLinks.find(
-      (link) => link.label.toLowerCase() === "whatsapp"
+      (link) => link.label.toLowerCase() === "whatsapp",
     )?.url;
     if (!whatsappLink) return;
     const url = `${whatsappDomain}${whatsappLink}`;
@@ -46,7 +43,7 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
 
   const openInstagram = useCallback(() => {
     const instagramLink = footerLinks.find(
-      (link) => link.label.toLowerCase() === "instagram"
+      (link) => link.label.toLowerCase() === "instagram",
     )?.url;
     const url = instagramLink ?? instagramDefaultLink;
     window.open(url, "_blank");
@@ -58,22 +55,28 @@ export default function Footer({ logo, footerLinks }: FooterProps) {
   return (
     <div className={cn("mt-8 grid pb-6", desktopStyle, mobileStyle)}>
       <div className="flex flex-col items-center md:items-start">
-        <Image src={logoUrl} alt="Logo" width={200} height={200} />
+        <Image
+          src={logoUrl}
+          alt="Logo"
+          width={230}
+          height={41}
+          className="w-48 h-auto"
+        />
         <div className="flex mt-4 gap-4">
           <Image
             src="/whatsapp.svg"
             alt="Whatsapp logo"
             width={24}
-            height={24}
-            className="cursor-pointer"
+            height={25}
+            className="cursor-pointer w-auto h-auto"
             onClick={openWhatsApp}
           />
           <Image
             src="/instagram.svg"
             alt="Instagram logo"
-            width={24}
-            height={24}
-            className="cursor-pointer"
+            width={25}
+            height={25}
+            className="cursor-pointer w-auto h-auto"
             onClick={openInstagram}
           />
         </div>

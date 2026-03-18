@@ -115,6 +115,7 @@ const ReviewImages = ({
           src={getAssetUrl(images[0])}
           alt={title}
           fill
+          sizes="75vw"
           className="object-cover object-top rounded-lg"
         />
       ) : (

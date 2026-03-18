@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
+import { ROUTES } from "@/app/utils/routes";
 
 export async function POST(request: Request) {
   const requestHeaders = new Headers(request.headers);
@@ -9,8 +10,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Forbidden" }, { status: 403 });
   }
 
-  try {
-    revalidatePath("/", "layout");
+  try { 
+    revalidatePath(ROUTES.CLIENT_SPOTLIGHTS);
+    revalidatePath(ROUTES.PRICING + "/solo-packages", "layout");
+    revalidatePath(ROUTES.PRICING + "/duo-packages", "layout");
     return NextResponse.json({
       message: "Revalidation triggered successfully",
     });

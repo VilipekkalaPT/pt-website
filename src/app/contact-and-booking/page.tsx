@@ -6,6 +6,8 @@ import {
   TypeFooterSkeleton,
 } from "app/lib/types/contentful/TypeFooter";
 
+export const revalidate = 86400;
+
 export default async function Contact() {
   const [contactFormData, footerLink] = await Promise.all([
     await getEntries<TypeContactFormSkeleton>("contactForm"),

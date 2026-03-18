@@ -51,6 +51,7 @@ export default function Journey({
         src="/background-1.png"
         alt="Philosophy Banner Background"
         fill
+        sizes="100vw"
         className="object-cover object-bottom"
       />
       <div className="absolute inset-0 bg-linear-to-b bg-black/50" />

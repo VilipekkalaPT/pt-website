@@ -11,7 +11,6 @@ export const SLAY_PROCESS = "A glimpse of slay fit process";
 export const RESULT = "Result";
 
 // Landing Page Variables
-export const LOGO = "logo";
 export const FLIP_ME = "Flip me";
 export const STEP = "Step";
 export const BEST_VALUE = "Best value";

@@ -11,16 +11,17 @@ import { TypeTimelinePeriodFields } from "app/lib/types/contentful/TypeTimelineP
 import InfoSection from "../components/InfoSection";
 import ButtonGroup from "../components/ButtonGroup";
 
+export const revalidate = 3600;
+
 export default async function About() {
-  const aboutPageData = await getEntries<TypeAboutPageDataSkeleton>(
-    "aboutPageData"
-  );
+  const aboutPageData =
+    await getEntries<TypeAboutPageDataSkeleton>("aboutPageData");
 
   const aboutPageContent: TypeAboutPageDataFields = aboutPageData[0];
   const headingSectionImage = aboutPageContent.headingSectionImage
     .fields as AssetFields;
   const timelinePeriods = aboutPageContent.journeyTimelinePeriods.map(
-    (el) => el.fields
+    (el) => el.fields,
   ) as TypeTimelinePeriodFields[];
 
   return (

@@ -8,7 +8,7 @@ const client = createClient({
 export default client;
 
 export async function getEntries<T extends EntrySkeletonType>(
-  contentType: string
+  contentType: string,
 ) {
   try {
     const res = await client.getEntries<T>({
@@ -47,7 +47,7 @@ export async function getEntryWithSlug(contentType: string, slug: string) {
 
 export async function getEntriesWithTag<T extends EntrySkeletonType>(
   contentType: string,
-  tag: string
+  tag: string,
 ) {
   try {
     const res = await client.getEntries<T>({
@@ -69,17 +69,5 @@ export async function getAssets() {
   } catch (error) {
     console.error("Error fetching assets:", error);
     return [];
-  }
-}
-
-export async function getImageByTag(tag: string) {
-  try {
-    const response = await client.getAssets({
-      "metadata.tags.sys.id[in]": [tag],
-    });
-    const image = response.items.map((item) => item.fields);
-    return image[0];
-  } catch (error) {
-    console.error(`Error fetching images with tag ${tag}`, error);
   }
 }

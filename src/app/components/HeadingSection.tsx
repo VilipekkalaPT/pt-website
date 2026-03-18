@@ -59,6 +59,7 @@ const DesktopHeadingSection = ({
           src={imageUrl}
           alt={HEADING_IMAGE}
           fill
+          sizes="75vw"
           className="object-cover object-center rounded-r-lg"
         />
       </div>
@@ -107,7 +108,6 @@ const MobileHeadingSection = ({
             variant="outlined"
             iconLeft={<ArrowLeftIcon className="size-4" strokeWidth={2} />}
             onClick={() => {
-              console.log("Clicked back button");
               router.push(ROUTES.PRICING);
             }}
             className="py-1"

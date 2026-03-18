@@ -24,6 +24,7 @@ export default function Philosophy({
         src="/background-2.png"
         alt="Philosophy Banner Background"
         fill
+        sizes="100vw"
         className="object-cover object-top"
       />
       <div

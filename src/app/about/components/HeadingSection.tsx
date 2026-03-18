@@ -22,6 +22,8 @@ export default function HeadingSection({
         src={imageUrl}
         alt={image.title ?? HEADING_IMAGE}
         fill
+        sizes="100vw"
+        priority
         className="object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/0" />

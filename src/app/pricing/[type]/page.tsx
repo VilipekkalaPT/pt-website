@@ -19,13 +19,9 @@ async function getPageData(type: string) {
 }
 
 export async function generateStaticParams() {
-  const packagesPageData = await getEntries<TypePackagesPageDataSkeleton>(
-    "packagesPageData"
-  );
-
-  return packagesPageData.map((p) => ({
-    slug: p.slug,
-  }));
+  const packagesPageData =
+    await getEntries<TypePackagesPageDataSkeleton>("packagesPageData");
+  return packagesPageData.map((p) => ({ slug: p.slug }));
 }
 
 export default async function PackagesPage({
@@ -37,11 +33,11 @@ export default async function PackagesPage({
   const { packagesPageData } = await getPageData(type);
 
   const soloPackages = packagesPageData.packages.map(
-    (p) => p.fields
+    (p) => p.fields,
   ) as TypePackageFields[];
   const imageField = packagesPageData.image.fields as AssetFields;
   const comboPackages = packagesPageData.comboPackages?.map(
-    (pkg) => pkg.fields
+    (pkg) => pkg.fields,
   ) as TypePackageFields[];
 
   return (

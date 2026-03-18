@@ -46,20 +46,20 @@ export default function PackageCard({
   const imageUrl = getAssetUrl(imageField);
 
   const priceOptions = sessionOptions?.map(
-    (option) => option.fields
+    (option) => option.fields,
   ) as TypeSessionOptionFields[];
 
   return (
     <Card href={href} glassmorphism className={cn("bg-primary/50", className)}>
-      <CardHeader className="relative inline-block">
-        <div className="h-[20rem]">
-          <Image
-            src={imageUrl}
-            alt={`Landscape image for ${name}`}
-            fill
-            className="object-cover"
-          />
-        </div>
+      <CardHeader className="relative inline-block h-[20rem]">
+        <Image
+          src={imageUrl}
+          alt={`Image for ${name}`}
+          fill
+          sizes="75vw"
+          priority
+          className="object-cover"
+        />
         {hasFreeGift && (
           <div className="absolute bottom-0 right-6 translate-y-1/2">
             <Chip
